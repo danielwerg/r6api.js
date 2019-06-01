@@ -28,7 +28,7 @@ How to create account?
 
 ```js
 const R6API = require('r6api.js');
-const r6 = new r6('email', 'password');
+const r6 = new R6API('email', 'password');
 ```
 
 ---
