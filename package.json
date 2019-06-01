@@ -1,15 +1,27 @@
 {
   "name": "r6api.js",
   "version": "0.0.0",
-  "description": "",
+  "description": "Node.js wrapper around Rainbow Six: Siege API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Sandberg",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.5",
     "node-fetch": "^2.6.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielwerg/r6api.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danielwerg/r6api.js/issues"
+  },
+  "homepage": "https://github.com/danielwerg/r6api.js#readme"
 }
