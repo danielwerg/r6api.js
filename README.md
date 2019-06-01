@@ -38,7 +38,7 @@ const r6 = new R6API('email', 'password');
   const r6 = new R6API('example@mail.com', 'eatbigbanan');
 
   const username = 'Nt.DNL._.';
-  const id = await r6.getById('uplay', username).then(el => el[0].id);
+  const id = await r6.getId('uplay', username).then(el => el[0].id);
   const stats = await r6.getStats('uplay', id).then(el => el[0]);
 
   console.log(`${username} has played ${stats.pvp.general.matches} matches`);
@@ -51,12 +51,12 @@ Nt.DNL._. has played 3749 matches
 
 ### METHODS
 
-*   getById(platform: `String`, username: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*   getId(platform: `String`, username: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get id of player from username.
 
 ```js
-let getById = await r6.getById('uplay', 'Nt.DNL._.');
+let getId = await r6.getId('uplay', 'Nt.DNL._.');
 ```
 
 ```js
@@ -71,12 +71,12 @@ let getById = await r6.getById('uplay', 'Nt.DNL._.');
 ```
 ---
 
-*    getByUsername(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*    getUsername(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get username of player from id.
 
 ```js
-let getByUsername = await r6.getByUsername('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+let getUsername = await r6.getUsername('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
 ```js
