@@ -51,7 +51,7 @@ Nt.DNL._. has played 3749 matches
 
 ### METHODS
 
-*   #### getById(platform: `String`, username: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*   getById(platform: `String`, username: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get id of player from username.
 
@@ -69,8 +69,9 @@ let getById = await r6.getById('uplay', 'Nt.DNL._.');
   }
 ]
 ```
+---
 
-*   #### getByUsername(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*    getByUsername(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get username of player from id.
 
@@ -88,8 +89,9 @@ let getByUsername = await r6.getByUsername('pc', '0b95544b-0228-49a7-b338-6d15cf
   }
 ]
 ```
+---
 
-*   #### getLevel(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*   getLevel(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get level, xp and alpha pack drop chance.
 
@@ -107,8 +109,9 @@ let getLevel = await r6.getLevel('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
   }
 ]
 ```
+---
 
-*   #### getPlaytime(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*   getPlaytime(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get playtime of player.
 
@@ -127,8 +130,9 @@ let getPlaytime = await r6.getPlaytime(platform, ids);
   }
 ]
 ```
+---
 
-*   #### getRank(platform: `String`, id: `String` if < 1, `Array` if several, options: `Object`) : `Promise` with `Array` Return
+*    getRank(platform: `String`, id: `String` if < 1, `Array` if several, options: `Object`) : `Promise` with `Array` Return
 
 Get seasonal stats for player.
 
@@ -184,8 +188,9 @@ let getRank = await r6.getRank('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { r
   }
 ]
 ```
+---
 
-*   #### getStats(platform: `String`, id: `String` if < 1, `Array` if several, raw: `Boolean`) : `Promise` with `Array` Return
+*    getStats(platform: `String`, id: `String` if < 1, `Array` if several, raw: `Boolean`) : `Promise` with `Array` Return
 
 Get general stats for player.
 
@@ -215,6 +220,7 @@ let getStats = await r6.getStats('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ]
 ```
 #### [Full response](https://gist.github.com/danielwerg/697b0f2a2148f9adceec563314c77d08)
+---
 
 *   #### getStatus() : `Promise` with `Object` Return
 
@@ -250,4 +256,3 @@ let getStatus = await r6.getStatus();
   }
 }
 ```
----
