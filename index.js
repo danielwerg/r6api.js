@@ -5,8 +5,8 @@ class R6API {
     auth.setCredentials(email, password);
     this.auth = auth;
     this.getStatus = require('./lib/methods/getStatus.js');
-    this.getById = require('./lib/methods/getById.js');
-    this.getByUsername = require('./lib/methods/getByUsername.js');
+    this.getId = require('./lib/methods/getById.js');
+    this.getUsername = require('./lib/methods/getByUsername.js');
     this.getLevel = require('./lib/methods/getLevel.js');
     this.getPlaytime = require('./lib/methods/getPlaytime.js');
     this.getRank = require('./lib/methods/getRank.js');
