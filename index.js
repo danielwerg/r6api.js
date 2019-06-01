@@ -9,7 +9,7 @@ class R6API {
     this.getByUsername = require('./lib/methods/getByUsername.js');
     this.getLevel = require('./lib/methods/getLevel.js');
     this.getPlaytime = require('./lib/methods/getPlaytime.js');
-    this.this.getRank = require('./lib/methods/getRank.js');
+    this.getRank = require('./lib/methods/getRank.js');
     this.getStats = require('./lib/methods/getStats.js');
     this.custom = require('./lib/methods/custom.js');
     this.constants = require('./lib/constants');
