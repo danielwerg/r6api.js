@@ -222,7 +222,9 @@ let getStats = await r6.getStats('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 #### [Full response](https://gist.github.com/danielwerg/697b0f2a2148f9adceec563314c77d08)
 ---
 
-*   #### getStatus() : `Promise` with `Object` Return
+*  getStatus() : `Promise` with `Object` Return
+
+Get rainbow6 servers status.
 
 ```js
 let getStatus = await r6.getStatus();
@@ -253,6 +255,23 @@ let getStatus = await r6.getStatus();
     Platform: 'XBOXONE',
     Status: 'Online',
     Maintenance: null
+  }
+}
+```
+---
+
+*   custom()
+
+If you familiar with rainbow6 api this method will make request to custom url you would provide with token in header.
+
+```js
+let custom = await r6.custom(`${r6.constants.URLS.UPLAY.STATS}statistics=operatorpvp_clash_sloweddown&populations=0b95544b-0228-49a7-b338-6d15cfbc3d6a`);
+```
+
+```js
+{
+  results: {
+    '0b95544b-0228-49a7-b338-6d15cfbc3d6a': { 'operatorpvp_clash_sloweddown:3:10:infinite': 1 }
   }
 }
 ```
