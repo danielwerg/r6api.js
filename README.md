@@ -201,7 +201,6 @@ let getStats = await r6.getStats('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 [
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    raw: undefined,
     pvp: {
       weapons: [Object],
       operators: [Object],
