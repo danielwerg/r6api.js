@@ -20,6 +20,13 @@
     "type": "git",
     "url": "git+https://github.com/danielwerg/r6api.js.git"
   },
+  "keywords": [
+    "api",
+    "wrapper",
+    "ubisoft",
+    "siege",
+    "rainbow6"
+  ],
   "bugs": {
     "url": "https://github.com/danielwerg/r6api.js/issues"
   },
