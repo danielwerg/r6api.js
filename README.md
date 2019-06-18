@@ -154,35 +154,42 @@ let getRank = await r6.getRank('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { r
 ```
 
 ```js
-[  
-  {  
+[
+  {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    season: 13,
-    seasonName: 'Burnt Horizon',
-    regions: {  
-      emea: {  
+    season: 14,
+    seasonName: 'Phantom Sight',
+    regions : {
+      emea : {
         region: 'emea',
-        skillMean: 36.5987582848,
-        skillStdev: 3.50964840398,
-        current: {  
+        skillMean: 34.314824008,
+        skillStdev: 5.7171431154,
+        current : {
           name: 'Platinum 3',
           id: 17,
-          mmr: 3659.87582848,
-          image: 'https://i.imgur.com/6AE1DeN.png'
+          mmr: 3431,
+          image: 'https://i.imgur.com/27k46er.png'
         },
-        max: {  
-          name: 'Platinum 1',
-          id: 19,
-          mmr: 4169.99011335,
-          image: 'https://i.imgur.com/vM99U2X.png'
+        max : {
+          name: 'Platinum 3',
+          id: 17,
+          mmr: 3493,
+          image: 'https://i.imgur.com/27k46er.png'
+        },
+        lastMatch : {
+          mmrChange: -59,
+          result: 2,
+          skillStdevChange: -0.0308566215
         },
         previousMmr: 3300,
         nextMmr: 3700,
-        wins: 105,
-        losses: 95,
-        abandons: 1,
-        pastSeasonsAbandons: 5,
-        updateTime: '2019-05-31T05:19:15.478000+00:00'
+        nextRankMatchesNeeded: 4.559322033898305,
+        kills: 215,
+        deaths: 178,
+        wins: 22,
+        losses: 18,
+        abandons: 0,
+        updateTime: '2019-06-18T06:06:16.818000+00:00'
       }
     }
   }
