@@ -1,5 +1,6 @@
 
 
+
 # R6API.js
 
 ### Node.js wrapper around Rainbow Six: Siege API.
@@ -37,7 +38,7 @@ const r6 = new R6API('email', 'password');
   const R6API = require('r6api.js');
   const r6 = new R6API('example@mail.com', 'eatbigbanan');
 
-  const username = 'Nt.DNL._.';
+  const username = 'Daniel.Nt';
   const id = await r6.getId('uplay', username).then(el => el[0].id);
   const stats = await r6.getStats('uplay', id).then(el => el[0]);
 
@@ -45,18 +46,30 @@ const r6 = new R6API('email', 'password');
 ```
 
 ```
-Nt.DNL._. has played 3749 matches
+Daniel.Nt has played 3749 matches
 ```
 ---
 
 ### METHODS
 
+  * [getId](#getId)
+  * [getUsername](#getUsername)
+  * [getLevel](#getLevel)
+  * [getPlaytime](#getPlaytime)
+  * [getRank](#getRank)
+  * [getStats](#getStats)
+  * [getStatus](#getStatus)
+  * [Custom](#Custom)
+---
+### [Changelog](#ChangeLog)
+---
+<a name="getId"></a>
 *   getId(platform: `String`, username: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get id of player from username.
 
 ```js
-let getId = await r6.getId('uplay', 'Nt.DNL._.');
+let getId = await r6.getId('uplay', 'Daniel.Nt');
 ```
 
 ```js
@@ -64,13 +77,13 @@ let getId = await r6.getId('uplay', 'Nt.DNL._.');
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    username: 'Nt.DNL._.',
+    username: 'Daniel.Nt',
     platform: 'uplay'
   }
 ]
 ```
 ---
-
+<a name="getUsername"></a>
 *    getUsername(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get username of player from id.
@@ -84,13 +97,13 @@ let getUsername = await r6.getUsername('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     userid: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    username: 'Nt.DNL._.',
+    username: 'Daniel.Nt',
     platform: 'uplay'
   }
 ]
 ```
 ---
-
+<a name="getLevel"></a>
 *   getLevel(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get level, xp and alpha pack drop chance.
@@ -105,12 +118,12 @@ let getLevel = await r6.getLevel('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     level: 254,
     xp: 65886,
-    lootboxProbability: { raw: 2060, procent: '20.60%' }
+    lootboxProbability: { raw: 2060, percent: '20.60%' }
   }
 ]
 ```
 ---
-
+<a name="getPlaytime"></a>
 *   getPlaytime(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
 Get playtime of player.
@@ -131,7 +144,7 @@ let getPlaytime = await r6.getPlaytime(platform, ids);
 ]
 ```
 ---
-
+<a name="getRank"></a>
 *    getRank(platform: `String`, id: `String` if < 1, `Array` if several, options: `Object`) : `Promise` with `Array` Return
 
 Get seasonal stats for player.
@@ -196,7 +209,7 @@ let getRank = await r6.getRank('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { r
 ]
 ```
 ---
-
+<a name="getStats"></a>
 *    getStats(platform: `String`, id: `String` if < 1, `Array` if several, raw: `Boolean`) : `Promise` with `Array` Return
 
 Get general stats for player.
@@ -225,9 +238,9 @@ let getStats = await r6.getStats('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
   }
 ]
 ```
-#### [Full response](https://gist.github.com/danielwerg/697b0f2a2148f9adceec563314c77d08)
+[****Full response****](https://gist.github.com/danielwerg/697b0f2a2148f9adceec563314c77d08)
 ---
-
+<a name="getStatus"></a>
 *  getStatus() : `Promise` with `Object` Return
 
 Get rainbow6 servers status.
@@ -265,8 +278,8 @@ let getStatus = await r6.getStatus();
 }
 ```
 ---
-
-*   custom()
+<a name="Custom"></a>
+*   Custom()
 
 If you familiar with rainbow6 api this method will make request to custom url you would provide with token in header.
 
@@ -281,3 +294,10 @@ let custom = await r6.custom(`${r6.constants.URLS.UPLAY.STATS}statistics=operato
   }
 }
 ```
+<a name="Changelog"></a>
+## Changelog:
+
+#### 0.0.9
+* Renamed `custom` to `discovery` in `getPlaytime` and `other` to `discovery` in `getStats`
+* Fixed typos in readme
+* Added changelog ✔
