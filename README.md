@@ -61,7 +61,7 @@ Daniel.Nt has played 3749 matches
   * [getStatus](#getStatus)
   * [Custom](#Custom)
 ---
-### [Changelog](#ChangeLog)
+### [Changelog](#Changelog)
 ---
 <a name="getId"></a>
 *   getId(platform: `String`, username: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
@@ -297,7 +297,7 @@ let custom = await r6.custom(`${r6.constants.URLS.UPLAY.STATS}statistics=operato
 <a name="Changelog"></a>
 ## Changelog:
 
-#### 0.0.9
+#### 0.0.20
 * Renamed `custom` to `discovery` in `getPlaytime` and `other` to `discovery` in `getStats`
 * Fixed typos in readme
 * Added changelog ✔

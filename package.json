@@ -1,6 +1,6 @@
 {
   "name": "r6api.js",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Node.js wrapper around Rainbow Six: Siege API.",
   "main": "index.js",
   "scripts": {
