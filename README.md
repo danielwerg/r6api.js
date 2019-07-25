@@ -139,7 +139,7 @@ let getPlaytime = await r6.getPlaytime(platform, ids);
     general: 4402996,
     ranked: 3954804,
     casual: 444947,
-    custom: 3245
+    discovery: 3245
   }
 ]
 ```
