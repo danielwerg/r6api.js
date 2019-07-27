@@ -42,7 +42,7 @@ declare module 'r6api.js' {
     general: number
     ranked: number
     casual: number
-    custom: number
+    discovery: number
   }
 
   //#region Rank
