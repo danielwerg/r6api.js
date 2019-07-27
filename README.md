@@ -35,14 +35,14 @@ const r6 = new R6API('email', 'password');
 ---
 ### Example
 ```js
-  const R6API = require('r6api.js');
-  const r6 = new R6API('example@mail.com', 'eatbigbanan');
+const R6API = require('r6api.js');
+const r6 = new R6API('example@mail.com', 'eatbigbanan');
 
-  const username = 'Daniel.Nt';
-  const id = await r6.getId('uplay', username).then(el => el[0].id);
-  const stats = await r6.getStats('uplay', id).then(el => el[0]);
+const username = 'Daniel.Nt';
+const id = await r6.getId('uplay', username).then(el => el[0].id);
+const stats = await r6.getStats('uplay', id).then(el => el[0]);
 
-  console.log(`${username} has played ${stats.pvp.general.matches} matches`);
+console.log(`${username} has played ${stats.pvp.general.matches} matches`);
 ```
 
 ```
@@ -139,7 +139,7 @@ let getPlaytime = await r6.getPlaytime(platform, ids);
     general: 4402996,
     ranked: 3954804,
     casual: 444947,
-    custom: 3245
+    discovery: 3245
   }
 ]
 ```
