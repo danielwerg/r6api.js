@@ -4,7 +4,7 @@ declare module 'r6api.js' {
   export type SeasonNumber = 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
   export type RankNumber = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20
   export type WeaponType = 'assault' | 'smg' | 'lmg' | 'marksman' | 'pistol' | 'shotgun' | 'mp' | 'launcher' | 'utility'
-  export type Operator = 'recruitsas' | 'recruitfbi' | 'recruitgign' | 'recruitspetsnaz' | 'recruitgsg' | 'smoke' | 'mute' | 'sledge' | 'thatcher' | 'castle' | 'pulse' | 'ash' | 'thermite' | 'doc' | 'rook' | 'twitch' | 'montagne' | 'kapkan' | 'tachanka' | 'glaz' | 'fuze' | 'jager' | 'bandit' | 'blitz' | 'iq' | 'frost' | 'buck' | 'valkyrie' | 'blackbeard' | 'caveira' | 'capitao' | 'echo' | 'hibana' | 'mira' | 'jackal' | 'lesion' | 'ying' | 'ela' | 'zofia' | 'vigil' | 'dokkaebi' | 'lion' | 'finka' | 'maestro' | 'alibi' | 'clash' | 'maverick' | 'kaid' | 'nomad' | 'mozzie' | 'gridlock'
+  export type Operator = 'recruitsas' | 'recruitfbi' | 'recruitgign' | 'recruitspetsnaz' | 'recruitgsg' | 'smoke' | 'mute' | 'sledge' | 'thatcher' | 'castle' | 'pulse' | 'ash' | 'thermite' | 'doc' | 'rook' | 'twitch' | 'montagne' | 'kapkan' | 'tachanka' | 'glaz' | 'fuze' | 'jager' | 'bandit' | 'blitz' | 'iq' | 'frost' | 'buck' | 'valkyrie' | 'blackbeard' | 'caveira' | 'capitao' | 'echo' | 'hibana' | 'mira' | 'jackal' | 'lesion' | 'ying' | 'ela' | 'zofia' | 'vigil' | 'dokkaebi' | 'lion' | 'finka' | 'maestro' | 'alibi' | 'clash' | 'maverick' | 'kaid' | 'nomad' | 'mozzie' | 'gridlock' | 'warden' | 'nokk'
 
   export interface Credentials {
     email: string
