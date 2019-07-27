@@ -297,7 +297,10 @@ let custom = await r6.custom(`${r6.constants.URLS.UPLAY.STATS}statistics=operato
 <a name="Changelog"></a>
 ## Changelog:
 
-#### 0.0.20
+****0.0.21****
+* [EndBug](https://github.com/EndBug) added TypeScript definitions and fixed typos.
+
+****0.0.20****
 * Renamed `custom` to `discovery` in `getPlaytime` and `other` to `discovery` in `getStats`
 * Fixed typos in readme
 * Added changelog ✔
