@@ -225,50 +225,6 @@ declare module 'r6api.js' {
   //#endregion
   //#endregion
 
-  export const auth: {
-    login(email: string, password: string): Promise<any>
-    setCredentials(email: string, password: string): void
-    getCredentials(): Credentials
-    getAuthString(): Promise<string>
-    refreshScheduled(): boolean
-    cancelRefresh(): void
-    setTokenFileLocation(dir: string): string
-    _setAuth(authObj: any): any
-    _getAuth(): any
-  }
-
-  export function getStatus(): Promise<Record<'PC' | 'PSN' | 'XBL', ServerStatus>>
-
-  export function getId(platform: Platform, username: string | string[]): Promise<UserInfo[]>
-
-  export function getUsername(platform: Platform, id: string | string[]): Promise<UserInfo[]>
-
-  export function getLevel(platform: Platform, id: string | string[]): Promise<LevelInfo[]>
-
-  export function getPlaytime(platform: Platform, id: string | string[]): Promise<PlaytimeInfo[]>
-
-  export function getRank(platform: Platform, id: string | string[], options?: RankOptions): Promise<RankInfo[]>
-
-  export function getStats(platform: Platform, id: string | string[], raw?: boolean): Promise<Stats[]>
-
-  export function custom(url: string): Promise<any>
-
-  export const constants: {
-    URLS: {
-      LOGIN: string
-      STATUS: string
-      UPLAY: Service
-      PSN: Service
-      XBL: Service
-    }
-    WEAPONTYPES: Record<number | string, WeaponType>
-    WEAPONS: Weapon[]
-    OPERATORS: OperatorStructure[]
-    STATS: string[]
-    RANKS: Record<RankNumber, Rank>
-    SEASONS: Record<SeasonNumber, string>
-  }
-
   export interface Service {
     APPID: string
     ID: string
@@ -306,5 +262,53 @@ declare module 'r6api.js' {
     badge?: string
   }
 
-  export const errors: Record<'InvalidCredentialsError' | 'MissingHeaderError' | 'MissingCredentialsError' | 'PlayerNotFound' | 'TooManyRequestsError' | 'UnknownAuthError' | 'NoTokenError' | 'TooManyIdsError' | 'NotAnArray' | 'BadRequestError', (msg: string) => Error>
+  export default class {
+    constructor(email: string, password: string)
+
+    auth: {
+      login(email: string, password: string): Promise<any>
+      setCredentials(email: string, password: string): void
+      getCredentials(): Credentials
+      getAuthString(): Promise<string>
+      refreshScheduled(): boolean
+      cancelRefresh(): void
+      setTokenFileLocation(dir: string): string
+      _setAuth(authObj: any): any
+      _getAuth(): any
+    }
+
+    constants: {
+      URLS: {
+        LOGIN: string
+        STATUS: string
+        UPLAY: Service
+        PSN: Service
+        XBL: Service
+      }
+      WEAPONTYPES: Record<number | string, WeaponType>
+      WEAPONS: Weapon[]
+      OPERATORS: OperatorStructure[]
+      STATS: string[]
+      RANKS: Record<RankNumber, Rank>
+      SEASONS: Record<SeasonNumber, string>
+}
+
+    errors: Record<'InvalidCredentialsError' | 'MissingHeaderError' | 'MissingCredentialsError' | 'PlayerNotFound' | 'TooManyRequestsError' | 'UnknownAuthError' | 'NoTokenError' | 'TooManyIdsError' | 'NotAnArray' | 'BadRequestError', (msg: string) => Error>
+
+    getStatus(): Promise<Record<'PC' | 'PSN' | 'XBL', ServerStatus>>
+
+    getId(platform: Platform, username: string | string[]): Promise<UserInfo[]>
+
+    getUsername(platform: Platform, id: string | string[]): Promise<UserInfo[]>
+
+    getLevel(platform: Platform, id: string | string[]): Promise<LevelInfo[]>
+
+    getPlaytime(platform: Platform, id: string | string[]): Promise<PlaytimeInfo[]>
+
+    getRank(platform: Platform, id: string | string[], options?: RankOptions): Promise<RankInfo[]>
+
+    getStats(platform: Platform, id: string | string[], raw?: boolean): Promise<Stats[]>
+
+    custom(url: string): Promise<any>
+  }
 }
