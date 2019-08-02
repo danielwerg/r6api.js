@@ -31,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/danielwerg/r6api.js/issues"
   },
-  "homepage": "https://github.com/danielwerg/r6api.js#readme"
+  "homepage": "https://github.com/danielwerg/r6api.js#readme",
+  "runkitExampleFilename": "examples/runkit.js"
 }
