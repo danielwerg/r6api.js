@@ -6,6 +6,8 @@
 ### Node.js wrapper around Rainbow Six: Siege API.
  Originaly based on  [github.com/r6db/r6api](https://github.com/r6db/r6api)
 
+ Operator icons from [marcopixel.eu/r6-operatoricons](https://marcopixel.eu/r6-operatoricons) and available under the CC BY 4.0 license.
+
 ## Install
 
 ```
