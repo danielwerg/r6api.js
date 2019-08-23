@@ -299,6 +299,10 @@ let custom = await r6.custom(`${r6.constants.URLS.UPLAY.STATS}statistics=operato
 <a name="Changelog"></a>
 ## Changelog:
 
+****0.0.24****
+* Now recruits gadget = null
+* Added next season operators info, still missing `fullIndex` and unique gadget id
+
 ****0.0.21****
 * [EndBug](https://github.com/EndBug) added TypeScript definitions and fixed typos.
 
