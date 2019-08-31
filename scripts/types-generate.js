@@ -13,10 +13,10 @@ function createUnionType(elements, noQuotes = false) {
 }
 
 const oldRankNumber = createUnionType(Object.keys(constants.OLD_RANKS), true)
-const operator = createUnionType(Object.values(constants.OPERATORS.map(op => op.name)));
+const operator = createUnionType(constants.OPERATORS.map(op => op.name));
 const rankNumber = createUnionType(Object.keys(constants.RANKS), true)
 const seasonNumber = createUnionType(Object.keys(constants.SEASONS), true)
-const weaponName = createUnionType(Object.values(constants.WEAPONS.map(wp => wp.name)));
+const weaponName = createUnionType(constants.WEAPONS.map(wp => wp.name));
 const weaponType = createUnionType(Object.values(constants.WEAPONTYPES));
 
 const file = `// This file is generated automatically by scripts/types-generate.ts, any edit to this file will be erased automatically
