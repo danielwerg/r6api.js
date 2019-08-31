@@ -1,11 +1,15 @@
+import { oldRankNumber, operator, rankNumber, seasonNumber, weaponType, weaponName } from './autogen'
+import * as constants from '../lib/constants'
+
 declare module 'r6api.js' {
   export type Platform = 'uplay' | 'psn' | 'xbl'
   export type Region = 'ncsa' | 'emea' | 'apac'
-  export type SeasonNumber = 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
-  export type OldRankNumber = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20
-  export type RankNumber = OldRankNumber | 21 | 22 | 23
-  export type WeaponType = 'assault' | 'smg' | 'lmg' | 'marksman' | 'pistol' | 'shotgun' | 'mp' | 'launcher' | 'utility'
-  export type Operator = 'recruitsas' | 'recruitfbi' | 'recruitgign' | 'recruitspetsnaz' | 'recruitgsg' | 'smoke' | 'mute' | 'sledge' | 'thatcher' | 'castle' | 'pulse' | 'ash' | 'thermite' | 'doc' | 'rook' | 'twitch' | 'montagne' | 'kapkan' | 'tachanka' | 'glaz' | 'fuze' | 'jager' | 'bandit' | 'blitz' | 'iq' | 'frost' | 'buck' | 'valkyrie' | 'blackbeard' | 'caveira' | 'capitao' | 'echo' | 'hibana' | 'mira' | 'jackal' | 'lesion' | 'ying' | 'ela' | 'zofia' | 'vigil' | 'dokkaebi' | 'lion' | 'finka' | 'maestro' | 'alibi' | 'clash' | 'maverick' | 'kaid' | 'nomad' | 'mozzie' | 'gridlock' | 'warden' | 'nokk' | 'amaru' | 'goyo'
+  export type SeasonNumber = seasonNumber
+  export type OldRankNumber = oldRankNumber
+  export type Operator = operator
+  export type RankNumber = rankNumber
+  export type WeaponName = weaponName
+  export type WeaponType = weaponType
 
   export interface Credentials {
     email: string
@@ -140,7 +144,7 @@ declare module 'r6api.js' {
   }
 
   interface WeaponStats {
-    name: string
+    name: WeaponName
     kills: number
     deaths: number
     headshots: number
