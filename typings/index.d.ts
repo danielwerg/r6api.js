@@ -1,4 +1,4 @@
-import { oldRankNumber, operator, rankNumber, seasonNumber, weaponType, weaponName } from './autogen'
+import { seasonNumber, oldRankNumber, operator, rankNumber, weaponName, weaponType } from './autogen'
 import * as constants from '../lib/constants'
 
 declare module 'r6api.js' {
