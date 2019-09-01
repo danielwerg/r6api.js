@@ -243,7 +243,6 @@ let getStats = await r6.getStats('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ]
 ```
 [****Full response****](https://gist.github.com/danielwerg/697b0f2a2148f9adceec563314c77d08)
-
 ---
 <a name="getStatus"></a>
 *  getStatus() : `Promise` with `Object` Return
