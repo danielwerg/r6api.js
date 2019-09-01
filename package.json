@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "typings/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "types:generate": "node scripts/types-generate"
   },
   "author": "Daniel Sandberg",
   "license": "MIT",
@@ -16,7 +16,9 @@
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "^3.0.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielwerg/r6api.js.git"
@@ -32,5 +34,10 @@
     "url": "https://github.com/danielwerg/r6api.js/issues"
   },
   "homepage": "https://github.com/danielwerg/r6api.js#readme",
-  "runkitExampleFilename": "examples/runkit.js"
+  "runkitExampleFilename": "examples/runkit.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run types:generate"
+    }
+  }
 }

@@ -65,6 +65,8 @@ Daniel.Nt has played 3749 matches
 ---
 ### [Changelog](#Changelog)
 ---
+### [TypeScript integrations](#typescript-integrations)
+---
 <a name="getId"></a>
 *   getId(platform: `String`, username: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
 
@@ -296,6 +298,24 @@ let custom = await r6.custom(`${r6.constants.URLS.UPLAY.STATS}statistics=operato
   }
 }
 ```
+<a name="typescript-integrations"></a>
+## TypeScript integrations
+
+This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.  
+For a full list of supporting IDEs, please see [here](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
+
+If you're coding in TypeScript you can also use the type-checking functions provided in [`./ts-utils.ts`](ts-utils.ts): you can either copy them into your code or directly importing them from the package.
+
+```ts
+import { isWeaponName } from 'r6api.js/ts-utils'
+
+var yourVar; // any
+...
+if (isWeaponName(yourVar)) {
+  // Now your var has the WeaponName type
+}
+```
+
 <a name="Changelog"></a>
 ## Changelog:
 
