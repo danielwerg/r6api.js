@@ -319,6 +319,9 @@ if (isWeaponName(yourVar)) {
 <a name="Changelog"></a>
 ## Changelog:
 
+****0.0.25****
+* @[EndBug](https://github.com/EndBug) added ts-utils file which contains type-checking functions
+
 ****0.0.24****
 * Now recruits gadget = null
 * Added next season operators info, still missing `fullIndex` and unique gadget id
