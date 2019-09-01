@@ -1,4 +1,4 @@
-const index = require('../index')
+const index = require('../index');
 const { writeFileSync } = require('fs');
 const { join } = require('path');
 const constants = (new index()).constants;
@@ -9,13 +9,13 @@ const constants = (new index()).constants;
  */
 function createUnionType(elements, noQuotes = false) {
   if (noQuotes) return elements.join(' | ');
-  return "'" + elements.join("' | '") + "'";
+  return `'${elements.join("' | '")}'`;
 }
 
-const oldRankNumber = createUnionType(Object.keys(constants.OLD_RANKS), true)
+const oldRankNumber = createUnionType(Object.keys(constants.OLD_RANKS), true);
 const operator = createUnionType(constants.OPERATORS.map(op => op.name));
-const rankNumber = createUnionType(Object.keys(constants.RANKS), true)
-const seasonNumber = createUnionType(Object.keys(constants.SEASONS), true)
+const rankNumber = createUnionType(Object.keys(constants.RANKS), true);
+const seasonNumber = createUnionType(Object.keys(constants.SEASONS), true);
 const weaponName = createUnionType(constants.WEAPONS.map(wp => wp.name));
 const weaponType = createUnionType(Object.values(constants.WEAPONTYPES));
 
@@ -26,10 +26,10 @@ export type rankNumber = ${rankNumber}
 export type seasonNumber = ${seasonNumber}
 export type weaponName = ${weaponName}
 export type weaponType = ${weaponType}
-`
+`;
 
 writeFileSync(join(__dirname, '../typings/autogen.ts'), file);
 
 module.exports = {
   createUnionType
-}
+};
