@@ -320,11 +320,14 @@ if (isWeaponName(yourVar)) {
 <a name="Changelog"></a>
 ## Changelog:
 
+****0.0.27****
+* Added unique gadget ids and indexes.
+
 ****0.0.26****
 * `GetRank`
 
   * Added multi season checking.
-  *  `season` is now `seasons`.
+  * `season` is now `seasons`.
   * Added `topRankPosition`, not completely sure what it is, probably number in leaderboard for champions rank.
 
 
