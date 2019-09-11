@@ -154,16 +154,15 @@ let getPlaytime = await r6.getPlaytime(platform, ids);
 Get seasonal stats for player.
 
 options:
-*  region: `Array`, [`ncsa`, `emea`, `apac`]. (by default all region)
-*  season: `Number`, starting from `6`. (by default `-1` which is most recent season)
+*  regions: `Array`, [`ncsa`, `emea`, `apac`]. (by default all region)
+*  seasons: `Array`, starting from `6` to `15`. (by default `-1` which is most recent season)
 
 Seasons reference:
 ```js
-const SEASONS = {
   6: 'Health', 7: 'Blood Orchid', 8: 'White Noise',
   9: 'Chimera', 10: 'Para Bellum', 11: 'Grim Sky',
-  12: 'Wind Bastion', 13: 'Burnt Horizon', 14: 'Phantom Sight'
-};
+  12: 'Wind Bastion', 13: 'Burnt Horizon', 14: 'Phantom Sight',
+  15: 'Burnt Horizon'
 ```
 
 ```js
@@ -288,7 +287,9 @@ let getStatus = await r6.getStatus();
 If you familiar with rainbow6 api this method will make request to custom url you would provide with token in header.
 
 ```js
-let custom = await r6.custom(`${r6.constants.URLS.UPLAY.STATS}statistics=operatorpvp_clash_sloweddown&populations=0b95544b-0228-49a7-b338-6d15cfbc3d6a`);
+let custom = await r6.custom(
+  `${r6.constants.URLS('STATS')('uplay', ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'], ['operatorpvp_clash_sloweddown'])}`
+);
 ```
 
 ```js
@@ -319,11 +320,38 @@ if (isWeaponName(yourVar)) {
 <a name="Changelog"></a>
 ## Changelog:
 
+****0.0.26****
+* `GetRank`
+
+  * Added multi season checking.
+  *  `season` is now `seasons`.
+  * Added `topRankPosition`, not completely sure what it is, probably number in leaderboard for champions rank.
+
+
+* ids and usernames limit changes
+
+  `getId` and `getUsername` limit is still `50`.
+
+  `getLevel`, `getPlaytime`, `getRank`, `getStats` limit is now `200`.
+
+  I might add option to remove limit checking later.
+
+* for those who interact with `constants.js`
+
+  * `URLS` structure completely changed to make it easier to get endpoint url.
+  * `STATS` is now bunch of functions which returning arrays, it's easier to read since it categorized.
+
+* `getStats`
+
+  `mode` now `modes` in `pvp` and `pve`.
+
+  more changes coming in next update, options to remove `pve` or `pvp` stats, etc.
+
 ****0.0.25****
-* @[EndBug](https://github.com/EndBug) added ts-utils file which contains type-checking functions
+* [EndBug](https://github.com/EndBug) added ts-utils file which contains type-checking functions
 
 ****0.0.24****
-* Now recruits gadget = null
+* Now recruits gadget is `null`
 * Added next season operators info, still missing `fullIndex` and unique gadget id
 
 ****0.0.21****
