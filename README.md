@@ -320,6 +320,9 @@ if (isWeaponName(yourVar)) {
 <a name="Changelog"></a>
 ## Changelog:
 
+****0.0.28****
+* bug fix, now if you provide `{ seasons: 'all' }` option to `getRank` it should return stats for every season.
+
 ****0.0.27****
 * Added unique gadget ids and indexes.
 
