@@ -90,7 +90,7 @@ let getId = await r6.getId('uplay', 'Daniel.Nt');
 Gets the username of a player from their id.
 
 ```js
-let getUsername = await r6.getUsername('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+let getUsername = await r6.getUsername('pc', 'ids');
 ```
 
 ```js
@@ -110,7 +110,7 @@ let getUsername = await r6.getUsername('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d
 Gets a player's level, xp and alpha pack drop chance.
 
 ```js
-let getLevel = await r6.getLevel('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+let getLevel = await r6.getLevel('pc', 'id');
 ```
 
 ```js
@@ -130,7 +130,7 @@ let getLevel = await r6.getLevel('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 Gets the playtime of a player.
 
 ```js
-let getPlaytime = await r6.getPlaytime(platform, ids);
+let getPlaytime = await r6.getPlaytime(platform, 'ids');
 ```
 
 ```js
@@ -154,6 +154,7 @@ options:
 -  regions: `('ncsa' | 'emea' | 'apac')[]` (by default gets all the regions)
 -  seasons: `number[] | 'all'`, with numbers from `6` to `15` (by default `-1`  is most recent season)
 
+
 Seasons reference:
 ```js
 6: 'Health', 7: 'Blood Orchid', 8: 'White Noise',
@@ -163,46 +164,47 @@ Seasons reference:
 ```
 
 ```js
-let getRank = await r6.getRank('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions: ['emea'] });
+let getRank = await r6.getRank('pc', 'ids', { regions: ['emea'] });
 ```
 
 ```js
 [
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    season: 14,
-    seasonName: 'Phantom Sight',
-    regions : {
-      emea : {
-        region: 'emea',
-        skillMean: 34.314824008,
-        skillStdev: 5.7171431154,
-        current : {
-          name: 'Platinum 3',
-          id: 17,
-          mmr: 3431,
-          image: 'https://i.imgur.com/27k46er.png'
-        },
-        max : {
-          name: 'Platinum 3',
-          id: 17,
-          mmr: 3493,
-          image: 'https://i.imgur.com/27k46er.png'
-        },
-        lastMatch : {
-          mmrChange: -59,
-          result: 2,
-          skillStdevChange: -0.0308566215
-        },
-        previousMmr: 3300,
-        nextMmr: 3700,
-        nextRankMatchesNeeded: 4.559322033898305,
-        kills: 215,
-        deaths: 178,
-        wins: 22,
-        losses: 18,
-        abandons: 0,
-        updateTime: '2019-06-18T06:06:16.818000+00:00'
+    seasons: {
+      '15': {
+        id: 15,
+        name: 'Ember Rise',
+        regions: {
+          emea: {
+            region: 'emea',
+            skillMean: 30.663307433,
+            skillStdev: 7.5624420961,
+            current: {
+              name: 'Unranked',
+              id: 0,
+              mmr: 3066,
+              image: 'https://i.imgur.com/bvnVUEm.png'
+            },
+            max: {
+              name: 'Unranked',
+              id: 0,
+              mmr: 0,
+              image: 'https://i.imgur.com/bvnVUEm.png'
+            },
+            lastMatch: { mmrChange: 0, won: false, skillStdevChange: -0.0048172252 },
+            previousMmr: 0,
+            nextMmr: 0,
+            topRankPosition: 0,
+            kills: 1155,
+            deaths: 1227,
+            wins: 0,
+            losses: 0,
+            matches: 0,
+            abandons: 0,
+            updateTime: '1970-01-01T00:00:00+00:00'
+          }
+        }
       }
     }
   }
@@ -215,7 +217,7 @@ let getRank = await r6.getRank('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { r
 Get general stats for player.
 
 ```js
-let getStats = await r6.getStats('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+let getStats = await r6.getStats('pc', 'ids');
 ```
 ```js
 [
@@ -225,15 +227,15 @@ let getStats = await r6.getStats('pc', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
       weapons: [Object],
       operators: [Object],
       general: [Object],
+      modes: [Object]
       queue: [Object],
-      mode: [Object]
     },
     pve: {
       weapons: [Object],
       operators: [Object],
       general: [Object],
+      modes: [Object]
       type: [Object],
-      mode: [Object]
     }
   }
 ]
@@ -323,6 +325,10 @@ if (isWeaponName(yourVar)) {
 <a name="Changelog"></a>
 ## Changelog:
 
+****0.0.29****
+* updated docs.
+* replaced `flat()`.
+
 ****0.0.28****
 * bug fix, now if you provide `{ seasons: 'all' }` option to `getRank` it should return stats for every season.
 
@@ -334,6 +340,7 @@ if (isWeaponName(yourVar)) {
 
   * Added multi season checking.
   * `season` is now `seasons`.
+  * `result` in `lastMatch` is now `won` and instead of number it is now `boolean`.
   * Added `topRankPosition`, not completely sure what it is, probably number in leaderboard for champions rank.
 
 
