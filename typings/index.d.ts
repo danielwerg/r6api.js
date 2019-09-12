@@ -52,14 +52,18 @@ declare module 'r6api.js' {
 
   //#region Rank
   export interface RankOptions {
-    region: Region[]
-    season: SeasonNumber | -1
+    regions: Region[]
+    seasons: (SeasonNumber | -1)[] | 'all'
   }
 
   export interface RankInfo {
     id: string
-    season: SeasonNumber
-    seasonName: string
+    seasons: Record<SeasonNumber, RankSeason>
+  }
+
+  export interface RankSeason {
+    id: SeasonNumber
+    name: string
     regions: Record<Region, RankRegion>
   }
 
@@ -81,8 +85,10 @@ declare module 'r6api.js' {
     deaths: number
     wins: number
     losses: number
+    matches: number
     abandons: number
     updateTime: string
+    topRankPosition: number
   }
 
   export interface RankStat {
@@ -187,7 +193,7 @@ declare module 'r6api.js' {
   //#region PvP
   export interface PvP extends StatsBase {
     queue: Record<string, StatsQueue>
-    mode: Record<string, PvPMode>
+    modes: Record<string, PvPMode>
   }
 
   export interface StatsQueue {
@@ -214,8 +220,8 @@ declare module 'r6api.js' {
 
   //#region PvE
   export interface PvE extends StatsBase {
-    type: Record<'local' | 'coop', StatsType>
-    mode: Record<string, PvEMode>
+    types: Record<'local' | 'coop', StatsType>
+    modes: Record<string, PvEMode>
   }
 
   export interface StatsType {
@@ -270,6 +276,16 @@ declare module 'r6api.js' {
     oldBadge: string
   }
 
+  export type UrlTypeSwitch = 'LOGIN' | 'STATUS' | 'APPID' | 'ID' | 'USERNAME' | 'LEVEL' | 'PLAYTIME' | 'STATS' | 'RANK'
+
+  export type UrlReturnSwitch<T> =
+    T extends 'LOGIN' | 'STATUS' ? string :
+    T extends 'APPID' ? (platform: Platform) => string :
+    T extends 'ID' | 'USERNAME' | 'LEVEL' | 'PLAYTIME' ? (platform: Platform, query: string[]) => string :
+    T extends 'STATS' ? (platform: Platform, query: string[], stats: any[]) => string :
+    T extends 'RANK' ? (platform: Platform, query: string[], season: SeasonNumber, region: Region) => string :
+    undefined
+
   export default class {
     constructor(email: string, password: string)
 
@@ -286,17 +302,21 @@ declare module 'r6api.js' {
     }
 
     constants: {
-      URLS: {
-        LOGIN: string
-        STATUS: string
-        UPLAY: Service
-        PSN: Service
-        XBL: Service
-      }
+      URLS<T extends UrlTypeSwitch>(type: T): UrlReturnSwitch<T>
       WEAPONTYPES: Record<number | string, WeaponType>
       WEAPONS: Weapon[]
       OPERATORS: OperatorStructure[]
-      STATS: string[]
+      STATS: {
+        general(type: string): string[]
+        ranked(): string[]
+        casual(): string[]
+        mode(): string[]
+        weaponTypes(type: string): string[]
+        weapons(type: string): string[]
+        operators(type: string): string[]
+        operatorGadgets(type: string): string[]
+        thunt(): string[]
+      }
       RANKS: Record<RankNumber, Rank>
       OLD_RANKS: Record<OldRankNumber, OldRank>
       SEASONS: Record<SeasonNumber, string>
