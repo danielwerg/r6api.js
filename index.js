@@ -32,7 +32,7 @@ class R6API {
     this.getRank = (platform, query, opts) =>
       checkArgs({ func: getRank, platform, query, opts, limit: 200 });
     this.getStats = (platform, query, opts) =>
-      checkArgs({ func: getStats, platform, query, opts, limit: 200 }); // TODO
+      checkArgs({ func: getStats, platform, query, opts, limit: 200 });
     this.getStatus = getStatus;
     this.getUsername = (platform, query) =>
       checkArgs({ func: getUsername, platform, query, limit: 50 });
