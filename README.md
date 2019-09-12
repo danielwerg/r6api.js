@@ -1,6 +1,3 @@
-
-
-
 # R6API.js
 
 ### Node.js wrapper around Rainbow Six: Siege API.
@@ -68,9 +65,9 @@ Daniel.Nt has played 3749 matches
 ### [TypeScript integrations](#typescript-integrations)
 ---
 <a name="getId"></a>
-*   getId(platform: `String`, username: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*   getId(platform: `string`, usernames: `string | string[]`): `Promise<Array>`
 
-Get id of player from username.
+Gets the id of a player from their username.
 
 ```js
 let getId = await r6.getId('uplay', 'Daniel.Nt');
@@ -88,9 +85,9 @@ let getId = await r6.getId('uplay', 'Daniel.Nt');
 ```
 ---
 <a name="getUsername"></a>
-*    getUsername(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*    getUsername(platform: `string`, id: `string | string[]`): `Promise<Array>`
 
-Get username of player from id.
+Gets the username of a player from their id.
 
 ```js
 let getUsername = await r6.getUsername('pc', 'ids');
@@ -108,9 +105,9 @@ let getUsername = await r6.getUsername('pc', 'ids');
 ```
 ---
 <a name="getLevel"></a>
-*   getLevel(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*   getLevel(platform: `string`, id: `string | string[]`): `Promise<Array>`
 
-Get level, xp and alpha pack drop chance.
+Gets a player's level, xp and alpha pack drop chance.
 
 ```js
 let getLevel = await r6.getLevel('pc', 'id');
@@ -128,9 +125,9 @@ let getLevel = await r6.getLevel('pc', 'id');
 ```
 ---
 <a name="getPlaytime"></a>
-*   getPlaytime(platform: `String`, id: `String` if < 1, `Array` if several) : `Promise` with `Array` Return
+*   getPlaytime(platform: `string`, id: `string | string[]`) : `Promise<Array>`
 
-Get playtime of player.
+Gets the playtime of a player.
 
 ```js
 let getPlaytime = await r6.getPlaytime(platform, 'ids');
@@ -149,20 +146,21 @@ let getPlaytime = await r6.getPlaytime(platform, 'ids');
 ```
 ---
 <a name="getRank"></a>
-*    getRank(platform: `String`, id: `String` if < 1, `Array` if several, options: `Object`) : `Promise` with `Array` Return
+*    getRank(platform: `string`, id: `string | string[]`, options: `object`) : `Promise<Array>`
 
-Get seasonal stats for player.
+Gets seasonal stats for a player.
 
 options:
-*  regions: `Array`, [`ncsa`, `emea`, `apac`]. (by default all 3 regions)
-*  seasons: `Array`, starting from `6` to `15` or `string`: `all`. (by default `-1` which is most recent season)
+-  regions: `('ncsa' | 'emea' | 'apac')[]` (by default gets all the regions)
+-  seasons: `number[] | 'all'`, with numbers from `6` to `15` (by default `-1`  is most recent season)
+
 
 Seasons reference:
 ```js
-  6: 'Health', 7: 'Blood Orchid', 8: 'White Noise',
-  9: 'Chimera', 10: 'Para Bellum', 11: 'Grim Sky',
-  12: 'Wind Bastion', 13: 'Burnt Horizon', 14: 'Phantom Sight',
-  15: 'Burnt Horizon'
+6: 'Health', 7: 'Blood Orchid', 8: 'White Noise',
+9: 'Chimera', 10: 'Para Bellum', 11: 'Grim Sky',
+12: 'Wind Bastion', 13: 'Burnt Horizon', 14: 'Phantom Sight',
+15: 'Burnt Horizon'
 ```
 
 ```js
@@ -214,9 +212,9 @@ let getRank = await r6.getRank('pc', 'ids', { regions: ['emea'] });
 ```
 ---
 <a name="getStats"></a>
-*    getStats(platform: `String`, id: `String` if < 1, `Array` if several, raw: `Boolean`) : `Promise` with `Array` Return
+*    getStats(platform: `string`, id: `string | string[]`, raw: `boolean`) : `Promise<Array>`
 
-Get general stats for player.
+Gets general stats for a player.
 
 ```js
 let getStats = await r6.getStats('pc', 'ids');
@@ -247,7 +245,7 @@ let getStats = await r6.getStats('pc', 'ids');
 <a name="getStatus"></a>
 *  getStatus() : `Promise` with `Object` Return
 
-Get rainbow6 servers status.
+Gets Rainbow Six Siege servers status.
 
 ```js
 let getStatus = await r6.getStatus();
@@ -285,7 +283,7 @@ let getStatus = await r6.getStatus();
 <a name="Custom"></a>
 *   Custom()
 
-If you familiar with rainbow6 api this method will make request to custom url you would provide with token in header.
+Useful if you're familiar with Rainbow Six Siege's stats API; this method will make a request to a custom URL you would provide with the token in the header.
 
 ```js
 let custom = await r6.custom(
@@ -303,8 +301,15 @@ let custom = await r6.custom(
 <a name="typescript-integrations"></a>
 ## TypeScript integrations
 
-This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.  
+This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.
 For a full list of supporting IDEs, please see [here](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
+
+Please notice that some editors don't like the fact that we're exporting a class along with types, so if you don't see any type suggestion in your js files you can try using `require('r6api.js').default` as your module import. You can look at the example below:
+
+```js
+const R6API = require('r6api.js').default; // Now everything should be typed
+const r6 = new R6API('example@mail.com', 'eatbigbanan'); // You can use the module as usual
+```
 
 If you're coding in TypeScript you can also use the type-checking functions provided in [`./ts-utils.ts`](ts-utils.ts): you can either copy them into your code or directly importing them from the package.
 
