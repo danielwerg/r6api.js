@@ -283,7 +283,7 @@ let getStatus = await r6.getStatus();
 <a name="Custom"></a>
 *   Custom()
 
-If you familiar with Rainbow Six Siege stats api this method will make request to custom url you would provide with token in header.
+Useful if you're familiar with Rainbow Six Siege's stats API; this method will make a request to a custom URL you would provide with the token in the header.
 
 ```js
 let custom = await r6.custom(
