@@ -212,9 +212,9 @@ let getRank = await r6.getRank('pc', 'ids', { regions: ['emea'] });
 ```
 ---
 <a name="getStats"></a>
-*    getStats(platform: `String`, id: `String` if < 1, `Array` if several, raw: `Boolean`) : `Promise` with `Array` Return
+*    getStats(platform: `string`, id: `string | string[]`, raw: `boolean`) : `Promise<Array>`
 
-Get general stats for player.
+Gets general stats for a player.
 
 ```js
 let getStats = await r6.getStats('pc', 'ids');
@@ -240,12 +240,12 @@ let getStats = await r6.getStats('pc', 'ids');
   }
 ]
 ```
-[****Full response****](./doc/stats-response.json)
+[****Full response****](https://gist.github.com/danielwerg/697b0f2a2148f9adceec563314c77d08)
 ---
 <a name="getStatus"></a>
 *  getStatus() : `Promise` with `Object` Return
 
-Get rainbow6 servers status.
+Gets Rainbow Six Siege servers status.
 
 ```js
 let getStatus = await r6.getStatus();
@@ -283,7 +283,7 @@ let getStatus = await r6.getStatus();
 <a name="Custom"></a>
 *   Custom()
 
-If you familiar with rainbow6 api this method will make request to custom url you would provide with token in header.
+If you familiar with Rainbow Six Siege stats api this method will make request to custom url you would provide with token in header.
 
 ```js
 let custom = await r6.custom(
@@ -301,9 +301,10 @@ let custom = await r6.custom(
 <a name="typescript-integrations"></a>
 ## TypeScript integrations
 
-This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.  
-For a full list of supporting IDEs, please see [here](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).  
-Please notice that some editors dont' like the fact that we're exporting a class along with types, so if you don't see any type suggestion in your js files you can try using `require('r6api.js').default` as your module import. You can look at the example below:
+This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.
+For a full list of supporting IDEs, please see [here](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
+
+Please notice that some editors don't like the fact that we're exporting a class along with types, so if you don't see any type suggestion in your js files you can try using `require('r6api.js').default` as your module import. You can look at the example below:
 
 ```js
 const R6API = require('r6api.js').default; // Now everything should be typed
