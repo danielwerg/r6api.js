@@ -235,12 +235,12 @@ let getStats = await r6.getStats('pc', 'ids');
       operators: [Object],
       general: [Object],
       modes: [Object]
-      type: [Object],
+      types: [Object],
     }
   }
 ]
 ```
-[****Full response****](https://gist.github.com/danielwerg/697b0f2a2148f9adceec563314c77d08)
+[****Full response****](./doc/stats-response.json)
 ---
 <a name="getStatus"></a>
 *  getStatus() : `Promise` with `Object` Return
