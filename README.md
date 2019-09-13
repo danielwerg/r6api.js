@@ -338,8 +338,8 @@ if (isWeaponName(yourVar)) {
 
 * `getStats`
 
-	 * `mode` is now `modes` in `pvp` and `pve`.
-	 * more changes coming in next update, options to remove `pve` or `pvp` stats, etc.
+  * `mode` is now `modes` in `pvp` and `pve`.
+  * more changes coming in next update, options to remove `pve` or `pvp` stats, etc.
 
 * `ids` and `usernames` limit changes
 
@@ -351,8 +351,8 @@ if (isWeaponName(yourVar)) {
 
 * for those who interact with `constants.js`
 
-	 * `URLS` structure completely changed to make it easier to get endpoint url.
-	 * `STATS` is now bunch of functions which returning arrays, it's easier to read since it categorized.
+  * `URLS` structure completely changed to make it easier to get endpoint url.
+  * `STATS` is now bunch of functions which returning arrays, it's easier to read since it categorized.
 
 ### 0.0.25
 * [EndBug](https://github.com/EndBug) added ts-utils file which contains type-checking functions
