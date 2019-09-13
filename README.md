@@ -330,11 +330,11 @@ if (isWeaponName(yourVar)) {
 * `0.0.29`, `0.0.28`, `0.0.27`, `0.0.26`  versions has been deprecated.
 * `getRank`
 
-	* Added multi season checking.
-	* `season` is now `seasons`.
-	* `result` in `lastMatch` is now `won` and instead of number it is now `boolean`.
-	*  Added `matches` value.
-	* Added `topRankPosition`, not completely sure what it is, probably number in leaderboard for champions rank.
+  * Added multi season checking.
+  * `season` is now `seasons`.
+  * `result` in `lastMatch` is now `won` and instead of number it is now `boolean`.
+  *  Added `matches` value.
+  * Added `topRankPosition`, not completely sure what it is, probably number in leaderboard for champions rank.
 
 * `getStats`
 
@@ -343,11 +343,11 @@ if (isWeaponName(yourVar)) {
 
 * `ids` and `usernames` limit changes
 
-	* `getId` and `getUsername` limit is still `50`.
+  * `getId` and `getUsername` limit is still `50`.
 
-	* `getLevel`, `getPlaytime`, `getRank`, `getStats` limit is now `200`.
+  * `getLevel`, `getPlaytime`, `getRank`, `getStats` limit is now `200`.
 
-	* I might add option to remove limit checking later.
+  * I might add option to remove limit checking later.
 
 * for those who interact with `constants.js`
 
