@@ -327,7 +327,7 @@ if (isWeaponName(yourVar)) {
 ## Changelog:
 
 ### 1.0.1
-* getRank
+* `getRank`
   * Added support for new ranks structure.
   * Also it will now return relevant rank image depending on which season it is.
 
