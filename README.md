@@ -326,6 +326,11 @@ if (isWeaponName(yourVar)) {
 <a name="Changelog"></a>
 ## Changelog:
 
+### 1.0.1
+* getRank
+  * Added support for new ranks structure.
+  * Also it will now return relevant rank image depending on which season it is.
+
 ### 1.0.0
 * `0.0.29`, `0.0.28`, `0.0.27`, `0.0.26`  versions has been deprecated.
 * `getRank`
