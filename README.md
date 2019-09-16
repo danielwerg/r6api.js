@@ -1,8 +1,10 @@
 # R6API.js
 
 ### Node.js wrapper around Rainbow Six: Siege API.
- Originaly based on  [github.com/r6db/r6api](https://github.com/r6db/r6api)
 
+[![NPM](https://nodei.co/npm/r6api.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/r6api.js/)
+
+ Originaly based on [github.com/r6db/r6api](https://github.com/r6db/r6api).  
  Operator icons from [marcopixel.eu/r6-operatoricons](https://marcopixel.eu/r6-operatoricons) and available under the CC BY 4.0 license.
 
 ## Install
@@ -60,9 +62,9 @@ Daniel.Nt has played 3749 matches
   * [getStatus](#getStatus)
   * [Custom](#Custom)
 ---
-### [Changelog](#Changelog)
+### [Changelog](#changelog-1)
 ---
-### [TypeScript integrations](#typescript-integrations)
+### [TypeScript integrations](#typescript-integrations-1)
 ---
 <a name="getId"></a>
 *   getId(platform: `string`, usernames: `string | string[]`): `Promise<Array>`
@@ -298,7 +300,7 @@ let custom = await r6.custom(
   }
 }
 ```
-<a name="typescript-integrations"></a>
+
 ## TypeScript integrations
 
 This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.
@@ -323,7 +325,6 @@ if (isWeaponName(yourVar)) {
 }
 ```
 
-<a name="Changelog"></a>
 ## Changelog:
 
 ### 1.0.1
