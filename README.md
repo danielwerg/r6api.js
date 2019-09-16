@@ -300,7 +300,7 @@ let custom = await r6.custom(
   }
 }
 ```
-<a name="typescript-integrations"></a>
+
 ## TypeScript integrations
 
 This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.
@@ -325,7 +325,6 @@ if (isWeaponName(yourVar)) {
 }
 ```
 
-<a name="Changelog"></a>
 ## Changelog:
 
 ### 1.0.1
