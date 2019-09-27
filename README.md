@@ -67,12 +67,12 @@ Daniel.Nt has played 3749 matches
 ### [TypeScript integrations](#typescript-integrations-1)
 ---
 <a name="getId"></a>
-*   getId(platform: `string`, usernames: `string | string[]`): `Promise<Array>`
+*   getId(platform: `string`, usernames: `string | string[]`) : `Promise<Array>`
 
 Gets the id of a player from their username.
 
 ```js
-let getId = await r6.getId('uplay', 'Daniel.Nt');
+await r6.getId('uplay', 'Daniel.Nt');
 ```
 
 ```js
@@ -87,12 +87,12 @@ let getId = await r6.getId('uplay', 'Daniel.Nt');
 ```
 ---
 <a name="getUsername"></a>
-*    getUsername(platform: `string`, id: `string | string[]`): `Promise<Array>`
+*    getUsername(platform: `string`, id: `string | string[]`) : `Promise<Array>`
 
 Gets the username of a player from their id.
 
 ```js
-let getUsername = await r6.getUsername('pc', 'ids');
+await r6.getUsername('pc', 'ids');
 ```
 
 ```js
@@ -107,12 +107,12 @@ let getUsername = await r6.getUsername('pc', 'ids');
 ```
 ---
 <a name="getLevel"></a>
-*   getLevel(platform: `string`, id: `string | string[]`): `Promise<Array>`
+*   getLevel(platform: `string`, id: `string | string[]`) : `Promise<Array>`
 
 Gets a player's level, xp and alpha pack drop chance.
 
 ```js
-let getLevel = await r6.getLevel('pc', 'id');
+await r6.getLevel('pc', 'id');
 ```
 
 ```js
@@ -132,7 +132,7 @@ let getLevel = await r6.getLevel('pc', 'id');
 Gets the playtime of a player.
 
 ```js
-let getPlaytime = await r6.getPlaytime(platform, 'ids');
+await r6.getPlaytime(platform, 'ids');
 ```
 
 ```js
@@ -166,7 +166,7 @@ Seasons reference:
 ```
 
 ```js
-let getRank = await r6.getRank('pc', 'ids', { regions: ['emea'] });
+await r6.getRank('pc', 'ids', { regions: ['emea'] });
 ```
 
 ```js
@@ -219,7 +219,7 @@ let getRank = await r6.getRank('pc', 'ids', { regions: ['emea'] });
 Gets general stats for a player.
 
 ```js
-let getStats = await r6.getStats('pc', 'ids');
+await r6.getStats('pc', 'ids');
 ```
 ```js
 [
@@ -245,12 +245,12 @@ let getStats = await r6.getStats('pc', 'ids');
 [****Full response****](./doc/stats-response.json)
 ---
 <a name="getStatus"></a>
-*  getStatus() : `Promise` with `Object` Return
+*  getStatus() : `Promise<Object>`
 
 Gets Rainbow Six Siege servers status.
 
 ```js
-let getStatus = await r6.getStatus();
+await r6.getStatus();
 ```
 
 ```js
@@ -288,7 +288,7 @@ let getStatus = await r6.getStatus();
 Useful if you're familiar with Rainbow Six Siege's stats API; this method will make a request to a custom URL you would provide with the token in the header.
 
 ```js
-let custom = await r6.custom(
+await r6.custom(
   `${r6.constants.URLS('STATS')('uplay', ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'], ['operatorpvp_clash_sloweddown'])}`
 );
 ```
