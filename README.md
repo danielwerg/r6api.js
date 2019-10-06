@@ -13,7 +13,7 @@
 npm install r6api.js
 ```
 
-### INIT
+### Init
 
 To setup this module, you need to provide Ubisoft accounts credentials (email and password).
 You don't have to use you real account.
@@ -26,7 +26,7 @@ How to create account?
 *   Provide all details there and remember your email and password.
 ---
 
-### SETUP
+### Setup
 
 ```js
 const R6API = require('r6api.js');
@@ -51,7 +51,7 @@ Daniel.Nt has played 3749 matches
 ```
 ---
 
-### METHODS
+### Methods
 
   * [getId](#getId)
   * [getUsername](#getUsername)
