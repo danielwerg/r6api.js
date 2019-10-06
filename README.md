@@ -4,8 +4,8 @@
 
 [![NPM](https://nodei.co/npm/r6api.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/r6api.js/)
 
- Originaly based on [github.com/r6db/r6api](https://github.com/r6db/r6api).  
- Operator icons from [marcopixel.eu/r6-operatoricons](https://marcopixel.eu/r6-operatoricons) and available under the CC BY 4.0 license.
+Originaly based on [github.com/r6db/r6api](https://github.com/r6db/r6api).  
+Operator icons from [marcopixel.eu/r6-operatoricons](https://marcopixel.eu/r6-operatoricons) and available under the CC BY 4.0 license.
 
 ### Install
 
