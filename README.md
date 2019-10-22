@@ -229,19 +229,20 @@ await r6.getStats('pc', 'ids');
       weapons: [Object],
       operators: [Object],
       general: [Object],
-      modes: [Object]
+      modes: [Object],
       queue: [Object],
     },
     pve: {
       weapons: [Object],
       operators: [Object],
       general: [Object],
-      modes: [Object]
+      modes: [Object],
       types: [Object],
     }
   }
 ]
 ```
+Note: Ubisoft stopped recording `bulletsFired` long time ago, don't rely on this.
 [****Full response****](./doc/stats-response.json)
 ---
 <a name="getStatus"></a>
