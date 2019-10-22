@@ -242,7 +242,7 @@ await r6.getStats('pc', 'ids');
   }
 ]
 ```
-> Note: Ubisoft stopped recording `bulletsFired` long time ago, don't rely on this.
+> Note: Ubisoft stopped recording `bulletsFired` long time ago, don't rely on it.
 
 [****Full response****](./doc/stats-response.json)
 ---
