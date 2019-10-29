@@ -52,8 +52,8 @@ declare module 'r6api.js' {
 
   //#region Rank
   export interface RankOptions {
-    regions: Region[]
-    seasons: (SeasonNumber | -1)[] | 'all'
+    regions?: Region[]
+    seasons?: (SeasonNumber | -1)[] | 'all'
   }
 
   export interface RankInfo {
