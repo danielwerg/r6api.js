@@ -62,9 +62,9 @@ Daniel.Nt has played 3749 matches
   * [getStatus](#getStatus)
   * [Custom](#Custom)
 ---
-### [Changelog](#changelog-1)
----
 ### [TypeScript integrations](#typescript-integrations-1)
+---
+### [Changelog](#changelog-1)
 ---
 <a name="getId"></a>
 *   getId(platform: `string`, usernames: `string | string[]`) : `Promise<Array>`
