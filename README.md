@@ -369,19 +369,19 @@ if (isWeaponName(yourVar)) {
   * `STATS` is now bunch of functions which returning arrays, it's easier to read since it categorized.
 
 ### 0.0.25
-* [EndBug](https://github.com/EndBug) added ts-utils file which contains type-checking functions
+* [EndBug](https://github.com/EndBug) added ts-utils file which contains type-checking functions.
 
 ### 0.0.24
-* Now recruits gadget is `null`
-* Added next season operators info, still missing `fullIndex` and unique gadget id
+* Now recruits gadget is `null`.
+* Added next season operators info, still missing `fullIndex` and unique gadget id.
 
 ### 0.0.21
 * [EndBug](https://github.com/EndBug) added TypeScript definitions and fixed typos.
 
 ### 0.0.20
-* Renamed `custom` to `discovery` in `getPlaytime` and `other` to `discovery` in `getStats`
-* Fixed typos in readme
-* Added changelog ✔
+* Renamed `custom` to `discovery` in `getPlaytime` and `other` to `discovery` in `getStats`.
+* Fixed typos in readme.
+* Added changelog.
 
 ## Credit
 
