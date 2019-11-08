@@ -4,9 +4,6 @@
 
 [![NPM](https://nodei.co/npm/r6api.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/r6api.js/)
 
-Originaly based on [github.com/r6db/r6api](https://github.com/r6db/r6api).  
-Operator icons from [marcopixel.eu/r6-operatoricons](https://marcopixel.eu/r6-operatoricons) and available under the CC BY 4.0 license.
-
 ### Install
 
 ```
@@ -65,6 +62,8 @@ Daniel.Nt has played 3749 matches
 ### [TypeScript integrations](#typescript-integrations-1)
 ---
 ### [Changelog](#changelog-1)
+---
+### [Credit](#credit-1)
 ---
 <a name="getId"></a>
 *   getId(platform: `string`, usernames: `string | string[]`) : `Promise<Array>`
@@ -327,7 +326,14 @@ if (isWeaponName(yourVar)) {
 }
 ```
 
-## Changelog:
+## Changelog
+
+### 1.0.3
+* Fixed unique gadgets stats for `kaid`, `nomad`, `warden` and `nokk`.
+* Small changes to README.
+
+### 1.0.2
+* Few changes to README.
 
 ### 1.0.1
 * `getRank`
@@ -376,3 +382,9 @@ if (isWeaponName(yourVar)) {
 * Renamed `custom` to `discovery` in `getPlaytime` and `other` to `discovery` in `getStats`
 * Fixed typos in readme
 * Added changelog ✔
+
+## Credit
+
+Originaly based on [github.com/r6db/r6api](https://github.com/r6db/r6api).
+
+Operator icons from [marcopixel.eu/r6-operatoricons](https://marcopixel.eu/r6-operatoricons) and available under the CC BY 4.0 license.
