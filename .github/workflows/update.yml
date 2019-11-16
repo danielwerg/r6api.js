@@ -1,0 +1,30 @@
+name: Update TS files
+
+on: [push, pull_request]
+  
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        nove-version: 10.x
+    - name: Install dependencies
+      run: npm install
+    - name: Regenerate definition files
+      run: npm run types:generate
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v2.0.0
+      with:
+        author_name: Automation
+        author_email: actions@github.com
+        message: "[auto] Update typings"
+        path: typings
+        pattern: "*.*"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
