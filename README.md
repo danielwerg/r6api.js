@@ -61,7 +61,7 @@ Daniel.Nt has played 3749 matches
 ---
 ### [TypeScript integrations](#typescript-integrations-1)
 ---
-### [Changelog](#changelog-1)
+### [Changelog](https://github.com/danielwerg/r6api.js/releases)
 ---
 ### [Credit](#credit-1)
 ---
@@ -302,7 +302,7 @@ await r6.custom(
 }
 ```
 
-## TypeScript integrations
+### TypeScript integrations
 
 This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.
 For a full list of supporting IDEs, please see [here](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
@@ -326,64 +326,7 @@ if (isWeaponName(yourVar)) {
 }
 ```
 
-## Changelog
-
-### 1.0.3
-* Fixed unique gadgets stats for `kaid`, `nomad`, `warden` and `nokk`.
-* Small changes to README.
-
-### 1.0.2
-* Few changes to README.
-
-### 1.0.1
-* `getRank`
-  * Added support for new ranks structure.
-  * Also it will now return relevant rank image depending on which season it is.
-
-### 1.0.0
-* `0.0.29`, `0.0.28`, `0.0.27`, `0.0.26`  versions has been deprecated.
-* `getRank`
-
-  * Added multi season checking.
-  * `season` is now `seasons`.
-  * `result` in `lastMatch` is now `won` and instead of number it is now `boolean`.
-  *  Added `matches` value.
-  * Added `topRankPosition`, not completely sure what it is, probably number in leaderboard for champions rank.
-
-* `getStats`
-
-  * `mode` is now `modes` in `pvp` and `pve`.
-  * more changes coming in next update, options to remove `pve` or `pvp` stats, etc.
-
-* `ids` and `usernames` limit changes
-
-  * `getId` and `getUsername` limit is still `50`.
-
-  * `getLevel`, `getPlaytime`, `getRank`, `getStats` limit is now `200`.
-
-  * I might add option to remove limit checking later.
-
-* for those who interact with `constants.js`
-
-  * `URLS` structure completely changed to make it easier to get endpoint url.
-  * `STATS` is now bunch of functions which returning arrays, it's easier to read since it categorized.
-
-### 0.0.25
-* [EndBug](https://github.com/EndBug) added ts-utils file which contains type-checking functions.
-
-### 0.0.24
-* Now recruits gadget is `null`.
-* Added next season operators info, still missing `fullIndex` and unique gadget id.
-
-### 0.0.21
-* [EndBug](https://github.com/EndBug) added TypeScript definitions and fixed typos.
-
-### 0.0.20
-* Renamed `custom` to `discovery` in `getPlaytime` and `other` to `discovery` in `getStats`.
-* Fixed typos in readme.
-* Added changelog.
-
-## Credit
+### Credit
 
 Originally based on [github.com/r6db/r6api](https://github.com/r6db/r6api).
 
