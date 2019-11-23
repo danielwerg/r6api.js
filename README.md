@@ -17,10 +17,10 @@ You don't have to use you real account.
 
 How to create account?
 
-*   Go to [temp-mail.org/en](https://temp-mail.org/en).
-*   Copy your temporal email.
-*   Go to [account.ubisoft.com/en-GB/login](https://account.ubisoft.com/en-GB/login).
-*   Provide all details there and remember your email and password.
+* Go to [temp-mail.org/en](https://temp-mail.org/en).
+* Copy your temporal email.
+* Go to [account.ubisoft.com/en-GB/login](https://account.ubisoft.com/en-GB/login).
+* Provide all details there and remember your email and password.
 ---
 
 ### Setup
@@ -66,7 +66,7 @@ Daniel.Nt has played 3749 matches
 ### [Credit](#credit-1)
 ---
 <a name="getId"></a>
-*   getId(platform: `string`, usernames: `string | string[]`) : `Promise<Array>`
+* getId(platform: `string`, usernames: `string | string[]`) : `Promise<Array>`
 
 Gets the id of a player from their username.
 
@@ -86,7 +86,7 @@ await r6.getId('uplay', 'Daniel.Nt');
 ```
 ---
 <a name="getUsername"></a>
-*    getUsername(platform: `string`, id: `string | string[]`) : `Promise<Array>`
+* getUsername(platform: `string`, id: `string | string[]`) : `Promise<Array>`
 
 Gets the username of a player from their id.
 
@@ -106,7 +106,7 @@ await r6.getUsername('pc', 'ids');
 ```
 ---
 <a name="getLevel"></a>
-*   getLevel(platform: `string`, id: `string | string[]`) : `Promise<Array>`
+* getLevel(platform: `string`, id: `string | string[]`) : `Promise<Array>`
 
 Gets a player's level, xp and alpha pack drop chance.
 
@@ -126,7 +126,7 @@ await r6.getLevel('pc', 'id');
 ```
 ---
 <a name="getPlaytime"></a>
-*   getPlaytime(platform: `string`, id: `string | string[]`) : `Promise<Array>`
+* getPlaytime(platform: `string`, id: `string | string[]`) : `Promise<Array>`
 
 Gets the playtime of a player.
 
@@ -147,7 +147,7 @@ await r6.getPlaytime(platform, 'ids');
 ```
 ---
 <a name="getRank"></a>
-*    getRank(platform: `string`, id: `string | string[]`, options: `object`) : `Promise<Array>`
+* getRank(platform: `string`, id: `string | string[]`, options: `object`) : `Promise<Array>`
 
 Gets seasonal stats for a player.
 
@@ -213,7 +213,7 @@ await r6.getRank('pc', 'ids', { regions: ['emea'] });
 ```
 ---
 <a name="getStats"></a>
-*    getStats(platform: `string`, id: `string | string[]`, raw: `boolean`) : `Promise<Array>`
+* getStats(platform: `string`, id: `string | string[]`, raw: `boolean`) : `Promise<Array>`
 
 Gets general stats for a player.
 
@@ -246,7 +246,7 @@ await r6.getStats('pc', 'ids');
 [****Full response****](./doc/stats-response.json)
 ---
 <a name="getStatus"></a>
-*  getStatus() : `Promise<Object>`
+* getStatus() : `Promise<Object>`
 
 Gets Rainbow Six Siege servers status.
 
@@ -284,7 +284,7 @@ await r6.getStatus();
 ```
 ---
 <a name="Custom"></a>
-*   Custom()
+* Custom()
 
 Useful if you're familiar with Rainbow Six Siege's stats API; this method will make a request to a custom URL you would provide with the token in the header.
 
