@@ -1,0 +1,7 @@
+/node_modules/
+package-lock.json
+.git
+test*
+/old_code/
+
+.github
