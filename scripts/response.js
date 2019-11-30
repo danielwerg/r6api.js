@@ -1,22 +1,23 @@
-const R6API = require('../index');
+require('dotenv').config();
 const fs = require('fs');
-const path = require('path');
+const { join } = require('path');
 
-const email = process.env.API_EMAIL,
-  pass = process.env.API_PASS;
-if (!email || !pass) throw new Error("Cannot update file without API credentials");
+const email = process.env.UBI_EMAIL,
+      password = process.env.UBI_PASSWORD;
+if (!email || !password) throw new Error('Cannot update file without API credentials');
 
-const r6 = new R6API(email, pass);
+const R6API = require('../index');
+const r6api = new R6API(email, password);
 
 (async () => {
-  try {
-    const username = 'Daniel.Nt';
-    const id = await r6.getId('uplay', username).then(el => el[0].id);
-    const stats = await r6.getStats('uplay', id).then(el => el[0]);
 
-    fs.writeFileSync(path.join(__dirname, '../doc/stats-response.json'), JSON.stringify(stats));
-  } catch (e) {
-    console.error(e);
-    process.exit(1);
-  }
+    const username = 'Daniel.Nt',
+          platform = 'uplay';
+    const id = await r6api.getId(platform, username).then(el => el[0].id);
+    const stats = await r6api.getStats(platform, id).then(el => el[0]);
+
+    fs.writeFileSync(join(__dirname, '../doc/stats-response.json'), JSON.stringify(stats, null, 2));
+
+    process.exit(0);
+
 })();
