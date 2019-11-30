@@ -289,7 +289,7 @@ await r6api.getStatus();
 Useful if you're familiar with Rainbow Six Siege's stats API; this method will make a request to a custom URL you would provide with the token in the header.
 
 ```js
-await r6.custom(
+await r6api.custom(
   `${r6api.constants.URLS('STATS')('uplay', ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'], ['operatorpvp_clash_sloweddown'])}`
 );
 ```
