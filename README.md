@@ -243,7 +243,7 @@ await r6api.getStats('pc', 'ids');
 ```
 > Note: Ubisoft stopped recording `bulletsFired` long time ago, don't rely on it.
 
-[****Full response****](./doc/stats-response.json)
+[****Full response****](./doc/getStats-response.json)
 ---
 <a name="getStatus"></a>
 * getStatus() : `Promise<Object>`
