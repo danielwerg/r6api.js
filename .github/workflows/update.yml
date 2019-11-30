@@ -1,7 +1,7 @@
 name: Update documentation files
 
 on: [push, pull_request]
-  
+
 
 jobs:
   update:
@@ -30,8 +30,8 @@ jobs:
     - name: Update full response file
       run: npm run response
       env:
-        API_EMAIL: ${{ secrets.API_EMAIL }}
-        API_PASS: ${{ secrets.API_PASS }}
+        UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
+        UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
     - name: Commit response changes
       uses: EndBug/add-and-commit@v2.0.0
       with:
@@ -42,4 +42,3 @@ jobs:
         pattern: "*.*"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
