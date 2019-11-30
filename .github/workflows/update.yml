@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Regenerate definition files
-      run: npm run types:generate
+      run: npm run types
     - name: Commit changes
       uses: EndBug/add-and-commit@v2.0.0
       with:
