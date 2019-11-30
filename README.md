@@ -27,18 +27,18 @@ How to create account?
 
 ```js
 const R6API = require('r6api.js');
-const r6 = new R6API('email', 'password');
+const r6api = new R6API('email', 'password');
 ```
 
 ---
 ### Example
 ```js
 const R6API = require('r6api.js');
-const r6 = new R6API('example@mail.com', 'eatbigbanan');
+const r6api = new R6API('example@mail.com', 'eatbigbanan');
 
 const username = 'Daniel.Nt';
-const id = await r6.getId('uplay', username).then(el => el[0].id);
-const stats = await r6.getStats('uplay', id).then(el => el[0]);
+const id = await r6api.getId('uplay', username).then(el => el[0].id);
+const stats = await r6api.getStats('uplay', id).then(el => el[0]);
 
 console.log(`${username} has played ${stats.pvp.general.matches} matches`);
 ```
@@ -71,7 +71,7 @@ Daniel.Nt has played 3749 matches
 Gets the id of a player from their username.
 
 ```js
-await r6.getId('uplay', 'Daniel.Nt');
+await r6api.getId('uplay', 'Daniel.Nt');
 ```
 
 ```js
@@ -91,7 +91,7 @@ await r6.getId('uplay', 'Daniel.Nt');
 Gets the username of a player from their id.
 
 ```js
-await r6.getUsername('pc', 'ids');
+await r6api.getUsername('pc', 'ids');
 ```
 
 ```js
@@ -111,7 +111,7 @@ await r6.getUsername('pc', 'ids');
 Gets a player's level, xp and alpha pack drop chance.
 
 ```js
-await r6.getLevel('pc', 'id');
+await r6api.getLevel('pc', 'id');
 ```
 
 ```js
@@ -131,7 +131,7 @@ await r6.getLevel('pc', 'id');
 Gets the playtime of a player.
 
 ```js
-await r6.getPlaytime(platform, 'ids');
+await r6api.getPlaytime(platform, 'ids');
 ```
 
 ```js
@@ -165,7 +165,7 @@ Seasons reference:
 ```
 
 ```js
-await r6.getRank('pc', 'ids', { regions: ['emea'] });
+await r6api.getRank('pc', 'ids', { regions: ['emea'] });
 ```
 
 ```js
@@ -218,7 +218,7 @@ await r6.getRank('pc', 'ids', { regions: ['emea'] });
 Gets general stats for a player.
 
 ```js
-await r6.getStats('pc', 'ids');
+await r6api.getStats('pc', 'ids');
 ```
 ```js
 [
@@ -251,7 +251,7 @@ await r6.getStats('pc', 'ids');
 Gets Rainbow Six Siege servers status.
 
 ```js
-await r6.getStatus();
+await r6api.getStatus();
 ```
 
 ```js
@@ -290,7 +290,7 @@ Useful if you're familiar with Rainbow Six Siege's stats API; this method will m
 
 ```js
 await r6.custom(
-  `${r6.constants.URLS('STATS')('uplay', ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'], ['operatorpvp_clash_sloweddown'])}`
+  `${r6api.constants.URLS('STATS')('uplay', ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'], ['operatorpvp_clash_sloweddown'])}`
 );
 ```
 
@@ -311,7 +311,7 @@ Please notice that some editors don't like the fact that we're exporting a class
 
 ```js
 const R6API = require('r6api.js').default; // Now everything should be typed
-const r6 = new R6API('example@mail.com', 'eatbigbanan'); // You can use the module as usual
+const r6api = new R6API('example@mail.com', 'eatbigbanan'); // You can use the module as usual
 ```
 
 If you're coding in TypeScript you can also use the type-checking functions provided in [`./ts-utils.ts`](ts-utils.ts): you can either copy them into your code or directly importing them from the package.
