@@ -17,5 +17,6 @@ const r6 = new R6API(email, pass);
     fs.writeFileSync(path.join(__dirname, '../doc/stats-response.json'), JSON.stringify(stats));
   } catch (e) {
     throw e;
+    process.exit(1);
   }
 })();
