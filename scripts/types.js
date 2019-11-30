@@ -29,6 +29,7 @@ export type weaponType = ${weaponType}
 `;
 
 writeFileSync(join(__dirname, '../typings/autogen.ts'), file);
+console.log('Type definitions have been updated.');
 
 module.exports = {
   createUnionType

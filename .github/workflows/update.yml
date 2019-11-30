@@ -1,0 +1,45 @@
+name: Update documentation files
+
+on: [push, pull_request]
+  
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        nove-version: 10.x
+    - name: Install dependencies
+      run: npm install
+    - name: Regenerate definition files
+      run: npm run types
+    - name: Commit TypeScript changes
+      uses: EndBug/add-and-commit@v2.0.0
+      with:
+        author_name: Automation
+        author_email: actions@github.com
+        message: "[auto] Update typings"
+        path: typings
+        pattern: "*.*"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Update full response file
+      run: npm run response
+      env:
+        API_EMAIL: ${{ secrets.API_EMAIL }}
+        API_PASS: ${{ secrets.API_PASS }}
+    - name: Commit response changes
+      uses: EndBug/add-and-commit@v2.0.0
+      with:
+        author_name: Automation
+        author_email: actions@github.com
+        message: "[auto] Update response file"
+        path: doc
+        pattern: "*.*"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
