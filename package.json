@@ -5,6 +5,7 @@
   "main": "index.js",
   "types": "typings/index.d.ts",
   "scripts": {
+    "response": "node scripts/response",
     "types": "node scripts/types"
   },
   "author": "Daniel Sandberg",
