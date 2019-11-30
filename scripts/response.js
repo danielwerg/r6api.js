@@ -16,7 +16,7 @@ const r6api = new R6API(email, password);
     const id = await r6api.getId(platform, username).then(el => el[0].id);
     const stats = await r6api.getStats(platform, id).then(el => el[0]);
 
-    fs.writeFileSync(join(__dirname, '../doc/stats-response.json'), JSON.stringify(stats, null, 2));
+    fs.writeFileSync(join(__dirname, '../doc/getStats-response.json'), JSON.stringify(stats, null, 2));
 
     process.exit(0);
 
