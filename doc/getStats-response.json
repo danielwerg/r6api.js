@@ -5,11 +5,11 @@
       "assault": {
         "general": {
           "kills": 7867,
-          "deaths": 8626,
+          "deaths": 8627,
           "headshots": 3505,
           "bulletsFired": 178102,
           "bulletsConnected": 63676,
-          "timesChosen": 11246
+          "timesChosen": 11247
         },
         "list": [
           {
@@ -190,7 +190,7 @@
             "headshots": 9,
             "bulletsFired": 0,
             "bulletsConnected": 231,
-            "timesChosen": 32
+            "timesChosen": 33
           },
           {
             "name": "AR-15.50",
@@ -213,7 +213,7 @@
           {
             "name": "ARX200",
             "kills": 1,
-            "deaths": 35,
+            "deaths": 36,
             "headshots": 0,
             "bulletsFired": 0,
             "bulletsConnected": 4,
@@ -227,8 +227,8 @@
           "deaths": 6591,
           "headshots": 2517,
           "bulletsFired": 153750,
-          "bulletsConnected": 54287,
-          "timesChosen": 7841
+          "bulletsConnected": 54297,
+          "timesChosen": 7842
         },
         "list": [
           {
@@ -408,8 +408,8 @@
             "deaths": 83,
             "headshots": 10,
             "bulletsFired": 440,
-            "bulletsConnected": 228,
-            "timesChosen": 40
+            "bulletsConnected": 238,
+            "timesChosen": 41
           },
           {
             "name": "P10 RONI",
@@ -548,11 +548,11 @@
       "pistol": {
         "general": {
           "kills": 912,
-          "deaths": 943,
+          "deaths": 944,
           "headshots": 360,
           "bulletsFired": 21476,
           "bulletsConnected": 8203,
-          "timesChosen": 21022
+          "timesChosen": 21023
         },
         "list": [
           {
@@ -657,7 +657,7 @@
           {
             "name": "Keratos .357",
             "kills": 9,
-            "deaths": 6,
+            "deaths": 7,
             "headshots": 0,
             "bulletsFired": 0,
             "bulletsConnected": 139,
@@ -744,7 +744,7 @@
           "headshots": 188,
           "bulletsFired": 22413,
           "bulletsConnected": 7471,
-          "timesChosen": 5479
+          "timesChosen": 5481
         },
         "list": [
           {
@@ -763,7 +763,7 @@
             "headshots": 3,
             "bulletsFired": 1842,
             "bulletsConnected": 160,
-            "timesChosen": 757
+            "timesChosen": 758
           },
           {
             "name": "M1014",
@@ -862,7 +862,7 @@
             "headshots": 0,
             "bulletsFired": 0,
             "bulletsConnected": 6,
-            "timesChosen": 42
+            "timesChosen": 43
           },
           {
             "name": "SIX12 SD",
@@ -1744,14 +1744,14 @@
         "badge": "https://i.imgur.com/hvLklzC.png",
         "ctu": "GEO",
         "kills": 139,
-        "deaths": 142,
-        "wins": 70,
+        "deaths": 143,
+        "wins": 71,
         "losses": 98,
         "headshots": 55,
         "meleeKills": 4,
         "dbno": 62,
-        "xp": 364280,
-        "playtime": 32450,
+        "xp": 366330,
+        "playtime": 32661,
         "gadget": [
           {
             "name": "Eyenox Tracking Assist",
@@ -2059,14 +2059,14 @@
         "badge": "https://i.imgur.com/RHwnp7d.png",
         "ctu": "SASR",
         "kills": 35,
-        "deaths": 21,
+        "deaths": 22,
         "wins": 21,
         "losses": 9,
         "headshots": 9,
         "meleeKills": 3,
         "dbno": 13,
         "xp": 72065,
-        "playtime": 6148,
+        "playtime": 6228,
         "gadget": [
           {
             "name": "Drones Hacked",
@@ -2182,9 +2182,9 @@
     },
     "general": {
       "bulletsFired": 417099,
-      "bulletsConnected": 154632,
+      "bulletsConnected": 154642,
       "kills": 19608,
-      "deaths": 19816,
+      "deaths": 19818,
       "assists": 5856,
       "headshots": 7685,
       "meleeKills": 581,
@@ -2196,13 +2196,13 @@
       "matches": 4294,
       "wins": 2251,
       "losses": 2043,
-      "playtime": 5001151,
-      "gadgetsDestroyed": 21455,
+      "playtime": 5001442,
+      "gadgetsDestroyed": 21458,
       "rappelBreaches": 65,
       "barricadesDeployed": 2301,
       "reinforcementsDeployed": 13840,
       "suicides": 119,
-      "distanceTravelled": 1552903715,
+      "distanceTravelled": 1552903861,
       "customGamesPlaytime": 974
     },
     "modes": {
@@ -2212,7 +2212,7 @@
         "losses": 1587,
         "matches": 3298,
         "bestScore": 8805,
-        "playtime": 3889698
+        "playtime": 3889989
       },
       "secure": {
         "name": "Secure Area",
@@ -2240,11 +2240,11 @@
       "casual": {
         "name": "Casual",
         "kills": 2249,
-        "deaths": 2030,
+        "deaths": 2032,
         "wins": 348,
         "losses": 188,
         "matches": 536,
-        "playtime": 496452
+        "playtime": 496743
       },
       "ranked": {
         "name": "Ranked",
