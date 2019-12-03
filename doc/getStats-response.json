@@ -4,27 +4,27 @@
     "weapons": {
       "assault": {
         "general": {
-          "kills": 7840,
-          "deaths": 8586,
-          "headshots": 3489,
+          "kills": 7867,
+          "deaths": 8626,
+          "headshots": 3505,
           "bulletsFired": 178102,
-          "bulletsConnected": 63450,
-          "timesChosen": 11196
+          "bulletsConnected": 63676,
+          "timesChosen": 11246
         },
         "list": [
           {
             "name": "L85A2",
-            "kills": 1439,
-            "deaths": 972,
-            "headshots": 663,
+            "kills": 1444,
+            "deaths": 977,
+            "headshots": 667,
             "bulletsFired": 34178,
-            "bulletsConnected": 11298,
-            "timesChosen": 2260
+            "bulletsConnected": 11369,
+            "timesChosen": 2275
           },
           {
             "name": "F2",
             "kills": 1060,
-            "deaths": 830,
+            "deaths": 834,
             "headshots": 531,
             "bulletsFired": 21106,
             "bulletsConnected": 8529,
@@ -32,17 +32,17 @@
           },
           {
             "name": "416-C CARBINE",
-            "kills": 1197,
-            "deaths": 1222,
-            "headshots": 459,
+            "kills": 1208,
+            "deaths": 1226,
+            "headshots": 465,
             "bulletsFired": 29505,
-            "bulletsConnected": 10877,
-            "timesChosen": 1429
+            "bulletsConnected": 10961,
+            "timesChosen": 1444
           },
           {
             "name": "R4-C",
             "kills": 1022,
-            "deaths": 1236,
+            "deaths": 1242,
             "headshots": 447,
             "bulletsFired": 19142,
             "bulletsConnected": 7339,
@@ -55,21 +55,21 @@
             "headshots": 298,
             "bulletsFired": 23609,
             "bulletsConnected": 6443,
-            "timesChosen": 1160
+            "timesChosen": 1162
           },
           {
             "name": "Type-89",
             "kills": 509,
-            "deaths": 687,
+            "deaths": 689,
             "headshots": 208,
             "bulletsFired": 14673,
-            "bulletsConnected": 4494,
-            "timesChosen": 1013
+            "bulletsConnected": 4495,
+            "timesChosen": 1014
           },
           {
             "name": "552 Commando",
             "kills": 389,
-            "deaths": 231,
+            "deaths": 234,
             "headshots": 162,
             "bulletsFired": 3640,
             "bulletsConnected": 2602,
@@ -78,7 +78,7 @@
           {
             "name": "PARA-308",
             "kills": 236,
-            "deaths": 205,
+            "deaths": 206,
             "headshots": 90,
             "bulletsFired": 5124,
             "bulletsConnected": 1924,
@@ -87,7 +87,7 @@
           {
             "name": "AR33",
             "kills": 249,
-            "deaths": 214,
+            "deaths": 215,
             "headshots": 113,
             "bulletsFired": 7051,
             "bulletsConnected": 1775,
@@ -104,17 +104,17 @@
           },
           {
             "name": "C8-SFW",
-            "kills": 124,
-            "deaths": 343,
-            "headshots": 59,
+            "kills": 126,
+            "deaths": 345,
+            "headshots": 60,
             "bulletsFired": 2013,
-            "bulletsConnected": 897,
-            "timesChosen": 204
+            "bulletsConnected": 908,
+            "timesChosen": 208
           },
           {
             "name": "M4",
             "kills": 120,
-            "deaths": 96,
+            "deaths": 98,
             "headshots": 65,
             "bulletsFired": 0,
             "bulletsConnected": 899,
@@ -123,11 +123,11 @@
           {
             "name": "M762",
             "kills": 141,
-            "deaths": 260,
+            "deaths": 267,
             "headshots": 75,
             "bulletsFired": 0,
             "bulletsConnected": 1047,
-            "timesChosen": 192
+            "timesChosen": 193
           },
           {
             "name": "C7E",
@@ -144,17 +144,17 @@
             "deaths": 244,
             "headshots": 23,
             "bulletsFired": 4182,
-            "bulletsConnected": 626,
-            "timesChosen": 109
+            "bulletsConnected": 627,
+            "timesChosen": 111
           },
           {
             "name": "MK17 CQB",
-            "kills": 82,
-            "deaths": 503,
-            "headshots": 40,
+            "kills": 91,
+            "deaths": 504,
+            "headshots": 45,
             "bulletsFired": 1973,
-            "bulletsConnected": 546,
-            "timesChosen": 111
+            "bulletsConnected": 594,
+            "timesChosen": 117
           },
           {
             "name": "AUG A2",
@@ -177,16 +177,16 @@
           {
             "name": "AK-74M",
             "kills": 77,
-            "deaths": 47,
+            "deaths": 48,
             "headshots": 49,
             "bulletsFired": 0,
-            "bulletsConnected": 421,
-            "timesChosen": 106
+            "bulletsConnected": 431,
+            "timesChosen": 110
           },
           {
             "name": "Commando 9",
             "kills": 32,
-            "deaths": 43,
+            "deaths": 44,
             "headshots": 9,
             "bulletsFired": 0,
             "bulletsConnected": 231,
@@ -223,58 +223,58 @@
       },
       "smg": {
         "general": {
-          "kills": 5318,
-          "deaths": 6562,
-          "headshots": 2506,
+          "kills": 5352,
+          "deaths": 6591,
+          "headshots": 2517,
           "bulletsFired": 153750,
-          "bulletsConnected": 53983,
-          "timesChosen": 7793
+          "bulletsConnected": 54287,
+          "timesChosen": 7841
         },
         "list": [
           {
             "name": "MPX",
-            "kills": 848,
-            "deaths": 626,
-            "headshots": 414,
+            "kills": 854,
+            "deaths": 628,
+            "headshots": 416,
             "bulletsFired": 30286,
-            "bulletsConnected": 8916,
-            "timesChosen": 1194
+            "bulletsConnected": 8966,
+            "timesChosen": 1197
           },
           {
             "name": "MP7",
-            "kills": 834,
-            "deaths": 1025,
-            "headshots": 418,
+            "kills": 838,
+            "deaths": 1031,
+            "headshots": 419,
             "bulletsFired": 24768,
-            "bulletsConnected": 8045,
-            "timesChosen": 1214
+            "bulletsConnected": 8094,
+            "timesChosen": 1223
           },
           {
             "name": "MP5",
-            "kills": 935,
-            "deaths": 1220,
-            "headshots": 493,
+            "kills": 939,
+            "deaths": 1226,
+            "headshots": 495,
             "bulletsFired": 19041,
-            "bulletsConnected": 9540,
-            "timesChosen": 1182
+            "bulletsConnected": 9564,
+            "timesChosen": 1188
           },
           {
             "name": "UMP45",
-            "kills": 572,
+            "kills": 573,
             "deaths": 585,
-            "headshots": 190,
+            "headshots": 191,
             "bulletsFired": 18165,
-            "bulletsConnected": 5398,
-            "timesChosen": 767
+            "bulletsConnected": 5406,
+            "timesChosen": 768
           },
           {
             "name": "Vector .45 ACP",
-            "kills": 297,
+            "kills": 298,
             "deaths": 321,
-            "headshots": 167,
+            "headshots": 168,
             "bulletsFired": 6293,
-            "bulletsConnected": 3647,
-            "timesChosen": 579
+            "bulletsConnected": 3652,
+            "timesChosen": 580
           },
           {
             "name": "M12",
@@ -297,7 +297,7 @@
           {
             "name": "Scorpion EVO 3 A1",
             "kills": 252,
-            "deaths": 329,
+            "deaths": 330,
             "headshots": 111,
             "bulletsFired": 13360,
             "bulletsConnected": 2687,
@@ -306,7 +306,7 @@
           {
             "name": "MP5K",
             "kills": 142,
-            "deaths": 364,
+            "deaths": 365,
             "headshots": 78,
             "bulletsFired": 7431,
             "bulletsConnected": 1930,
@@ -318,8 +318,8 @@
             "deaths": 306,
             "headshots": 68,
             "bulletsFired": 7760,
-            "bulletsConnected": 1962,
-            "timesChosen": 278
+            "bulletsConnected": 1966,
+            "timesChosen": 280
           },
           {
             "name": "P90",
@@ -333,7 +333,7 @@
           {
             "name": "K1A",
             "kills": 220,
-            "deaths": 239,
+            "deaths": 245,
             "headshots": 76,
             "bulletsFired": 0,
             "bulletsConnected": 1852,
@@ -341,12 +341,12 @@
           },
           {
             "name": "9mm C1",
-            "kills": 152,
-            "deaths": 295,
+            "kills": 153,
+            "deaths": 297,
             "headshots": 57,
             "bulletsFired": 6204,
-            "bulletsConnected": 1465,
-            "timesChosen": 235
+            "bulletsConnected": 1476,
+            "timesChosen": 237
           },
           {
             "name": "Mx4 Storm",
@@ -359,21 +359,21 @@
           },
           {
             "name": "T-5 SMG",
-            "kills": 182,
+            "kills": 185,
             "deaths": 448,
             "headshots": 83,
             "bulletsFired": 1608,
-            "bulletsConnected": 1824,
-            "timesChosen": 284
+            "bulletsConnected": 1864,
+            "timesChosen": 292
           },
           {
             "name": "MP5SD",
-            "kills": 76,
-            "deaths": 179,
-            "headshots": 38,
+            "kills": 77,
+            "deaths": 184,
+            "headshots": 39,
             "bulletsFired": 2566,
-            "bulletsConnected": 700,
-            "timesChosen": 147
+            "bulletsConnected": 701,
+            "timesChosen": 149
           },
           {
             "name": "FMG-9",
@@ -404,17 +404,17 @@
           },
           {
             "name": "PDW9",
-            "kills": 13,
+            "kills": 26,
             "deaths": 83,
-            "headshots": 7,
+            "headshots": 10,
             "bulletsFired": 440,
-            "bulletsConnected": 116,
-            "timesChosen": 26
+            "bulletsConnected": 228,
+            "timesChosen": 40
           },
           {
             "name": "P10 RONI",
             "kills": 0,
-            "deaths": 18,
+            "deaths": 19,
             "headshots": 0,
             "bulletsFired": 0,
             "bulletsConnected": 0,
@@ -424,22 +424,22 @@
       },
       "lmg": {
         "general": {
-          "kills": 514,
-          "deaths": 351,
-          "headshots": 224,
+          "kills": 520,
+          "deaths": 352,
+          "headshots": 228,
           "bulletsFired": 6408,
-          "bulletsConnected": 4454,
-          "timesChosen": 942
+          "bulletsConnected": 4494,
+          "timesChosen": 952
         },
         "list": [
           {
             "name": "ALDA 5.56",
-            "kills": 172,
-            "deaths": 102,
-            "headshots": 63,
+            "kills": 177,
+            "deaths": 103,
+            "headshots": 66,
             "bulletsFired": 0,
-            "bulletsConnected": 1543,
-            "timesChosen": 259
+            "bulletsConnected": 1571,
+            "timesChosen": 264
           },
           {
             "name": "G8A1",
@@ -461,12 +461,12 @@
           },
           {
             "name": "T-95 LSW",
-            "kills": 105,
+            "kills": 106,
             "deaths": 95,
-            "headshots": 54,
+            "headshots": 55,
             "bulletsFired": 919,
-            "bulletsConnected": 762,
-            "timesChosen": 171
+            "bulletsConnected": 772,
+            "timesChosen": 174
           },
           {
             "name": "LMG-E",
@@ -483,8 +483,8 @@
             "deaths": 39,
             "headshots": 27,
             "bulletsFired": 649,
-            "bulletsConnected": 628,
-            "timesChosen": 129
+            "bulletsConnected": 630,
+            "timesChosen": 131
           }
         ]
       },
@@ -547,31 +547,31 @@
       },
       "pistol": {
         "general": {
-          "kills": 910,
-          "deaths": 936,
-          "headshots": 358,
+          "kills": 912,
+          "deaths": 943,
+          "headshots": 360,
           "bulletsFired": 21476,
-          "bulletsConnected": 8185,
-          "timesChosen": 20937
+          "bulletsConnected": 8203,
+          "timesChosen": 21022
         },
         "list": [
           {
             "name": "M45 MEUSOC",
             "kills": 73,
-            "deaths": 38,
+            "deaths": 39,
             "headshots": 21,
             "bulletsFired": 2942,
             "bulletsConnected": 1086,
-            "timesChosen": 3800
+            "timesChosen": 3803
           },
           {
             "name": "P12",
-            "kills": 131,
-            "deaths": 217,
-            "headshots": 55,
+            "kills": 132,
+            "deaths": 218,
+            "headshots": 56,
             "bulletsFired": 2633,
-            "bulletsConnected": 1457,
-            "timesChosen": 3797
+            "bulletsConnected": 1462,
+            "timesChosen": 3821
           },
           {
             "name": "LFP586",
@@ -579,8 +579,8 @@
             "deaths": 134,
             "headshots": 26,
             "bulletsFired": 1640,
-            "bulletsConnected": 526,
-            "timesChosen": 2696
+            "bulletsConnected": 527,
+            "timesChosen": 2702
           },
           {
             "name": "P226 MK 25",
@@ -589,16 +589,16 @@
             "headshots": 5,
             "bulletsFired": 599,
             "bulletsConnected": 257,
-            "timesChosen": 1534
+            "timesChosen": 1539
           },
           {
             "name": "D-50",
             "kills": 33,
-            "deaths": 49,
+            "deaths": 51,
             "headshots": 10,
             "bulletsFired": 1623,
             "bulletsConnected": 282,
-            "timesChosen": 1428
+            "timesChosen": 1437
           },
           {
             "name": "P9",
@@ -607,7 +607,7 @@
             "headshots": 30,
             "bulletsFired": 2314,
             "bulletsConnected": 703,
-            "timesChosen": 969
+            "timesChosen": 970
           },
           {
             "name": "PRB92",
@@ -616,7 +616,7 @@
             "headshots": 5,
             "bulletsFired": 2910,
             "bulletsConnected": 1289,
-            "timesChosen": 1064
+            "timesChosen": 1066
           },
           {
             "name": "MK1 9mm",
@@ -625,7 +625,7 @@
             "headshots": 15,
             "bulletsFired": 292,
             "bulletsConnected": 371,
-            "timesChosen": 826
+            "timesChosen": 832
           },
           {
             "name": "GSH-18",
@@ -639,11 +639,11 @@
           {
             "name": "PMM",
             "kills": 18,
-            "deaths": 45,
+            "deaths": 46,
             "headshots": 8,
             "bulletsFired": 567,
-            "bulletsConnected": 206,
-            "timesChosen": 480
+            "bulletsConnected": 207,
+            "timesChosen": 484
           },
           {
             "name": "RG15",
@@ -652,7 +652,7 @@
             "headshots": 2,
             "bulletsFired": 163,
             "bulletsConnected": 76,
-            "timesChosen": 516
+            "timesChosen": 517
           },
           {
             "name": "Keratos .357",
@@ -670,7 +670,7 @@
             "headshots": 1,
             "bulletsFired": 58,
             "bulletsConnected": 113,
-            "timesChosen": 500
+            "timesChosen": 511
           },
           {
             "name": ".44 Mag Semi-Auto",
@@ -678,13 +678,13 @@
             "deaths": 14,
             "headshots": 11,
             "bulletsFired": 0,
-            "bulletsConnected": 109,
-            "timesChosen": 168
+            "bulletsConnected": 111,
+            "timesChosen": 172
           },
           {
             "name": "5.7 USG",
             "kills": 0,
-            "deaths": 44,
+            "deaths": 45,
             "headshots": 0,
             "bulletsFired": 39,
             "bulletsConnected": 3,
@@ -732,29 +732,29 @@
             "deaths": 3,
             "headshots": 0,
             "bulletsFired": 0,
-            "bulletsConnected": 18,
-            "timesChosen": 61
+            "bulletsConnected": 20,
+            "timesChosen": 66
           }
         ]
       },
       "shotgun": {
         "general": {
           "kills": 1671,
-          "deaths": 770,
+          "deaths": 774,
           "headshots": 188,
           "bulletsFired": 22413,
-          "bulletsConnected": 7467,
-          "timesChosen": 5456
+          "bulletsConnected": 7471,
+          "timesChosen": 5479
         },
         "list": [
           {
             "name": "M590A1",
             "kills": 608,
-            "deaths": 185,
+            "deaths": 186,
             "headshots": 73,
             "bulletsFired": 10494,
-            "bulletsConnected": 2845,
-            "timesChosen": 2660
+            "bulletsConnected": 2846,
+            "timesChosen": 2663
           },
           {
             "name": "ITA12S",
@@ -762,8 +762,8 @@
             "deaths": 26,
             "headshots": 3,
             "bulletsFired": 1842,
-            "bulletsConnected": 159,
-            "timesChosen": 742
+            "bulletsConnected": 160,
+            "timesChosen": 757
           },
           {
             "name": "M1014",
@@ -840,7 +840,7 @@
           {
             "name": "BOSG.12.2",
             "kills": 152,
-            "deaths": 75,
+            "deaths": 76,
             "headshots": 13,
             "bulletsFired": 0,
             "bulletsConnected": 291,
@@ -903,7 +903,7 @@
           {
             "name": "TCSG12",
             "kills": 10,
-            "deaths": 37,
+            "deaths": 39,
             "headshots": 4,
             "bulletsFired": 0,
             "bulletsConnected": 42,
@@ -914,30 +914,30 @@
       "mp": {
         "general": {
           "kills": 1404,
-          "deaths": 595,
+          "deaths": 599,
           "headshots": 750,
           "bulletsFired": 25687,
-          "bulletsConnected": 11920,
-          "timesChosen": 4582
+          "bulletsConnected": 11924,
+          "timesChosen": 4595
         },
         "list": [
           {
             "name": "SMG-11",
             "kills": 1286,
-            "deaths": 463,
+            "deaths": 466,
             "headshots": 698,
             "bulletsFired": 25687,
-            "bulletsConnected": 10863,
-            "timesChosen": 4072
+            "bulletsConnected": 10867,
+            "timesChosen": 4085
           },
           {
             "name": "Bearing 9",
-            "kills": 342,
-            "deaths": 169,
-            "headshots": 166,
+            "kills": 343,
+            "deaths": 170,
+            "headshots": 167,
             "bulletsFired": 8133,
-            "bulletsConnected": 2674,
-            "timesChosen": 1309
+            "bulletsConnected": 2683,
+            "timesChosen": 1312
           },
           {
             "name": "SPSMG9",
@@ -968,7 +968,7 @@
           "headshots": 0,
           "bulletsFired": 151,
           "bulletsConnected": 0,
-          "timesChosen": 3184
+          "timesChosen": 3188
         },
         "list": []
       },
@@ -1071,14 +1071,14 @@
         "badge": "https://i.imgur.com/tkxDFWg.png",
         "ctu": "SAS",
         "kills": 1475,
-        "deaths": 1409,
+        "deaths": 1411,
         "wins": 1068,
-        "losses": 837,
+        "losses": 839,
         "headshots": 554,
         "meleeKills": 30,
         "dbno": 502,
-        "xp": 3751770,
-        "playtime": 377055,
+        "xp": 3753870,
+        "playtime": 377378,
         "gadget": [
           {
             "name": "Poison Gas Kills",
@@ -1116,15 +1116,15 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/AKn1ULn.png",
         "ctu": "SAS",
-        "kills": 1592,
-        "deaths": 1712,
-        "wins": 1011,
-        "losses": 1091,
-        "headshots": 647,
+        "kills": 1596,
+        "deaths": 1721,
+        "wins": 1014,
+        "losses": 1099,
+        "headshots": 650,
         "meleeKills": 31,
-        "dbno": 591,
-        "xp": 4490450,
-        "playtime": 405755,
+        "dbno": 593,
+        "xp": 4509595,
+        "playtime": 408034,
         "gadget": [
           {
             "name": "Kills with Breaching Hammer",
@@ -1132,7 +1132,7 @@
           },
           {
             "name": "Destruction by Breaching Hammer",
-            "value": 3270
+            "value": 3297
           }
         ]
       },
@@ -1141,19 +1141,19 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/MYl1Gl2.png",
         "ctu": "SAS",
-        "kills": 848,
-        "deaths": 914,
-        "wins": 577,
-        "losses": 591,
-        "headshots": 363,
+        "kills": 849,
+        "deaths": 918,
+        "wins": 580,
+        "losses": 593,
+        "headshots": 364,
         "meleeKills": 27,
         "dbno": 315,
-        "xp": 2570090,
-        "playtime": 233885,
+        "xp": 2575150,
+        "playtime": 234905,
         "gadget": [
           {
             "name": "Gadgets Destroyed by EMP",
-            "value": 747
+            "value": 755
           }
         ]
       },
@@ -1162,19 +1162,19 @@
         "role": "defender",
         "badge": "https://i.imgur.com/Dr5x7e7.png",
         "ctu": "FBI SWAT",
-        "kills": 217,
+        "kills": 218,
         "deaths": 225,
-        "wins": 171,
+        "wins": 172,
         "losses": 130,
-        "headshots": 61,
+        "headshots": 62,
         "meleeKills": 3,
-        "dbno": 124,
-        "xp": 667505,
-        "playtime": 60538,
+        "dbno": 125,
+        "xp": 670505,
+        "playtime": 60744,
         "gadget": [
           {
             "name": "Armor Panels Deployed",
-            "value": 859
+            "value": 862
           }
         ]
       },
@@ -1234,14 +1234,14 @@
         "badge": "https://i.imgur.com/9uVh301.png",
         "ctu": "FBI SWAT",
         "kills": 751,
-        "deaths": 916,
-        "wins": 541,
-        "losses": 628,
+        "deaths": 917,
+        "wins": 542,
+        "losses": 629,
         "headshots": 302,
         "meleeKills": 26,
         "dbno": 340,
-        "xp": 2336384,
-        "playtime": 233848,
+        "xp": 2338474,
+        "playtime": 234212,
         "gadget": [
           {
             "name": "Kills with Thermal Charge",
@@ -1249,11 +1249,11 @@
           },
           {
             "name": "Reinforcements Breached by Thermal Charge",
-            "value": 553
+            "value": 554
           },
           {
             "name": "Thermal Charges Deployed",
-            "value": 770
+            "value": 771
           }
         ]
       },
@@ -1262,15 +1262,15 @@
         "role": "defender",
         "badge": "https://i.imgur.com/MzJAlf9.png",
         "ctu": "GIGN",
-        "kills": 996,
-        "deaths": 848,
-        "wins": 657,
-        "losses": 514,
-        "headshots": 512,
+        "kills": 1000,
+        "deaths": 852,
+        "wins": 660,
+        "losses": 517,
+        "headshots": 514,
         "meleeKills": 12,
         "dbno": 321,
-        "xp": 2659358,
-        "playtime": 231659,
+        "xp": 2672438,
+        "playtime": 232893,
         "gadget": [
           {
             "name": "Teammates Revived",
@@ -1278,7 +1278,7 @@
           },
           {
             "name": "Self Revives",
-            "value": 95
+            "value": 96
           },
           {
             "name": "Hostages Revived",
@@ -1346,18 +1346,18 @@
         "badge": "https://i.imgur.com/p2gGMAo.png",
         "ctu": "GIGN",
         "kills": 75,
-        "deaths": 216,
+        "deaths": 217,
         "wins": 108,
-        "losses": 152,
+        "losses": 153,
         "headshots": 31,
         "meleeKills": 16,
         "dbno": 16,
-        "xp": 437235,
-        "playtime": 50777,
+        "xp": 438485,
+        "playtime": 50964,
         "gadget": [
           {
             "name": "Bullets Blocked by Extended Shield",
-            "value": 2942
+            "value": 2957
           }
         ]
       },
@@ -1366,15 +1366,15 @@
         "role": "defender",
         "badge": "https://i.imgur.com/LPhga5G.png",
         "ctu": "Spetsnaz",
-        "kills": 97,
-        "deaths": 104,
+        "kills": 98,
+        "deaths": 106,
         "wins": 73,
-        "losses": 58,
+        "losses": 60,
         "headshots": 28,
         "meleeKills": 1,
-        "dbno": 41,
-        "xp": 266880,
-        "playtime": 25580,
+        "dbno": 42,
+        "xp": 270930,
+        "playtime": 25903,
         "gadget": [
           {
             "name": "EDD Kills",
@@ -1382,7 +1382,7 @@
           },
           {
             "name": "EDD Deployed",
-            "value": 427
+            "value": 437
           }
         ]
       },
@@ -1442,14 +1442,14 @@
         "badge": "https://i.imgur.com/WpxoTw2.png",
         "ctu": "Spetsnaz",
         "kills": 148,
-        "deaths": 201,
-        "wins": 106,
+        "deaths": 202,
+        "wins": 108,
         "losses": 132,
         "headshots": 47,
         "meleeKills": 6,
         "dbno": 70,
-        "xp": 452155,
-        "playtime": 46675,
+        "xp": 454825,
+        "playtime": 47013,
         "gadget": [
           {
             "name": "Cluster Charge Kills",
@@ -1462,19 +1462,19 @@
         "role": "defender",
         "badge": "https://i.imgur.com/ykglXiD.png",
         "ctu": "GSG 9",
-        "kills": 1241,
-        "deaths": 1102,
-        "wins": 762,
-        "losses": 630,
-        "headshots": 458,
+        "kills": 1252,
+        "deaths": 1114,
+        "wins": 771,
+        "losses": 636,
+        "headshots": 464,
         "meleeKills": 33,
-        "dbno": 421,
-        "xp": 3005059,
-        "playtime": 278497,
+        "dbno": 424,
+        "xp": 3041189,
+        "playtime": 281130,
         "gadget": [
           {
             "name": "Gadget Destroyed by ADS",
-            "value": 852
+            "value": 866
           }
         ]
       },
@@ -1483,15 +1483,15 @@
         "role": "defender",
         "badge": "https://i.imgur.com/iBdRyRn.png",
         "ctu": "GSG 9",
-        "kills": 897,
-        "deaths": 934,
-        "wins": 612,
-        "losses": 539,
-        "headshots": 403,
-        "meleeKills": 50,
-        "dbno": 281,
-        "xp": 2480595,
-        "playtime": 228872,
+        "kills": 904,
+        "deaths": 942,
+        "wins": 614,
+        "losses": 546,
+        "headshots": 405,
+        "meleeKills": 51,
+        "dbno": 284,
+        "xp": 2502905,
+        "playtime": 230455,
         "gadget": [
           {
             "name": "Shock Wire Kills",
@@ -1554,19 +1554,19 @@
         "role": "defender",
         "badge": "https://i.imgur.com/prGz6E6.png",
         "ctu": "JTF2",
-        "kills": 325,
-        "deaths": 327,
-        "wins": 277,
-        "losses": 175,
+        "kills": 326,
+        "deaths": 329,
+        "wins": 278,
+        "losses": 176,
         "headshots": 77,
         "meleeKills": 6,
-        "dbno": 229,
-        "xp": 892120,
-        "playtime": 90136,
+        "dbno": 230,
+        "xp": 897120,
+        "playtime": 90543,
         "gadget": [
           {
             "name": "Enemies Caught in Welcome Mats",
-            "value": 104
+            "value": 105
           }
         ]
       },
@@ -1575,15 +1575,15 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/nRSxJd2.png",
         "ctu": "JTF2",
-        "kills": 284,
-        "deaths": 302,
-        "wins": 180,
-        "losses": 187,
-        "headshots": 112,
+        "kills": 286,
+        "deaths": 306,
+        "wins": 181,
+        "losses": 190,
+        "headshots": 113,
         "meleeKills": 6,
         "dbno": 117,
-        "xp": 784005,
-        "playtime": 68660,
+        "xp": 789605,
+        "playtime": 69465,
         "gadget": [
           {
             "name": "Kills with the Skeleton Key",
@@ -1596,19 +1596,19 @@
         "role": "defender",
         "badge": "https://i.imgur.com/cG55PvJ.png",
         "ctu": "Navy SEALs",
-        "kills": 1013,
-        "deaths": 901,
-        "wins": 644,
+        "kills": 1019,
+        "deaths": 903,
+        "wins": 647,
         "losses": 546,
-        "headshots": 421,
+        "headshots": 423,
         "meleeKills": 26,
-        "dbno": 399,
-        "xp": 3238325,
-        "playtime": 238656,
+        "dbno": 402,
+        "xp": 3250075,
+        "playtime": 239350,
         "gadget": [
           {
             "name": "Black Eye Cameras Deployed",
-            "value": 3723
+            "value": 3732
           }
         ]
       },
@@ -1617,19 +1617,19 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/h12akm4.png",
         "ctu": "Navy SEALs",
-        "kills": 91,
-        "deaths": 98,
-        "wins": 40,
-        "losses": 77,
-        "headshots": 43,
+        "kills": 100,
+        "deaths": 103,
+        "wins": 45,
+        "losses": 78,
+        "headshots": 48,
         "meleeKills": 1,
-        "dbno": 32,
-        "xp": 257872,
-        "playtime": 23794,
+        "dbno": 35,
+        "xp": 276268,
+        "playtime": 25008,
         "gadget": [
           {
             "name": "Bullets Stopped by Shield",
-            "value": 280
+            "value": 289
           }
         ]
       },
@@ -1660,14 +1660,14 @@
         "badge": "https://i.imgur.com/Qvkut3P.png",
         "ctu": "BOPE",
         "kills": 353,
-        "deaths": 398,
+        "deaths": 400,
         "wins": 222,
-        "losses": 268,
+        "losses": 270,
         "headshots": 117,
         "meleeKills": 13,
         "dbno": 135,
-        "xp": 1099655,
-        "playtime": 94463,
+        "xp": 1100555,
+        "playtime": 94866,
         "gadget": [
           {
             "name": "Kills with Asphyxiating Bolts",
@@ -1680,19 +1680,19 @@
         "role": "defender",
         "badge": "https://i.imgur.com/JLXXREk.png",
         "ctu": "SAT",
-        "kills": 238,
-        "deaths": 203,
-        "wins": 163,
+        "kills": 240,
+        "deaths": 205,
+        "wins": 165,
         "losses": 150,
-        "headshots": 119,
+        "headshots": 121,
         "meleeKills": 4,
         "dbno": 76,
-        "xp": 640300,
-        "playtime": 62659,
+        "xp": 646400,
+        "playtime": 63062,
         "gadget": [
           {
             "name": "Enemies Disoriented by Yokai",
-            "value": 255
+            "value": 256
           }
         ]
       },
@@ -1702,14 +1702,14 @@
         "badge": "https://i.imgur.com/ChqyReH.png",
         "ctu": "SAT",
         "kills": 742,
-        "deaths": 827,
+        "deaths": 828,
         "wins": 447,
-        "losses": 572,
+        "losses": 573,
         "headshots": 295,
         "meleeKills": 16,
         "dbno": 286,
-        "xp": 2274318,
-        "playtime": 199975,
+        "xp": 2275518,
+        "playtime": 200075,
         "gadget": [
           {
             "name": "X-KAIROS Pellets Detonated",
@@ -1722,19 +1722,19 @@
         "role": "defender",
         "badge": "https://i.imgur.com/BXnayiP.png",
         "ctu": "GEO",
-        "kills": 344,
+        "kills": 345,
         "deaths": 354,
-        "wins": 291,
+        "wins": 292,
         "losses": 246,
-        "headshots": 158,
+        "headshots": 159,
         "meleeKills": 4,
         "dbno": 134,
-        "xp": 1156851,
-        "playtime": 106212,
+        "xp": 1159951,
+        "playtime": 106399,
         "gadget": [
           {
             "name": "Black Mirror Deployed",
-            "value": 1017
+            "value": 1019
           }
         ]
       },
@@ -1743,19 +1743,19 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/hvLklzC.png",
         "ctu": "GEO",
-        "kills": 126,
-        "deaths": 132,
-        "wins": 64,
-        "losses": 90,
-        "headshots": 52,
+        "kills": 139,
+        "deaths": 142,
+        "wins": 70,
+        "losses": 98,
+        "headshots": 55,
         "meleeKills": 4,
-        "dbno": 52,
-        "xp": 334330,
-        "playtime": 29691,
+        "dbno": 62,
+        "xp": 364280,
+        "playtime": 32450,
         "gadget": [
           {
             "name": "Eyenox Tracking Assist",
-            "value": 17
+            "value": 18
           }
         ]
       },
@@ -1764,19 +1764,19 @@
         "role": "defender",
         "badge": "https://i.imgur.com/w3PjcvZ.png",
         "ctu": "SDU",
-        "kills": 216,
-        "deaths": 209,
-        "wins": 165,
-        "losses": 116,
+        "kills": 219,
+        "deaths": 215,
+        "wins": 169,
+        "losses": 120,
         "headshots": 84,
         "meleeKills": 9,
-        "dbno": 83,
-        "xp": 628269,
-        "playtime": 54913,
+        "dbno": 85,
+        "xp": 650459,
+        "playtime": 56479,
         "gadget": [
           {
             "name": "Enemies Poisoned by Gu Mine",
-            "value": 257
+            "value": 275
           }
         ]
       },
@@ -1785,19 +1785,19 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/wyJwvWZ.png",
         "ctu": "SDU",
-        "kills": 141,
-        "deaths": 172,
-        "wins": 108,
-        "losses": 99,
-        "headshots": 54,
+        "kills": 142,
+        "deaths": 175,
+        "wins": 109,
+        "losses": 101,
+        "headshots": 55,
         "meleeKills": 3,
         "dbno": 67,
-        "xp": 421100,
-        "playtime": 40036,
+        "xp": 426450,
+        "playtime": 40693,
         "gadget": [
           {
             "name": "Candela Devices Detonated",
-            "value": 216
+            "value": 223
           }
         ]
       },
@@ -1828,14 +1828,14 @@
         "badge": "https://i.imgur.com/HRg8qXs.png",
         "ctu": "GROM",
         "kills": 175,
-        "deaths": 186,
+        "deaths": 187,
         "wins": 101,
-        "losses": 126,
+        "losses": 127,
         "headshots": 85,
         "meleeKills": 4,
         "dbno": 57,
-        "xp": 458818,
-        "playtime": 44131,
+        "xp": 459218,
+        "playtime": 44359,
         "gadget": [
           {
             "name": "Concussion Grenades Detonated",
@@ -1932,15 +1932,15 @@
         "role": "defender",
         "badge": "https://i.imgur.com/d0Zy3i4.png",
         "ctu": "GIS",
-        "kills": 189,
-        "deaths": 174,
-        "wins": 148,
-        "losses": 109,
-        "headshots": 63,
+        "kills": 194,
+        "deaths": 177,
+        "wins": 151,
+        "losses": 111,
+        "headshots": 66,
         "meleeKills": 2,
-        "dbno": 69,
-        "xp": 612670,
-        "playtime": 52708,
+        "dbno": 70,
+        "xp": 630220,
+        "playtime": 53723,
         "gadget": [
           {
             "name": "Enemies Killed by Evil Eye",
@@ -2038,18 +2038,18 @@
         "badge": "https://i.imgur.com/U8sOErk.png",
         "ctu": "GIGR",
         "kills": 87,
-        "deaths": 84,
-        "wins": 42,
-        "losses": 62,
+        "deaths": 88,
+        "wins": 43,
+        "losses": 65,
         "headshots": 54,
         "meleeKills": 3,
         "dbno": 17,
-        "xp": 213785,
-        "playtime": 19839,
+        "xp": 216735,
+        "playtime": 20478,
         "gadget": [
           {
             "name": "Airjabs Detonated",
-            "value": 28
+            "value": 30
           }
         ]
       },
@@ -2182,37 +2182,37 @@
     },
     "general": {
       "bulletsFired": 417099,
-      "bulletsConnected": 153987,
-      "kills": 19536,
-      "deaths": 19727,
-      "assists": 5829,
-      "headshots": 7652,
-      "meleeKills": 580,
-      "penetrationKills": 1157,
+      "bulletsConnected": 154632,
+      "kills": 19608,
+      "deaths": 19816,
+      "assists": 5856,
+      "headshots": 7685,
+      "meleeKills": 581,
+      "penetrationKills": 1161,
       "blindKills": 19,
-      "dbno": 7626,
-      "dbnoAssists": 912,
-      "revives": 668,
-      "matches": 4275,
-      "wins": 2244,
-      "losses": 2031,
-      "playtime": 4979584,
-      "gadgetsDestroyed": 21346,
+      "dbno": 7656,
+      "dbnoAssists": 915,
+      "revives": 669,
+      "matches": 4294,
+      "wins": 2251,
+      "losses": 2043,
+      "playtime": 5001151,
+      "gadgetsDestroyed": 21455,
       "rappelBreaches": 65,
-      "barricadesDeployed": 2292,
-      "reinforcementsDeployed": 13781,
+      "barricadesDeployed": 2301,
+      "reinforcementsDeployed": 13840,
       "suicides": 119,
-      "distanceTravelled": 1552884780,
+      "distanceTravelled": 1552903715,
       "customGamesPlaytime": 974
     },
     "modes": {
       "bomb": {
         "name": "Bomb",
-        "wins": 1704,
-        "losses": 1575,
-        "matches": 3279,
+        "wins": 1711,
+        "losses": 1587,
+        "matches": 3298,
         "bestScore": 8805,
-        "playtime": 3868131
+        "playtime": 3889698
       },
       "secure": {
         "name": "Secure Area",
@@ -2248,12 +2248,12 @@
       },
       "ranked": {
         "name": "Ranked",
-        "kills": 17051,
-        "deaths": 17482,
-        "wins": 1862,
-        "losses": 1808,
-        "matches": 3670,
-        "playtime": 4460969
+        "kills": 17123,
+        "deaths": 17571,
+        "wins": 1869,
+        "losses": 1820,
+        "matches": 3689,
+        "playtime": 4482536
       },
       "discovery": {
         "name": "Discovery",
@@ -2270,18 +2270,18 @@
     "weapons": {
       "assault": {
         "general": {
-          "kills": 11738,
-          "deaths": 328,
-          "headshots": 8864,
-          "bulletsFired": 104577,
-          "bulletsConnected": 39616,
-          "timesChosen": 901
+          "kills": 11905,
+          "deaths": 329,
+          "headshots": 8983,
+          "bulletsFired": 106076,
+          "bulletsConnected": 40159,
+          "timesChosen": 906
         },
         "list": [
           {
             "name": "L85A2",
             "kills": 3728,
-            "deaths": 170,
+            "deaths": 171,
             "headshots": 2909,
             "bulletsFired": 27408,
             "bulletsConnected": 10755,
@@ -2307,12 +2307,12 @@
           },
           {
             "name": "R4-C",
-            "kills": 2424,
+            "kills": 2585,
             "deaths": 3,
-            "headshots": 1645,
-            "bulletsFired": 23386,
-            "bulletsConnected": 9126,
-            "timesChosen": 187
+            "headshots": 1758,
+            "bulletsFired": 24832,
+            "bulletsConnected": 9658,
+            "timesChosen": 191
           },
           {
             "name": "556XI",
@@ -2334,12 +2334,12 @@
           },
           {
             "name": "552 Commando",
-            "kills": 327,
+            "kills": 333,
             "deaths": 79,
-            "headshots": 243,
-            "bulletsFired": 3161,
-            "bulletsConnected": 1062,
-            "timesChosen": 28
+            "headshots": 249,
+            "bulletsFired": 3214,
+            "bulletsConnected": 1073,
+            "timesChosen": 29
           },
           {
             "name": "PARA-308",
@@ -2813,31 +2813,31 @@
       },
       "pistol": {
         "general": {
-          "kills": 890,
+          "kills": 905,
           "deaths": 13,
-          "headshots": 686,
-          "bulletsFired": 5222,
-          "bulletsConnected": 2232,
-          "timesChosen": 1024
+          "headshots": 699,
+          "bulletsFired": 5271,
+          "bulletsConnected": 2255,
+          "timesChosen": 1029
         },
         "list": [
           {
             "name": "M45 MEUSOC",
-            "kills": 110,
+            "kills": 118,
             "deaths": 6,
-            "headshots": 82,
-            "bulletsFired": 586,
-            "bulletsConnected": 268,
-            "timesChosen": 217
+            "headshots": 88,
+            "bulletsFired": 613,
+            "bulletsConnected": 280,
+            "timesChosen": 221
           },
           {
             "name": "P12",
-            "kills": 120,
+            "kills": 127,
             "deaths": 2,
-            "headshots": 91,
-            "bulletsFired": 928,
-            "bulletsConnected": 394,
-            "timesChosen": 102
+            "headshots": 98,
+            "bulletsFired": 950,
+            "bulletsConnected": 405,
+            "timesChosen": 103
           },
           {
             "name": "LFP586",
@@ -3234,7 +3234,7 @@
           "headshots": 0,
           "bulletsFired": 2,
           "bulletsConnected": 0,
-          "timesChosen": 255
+          "timesChosen": 259
         },
         "list": []
       },
@@ -3474,15 +3474,15 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/gXkH9Cl.png",
         "ctu": "FBI SWAT",
-        "kills": 2699,
-        "deaths": 121,
-        "wins": 78,
-        "losses": 115,
-        "headshots": 1781,
+        "kills": 2868,
+        "deaths": 122,
+        "wins": 81,
+        "losses": 116,
+        "headshots": 1900,
         "meleeKills": 90,
         "dbno": 0,
-        "xp": 207380,
-        "playtime": 27393,
+        "xp": 218600,
+        "playtime": 30107,
         "gadget": [
           {
             "name": "Kills with Breaching Round",
@@ -3490,7 +3490,7 @@
           },
           {
             "name": "Destruction by Breaching Round",
-            "value": 117
+            "value": 121
           }
         ]
       },
@@ -3799,15 +3799,15 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/UtDoLtT.png",
         "ctu": "GSG 9",
-        "kills": 499,
-        "deaths": 24,
+        "kills": 513,
+        "deaths": 25,
         "wins": 22,
-        "losses": 21,
-        "headshots": 342,
-        "meleeKills": 11,
+        "losses": 22,
+        "headshots": 355,
+        "meleeKills": 12,
         "dbno": 0,
-        "xp": 58228,
-        "playtime": 5874,
+        "xp": 58793,
+        "playtime": 5985,
         "gadget": [
           {
             "name": "Gadgets Spotted by Electronics Detector",
@@ -4447,28 +4447,28 @@
       }
     },
     "general": {
-      "bulletsFired": 141738,
-      "bulletsConnected": 54116,
-      "kills": 15995,
-      "deaths": 607,
-      "assists": 334,
-      "headshots": 11294,
-      "meleeKills": 351,
-      "penetrationKills": 673,
+      "bulletsFired": 143286,
+      "bulletsConnected": 54682,
+      "kills": 16178,
+      "deaths": 609,
+      "assists": 335,
+      "headshots": 11426,
+      "meleeKills": 352,
+      "penetrationKills": 683,
       "blindKills": 41,
       "dbno": 0,
       "dbnoAssists": 0,
       "revives": 174,
-      "matches": 1195,
-      "wins": 588,
-      "losses": 607,
-      "playtime": 204243,
-      "gadgetsDestroyed": 2367,
+      "matches": 1200,
+      "wins": 591,
+      "losses": 609,
+      "playtime": 207068,
+      "gadgetsDestroyed": 2375,
       "rappelBreaches": 0,
       "barricadesDeployed": 275,
       "reinforcementsDeployed": 224,
-      "suicides": 472,
-      "distanceTravelled": 312634,
+      "suicides": 473,
+      "distanceTravelled": 314601,
       "customGamesPlaytime": 0
     },
     "modes": {
@@ -4491,15 +4491,15 @@
         "bestScore": 1676
       },
       "bomb": {
-        "wins": 11,
-        "losses": 18,
-        "matches": 29,
-        "bestScore": 3890
+        "wins": 14,
+        "losses": 20,
+        "matches": 34,
+        "bestScore": 3910
       }
     },
     "types": {
       "local": {
-        "normal": 3890,
+        "normal": 3910,
         "hard": 2075,
         "realistic": 4830
       },
