@@ -2,14 +2,17 @@
   "name": "r6api.js",
   "version": "1.0.3",
   "description": "Node.js wrapper around Rainbow Six: Siege API.",
+  "author": "Daniel Sandberg",
+  "license": "MIT",
   "main": "index.js",
   "types": "typings/index.d.ts",
   "scripts": {
     "response": "node scripts/response",
     "types": "node scripts/types"
   },
-  "author": "Daniel Sandberg",
-  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "dependencies": {
     "bluebird": "^3.5.5",
     "dotenv": "^8.2.0",
