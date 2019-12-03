@@ -161,7 +161,7 @@ Seasons reference:
 6: 'Health', 7: 'Blood Orchid', 8: 'White Noise',
 9: 'Chimera', 10: 'Para Bellum', 11: 'Grim Sky',
 12: 'Wind Bastion', 13: 'Burnt Horizon', 14: 'Phantom Sight',
-15: 'Burnt Horizon'
+15: 'Ember Rise', 16: 'Shifting Tides'
 ```
 
 ```js
