@@ -5,11 +5,11 @@
       "assault": {
         "general": {
           "kills": 7872,
-          "deaths": 8633,
+          "deaths": 8636,
           "headshots": 3508,
           "bulletsFired": 178102,
-          "bulletsConnected": 63701,
-          "timesChosen": 11251
+          "bulletsConnected": 63703,
+          "timesChosen": 11252
         },
         "list": [
           {
@@ -24,7 +24,7 @@
           {
             "name": "F2",
             "kills": 1060,
-            "deaths": 834,
+            "deaths": 835,
             "headshots": 531,
             "bulletsFired": 21106,
             "bulletsConnected": 8529,
@@ -162,8 +162,8 @@
             "deaths": 89,
             "headshots": 32,
             "bulletsFired": 2057,
-            "bulletsConnected": 462,
-            "timesChosen": 94
+            "bulletsConnected": 464,
+            "timesChosen": 95
           },
           {
             "name": "v308",
@@ -186,7 +186,7 @@
           {
             "name": "Commando 9",
             "kills": 32,
-            "deaths": 45,
+            "deaths": 47,
             "headshots": 9,
             "bulletsFired": 0,
             "bulletsConnected": 231,
@@ -391,7 +391,7 @@
             "headshots": 0,
             "bulletsFired": 0,
             "bulletsConnected": 49,
-            "timesChosen": 43
+            "timesChosen": 44
           },
           {
             "name": "AUG A3",
@@ -428,8 +428,8 @@
           "deaths": 352,
           "headshots": 233,
           "bulletsFired": 6408,
-          "bulletsConnected": 4525,
-          "timesChosen": 957
+          "bulletsConnected": 4527,
+          "timesChosen": 958
         },
         "list": [
           {
@@ -447,8 +447,8 @@
             "deaths": 22,
             "headshots": 55,
             "bulletsFired": 2438,
-            "bulletsConnected": 728,
-            "timesChosen": 134
+            "bulletsConnected": 730,
+            "timesChosen": 135
           },
           {
             "name": "6P41",
@@ -490,12 +490,12 @@
       },
       "marksman": {
         "general": {
-          "kills": 382,
+          "kills": 383,
           "deaths": 528,
-          "headshots": 132,
+          "headshots": 133,
           "bulletsFired": 5602,
-          "bulletsConnected": 1887,
-          "timesChosen": 664
+          "bulletsConnected": 1888,
+          "timesChosen": 665
         },
         "list": [
           {
@@ -552,7 +552,7 @@
           "headshots": 362,
           "bulletsFired": 21476,
           "bulletsConnected": 8211,
-          "timesChosen": 21034
+          "timesChosen": 21035
         },
         "list": [
           {
@@ -571,7 +571,7 @@
             "headshots": 56,
             "bulletsFired": 2633,
             "bulletsConnected": 1463,
-            "timesChosen": 3827
+            "timesChosen": 3828
           },
           {
             "name": "LFP586",
@@ -744,7 +744,7 @@
           "headshots": 188,
           "bulletsFired": 22413,
           "bulletsConnected": 7471,
-          "timesChosen": 5486
+          "timesChosen": 5487
         },
         "list": [
           {
@@ -763,7 +763,7 @@
             "headshots": 3,
             "bulletsFired": 1842,
             "bulletsConnected": 160,
-            "timesChosen": 762
+            "timesChosen": 763
           },
           {
             "name": "M1014",
@@ -918,7 +918,7 @@
           "headshots": 750,
           "bulletsFired": 25687,
           "bulletsConnected": 11932,
-          "timesChosen": 4600
+          "timesChosen": 4601
         },
         "list": [
           {
@@ -968,7 +968,7 @@
           "headshots": 0,
           "bulletsFired": 151,
           "bulletsConnected": 0,
-          "timesChosen": 3193
+          "timesChosen": 3194
         },
         "list": []
       },
@@ -2164,18 +2164,18 @@
         "badge": "https://i.imgur.com/BL4ue5Y.png",
         "ctu": "APCA",
         "kills": 3,
-        "deaths": 4,
+        "deaths": 5,
         "wins": 1,
-        "losses": 3,
+        "losses": 4,
         "headshots": 3,
         "meleeKills": 0,
         "dbno": 0,
-        "xp": 10000,
-        "playtime": 715,
+        "xp": 11500,
+        "playtime": 897,
         "gadget": [
           {
             "name": "Total Distance Reeled",
-            "value": 158
+            "value": 217
           }
         ]
       },
@@ -2185,14 +2185,14 @@
         "badge": "https://i.imgur.com/497uSOq.png",
         "ctu": "NIGHTHAVEN",
         "kills": 5,
-        "deaths": 3,
+        "deaths": 4,
         "wins": 1,
-        "losses": 3,
+        "losses": 4,
         "headshots": 3,
         "meleeKills": 0,
         "dbno": 2,
-        "xp": 6850,
-        "playtime": 529,
+        "xp": 6895,
+        "playtime": 670,
         "gadget": [
           {
             "name": "Projectiles Captured",
@@ -2205,15 +2205,15 @@
         "role": "attacker",
         "badge": "https://i.imgur.com/UH389qh.png",
         "ctu": "NIGHTHAVEN",
-        "kills": 40,
-        "deaths": 43,
+        "kills": 41,
+        "deaths": 44,
         "wins": 27,
-        "losses": 28,
-        "headshots": 23,
+        "losses": 29,
+        "headshots": 24,
         "meleeKills": 0,
         "dbno": 11,
-        "xp": 109035,
-        "playtime": 10903,
+        "xp": 111035,
+        "playtime": 11075,
         "gadget": [
           {
             "name": "Gadgets Destroyed with the LV",
@@ -2224,37 +2224,37 @@
     },
     "general": {
       "bulletsFired": 417099,
-      "bulletsConnected": 154743,
-      "kills": 19631,
-      "deaths": 19837,
-      "assists": 5858,
-      "headshots": 7699,
+      "bulletsConnected": 154748,
+      "kills": 19632,
+      "deaths": 19840,
+      "assists": 5859,
+      "headshots": 7700,
       "meleeKills": 581,
       "penetrationKills": 1161,
       "blindKills": 19,
       "dbno": 7659,
       "dbnoAssists": 915,
       "revives": 669,
-      "matches": 4299,
+      "matches": 4300,
       "wins": 2253,
-      "losses": 2046,
-      "playtime": 5004870,
+      "losses": 2047,
+      "playtime": 5005365,
       "gadgetsDestroyed": 21470,
       "rappelBreaches": 65,
       "barricadesDeployed": 2302,
       "reinforcementsDeployed": 13842,
       "suicides": 119,
-      "distanceTravelled": 1552907013,
+      "distanceTravelled": 1552907378,
       "customGamesPlaytime": 974
     },
     "modes": {
       "bomb": {
         "name": "Bomb",
         "wins": 1713,
-        "losses": 1590,
-        "matches": 3303,
+        "losses": 1591,
+        "matches": 3304,
         "bestScore": 8805,
-        "playtime": 3893417
+        "playtime": 3893912
       },
       "secure": {
         "name": "Secure Area",
@@ -2281,12 +2281,12 @@
     "queue": {
       "casual": {
         "name": "Casual",
-        "kills": 2269,
-        "deaths": 2047,
+        "kills": 2270,
+        "deaths": 2050,
         "wins": 350,
-        "losses": 190,
-        "matches": 540,
-        "playtime": 499484
+        "losses": 191,
+        "matches": 541,
+        "playtime": 499979
       },
       "ranked": {
         "name": "Ranked",
