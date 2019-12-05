@@ -4,7 +4,7 @@ const { join } = require('path');
 const filePath = join(__dirname, '../doc/getStats-response.json');
 
 const email = process.env.UBI_EMAIL,
-  password = process.env.UBI_PASSWORD;
+      password = process.env.UBI_PASSWORD;
 if (!email || !password) throw new Error('Cannot update file without API credentials');
 
 const R6API = require('../index');
@@ -25,7 +25,7 @@ function structureChange(obj1, obj2) {
 (async () => {
 
   const username = 'Daniel.Nt',
-    platform = 'uplay';
+        platform = 'uplay';
   const id = await r6api.getId(platform, username).then(el => el[0].id);
   const stats = await r6api.getStats(platform, id).then(el => el[0]);
 
