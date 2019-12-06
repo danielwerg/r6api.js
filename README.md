@@ -110,10 +110,10 @@ await r6api.getUsername('pc', 'ids');
 <a name="getLevel"></a>
 * getLevel(platform: `string`, id: `string | string[]`) : `Promise<Array>`
 
-Gets a player's level, xp and alpha pack drop chance.
+Gets the level, xp and alpha pack drop chance of a player.
 
 ```js
-await r6api.getLevel('pc', 'id');
+await r6api.getLevel('pc', 'ids');
 ```
 
 ```js
@@ -155,7 +155,7 @@ Gets seasonal stats for a player.
 
 options:
 -  regions: `('ncsa' | 'emea' | 'apac')[]` (by default gets all the regions)
--  seasons: `number[] | 'all'`, with numbers from `6` to `15` (by default `-1`  is most recent season)
+-  seasons: `number[] | 'all'`, with numbers from `6` to `16` (by default it's `-1` - most recent season)
 
 
 Seasons reference:
@@ -175,9 +175,9 @@ await r6api.getRank('pc', 'ids', { regions: ['emea'] });
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '15': {
-        id: 15,
-        name: 'Ember Rise',
+      '16': {
+        id: 16,
+        name: 'Shifting Tides',
         regions: {
           emea: {
             region: 'emea',
@@ -199,8 +199,8 @@ await r6api.getRank('pc', 'ids', { regions: ['emea'] });
             previousMmr: 0,
             nextMmr: 0,
             topRankPosition: 0,
-            kills: 1155,
-            deaths: 1227,
+            kills: 0,
+            deaths: 0,
             wins: 0,
             losses: 0,
             matches: 0,
