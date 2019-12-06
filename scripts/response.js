@@ -26,6 +26,7 @@ function structureChange(obj1, obj2) {
 
   const username = 'Daniel.Nt',
         platform = 'uplay';
+
   const id = await r6api.getId(platform, username).then(el => el[0].id);
   const stats = await r6api.getStats(platform, id).then(el => el[0]);
 
@@ -34,6 +35,7 @@ function structureChange(obj1, obj2) {
     fs.writeFileSync(filePath, JSON.stringify(stats, null, 2));
     console.log('Response for getStats has been updated.');
   } else console.log('No structual change has been detected.');
+
   process.exit(0);
 
 })();
