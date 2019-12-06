@@ -7,10 +7,9 @@ const constants = (new index()).constants;
  * @param {(string|number)[]} elements The elements to create the string with
  * @param {boolean} noQuotes Whether to avoid putting quotes to create string union types (false by default)
  */
-function createUnionType(elements, noQuotes = false) {
-  if (noQuotes) return elements.join(' | ');
-  return `'${elements.join("' | '")}'`;
-}
+
+const createUnionType = (elements, noQuotes = false) =>
+  noQuotes ? elements.join(' | ') : `'${elements.join("' | '")}'`;
 
 const oldRankNumber = createUnionType(Object.keys(constants.OLD_RANKS), true);
 const operator = createUnionType(constants.OPERATORS.map(op => op.name));
