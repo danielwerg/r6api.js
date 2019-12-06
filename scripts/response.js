@@ -11,16 +11,20 @@ const R6API = require('../index');
 const r6api = new R6API(email, password);
 
 function structureChange(obj1, obj2) {
-  if (Object.getOwnPropertyNames(obj1).join(' ') != Object.getOwnPropertyNames(obj2).join(' ')) return true;
+  if (
+    Object.getOwnPropertyNames(obj1).join(' ') != Object.getOwnPropertyNames(obj2).join(' ')
+  ) return true;
   for (let key in obj1) {
-    if (typeof obj1[key] != typeof obj2[key]
+    if (
+      typeof obj1[key] != typeof obj2[key]
       || (typeof obj1[key] == 'object'
         && obj1[key] != null
         && obj2[key] != null
-        && structureChange(obj1[key], obj2[key]))) return true;
+        && structureChange(obj1[key], obj2[key]))
+    ) return true;
   }
   return false;
-}
+};
 
 (async () => {
 
