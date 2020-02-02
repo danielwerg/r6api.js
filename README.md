@@ -60,6 +60,10 @@ Daniel.Nt has played 3749 matches.
   * [getStats](#getStats)
   * [getStatus](#getStatus)
   * [Custom](#Custom)
+  
+### Definitions
+
+  * `platform`: Either `uplay` (pc), `xbl` (Xbox Live) or `psn` (PlayStation Network)
 ---
 ### [TypeScript integrations](#typescript-integrations-1)
 ---
