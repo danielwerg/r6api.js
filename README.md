@@ -60,6 +60,10 @@ Daniel.Nt has played 3749 matches.
   * [getStats](#getStats)
   * [getStatus](#getStatus)
   * [Custom](#Custom)
+  
+### Definitions
+
+  * `platform`: Either `uplay` (pc), `xbl` (Xbox Live) or `psn` (PlayStation Network)
 ---
 ### [TypeScript integrations](#typescript-integrations-1)
 ---
@@ -93,7 +97,7 @@ await r6api.getId('uplay', 'Daniel.Nt');
 Gets the username of a player from their id.
 
 ```js
-await r6api.getUsername('pc', 'ids');
+await r6api.getUsername('uplay', 'ids');
 ```
 
 ```js
@@ -113,7 +117,7 @@ await r6api.getUsername('pc', 'ids');
 Gets the level, xp and alpha pack drop chance of a player.
 
 ```js
-await r6api.getLevel('pc', 'ids');
+await r6api.getLevel('uplay', 'ids');
 ```
 
 ```js
@@ -167,7 +171,7 @@ Seasons reference:
 ```
 
 ```js
-await r6api.getRank('pc', 'ids', { regions: ['emea'] });
+await r6api.getRank('uplay', 'ids', { regions: ['emea'] });
 ```
 
 ```js
@@ -220,7 +224,7 @@ await r6api.getRank('pc', 'ids', { regions: ['emea'] });
 Gets general stats for a player.
 
 ```js
-await r6api.getStats('pc', 'ids');
+await r6api.getStats('uplay', 'ids');
 ```
 ```js
 [
