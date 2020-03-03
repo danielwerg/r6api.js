@@ -6,6 +6,7 @@ on:
     - 'lib/methods/getStats.js'
     - 'lib/constants.js'
     - 'scripts/**'
+    branches: master
   pull_request:
     paths:
     - 'lib/methods/getStats.js'
@@ -19,6 +20,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: master
     - name: Set up Node.js 10.x
       uses: actions/setup-node@v1
       with:
