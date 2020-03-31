@@ -31,11 +31,10 @@ jobs:
     - name: Regenerate definition files
       run: npm run types
     - name: Commit TypeScript changes
-      uses: EndBug/add-and-commit@v2
+      uses: EndBug/add-and-commit@v4
       with:
         message: "[auto] Update typings"
-        path: typings
-        pattern: "*.*"
+        add: typings
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Update full response file
@@ -44,10 +43,9 @@ jobs:
         UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
         UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
     - name: Commit response changes
-      uses: EndBug/add-and-commit@v2
+      uses: EndBug/add-and-commit@v4
       with:
         message: "[auto] Update response file"
-        path: doc
-        pattern: "*.*"
+        add: doc
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
