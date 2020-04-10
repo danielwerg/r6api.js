@@ -5,7 +5,8 @@ const filePath = join(__dirname, '../doc/getStats-response.json');
 
 const email = process.env.UBI_EMAIL,
       password = process.env.UBI_PASSWORD;
-if (!email || !password) throw new Error('Cannot update file without API credentials');
+if (!email) throw new Error(`Invalid email secret: ${email === '' ? 'empty string' : typeof email}`);
+if (!password) throw new Error(`Invalid password secret: ${password === '' ? 'empty string' : typeof password}`)
 
 const R6API = require('../index');
 const r6api = new R6API(email, password);
