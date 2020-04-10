@@ -6,7 +6,7 @@ const filePath = join(__dirname, '../doc/getStats-response.json');
 const email = process.env.UBI_EMAIL,
       password = process.env.UBI_PASSWORD;
 let secretsError = ''
-if (!email) scecretsError += `Invalid email secret: ${email === '' ? 'empty string' : typeof email}\n`
+if (!email) secretsError += `Invalid email secret: ${email === '' ? 'empty string' : typeof email}\n`
 if (!password) secretsError += `Invalid password secret: ${password === '' ? 'empty string' : typeof password}\n`
 if (secretsError) throw new Error(secretsError.trim())
 
