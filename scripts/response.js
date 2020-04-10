@@ -5,8 +5,10 @@ const filePath = join(__dirname, '../doc/getStats-response.json');
 
 const email = process.env.UBI_EMAIL,
       password = process.env.UBI_PASSWORD;
-if (!email) throw new Error(`Invalid email secret: ${email === '' ? 'empty string' : typeof email}`);
-if (!password) throw new Error(`Invalid password secret: ${password === '' ? 'empty string' : typeof password}`)
+let secretsError = ''
+if (!email) scecretsError += `Invalid email secret: ${email === '' ? 'empty string' : typeof email}\n`
+if (!password) secretsError += `Invalid password secret: ${password === '' ? 'empty string' : typeof password}\n`
+if (secretsError) throw new Error(secretsError.trim())
 
 const R6API = require('../index');
 const r6api = new R6API(email, password);
