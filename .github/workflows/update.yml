@@ -6,7 +6,7 @@ on:
     - 'lib/methods/getStats.js'
     - 'lib/constants.js'
     - 'scripts/**'
-    branches: master
+    - '.github/workflows/update.yml'
   pull_request:
     paths:
     - 'lib/methods/getStats.js'
