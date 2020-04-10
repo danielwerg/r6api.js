@@ -6,12 +6,8 @@ on:
     - 'lib/methods/getStats.js'
     - 'lib/constants.js'
     - 'scripts/**'
+    - '.github/workflows/update.yml'
     branches: master
-  pull_request:
-    paths:
-    - 'lib/methods/getStats.js'
-    - 'lib/constants.js'
-    - 'scripts/**'
 
 jobs:
   update:
@@ -26,8 +22,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
+    
     - name: Install dependencies
       run: npm install
+    
     - name: Regenerate definition files
       run: npm run types
     - name: Commit TypeScript changes
@@ -37,6 +35,7 @@ jobs:
         add: typings
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
     - name: Update full response file
       run: npm run response
       env:
