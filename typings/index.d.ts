@@ -1,13 +1,13 @@
-import { seasonNumber, oldRankNumber, operator, rankNumber, weaponName, weaponType } from './autogen'
-import * as constants from '../lib/constants'
+import { seasonNumber, oldRankNumber, operator, rankNumber, weaponName, weaponType, oldSeasonNumber } from './autogen'
 
 declare module 'r6api.js' {
   export type Platform = 'uplay' | 'psn' | 'xbl'
   export type Region = 'ncsa' | 'emea' | 'apac'
+  export type OldSeasonNumber = oldSeasonNumber
   export type SeasonNumber = seasonNumber
   export type OldRankNumber = oldRankNumber
-  export type Operator = operator
   export type RankNumber = rankNumber
+  export type Operator = operator
   export type WeaponName = weaponName
   export type WeaponType = weaponType
 
@@ -61,9 +61,8 @@ declare module 'r6api.js' {
     seasons: Record<SeasonNumber, RankSeason>
   }
 
-  export interface RankSeason {
+  export interface RankSeason extends Season {
     id: SeasonNumber
-    name: string
     regions: Record<Region, RankRegion>
   }
 
@@ -151,6 +150,7 @@ declare module 'r6api.js' {
 
   interface WeaponStats {
     name: WeaponName
+    image: string
     kills: number
     deaths: number
     headshots: number
@@ -250,6 +250,7 @@ declare module 'r6api.js' {
     name: string
     id: string
     category: WeaponType
+    image: string
   }
 
   export interface OperatorStructure {
@@ -274,6 +275,12 @@ declare module 'r6api.js' {
 
   export interface OldRank extends Rank {
     oldBadge: string
+  }
+
+  export interface Season {
+    name: string
+    color: string
+    image: string
   }
 
   export type UrlTypeSwitch = 'LOGIN' | 'STATUS' | 'APPID' | 'ID' | 'USERNAME' | 'LEVEL' | 'PLAYTIME' | 'STATS' | 'RANK'
@@ -319,7 +326,8 @@ declare module 'r6api.js' {
       }
       RANKS: Record<RankNumber, Rank>
       OLD_RANKS: Record<OldRankNumber, OldRank>
-      SEASONS: Record<SeasonNumber, string>
+      SEASONS: Record<SeasonNumber, Season>
+      OLD_SEASONS: Record<OldSeasonNumber, Season>
     }
 
     errors: Record<'InvalidCredentialsError' | 'MissingHeaderError' | 'MissingCredentialsError' | 'PlayerNotFound' | 'TooManyRequestsError' | 'UnknownAuthError' | 'NoTokenError' | 'TooManyIdsError' | 'NotAnArray' | 'BadRequestError', (msg: string) => Error>

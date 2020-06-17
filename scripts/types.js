@@ -12,17 +12,25 @@ const createUnionType = (elements, noQuotes = false) =>
   noQuotes ? elements.join(' | ') : `'${elements.join("' | '")}'`;
 
 const oldRankNumber = createUnionType(Object.keys(constants.OLD_RANKS), true);
-const operator = createUnionType(constants.OPERATORS.map(op => op.name));
 const rankNumber = createUnionType(Object.keys(constants.RANKS), true);
+
+const oldSeasonNumber = createUnionType(Object.keys(constants.OLD_SEASONS), true);
 const seasonNumber = createUnionType(Object.keys(constants.SEASONS), true);
-const weaponName = createUnionType(constants.WEAPONS.map(wp => wp.name));
-const weaponType = createUnionType(Object.values(constants.WEAPONTYPES));
+
+const operator = createUnionType(constants.OPERATORS.map(op => op.name).sort());
+
+const weaponName = createUnionType(constants.WEAPONS.map(wp => wp.name).sort());
+const weaponType = createUnionType(Object.values(constants.WEAPONTYPES).sort());
 
 const file = `// This file is generated automatically by scripts/types-generate.ts, any edit to this file will be erased automatically
 export type oldRankNumber = ${oldRankNumber}
-export type operator = ${operator}
 export type rankNumber = ${rankNumber}
+
+export type oldSeasonNumber = ${oldSeasonNumber}
 export type seasonNumber = ${seasonNumber}
+
+export type operator = ${operator}
+
 export type weaponName = ${weaponName}
 export type weaponType = ${weaponType}
 `;
