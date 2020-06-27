@@ -54,7 +54,7 @@ export interface IOptions {
   fallbackLocale?: string;
 }
 
-export default (options?: IOptions) => {
+export default async (options?: IOptions) => {
 
   const raw = options && options.raw || false;
   const category = options && options.category || 'all';
@@ -65,36 +65,36 @@ export default (options?: IOptions) => {
   const locale = options && options.locale || 'en-us';
   const fallbackLocale = options && options.fallbackLocale || 'en-us';
 
-  return fetch<IApiResponse>(
+  const res = await fetch<IApiResponse>(
     URLS.NEWS(category, media, locale, fallbackLocale, limit, skip, startIndex)
-  )()
-    .then(res => ({
-      ...raw && { raw: res },
-      total: res.total,
-      limit: res.limit,
-      categories: res.categoriesFilter,
-      media: res.mediaFilter,
-      skip: res.skip,
-      startIndex: res.startIndex,
-      placement: res.placementFilter,
-      tags: res.tags,
-      items: res.items.map(item => ({
-        id: item.id,
-        title: item.title,
-        abstract: item.abstract,
-        thumbnail: {
-          url: item.thumbnail.url, description: item.thumbnail.description
-        },
-        content: item.content,
-        description: item.description,
-        categories: item.categories,
-        tag: item.tag,
-        placement: item.placement,
-        type: item.type,
-        readTime: item.readTime,
-        url: getNewsURL(locale, item.type, item.button.buttonUrl),
-        date: item.date
-      }))
-    }));
+  )();
+  return ({
+    ...raw && { raw: res },
+    total: res.total,
+    limit: res.limit,
+    categories: res.categoriesFilter,
+    media: res.mediaFilter,
+    skip: res.skip,
+    startIndex: res.startIndex,
+    placement: res.placementFilter,
+    tags: res.tags,
+    items: res.items.map(item => ({
+      id: item.id,
+      title: item.title,
+      abstract: item.abstract,
+      thumbnail: {
+        url: item.thumbnail.url, description: item.thumbnail.description
+      },
+      content: item.content,
+      description: item.description,
+      categories: item.categories,
+      tag: item.tag,
+      placement: item.placement,
+      type: item.type,
+      readTime: item.readTime,
+      url: getNewsURL(locale, item.type, item.button.buttonUrl),
+      date: item.date
+    }))
+  });
 
 };
