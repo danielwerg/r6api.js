@@ -696,24 +696,18 @@ await r6api.custom(
 
 ### TypeScript integrations
 
-This package has type definitions, which means that if you use a compatible editor (such as Visual Studio, Atom and others) it will give you autocomplete and docs directly into the editor.
+This package is developed in TypeScript, and the typings are shipped along with the built package: that means that your editor should automatically detect them an give you the static type info.  
 For a full list of supporting IDEs, please see [here](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
 
-Please notice that some editors don't like the fact that we're exporting a class along with types, so if you don't see any type suggestion in your js files you can try using `require('r6api.js').default` as your module import. You can look at the example below:
-
-```js
-const R6API = require('r6api.js').default; // Now everything should be typed
-const r6api = new R6API('example@mail.com', 'eatbigbanan'); // You can use the module as usual
-```
-
-If you're coding in TypeScript you can also use the type-checking functions provided in [`./ts-utils.ts`](ts-utils.ts): you can either copy them into your code or directly importing them from the package.
+If you're coding in TypeScript you can also import the typings and use the type-checking functions provided in the utils.
 
 ```ts
-import { isWeaponName } from 'r6api.js/ts-utils'
+import R6API from 'r6api.js'
 
+const yourAPI = new R6API(...)
 var yourVar; // any
 ...
-if (isWeaponName(yourVar)) {
+if (yourAPI.utils.isWeaponName(yourVar)) {
   // Now your var has the WeaponName type
 }
 ```
