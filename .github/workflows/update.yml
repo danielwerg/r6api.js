@@ -3,14 +3,14 @@ name: Update
 on:
   push:
     paths:
-      - '.github/workflows/update.yml'
-      - 'scripts/example.js'
-      - 'scripts/methods.js'
-      - 'example.js'
-      - 'src/methods/**'
-      - 'src/constants.ts'
+      - ".github/workflows/update.yml"
+      - "scripts/example.js"
+      - "scripts/methods.js"
+      - "example.js"
+      - "src/methods/**"
+      - "src/constants.ts"
     branches:
-      - 'typescript'
+      - "typescript"
 
 jobs:
   update:
@@ -49,6 +49,6 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          message: '[auto] Update example or/and method responses'
+          message: "[auto] chore: update example or/and method responses"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
