@@ -460,7 +460,7 @@ await r6api.getStats('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 > **Note:** `distanceTravelled` value might be overflowed due to Ubisoft storing it in 32-bit int
 
-[**Full response**](./data/methods/getStats.json)
+[**Full response**](./docs/responses/getStats.json)
 
 ---
 

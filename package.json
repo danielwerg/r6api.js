@@ -32,7 +32,7 @@
     "tsconfig.ts",
     "/scripts",
     "/examples",
-    "data"
+    "docs"
   ],
   "engines": {
     "node": ">=10.0.0"
