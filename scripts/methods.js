@@ -4,7 +4,7 @@ const stringifyObject = require('stringify-object');
 const { readFileSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
-const insertContent = require('./insertContent.js');
+const insertContent = require('./insertContent.js'); // eslint-disable-line import/order
 
 const email = process.env.UBI_EMAIL;
 const password = process.env.UBI_PASSWORD;
@@ -29,8 +29,10 @@ const structureChange = (obj1, obj2) => {
   ) return true;
   for (const key in obj1) {
     if (
-      typeof obj1[key] != typeof obj2[key]
-      || (
+      (
+        typeof obj1[key] != typeof obj2[key]
+        && [obj1[key], obj2[key]].sort().map(e => e + '').join(' ') !== 'null undefined'
+      ) || (
         typeof obj1[key] === 'object'
         && obj1[key] != null
         && obj2[key] != null
@@ -63,6 +65,14 @@ const structureChange = (obj1, obj2) => {
   const getDataFilePath = (name) => join(__dirname, `../data/methods/${name}.json`);
   const getDataFile = (name) => readFileSync(getDataFilePath(name), 'utf8');
 
+  const undefToNull = (obj) => {
+    for (let key in obj) {
+      if (obj[key] === undefined) obj[key] = null;
+      else if (typeof obj[key] == 'object' && obj[key] !== null) obj[key] = undefToNull(obj[key]);
+    }
+    return obj;
+  };
+
   [
     { name: 'findByUsername', response: findByUsername },
     { name: 'findById', response: findById },
@@ -77,14 +87,14 @@ const structureChange = (obj1, obj2) => {
   ]
     .map(item =>
       structureChange(JSON.parse(getDataFile(item.name)), item.response)
-      || process.argv[2] === '--force'
+        || process.argv[2] === '--force'
         ? (
           process.argv[2] === '--force'
             ? console.log(`Running with force: ${item.name}`)
             : console.log(`Structual change detected: ${item.name}`),
-          writeFileSync(getDataFilePath(item.name), JSON.stringify(item.response, null, 2)),
+          writeFileSync(getDataFilePath(item.name), JSON.stringify(undefToNull(item.response), null, 2).replace(/\n/gm, '\r\n')),
           item.name !== 'getStats'
-            ? insertContent(item.name, stringifyObject(item.response, { indent: '  '}))
+            ? insertContent(item.name, stringifyObject(item.response, { indent: '  ' }))
             : ''
         )
         : console.log(`No structual change detected: ${item.name}`)
