@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "seasons": {
+      "18": {
+        "id": 18,
+        "name": "Steel Wave",
+        "color": "#2b7f9b",
+        "image": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4soZ80QzL9WoLqvq8Hz647/d8d70312ec2849c276b459c3ef0482cd/r6s-seasons-y5s2.jpg",
+        "regions": {
+          "emea": {
+            "name": "emea",
+            "skillMean": 30.6191148847,
+            "skillStdev": 8.0054918116,
+            "current": {
+              "id": 0,
+              "name": "Unranked",
+              "mmr": 3062,
+              "icon": "https://i.imgur.com/SvadT33.png"
+            },
+            "max": {
+              "id": 0,
+              "name": "Unranked",
+              "mmr": 0,
+              "icon": "https://i.imgur.com/SvadT33.png"
+            },
+            "lastMatch": {
+              "won": false,
+              "mmrChange": 0,
+              "skillMeanChange": 0,
+              "skillStdevChange": 0
+            },
+            "previousMmr": 0,
+            "nextMmr": 0,
+            "topRankPosition": 0,
+            "kills": 0,
+            "deaths": 0,
+            "kd": 0,
+            "wins": 0,
+            "losses": 0,
+            "winRate": "0.00%",
+            "matches": 0,
+            "abandons": 0,
+            "updateTime": "1970-01-01T00:00:00+00:00"
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,6 +1,8 @@
 /node_modules/
 package-lock.json
 .git
+.env
+yarn-error.log
 test*
 /old_code/
-.env
+lib

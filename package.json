@@ -4,39 +4,50 @@
   "description": "Node.js wrapper around Rainbow Six: Siege API.",
   "author": "Daniel Sandberg",
   "license": "MIT",
-  "main": "index.js",
-  "types": "typings/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib",
   "scripts": {
-    "response": "node scripts/response",
-    "types": "node scripts/types"
-  },
-  "engines": {
-    "node": ">=10.0.0"
+    "build": "tsc -p .",
+    "example": "npm run build & node scripts/example",
+    "methods": "npm run build & node scripts/methods"
   },
   "dependencies": {
-    "bluebird": "^3.5.5",
     "node-fetch": "^2.6.0"
   },
-  "directories": {
-    "lib": "lib"
-  },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "@types/node": "^14.0.14",
+    "@types/node-fetch": "^2.5.7",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.3.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prefer-arrow": "^1.2.1",
+    "stringify-object": "^3.3.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danielwerg/r6api.js.git"
+  "files": [
+    "/lib",
+    "tsconfig.ts",
+    "/scripts",
+    "/examples",
+    "data"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
   },
   "keywords": [
     "api",
     "wrapper",
     "ubisoft",
+    "rainbow6",
     "siege",
-    "rainbow6"
+    "r6s"
   ],
   "bugs": {
     "url": "https://github.com/danielwerg/r6api.js/issues"
   },
   "homepage": "https://github.com/danielwerg/r6api.js#readme",
-  "runkitExampleFilename": "examples/runkit.js"
+  "runkitExampleFilename": "runkit.js"
 }

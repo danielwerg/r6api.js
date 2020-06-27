@@ -1,50 +1,54 @@
-name: Update documentation files
+name: Update
 
 on:
   push:
     paths:
-    - 'lib/methods/getStats.js'
-    - 'lib/constants.js'
-    - 'scripts/**'
-    - '.github/workflows/update.yml'
-    branches: master
+      - '.github/workflows/update.yml'
+      - 'scripts/example.js'
+      - 'scripts/methods.js'
+      - 'example.js'
+      - 'src/methods/**'
+      - 'src/constants.ts'
+    branches:
+      - 'typescript'
 
 jobs:
   update:
+    name: Update
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: master
-    - name: Set up Node.js 10.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10.x
-    
-    - name: Install dependencies
-      run: npm install
-    
-    - name: Regenerate definition files
-      run: npm run types
-    - name: Commit TypeScript changes
-      uses: EndBug/add-and-commit@v4
-      with:
-        message: "[auto] Update typings"
-        add: typings
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Update full response file
-      run: npm run response
-      env:
-        UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
-        UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
-    - name: Commit response changes
-      uses: EndBug/add-and-commit@v4
-      with:
-        message: "[auto] Update response file"
-        add: doc
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+        with:
+          ref: typescript
+
+      - name: Set up Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Update example
+        run: npm run example
+        env:
+          UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
+          UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
+
+      - name: Update method responses
+        run: npm run methods
+        env:
+          UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
+          UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          message: '[auto] Update example or/and method responses'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
