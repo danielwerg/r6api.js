@@ -696,7 +696,7 @@ await r6api.custom(
 
 ### TypeScript integrations
 
-This package is developed in TypeScript, and the typings are shipped along with the built package: that means that your editor should automatically detect them an give you the static type info.  
+This package is developed in TypeScript, and the typings are shipped along with the built package: that means that your editor should automatically detect them and give you the static type info.  
 For a full list of supporting IDEs, please see [here](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
 
 If you're coding in TypeScript you can also import the typings and use the type-checking functions provided in the utils.
