@@ -25,7 +25,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `response.js` script
 * `.npmignore`
 
-## [2.0.0] - YYYY-MM-DD
-
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/danielwerg/r6api.js/compare/v1.4.0...v2.0.0
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v1.4.1...typescript
