@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `doc/getStats-response.json` -> `docs/methods/getStats.json` along with all other methods
 * runkit example was moved to the root
 * `ts-utils.ts` was moved from root to `src/utils.ts`
+* `uniqueAbility` in `getStats` will now return object with `name`, `icon` and `stats` array instead of just stats array
 
 ### Removed
 * `response.js` script
