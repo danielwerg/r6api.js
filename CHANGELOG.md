@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `example`, `insertContent` and `methods` scripts
 * ESLint
 * EditorConfig
+* `xp` general xp stats
 
 ### Changed
 * `getId` -> `findByUsername`
