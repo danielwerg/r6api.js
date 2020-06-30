@@ -31,6 +31,7 @@ interface IGeneral {
   reinforcementsDeployed: number;
   suicides: number;
   distanceTravelled: number;
+  xp: number;
 }
 
 interface IQueuepvpbase {
@@ -210,7 +211,8 @@ const generalGetter = (obj: any, type: MPType) => ({
   barricadesDeployed: statGetter(obj, 'general', 'barricadedeployed', type),
   reinforcementsDeployed: statGetter(obj, 'general', 'reinforcementdeploy', type),
   suicides: statGetter(obj, 'general', 'suicide', type),
-  distanceTravelled: statGetter(obj, 'general', 'distancetravelled', type)
+  distanceTravelled: statGetter(obj, 'general', 'distancetravelled', type),
+  xp: statGetter(obj, 'general', 'totalxp', type)
 });
 
 const operatorsGetter = (obj: any, type: MPType) =>
