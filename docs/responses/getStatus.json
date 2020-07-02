@@ -6,8 +6,8 @@
     "mdm": "4073",
     "category": "Instance",
     "platform": "PC",
-    "status": "Degraded",
-    "maintenance": true,
+    "status": "Online",
+    "maintenance": null,
     "impactedFeatures": []
   },
   {
@@ -61,7 +61,7 @@
     "mdm": "4075",
     "category": "Instance",
     "platform": "XBOXONE",
-    "status": "Degraded",
+    "status": "Interrupted",
     "maintenance": true,
     "impactedFeatures": []
   }
