@@ -56,7 +56,10 @@ interface IRegions {
       icon: string;
     };
     lastMatch: {
-
+      won: boolean;
+      mmrChange: number;
+      skillMeanChange: number;
+      skillStdevChange: number;
     };
     previousMmr: number;
     nextMmr: number;
