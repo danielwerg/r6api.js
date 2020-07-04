@@ -11,10 +11,11 @@ import _getStatus from './methods/getStatus';
 import _custom from './methods/custom';
 import _getNews from './methods/getNews';
 import _getNewsById from './methods/getNewsById';
-import * as _constants from './constants';
-import * as _utils from './utils';
-import * as _typings from './typings';
 import { Platform } from './typings';
+
+export * as typings from './typings';
+export * as constants from './constants';
+export * as utils from './utils';
 
 const checkArgs = <T extends (...args: any) => any>({
   method, platform, query, options, limit
@@ -61,10 +62,6 @@ export default class R6API {
   custom = _custom
   getNews = _getNews
   getNewsById = _getNewsById
-
-  constants = _constants
-  utils = _utils
-  typings = _typings
 
   setTokenFileLocation = _setTokenFileLocation
 

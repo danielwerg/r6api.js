@@ -21,6 +21,7 @@ if (!password) {
 if (secretsError) throw new Error(secretsError.trim());
 
 const R6API = require('../lib').default;
+const { utils } = require('../lib');
 const r6api = new R6API({ email, password });
 
 const structureChange = (obj1, obj2) => {
@@ -59,7 +60,7 @@ const structureChange = (obj1, obj2) => {
   const getNews = await r6api.getNews({ limit: 1 });
   const getNewsById = await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
   const custom = await r6api.custom(
-    r6api.utils.URLS.STATS(platform, [id], 'operatorpvp_clash_sloweddown')
+    utils.URLS.STATS(platform, [id], 'operatorpvp_clash_sloweddown')
   );
 
   const getDataFilePath = (name) => join(__dirname, `../docs/responses/${name}.json`);

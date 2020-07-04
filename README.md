@@ -668,7 +668,7 @@ Useful if you're familiar with Rainbow Six Siege's API; this method will make a 
 
 ```js
 await r6api.custom(
-  r6api.utils.URLS.STATS(
+  utils.URLS.STATS(
     'uplay', ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'],
     'operatorpvp_clash_sloweddown'
   )
@@ -702,14 +702,15 @@ For a full list of supporting IDEs, please see [here](https://github.com/Microso
 If you're coding in TypeScript you can also import the typings and use the type-checking functions provided in the utils.
 
 ```ts
-import R6API from 'r6api.js'
+import R6API, { utils, typings, constants } from 'r6api.js'
 
-const yourAPI = new R6API(...)
 var yourVar; // any
 ...
-if (yourAPI.utils.isWeaponName(yourVar)) {
+if (utils.isWeaponName(yourVar)) {
   // Now your var has the WeaponName type
 }
+
+const platform = constants.PLATFORMS as typings.Platform[];
 ```
 
 ### Credit
