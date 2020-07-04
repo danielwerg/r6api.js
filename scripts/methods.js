@@ -63,7 +63,7 @@ const structureChange = (obj1, obj2) => {
     utils.URLS.STATS(platform, [id], 'operatorpvp_clash_sloweddown')
   );
 
-  const getDataFilePath = (name) => join(__dirname, `../docs/responses/${name}.json`);
+  const getDataFilePath = (name) => join(__dirname, `../docs/methods/${name}.json`);
   const getDataFile = (name) => readFileSync(getDataFilePath(name), 'utf8');
 
   const undefToNull = (obj) => {

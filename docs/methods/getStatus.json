@@ -1,0 +1,68 @@
+[
+  {
+    "appId": "e3d5ea9e-50bd-43b7-88bf-39794f4e3d40",
+    "name": "Rainbow Six Siege - PC - LIVE",
+    "spaceId": "5172a557-50b5-4665-b7db-e3f2e8c5041d",
+    "mdm": "4073",
+    "category": "Instance",
+    "platform": "PC",
+    "status": "Online",
+    "maintenance": null,
+    "impactedFeatures": []
+  },
+  {
+    "appId": "fb4cc4c9-2063-461d-a1e8-84a7d36525fc",
+    "name": "Rainbow Six Siege - PS4 - LIVE",
+    "spaceId": "05bfb3f7-6c21-4c42-be1f-97a33fb5cf66",
+    "mdm": "14922",
+    "category": "Instance",
+    "platform": "PS4",
+    "status": "Interrupted",
+    "maintenance": true,
+    "impactedFeatures": []
+  },
+  {
+    "appId": "",
+    "name": "Rainbow Six Siege - PS5 - LIVE",
+    "spaceId": "",
+    "mdm": "25365",
+    "category": "Instance",
+    "platform": "PS5",
+    "status": "Online",
+    "maintenance": null,
+    "impactedFeatures": []
+  },
+  {
+    "appId": "",
+    "name": "Rainbow Six Siege - Stadia - LIVE",
+    "spaceId": "",
+    "mdm": "25314",
+    "category": "Instance",
+    "platform": "Stadia",
+    "status": "Online",
+    "maintenance": null,
+    "impactedFeatures": []
+  },
+  {
+    "appId": "",
+    "name": "Rainbow Six Siege - XBOX SERIES X - LIVE",
+    "spaceId": "",
+    "mdm": "25366",
+    "category": "Instance",
+    "platform": "XBOX SERIES X",
+    "status": "Online",
+    "maintenance": null,
+    "impactedFeatures": []
+  },
+  {
+    "appId": "4008612d-3baf-49e4-957a-33066726a7bc",
+    "name": "Rainbow Six Siege - XBOXONE - LIVE",
+    "spaceId": "98a601e5-ca91-4440-b1c5-753f601a2c90",
+    "mdm": "4075",
+    "category": "Instance",
+    "platform": "XBOXONE",
+    "status": "Interrupted",
+    "maintenance": true,
+    "impactedFeatures": []
+  }
+]
