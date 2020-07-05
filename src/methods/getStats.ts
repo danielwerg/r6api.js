@@ -127,8 +127,12 @@ interface IOperatorStats {
   playtime: number;
   uniqueAbility: {
     name: string;
-    value: number;
-  }[] | null;
+    icon: string;
+    stats: {
+      name: string;
+      value: number;
+    }[]
+  } | null;
 }
 
 interface IWeaponStats {
