@@ -1008,7 +1008,7 @@ export const OPERATORS = {
     role: 'defender',
     unit: 'Unaffiliated',
     uniqueAbility: {
-      name: 'REMAH DASH',
+      name: 'Remah Dash',
       icon: '3dM2B3qCdU0woydIbiy2xn/55aa99443002ad794d3f78dada26d035/r6s-operator-ability-oryx',
       stats: [
         { name: 'Kills after Remah Dashes', id: 'oryx_killsafterdash' }
@@ -1022,7 +1022,7 @@ export const OPERATORS = {
     role: 'attacker',
     unit: 'REU',
     uniqueAbility: {
-      name: 'GEMINI REPLICATOR',
+      name: 'Gemini Replicator',
       icon: 'K8E4EHWbD8wTjVqro6wVl/62339b2fbe1d3a2319dcd320f7a0b070/r6s-operator-ability-iana',
       stats: [
         { name: 'Kills after using Replicators', id: 'iana_killsafterreplicator' }
@@ -1036,7 +1036,7 @@ export const OPERATORS = {
     role: 'defender',
     unit: 'Inkaba Task Force',
     uniqueAbility: {
-      name: 'BANSHEE SONIC DEFENSE',
+      name: 'Banshee Sonic Defense',
       icon: '49ixqWhGgjvHu0Ay8JzeSH/c6a3fe584847850186e15c7fb4244385/r6s-operator-ability-melusi',
       stats: [
         { name: 'Attackers slowed by Banshee', id: 'melusi_sloweddown' }
@@ -1050,7 +1050,7 @@ export const OPERATORS = {
     role: 'attacker',
     unit: 'NIGHTHAVEN',
     uniqueAbility: {
-      name: 'S.E.L.M.A. AQUA BREACHER',
+      name: 'S.E.L.M.A. Aqua Breacher',
       icon: '2sjKOnwHeOX2xn3iIpja2A/e265f675c905ac25c23ed11fc85589bb/r6s-operator-ability-ace',
       stats: [
         { name: 'S.E.L.M.A. Detonations', id: 'ace_selmadetonate' }
