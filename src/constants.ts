@@ -975,7 +975,7 @@ export const OPERATORS = {
   },
   'wamai': {
     name: 'Wamai',
-    icon: 'XX497uSOqX',
+    icon: '497uSOq',
     id: '3:17',
     role: 'defender',
     unit: 'NIGHTHAVEN',
