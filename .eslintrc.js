@@ -52,6 +52,7 @@ module.exports = {
         prefix: ['I']
       }
     ],
+    '@typescript-eslint/no-extra-semi': 'warn',
 
     'semi': ['warn', 'always'],
     'arrow-parens': ['off', 'always'],
