@@ -217,7 +217,7 @@ export const OLDER_RANKS = <const>{
 };
 
 export const OPERATORS = {
-  'recruit-sas': {
+  'recruit_sas': {
     name: 'Recruit SAS',
     icon: '3g0rYOq',
     id: '1:1',
@@ -225,7 +225,7 @@ export const OPERATORS = {
     unit: 'SAS',
     uniqueAbility: null
   },
-  'recruit-fbi': {
+  'recruit_fbi': {
     name: 'Recruit FBI SWAT',
     icon: 'Pd7krMT',
     id: '1:2',
@@ -233,7 +233,7 @@ export const OPERATORS = {
     unit: 'FBI SWAT',
     uniqueAbility: null
   },
-  'recruit-gign': {
+  'recruit_gign': {
     name: 'Recruit GIGN',
     icon: 'D05DqQW',
     id: '1:3',
@@ -241,7 +241,7 @@ export const OPERATORS = {
     unit: 'GIGN',
     uniqueAbility: null
   },
-  'recruit-spetsnaz': {
+  'recruit_spetsnaz': {
     name: 'Recruit Spetsnaz',
     icon: 'MEvmmGf',
     id: '1:4',
@@ -249,7 +249,7 @@ export const OPERATORS = {
     unit: 'Spetsnaz',
     uniqueAbility: null
   },
-  'recruit-gsg9': {
+  'recruit_gsg9': {
     name: 'Recruit GSG 9',
     icon: 'mF8eGXj',
     id: '1:5',
