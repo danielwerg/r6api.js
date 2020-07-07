@@ -107,7 +107,7 @@ module.exports = async () => {
 
 <!-- exampleOutput-start -->
 ```
-Daniel.Nt has played 4823 matches.
+Daniel.Nt has played 4841 matches.
 ```
 <!-- exampleOutput-end -->
 

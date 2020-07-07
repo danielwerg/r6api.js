@@ -17,8 +17,8 @@
     "mdm": "14922",
     "category": "Instance",
     "platform": "PS4",
-    "status": "Interrupted",
-    "maintenance": true,
+    "status": "Online",
+    "maintenance": null,
     "impactedFeatures": []
   },
   {
@@ -61,8 +61,8 @@
     "mdm": "4075",
     "category": "Instance",
     "platform": "XBOXONE",
-    "status": "Interrupted",
-    "maintenance": true,
+    "status": "Online",
+    "maintenance": null,
     "impactedFeatures": []
   }
 ]
