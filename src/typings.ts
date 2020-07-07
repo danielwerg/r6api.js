@@ -5,9 +5,10 @@ export type UUID = string;
 export type Platform = 'uplay' | 'psn' | 'xbl';
 
 export type Region = 'emea' | 'ncsa' | 'apac';
+export type RegionExtended = Region | 'all';
 
 export type SeasonId = keyof typeof constants.SEASONS;
-export type SeasonIdExtended = keyof typeof constants.SEASONS | -1;
+export type SeasonIdExtended = SeasonId | -1;
 export type OldSeasonId = keyof typeof constants.OLD_SEASONS;
 
 export type RankId = keyof typeof constants.RANKS;

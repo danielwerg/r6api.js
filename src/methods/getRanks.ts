@@ -2,7 +2,7 @@ import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
   Platform, UUID, SeasonId, SeasonIdExtended,
-  RankId, OldRankId, OlderRankId, Region
+  RankId, OldRankId, OlderRankId, Region, RegionExtended
 } from '../typings';
 import { REGIONS, SEASONS, RANKS, OLD_RANKS, OLDER_RANKS } from '../constants';
 import { URLS, getImgurURL, getCDNURL, getKD, getWinRate } from '../utils';
@@ -91,7 +91,7 @@ export interface IGetRanks {
 
 export interface IOptions {
   seasons?: SeasonIdExtended | SeasonIdExtended[] | 'all';
-  regions?: Region | Region[] | 'all';
+  regions?: RegionExtended | RegionExtended[];
 }
 
 const getRankIcon = (seasonId: SeasonId, rankId: RankId) =>
