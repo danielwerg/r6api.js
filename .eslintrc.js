@@ -31,7 +31,7 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     'indent': 'off',
-    '@typescript-eslint/indent': ['warn', 2],
+    '@typescript-eslint/indent': ['warn', 2, { 'VariableDeclarator': 'first' }],
     'brace-style': 'off',
     '@typescript-eslint/brace-style': [
       'error',
