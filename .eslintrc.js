@@ -40,7 +40,7 @@ module.exports = {
     '@typescript-eslint/no-parameter-properties': 'error',
     '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/prefer-function-type': 'error',
-    '@typescript-eslint/quotes': ['error', 'single'],
+    '@typescript-eslint/quotes': ['warn', 'single'],
     '@typescript-eslint/unified-signatures': 'error',
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/naming-convention': [
