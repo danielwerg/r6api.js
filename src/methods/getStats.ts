@@ -17,8 +17,6 @@ interface IGeneral {
   meleeKills: number;
   penetrationKills: number;
   blindKills: number;
-  dbno: number;
-  dbnoAssists: number;
   revives: number;
   wins: number;
   losses: number;
@@ -32,6 +30,10 @@ interface IGeneral {
   suicides: number;
   distanceTravelled: number;
   xp: number;
+}
+interface IGeneralpvp extends IGeneral {
+  dbno: number;
+  dbnoAssists: number;
 }
 
 interface IQueuepvpbase {
@@ -122,7 +124,6 @@ interface IOperatorStats {
   matches: number;
   headshots: number;
   meleeKills: number;
-  dbno: number;
   xp: number;
   playtime: number;
   uniqueAbility: {
@@ -133,6 +134,9 @@ interface IOperatorStats {
       value: number;
     }[]
   } | null;
+}
+interface IOperatorStatspvp extends IOperatorStats {
+  dbno: number;
 }
 
 interface IWeaponStats {
@@ -162,8 +166,8 @@ interface IWeaponCategory {
 export interface IGetStats {
   id: UUID;
   pvp: {
-    general: IGeneral;
-    operators: Record<OperatorName, IOperatorStats>;
+    general: IGeneralpvp;
+    operators: Record<OperatorName, IOperatorStatspvp>;
     weapons: Record<WeaponTypeId, IWeaponCategory>;
     queues: IQueuespvp;
     modes: IModespvp;
@@ -199,8 +203,8 @@ const generalGetter = (obj: any, type: MPType) => ({
   meleeKills: statGetter(obj, 'general', 'meleekills', type),
   penetrationKills: statGetter(obj, 'general', 'penetrationkills', type),
   blindKills: statGetter(obj, 'general', 'blindkills', type),
-  dbno: statGetter(obj, 'general', 'dbno', type),
-  dbnoAssists: statGetter(obj, 'general', 'dbnoassists', type),
+  ...type === 'pvp' && { dbno: statGetter(obj, 'general', 'dbno', type) },
+  ...type === 'pvp' && { dbnoAssists: statGetter(obj, 'general', 'dbnoassists', type) },
   revives: statGetter(obj, 'general', 'revive', type),
   wins: statGetter(obj, 'general', 'matchwon', type),
   losses: statGetter(obj, 'general', 'matchlost', type),
@@ -242,7 +246,7 @@ const operatorsGetter = (obj: any, type: MPType) =>
         statGetter(obj, 'operator', `roundlost:${cur.id}`, type),
       headshots: statGetter(obj, 'operator', `headshot:${cur.id}`, type),
       meleeKills: statGetter(obj, 'operator', `meleekills:${cur.id}`, type),
-      dbno: statGetter(obj, 'operator', `dbno:${cur.id}`, type),
+      ...type === 'pvp' && { dbno: statGetter(obj, 'operator', `dbno:${cur.id}`, type) },
       xp: statGetter(obj, 'operator', `totalxp:${cur.id}`, type),
       playtime: statGetter(obj, 'operator', `timeplayed:${cur.id}`, type),
       uniqueAbility: cur.uniqueAbility

@@ -1630,8 +1630,6 @@ const STATS = {
       'generalpve_revive',
       'generalpve_timeplayed',
       'generalpve_blindkills',
-      'generalpve_dbno',
-      'generalpve_dbnoassists',
       'generalpve_gadgetdestroy',
       'generalpve_barricadedeployed',
       'generalpve_reinforcementdeploy',
@@ -1653,7 +1651,6 @@ const STATS = {
       'operatorpve_roundlost',
       'operatorpve_headshot',
       'operatorpve_meleekills',
-      'operatorpve_dbno',
       'operatorpve_totalxp',
       'operatorpve_timeplayed'
     ],
