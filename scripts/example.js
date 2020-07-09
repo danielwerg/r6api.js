@@ -17,7 +17,7 @@ const runkitPath = join(__dirname, '../runkit.js');
 
   const exampleOutput = await require(examplePath)();
 
-  await insertContent('exampleOutput', exampleOutput, { style: 'codeBlock', lang: '' });
+  await insertContent('example-output', exampleOutput, { style: 'codeBlock', lang: '' });
 
   process.exit();
 

@@ -95,7 +95,7 @@ const structureChange = (obj1, obj2) => {
             : console.log(`Structual change detected: ${item.name}`),
           writeFileSync(getDataFilePath(item.name), JSON.stringify(undefToNull(item.response), null, 2).replace(/\n/gm, '\r\n')),
           item.name !== 'getStats'
-            ? insertContent(item.name, stringifyObject(item.response, { indent: '  ' }))
+            ? insertContent(`${item.name}-output`, stringifyObject(item.response, { indent: '  ' }))
             : ''
         )
         : console.log(`No structual change detected: ${item.name}`)

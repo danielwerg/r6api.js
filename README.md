@@ -105,11 +105,11 @@ module.exports = async () => {
 ```
 <!-- example-end -->
 
-<!-- exampleOutput-start -->
+<!-- example-output-start -->
 ```
 Daniel.Nt has played 4844 matches.
 ```
-<!-- exampleOutput-end -->
+<!-- example-output-end -->
 
 ## API
 
@@ -163,7 +163,7 @@ Find player by their username.
 await r6api.findByUsername('uplay', 'Daniel.Nt');
 ```
 
-<!-- findByUsername-start -->
+<!-- findByUsername-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -184,7 +184,7 @@ await r6api.findByUsername('uplay', 'Daniel.Nt');
 ```
 
 </details>
-<!-- findByUsername-end -->
+<!-- findByUsername-output-end -->
 
 ---
 
@@ -198,7 +198,7 @@ Find player by their id.
 await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
-<!-- findById-start -->
+<!-- findById-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -219,7 +219,7 @@ await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
 </details>
-<!-- findById-end -->
+<!-- findById-output-end -->
 
 ---
 
@@ -233,7 +233,7 @@ Get level, xp and alpha pack drop chance for a player.
 await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
-<!-- getProgression-start -->
+<!-- getProgression-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -252,7 +252,7 @@ await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
 </details>
-<!-- getProgression-end -->
+<!-- getProgression-output-end -->
 
 ---
 
@@ -266,7 +266,7 @@ Get playtime for a player.
 await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
-<!-- getPlaytime-start -->
+<!-- getPlaytime-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -283,7 +283,7 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
 </details>
-<!-- getPlaytime-end -->
+<!-- getPlaytime-output-end -->
 
 ---
 
@@ -324,7 +324,7 @@ Get seasonal stats for a player.
 await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions: 'emea' });
 ```
 
-<!-- getRanks-start -->
+<!-- getRanks-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -382,7 +382,7 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
 ```
 
 </details>
-<!-- getRanks-end -->
+<!-- getRanks-output-end -->
 
 > **Note:** `kills`, `deaths`, `kd`, `topRankPosition` and everything under `lastMatch` only available  for seasons including and after Phantom Sight (14) for older seasons it will return `0` or `false` in case of `lastMatch.won`
 
@@ -474,7 +474,7 @@ Get Rainbow Six: Siege servers status.
 await r6api.getStatus();
 ```
 
-<!-- getStatus-start -->
+<!-- getStatus-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -524,7 +524,7 @@ await r6api.getStatus();
 ```
 
 </details>
-<!-- getStatus-end -->
+<!-- getStatus-output-end -->
 
 ---
 
@@ -551,7 +551,7 @@ Get Rainbow Six: Siege News.
 await r6api.getNews({ limit: 1 });
 ```
 
-<!-- getNews-start -->
+<!-- getNews-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -591,7 +591,7 @@ await r6api.getNews({ limit: 1 });
 ```
 
 </details>
-<!-- getNews-end -->
+<!-- getNews-output-end -->
 
 ---
 
@@ -613,7 +613,7 @@ Get Rainbow Six: Siege News by ID.
 await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
 ```
 
-<!-- getNewsById-start -->
+<!-- getNewsById-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -656,7 +656,7 @@ await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
 ```
 
 </details>
-<!-- getNewsById-end -->
+<!-- getNewsById-output-end -->
 
 ---
 
@@ -675,7 +675,7 @@ await r6api.custom(
 );
 ```
 
-<!-- custom-start -->
+<!-- custom-output-start -->
 <details>
 <summary>Output</summary>
 
@@ -690,7 +690,7 @@ await r6api.custom(
 ```
 
 </details>
-<!-- custom-end -->
+<!-- custom-output-end -->
 
 ---
 
