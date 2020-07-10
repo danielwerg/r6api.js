@@ -45,7 +45,7 @@ export interface IApiResponse {
 
 export interface IOptions {
   raw?: boolean;
-  category?: 'all' | 'game-updates' | 'esports' | 'community' | 'store';
+  category?: 'all' | 'game-updates' | 'patch-notes' | 'community' | 'store' | 'esports';
   media?: 'all' | 'news' | 'videos';
   limit?: number;
   skip?: number;

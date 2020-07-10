@@ -536,16 +536,16 @@ Get Rainbow Six: Siege News.
 
 #### Options
 
-| Param          | Type      | Required | Default   | Description                                  |
-| -------------- | --------- | -------- | --------- | -------------------------------------------- |
-| raw            | `boolean` | false    | `false`   | Include raw API response                     |
-| category       | `string`  | false    | `'all'`   | all, game-updates, esports, community, store |
-| media          | `string`  | false    | `'all'`   | all, news, videos                            |
-| limit          | `number`  | false    | `6`       |                                              |
-| skip           | `number`  | false    | `0`       |                                              |
-| startIndex     | `number`  | false    | `0`       |                                              |
-| locale         | `string`  | false    | `'en-us'` |                                              |
-| fallbackLocale | `string`  | false    | `'en-us'` |                                              |
+| Param          | Type      | Required | Default   | Description                                               |
+| -------------- | --------- | -------- | --------- | --------------------------------------------------------- |
+| raw            | `boolean` | false    | `false`   | Include raw API response                                  |
+| category       | `string`  | false    | `'all'`   | all, game-updates, patch-notes, community, store, esports |
+| media          | `string`  | false    | `'all'`   | all, news, videos                                         |
+| limit          | `number`  | false    | `6`       |                                                           |
+| skip           | `number`  | false    | `0`       |                                                           |
+| startIndex     | `number`  | false    | `0`       |                                                           |
+| locale         | `string`  | false    | `'en-us'` |                                                           |
+| fallbackLocale | `string`  | false    | `'en-us'` |                                                           |
 
 ```js
 await r6api.getNews({ limit: 1 });
