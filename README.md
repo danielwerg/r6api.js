@@ -540,7 +540,7 @@ Get Rainbow Six: Siege News.
 | -------------- | --------- | -------- | --------- | -------------------------------------------- |
 | raw            | `boolean` | false    | `false`   | Include raw API response                     |
 | category       | `string`  | false    | `'all'`   | all, game-updates, esports, community, store |
-| filter         | `string`  | false    | `'all'`   | all, news, videos                            |
+| media          | `string`  | false    | `'all'`   | all, news, videos                            |
 | limit          | `number`  | false    | `6`       |                                              |
 | skip           | `number`  | false    | `0`       |                                              |
 | startIndex     | `number`  | false    | `0`       |                                              |
