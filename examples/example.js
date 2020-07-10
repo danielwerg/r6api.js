@@ -1,10 +1,10 @@
 require('dotenv').config();
-const R6API = require('./lib').default;
+const R6API = require('../lib').default;
 
 // Or ES6 way
-// import { config } from 'dotenv';
-// config();
-// import R6API from './lib';
+// import * as dotenv from 'dotenv';
+// dotenv.config();
+// import R6API from '../lib';
 
 const r6api = new R6API({
   email: process.env.UBI_EMAIL,
@@ -12,7 +12,7 @@ const r6api = new R6API({
 });
 
 // export default async () => { // ES6
-module.exports = async () => {
+exports.default = async () => {
 
   const username = 'Daniel.Nt';
   const platform = 'uplay';

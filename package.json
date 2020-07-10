@@ -8,8 +8,8 @@
   "types": "lib",
   "scripts": {
     "build": "tsc -p .",
-    "example": "npm run build & node scripts/example",
-    "methods": "npm run build & node scripts/methods"
+    "example": "ts-node scripts/example",
+    "methods": "ts-node scripts/methods"
   },
   "dependencies": {
     "node-fetch": "^2.6.0"
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^14.0.14",
     "@types/node-fetch": "^2.5.7",
+    "@types/stringify-object": "^3.3.0",
     "@typescript-eslint/eslint-plugin": "^3.4.0",
     "@typescript-eslint/parser": "^3.4.0",
     "dotenv": "^8.2.0",
@@ -28,11 +29,9 @@
     "typescript": "^3.9.5"
   },
   "files": [
-    "/lib",
-    "tsconfig.ts",
-    "/scripts",
-    "/examples",
-    "docs"
+    "docs",
+    "examples",
+    "lib"
   ],
   "engines": {
     "node": ">=10.0.0"
@@ -49,5 +48,5 @@
     "url": "https://github.com/danielwerg/r6api.js/issues"
   },
   "homepage": "https://github.com/danielwerg/r6api.js#readme",
-  "runkitExampleFilename": "runkit.js"
+  "runkitExampleFilename": "./examples/runkit.js"
 }

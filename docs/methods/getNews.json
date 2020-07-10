@@ -1,5 +1,5 @@
 {
-  "total": 1067,
+  "total": 1068,
   "limit": 1,
   "categories": "all",
   "media": "all",
@@ -9,26 +9,27 @@
   "tags": "BR-rainbow-six GA-siege",
   "items": [
     {
-      "id": "1FIgQZZ8dfi4cegjZieVSJ",
-      "title": "EXCLUSIVE TWITCH PRIME BYTE OPERATOR SET - YING AVAILABLE NOW",
-      "abstract": "Starting today, July 6th, claim your exclusive Operator Set free with Twitch Prime.",
+      "id": "59iU1S1NJSoxImWKwnFI1n",
+      "title": "NEW ARCADE GAME MODE: ATTRITION",
+      "abstract": "Would you say you’re good at improvising? Adapting on the fly when what you’re used to is no longer within your reach? ",
       "thumbnail": {
-        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4w7Q2BDVGzGzwTAQsrVasX/1f316cb9b9177590b8c3d1024f578654/R6siege-news-ying-twitchprime-960x540-THUMBNAIL.jpg",
+        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4nSAnKFsfGGh3t4zDCvNOP/4deeeb711893a234c9ed73f5833a6ffc/R6S_Arcade_Keyart_Attrition.jpg",
         "description": null
       },
-      "content": "Complete your collection with the Byte Operator set for Ying! Starting today, July 6th, claim your exclusive Operator Set free with Twitch Prime. With an all new uniform, headgear, weapon skin and charm, kit her out in the latest gear in Rainbow Six Siege. This offer is only available until August 6th so claim today!\n\n__Ying Operator Set Includes:__\n- Terminal Framework Uniform\n- Terminal Program Headgear\n- Datum Processor Weapon Skin\n- Aegis Candela Charm\n \nClaim your drop at the link below free with Twitch Prime, which is included with Amazon Prime membership, and offers free trials for new users:\n\nHow to claim your Twitch Prime Packs:\n- Activate Twitch Prime by linking your Amazon Prime and Twitch accounts.\n- Link your Twitch Prime and Ubisoft accounts [https://twitch.amazon.com/prime/loot/rainbow6siege](https://twitch.amazon.com/prime/loot/rainbow6siege)\n- Visit the Twitch Prime rewards page [https://www.twitch.tv/prime](https://www.twitch.tv/prime)\n- Log in to your Twitch account.\n- Verify your linked accounts.\n- Receive your Twitch Prime packs automatically in game! You will be able to find them in the Alpha Packs menu.\n \n### FAQ\n\n__Can I get the Twitch Prime Packs with Renown or R6 Credits?__\n\nThe Twitch Prime Collection is exclusive to Twitch Prime and can only be obtained from Twitch Prime drops.\n\n__Do I have to have Twitch Prime?__\n\nYes, a Twitch Prime membership is required to receive Twitch Prime rewards - Twitch Prime is included free with Amazon Prime, and free trials are available for new users.\n\n__Is this for all platforms?__\n\nYes, it can be redeemed on all platforms.\n\n__I don’t see my rewards.__\n\nIf you're having trouble redeeming your Twitch Prime packs, please contact support (support.ubi.com).\n\nFor more information about Twitch Prime, visit the [Twitch Prime FAQ](help.twitch.tv/customer/en/portal/articles/2934707-twitch-prime-program-faq).\n\nTo redeem, must own Tom Clancy's Rainbow Six Siege, link Ubisoft and Twitch Prime Accounts, and claim each drop between 5/4/20 and 8/6/20. ONLY SOME IN-GAME ITEMS AVAILABLE AT PROMOTION LAUNCH; ITEMS ONLY AVAILABLE DURING CLAIM WINDOWS. Must own operators to use in-game items. Final content/release dates subject to change. Content may be available separately after promotion. Valid in wherever Twitch Prime is available. Limit 1 per account. Restrictions apply. Void where prohibited.",
+      "content": "Would you say you’re good at improvising? Adapting on the fly when what you’re used to is no longer within your reach? This new Arcade might test your limits, but in the end you’ll come out a stronger player. In this game mode, you’ll have to get familiar with many Operators in order to win.\n\n<center>From July 9th to July 13th, take part in the Attrition!</center>\n\n### ARCADE RULES\n\nThe main thing to understand about this game mode is the reason why it’s called Attrition. As the match progresses, each round victory will block you from picking the Operators you won with for the rest of the match. \n\nLosses, on the other hand, cause no blocks. This means that the closer you get to winning a match, the less Operators you can choose from. The matches are always Bomb, and the map is randomly selected from a small roster, with the same amount of rounds as Unranked.\n\nPick wisely and strategize with your teammates, and you’ll come out on top!\n",
       "description": null,
       "categories": [
-        "community",
+        "game-updates",
+        "news",
         "rainbow-six",
         "rainbow-six-siege"
       ],
       "tag": "BR-rainbow-six GA-siege",
       "placement": null,
       "type": "news",
-      "readTime": "2",
-      "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/1FIgQZZ8dfi4cegjZieVSJ/exclusive-twitch-prime-byte-operator-set-ying-available-now",
-      "date": "2020-07-06T17:00:00.000Z"
+      "readTime": "1",
+      "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/59iU1S1NJSoxImWKwnFI1n/new-arcade-game-mode-attrition",
+      "date": "2020-07-08T22:00:00.000Z"
     }
   ]
 }
