@@ -297,7 +297,7 @@ Get seasonal stats for a player.
 
 | Param   | Type                          | Required | Default                    | Description                      |
 | ------- | ----------------------------- | -------- | -------------------------- | -------------------------------- |
-| seasons | `number \| number[] \| 'all'` | false    | `-1`                       | Numbers from `6` to `18` or `-1` |
+| seasons | `number \| number[] \| 'all'` | false    | `-1`                       | Numbers from `6` to `19` or `-1` |
 | regions | `string \| string[]`          | false    | `['emea', 'ncsa', 'apac']` |                                  |
 
 #### Seasons reference
@@ -308,7 +308,7 @@ Get seasonal stats for a player.
 | `6`  | Health         |   | `11` | Grim Sky      |   | `16` | Shifting Tides |
 | `7`  | Blood Orchid   |   | `12` | Wind Bastion  |   | `17` | Void Edge      |
 | `8`  | White Noise    |   | `13` | Burnt Horizon |   | `18` | Steel Wave     |
-| `9`  | Chimera        |   | `14` | Phantom Sight |   |      |                |
+| `9`  | Chimera        |   | `14` | Phantom Sight |   | `19` | Shadow Legacy  |
 
 > **Note:** Ubisoft doesn't provide data for seasons before Operation Health.
 
