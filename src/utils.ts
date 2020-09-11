@@ -1,7 +1,7 @@
 import {
   UUID, Platform, Region,
   SeasonId, OldSeasonId, RankId, OldRankId, OlderRankId,
-  OperatorName, WeaponTypeId, WeaponTypeName, WeaponName,
+  OperatorName, WeaponTypeIndex, WeaponTypeId, WeaponName,
   StatsCategoryName
 } from './typings';
 import {
@@ -110,11 +110,11 @@ export const isOlderRankId = (value: number): value is OlderRankId =>
 export const isOperatorName = (value: string): value is OperatorName =>
   Object.values(OPERATORS).map(op => op.name).includes(value);
 
-export const isWeaponTypeId = (value: string): value is WeaponTypeId =>
+export const isWeaponTypeIndex = (value: string): value is WeaponTypeIndex =>
   Object.keys(WEAPONTYPES).includes(value);
 
-export const isWeaponTypeName = (value: string): value is WeaponTypeName =>
-  (Object.values(WEAPONTYPES) as string[]).includes(value);
+export const isWeaponTypeId = (value: string): value is WeaponTypeId =>
+  (Object.values(WEAPONTYPES).map(weapontype => weapontype.id) as string[]).includes(value);
 
 export const isWeaponName = (value: string): value is WeaponName =>
   (Object.values(WEAPONS).map(wp => wp.name) as string[]).includes(value);

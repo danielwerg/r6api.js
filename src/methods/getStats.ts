@@ -1,7 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
-  Platform, UUID, MPType, WeaponTypeId, WeaponName, OperatorName, StatsCategoryName
+  Platform, UUID, MPType, WeaponTypeId, OperatorName, StatsCategoryName
 } from '../typings';
 import { STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS } from '../constants';
 import { URLS, getImgurURL, getCDNURL, getKD, getWinRate } from '../utils';
@@ -140,7 +140,7 @@ interface IOperatorStatspvp extends IOperatorStats {
 }
 
 interface IWeaponStats {
-  name: WeaponName;
+  name: WeaponTypeId;
   icon: string;
   kills: number;
   deaths: number;
@@ -152,6 +152,7 @@ interface IWeaponStats {
 }
 interface IWeaponCategory {
   general: {
+    name: string;
     kills: number;
     deaths: number;
     kd: number;
@@ -165,6 +166,7 @@ interface IWeaponCategory {
 
 export interface IGetStats {
   id: UUID;
+  raw?: any;
   pvp: {
     general: IGeneralpvp;
     operators: Record<OperatorName, IOperatorStatspvp>;
@@ -264,22 +266,23 @@ const operatorsGetter = (obj: any, type: MPType) =>
   }, {});
 
 const weaponsGetter = (obj: any, type: MPType) =>
-  Object.entries(WEAPONTYPES).reduce((acc, [weaponTypeId, weaponTypeName]) => {
-    (acc as any)[weaponTypeName] = {
-      name: weaponTypeName,
-      kills: statGetter(obj, 'weapontype', `kills:${weaponTypeId}`, type),
-      deaths: statGetter(obj, 'weapontype', `death:${weaponTypeId}`, type),
+  Object.entries(WEAPONTYPES).reduce((acc, [weaponTypeIndex, weaponTypeVal]) => {
+    (acc as any)[weaponTypeVal.id] = {};
+    (acc as any)[weaponTypeVal.id].general = {
+      name: weaponTypeVal.name,
+      kills: statGetter(obj, 'weapontype', `kills:${weaponTypeIndex}`, type),
+      deaths: statGetter(obj, 'weapontype', `death:${weaponTypeIndex}`, type),
       kd: getKD({
-        kills: statGetter(obj, 'weapontype', `kills:${weaponTypeId}`, type),
-        deaths: statGetter(obj, 'weapontype', `death:${weaponTypeId}`, type)
+        kills: statGetter(obj, 'weapontype', `kills:${weaponTypeIndex}`, type),
+        deaths: statGetter(obj, 'weapontype', `death:${weaponTypeIndex}`, type)
       }),
-      headshots: statGetter(obj, 'weapontype', `headshot:${weaponTypeId}`, type),
-      bulletsFired: statGetter(obj, 'weapontype', `bulletfired:${weaponTypeId}`, type),
-      bulletsConnected: statGetter(obj, 'weapontype', `bullethit:${weaponTypeId}`, type),
-      timesChosen: statGetter(obj, 'weapontype', `chosen:${weaponTypeId}`, type)
+      headshots: statGetter(obj, 'weapontype', `headshot:${weaponTypeIndex}`, type),
+      bulletsFired: statGetter(obj, 'weapontype', `bulletfired:${weaponTypeIndex}`, type),
+      bulletsConnected: statGetter(obj, 'weapontype', `bullethit:${weaponTypeIndex}`, type),
+      timesChosen: statGetter(obj, 'weapontype', `chosen:${weaponTypeIndex}`, type)
     };
-    (acc as any)[weaponTypeName].list = Object.values(WEAPONS)
-      .filter(weapon => weaponTypeName === weapon.category)
+    (acc as any)[weaponTypeVal.id].list = Object.values(WEAPONS)
+      .filter(weapon => weaponTypeVal.id === weapon.category)
       .map(weapon => ({
         name: weapon.name,
         icon: getCDNURL(weapon.icon),
@@ -321,14 +324,15 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
       .then(fetch<any>(URLS.STATS(platform, ids, chunk)))
   ))
     .then(res =>
-      Object.entries(res
-        .map(obj => obj.results)
-        .reduce((acc, cur) => {
-          Object.keys(cur).map(key =>
-            acc[key] = Object.assign(acc[key] || [], cur[key])
-          );
-          return acc;
-        }, {})
+      Object.entries(
+        res
+          .map(obj => obj.results)
+          .reduce((acc, cur) => {
+            Object.keys(cur).map(key =>
+              acc[key] = Object.assign(acc[key] || [], cur[key])
+            );
+            return acc;
+          }, {})
       )
         .map(([id, vals]) => ({
           id: id as UUID,

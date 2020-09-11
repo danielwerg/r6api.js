@@ -117,6 +117,11 @@ export const SEASONS = <const>{
     name: 'Steel Wave',
     color: '#2b7f9b',
     image: '4soZ80QzL9WoLqvq8Hz647/d8d70312ec2849c276b459c3ef0482cd/r6s-seasons-y5s2'
+  },
+  19: {
+    name: 'Shadow Legacy',
+    color: '#6ca511',
+    image: '5H87SAzADrzRmroVnJzuUE/2e73c489074b538055df0f793b4e1639/r6s-seasons-y5s3'
   }
 };
 
@@ -1056,20 +1061,34 @@ export const OPERATORS = {
         { name: 'S.E.L.M.A. Detonations', id: 'ace_selmadetonate' }
       ]
     }
+  },
+  'zero': {
+    name: 'Zero',
+    icon: 'xWtzdxN',
+    id: '1:1B',
+    role: 'attacker',
+    unit: 'ROS',
+    uniqueAbility: {
+      name: 'ARGUS Launcher',
+      icon: '6h4hyVSzG8IwAmEl1Objrd/6e51e64eeffcc68746b8ff59445fb103/r6s-operator-ability-zero',
+      stats: [
+        { name: 'Gadgets Destroyed by ARGUS Camera', id: 'zero_gadgetsdestroyed' }
+      ]
+    }
   }
 };
 
 export const WEAPONTYPES = <const>{
-  '1': 'assault',
-  '2': 'smg',
-  '3': 'lmg',
-  '4': 'marksman',
-  '5': 'pistol',
-  '6': 'shotgun',
-  '7': 'mp',
-  '8': 'shield',
-  '9': 'launcher',
-  'B': 'utility'
+  '1': { id: 'assault', name: 'Assault Rifle' },
+  '2': { id: 'smg', name: 'Submachine Gun' },
+  '3': { id: 'lmg', name: 'Light Machine Gun' },
+  '4': { id: 'marksman', name: 'Marksman Rifle' },
+  '5': { id: 'pistol', name: 'Handgun' },
+  '6': { id: 'shotgun', name: 'Shotgun' },
+  '7': { id: 'mp', name: 'Machine Pistol' },
+  '8': { id: 'shield', name: 'Shield' },
+  '9': { id: 'launcher', name: 'Launcher' },
+  'B': { id: 'utility', name: 'Utility' }
 };
 
 export const WEAPONS = <const>{
@@ -1169,6 +1188,10 @@ export const WEAPONS = <const>{
   'commando_9': {
     name: 'Commando 9', id: 'BE998B05E', category: 'assault',
     icon: '4P9dpUph5w3MSsLNnW6be/04baba24990fcb75a9c0bcfd01b7d190/Commando_9'
+  },
+  'sc3000k': {
+    name: 'SC3000K', id: '40705ECFA4', category: 'assault',
+    icon: '7x7eDTm2NNpfGiFMrfQqEX/9898e74c780537be3ca6d88db32ea21e/F2000'
   },
 
   // smg
