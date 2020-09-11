@@ -2,20 +2,20 @@
   {
     "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
     "seasons": {
-      "18": {
-        "id": 18,
-        "name": "Steel Wave",
-        "color": "#2b7f9b",
-        "image": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4soZ80QzL9WoLqvq8Hz647/d8d70312ec2849c276b459c3ef0482cd/r6s-seasons-y5s2.jpg",
+      "19": {
+        "id": 19,
+        "name": "Shadow Legacy",
+        "color": "#6ca511",
+        "image": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5H87SAzADrzRmroVnJzuUE/2e73c489074b538055df0f793b4e1639/r6s-seasons-y5s3.jpg",
         "regions": {
           "emea": {
             "name": "emea",
-            "skillMean": 30.6191148847,
-            "skillStdev": 8.0054918116,
+            "skillMean": 30.9286132404,
+            "skillStdev": 7.5235183431,
             "current": {
               "id": 0,
               "name": "Unranked",
-              "mmr": 3062,
+              "mmr": 3093,
               "icon": "https://i.imgur.com/SvadT33.png"
             },
             "max": {

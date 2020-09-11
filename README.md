@@ -107,7 +107,7 @@ exports.default = async () => {
 
 <!-- example-output-start -->
 ```
-Daniel.Nt has played 4847 matches.
+Daniel.Nt has played 4998 matches.
 ```
 <!-- example-output-end -->
 
@@ -557,7 +557,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1085,
+  total: 1084,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -567,24 +567,24 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: 'wGEvGabrPvs',
-      title: 'Rainbow Six Siege: 5 Quick Tips From King George | Ubisoft',
-      abstract: undefined,
+      id: 'j8MO_zTQ_lo',
+      title: 'Rainbow Six: Siege: Ubisoft Forward Segment – September 2020 | Ubisoft',
+      abstract: null,
       thumbnail: {
-        url: 'https://i.ytimg.com/vi/wGEvGabrPvs/maxresdefault.jpg',
-        description: 'Rainbow Six Siege: 5 Quick Tips From King George | Ubisoft'
+        url: 'https://i.ytimg.com/vi/j8MO_zTQ_lo/maxresdefault.jpg',
+        description: 'Rainbow Six: Siege: Ubisoft Forward Segment – September 2020 | Ubisoft'
       },
-      content: '[video](https://www.youtube.com/embed/wGEvGabrPvs)',
-      description: 'Former professional player and current content creator, King George, has five quick tips for Rainbow Six Siege Operation Steel Wave. Learn a great spot to place Melusi\'s Banshee on the House map rework. Get an idea of how a high level player uses Proximity Alarms. Bypass Mute Jammers with Ace\'s gadget, and more.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a creator of worlds, committed to enriching players\' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division.  We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n \n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries.\n\nRainbow Six Siege: 5 Quick Tips From King George | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
+      content: '[video](https://www.youtube.com/embed/j8MO_zTQ_lo)',
+      description: 'Watch the official Rainbow Six: Siege Ubisoft Forward– September 2020 segment!\n \n#R6S #UbisoftForward\n \nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel \n\nVisit our official channels to stay up to date with Rainbow Six Siege: https://rainbow6.ubisoft.com/ \nhttps://www.facebook.com/rainbow6usa/ https://www.instagram.com/rainbow6gam... \nhttps://twitter.com/Rainbow6Game \nhttps://www.youtube.com/UbisoftNA \n\nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP \n\nABOUT RAINBOW SIX SIEGE: \nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC. \n\nKEY FEATURES: -\nTHE RULES OF SIEGE: \nFive versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat. \n\nWORLD\'S ELITE COUNTER-TERRORIST OPERATORS: \nChoose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team. \n\nDESTRUCTION AS A TOOL: \nWalls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory. \n\nCLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT: \nUbisoft is a creator of worlds, committed to enriching players\' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division. We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n\n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries. \n\nRainbow Six: Siege: Ubisoft Forward Segment – September 2020 | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
       categories: [
         'videos'
       ],
-      tag: undefined,
-      placement: undefined,
+      tag: null,
+      placement: null,
       type: 'videos',
-      readTime: undefined,
-      url: 'https://www.youtube.com/watch?v=wGEvGabrPvs',
-      date: '2020-05-28T13:26:12.000Z'
+      readTime: null,
+      url: 'https://www.youtube.com/watch?v=j8MO_zTQ_lo',
+      date: '2020-09-10T19:48:21.000Z'
     }
   ]
 }
@@ -711,6 +711,11 @@ if (utils.isWeaponName(yourVar)) {
 }
 
 const platform = constants.PLATFORMS as typings.Platform[];
+```
+
+### Credit
+
+Operator icons from [r6operators.marcopixel.eu](https://r6operators.marcopixel.eu)ts.PLATFORMS as typings.Platform[];
 ```
 
 ### Credit

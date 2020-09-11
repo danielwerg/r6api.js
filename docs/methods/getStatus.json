@@ -22,39 +22,6 @@
     "impactedFeatures": []
   },
   {
-    "appId": "",
-    "name": "Rainbow Six Siege - PS5 - LIVE",
-    "spaceId": "",
-    "mdm": "25365",
-    "category": "Instance",
-    "platform": "PS5",
-    "status": "Online",
-    "maintenance": null,
-    "impactedFeatures": []
-  },
-  {
-    "appId": "",
-    "name": "Rainbow Six Siege - Stadia - LIVE",
-    "spaceId": "",
-    "mdm": "25314",
-    "category": "Instance",
-    "platform": "Stadia",
-    "status": "Online",
-    "maintenance": null,
-    "impactedFeatures": []
-  },
-  {
-    "appId": "",
-    "name": "Rainbow Six Siege - XBOX SERIES X - LIVE",
-    "spaceId": "",
-    "mdm": "25366",
-    "category": "Instance",
-    "platform": "XBOX SERIES X",
-    "status": "Online",
-    "maintenance": null,
-    "impactedFeatures": []
-  },
-  {
     "appId": "4008612d-3baf-49e4-957a-33066726a7bc",
     "name": "Rainbow Six Siege - XBOXONE - LIVE",
     "spaceId": "98a601e5-ca91-4440-b1c5-753f601a2c90",
