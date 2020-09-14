@@ -1798,8 +1798,8 @@
             "bulletsConnected": 73756,
             "timesChosen": 12177
           },
-          "list": [
-            {
+          "list": {
+            "l85a2": {
               "name": "L85A2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5vYQpoyk36foDzDq49jBd0/1479a2d7189e545555ceccecf6bd7cc3/L85A2.png",
               "kills": 1690,
@@ -1810,7 +1810,7 @@
               "bulletsConnected": 13090,
               "timesChosen": 2358
             },
-            {
+            "ar33": {
               "name": "AR33",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/16U6xEvX8I5xQd9duveBLN/45d22960872cfa3fb6be9eb47fa0be4e/AR33.png",
               "kills": 250,
@@ -1821,7 +1821,7 @@
               "bulletsConnected": 1781,
               "timesChosen": 350
             },
-            {
+            "g36c": {
               "name": "G36C",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2SZoqSXKoNPvZFIJsFsDE5/cb109885bf19c8697abf832f10cfd9a6/G36C.png",
               "kills": 189,
@@ -1832,7 +1832,7 @@
               "bulletsConnected": 1686,
               "timesChosen": 285
             },
-            {
+            "r4-c": {
               "name": "R4-C",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/dQbqK9VxczuiscwBDSkT8/777a062f6095dde0371eab5200dcb451/R4-C.png",
               "kills": 1086,
@@ -1843,7 +1843,7 @@
               "bulletsConnected": 7811,
               "timesChosen": 1193
             },
-            {
+            "556xi": {
               "name": "556XI",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2dgpAeAWb3SkZV7rxDbVdQ/fa32323256b7c6f8a1977d3f71e7d4b2/556xi.png",
               "kills": 808,
@@ -1854,7 +1854,7 @@
               "bulletsConnected": 7248,
               "timesChosen": 1254
             },
-            {
+            "f2": {
               "name": "F2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HTvw1cJInVAGxOLXR0war/2f142437f5c0944fdcfcce8a03c37676/F2.png",
               "kills": 1074,
@@ -1865,7 +1865,7 @@
               "bulletsConnected": 8668,
               "timesChosen": 1499
             },
-            {
+            "ak-12": {
               "name": "AK-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7KAZZgnpqD07y47jVVXEuh/e0d7e67101f8f966aa6e1c59e835454f/AK-12.png",
               "kills": 111,
@@ -1876,7 +1876,7 @@
               "bulletsConnected": 1055,
               "timesChosen": 116
             },
-            {
+            "aug_a2": {
               "name": "AUG A2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1eO39zRe8XxJXH1KZiIWhM/02049ced0fbfa630833e8b0d3c03de07/AUG_A2.png",
               "kills": 95,
@@ -1887,7 +1887,7 @@
               "bulletsConnected": 935,
               "timesChosen": 145
             },
-            {
+            "552_commando": {
               "name": "552 Commando",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1LT0N89YaOHvRwn3Pphr8K/02d4a3da9cda132d8201fd134f24fede/552_Commando.png",
               "kills": 390,
@@ -1898,7 +1898,7 @@
               "bulletsConnected": 2608,
               "timesChosen": 473
             },
-            {
+            "416-c_carbine": {
               "name": "416-C CARBINE",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2I86r2a2QD8EHTZVZnxcxy/2913450ba952a16c29fac1f5ce58ba1a/416-C_Carbine.png",
               "kills": 1502,
@@ -1909,7 +1909,7 @@
               "bulletsConnected": 13197,
               "timesChosen": 1598
             },
-            {
+            "c8-sfw": {
               "name": "C8-SFW",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1itXpz2GnvdwwRyhX1SYa2/b58ff71048fa3bb5ed09d5d935dc90f4/C8-SFW.png",
               "kills": 233,
@@ -1920,7 +1920,7 @@
               "bulletsConnected": 1781,
               "timesChosen": 333
             },
-            {
+            "mk17_cqb": {
               "name": "MK17 CQB",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4LytczDQmu0M63gO2WtCCm/331ef3b1938352ae71d7c0bd23de3596/Mk17_CQB.png",
               "kills": 134,
@@ -1931,7 +1931,7 @@
               "bulletsConnected": 825,
               "timesChosen": 136
             },
-            {
+            "para-308": {
               "name": "PARA-308",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6ub8y2Cs5EYhVPfDWuVVkW/82ca131a41ee4ba2e0b75f2dc52ed9e3/PARA-308.png",
               "kills": 236,
@@ -1942,7 +1942,7 @@
               "bulletsConnected": 1924,
               "timesChosen": 368
             },
-            {
+            "type-89": {
               "name": "Type-89",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7wLf325q9amF8bnVP1QGr0/2faff1a197f90dcded4472852a317d6b/Type-89.png",
               "kills": 522,
@@ -1953,7 +1953,7 @@
               "bulletsConnected": 4598,
               "timesChosen": 1022
             },
-            {
+            "c7e": {
               "name": "C7E",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/63vTDjkXeKq7rOoSBhoJD4/08603e6603d564e0fa38af9ec86b7c1f/C7E.png",
               "kills": 113,
@@ -1964,7 +1964,7 @@
               "bulletsConnected": 849,
               "timesChosen": 129
             },
-            {
+            "m762": {
               "name": "M762",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4oWAgi7tgQP1Tq0HooRtye/9109a74921ee17610d4bd85a61582823/M762.png",
               "kills": 168,
@@ -1975,7 +1975,7 @@
               "bulletsConnected": 1244,
               "timesChosen": 201
             },
-            {
+            "v308": {
               "name": "V308",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5YBZe76NUDO32eF66wW90g/488c315743d59230962a4d67618223d6/V308.png",
               "kills": 46,
@@ -1986,7 +1986,7 @@
               "bulletsConnected": 377,
               "timesChosen": 75
             },
-            {
+            "spear_.308": {
               "name": "SPEAR .308",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/29LjYuJ4s6yA8k9Uv2u28C/89ec812559e7d74b7c269279f4c46d92/Spear_.308.png",
               "kills": 32,
@@ -1997,7 +1997,7 @@
               "bulletsConnected": 276,
               "timesChosen": 39
             },
-            {
+            "ar-15.50": {
               "name": "AR-15.50",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50.png",
               "kills": 1,
@@ -2008,7 +2008,7 @@
               "bulletsConnected": 9,
               "timesChosen": 2
             },
-            {
+            "m4": {
               "name": "M4",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3jhi90ycmuc8mAiuSXFoCi/bcf354459e7becd6ede52ee97917c832/M4.png",
               "kills": 168,
@@ -2019,7 +2019,7 @@
               "bulletsConnected": 1254,
               "timesChosen": 152
             },
-            {
+            "ak-74m": {
               "name": "AK-74M",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1j5HiQP8aFphTe65fqDdg0/23eecb5c603c5ba9f59fc6cbc5e4a531/AK-74M.png",
               "kills": 247,
@@ -2030,7 +2030,7 @@
               "bulletsConnected": 1621,
               "timesChosen": 304
             },
-            {
+            "arx200": {
               "name": "ARX200",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6VgkPBsr1WApI3rWc9kcM0/b18b8e25f3e951e8e722213f2ee59eb0/ARX200.png",
               "kills": 1,
@@ -2041,7 +2041,7 @@
               "bulletsConnected": 4,
               "timesChosen": 1
             },
-            {
+            "f90": {
               "name": "F90",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/62tE3th2ThcGHlrcqWkmEX/d69c9de199542e25fa55f6d293f15671/r6-operator-weapon-ar-f90.png",
               "kills": 3,
@@ -2052,7 +2052,7 @@
               "bulletsConnected": 40,
               "timesChosen": 2
             },
-            {
+            "commando_9": {
               "name": "Commando 9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4P9dpUph5w3MSsLNnW6be/04baba24990fcb75a9c0bcfd01b7d190/Commando_9.png",
               "kills": 106,
@@ -2063,7 +2063,7 @@
               "bulletsConnected": 769,
               "timesChosen": 84
             },
-            {
+            "sc3000k": {
               "name": "SC3000K",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7x7eDTm2NNpfGiFMrfQqEX/9898e74c780537be3ca6d88db32ea21e/F2000.png",
               "kills": 3,
@@ -2074,7 +2074,7 @@
               "bulletsConnected": 10,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "smg": {
           "general": {
@@ -2087,8 +2087,8 @@
             "bulletsConnected": 62733,
             "timesChosen": 8436
           },
-          "list": [
-            {
+          "list": {
+            "fmg-9": {
               "name": "FMG-9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/0oneJNsBR06QjuowxwtHG/bd3b391c6eec2bd615f2ed83197a13ac/FMG-9.png",
               "kills": 106,
@@ -2099,7 +2099,7 @@
               "bulletsConnected": 928,
               "timesChosen": 162
             },
-            {
+            "mp5k": {
               "name": "MP5K",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1pk8nOI7ybQjYOSI4fuzOm/fcd78df0f729be545e75c09aae85c360/MP5K.png",
               "kills": 188,
@@ -2110,7 +2110,7 @@
               "bulletsConnected": 2313,
               "timesChosen": 315
             },
-            {
+            "ump45": {
               "name": "UMP45",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6X2EZPq2s8UKrP67uxz5FI/f0df4c57d5890c79311e4eb62d4470e7/UMP45.png",
               "kills": 651,
@@ -2121,7 +2121,7 @@
               "bulletsConnected": 6119,
               "timesChosen": 812
             },
-            {
+            "mp5": {
               "name": "MP5",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/60YbOvSBQt6ZUlu8YDXoZm/51ef3857b2986de700262432e8433714/MP5.png",
               "kills": 1096,
@@ -2132,7 +2132,7 @@
               "bulletsConnected": 10890,
               "timesChosen": 1251
             },
-            {
+            "p90": {
               "name": "P90",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4nGrNspOvII2oS3lEMkg5x/2398a493c298bc654f97c58767aa40f3/P90.png",
               "kills": 266,
@@ -2143,7 +2143,7 @@
               "bulletsConnected": 2925,
               "timesChosen": 290
             },
-            {
+            "9x19vsn": {
               "name": "9x19VSN",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/42gH96xTTYaTZsfXI3c0wL/a7edbf11af97091ee884b68e59fe6a4f/9x19VSN.png",
               "kills": 207,
@@ -2154,7 +2154,7 @@
               "bulletsConnected": 2212,
               "timesChosen": 286
             },
-            {
+            "mp7": {
               "name": "MP7",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3a4dgTWGdiJqALhtRp4pKy/f2568d3de3cfe7e4b53179e8653cd2a2/MP7.png",
               "kills": 899,
@@ -2165,7 +2165,7 @@
               "bulletsConnected": 8655,
               "timesChosen": 1291
             },
-            {
+            "9mm_c1": {
               "name": "9mm C1",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/60sbThKtOpNOwKu3OP0oGV/672fd9263f7786402a0d855273473a6f/9mm_C1.png",
               "kills": 177,
@@ -2176,7 +2176,7 @@
               "bulletsConnected": 1631,
               "timesChosen": 261
             },
-            {
+            "mpx": {
               "name": "MPX",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HFewpAJ8npDDCKFnEadhL/d398bb477d6b56fe41bfdb5862ed31c0/MPX.png",
               "kills": 950,
@@ -2187,7 +2187,7 @@
               "bulletsConnected": 9982,
               "timesChosen": 1277
             },
-            {
+            "m12": {
               "name": "M12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4FxqA5pa8JY9QQ7FEcjwPw/ffc779fcde5b970e7b95db6653637dab/M12.png",
               "kills": 218,
@@ -2198,7 +2198,7 @@
               "bulletsConnected": 1634,
               "timesChosen": 411
             },
-            {
+            "mp5sd": {
               "name": "MP5SD",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HaMldwFltBwiiyDDfkPpD/6de3aa9aaa17458e7f6186ba59b8deff/MP5SD.png",
               "kills": 113,
@@ -2209,7 +2209,7 @@
               "bulletsConnected": 1011,
               "timesChosen": 193
             },
-            {
+            "pdw9": {
               "name": "PDW9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4yYCuRnduMq35CTHfq6wwU/b7d49cdbcb05917e014c99efeaadd33b/PDW9.png",
               "kills": 75,
@@ -2220,7 +2220,7 @@
               "bulletsConnected": 624,
               "timesChosen": 75
             },
-            {
+            "vector_.45_acp": {
               "name": "Vector .45 ACP",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7D1cDf13FqUhoLihzvuPln/068aa7e507155598449c58c0a49a90d6/Vector_.45_ACP.png",
               "kills": 382,
@@ -2231,7 +2231,7 @@
               "bulletsConnected": 4532,
               "timesChosen": 641
             },
-            {
+            "t-5_smg": {
               "name": "T-5 SMG",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Ne8bvX8BdCALevWKMllQN/4baa3e79d323de134dd182e0272b9c3b/T-5_SMG.png",
               "kills": 272,
@@ -2242,7 +2242,7 @@
               "bulletsConnected": 2765,
               "timesChosen": 387
             },
-            {
+            "scorpion_evo_3_a1": {
               "name": "Scorpion EVO 3 A1",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6OdwaLWxcnFvhlVwWbP2Du/4f7e94bdb6d34d5c0aa7b7b147b4092e/Scorpion_EVO_3_A1.png",
               "kills": 294,
@@ -2253,7 +2253,7 @@
               "bulletsConnected": 3070,
               "timesChosen": 290
             },
-            {
+            "k1a": {
               "name": "K1A",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5mUa2p8WXbiyD71qUI8sGk/ed753b6f0ae30ab5737486dfcf32ee9f/K1A.png",
               "kills": 243,
@@ -2264,7 +2264,7 @@
               "bulletsConnected": 2041,
               "timesChosen": 306
             },
-            {
+            "mx4_storm": {
               "name": "Mx4 Storm",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4qRh1frGkQZxNyeKA4D6n1/20f89cd1d9953f06207b7340ea77fb17/Mx4_Storm.png",
               "kills": 129,
@@ -2275,7 +2275,7 @@
               "bulletsConnected": 1401,
               "timesChosen": 188
             },
-            {
+            "aug_a3": {
               "name": "AUG A3",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3W9XJdMOgpHSw55HfwRSAv/cf8f220678d503e6c3e535c00b2e636a/AUG_A3.png",
               "kills": 27,
@@ -2286,7 +2286,7 @@
               "bulletsConnected": 243,
               "timesChosen": 38
             },
-            {
+            "p10_roni": {
               "name": "P10 RONI",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7K86OBjL3zmYWt0ZvUcCLj/16a947334e39f27da177d787773593e4/r6-operator-weapon-smg-p10roni.png",
               "kills": 20,
@@ -2297,7 +2297,7 @@
               "bulletsConnected": 220,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "lmg": {
           "general": {
@@ -2310,8 +2310,8 @@
             "bulletsConnected": 6198,
             "timesChosen": 1138
           },
-          "list": [
-            {
+          "list": {
+            "6p41": {
               "name": "6P41",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1wxS2HOCvoPAfnJEDFWjfw/7feddb98582ec37b500243d3f3e19eca/6P41.png",
               "kills": 37,
@@ -2322,7 +2322,7 @@
               "bulletsConnected": 319,
               "timesChosen": 68
             },
-            {
+            "g8a1": {
               "name": "G8A1",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4TIb7oeJesaROOOfTlCBaZ/ffd6a802f9a779a0d39b2122c49b3254/G8A1.png",
               "kills": 207,
@@ -2333,7 +2333,7 @@
               "bulletsConnected": 1483,
               "timesChosen": 193
             },
-            {
+            "m249": {
               "name": "M249",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249.png",
               "kills": 115,
@@ -2344,7 +2344,7 @@
               "bulletsConnected": 897,
               "timesChosen": 173
             },
-            {
+            "t-95_lsw": {
               "name": "T-95 LSW",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/23HCxaNTRUHBlFAvCTMZQm/fe319cc164fac034a29e9b114ae7d5cb/T-95_LSW.png",
               "kills": 138,
@@ -2355,7 +2355,7 @@
               "bulletsConnected": 960,
               "timesChosen": 190
             },
-            {
+            "lmg-e": {
               "name": "LMG-E",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7JVJIew6t3iKwgByvrFXyi/7ba44dfda28b525506633e453104a604/LMG-E.png",
               "kills": 20,
@@ -2366,7 +2366,7 @@
               "bulletsConnected": 207,
               "timesChosen": 34
             },
-            {
+            "alda_5.56": {
               "name": "ALDA 5.56",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/39yB6TFl9ph6Rb4bDV4lqK/7f9b3abf8dff19bacc026a7212849ca4/ALDA_5.56.png",
               "kills": 212,
@@ -2377,7 +2377,7 @@
               "bulletsConnected": 1869,
               "timesChosen": 300
             },
-            {
+            "m249_saw": {
               "name": "M249 SAW",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249.png",
               "kills": 22,
@@ -2388,7 +2388,7 @@
               "bulletsConnected": 132,
               "timesChosen": 26
             }
-          ]
+          }
         },
         "marksman": {
           "general": {
@@ -2401,8 +2401,8 @@
             "bulletsConnected": 2197,
             "timesChosen": 718
           },
-          "list": [
-            {
+          "list": {
+            "417": {
               "name": "417",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5djkS4YtAtOF0vBmg0T60x/ea2b1ff7e5367e66c99bc7ad7e95bfe3/417.png",
               "kills": 18,
@@ -2413,7 +2413,7 @@
               "bulletsConnected": 107,
               "timesChosen": 31
             },
-            {
+            "ots-03": {
               "name": "OTs-03",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4fXznwDtLt61VCF8QIF4N3/34e2e6d6c33d4c504c945bdd13c322f6/OTs-03.png",
               "kills": 250,
@@ -2424,7 +2424,7 @@
               "bulletsConnected": 1135,
               "timesChosen": 406
             },
-            {
+            "camrs": {
               "name": "CAMRS",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4dBzqVVmnpv1DZi91LAnEN/e374b4ea289fc992280b943cdbb94d60/CAMRS.png",
               "kills": 143,
@@ -2435,7 +2435,7 @@
               "bulletsConnected": 754,
               "timesChosen": 169
             },
-            {
+            "sr-25": {
               "name": "SR-25",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3H3sICdj6BK8LhtQPRd2aJ/26826ebba73e0e5fd503256d069f3256/SR-25.png",
               "kills": 3,
@@ -2446,7 +2446,7 @@
               "bulletsConnected": 26,
               "timesChosen": 10
             },
-            {
+            "mk_14_ebr": {
               "name": "Mk 14 EBR",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6KIMqp5dA95z1RI3PrG9jv/eb939638169811a3fa858a44e6e5d97e/Mk_14_EBR.png",
               "kills": 38,
@@ -2457,7 +2457,7 @@
               "bulletsConnected": 205,
               "timesChosen": 54
             },
-            {
+            "csrx_300": {
               "name": "CSRX 300",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7tUB9ZNXJhdN6ejAkCEeFQ/99691bcc19f641cf872925905d08a539/CSRX_300.png",
               "kills": 33,
@@ -2468,7 +2468,7 @@
               "bulletsConnected": 89,
               "timesChosen": 47
             }
-          ]
+          }
         },
         "pistol": {
           "general": {
@@ -2481,8 +2481,8 @@
             "bulletsConnected": 8741,
             "timesChosen": 22614
           },
-          "list": [
-            {
+          "list": {
+            "p226_mk_25": {
               "name": "P226 MK 25",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/RTQvPQcywlRwUS1FjIKCX/6fc72fee2191c2e723276bc10ae4114e/P226_Mk_25.png",
               "kills": 40,
@@ -2493,7 +2493,7 @@
               "bulletsConnected": 268,
               "timesChosen": 1581
             },
-            {
+            "m45_meusoc": {
               "name": "M45 MEUSOC",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3u5cecgWYl3WuJK50mKEGd/a4a0eb15c710edfc0d29e98c2ee7ea33/M45_MEUSOC.png",
               "kills": 77,
@@ -2504,7 +2504,7 @@
               "bulletsConnected": 1104,
               "timesChosen": 3976
             },
-            {
+            "5.7_usg": {
               "name": "5.7 USG",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/tkYcSAJSe5yGkeUhzZqBO/e81feb86df4a7eb6951052bec26b6ed7/5.7_USG.png",
               "kills": 1,
@@ -2515,7 +2515,7 @@
               "bulletsConnected": 9,
               "timesChosen": 77
             },
-            {
+            "p9": {
               "name": "P9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6Fd1cl17KA0CtgodEiiY6v/d0f145ea72f2aacbd04260ba7d8f1c74/P9.png",
               "kills": 54,
@@ -2526,7 +2526,7 @@
               "bulletsConnected": 716,
               "timesChosen": 975
             },
-            {
+            "lfp586": {
               "name": "LFP586",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1zc7UtdBfCZakwbiYqBvSz/1fd3f1584de38ca7c9315d498f094276/LFP586.png",
               "kills": 120,
@@ -2537,7 +2537,7 @@
               "bulletsConnected": 561,
               "timesChosen": 2812
             },
-            {
+            "gsh-18": {
               "name": "GSH-18",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5s5Q33j3MNcXf9lwfxfd7m/4eb3a6af1d431481b6ddcec44fbc7602/GSh-18.png",
               "kills": 14,
@@ -2548,7 +2548,7 @@
               "bulletsConnected": 118,
               "timesChosen": 528
             },
-            {
+            "pmm": {
               "name": "PMM",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3y4LIwwm8YNQHAv8oOkWCK/a2375901cee34e68fa39c976d85de8aa/PMM.png",
               "kills": 18,
@@ -2559,7 +2559,7 @@
               "bulletsConnected": 209,
               "timesChosen": 500
             },
-            {
+            "p12": {
               "name": "P12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2mpM7rah7rwEW0bViIirUC/ed9caa4db58421519fa4db390b1aa164/P12.png",
               "kills": 139,
@@ -2570,7 +2570,7 @@
               "bulletsConnected": 1579,
               "timesChosen": 4134
             },
-            {
+            "mk1_9mm": {
               "name": "MK1 9mm",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3tWoNeF3jQYs3w4EOydQYs/434409c96693df1fd3e969d778e70795/Mk1_9mm_BI.png",
               "kills": 42,
@@ -2581,7 +2581,7 @@
               "bulletsConnected": 386,
               "timesChosen": 1041
             },
-            {
+            "d-50": {
               "name": "D-50",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6mMQRDsrComRFa7bC6cNkG/8cd17e545e3d28dcc11a040d000cfa16/D-50.png",
               "kills": 89,
@@ -2592,7 +2592,7 @@
               "bulletsConnected": 377,
               "timesChosen": 1538
             },
-            {
+            "prb92": {
               "name": "PRB92",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/dl28J1HsE7mzhj66pmd5D/b8d8fc48d2dde13154047de94abbd8ca/PRB92.png",
               "kills": 56,
@@ -2603,7 +2603,7 @@
               "bulletsConnected": 1416,
               "timesChosen": 1120
             },
-            {
+            "p229": {
               "name": "P229",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/76ja0RxqzHW9PpvWgpG7Sk/cb753b50b20fe67deaef54d8b2a46b54/P229.png",
               "kills": 2,
@@ -2614,7 +2614,7 @@
               "bulletsConnected": 34,
               "timesChosen": 81
             },
-            {
+            "usp40": {
               "name": "USP40",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7FxemzWRtlpAhK9MyKp1Gp/817cc25b6b7c3575dc1ba53a6a8170a9/USP40.png",
               "kills": 0,
@@ -2625,7 +2625,7 @@
               "bulletsConnected": 2,
               "timesChosen": 4
             },
-            {
+            "q-929": {
               "name": "Q-929",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2fRVszR5yGDHbV0AL8muso/0838dac90b66aa810daa49d36382fb64/Q-929.png",
               "kills": 9,
@@ -2636,7 +2636,7 @@
               "bulletsConnected": 121,
               "timesChosen": 622
             },
-            {
+            "rg15": {
               "name": "RG15",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2LNSsp7B7wUnnPUweir7Jm/9f66d53be7a63a17a55253a0bea6eec1/RG15.png",
               "kills": 12,
@@ -2647,7 +2647,7 @@
               "bulletsConnected": 96,
               "timesChosen": 530
             },
-            {
+            "bailiff_410": {
               "name": "Bailiff 410",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/N8FLbo4fsNyBe8msKgRhT/8f403dc0b58087bcafab786dd95ba33f/Bailiff_410.png",
               "kills": 3,
@@ -2658,7 +2658,7 @@
               "bulletsConnected": 47,
               "timesChosen": 111
             },
-            {
+            "keratos_.357": {
               "name": "Keratos .357",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4niSMDCeiryoMBXJZq60Vv/48339331d05e289868cf4050c49b1b2b/D-40.png",
               "kills": 9,
@@ -2669,7 +2669,7 @@
               "bulletsConnected": 145,
               "timesChosen": 377
             },
-            {
+            "1911_tacops": {
               "name": "1911 TACOPS",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/189UukZ6fVnvQR6LJtLYry/6eec29603d5b7b0ca8cab6ac0ef083ac/1911_TACOPS.png",
               "kills": 9,
@@ -2680,7 +2680,7 @@
               "bulletsConnected": 30,
               "timesChosen": 154
             },
-            {
+            "p-10c": {
               "name": "P-10C",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2l4qwB50zSFhFZVYRLNwqg/20df8114f69f96f2adc54779ccc5bbaa/P-10C.png",
               "kills": 0,
@@ -2691,7 +2691,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            ".44_mag_semi-auto": {
               "name": ".44 Mag Semi-Auto",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6W3Jz0YcQzbZ6BOPr7VVel/4c67f342964132a652f7d5821e887050/.44_Mag_Semi-Auto.png",
               "kills": 26,
@@ -2702,7 +2702,7 @@
               "bulletsConnected": 174,
               "timesChosen": 436
             },
-            {
+            "sdp_9mm": {
               "name": "SDP 9mm",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Tgsdyz3XEqmgUYi9aZZgb/6755f4da7af7a7179ffab92acf8d477e/SDP_9mm.png",
               "kills": 2,
@@ -2713,7 +2713,7 @@
               "bulletsConnected": 4,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "shotgun": {
           "general": {
@@ -2726,8 +2726,8 @@
             "bulletsConnected": 8248,
             "timesChosen": 5879
           },
-          "list": [
-            {
+          "list": {
+            "m590a1": {
               "name": "M590A1",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2zRHmgqENNiZqXQxC9Rsbj/e6542407c642f9b7c5a4546afb6db30a/M590A1.png",
               "kills": 680,
@@ -2738,7 +2738,7 @@
               "bulletsConnected": 3039,
               "timesChosen": 2717
             },
-            {
+            "m1014": {
               "name": "M1014",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2pUiVbwNnQnDTesmWXktqW/f27c1fab9a354bb89cbe309a688f5e02/M1014.png",
               "kills": 319,
@@ -2749,7 +2749,7 @@
               "bulletsConnected": 1581,
               "timesChosen": 534
             },
-            {
+            "sg-cqb": {
               "name": "SG-CQB",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5JoL3b36Fsztt9Q2XYmrbJ/dacec96948d3f8fe92914a69b9aac593/SG-CQB.png",
               "kills": 82,
@@ -2760,7 +2760,7 @@
               "bulletsConnected": 349,
               "timesChosen": 135
             },
-            {
+            "sasg-12": {
               "name": "SASG-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2Q6mL4CbifmIgifV2yV3Hi/2bb2b323f055b03a2c1ba516c262c24e/SASG-12.png",
               "kills": 19,
@@ -2771,7 +2771,7 @@
               "bulletsConnected": 126,
               "timesChosen": 41
             },
-            {
+            "m870": {
               "name": "M870",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2rkU6g4Rlg0e0U4rczWGTV/a51589a54c43f476d8eb984c0ea881e9/M870.png",
               "kills": 195,
@@ -2782,7 +2782,7 @@
               "bulletsConnected": 661,
               "timesChosen": 341
             },
-            {
+            "super_90": {
               "name": "Super 90",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1TLWSu0xHJlAsfEfafeC9X/f9647e70a18962bf1627095c8b46832e/Super_90.png",
               "kills": 110,
@@ -2793,7 +2793,7 @@
               "bulletsConnected": 523,
               "timesChosen": 220
             },
-            {
+            "spas-12": {
               "name": "SPAS-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Hp6Fbss6uI59OT4nZNB6e/a4d09954803cb2580353cfa03e8c778b/SPAS-12.png",
               "kills": 7,
@@ -2804,7 +2804,7 @@
               "bulletsConnected": 34,
               "timesChosen": 11
             },
-            {
+            "spas-15": {
               "name": "SPAS-15",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/CyofBgipHq4RTafvPFWd4/bc3d0ecc871b70e57735855f852efacf/SPAS-15.png",
               "kills": 67,
@@ -2815,7 +2815,7 @@
               "bulletsConnected": 419,
               "timesChosen": 168
             },
-            {
+            "supernova": {
               "name": "Supernova",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2tpjCRFLcc3hogjJGbKDsi/5ad0ab63b7245022aca5c1c1fb42d473/SuperNova.png",
               "kills": 21,
@@ -2826,7 +2826,7 @@
               "bulletsConnected": 168,
               "timesChosen": 179
             },
-            {
+            "ita12l": {
               "name": "ITA12L",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4Y6ziRzm9RiPii83fm8BV1/1f472744d2c2dec8d9206f4d8733d92c/ITA12L.png",
               "kills": 0,
@@ -2837,7 +2837,7 @@
               "bulletsConnected": 0,
               "timesChosen": 1
             },
-            {
+            "ita12s": {
               "name": "ITA12S",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5G4DroaSdqHzJWCe7qqbHZ/5dd2e03f853182c78a1e7fcbc642f0cf/ITA12S.png",
               "kills": 29,
@@ -2848,7 +2848,7 @@
               "bulletsConnected": 183,
               "timesChosen": 902
             },
-            {
+            "six12": {
               "name": "SIX12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2v6MwsHwjOZ5Muid53lyfN/e5f1c4997db93abfe3ac356fce23376c/SIX12.png",
               "kills": 24,
@@ -2859,7 +2859,7 @@
               "bulletsConnected": 94,
               "timesChosen": 43
             },
-            {
+            "six12_sd": {
               "name": "SIX12 SD",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1GTua079Xbtkpjhx96sRsW/079ed1a71a0d12b5e48e1b0d40b87110/SIX12_SD.png",
               "kills": 1,
@@ -2870,7 +2870,7 @@
               "bulletsConnected": 5,
               "timesChosen": 4
             },
-            {
+            "fo-12": {
               "name": "FO-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4TDWnhbgvLkc6HBWDJp2ST/f50cbd83d6d295ab59f17f7e21d713bc/FO-12.png",
               "kills": 1,
@@ -2881,7 +2881,7 @@
               "bulletsConnected": 17,
               "timesChosen": 5
             },
-            {
+            "bosg.12.2": {
               "name": "BOSG.12.2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2ZjVndetsX8WEn5ZfyUQa0/e3a781be7eab22876d25f748e8fd0f5a/BOSG.12.2.png",
               "kills": 152,
@@ -2892,7 +2892,7 @@
               "bulletsConnected": 294,
               "timesChosen": 282
             },
-            {
+            "acs12": {
               "name": "ACS12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/13z63kT1NLzn1U99o7WC4T/8655d3200f24b87246c36f2622603457/ACS12_PB.png",
               "kills": 0,
@@ -2903,7 +2903,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "tcsg12": {
               "name": "TCSG12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2NDbY7BTBJ9R09LUilTlRf/3728337cd3ba14ed6ab9de0c22e879af/TCSG12.png",
               "kills": 93,
@@ -2914,7 +2914,7 @@
               "bulletsConnected": 373,
               "timesChosen": 94
             },
-            {
+            "super_shorty": {
               "name": "Super Shorty",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Dq8LDmIxAveRqXM17orUW/cbd96b47cd8ca74a7827b16ef73fe7cf/r6-operator-weapon-sa-supershorty.png",
               "kills": 13,
@@ -2925,7 +2925,7 @@
               "bulletsConnected": 69,
               "timesChosen": 112
             }
-          ]
+          }
         },
         "mp": {
           "general": {
@@ -2938,8 +2938,8 @@
             "bulletsConnected": 13858,
             "timesChosen": 4754
           },
-          "list": [
-            {
+          "list": {
+            "smg-11": {
               "name": "SMG-11",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3WExw7Kepz9uAiWAbWW457/875fc631a3cf9fcc2849d9db2989cbcd/SMG-11.png",
               "kills": 1436,
@@ -2950,7 +2950,7 @@
               "bulletsConnected": 12163,
               "timesChosen": 4181
             },
-            {
+            "bearing_9": {
               "name": "Bearing 9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4mdftEOh5Vu9KhhpgKLKrT/abedcc75868774018295ec2a08a7b3de/Bearing_9.png",
               "kills": 358,
@@ -2961,7 +2961,7 @@
               "bulletsConnected": 2788,
               "timesChosen": 1364
             },
-            {
+            "c75_auto": {
               "name": "C75 Auto",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3wUuefwPjU705mZkTdJ9UH/8ccb11884cfa34c176ac5500af139177/C75_Auto.png",
               "kills": 26,
@@ -2972,7 +2972,7 @@
               "bulletsConnected": 215,
               "timesChosen": 86
             },
-            {
+            "smg-12": {
               "name": "SMG-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/EwJgB7KdgOb6dDm7ro33u/b73f0890f992c1a365210f08efcc6db5/SMG-12.png",
               "kills": 55,
@@ -2983,7 +2983,7 @@
               "bulletsConnected": 473,
               "timesChosen": 377
             },
-            {
+            "spsmg9": {
               "name": "SPSMG9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5EtwSgylXckBNg4n6gDR9J/bc6fc6c5c12ae11da59aee95828ebd76/SPSMG9.png",
               "kills": 85,
@@ -2994,7 +2994,7 @@
               "bulletsConnected": 787,
               "timesChosen": 110
             }
-          ]
+          }
         },
         "shield": {
           "general": {
@@ -3007,7 +3007,7 @@
             "bulletsConnected": 0,
             "timesChosen": 0
           },
-          "list": []
+          "list": {}
         },
         "launcher": {
           "general": {
@@ -3020,7 +3020,7 @@
             "bulletsConnected": 0,
             "timesChosen": 3342
           },
-          "list": []
+          "list": {}
         },
         "utility": {
           "general": {
@@ -3033,7 +3033,7 @@
             "bulletsConnected": 1396,
             "timesChosen": 579
           },
-          "list": []
+          "list": {}
         }
       },
       "queues": {
@@ -4832,8 +4832,8 @@
             "bulletsConnected": 56402,
             "timesChosen": 948
           },
-          "list": [
-            {
+          "list": {
+            "l85a2": {
               "name": "L85A2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5vYQpoyk36foDzDq49jBd0/1479a2d7189e545555ceccecf6bd7cc3/L85A2.png",
               "kills": 4800,
@@ -4844,7 +4844,7 @@
               "bulletsConnected": 13684,
               "timesChosen": 264
             },
-            {
+            "ar33": {
               "name": "AR33",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/16U6xEvX8I5xQd9duveBLN/45d22960872cfa3fb6be9eb47fa0be4e/AR33.png",
               "kills": 207,
@@ -4855,7 +4855,7 @@
               "bulletsConnected": 739,
               "timesChosen": 15
             },
-            {
+            "g36c": {
               "name": "G36C",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2SZoqSXKoNPvZFIJsFsDE5/cb109885bf19c8697abf832f10cfd9a6/G36C.png",
               "kills": 100,
@@ -4866,7 +4866,7 @@
               "bulletsConnected": 491,
               "timesChosen": 15
             },
-            {
+            "r4-c": {
               "name": "R4-C",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/dQbqK9VxczuiscwBDSkT8/777a062f6095dde0371eab5200dcb451/R4-C.png",
               "kills": 4304,
@@ -4877,7 +4877,7 @@
               "bulletsConnected": 15075,
               "timesChosen": 216
             },
-            {
+            "556xi": {
               "name": "556XI",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2dgpAeAWb3SkZV7rxDbVdQ/fa32323256b7c6f8a1977d3f71e7d4b2/556xi.png",
               "kills": 109,
@@ -4888,7 +4888,7 @@
               "bulletsConnected": 371,
               "timesChosen": 8
             },
-            {
+            "f2": {
               "name": "F2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HTvw1cJInVAGxOLXR0war/2f142437f5c0944fdcfcce8a03c37676/F2.png",
               "kills": 3784,
@@ -4899,7 +4899,7 @@
               "bulletsConnected": 12804,
               "timesChosen": 249
             },
-            {
+            "ak-12": {
               "name": "AK-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7KAZZgnpqD07y47jVVXEuh/e0d7e67101f8f966aa6e1c59e835454f/AK-12.png",
               "kills": 256,
@@ -4910,7 +4910,7 @@
               "bulletsConnected": 1310,
               "timesChosen": 21
             },
-            {
+            "aug_a2": {
               "name": "AUG A2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1eO39zRe8XxJXH1KZiIWhM/02049ced0fbfa630833e8b0d3c03de07/AUG_A2.png",
               "kills": 103,
@@ -4921,7 +4921,7 @@
               "bulletsConnected": 512,
               "timesChosen": 12
             },
-            {
+            "552_commando": {
               "name": "552 Commando",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1LT0N89YaOHvRwn3Pphr8K/02d4a3da9cda132d8201fd134f24fede/552_Commando.png",
               "kills": 333,
@@ -4932,7 +4932,7 @@
               "bulletsConnected": 1073,
               "timesChosen": 29
             },
-            {
+            "416-c_carbine": {
               "name": "416-C CARBINE",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2I86r2a2QD8EHTZVZnxcxy/2913450ba952a16c29fac1f5ce58ba1a/416-C_Carbine.png",
               "kills": 100,
@@ -4943,7 +4943,7 @@
               "bulletsConnected": 464,
               "timesChosen": 8
             },
-            {
+            "c8-sfw": {
               "name": "C8-SFW",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1itXpz2GnvdwwRyhX1SYa2/b58ff71048fa3bb5ed09d5d935dc90f4/C8-SFW.png",
               "kills": 1180,
@@ -4954,7 +4954,7 @@
               "bulletsConnected": 3683,
               "timesChosen": 19
             },
-            {
+            "mk17_cqb": {
               "name": "MK17 CQB",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4LytczDQmu0M63gO2WtCCm/331ef3b1938352ae71d7c0bd23de3596/Mk17_CQB.png",
               "kills": 65,
@@ -4965,7 +4965,7 @@
               "bulletsConnected": 218,
               "timesChosen": 5
             },
-            {
+            "para-308": {
               "name": "PARA-308",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6ub8y2Cs5EYhVPfDWuVVkW/82ca131a41ee4ba2e0b75f2dc52ed9e3/PARA-308.png",
               "kills": 36,
@@ -4976,7 +4976,7 @@
               "bulletsConnected": 156,
               "timesChosen": 4
             },
-            {
+            "type-89": {
               "name": "Type-89",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7wLf325q9amF8bnVP1QGr0/2faff1a197f90dcded4472852a317d6b/Type-89.png",
               "kills": 250,
@@ -4987,7 +4987,7 @@
               "bulletsConnected": 878,
               "timesChosen": 39
             },
-            {
+            "c7e": {
               "name": "C7E",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/63vTDjkXeKq7rOoSBhoJD4/08603e6603d564e0fa38af9ec86b7c1f/C7E.png",
               "kills": 207,
@@ -4998,7 +4998,7 @@
               "bulletsConnected": 679,
               "timesChosen": 3
             },
-            {
+            "m762": {
               "name": "M762",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4oWAgi7tgQP1Tq0HooRtye/9109a74921ee17610d4bd85a61582823/M762.png",
               "kills": 637,
@@ -5009,7 +5009,7 @@
               "bulletsConnected": 1776,
               "timesChosen": 5
             },
-            {
+            "v308": {
               "name": "V308",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5YBZe76NUDO32eF66wW90g/488c315743d59230962a4d67618223d6/V308.png",
               "kills": 42,
@@ -5020,7 +5020,7 @@
               "bulletsConnected": 150,
               "timesChosen": 3
             },
-            {
+            "spear_.308": {
               "name": "SPEAR .308",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/29LjYuJ4s6yA8k9Uv2u28C/89ec812559e7d74b7c269279f4c46d92/Spear_.308.png",
               "kills": 61,
@@ -5031,7 +5031,7 @@
               "bulletsConnected": 244,
               "timesChosen": 3
             },
-            {
+            "ar-15.50": {
               "name": "AR-15.50",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50.png",
               "kills": 43,
@@ -5042,7 +5042,7 @@
               "bulletsConnected": 118,
               "timesChosen": 1
             },
-            {
+            "m4": {
               "name": "M4",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3jhi90ycmuc8mAiuSXFoCi/bcf354459e7becd6ede52ee97917c832/M4.png",
               "kills": 492,
@@ -5053,7 +5053,7 @@
               "bulletsConnected": 1371,
               "timesChosen": 17
             },
-            {
+            "ak-74m": {
               "name": "AK-74M",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1j5HiQP8aFphTe65fqDdg0/23eecb5c603c5ba9f59fc6cbc5e4a531/AK-74M.png",
               "kills": 303,
@@ -5064,7 +5064,7 @@
               "bulletsConnected": 853,
               "timesChosen": 11
             },
-            {
+            "arx200": {
               "name": "ARX200",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6VgkPBsr1WApI3rWc9kcM0/b18b8e25f3e951e8e722213f2ee59eb0/ARX200.png",
               "kills": 0,
@@ -5075,7 +5075,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "f90": {
               "name": "F90",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/62tE3th2ThcGHlrcqWkmEX/d69c9de199542e25fa55f6d293f15671/r6-operator-weapon-ar-f90.png",
               "kills": 0,
@@ -5086,7 +5086,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "commando_9": {
               "name": "Commando 9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4P9dpUph5w3MSsLNnW6be/04baba24990fcb75a9c0bcfd01b7d190/Commando_9.png",
               "kills": 0,
@@ -5097,7 +5097,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "sc3000k": {
               "name": "SC3000K",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7x7eDTm2NNpfGiFMrfQqEX/9898e74c780537be3ca6d88db32ea21e/F2000.png",
               "kills": 0,
@@ -5108,7 +5108,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "smg": {
           "general": {
@@ -5121,8 +5121,8 @@
             "bulletsConnected": 7338,
             "timesChosen": 121
           },
-          "list": [
-            {
+          "list": {
+            "fmg-9": {
               "name": "FMG-9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/0oneJNsBR06QjuowxwtHG/bd3b391c6eec2bd615f2ed83197a13ac/FMG-9.png",
               "kills": 498,
@@ -5133,7 +5133,7 @@
               "bulletsConnected": 1844,
               "timesChosen": 28
             },
-            {
+            "mp5k": {
               "name": "MP5K",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1pk8nOI7ybQjYOSI4fuzOm/fcd78df0f729be545e75c09aae85c360/MP5K.png",
               "kills": 51,
@@ -5144,7 +5144,7 @@
               "bulletsConnected": 346,
               "timesChosen": 11
             },
-            {
+            "ump45": {
               "name": "UMP45",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6X2EZPq2s8UKrP67uxz5FI/f0df4c57d5890c79311e4eb62d4470e7/UMP45.png",
               "kills": 23,
@@ -5155,7 +5155,7 @@
               "bulletsConnected": 112,
               "timesChosen": 4
             },
-            {
+            "mp5": {
               "name": "MP5",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/60YbOvSBQt6ZUlu8YDXoZm/51ef3857b2986de700262432e8433714/MP5.png",
               "kills": 342,
@@ -5166,7 +5166,7 @@
               "bulletsConnected": 2247,
               "timesChosen": 37
             },
-            {
+            "p90": {
               "name": "P90",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4nGrNspOvII2oS3lEMkg5x/2398a493c298bc654f97c58767aa40f3/P90.png",
               "kills": 111,
@@ -5177,7 +5177,7 @@
               "bulletsConnected": 1094,
               "timesChosen": 20
             },
-            {
+            "9x19vsn": {
               "name": "9x19VSN",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/42gH96xTTYaTZsfXI3c0wL/a7edbf11af97091ee884b68e59fe6a4f/9x19VSN.png",
               "kills": 89,
@@ -5188,7 +5188,7 @@
               "bulletsConnected": 573,
               "timesChosen": 12
             },
-            {
+            "mp7": {
               "name": "MP7",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3a4dgTWGdiJqALhtRp4pKy/f2568d3de3cfe7e4b53179e8653cd2a2/MP7.png",
               "kills": 16,
@@ -5199,7 +5199,7 @@
               "bulletsConnected": 104,
               "timesChosen": 4
             },
-            {
+            "9mm_c1": {
               "name": "9mm C1",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/60sbThKtOpNOwKu3OP0oGV/672fd9263f7786402a0d855273473a6f/9mm_C1.png",
               "kills": 0,
@@ -5210,7 +5210,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "mpx": {
               "name": "MPX",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HFewpAJ8npDDCKFnEadhL/d398bb477d6b56fe41bfdb5862ed31c0/MPX.png",
               "kills": 0,
@@ -5221,7 +5221,7 @@
               "bulletsConnected": 0,
               "timesChosen": 1
             },
-            {
+            "m12": {
               "name": "M12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4FxqA5pa8JY9QQ7FEcjwPw/ffc779fcde5b970e7b95db6653637dab/M12.png",
               "kills": 0,
@@ -5232,7 +5232,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "mp5sd": {
               "name": "MP5SD",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HaMldwFltBwiiyDDfkPpD/6de3aa9aaa17458e7f6186ba59b8deff/MP5SD.png",
               "kills": 0,
@@ -5243,7 +5243,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "pdw9": {
               "name": "PDW9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4yYCuRnduMq35CTHfq6wwU/b7d49cdbcb05917e014c99efeaadd33b/PDW9.png",
               "kills": 295,
@@ -5254,7 +5254,7 @@
               "bulletsConnected": 1018,
               "timesChosen": 4
             },
-            {
+            "vector_.45_acp": {
               "name": "Vector .45 ACP",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7D1cDf13FqUhoLihzvuPln/068aa7e507155598449c58c0a49a90d6/Vector_.45_ACP.png",
               "kills": 0,
@@ -5265,7 +5265,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "t-5_smg": {
               "name": "T-5 SMG",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Ne8bvX8BdCALevWKMllQN/4baa3e79d323de134dd182e0272b9c3b/T-5_SMG.png",
               "kills": 0,
@@ -5276,7 +5276,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "scorpion_evo_3_a1": {
               "name": "Scorpion EVO 3 A1",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6OdwaLWxcnFvhlVwWbP2Du/4f7e94bdb6d34d5c0aa7b7b147b4092e/Scorpion_EVO_3_A1.png",
               "kills": 0,
@@ -5287,7 +5287,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "k1a": {
               "name": "K1A",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5mUa2p8WXbiyD71qUI8sGk/ed753b6f0ae30ab5737486dfcf32ee9f/K1A.png",
               "kills": 0,
@@ -5298,7 +5298,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "mx4_storm": {
               "name": "Mx4 Storm",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4qRh1frGkQZxNyeKA4D6n1/20f89cd1d9953f06207b7340ea77fb17/Mx4_Storm.png",
               "kills": 0,
@@ -5309,7 +5309,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "aug_a3": {
               "name": "AUG A3",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3W9XJdMOgpHSw55HfwRSAv/cf8f220678d503e6c3e535c00b2e636a/AUG_A3.png",
               "kills": 0,
@@ -5320,7 +5320,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "p10_roni": {
               "name": "P10 RONI",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7K86OBjL3zmYWt0ZvUcCLj/16a947334e39f27da177d787773593e4/r6-operator-weapon-smg-p10roni.png",
               "kills": 0,
@@ -5331,7 +5331,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "lmg": {
           "general": {
@@ -5344,8 +5344,8 @@
             "bulletsConnected": 3530,
             "timesChosen": 51
           },
-          "list": [
-            {
+          "list": {
+            "6p41": {
               "name": "6P41",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1wxS2HOCvoPAfnJEDFWjfw/7feddb98582ec37b500243d3f3e19eca/6P41.png",
               "kills": 100,
@@ -5356,7 +5356,7 @@
               "bulletsConnected": 402,
               "timesChosen": 10
             },
-            {
+            "g8a1": {
               "name": "G8A1",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4TIb7oeJesaROOOfTlCBaZ/ffd6a802f9a779a0d39b2122c49b3254/G8A1.png",
               "kills": 285,
@@ -5367,7 +5367,7 @@
               "bulletsConnected": 1094,
               "timesChosen": 8
             },
-            {
+            "m249": {
               "name": "M249",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249.png",
               "kills": 58,
@@ -5378,7 +5378,7 @@
               "bulletsConnected": 248,
               "timesChosen": 6
             },
-            {
+            "t-95_lsw": {
               "name": "T-95 LSW",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/23HCxaNTRUHBlFAvCTMZQm/fe319cc164fac034a29e9b114ae7d5cb/T-95_LSW.png",
               "kills": 122,
@@ -5389,7 +5389,7 @@
               "bulletsConnected": 427,
               "timesChosen": 8
             },
-            {
+            "lmg-e": {
               "name": "LMG-E",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7JVJIew6t3iKwgByvrFXyi/7ba44dfda28b525506633e453104a604/LMG-E.png",
               "kills": 21,
@@ -5400,7 +5400,7 @@
               "bulletsConnected": 85,
               "timesChosen": 1
             },
-            {
+            "alda_5.56": {
               "name": "ALDA 5.56",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/39yB6TFl9ph6Rb4bDV4lqK/7f9b3abf8dff19bacc026a7212849ca4/ALDA_5.56.png",
               "kills": 0,
@@ -5411,7 +5411,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "m249_saw": {
               "name": "M249 SAW",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249.png",
               "kills": 0,
@@ -5422,7 +5422,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "marksman": {
           "general": {
@@ -5435,8 +5435,8 @@
             "bulletsConnected": 725,
             "timesChosen": 24
           },
-          "list": [
-            {
+          "list": {
+            "417": {
               "name": "417",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5djkS4YtAtOF0vBmg0T60x/ea2b1ff7e5367e66c99bc7ad7e95bfe3/417.png",
               "kills": 56,
@@ -5447,7 +5447,7 @@
               "bulletsConnected": 130,
               "timesChosen": 2
             },
-            {
+            "ots-03": {
               "name": "OTs-03",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4fXznwDtLt61VCF8QIF4N3/34e2e6d6c33d4c504c945bdd13c322f6/OTs-03.png",
               "kills": 117,
@@ -5458,7 +5458,7 @@
               "bulletsConnected": 252,
               "timesChosen": 13
             },
-            {
+            "camrs": {
               "name": "CAMRS",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4dBzqVVmnpv1DZi91LAnEN/e374b4ea289fc992280b943cdbb94d60/CAMRS.png",
               "kills": 39,
@@ -5469,7 +5469,7 @@
               "bulletsConnected": 123,
               "timesChosen": 4
             },
-            {
+            "sr-25": {
               "name": "SR-25",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3H3sICdj6BK8LhtQPRd2aJ/26826ebba73e0e5fd503256d069f3256/SR-25.png",
               "kills": 8,
@@ -5480,7 +5480,7 @@
               "bulletsConnected": 28,
               "timesChosen": 1
             },
-            {
+            "mk_14_ebr": {
               "name": "Mk 14 EBR",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6KIMqp5dA95z1RI3PrG9jv/eb939638169811a3fa858a44e6e5d97e/Mk_14_EBR.png",
               "kills": 64,
@@ -5491,7 +5491,7 @@
               "bulletsConnected": 137,
               "timesChosen": 4
             },
-            {
+            "csrx_300": {
               "name": "CSRX 300",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7tUB9ZNXJhdN6ejAkCEeFQ/99691bcc19f641cf872925905d08a539/CSRX_300.png",
               "kills": 4,
@@ -5502,7 +5502,7 @@
               "bulletsConnected": 4,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "pistol": {
           "general": {
@@ -5515,8 +5515,8 @@
             "bulletsConnected": 3305,
             "timesChosen": 1070
           },
-          "list": [
-            {
+          "list": {
+            "p226_mk_25": {
               "name": "P226 MK 25",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/RTQvPQcywlRwUS1FjIKCX/6fc72fee2191c2e723276bc10ae4114e/P226_Mk_25.png",
               "kills": 218,
@@ -5527,7 +5527,7 @@
               "bulletsConnected": 421,
               "timesChosen": 73
             },
-            {
+            "m45_meusoc": {
               "name": "M45 MEUSOC",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3u5cecgWYl3WuJK50mKEGd/a4a0eb15c710edfc0d29e98c2ee7ea33/M45_MEUSOC.png",
               "kills": 165,
@@ -5538,7 +5538,7 @@
               "bulletsConnected": 378,
               "timesChosen": 246
             },
-            {
+            "5.7_usg": {
               "name": "5.7 USG",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/tkYcSAJSe5yGkeUhzZqBO/e81feb86df4a7eb6951052bec26b6ed7/5.7_USG.png",
               "kills": 122,
@@ -5549,7 +5549,7 @@
               "bulletsConnected": 228,
               "timesChosen": 9
             },
-            {
+            "p9": {
               "name": "P9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6Fd1cl17KA0CtgodEiiY6v/d0f145ea72f2aacbd04260ba7d8f1c74/P9.png",
               "kills": 37,
@@ -5560,7 +5560,7 @@
               "bulletsConnected": 134,
               "timesChosen": 61
             },
-            {
+            "lfp586": {
               "name": "LFP586",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1zc7UtdBfCZakwbiYqBvSz/1fd3f1584de38ca7c9315d498f094276/LFP586.png",
               "kills": 334,
@@ -5571,7 +5571,7 @@
               "bulletsConnected": 516,
               "timesChosen": 277
             },
-            {
+            "gsh-18": {
               "name": "GSH-18",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5s5Q33j3MNcXf9lwfxfd7m/4eb3a6af1d431481b6ddcec44fbc7602/GSh-18.png",
               "kills": 24,
@@ -5582,7 +5582,7 @@
               "bulletsConnected": 76,
               "timesChosen": 26
             },
-            {
+            "pmm": {
               "name": "PMM",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3y4LIwwm8YNQHAv8oOkWCK/a2375901cee34e68fa39c976d85de8aa/PMM.png",
               "kills": 28,
@@ -5593,7 +5593,7 @@
               "bulletsConnected": 97,
               "timesChosen": 64
             },
-            {
+            "p12": {
               "name": "P12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2mpM7rah7rwEW0bViIirUC/ed9caa4db58421519fa4db390b1aa164/P12.png",
               "kills": 136,
@@ -5604,7 +5604,7 @@
               "bulletsConnected": 424,
               "timesChosen": 106
             },
-            {
+            "mk1_9mm": {
               "name": "MK1 9mm",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3tWoNeF3jQYs3w4EOydQYs/434409c96693df1fd3e969d778e70795/Mk1_9mm_BI.png",
               "kills": 61,
@@ -5615,7 +5615,7 @@
               "bulletsConnected": 143,
               "timesChosen": 24
             },
-            {
+            "d-50": {
               "name": "D-50",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6mMQRDsrComRFa7bC6cNkG/8cd17e545e3d28dcc11a040d000cfa16/D-50.png",
               "kills": 22,
@@ -5626,7 +5626,7 @@
               "bulletsConnected": 46,
               "timesChosen": 33
             },
-            {
+            "prb92": {
               "name": "PRB92",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/dl28J1HsE7mzhj66pmd5D/b8d8fc48d2dde13154047de94abbd8ca/PRB92.png",
               "kills": 6,
@@ -5637,7 +5637,7 @@
               "bulletsConnected": 30,
               "timesChosen": 10
             },
-            {
+            "p229": {
               "name": "P229",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/76ja0RxqzHW9PpvWgpG7Sk/cb753b50b20fe67deaef54d8b2a46b54/P229.png",
               "kills": 38,
@@ -5648,7 +5648,7 @@
               "bulletsConnected": 70,
               "timesChosen": 3
             },
-            {
+            "usp40": {
               "name": "USP40",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7FxemzWRtlpAhK9MyKp1Gp/817cc25b6b7c3575dc1ba53a6a8170a9/USP40.png",
               "kills": 0,
@@ -5659,7 +5659,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "q-929": {
               "name": "Q-929",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2fRVszR5yGDHbV0AL8muso/0838dac90b66aa810daa49d36382fb64/Q-929.png",
               "kills": 6,
@@ -5670,7 +5670,7 @@
               "bulletsConnected": 16,
               "timesChosen": 9
             },
-            {
+            "rg15": {
               "name": "RG15",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2LNSsp7B7wUnnPUweir7Jm/9f66d53be7a63a17a55253a0bea6eec1/RG15.png",
               "kills": 91,
@@ -5681,7 +5681,7 @@
               "bulletsConnected": 187,
               "timesChosen": 6
             },
-            {
+            "bailiff_410": {
               "name": "Bailiff 410",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/N8FLbo4fsNyBe8msKgRhT/8f403dc0b58087bcafab786dd95ba33f/Bailiff_410.png",
               "kills": 0,
@@ -5692,7 +5692,7 @@
               "bulletsConnected": 1,
               "timesChosen": 0
             },
-            {
+            "keratos_.357": {
               "name": "Keratos .357",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4niSMDCeiryoMBXJZq60Vv/48339331d05e289868cf4050c49b1b2b/D-40.png",
               "kills": 0,
@@ -5703,7 +5703,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "1911_tacops": {
               "name": "1911 TACOPS",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/189UukZ6fVnvQR6LJtLYry/6eec29603d5b7b0ca8cab6ac0ef083ac/1911_TACOPS.png",
               "kills": 41,
@@ -5714,7 +5714,7 @@
               "bulletsConnected": 69,
               "timesChosen": 18
             },
-            {
+            "p-10c": {
               "name": "P-10C",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2l4qwB50zSFhFZVYRLNwqg/20df8114f69f96f2adc54779ccc5bbaa/P-10C.png",
               "kills": 0,
@@ -5725,7 +5725,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            ".44_mag_semi-auto": {
               "name": ".44 Mag Semi-Auto",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6W3Jz0YcQzbZ6BOPr7VVel/4c67f342964132a652f7d5821e887050/.44_Mag_Semi-Auto.png",
               "kills": 17,
@@ -5736,7 +5736,7 @@
               "bulletsConnected": 32,
               "timesChosen": 11
             },
-            {
+            "sdp_9mm": {
               "name": "SDP 9mm",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Tgsdyz3XEqmgUYi9aZZgb/6755f4da7af7a7179ffab92acf8d477e/SDP_9mm.png",
               "kills": 0,
@@ -5747,7 +5747,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "shotgun": {
           "general": {
@@ -5760,8 +5760,8 @@
             "bulletsConnected": 1598,
             "timesChosen": 153
           },
-          "list": [
-            {
+          "list": {
+            "m590a1": {
               "name": "M590A1",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2zRHmgqENNiZqXQxC9Rsbj/e6542407c642f9b7c5a4546afb6db30a/M590A1.png",
               "kills": 140,
@@ -5772,7 +5772,7 @@
               "bulletsConnected": 276,
               "timesChosen": 31
             },
-            {
+            "m1014": {
               "name": "M1014",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2pUiVbwNnQnDTesmWXktqW/f27c1fab9a354bb89cbe309a688f5e02/M1014.png",
               "kills": 15,
@@ -5783,7 +5783,7 @@
               "bulletsConnected": 49,
               "timesChosen": 10
             },
-            {
+            "sg-cqb": {
               "name": "SG-CQB",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5JoL3b36Fsztt9Q2XYmrbJ/dacec96948d3f8fe92914a69b9aac593/SG-CQB.png",
               "kills": 146,
@@ -5794,7 +5794,7 @@
               "bulletsConnected": 347,
               "timesChosen": 23
             },
-            {
+            "sasg-12": {
               "name": "SASG-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2Q6mL4CbifmIgifV2yV3Hi/2bb2b323f055b03a2c1ba516c262c24e/SASG-12.png",
               "kills": 102,
@@ -5805,7 +5805,7 @@
               "bulletsConnected": 396,
               "timesChosen": 30
             },
-            {
+            "m870": {
               "name": "M870",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2rkU6g4Rlg0e0U4rczWGTV/a51589a54c43f476d8eb984c0ea881e9/M870.png",
               "kills": 92,
@@ -5816,7 +5816,7 @@
               "bulletsConnected": 173,
               "timesChosen": 41
             },
-            {
+            "super_90": {
               "name": "Super 90",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1TLWSu0xHJlAsfEfafeC9X/f9647e70a18962bf1627095c8b46832e/Super_90.png",
               "kills": 8,
@@ -5827,7 +5827,7 @@
               "bulletsConnected": 18,
               "timesChosen": 1
             },
-            {
+            "spas-12": {
               "name": "SPAS-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Hp6Fbss6uI59OT4nZNB6e/a4d09954803cb2580353cfa03e8c778b/SPAS-12.png",
               "kills": 0,
@@ -5838,7 +5838,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "spas-15": {
               "name": "SPAS-15",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/CyofBgipHq4RTafvPFWd4/bc3d0ecc871b70e57735855f852efacf/SPAS-15.png",
               "kills": 0,
@@ -5849,7 +5849,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "supernova": {
               "name": "Supernova",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2tpjCRFLcc3hogjJGbKDsi/5ad0ab63b7245022aca5c1c1fb42d473/SuperNova.png",
               "kills": 3,
@@ -5860,7 +5860,7 @@
               "bulletsConnected": 6,
               "timesChosen": 1
             },
-            {
+            "ita12l": {
               "name": "ITA12L",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4Y6ziRzm9RiPii83fm8BV1/1f472744d2c2dec8d9206f4d8733d92c/ITA12L.png",
               "kills": 0,
@@ -5871,7 +5871,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "ita12s": {
               "name": "ITA12S",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5G4DroaSdqHzJWCe7qqbHZ/5dd2e03f853182c78a1e7fcbc642f0cf/ITA12S.png",
               "kills": 4,
@@ -5882,7 +5882,7 @@
               "bulletsConnected": 12,
               "timesChosen": 9
             },
-            {
+            "six12": {
               "name": "SIX12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2v6MwsHwjOZ5Muid53lyfN/e5f1c4997db93abfe3ac356fce23376c/SIX12.png",
               "kills": 1,
@@ -5893,7 +5893,7 @@
               "bulletsConnected": 2,
               "timesChosen": 1
             },
-            {
+            "six12_sd": {
               "name": "SIX12 SD",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1GTua079Xbtkpjhx96sRsW/079ed1a71a0d12b5e48e1b0d40b87110/SIX12_SD.png",
               "kills": 0,
@@ -5904,7 +5904,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "fo-12": {
               "name": "FO-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4TDWnhbgvLkc6HBWDJp2ST/f50cbd83d6d295ab59f17f7e21d713bc/FO-12.png",
               "kills": 0,
@@ -5915,7 +5915,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "bosg.12.2": {
               "name": "BOSG.12.2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2ZjVndetsX8WEn5ZfyUQa0/e3a781be7eab22876d25f748e8fd0f5a/BOSG.12.2.png",
               "kills": 87,
@@ -5926,7 +5926,7 @@
               "bulletsConnected": 112,
               "timesChosen": 7
             },
-            {
+            "acs12": {
               "name": "ACS12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/13z63kT1NLzn1U99o7WC4T/8655d3200f24b87246c36f2622603457/ACS12_PB.png",
               "kills": 0,
@@ -5937,7 +5937,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "tcsg12": {
               "name": "TCSG12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2NDbY7BTBJ9R09LUilTlRf/3728337cd3ba14ed6ab9de0c22e879af/TCSG12.png",
               "kills": 0,
@@ -5948,7 +5948,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             },
-            {
+            "super_shorty": {
               "name": "Super Shorty",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Dq8LDmIxAveRqXM17orUW/cbd96b47cd8ca74a7827b16ef73fe7cf/r6-operator-weapon-sa-supershorty.png",
               "kills": 1,
@@ -5959,7 +5959,7 @@
               "bulletsConnected": 10,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "mp": {
           "general": {
@@ -5972,8 +5972,8 @@
             "bulletsConnected": 3169,
             "timesChosen": 261
           },
-          "list": [
-            {
+          "list": {
+            "smg-11": {
               "name": "SMG-11",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3WExw7Kepz9uAiWAbWW457/875fc631a3cf9fcc2849d9db2989cbcd/SMG-11.png",
               "kills": 1051,
@@ -5984,7 +5984,7 @@
               "bulletsConnected": 3057,
               "timesChosen": 250
             },
-            {
+            "bearing_9": {
               "name": "Bearing 9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4mdftEOh5Vu9KhhpgKLKrT/abedcc75868774018295ec2a08a7b3de/Bearing_9.png",
               "kills": 122,
@@ -5995,7 +5995,7 @@
               "bulletsConnected": 438,
               "timesChosen": 37
             },
-            {
+            "c75_auto": {
               "name": "C75 Auto",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3wUuefwPjU705mZkTdJ9UH/8ccb11884cfa34c176ac5500af139177/C75_Auto.png",
               "kills": 24,
@@ -6006,7 +6006,7 @@
               "bulletsConnected": 54,
               "timesChosen": 2
             },
-            {
+            "smg-12": {
               "name": "SMG-12",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/EwJgB7KdgOb6dDm7ro33u/b73f0890f992c1a365210f08efcc6db5/SMG-12.png",
               "kills": 15,
@@ -6017,7 +6017,7 @@
               "bulletsConnected": 58,
               "timesChosen": 9
             },
-            {
+            "spsmg9": {
               "name": "SPSMG9",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5EtwSgylXckBNg4n6gDR9J/bc6fc6c5c12ae11da59aee95828ebd76/SPSMG9.png",
               "kills": 0,
@@ -6028,7 +6028,7 @@
               "bulletsConnected": 0,
               "timesChosen": 0
             }
-          ]
+          }
         },
         "shield": {
           "general": {
@@ -6041,7 +6041,7 @@
             "bulletsConnected": 0,
             "timesChosen": 0
           },
-          "list": []
+          "list": {}
         },
         "launcher": {
           "general": {
@@ -6054,7 +6054,7 @@
             "bulletsConnected": 0,
             "timesChosen": 285
           },
-          "list": []
+          "list": {}
         },
         "utility": {
           "general": {
@@ -6067,7 +6067,7 @@
             "bulletsConnected": 0,
             "timesChosen": 0
           },
-          "list": []
+          "list": {}
         }
       },
       "queues": {
