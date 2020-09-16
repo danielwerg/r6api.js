@@ -1,7 +1,7 @@
 require('dotenv').config();
 const R6API = require('../lib').default;
 
-// Or ES6 way
+// // Or ES6 way
 // import * as dotenv from 'dotenv';
 // dotenv.config();
 // import R6API from '../lib';
