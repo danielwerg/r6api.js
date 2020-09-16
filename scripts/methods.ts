@@ -81,43 +81,43 @@ const undefToNull = (obj: any) => {
   const getFile = async (name: string) => await fs.readFile(getFilePath(name), 'utf8');
 
   const methods = [
-    { name: 'findByUsername', response: findByUsername },
-    { name: 'findById', response: findById },
-    { name: 'getProgression', response: getProgression },
-    { name: 'getPlaytime', response: getPlaytime },
-    { name: 'getRanks', response: getRanks },
-    { name: 'getStats', response: getStats },
-    { name: 'getStatus', response: getStatus },
-    { name: 'getNews', response: getNews },
-    { name: 'getNewsById', response: getNewsById },
-    { name: 'custom', response: custom }
+    { name: 'FINDBYUSERNAME', response: findByUsername },
+    { name: 'FINDBYID', response: findById },
+    { name: 'GETPROGRESSION', response: getProgression },
+    { name: 'GETPLAYTIME', response: getPlaytime },
+    { name: 'GETRANKS', response: getRanks },
+    { name: 'GETSTATS', response: getStats },
+    { name: 'GETSTATUS', response: getStatus },
+    { name: 'GETNEWS', response: getNews },
+    { name: 'GETNEWSBYID', response: getNewsById },
+    { name: 'CUSTOM', response: custom }
   ];
 
-  await Promise.all(methods.map(async method => {
-
-    const oldMethodResponse = await getFile(method.name);
+  for (const i in methods) {
+    const oldMethodResponse = await getFile(methods[i].name);
 
     if (
-      structureChange(JSON.parse(oldMethodResponse), method.response)
+      structureChange(JSON.parse(oldMethodResponse), methods[i].response)
       || process.argv[2] === '--force'
     ) {
 
       console.log(`${process.argv[2] === '--force'
         ? 'Running with force' : 'Structual change detected'
-      }: ${method.name}`);
+      }: ${methods[i].name}`);
 
       await fs.writeFile(
-        getFilePath(method.name),
-        JSON.stringify(undefToNull(method.response), null, 2).replace(/\n/gm, '\r\n')
+        getFilePath(methods[i].name),
+        JSON.stringify(undefToNull(methods[i].response), null, 2).replace(/\n/gm, '\r\n')
       );
-      if (method.name !== 'getStats')
+
+      if (methods[i].name !== 'getStats')
         await insertContent(
-          `${method.name}-output`, stringifyObject(method.response, { indent: '  ' })
+          `${methods[i].name}_OUTPUT`, stringifyObject(methods[i].response, { indent: '  ' })
         ).catch(err => console.log(err));
 
-    } else console.log(`No structual change detected: ${method.name}`);
+    } else console.log(`No structual change detected: ${methods[i].name}`);
 
-  }));
+  }
 
   process.exit();
 

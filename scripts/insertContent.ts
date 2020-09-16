@@ -2,7 +2,7 @@ import { promises as fs} from 'fs';
 import { join } from 'path';
 
 interface IOptions {
-  style?: string;
+  style?: 'none' | 'codeBlock' | 'hiddenCodeBlock';
   lang?: string;
 }
 
@@ -15,8 +15,8 @@ export default async (name: string, content: string, options: IOptions = {}) => 
     .catch(err => console.log(err));
   if (!readmeFile) return console.log('ReadMe file not found');
 
-  const startComment = `<!-- ${name}-start -->`;
-  const endComment = `<!-- ${name}-end -->`;
+  const startComment = `<!-- START:${name} -->`;
+  const endComment = `<!-- END:${name} -->`;
 
   const startIndex = readmeFile.indexOf(startComment);
   const endIndex = readmeFile.indexOf(endComment);
@@ -36,9 +36,7 @@ export default async (name: string, content: string, options: IOptions = {}) => 
       '\n</details>\n'
   };
 
-  const contentFormated = firstPart + STYLES[style] + secondPart;
-
-  await fs.writeFile(readmeFilePath, contentFormated)
+  await fs.writeFile(readmeFilePath, firstPart + STYLES[style] + secondPart)
     .catch(err => console.log(err));
 
 };

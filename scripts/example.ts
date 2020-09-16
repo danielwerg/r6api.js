@@ -16,11 +16,11 @@ const runkitPath = join(__dirname, '../examples/runkit.js');
     .then(exampleText => exampleText.replace(/\.\.\/lib/g, 'r6api.js'));
 
   await fs.writeFile(runkitPath, example);
-  await insertContent('example', example, { style: 'codeBlock' });
+  await insertContent('EXAMPLE', example, { style: 'codeBlock' });
 
   const exampleOutput = await exampleFile();
 
-  await insertContent('example-output', exampleOutput, { style: 'codeBlock', lang: '' });
+  await insertContent('EXAMPLE_OUTPUT', exampleOutput, { style: 'codeBlock', lang: '' });
 
   process.exit();
 
