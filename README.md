@@ -48,9 +48,9 @@
 ## Links
 
 * [Changelog](https://github.com/danielwerg/r6api.js/releases)
-* [Github](https://github.com/danielwerg/r6api.js)  
-* [YARN](https://yarnpkg.com/package/r6api.js)  
-* [NPM](https://www.npmjs.com/package/r6api.js)  
+* [GitHub](https://github.com/danielwerg/r6api.js)
+* [YARN](https://yarnpkg.com/package/r6api.js)
+* [NPM](https://www.npmjs.com/package/r6api.js)
 
 ## Installation
 
@@ -67,7 +67,7 @@ You don't have to use you real account.
 
 How to create account?
 
-* Go to [temp-mail.org/en](https://temp-mail.org/en)
+* Go to [temp-mail.org](https://temp-mail.org)
 * Copy your temporal email
 * Go to [account.ubisoft.com/en-us/login](https://account.ubisoft.com/en-us/login)
 * Provide all details there and remember your email and password
@@ -79,7 +79,7 @@ How to create account?
 require('dotenv').config();
 const R6API = require('r6api.js').default;
 
-// Or ES6 way
+// // Or ES6 way
 // import * as dotenv from 'dotenv';
 // dotenv.config();
 // import R6API from 'r6api.js';
