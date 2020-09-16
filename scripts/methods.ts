@@ -81,16 +81,16 @@ const undefToNull = (obj: any) => {
   const getFile = async (name: string) => await fs.readFile(getFilePath(name), 'utf8');
 
   const methods = [
-    { name: 'FINDBYUSERNAME', response: findByUsername },
-    { name: 'FINDBYID', response: findById },
-    { name: 'GETPROGRESSION', response: getProgression },
-    { name: 'GETPLAYTIME', response: getPlaytime },
-    { name: 'GETRANKS', response: getRanks },
-    { name: 'GETSTATS', response: getStats },
-    { name: 'GETSTATUS', response: getStatus },
-    { name: 'GETNEWS', response: getNews },
-    { name: 'GETNEWSBYID', response: getNewsById },
-    { name: 'CUSTOM', response: custom }
+    { name: 'findByUsername', response: findByUsername },
+    { name: 'findById', response: findById },
+    { name: 'getProgression', response: getProgression },
+    { name: 'getPlaytime', response: getPlaytime },
+    { name: 'getRanks', response: getRanks },
+    { name: 'getStats', response: getStats },
+    { name: 'getStatus', response: getStatus },
+    { name: 'getNews', response: getNews },
+    { name: 'getNewsById', response: getNewsById },
+    { name: 'custom', response: custom }
   ];
 
   for (const i in methods) {
@@ -112,7 +112,7 @@ const undefToNull = (obj: any) => {
 
       if (methods[i].name !== 'getStats')
         await insertContent(
-          `${methods[i].name}_OUTPUT`, stringifyObject(methods[i].response, { indent: '  ' })
+          `${methods[i].name.toUpperCase()}_OUTPUT`, stringifyObject(methods[i].response, { indent: '  ' })
         ).catch(err => console.log(err));
 
     } else console.log(`No structual change detected: ${methods[i].name}`);
