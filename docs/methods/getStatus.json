@@ -6,8 +6,8 @@
     "mdm": "4073",
     "category": "Instance",
     "platform": "PC",
-    "status": "Online",
-    "maintenance": null,
+    "status": "Degraded",
+    "maintenance": false,
     "impactedFeatures": []
   },
   {
@@ -17,8 +17,8 @@
     "mdm": "14922",
     "category": "Instance",
     "platform": "PS4",
-    "status": "Online",
-    "maintenance": null,
+    "status": "Degraded",
+    "maintenance": false,
     "impactedFeatures": []
   },
   {
@@ -28,8 +28,8 @@
     "mdm": "4075",
     "category": "Instance",
     "platform": "XBOXONE",
-    "status": "Online",
-    "maintenance": null,
+    "status": "Degraded",
+    "maintenance": false,
     "impactedFeatures": []
   }
 ]

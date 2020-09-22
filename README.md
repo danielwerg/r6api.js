@@ -107,7 +107,7 @@ exports.default = async () => {
 
 <!-- START:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 4998 matches.
+Daniel.Nt has played 5001 matches.
 ```
 <!-- END:EXAMPLE_OUTPUT -->
 
@@ -487,8 +487,8 @@ await r6api.getStatus();
     mdm: '4073',
     category: 'Instance',
     platform: 'PC',
-    status: 'Online',
-    maintenance: null,
+    status: 'Degraded',
+    maintenance: false,
     impactedFeatures: []
   },
   {
@@ -498,8 +498,8 @@ await r6api.getStatus();
     mdm: '14922',
     category: 'Instance',
     platform: 'PS4',
-    status: 'Online',
-    maintenance: null,
+    status: 'Degraded',
+    maintenance: false,
     impactedFeatures: []
   },
   {
@@ -509,8 +509,8 @@ await r6api.getStatus();
     mdm: '4075',
     category: 'Instance',
     platform: 'XBOXONE',
-    status: 'Online',
-    maintenance: null,
+    status: 'Degraded',
+    maintenance: false,
     impactedFeatures: []
   }
 ]
