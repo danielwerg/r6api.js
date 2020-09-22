@@ -63,7 +63,7 @@ module.exports = {
     'dot-notation': 'error',
     'eqeqeq': ['error', 'smart'],
     'import/order': [
-      'error',
+      'warn',
       {
         'newlines-between': 'always',
         groups: [
