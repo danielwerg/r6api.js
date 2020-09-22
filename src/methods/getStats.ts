@@ -281,22 +281,6 @@ const weaponsGetter = (obj: any, type: MPType) =>
       bulletsConnected: statGetter(obj, 'weapontype', `bullethit:${weaponTypeIndex}`, type),
       timesChosen: statGetter(obj, 'weapontype', `chosen:${weaponTypeIndex}`, type)
     };
-    // (acc as any)[weaponTypeVal.id].list = Object.values(WEAPONS)
-    //   .filter(weapon => weaponTypeVal.id === weapon.category)
-    //   .map(weapon => ({
-    //     name: weapon.name,
-    //     icon: getCDNURL(weapon.icon),
-    //     kills: statGetter(obj, 'weapon', `kills:${weapon.id}`, type),
-    //     deaths: statGetter(obj, 'weapon', `death:${weapon.id}`, type),
-    //     kd: getKD({
-    //       kills: statGetter(obj, 'weapon', `kills:${weapon.id}`, type),
-    //       deaths: statGetter(obj, 'weapon', `death:${weapon.id}`, type)
-    //     }),
-    //     headshots: statGetter(obj, 'weapon', `headshot:${weapon.id}`, type),
-    //     bulletsFired: statGetter(obj, 'weapon', `bulletfired:${weapon.id}`, type),
-    //     bulletsConnected: statGetter(obj, 'weapon', `bullethit:${weapon.id}`, type),
-    //     timesChosen: statGetter(obj, 'weapon', `chosen:${weapon.id}`, type)
-    //   }));
     (acc as any)[weaponTypeVal.id].list = Object.entries(WEAPONS)
       .filter(([, weapon]) => weaponTypeVal.id === weapon.category)
       .reduce((acc2, [id, weapon]) => {
