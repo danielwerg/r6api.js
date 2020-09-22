@@ -17,8 +17,12 @@ exports.default = async () => {
   const username = 'Daniel.Nt';
   const platform = 'uplay';
 
-  const { 0: { id } } = await r6api.findByUsername(platform, username);
-  const { 0: { pvp: { general } } } = await r6api.getStats(platform, id);
+  const { 0: player } = await r6api.findByUsername(platform, username);
+  if (!player) return 'Player not found';
+
+  const { 0: stats } = await r6api.getStats(platform, player.id);
+  if (!stats) return 'Stats not found';
+  const { pvp: { general } } = stats;
 
   return `${username} has played ${general.matches} matches.`;
 
