@@ -460,7 +460,7 @@ await r6api.getStats('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 </details>
 
-> **Note:** Ubisoft stopped recording `bulletsFired` long time ago, don't rely on it
+> **Note:** Ubisoft stopped recording `bulletsFired` for `pvp` long time ago, don't rely on it
 
 > **Note:** `distanceTravelled` value might be overflowed due to Ubisoft storing it in 32-bit int
 
