@@ -29,7 +29,7 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'indent': 'off',
     '@typescript-eslint/indent': [
       'warn', 2, { 'VariableDeclarator': 'first', 'SwitchCase': 1 }
