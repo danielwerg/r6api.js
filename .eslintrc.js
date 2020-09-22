@@ -100,7 +100,7 @@ module.exports = {
     'no-unused-expressions': 'error',
     'object-shorthand': 'error',
     'one-var': ['off', 'never'],
-    'spaced-comment': ['error', 'always'],
+    'spaced-comment': ['warn', 'always'],
     'prefer-arrow/prefer-arrow-functions': [
       'warn',
       {
