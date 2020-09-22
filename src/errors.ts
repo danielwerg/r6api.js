@@ -30,7 +30,7 @@ export class MissingHeaderError extends BaseError {
 
 export class MissingCredentialsError extends BaseError {
   constructor() {
-    super('Missing Credentials');
+    super('Missing credentials');
   }
 }
 
