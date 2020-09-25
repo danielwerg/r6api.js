@@ -22,9 +22,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `doc/getStats-response.json` -> `docs/methods/getStats.json` along with all other methods
 * `ts-utils.ts` was moved from root to `src/utils.ts`
 * `uniqueAbility` in `getStats` will now return object with `name`, `icon` and `stats` array instead of just stats array
+* `WEAPONS` in `constants.ts` is now object of objects with `id` and `name`
+* Weapons list in `getStats` response is now object of objects
 
 ### Removed
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v1.4.1...typescript
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v1.5.0...typescript
