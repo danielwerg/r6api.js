@@ -3,8 +3,8 @@ import fetch from '../fetch';
 import {
   Platform, UUID, MPType, WeaponTypeId, OperatorName, StatsCategoryName
 } from '../typings';
-import { STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS } from '../constants';
-import { URLS, getImgurURL, getCDNURL, getKD, getWinRate } from '../utils';
+import { STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS, GITHUB_ASSETS_URL } from '../constants';
+import { URLS, getCDNURL, getKD, getWinRate } from '../utils';
 
 interface IGeneral {
   bulletsFired: number;
@@ -188,6 +188,9 @@ export interface IOptions {
   categories?: StatsCategoryName[];
 }
 
+const getOperatorIconURL = (name: string) =>
+  `${GITHUB_ASSETS_URL}/operators/${name.includes('recruit') ? 'recruit' : name}.png`;
+
 const statGetter = (obj: any, first: string, second: string, type?: MPType): number =>
   obj[`${first}${type || ''}_${second}:infinite`] || 0;
 
@@ -231,7 +234,7 @@ const operatorsGetter = (obj: any, type: MPType) =>
       name: cur.name,
       role: cur.role,
       unit: cur.unit,
-      icon: getImgurURL(cur.icon),
+      icon: getOperatorIconURL(codeName),
       kills: statGetter(obj, 'operator', `kills:${cur.id}`, type),
       deaths: statGetter(obj, 'operator', `death:${cur.id}`, type),
       kd: getKD({

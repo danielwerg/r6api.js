@@ -13,7 +13,6 @@ export type OldSeasonId = keyof typeof constants.OLD_SEASONS;
 
 export type RankId = keyof typeof constants.RANKS;
 export type OldRankId = keyof typeof constants.OLD_RANKS;
-export type OlderRankId = keyof typeof constants.OLDER_RANKS;
 
 export type OperatorName = keyof typeof constants.OPERATORS;
 

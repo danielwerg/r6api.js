@@ -1,15 +1,15 @@
 import {
   UUID, Platform, Region,
-  SeasonId, OldSeasonId, RankId, OldRankId, OlderRankId,
+  SeasonId, OldSeasonId, RankId, OldRankId,
   OperatorName, WeaponTypeIndex, WeaponTypeId, WeaponName,
   StatsCategoryName
 } from './typings';
 import {
   BASE_API_URL, ALT_API_URL, STATUS_API_URL,
   API_VERSIONS, SPACE_IDS, SANDBOXES,
-  AVATAR_BASE_URL, CDN_BASE_URL, IMGUR_BASE_URL,
+  AVATAR_BASE_URL, CDN_BASE_URL,
   PLATFORMS, REGIONS,
-  SEASONS, OLD_SEASONS, RANKS, OLD_RANKS, OLDER_RANKS,
+  SEASONS, OLD_SEASONS, RANKS, OLD_RANKS,
   OPERATORS, WEAPONTYPES, WEAPONS,
   STATS_CATEGORIES
 } from './constants';
@@ -19,8 +19,6 @@ export const getAvatarURL = (id: UUID, size = 256) =>
 
 export const getCDNURL = (id: UUID, format = 'png') =>
   `${CDN_BASE_URL}/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/${id}.${format}`;
-
-export const getImgurURL = (id: UUID, format = 'png') => `${IMGUR_BASE_URL}/${id}.${format}`;
 
 export const getAvatars = (id: UUID) => ({
   small: getAvatarURL(id, 146), medium: getAvatarURL(id, 256)
@@ -103,9 +101,6 @@ export const isRankId = (value: number): value is RankId =>
 
 export const isOldRankId = (value: number): value is OldRankId =>
   Object.keys(OLD_RANKS).map(rank => parseInt(rank)).includes(value);
-
-export const isOlderRankId = (value: number): value is OlderRankId =>
-  Object.keys(OLDER_RANKS).map(rank => parseInt(rank)).includes(value);
 
 export const isOperatorName = (value: string): value is OperatorName =>
   Object.values(OPERATORS).map(op => op.name).includes(value);

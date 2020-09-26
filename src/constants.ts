@@ -1,6 +1,6 @@
 export const AVATAR_BASE_URL = 'https://ubisoft-avatars.akamaized.net';
 export const CDN_BASE_URL = 'https://staticctf.akamaized.net';
-export const IMGUR_BASE_URL = 'https://i.imgur.com';
+export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/master/assets';
 
 export const BASE_API_URL = 'https://public-ubiservices.ubi.com';
 export const ALT_API_URL = 'https://www.ubisoft.com';
@@ -127,104 +127,29 @@ export const SEASONS = <const>{
 
 // Ember Rise (15) and above
 export const RANKS = <const>{
-  23: { name: 'Champions', icon: 'VVVKH2c' },
-  22: { name: 'Diamond', icon: 'fZdvsbk' },
-
-  21: { name: 'Platinum 1', icon: 'NSZ8Z0e' },
-  20: { name: 'Platinum 2', icon: 'TOzOI69' },
-  19: { name: 'Platinum 3', icon: 'u1hrGSI' },
-
-  18: { name: 'Gold 1', icon: 'UzX9URF' },
-  17: { name: 'Gold 2', icon: 'tmQqwf9' },
-  16: { name: 'Gold 3', icon: '9o6Ajbi' },
-
-  15: { name: 'Silver 1', icon: 'DWjJAtb' },
-  14: { name: 'Silver 2', icon: '0XaaFqF' },
-  13: { name: 'Silver 3', icon: 'SGwOsBj' },
-  12: { name: 'Silver 4', icon: 'n17W4Pi' },
-  11: { name: 'Silver 5', icon: 'EZW68ct' },
-
-  10: { name: 'Bronze 1', icon: 'P3RxTiH' },
-  9: { name: 'Bronze 2', icon: 'jKs6OHZ' },
-  8: { name: 'Bronze 3', icon: '3Y9PMPg' },
-  7: { name: 'Bronze 4', icon: 'D8zXHx3' },
-  6: { name: 'Bronze 5', icon: 'CuAB63d' },
-
-  5: { name: 'Copper 1', icon: 'YTlQvgy' },
-  4: { name: 'Copper 2', icon: 'u54IFWl' },
-  3: { name: 'Copper 3', icon: '9ES9Ou5' },
-  2: { name: 'Copper 4', icon: '2mFnW1H' },
-  1: { name: 'Copper 5', icon: '1SA45c0' },
-
-  0: { name: 'Unranked', icon: 'SvadT33' }
+  23: 'Champions', 22: 'Diamond',
+  21: 'Platinum 1', 20: 'Platinum 2', 19: 'Platinum 3',
+  18: 'Gold 1', 17: 'Gold 2', 16: 'Gold 3',
+  15: 'Silver 1', 14: 'Silver 2', 13: 'Silver 3', 12: 'Silver 4', 11: 'Silver 5',
+  10: 'Bronze 1', 9: 'Bronze 2', 8: 'Bronze 3', 7: 'Bronze 4', 6: 'Bronze 5',
+  5: 'Copper 1', 4: 'Copper 2', 3: 'Copper 3', 2: 'Copper 4', 1: 'Copper 5',
+  0: 'Unranked'
 };
 
-// Phantom Sight (14)
+// Phantom Sight (14) and below
 export const OLD_RANKS = <const>{
-  20: { name: 'Diamond', icon: '3CNKALk' },
-
-  19: { name: 'Platinum 1', icon: 'WRKHFjs' },
-  18: { name: 'Platinum 2', icon: 'fZKZevc' },
-  17: { name: 'Platinum 3', icon: 'sNIowEq' },
-
-  16: { name: 'Gold 1', icon: 'R9NufJY' },
-  15: { name: 'Gold 2', icon: 'AiSJhm7' },
-  14: { name: 'Gold 3', icon: 'yzKEDTe' },
-  13: { name: 'Gold 4', icon: 'DKttSVR' },
-
-  12: { name: 'Silver 1', icon: 'Jk3hqSa' },
-  11: { name: 'Silver 2', icon: 'CV60t9o' },
-  10: { name: 'Silver 3', icon: 'nV8fWU6' },
-  9: { name: 'Silver 4', icon: '9BzjWW6' },
-
-  8: { name: 'Bronze 1', icon: 'fOJLIqM' },
-  7: { name: 'Bronze 2', icon: 'QurSKF1' },
-  6: { name: 'Bronze 3', icon: 'xEdqdhs' },
-  5: { name: 'Bronze 4', icon: 'dBKO53p' },
-
-  4: { name: 'Copper 1', icon: '3ZZiivM' },
-  3: { name: 'Copper 2', icon: 'zfsF59H' },
-  2: { name: 'Copper 3', icon: 'JmD7N0O' },
-  1: { name: 'Copper 4', icon: 'VXVkaCf' },
-
-  0: { name: 'Unranked', icon: 'wlRjTkM' }
-};
-
-// Burnt Horizon (13) and below
-export const OLDER_RANKS = <const>{
-  20: { name: 'Diamond', icon: 'oVLQbIl' },
-
-  19: { name: 'Platinum 1', icon: 'SI1dn1d' },
-  18: { name: 'Platinum 2', icon: 'HxzBS5k' },
-  17: { name: 'Platinum 3', icon: '0TVcqc1' },
-
-  16: { name: 'Gold 1', icon: 'k6HEyJ6' },
-  15: { name: 'Gold 2', icon: 'QQQMNY8' },
-  14: { name: 'Gold 3', icon: 'hBhsiH0' },
-  13: { name: 'Gold 4', icon: 'aUjErsg' },
-
-  12: { name: 'Silver 1', icon: '9QkY4Xg' },
-  11: { name: 'Silver 2', icon: 'm9rosHo' },
-  10: { name: 'Silver 3', icon: 'ZLSQoL6' },
-  9: { name: 'Silver 4', icon: 'K3QcrW3' },
-
-  8: { name: 'Bronze 1', icon: 'Gq3YLwd' },
-  7: { name: 'Bronze 2', icon: 'eR85UX5' },
-  6: { name: 'Bronze 3', icon: 'lM6acMK' },
-  5: { name: 'Bronze 4', icon: 'Sc9hmcW' },
-
-  4: { name: 'Copper 1', icon: 'ko8tzq5' },
-  3: { name: 'Copper 2', icon: 'It1uq8D' },
-  2: { name: 'Copper 3', icon: '76ECJXK' },
-  1: { name: 'Copper 4', icon: 'u2YdIsc' },
-
-  0: { name: 'Unranked', icon: '0peT4j4' }
+  20: 'Diamond',
+  19: 'Platinum 1', 18: 'Platinum 2', 17: 'Platinum 3',
+  16: 'Gold 1', 15: 'Gold 2', 14: 'Gold 3', 13: 'Gold 4',
+  12: 'Silver 1', 11: 'Silver 2', 10: 'Silver 3', 9: 'Silver 4',
+  8: 'Bronze 1', 7: 'Bronze 2', 6: 'Bronze 3', 5: 'Bronze 4',
+  4: 'Copper 1', 3: 'Copper 2', 2: 'Copper 3', 1: 'Copper 4',
+  0: 'Unranked'
 };
 
 export const OPERATORS = {
   'recruit_sas': {
     name: 'Recruit SAS',
-    icon: '3g0rYOq',
     id: '1:1',
     role: 'recruit',
     unit: 'SAS',
@@ -232,7 +157,6 @@ export const OPERATORS = {
   },
   'recruit_fbi': {
     name: 'Recruit FBI SWAT',
-    icon: 'Pd7krMT',
     id: '1:2',
     role: 'recruit',
     unit: 'FBI SWAT',
@@ -240,7 +164,6 @@ export const OPERATORS = {
   },
   'recruit_gign': {
     name: 'Recruit GIGN',
-    icon: 'D05DqQW',
     id: '1:3',
     role: 'recruit',
     unit: 'GIGN',
@@ -248,7 +171,6 @@ export const OPERATORS = {
   },
   'recruit_spetsnaz': {
     name: 'Recruit Spetsnaz',
-    icon: 'MEvmmGf',
     id: '1:4',
     role: 'recruit',
     unit: 'Spetsnaz',
@@ -256,7 +178,6 @@ export const OPERATORS = {
   },
   'recruit_gsg9': {
     name: 'Recruit GSG 9',
-    icon: 'mF8eGXj',
     id: '1:5',
     role: 'recruit',
     unit: 'GSG 9',
@@ -264,7 +185,6 @@ export const OPERATORS = {
   },
   'smoke': {
     name: 'Smoke',
-    icon: 'tkxDFWg',
     id: '2:1',
     role: 'defender',
     unit: 'SAS',
@@ -278,7 +198,6 @@ export const OPERATORS = {
   },
   'mute': {
     name: 'mute',
-    icon: 'xJ6iqr1',
     id: '3:1',
     role: 'defender',
     unit: 'SAS',
@@ -293,7 +212,6 @@ export const OPERATORS = {
   },
   'sledge': {
     name: 'Slege',
-    icon: 'AKn1ULn',
     id: '4:1',
     role: 'attacker',
     unit: 'SAS',
@@ -308,7 +226,6 @@ export const OPERATORS = {
   },
   'thatcher': {
     name: 'Thatcher',
-    icon: 'MYl1Gl2',
     id: '5:1',
     role: 'attacker',
     unit: 'SAS',
@@ -322,7 +239,6 @@ export const OPERATORS = {
   },
   'castle': {
     name: 'Castle',
-    icon: 'Dr5x7e7',
     id: '2:2',
     role: 'defender',
     unit: 'FBI SWAT',
@@ -336,7 +252,6 @@ export const OPERATORS = {
   },
   'pulse': {
     name: 'Pulse',
-    icon: 'y6hSeej',
     id: '4:2',
     role: 'defender',
     unit: 'FBI SWAT',
@@ -351,7 +266,6 @@ export const OPERATORS = {
   },
   'ash': {
     name: 'Ash',
-    icon: 'gXkH9Cl',
     id: '3:2',
     role: 'attacker',
     unit: 'FBI SWAT',
@@ -366,7 +280,6 @@ export const OPERATORS = {
   },
   'thermite': {
     name: 'Thermite',
-    icon: '9uVh301',
     id: '5:2',
     role: 'attacker',
     unit: 'FBI SWAT',
@@ -382,7 +295,6 @@ export const OPERATORS = {
   },
   'doc': {
     name: 'Doc',
-    icon: 'MzJAlf9',
     id: '2:3',
     role: 'defender',
     unit: 'GIGN',
@@ -398,7 +310,6 @@ export const OPERATORS = {
   },
   'rook': {
     name: 'Rook',
-    icon: 'AZ2o09d',
     id: '3:3',
     role: 'defender',
     unit: 'GIGN',
@@ -414,7 +325,6 @@ export const OPERATORS = {
   },
   'twitch': {
     name: 'Twitch',
-    icon: 'OHZykQL',
     id: '4:3',
     role: 'attacker',
     unit: 'GIGN',
@@ -429,7 +339,6 @@ export const OPERATORS = {
   },
   'montagne': {
     name: 'Montagne',
-    icon: 'p2gGMAo',
     id: '5:3',
     role: 'attacker',
     unit: 'GIGN',
@@ -443,7 +352,6 @@ export const OPERATORS = {
   },
   'kapkan': {
     name: 'Kapkan',
-    icon: 'LPhga5G',
     id: '4:4',
     role: 'defender',
     unit: 'Spetsnaz',
@@ -458,7 +366,6 @@ export const OPERATORS = {
   },
   'tachanka': {
     name: 'Tachanka',
-    icon: 'bRdSEI2',
     id: '5:4',
     role: 'defender',
     unit: 'Spetsnaz',
@@ -473,7 +380,6 @@ export const OPERATORS = {
   },
   'glaz': {
     name: 'Glaz',
-    icon: 'Fdr50yV',
     id: '2:4',
     role: 'attacker',
     unit: 'Spetsnaz',
@@ -488,7 +394,6 @@ export const OPERATORS = {
   },
   'fuze': {
     name: 'Fuze',
-    icon: 'WpxoTw2',
     id: '3:4',
     role: 'attacker',
     unit: 'Spetsnaz',
@@ -502,7 +407,6 @@ export const OPERATORS = {
   },
   'jager': {
     name: 'Jäger',
-    icon: 'ykglXiD',
     id: '4:5',
     role: 'defender',
     unit: 'GSG 9',
@@ -516,7 +420,6 @@ export const OPERATORS = {
   },
   'bandit': {
     name: 'Bandit',
-    icon: 'iBdRyRn',
     id: '5:5',
     role: 'defender',
     unit: 'GSG 9',
@@ -530,7 +433,6 @@ export const OPERATORS = {
   },
   'blitz': {
     name: 'Blitz',
-    icon: 'IhkK497',
     id: '2:5',
     role: 'attacker',
     unit: 'GSG 9',
@@ -546,7 +448,6 @@ export const OPERATORS = {
   },
   'iq': {
     name: 'IQ',
-    icon: 'UtDoLtT',
     id: '3:5',
     role: 'attacker',
     unit: 'GSG 9',
@@ -560,7 +461,6 @@ export const OPERATORS = {
   },
   'frost': {
     name: 'Frost',
-    icon: 'prGz6E6',
     id: '3:6',
     role: 'defender attacker',
     unit: 'JTF2',
@@ -574,7 +474,6 @@ export const OPERATORS = {
   },
   'buck': {
     name: 'Buck',
-    icon: 'nRSxJd2',
     id: '2:6',
     role: 'attacker',
     unit: 'JTF2',
@@ -588,7 +487,6 @@ export const OPERATORS = {
   },
   'valkyrie': {
     name: 'Valkyrie',
-    icon: 'cG55PvJ',
     id: '3:7',
     role: 'defender',
     unit: 'Navy SEALs',
@@ -602,7 +500,6 @@ export const OPERATORS = {
   },
   'blackbeard': {
     name: 'Blackbeard',
-    icon: 'h12akm4',
     id: '2:7',
     role: 'attacker',
     unit: 'Navy SEALs',
@@ -616,7 +513,6 @@ export const OPERATORS = {
   },
   'caveira': {
     name: 'Caveira',
-    icon: 'X8Wn7uP',
     id: '3:8',
     role: 'defender',
     unit: 'BOPE',
@@ -630,7 +526,6 @@ export const OPERATORS = {
   },
   'capitao': {
     name: 'Capitão',
-    icon: 'Qvkut3P',
     id: '2:8',
     role: 'attacker',
     unit: 'BOPE',
@@ -644,7 +539,6 @@ export const OPERATORS = {
   },
   'echo': {
     name: 'Echo',
-    icon: 'JLXXREk',
     id: '3:9',
     role: 'defender',
     unit: 'SAT',
@@ -658,7 +552,6 @@ export const OPERATORS = {
   },
   'hibana': {
     name: 'Hibana',
-    icon: 'ChqyReH',
     id: '2:9',
     role: 'attacker',
     unit: 'SAT',
@@ -672,7 +565,6 @@ export const OPERATORS = {
   },
   'mira': {
     name: 'Mira',
-    icon: 'BXnayiP',
     id: '3:A',
     role: 'defender',
     unit: 'GEO',
@@ -686,7 +578,6 @@ export const OPERATORS = {
   },
   'jackal': {
     name: 'Jackal',
-    icon: 'hvLklzC',
     id: '2:A',
     role: 'attacker',
     unit: 'GEO',
@@ -700,7 +591,6 @@ export const OPERATORS = {
   },
   'lesion': {
     name: 'Lesion',
-    icon: 'w3PjcvZ',
     id: '3:B',
     role: 'defender',
     unit: 'SDU',
@@ -714,7 +604,6 @@ export const OPERATORS = {
   },
   'ying': {
     name: 'Ying',
-    icon: 'wyJwvWZ',
     id: '2:B',
     role: 'attacker',
     unit: 'SDU',
@@ -728,7 +617,6 @@ export const OPERATORS = {
   },
   'ela': {
     name: 'Ela',
-    icon: 'IRWSllb',
     id: '2:C',
     role: 'defender',
     unit: 'GROM',
@@ -742,7 +630,6 @@ export const OPERATORS = {
   },
   'zofia': {
     name: 'Zofia',
-    icon: 'HRg8qXs',
     id: '3:C',
     role: 'attacker',
     unit: 'GROM',
@@ -756,7 +643,6 @@ export const OPERATORS = {
   },
   'vigil': {
     name: 'Vigil',
-    icon: 'vGg39cP',
     id: '3:D',
     role: 'defender',
     unit: '707th SMB',
@@ -770,7 +656,6 @@ export const OPERATORS = {
   },
   'dokkaebi': {
     name: 'Dokkaebi',
-    icon: 'qYfoWsk',
     id: '2:D',
     role: 'attacker',
     unit: '707th SMB',
@@ -784,7 +669,6 @@ export const OPERATORS = {
   },
   'lion': {
     name: 'Lion',
-    icon: 'EgMlCaV',
     id: '3:E',
     role: 'attacker',
     unit: 'CBRN',
@@ -798,7 +682,6 @@ export const OPERATORS = {
   },
   'finka': {
     name: 'Finka',
-    icon: 'dhemeuU',
     id: '4:E',
     role: 'attacker',
     unit: 'CBRN',
@@ -812,7 +695,6 @@ export const OPERATORS = {
   },
   'maestro': {
     name: 'Maestro',
-    icon: 'd0Zy3i4',
     id: '2:F',
     role: 'defender',
     unit: 'GIS',
@@ -826,7 +708,6 @@ export const OPERATORS = {
   },
   'alibi': {
     name: 'Alibi',
-    icon: 'NXEI1ZN',
     id: '3:F',
     role: 'defender',
     unit: 'GIS',
@@ -840,7 +721,6 @@ export const OPERATORS = {
   },
   'clash': {
     name: 'Clash',
-    icon: 'EYGBED9',
     id: '3:10',
     role: 'defender',
     unit: 'GSUTR',
@@ -854,7 +734,6 @@ export const OPERATORS = {
   },
   'maverick': {
     name: 'Maverick',
-    icon: 'hF2gJuY',
     id: '2:10',
     role: 'attacker',
     unit: 'GSUTR',
@@ -868,7 +747,6 @@ export const OPERATORS = {
   },
   'kaid': {
     name: 'Kaid',
-    icon: 'l6UPyA8',
     id: '3:11',
     role: 'defender',
     unit: 'GIGR',
@@ -882,7 +760,6 @@ export const OPERATORS = {
   },
   'nomad': {
     name: 'Nomad',
-    icon: 'U8sOErk',
     id: '2:11',
     role: 'attacker',
     unit: 'GIGR',
@@ -896,7 +773,6 @@ export const OPERATORS = {
   },
   'mozzie': {
     name: 'Mozzie',
-    icon: 'RHwnp7d',
     id: '2:12',
     role: 'defender',
     unit: 'SASR',
@@ -910,7 +786,6 @@ export const OPERATORS = {
   },
   'gridlock': {
     name: 'Gridlock',
-    icon: 'A95h9XN',
     id: '3:12',
     role: 'attacker',
     unit: 'SASR',
@@ -924,7 +799,6 @@ export const OPERATORS = {
   },
   'warden': {
     name: 'Warden',
-    icon: 'OUhPdNj',
     id: '2:14',
     role: 'defender',
     unit: 'Secret Service',
@@ -938,7 +812,6 @@ export const OPERATORS = {
   },
   'nokk': {
     name: 'Nøkk',
-    icon: 'P0tYlx7',
     id: '2:13',
     role: 'attacker',
     unit: 'Jaeger Corps',
@@ -952,7 +825,6 @@ export const OPERATORS = {
   },
   'goyo': {
     name: 'Goyo',
-    icon: 's2AjbNb',
     id: '2:15',
     role: 'defender',
     unit: 'FES',
@@ -966,7 +838,6 @@ export const OPERATORS = {
   },
   'amaru': {
     name: 'Amaru',
-    icon: 'BL4ue5Y',
     id: '2:16',
     role: 'attacker',
     unit: 'APCA',
@@ -980,7 +851,6 @@ export const OPERATORS = {
   },
   'wamai': {
     name: 'Wamai',
-    icon: '497uSOq',
     id: '3:17',
     role: 'defender',
     unit: 'NIGHTHAVEN',
@@ -994,7 +864,6 @@ export const OPERATORS = {
   },
   'kali': {
     name: 'Kali',
-    icon: 'UH389qh',
     id: '2:17',
     role: 'attacker',
     unit: 'NIGHTHAVEN',
@@ -1008,7 +877,6 @@ export const OPERATORS = {
   },
   'oryx': {
     name: 'Oryx',
-    icon: 'vcUGkSs',
     id: '2:18',
     role: 'defender',
     unit: 'Unaffiliated',
@@ -1022,7 +890,6 @@ export const OPERATORS = {
   },
   'iana': {
     name: 'Iana',
-    icon: 'fZbmkVz',
     id: '2:19',
     role: 'attacker',
     unit: 'REU',
@@ -1036,7 +903,6 @@ export const OPERATORS = {
   },
   'melusi': {
     name: 'Melusi',
-    icon: 'tlAhOmb',
     id: '2:1A',
     role: 'defender',
     unit: 'Inkaba Task Force',
@@ -1050,7 +916,6 @@ export const OPERATORS = {
   },
   'ace': {
     name: 'Ace',
-    icon: '9C0j8iz',
     id: '4:17',
     role: 'attacker',
     unit: 'NIGHTHAVEN',
@@ -1064,7 +929,6 @@ export const OPERATORS = {
   },
   'zero': {
     name: 'Zero',
-    icon: 'xWtzdxN',
     id: '1:1B',
     role: 'attacker',
     unit: 'ROS',

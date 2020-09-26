@@ -2,10 +2,10 @@ import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
   Platform, UUID, SeasonId, SeasonIdExtended,
-  RankId, OldRankId, OlderRankId, Region, RegionExtended
+  RankId, OldRankId, Region, RegionExtended
 } from '../typings';
-import { REGIONS, SEASONS, RANKS, OLD_RANKS, OLDER_RANKS } from '../constants';
-import { URLS, getImgurURL, getCDNURL, getKD, getWinRate } from '../utils';
+import { REGIONS, SEASONS, RANKS, OLD_RANKS, GITHUB_ASSETS_URL } from '../constants';
+import { URLS, getCDNURL, getKD, getWinRate } from '../utils';
 
 interface IRank {
   max_mmr: number;
@@ -13,8 +13,8 @@ interface IRank {
   deaths: number;
   profile_id: string;
   next_rank_mmr: number;
-  rank: RankId | OldRankId | OlderRankId;
-  max_rank: RankId | OldRankId | OlderRankId;
+  rank: RankId | OldRankId;
+  max_rank: RankId | OldRankId;
   board_id: string;
   skill_stdev: number;
   kills: number;
@@ -94,19 +94,13 @@ export interface IOptions {
   regions?: RegionExtended | RegionExtended[];
 }
 
-const getRankIcon = (seasonId: SeasonId, rankId: RankId) =>
-  seasonId < 15
-    ? getImgurURL(
-      seasonId < 14
-        ? OLDER_RANKS[(rankId as OlderRankId)].icon
-        : OLD_RANKS[(rankId as OldRankId)].icon
-    )
-    : getImgurURL(RANKS[(rankId as RankId)].icon);
+const getRankIconURL = (seasonId: SeasonId, rankId: RankId) =>
+  `${GITHUB_ASSETS_URL}/ranks/${
+    seasonId < 15 ? seasonId < 14 ? 'older_ranks' : 'old_ranks' : 'ranks'
+  }/${rankId}.png`;
 
 const getRankName = (seasonId: SeasonId, rankId: RankId): string =>
-  seasonId < 15
-    ? OLD_RANKS[(rankId as OldRankId)].name
-    : RANKS[(rankId as RankId)].name;
+  seasonId < 15 ? OLD_RANKS[rankId] : RANKS[rankId];
 
 export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
@@ -147,13 +141,13 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                     id: val.rank,
                     name: getRankName(seasonId, val.rank),
                     mmr: val.mmr,
-                    icon: getRankIcon(seasonId, val.rank)
+                    icon: getRankIconURL(seasonId, val.rank)
                   },
                   max: {
                     id: val.max_rank,
                     name: getRankName(seasonId, val.max_rank),
                     mmr: val.max_mmr,
-                    icon: getRankIcon(seasonId, val.max_rank)
+                    icon: getRankIconURL(seasonId, val.max_rank)
                   },
                   lastMatch: {
                     won: val.last_match_result === 1 ? true : false,
