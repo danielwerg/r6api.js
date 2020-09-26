@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `uniqueAbility` in `getStats` will now return object with `name`, `icon` and `stats` array instead of just stats array
 * `WEAPONS` in `constants.ts` is now object of objects with `id` and `name`
 * Weapons list in `getStats` response is now object of objects
+* Now using GitHub instead of Imgur to host operator and rank icons
 
 ### Removed
 * `response.js` script
