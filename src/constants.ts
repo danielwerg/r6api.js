@@ -1,6 +1,6 @@
 export const AVATAR_BASE_URL = 'https://ubisoft-avatars.akamaized.net';
 export const CDN_BASE_URL = 'https://staticctf.akamaized.net';
-export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/master/assets';
+export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/typescript/assets';
 
 export const BASE_API_URL = 'https://public-ubiservices.ubi.com';
 export const ALT_API_URL = 'https://www.ubisoft.com';
