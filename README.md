@@ -278,11 +278,16 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 [
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    general: 5809265,
-    ranked: 5173666,
-    casual: 590088,
-    custom: 974,
-    other: 44537
+    pvp: {
+      general: 5809265,
+      ranked: 5173666,
+      casual: 590088,
+      custom: 974,
+      other: 44537
+    },
+    pve: {
+      general: 281436
+    }
   }
 ]
 ```
