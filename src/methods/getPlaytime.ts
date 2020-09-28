@@ -1,26 +1,39 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
-import { Platform, UUID } from '../typings';
+import { Platform, UUID, MPType } from '../typings';
 import { URLS } from '../utils';
 
-const statGetter = (obj: any, id: UUID, stat: string): number =>
-  obj.results[id][`${stat}pvp_timeplayed:infinite`] || 0;
+interface IApiResponse {
+  results: {
+    [id: string]: {
+      [id: string]: number;
+    }
+  }
+}
+
+const statGetter = (obj: IApiResponse, id: UUID, stat: string, type: MPType) =>
+  obj.results[id][`${stat}${type}_timeplayed:infinite`] || 0;
 
 export default (platform: Platform, ids: UUID[]) =>
   getToken()
-    .then(fetch<any>(URLS.PLAYTIME(platform, ids)))
+    .then(fetch<IApiResponse>(URLS.PLAYTIME(platform, ids)))
     .then(res =>
       Object.keys(res.results).map(id => ({
         id,
-        general: statGetter(res, id, 'general'),
-        ranked: statGetter(res, id, 'ranked'),
-        casual: statGetter(res, id, 'casual'),
-        custom: statGetter(res, id, 'custom'),
-        other: statGetter(res, id, 'general') -
-          (
-            statGetter(res, id, 'ranked') +
-            statGetter(res, id, 'casual') +
-            statGetter(res, id, 'custom')
-          )
+        pvp: {
+          general: statGetter(res, id, 'general', 'pvp'),
+          ranked: statGetter(res, id, 'ranked', 'pvp'),
+          casual: statGetter(res, id, 'casual', 'pvp'),
+          custom: statGetter(res, id, 'custom', 'pvp'),
+          other: statGetter(res, id, 'general', 'pvp') -
+            (
+              statGetter(res, id, 'ranked', 'pvp') +
+              statGetter(res, id, 'casual', 'pvp') +
+              statGetter(res, id, 'custom', 'pvp')
+            )
+        },
+        pve: {
+          general: statGetter(res, id, 'general', 'pve')
+        }
       }))
     );
