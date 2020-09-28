@@ -401,7 +401,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                 playtime: statGetter(vals, 'plantbomb', 'timeplayed', 'pvp')
               },
               secureArea: {
-                name: 'Bomb',
+                name: 'Secure Area',
                 wins: statGetter(vals, 'securearea', 'matchwon', 'pvp'),
                 losses: statGetter(vals, 'securearea', 'matchlost', 'pvp'),
                 winRate: getWinRate({
