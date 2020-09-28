@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * ESLint
 * EditorConfig
 * `xp` general xp stats
+* Full names of each region in `getRanks` response
 
 ### Changed
 * `getId` -> `findByUsername`
@@ -29,5 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 * `response.js` script
 * `.npmignore`
+* Id from `getRanks` `seasons` response
 
 [Unreleased]: https://github.com/danielwerg/r6api.js/compare/v1.5.0...typescript

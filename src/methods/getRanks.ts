@@ -2,7 +2,7 @@ import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
   Platform, UUID, SeasonId, SeasonIdExtended,
-  RankId, OldRankId, Region, RegionExtended
+  RankId, OldRankId, RegionId
 } from '../typings';
 import { REGIONS, SEASONS, RANKS, OLD_RANKS, GITHUB_ASSETS_URL } from '../constants';
 import { URLS, getCDNURL, getKD, getWinRate } from '../utils';
@@ -29,7 +29,7 @@ interface IRank {
   previous_rank_mmr: number;
   last_match_result: number;
   wins: number;
-  region: Region;
+  region: RegionId;
   losses: number;
 }
 export interface IApiResponse {
@@ -91,7 +91,7 @@ export interface IGetRanks {
 
 export interface IOptions {
   seasons?: SeasonIdExtended | SeasonIdExtended[] | 'all';
-  regions?: RegionExtended | RegionExtended[];
+  regions?: RegionId | RegionId[] | 'all';
 }
 
 const getRankIconURL = (seasonId: SeasonId, rankId: RankId) =>
@@ -109,8 +109,9 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
     : options && options.seasons && [].concat(options.seasons as any) || [-1];
 
   const regions = options && options.regions === 'all'
-    ? (REGIONS as Region[])
-    : options && options.regions && [].concat(options.regions as any) || (REGIONS as Region[]);
+    ? (Object.keys(REGIONS) as RegionId[])
+    : (options && options.regions && [].concat(options.regions as any))
+      || (Object.keys(REGIONS) as RegionId[]);
 
   return Promise.all(seasons.map(season =>
     Promise.all(regions.map(region =>
@@ -127,14 +128,13 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
               .map(([id, { season: seasonId, region, ...val }]) => {
                 acc[id] = acc[id] || { id: id as UUID, seasons: {} };
                 acc[id].seasons[seasonId] = acc[id].seasons[seasonId] || {
-                  id: seasonId,
                   name: SEASONS[seasonId].name,
                   color: SEASONS[seasonId].color,
                   image: getCDNURL(SEASONS[seasonId].image, 'jpg'),
                   regions: {}
                 };
                 acc[id].seasons[seasonId].regions[region] = {
-                  name: region,
+                  name: REGIONS[region],
                   skillMean: val.skill_mean,
                   skillStdev: val.skill_stdev,
                   current: {

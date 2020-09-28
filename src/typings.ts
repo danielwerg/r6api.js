@@ -4,8 +4,7 @@ export type UUID = string;
 
 export type Platform = 'uplay' | 'psn' | 'xbl';
 
-export type Region = 'emea' | 'ncsa' | 'apac';
-export type RegionExtended = Region | 'all';
+export type RegionId = 'emea' | 'ncsa' | 'apac';
 
 export type SeasonId = keyof typeof constants.SEASONS;
 export type SeasonIdExtended = SeasonId | -1;

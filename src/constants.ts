@@ -22,7 +22,11 @@ export const SANDBOXES = <const>{
 
 export const PLATFORMS = ['uplay', 'psn', 'xbl'];
 
-export const REGIONS = ['emea', 'ncsa', 'apac'];
+export const REGIONS = <const>{
+  'emea': 'Europe, Middle East and Africa',
+  'ncsa': 'North, Central and South America',
+  'apac': 'Asia Pacific'
+};
 
 export const OLD_SEASONS = <const>{
   1: {

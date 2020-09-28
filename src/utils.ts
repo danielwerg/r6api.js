@@ -1,5 +1,5 @@
 import {
-  UUID, Platform, Region,
+  UUID, Platform, RegionId,
   SeasonId, OldSeasonId, RankId, OldRankId,
   OperatorName, WeaponTypeIndex, WeaponTypeId, WeaponName,
   StatsCategoryName
@@ -87,8 +87,8 @@ export const URLS = {
 export const isPlatform = (value: string): value is Platform =>
   PLATFORMS.includes(value);
 
-export const isRegion = (value: string): value is Region =>
-  REGIONS.includes(value);
+export const isRegionId = (value: string): value is RegionId =>
+  Object.keys(REGIONS).includes(value);
 
 export const isSeasonId = (value: number): value is SeasonId =>
   Object.keys(SEASONS).map(season => parseInt(season)).includes(value);
