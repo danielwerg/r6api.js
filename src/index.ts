@@ -1,5 +1,7 @@
 import {
-  setTokenFileLocation as _setTokenFileLocation, setCredentials
+  setTokenFileLocation as _setTokenFileLocation,
+  setCredentials as _setCredentials,
+  getToken as _getToken
 } from './auth';
 import _findByUsername from './methods/findByUsername';
 import _findById from './methods/findById';
@@ -37,7 +39,7 @@ const checkArgs = <T extends (...args: any) => any>({
 export default class R6API {
 
   constructor(options: { email: string; password: string }) {
-    setCredentials(options.email, options.password);
+    _setCredentials(options.email, options.password);
   }
 
   findByUsername = (platform: Platform, query: string | string[]) =>
@@ -63,6 +65,8 @@ export default class R6API {
   getNews = _getNews
   getNewsById = _getNewsById
 
+  getToken = _getToken
+  setCredentials = _setCredentials
   setTokenFileLocation = _setTokenFileLocation
 
 }
