@@ -3,7 +3,9 @@ import fetch from '../fetch';
 import {
   Platform, UUID, MPType, WeaponTypeId, OperatorName, StatsCategoryName
 } from '../typings';
-import { STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS, GITHUB_ASSETS_URL } from '../constants';
+import {
+  STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS, GITHUB_ASSETS_URL
+} from '../constants';
 import { URLS, getCDNURL, getKD, getWinRate } from '../utils';
 
 interface IGeneral {
