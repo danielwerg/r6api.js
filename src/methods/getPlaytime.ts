@@ -15,7 +15,12 @@ export default (platform: Platform, ids: UUID[]) =>
         general: statGetter(res, id, 'general'),
         ranked: statGetter(res, id, 'ranked'),
         casual: statGetter(res, id, 'casual'),
+        custom: statGetter(res, id, 'custom'),
         other: statGetter(res, id, 'general') -
-          (statGetter(res, id, 'ranked') + statGetter(res, id, 'casual'))
+          (
+            statGetter(res, id, 'ranked') +
+            statGetter(res, id, 'casual') +
+            statGetter(res, id, 'custom')
+          )
       }))
     );

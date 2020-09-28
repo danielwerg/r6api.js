@@ -57,7 +57,8 @@ export const URLS = {
     `?profile_ids=${ids.join(',')}`,
   PLAYTIME: (platform: Platform, ids: UUID[]) =>
     getStatsBase(platform) + `/playerstats2/statistics?populations=${ids.join(',')}` +
-    '&statistics=casualpvp_timeplayed,rankedpvp_timeplayed,generalpvp_timeplayed',
+    '&statistics=generalpvp_timeplayed,rankedpvp_timeplayed,casualpvp_timeplayed,' +
+    'custompvp_timeplayed',
   RANKS: (platform: Platform, ids: UUID[], season: number, region: string) =>
     getStatsBase(platform) + '/r6karma/players?board_id=pvp_ranked' +
     `&profile_ids=${ids}&region_id=${region}&season_id=${season}`,
