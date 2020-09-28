@@ -281,7 +281,8 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
     general: 5809265,
     ranked: 5173666,
     casual: 590088,
-    other: 45511
+    custom: 974,
+    other: 44537
   }
 ]
 ```
@@ -490,8 +491,8 @@ await r6api.getStatus();
     mdm: '4073',
     category: 'Instance',
     platform: 'PC',
-    status: 'Degraded',
-    maintenance: false,
+    status: 'Online',
+    maintenance: null,
     impactedFeatures: []
   },
   {
@@ -501,8 +502,8 @@ await r6api.getStatus();
     mdm: '14922',
     category: 'Instance',
     platform: 'PS4',
-    status: 'Degraded',
-    maintenance: false,
+    status: 'Online',
+    maintenance: null,
     impactedFeatures: []
   },
   {
@@ -512,8 +513,8 @@ await r6api.getStatus();
     mdm: '4075',
     category: 'Instance',
     platform: 'XBOXONE',
-    status: 'Degraded',
-    maintenance: false,
+    status: 'Online',
+    maintenance: null,
     impactedFeatures: []
   }
 ]
