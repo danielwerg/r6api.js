@@ -246,10 +246,10 @@ await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     level: 293,
-    xp: 73370,
+    xp: 98696,
     lootboxProbability: {
-      raw: 2470,
-      percent: '24.70%'
+      raw: 230,
+      percent: '2.30%'
     }
   }
 ]
@@ -278,10 +278,10 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 [
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    general: 5804663,
+    general: 5809265,
     ranked: 5173666,
-    casual: 586105,
-    other: 44892
+    casual: 590088,
+    other: 45511
   }
 ]
 ```
@@ -553,7 +553,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1084,
+  total: 1080,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -563,15 +563,15 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: 'PX3_5fmvp48',
-      title: 'Rainbow Six Siege: Operation Shadow Legacy Battle Pass & DLC Trailer | Ubisoft',
+      id: 'FFg8COp6EkA',
+      title: 'Rainbow Six Siege: Operator Locker Room 2 | Compilation | Ubisoft',
       abstract: null,
       thumbnail: {
-        url: 'https://i.ytimg.com/vi/PX3_5fmvp48/maxresdefault.jpg',
-        description: 'Rainbow Six Siege: Operation Shadow Legacy Battle Pass & DLC Trailer | Ubisoft'
+        url: 'https://i.ytimg.com/vi/FFg8COp6EkA/maxresdefault.jpg',
+        description: 'Rainbow Six Siege: Operator Locker Room 2 | Compilation | Ubisoft'
       },
-      content: '[video](https://www.youtube.com/embed/PX3_5fmvp48)',
-      description: 'Get the Operation Shadow Legacy Battle Pass today! Get rewarded for your playtime with 70 tiers and two tracks for a total of 94 rewards until October 19.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a creator of worlds, committed to enriching players\' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division.  We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n \n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries.\n\nRainbow Six Siege: Operation Shadow Legacy Battle Pass & DLC Trailer | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
+      content: '[video](https://www.youtube.com/embed/FFg8COp6EkA)',
+      description: 'The Recruit is back! And to help celebrate Sam Fisher joining Team Rainbow in Operation Shadow Legacy, he’s putting together a squad to help him out.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a creator of worlds, committed to enriching players\' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division.  We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n \n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries.\n\nRainbow Six Siege: Operator Locker Room 2 | Compilation | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
       categories: [
         'videos'
       ],
@@ -579,8 +579,8 @@ await r6api.getNews({ limit: 1 });
       placement: null,
       type: 'videos',
       readTime: null,
-      url: 'https://www.youtube.com/watch?v=PX3_5fmvp48',
-      date: '2020-09-11T17:27:32.000Z'
+      url: 'https://www.youtube.com/watch?v=FFg8COp6EkA',
+      date: '2020-09-23T16:46:07.000Z'
     }
   ]
 }
@@ -615,7 +615,7 @@ await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
 
 ```js
 {
-  total: 1084,
+  total: 1080,
   limit: 0,
   categories: 'all',
   media: 'all',
