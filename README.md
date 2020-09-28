@@ -324,11 +324,11 @@ Get seasonal stats for a player.
 
 #### Regions reference
 
-| Shorthand | Meaning                        |
-| --------- | ------------------------------ |
-| `emea`    | Europe, Middle East and Africa |
-| `ncsa`    | North, Central, South America  |
-| `apac`    | Asia and Pacific               |
+| Shorthand | Meaning                          |
+| --------- | -------------------------------- |
+| `emea`    | Europe, Middle East and Africa   |
+| `ncsa`    | North, Central and South America |
+| `apac`    | Asia Pacific                     |
 
 ```js
 await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions: 'emea' });
