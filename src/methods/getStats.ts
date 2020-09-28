@@ -478,7 +478,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                 bestScore: statGetter(vals, 'plantbombpve', 'bestscore')
               },
               elimination: {
-                name: 'Terrorist Hunt Classic',
+                name: 'Elimination',
                 wins: statGetter(vals, 'terrohuntclassicpve', 'matchwon'),
                 losses: statGetter(vals, 'terrohuntclassicpve', 'matchlost'),
                 winRate: getWinRate({
