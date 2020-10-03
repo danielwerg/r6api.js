@@ -201,7 +201,7 @@ export const OPERATORS = {
     }
   },
   'mute': {
-    name: 'mute',
+    name: 'Mute',
     id: '3:1',
     role: 'defender',
     unit: 'SAS',
