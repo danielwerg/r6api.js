@@ -1,5 +1,5 @@
 {
-  "total": 1080,
+  "total": 1081,
   "limit": 1,
   "categories": "all",
   "media": "all",
@@ -9,24 +9,29 @@
   "tags": "BR-rainbow-six GA-siege",
   "items": [
     {
-      "id": "FFg8COp6EkA",
-      "title": "Rainbow Six Siege: Operator Locker Room 2 | Compilation | Ubisoft",
-      "abstract": null,
+      "id": "1YPQ5yw9TaRhQwghjStqn2",
+      "title": "Top Issues and Community Concerns",
+      "abstract": "We will be updating the following list regularly to outline the status of certain issues that are currently pressing for our community.",
       "thumbnail": {
-        "url": "https://i.ytimg.com/vi/FFg8COp6EkA/maxresdefault.jpg",
-        "description": "Rainbow Six Siege: Operator Locker Room 2 | Compilation | Ubisoft"
+        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Igh9risyDOnxa8nmFKVPW/5fd6b25a6ed43d5b361c736e75fc280f/topissues_349922.png",
+        "description": null
       },
-      "content": "[video](https://www.youtube.com/embed/FFg8COp6EkA)",
-      "description": "The Recruit is back! And to help celebrate Sam Fisher joining Team Rainbow in Operation Shadow Legacy, he’s putting together a squad to help him out.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a creator of worlds, committed to enriching players' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division.  We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n \n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries.\n\nRainbow Six Siege: Operator Locker Room 2 | Compilation | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA",
+      "content": "__Updated: October 2nd 2020__\n\nWe will be updating the following list regularly to outline the status of certain issues that are currently pressing for our community. Please note that this list is not exhaustive, and should only be used as a reference to give a general idea of where our focus currently is.\n\n# Top Issues\n\n## Map Ban System\n\n### Random selection\n\n__Description:__ We are currently investigating an issue with the random selection of the two remaining maps during the map ban flow.\n\nWe have verified that the map on the left of the interface is always selected. We have already started working on a fix.\n\n__Status: During Y5S3__\n\n### Map pool representation\n\n__Description:__ The representation of maps during the map ban flow favors the presence of certain maps (~10%): Oregon, Coastline, Kanal, Villa, Kafe, and Consulate at the expense of the following ones (~6%): Chalet, Theme Park, Bank, Club House, Border, Outback. We aim to deliver a fix to even the odds and have a more balanced map representation.\n\n__Status: Target Y5S3.2 __\n\n## Inverted Audio \n\n__Description:__ Following the Y5S3.1 update on PC, our teams can no longer reproduce the inverted audio issues. Our latest patch notes mentions a fix for sound effects going missing after using a drone. We believe that the inverted audio was linked to this issue and that both are now fixed.\n\n__Status: Fixed (Y5S3.1)__\n\n## Player Behavior\n\n### Mouse & Keyboard on Consoles\n\n__Description:__ We continue our investigation on the topic, we are currently gathering information as well as technical data to gauge how widespread these adapters are and if we can detect them in a reliable manner.\n\n__Status: Ongoing__\n\n### DDoS on consoles\n\n__Description:__ We are working on mitigation plans with our partners and we are continuously monitoring the situation. We have also recently started to issue sanctions to users responsible for such attacks.\n\n__Status: Ongoing__\n\n### Cheating & Hacking\n\n__Description:__ As we stated in our [Anti-Cheat DevBlog](https://rainbow6.com/anticheatblog), this will be a continuous initiative.\nWe are always striving to improve on our detections and are hard at work on developing more reactive sanctions to keep R6 as fair as possible.\n\nWe started using a new identification method and proceeded to issue ban waves based on those results.\n\nIn the last month we sanctioned around 4000 players ranging from blatant cheaters to closet cheaters.\n\n__Status: Ongoing__\n\n### BattlEye Ticker\n\n__Description:__ The system displaying sanctions being applied to cheaters and toxic users is currently disabled. We are working on a fix and we hope to reactivate it soon.\n\n__Status: Y5S3.2 (PC) / Y5S3.3 (Consoles)__ \n\n# Top Gameplay Topics\n\n## Balancing\n\n### Yellow Ping\n\n__Description:__ We have received extensive feedback about the Yellow Ping feature and we know that it is perceived as strong in certain levels of play when coupled with observation tools. We would like to explore alternatives to make the feature more acceptable for everyone. We are ready to add the Yellow Ping to the in-game replays, in order for everyone to understand that your position was known to the enemy team via this system. We are also exploring additional solutions to try to make the feature feel less one-sided.\n\n__Status: Y5S3.2 on PC / Y5S3.3 on console__\n\n### Blurry Holographic Sight \n\n__Description:__ With Y5S3 we moved away from sights being represented as part of the weapon model. It is now part of the HUD in order to allow for more customization as we described it in the [Weapon Optics blog](https://rainbow6.com/optics).\n\nThis led to having a significantly blurrier Holo sight in certain combinations of aspect ratios, resolution, and anti-aliasing. We are working on the rendering of the sight and hope to offer something closer to what was prior to Shadow Legacy.\n\n__Status: Y5S3.2__\n\n## Runouts\n\n__Description:__ We would like to move away from the timer to replace it with a gauge system, which is more accurate visually speaking.\n\nWe are also looking at potentially tweaking the duration of time of an undetected run-out, but we are still debating the option. \n\n__Status: Target Y5S4__\n\n## Improved Flash detection/consistency\n\n__Description:__ The rework intends to make flash detection more reliable. Enemies are often not affected by flashes due to objects and obstacles. We want to simulate the light ricocheting with the environment, to improve the effectiveness of flashbangs & other similar gadgets. We have recently made some progress on that front. However, it may require additional work.\n\n__Status: Target Y5S4.3 or later__\n\n## Defuser planting detection improvements\n\n__Description:__ Interactions with the defuser could often lead to some issues. In Y5S4 we’ll address the following ones:\n\n- Defuser plant prompt is sometimes missing when the player is on site\n- Defusers can be planted outside of the site when the players sits on the edge of the area.\n- Players could drop the defuser when attempting to plant.\nWhen trying to plant with 0:00 secs left, you may continue to drop the defuser, but this is not considered a bug as the Attackers have simply ran out of time.\n\n__Status: Target Y5S4__\n\n## Defuser retrieval improvements\n\n__Description:__ It is possible to drop the defuser in locations where it cannot be picked up again by running over it. Often outside of the map, in cracks, gaps between objects, holes, etc.\n\nTo fix this, we created a 'Pickup Defuser' interaction that works at a distance. It will aim for defuser retrieval to act like picking up any other gadget.\n\n__Status: Target Y5S3.3__\n",
+      "description": null,
       "categories": [
-        "videos"
+        "news",
+        "rainbow-six",
+        "rainbow-six-siege",
+        "patch-notes"
       ],
-      "tag": null,
-      "placement": null,
-      "type": "videos",
-      "readTime": null,
-      "url": "https://www.youtube.com/watch?v=FFg8COp6EkA",
-      "date": "2020-09-23T16:46:07.000Z"
+      "tag": "BR-rainbow-six GA-siege",
+      "placement": [
+        "featured-news-article-emea"
+      ],
+      "type": "news",
+      "readTime": "5",
+      "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/1YPQ5yw9TaRhQwghjStqn2/top-issues-and-community-concerns",
+      "date": "2020-10-02T16:00:00.000Z"
     }
   ]
 }
