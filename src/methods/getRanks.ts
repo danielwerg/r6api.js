@@ -63,6 +63,7 @@ interface IRegions {
     };
     previousMmr: number;
     nextMmr: number;
+    nextRankMatchesNeeded: number;
     topRankPosition: number;
     kills: number;
     deaths: number;
@@ -157,6 +158,11 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                   },
                   previousMmr: val.previous_rank_mmr,
                   nextMmr: val.next_rank_mmr,
+                  nextRankMatchesNeeded: val.next_rank_mmr !== 0 && Math.abs(val.last_match_mmr_change) !== 0
+                  ? Number(
+                      ((val.next_rank_mmr - val.mmr) / Math.abs(val.last_match_mmr_change)).toFixed(2)
+                    )
+                  : 0,
                   topRankPosition: val.top_rank_position,
                   kills: val.kills,
                   deaths: val.deaths,
