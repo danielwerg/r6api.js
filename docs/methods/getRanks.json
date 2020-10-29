@@ -3,44 +3,46 @@
     "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
     "seasons": {
       "19": {
+        "id": 19,
         "name": "Shadow Legacy",
         "color": "#6ca511",
         "image": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5H87SAzADrzRmroVnJzuUE/2e73c489074b538055df0f793b4e1639/r6s-seasons-y5s3.jpg",
         "regions": {
           "emea": {
+            "id": "emea",
             "name": "Europe, Middle East and Africa",
-            "skillMean": 30.9286132404,
-            "skillStdev": 7.5235183431,
+            "skillMean": 31.1874198381,
+            "skillStdev": 4.9944767636,
             "current": {
-              "id": 0,
-              "name": "Unranked",
-              "mmr": 3093,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png"
+              "id": 18,
+              "name": "Gold 1",
+              "mmr": 3119,
+              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/18.png"
             },
             "max": {
-              "id": 0,
-              "name": "Unranked",
-              "mmr": 0,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png"
+              "id": 19,
+              "name": "Platinum 3",
+              "mmr": 3470,
+              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png"
             },
             "lastMatch": {
-              "won": false,
-              "mmrChange": 0,
-              "skillMeanChange": 0,
-              "skillStdevChange": 0
+              "won": true,
+              "mmrChange": 44,
+              "skillMeanChange": 0.4401556637,
+              "skillStdevChange": -0.0207936661
             },
-            "previousMmr": 0,
-            "nextMmr": 0,
+            "previousMmr": 3000,
+            "nextMmr": 3200,
             "topRankPosition": 0,
-            "kills": 0,
-            "deaths": 0,
-            "kd": 0,
-            "wins": 0,
-            "losses": 0,
-            "winRate": "0.00%",
-            "matches": 0,
-            "abandons": 0,
-            "updateTime": "1970-01-01T00:00:00+00:00"
+            "kills": 283,
+            "deaths": 284,
+            "kd": 1,
+            "wins": 33,
+            "losses": 32,
+            "winRate": "50.77%",
+            "matches": 65,
+            "abandons": 1,
+            "updateTime": "2020-10-29T18:49:44.360000+00:00"
           }
         }
       }
