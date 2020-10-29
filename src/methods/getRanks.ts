@@ -40,6 +40,7 @@ export interface IApiResponse {
 
 interface IRegions {
   [id: string]: {
+    id: string;
     name: string;
     skillMean: number;
     skillStdev: number;
@@ -128,12 +129,14 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
               .map(([id, { season: seasonId, region, ...val }]) => {
                 acc[id] = acc[id] || { id: id as UUID, seasons: {} };
                 acc[id].seasons[seasonId] = acc[id].seasons[seasonId] || {
+                  id: seasonId,
                   name: SEASONS[seasonId].name,
                   color: SEASONS[seasonId].color,
                   image: getCDNURL(SEASONS[seasonId].image, 'jpg'),
                   regions: {}
                 };
                 acc[id].seasons[seasonId].regions[region] = {
+                  id: region,
                   name: REGIONS[region],
                   skillMean: val.skill_mean,
                   skillStdev: val.skill_stdev,
