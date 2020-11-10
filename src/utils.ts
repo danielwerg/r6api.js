@@ -21,7 +21,7 @@ export const getCDNURL = (id: UUID, format = 'png') =>
   `${CDN_BASE_URL}/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/${id}.${format}`;
 
 export const getAvatars = (id: UUID) => ({
-  small: getAvatarURL(id, 146), medium: getAvatarURL(id, 256)
+  146: getAvatarURL(id, 146), 256: getAvatarURL(id, 256)
 });
 
 export const getNewsURL = (language: string, type: string, id: string) =>
