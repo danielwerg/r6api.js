@@ -111,7 +111,7 @@ exports.default = async () => {
 
 <!-- START:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 5084 matches.
+Daniel.Nt has played 5108 matches.
 ```
 <!-- END:EXAMPLE_OUTPUT -->
 
@@ -180,8 +180,9 @@ await r6api.findByUsername('uplay', 'Daniel.Nt');
     platform: 'uplay',
     username: 'Daniel.Nt',
     avatar: {
-      small: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
-      medium: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png'
+      '146': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
+      '256': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
+      '500': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
     }
   }
 ]
@@ -215,8 +216,9 @@ await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
     platform: 'uplay',
     username: 'Daniel.Nt',
     avatar: {
-      small: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
-      medium: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png'
+      '146': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
+      '256': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
+      '500': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
     }
   }
 ]
