@@ -15,13 +15,13 @@ import {
 } from './constants';
 
 export const getAvatarURL = (id: UUID, size = 256) =>
-  `${AVATAR_BASE_URL}/${id}/default_${size}_${size}.png`;
+  `${AVATAR_BASE_URL}/${id}/default_${size === 500 ? 'tall' : `${size}_${size}`}.png`;
 
 export const getCDNURL = (id: UUID, format = 'png') =>
   `${CDN_BASE_URL}/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/${id}.${format}`;
 
 export const getAvatars = (id: UUID) => ({
-  146: getAvatarURL(id, 146), 256: getAvatarURL(id, 256)
+  146: getAvatarURL(id, 146), 256: getAvatarURL(id, 256), 500: getAvatarURL(id, 500)
 });
 
 export const getNewsURL = (language: string, type: string, id: string) =>
