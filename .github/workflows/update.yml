@@ -9,6 +9,7 @@ on:
       - 'examples/example.js'
       - 'src/methods/**'
       - 'src/constants.ts'
+      - 'src/utils.ts'
     branches:
       - 'typescript'
 
