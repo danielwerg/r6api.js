@@ -27,7 +27,7 @@ interface IRank {
   last_match_skill_mean_change: number;
   mmr: number;
   previous_rank_mmr: number;
-  last_match_result: number;
+  last_match_result: 0 | 1 | 2 | 3;
   wins: number;
   region: RegionId;
   losses: number;
@@ -103,6 +103,9 @@ const getRankIconURL = (seasonId: SeasonId, rankId: RankId) =>
 const getRankName = (seasonId: SeasonId, rankId: RankId): string =>
   seasonId < 15 ? OLD_RANKS[rankId] : RANKS[rankId];
 
+const getMatchResult = (id: IRank['last_match_result']) =>
+  ({ 0: 'unknown', 1: 'win', 2: 'loss', 3: 'abandon' }[id]);
+
 export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
   const seasons: SeasonIdExtended[] = options && options.seasons === 'all'
@@ -153,7 +156,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                     icon: getRankIconURL(seasonId, val.max_rank)
                   },
                   lastMatch: {
-                    won: val.last_match_result === 1 ? true : false,
+                    result: getMatchResult(val.last_match_result),
                     mmrChange: val.last_match_mmr_change,
                     skillMeanChange: val.last_match_skill_mean_change,
                     skillStdevChange: val.last_match_skill_stdev_change
