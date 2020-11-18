@@ -111,7 +111,7 @@ exports.default = async () => {
 
 <!-- START:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 5108 matches.
+Daniel.Nt has played 5115 matches.
 ```
 <!-- END:EXAMPLE_OUTPUT -->
 
@@ -354,13 +354,13 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
           emea: {
             id: 'emea',
             name: 'Europe, Middle East and Africa',
-            skillMean: 31.1874198381,
-            skillStdev: 4.9944767636,
+            skillMean: 33.084937863,
+            skillStdev: 4.6365855331,
             current: {
-              id: 18,
-              name: 'Gold 1',
-              mmr: 3119,
-              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/18.png'
+              id: 19,
+              name: 'Platinum 3',
+              mmr: 3308,
+              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png'
             },
             max: {
               id: 19,
@@ -369,23 +369,23 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
               icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png'
             },
             lastMatch: {
-              won: true,
-              mmrChange: 44,
-              skillMeanChange: 0.4401556637,
-              skillStdevChange: -0.0207936661
+              result: 'win',
+              mmrChange: 40,
+              skillMeanChange: 0.4044478743,
+              skillStdevChange: -0.0169066275
             },
-            previousMmr: 3000,
-            nextMmr: 3200,
+            previousMmr: 3200,
+            nextMmr: 3600,
             topRankPosition: 0,
-            kills: 283,
-            deaths: 284,
-            kd: 1,
-            wins: 33,
-            losses: 32,
-            winRate: '50.77%',
-            matches: 65,
+            kills: 382,
+            deaths: 368,
+            kd: 1.04,
+            wins: 44,
+            losses: 40,
+            winRate: '52.38%',
+            matches: 84,
             abandons: 1,
-            updateTime: '2020-10-29T18:49:44.360000+00:00'
+            updateTime: '2020-11-17T21:17:58.545000+00:00'
           }
         }
       }
@@ -585,7 +585,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1086,
+  total: 1090,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -595,29 +595,24 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: '5C2L2LynqdZE4UiyX67m5O',
-      title: 'Sugar Fright Pumpkin Carving Contest',
-      abstract: 'Bring your best Siege-themed pumpkins to life this Halloween and show them off with the hashtag #PumpkinSiege for a chance to win the complete 2020 Sugar Fright Halloween collection!',
+      id: 'SHGmibf5X44',
+      title: 'Rainbow Six Siege: Tachanka Elite Set - New on the Six | Ubisoft',
+      abstract: null,
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5iLFD4hjVMvljkcTdwidbj/2b5e81785891092cab67c6c3b666189a/R6_Halloween_Header_2020.png',
-        description: '[R6S] Pumpkin Contest Header'
+        url: 'https://i.ytimg.com/vi/SHGmibf5X44/maxresdefault.jpg',
+        description: 'Rainbow Six Siege: Tachanka Elite Set - New on the Six | Ubisoft'
       },
-      content: '# THE SIEGE PUMPKIN MASSACRE: PART 1 - THE PUMPKINING\n\n![sugarfright pumpkin contest](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2sPbWNXkZjVrwzGPp86c2y/6cd5ac0248da9f51de4704636ab4fc6e/sf_contest.png)\n\n__Sharpen your knives everyone, we’re about to get S.P.O.O.K.Y.__\n\nIf your sweet tooth needs a break from the in-game Sugar Fright event, come get into the Halloween spirit with the Siege Pumpkin Carving contest!\n\nBring your best Siege-themed pumpkins to life this Halloween and show them off with the hashtag #PumpkinSiege for a chance to win the complete 2020 Sugar Fright Halloween collection!\n\n### The contest starts at 12PM ET October 27th, 2020 and will be open for submissions until 12PM ET November 5th, 2020.\n\n# HOW TO ENTER:\n\n- __Grab a pumpkin and carve it up__ (make yourself something yummy with the guts too!)\n- Carve a __Rainbow Six Siege themed__ pumpkin (brownie points if it’s Sugar Fright Themed!)\n- __Take a photo of your pumpkin with your social media handle in it__. It can be on a notecard, a post-it, or signed on the pumpkin itself – it just needs to be physical and visible in the photo somewhere.\n- __Submit it to us on Social Media using the hashtag #PumpkinSiege__ (Twitter, Instagram) and __tagging us__ ([@Rainbow6Game](https://twitter.com/Rainbow6Game) on Twitter or [@Rainbow6Game_us](https://instagram.com/rainbow6game_us) on Instagram) \n- Be creative and spooky!\n- Submissions should only include video, images, costumes and/or artwork created by you. The inclusion of images, artwork, or other assets owned/created by a third party (brand, company, or individual) are not eligible to win.\n\n### Download our Siege Operator Pumpkin Stencils\n\nHere\'s a few pumpkin carving stencils to help you get started! [Download](https://ubi.li/R6S_pumpkinstencil) and print the stencils, tape it to your pumpkin, and carve away.\n\n[![stencil](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4vZY9mYZiMFL2XdEnmEVbj/c8165f41835934ee7c21d0548b0b2d08/stencil.png)\n](https://ubi.li/R6S_pumpkinstencil)\n\n# PRIZING\n\n![pack](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1xC3RVUgU5bkXHF92telZV/38617f65f1da5ac62f37478ffdfabf09/pack.png)\n\n__10 Winners – Complete 2020 Sugar Fright Collection__\n\nAt the end of the pumpkin carving contest, we\'ll see who wowed us the most and select 10 winners to be gifted with the complete 2020 Halloween limited-event collection! Winners will be selected based on the following:\n\n- Craftmanship.\n- Creativity.\n- Adherence to the spirit of the contest and event.\n\n# CONTEST WINNERS:\n\nWinning entries will be contacted at the end of the event to receive prizing and will be contacted personally through their Social Media account for further details on receiving the prize.\n\nWe’ll be sharing the prize-winning pumpkins at the end of the event\n\n[![SF Pumpkin rules](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5BL7O2WgwPUjDOyUu9pXLG/3327cd6bc674ad440826718516ce0aeb/rules.png)](http://static2.ubi.com/pxm/RainbowSix/R6S_PumpkinContest_US_and_WorldwidePromotionOfficialRules.pdf)\n\n---\n\n*As part of the contest Ubisoft Entertainment S.A (28 rue Armand Carrel , 93108 Montreuil, France) collects and processes your personal data to allow your participation in the competition and to send prize(s) to winner(s).The processing of your personal data is necessary to perform the contract you have entered with Ubisoft by accepting the rules of the competition. If you consent, your data may also be used to create in-game content. Your personal data will be accessible by Ubisoft, its affiliates and sub-processors.*\n\n*Ubisoft may transfer your personal data to non-European countries that ensure an adequate level of protection according to the EU Commission, or within the framework of the standard data protection clauses adopted by the EU Commission (accessible [here](https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/model-contracts-transfer-personal-data-third-countries_en)).*\n\n*You can withdraw your consent, request a copy of your data, its deletion or rectification, object to the processing of your data, request the restriction of its processing, and receive your information in portable form by contacting Ubisoft’s data protection officers [here](https://support.ubi.com/faqs/35367/Reviewing-the-data-that-Ubisoft-holds-about-me/). After contacting us, if you are not satisfied with the way we handled your request, you may address a complaint to the supervisory authority of your country.*',
-      description: null,
+      content: '[video](https://www.youtube.com/embed/SHGmibf5X44)',
+      description: 'All hail Lord Tachanka! Unlock his new Elite set and show off the Slava Korolyu uniform, headgear, victory dance, gadget for the Shumikha Launcher, weapon skin for the DP-28, 9x19VSN, GSH18, and PMM, and the Elite Tachanka Chibi charm.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a creator of worlds, committed to enriching players\' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division.  We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n \n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries.\n\nRainbow Six Siege: Tachanka Elite Set - New on the Six | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
       categories: [
-        'community',
-        'rainbow-six-siege',
-        'rainbow-six',
-        'events'
+        'videos'
       ],
-      tag: 'BR-rainbow-six GA-siege',
-      placement: [
-        'featured-news-article'
-      ],
-      type: 'news',
-      readTime: '3',
-      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/5C2L2LynqdZE4UiyX67m5O/sugar-fright-pumpkin-carving-contest',
-      date: '2020-10-27T17:00:00.000Z'
+      tag: null,
+      placement: null,
+      type: 'videos',
+      readTime: null,
+      url: 'https://www.youtube.com/watch?v=SHGmibf5X44',
+      date: '2020-11-17T22:00:47.000Z'
     }
   ]
 }

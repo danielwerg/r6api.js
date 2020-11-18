@@ -11,13 +11,13 @@
           "emea": {
             "id": "emea",
             "name": "Europe, Middle East and Africa",
-            "skillMean": 31.1874198381,
-            "skillStdev": 4.9944767636,
+            "skillMean": 33.084937863,
+            "skillStdev": 4.6365855331,
             "current": {
-              "id": 18,
-              "name": "Gold 1",
-              "mmr": 3119,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/18.png"
+              "id": 19,
+              "name": "Platinum 3",
+              "mmr": 3308,
+              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png"
             },
             "max": {
               "id": 19,
@@ -26,23 +26,23 @@
               "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png"
             },
             "lastMatch": {
-              "won": true,
-              "mmrChange": 44,
-              "skillMeanChange": 0.4401556637,
-              "skillStdevChange": -0.0207936661
+              "result": "win",
+              "mmrChange": 40,
+              "skillMeanChange": 0.4044478743,
+              "skillStdevChange": -0.0169066275
             },
-            "previousMmr": 3000,
-            "nextMmr": 3200,
+            "previousMmr": 3200,
+            "nextMmr": 3600,
             "topRankPosition": 0,
-            "kills": 283,
-            "deaths": 284,
-            "kd": 1,
-            "wins": 33,
-            "losses": 32,
-            "winRate": "50.77%",
-            "matches": 65,
+            "kills": 382,
+            "deaths": 368,
+            "kd": 1.04,
+            "wins": 44,
+            "losses": 40,
+            "winRate": "52.38%",
+            "matches": 84,
             "abandons": 1,
-            "updateTime": "2020-10-29T18:49:44.360000+00:00"
+            "updateTime": "2020-11-17T21:17:58.545000+00:00"
           }
         }
       }
