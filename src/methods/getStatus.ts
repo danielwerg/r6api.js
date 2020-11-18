@@ -6,10 +6,10 @@ interface IApiResponse {
   AppID: UUID;
   MDM: string;
   SpaceID: UUID;
-  Category: string;
+  Category: 'Instance';
   Name: string;
-  Platform: string;
-  Status: string;
+  Platform: 'PC' | 'PS4' | 'XBOXONE' | 'PS5' | 'XBOX SERIES X';
+  Status: 'Online' | 'Interrupted' | 'Degraded' | 'Maintenance';
   Maintenance: null | boolean;
   ImpactedFeatures: string[];
 }
