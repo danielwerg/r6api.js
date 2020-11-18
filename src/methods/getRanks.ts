@@ -129,7 +129,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
           .flat()
           .reduce((acc, { players }) => {
             Object.entries(players)
-              .map(([id, { season: seasonId, region, ...val }]) => {
+              .map(([id, { season: seasonId, region: regionId, ...val }]) => {
                 acc[id] = acc[id] || { id: id as UUID, seasons: {} };
                 acc[id].seasons[seasonId] = acc[id].seasons[seasonId] || {
                   id: seasonId,
@@ -138,9 +138,9 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                   image: getCDNURL(SEASONS[seasonId].image, 'jpg'),
                   regions: {}
                 };
-                acc[id].seasons[seasonId].regions[region] = {
-                  id: region,
-                  name: REGIONS[region],
+                acc[id].seasons[seasonId].regions[regionId] = {
+                  id: regionId,
+                  name: REGIONS[regionId],
                   skillMean: val.skill_mean,
                   skillStdev: val.skill_stdev,
                   current: {
