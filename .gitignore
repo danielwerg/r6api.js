@@ -1,6 +1,6 @@
-/node_modules
-/old_code
-/lib
+node_modules
+old_code
+lib
 .env
-yarn-error.log
+*.log
 test*
