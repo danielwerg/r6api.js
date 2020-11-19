@@ -9,7 +9,9 @@
   "scripts": {
     "build": "tsc -p .",
     "example": "yarn build && ts-node scripts/example",
-    "methods": "ts-node scripts/methods"
+    "methods": "ts-node scripts/methods",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "node-fetch": "^2.6.0"
