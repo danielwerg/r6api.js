@@ -115,7 +115,7 @@ exports.default = async () => {
 
 <!-- START:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 5115 matches.
+Daniel.Nt has played 5138 matches.
 ```
 <!-- END:EXAMPLE_OUTPUT -->
 
@@ -589,7 +589,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1090,
+  total: 1093,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -599,24 +599,30 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: 'SHGmibf5X44',
-      title: 'Rainbow Six Siege: Tachanka Elite Set - New on the Six | Ubisoft',
-      abstract: null,
+      id: '4qcvHDulgxm5CC565Bo042',
+      title: 'Tom Clancy\'s Rainbow Six Siege – Next-Generation Consoles',
+      abstract: 'Rainbow Six Siege is coming to Next-Gen consoles with enhanced performance.',
       thumbnail: {
-        url: 'https://i.ytimg.com/vi/SHGmibf5X44/maxresdefault.jpg',
-        description: 'Rainbow Six Siege: Tachanka Elite Set - New on the Six | Ubisoft'
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4njiQIf5ZM8VWD7BuGfbJD/f02603f39e30bdf6738dcc293bdc5137/tu331_tachanka_patch_notes.jpg',
+        description: null
       },
-      content: '[video](https://www.youtube.com/embed/SHGmibf5X44)',
-      description: 'All hail Lord Tachanka! Unlock his new Elite set and show off the Slava Korolyu uniform, headgear, victory dance, gadget for the Shumikha Launcher, weapon skin for the DP-28, 9x19VSN, GSH18, and PMM, and the Elite Tachanka Chibi charm.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a creator of worlds, committed to enriching players\' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division.  We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n \n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries.\n\nRainbow Six Siege: Tachanka Elite Set - New on the Six | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
+      content: 'We are glad to announce that Tom Clancy’s Rainbow Six Siege will be available on the next generation consoles, and that you will have the opportunity to play the PS5 and Xbox Series X|S versions of the game starting December 1st.  \n\nThis next generation brings innovations that allow us to continue enhancing the Rainbow Six Siege experience, and we are excited to share with you today more information on what you can look forward to on new consoles.\n\n## Easily Transition to Next-Gen\nIf you currently own a copy of Rainbow Six Siege on PS4 or Xbox One, and plan to stay within the same console family, you will be able to upgrade your game at no extra cost*. In addition, all players will be able to keep their progression and in-game items when transitioning between console generations. Please remember that physical game copies will not be able to transfer to discless console versions.\n\n## Enjoy Cross-Generation Play and Progression \nIf you are looking to get a next-gen console, don’t worry about your Rainbow Six Siege progression and in-game items when transitioning: we’ve got you covered. With the new Ubisoft Connect ecosystem, you will keep your progression and in-game items when switching between devices within the same family of consoles: from PS4 to PS5 and from Xbox One to Xbox Series X|S.\n\nAs previously announced, cross-play will also be available for players within the same console family, so that you can keep playing with your friends no matter what generation they are playing from.\n\nAs for cross-progression and cross-play between PC and consoles, or between consoles from different families, we are continuously listening to your feedback and we know this is something important to you. While these features will not be available at launch on next-gen versions, we are exploring the possibilities. We want to make sure we are taking all necessary elements into consideration to ensure we continue providing all of you with the best technical and well-rounded experience. This type of implementation needs to be thoroughly thought-through, and this is where we stand right now. We will be sure to update you in the future when we have more news to share. \n\n## Play with Enhanced Graphics and Performance on Next-Gen\nGet ready to experience the thrill of enjoying the highest level of graphical enhancements that the game has to offer on console. To make sure we cater to all needs, you will be able to choose between different options, whether you wish to prioritize the best framerate, or the highest resolution, granted that you are equipped with a compatible screen device:\n- __Performance Mode:__ Target 120 FPS with 4K Dynamic Resolution Scaling (PS5, Xbox Series X) / Target 120 FPS at 1080p (Xbox Series S)\n- __Resolution Mode:__ Target 60 FPS with 4K resolution (PS5, Xbox Series X) / Target 60 FPS at 1728p (Xbox Series S)\n\nFor PS5 owners, you will also enjoy: \n- Deeper immersion with your DualSense controller capabilities: haptic feedback, adaptive triggers, and controller sound output.\n- Activities support for Ranked, Unranked, Newcomer, Quick Match & Events so players can dive into the game faster. \n\nFor Xbox Series X|S owners, you will find:\n- Quick Resume ability that enables you to switch between multiple titles and resume instantly from where you last left off.\n\nAdditional features are also coming on all platforms with this next-gen launch, such as accessibility features (readability options and text-to-speech and speech-to-text), quick start options and the all new Ubisoft Connect overlay.\n\nThese are exciting times to be a Rainbow Six Siege player, and we hope that you are as eager as we are for what’s coming. We will see you soon!\n\n-Rainbow 6 Siege Dev Team       \n\n*Conditions and restrictions apply. To upgrade eligible physical disc copies, a console with a disc drive is required. Visit https://ubi.li/5z5Hk for details.\n',
+      description: null,
       categories: [
-        'videos'
+        'rainbow-six-siege',
+        'rainbow-six',
+        'community',
+        'news',
+        'game-updates'
       ],
-      tag: null,
-      placement: null,
-      type: 'videos',
-      readTime: null,
-      url: 'https://www.youtube.com/watch?v=SHGmibf5X44',
-      date: '2020-11-17T22:00:47.000Z'
+      tag: 'BR-rainbow-six GA-siege',
+      placement: [
+        ''
+      ],
+      type: 'news',
+      readTime: '4',
+      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/4qcvHDulgxm5CC565Bo042/tom-clancys-rainbow-six-siege-nextgeneration-consoles',
+      date: '2020-11-24T22:00:00.000Z'
     }
   ]
 }
