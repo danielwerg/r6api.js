@@ -20,7 +20,7 @@ export const SANDBOXES = <const>{
   xbl: 'OSBOR_XBOXONE_LNCH_A'
 };
 
-export const PLATFORMS = ['uplay', 'psn', 'xbl'];
+export const PLATFORMS = <const>['uplay', 'psn', 'xbl'];
 
 export const REGIONS = <const>{
   'emea': 'Europe, Middle East and Africa',

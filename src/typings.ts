@@ -2,9 +2,9 @@ import * as constants from './constants';
 
 export type UUID = string;
 
-export type Platform = 'uplay' | 'psn' | 'xbl';
+export type Platform = typeof constants.PLATFORMS[number];
 
-export type RegionId = 'emea' | 'ncsa' | 'apac';
+export type RegionId = keyof typeof constants.REGIONS;
 
 export type SeasonId = keyof typeof constants.SEASONS;
 export type SeasonIdExtended = SeasonId | -1;

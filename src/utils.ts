@@ -86,7 +86,7 @@ export const URLS = {
 };
 
 export const isPlatform = (value: string): value is Platform =>
-  PLATFORMS.includes(value);
+  PLATFORMS.map(platform => platform.toString()).includes(value);
 
 export const isRegionId = (value: string): value is RegionId =>
   Object.keys(REGIONS).includes(value);
