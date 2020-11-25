@@ -1,41 +1,27 @@
 <div align="center">
-  <h1>
-    R6API.js
-  </h1>
-  <h3>
-    🍫 Node.js wrapper around Rainbow Six: Siege API
-  </h3>
+  <h1>R6API.js</h1>
+  <h3>🍫 Node.js wrapper around Rainbow Six: Siege API</h3>
   <p>
-    <a href="https://github.com/danielwerg/r6api.js/releases">
-      <img
-        src="https://img.shields.io/npm/v/r6api.js?label=version"
-        alt="Version"
-      />
-    </a>
-    <a href="https://github.com/danielwerg/r6api.js/releases">
-      <img
-        src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=last%20release"
-        alt="Last release"
-      />
-    </a>
-    <a href="https://github.com/danielwerg/r6api.js/blob/master/LICENCE">
-      <img
-        src="https://img.shields.io/npm/l/r6api.js"
-        alt="License"
-      />
-    </a>
-    <a href="https://www.npmjs.com/package/r6api.js">
-      <img
-        src="https://img.shields.io/npm/dw/r6api.js"
-        alt="NPM weakly downloads"
-      />
-    </a>
-    <a href="https://discord.gg/hshRpWk">
-      <img
-        src="https://img.shields.io/badge/dynamic/json?url=https://discord.com/api/guilds/612212753498767360/widget.json&query=presence_count&label=R6HUB&logo=discord&suffix=%20online"
-        alt="R6HUB discord guild"
-      />
-    </a>
+    <a href="https://github.com/danielwerg/r6api.js/releases"><img
+      src="https://img.shields.io/npm/v/r6api.js?label=version"
+      alt="Version"
+    /></a>
+    <a href="https://github.com/danielwerg/r6api.js/releases"><img
+      src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=last%20release"
+      alt="Last release"
+    /></a>
+    <a href="https://github.com/danielwerg/r6api.js/blob/master/LICENCE"><img
+      src="https://img.shields.io/npm/l/r6api.js"
+      alt="License"
+    /></a>
+    <a href="https://www.npmjs.com/package/r6api.js"><img
+      src="https://img.shields.io/npm/dw/r6api.js"
+      alt="NPM weakly downloads"
+    /></a>
+    <a href="https://discord.gg/hshRpWk"><img
+      src="https://img.shields.io/badge/dynamic/json?url=https://discord.com/api/guilds/612212753498767360/widget.json&query=presence_count&label=R6HUB&logo=discord&suffix=%20online"
+      alt="R6HUB discord guild"
+    /></a>
   </p>
 </div>
 
