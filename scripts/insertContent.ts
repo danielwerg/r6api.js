@@ -10,10 +10,10 @@ export default async (name: string, content: string, options: IOptions = {}) => 
 
   const { style = 'hiddenCodeBlock', lang = 'js'} = options;
 
-  const readmeFilePath = join(__dirname, '../README.md');
+  const readmeFilePath = join(__dirname, '../readme.md');
   const readmeFile = await fs.readFile(readmeFilePath, 'utf8')
     .catch(err => console.log(err));
-  if (!readmeFile) return console.log('ReadMe file not found');
+  if (!readmeFile) return console.log('readme file not found');
 
   const startComment = `<!-- START:${name} -->`;
   const endComment = `<!-- END:${name} -->`;
