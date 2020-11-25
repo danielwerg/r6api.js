@@ -6,30 +6,34 @@
     🍫 Node.js wrapper around Rainbow Six: Siege API
   </h3>
   <p>
-    <a href="https://www.npmjs.com/package/r6api.js">
+    <a href="https://github.com/danielwerg/r6api.js/releases">
       <img
-        src="https://nodei.co/npm/r6api.js.png?downloads=true&downloadRank=true&stars=true"
-        alt="NPM"
+        src="https://img.shields.io/npm/v/r6api.js?label=version"
+        alt="Version"
       />
     </a>
-  </p>
-  <p>
-    <a href="https://www.npmjs.com/package/r6api.js">
+    <a href="https://github.com/danielwerg/r6api.js/releases">
       <img
-        src="https://img.shields.io/npm/dt/r6api.svg?maxAge=3600"
-        alt="NPM downloads"
+        src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=last%20release"
+        alt="Last release"
       />
     </a>
-    <a href="https://david-dm.org/danielwerg/r6api.js">
+    <a href="https://github.com/danielwerg/r6api.js/blob/master/LICENCE">
       <img
-        src="https://img.shields.io/david/danielwerg/r6api.js.svg?maxAge=3600"
-        alt="Dependencies"
+        src="https://img.shields.io/npm/l/r6api.js"
+        alt="License"
+      />
+    </a>
+    <a href="https://www.npmjs.com/package/r6api.js">
+      <img
+        src="https://img.shields.io/npm/dw/r6api.js"
+        alt="NPM weakly downloads"
       />
     </a>
     <a href="https://discord.gg/hshRpWk">
       <img
-        src="https://discordapp.com/api/guilds/612212753498767360/embed.png"
-        alt="Discord guild"
+        src="https://img.shields.io/badge/dynamic/json?url=https://discord.com/api/guilds/612212753498767360/widget.json&query=presence_count&label=R6HUB&logo=discord&suffix=%20online"
+        alt="R6HUB discord guild"
       />
     </a>
   </p>
