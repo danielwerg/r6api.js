@@ -3,7 +3,7 @@
     R6API.js
   </h1>
   <h3>
-    Node.js wrapper around Rainbow Six: Siege API
+    🍫 Node.js wrapper around Rainbow Six: Siege API
   </h3>
   <p>
     <a href="https://www.npmjs.com/package/r6api.js">
