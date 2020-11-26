@@ -3,15 +3,16 @@
   <h3>🍫 Node.js wrapper around Rainbow Six: Siege API</h3>
   <p>
     <a href="https://github.com/danielwerg/r6api.js/releases"><img
-      src="https://img.shields.io/npm/v/r6api.js?label=version"
+      src="https://img.shields.io/github/v/release/danielwerg/r6api.js?label=version"
       alt="Version"
     /></a>
     <a href="https://github.com/danielwerg/r6api.js/releases"><img
       src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=last%20release"
       alt="Last release"
     /></a>
+    <!-- change "LICENCE" after merging typescript branch to master -->
     <a href="https://github.com/danielwerg/r6api.js/blob/master/LICENCE"><img
-      src="https://img.shields.io/npm/l/r6api.js"
+      src="https://img.shields.io/github/license/danielwerg/r6api.js"
       alt="License"
     /></a>
     <a href="https://www.npmjs.com/package/r6api.js"><img
