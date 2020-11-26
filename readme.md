@@ -20,7 +20,7 @@
       alt="NPM weakly downloads"
     /></a>
     <a href="https://discord.gg/hshRpWk"><img
-      src="https://img.shields.io/badge/dynamic/json?url=https://discord.com/api/guilds/612212753498767360/widget.json&query=presence_count&label=R6HUB&logo=discord&suffix=%20online"
+      src="https://img.shields.io/discord/612212753498767360?logo=discord&label=R6HUB&color=7289DA"
       alt="R6HUB discord guild"
     /></a>
   </p>
