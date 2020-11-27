@@ -238,11 +238,11 @@ await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 [
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    level: 293,
-    xp: 98696,
+    level: 296,
+    xp: 137546,
     lootboxProbability: {
-      raw: 230,
-      percent: '2.30%'
+      raw: 640,
+      percent: '6.40%'
     }
   }
 ]
@@ -272,14 +272,14 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     pvp: {
-      general: 5809265,
-      ranked: 5173666,
-      casual: 590088,
+      general: 5963350,
+      ranked: 5298273,
+      casual: 614423,
       custom: 974,
-      other: 44537
+      other: 49680
     },
     pve: {
-      general: 281436
+      general: 286986
     }
   }
 ]
@@ -345,38 +345,38 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
           emea: {
             id: 'emea',
             name: 'Europe, Middle East and Africa',
-            skillMean: 33.084937863,
-            skillStdev: 4.6365855331,
+            skillMean: 34.5700128704,
+            skillStdev: 4.3497753917,
             current: {
               id: 19,
               name: 'Platinum 3',
-              mmr: 3308,
+              mmr: 3457,
               icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png'
             },
             max: {
               id: 19,
               name: 'Platinum 3',
-              mmr: 3470,
+              mmr: 3491,
               icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png'
             },
             lastMatch: {
               result: 'win',
-              mmrChange: 40,
-              skillMeanChange: 0.4044478743,
-              skillStdevChange: -0.0169066275
+              mmrChange: 38,
+              skillMeanChange: 0.3837009152,
+              skillStdevChange: -0.014769404
             },
             previousMmr: 3200,
             nextMmr: 3600,
             topRankPosition: 0,
-            kills: 382,
-            deaths: 368,
-            kd: 1.04,
-            wins: 44,
-            losses: 40,
-            winRate: '52.38%',
-            matches: 84,
+            kills: 479,
+            deaths: 458,
+            kd: 1.05,
+            wins: 56,
+            losses: 47,
+            winRate: '54.37%',
+            matches: 103,
             abandons: 1,
-            updateTime: '2020-11-17T21:17:58.545000+00:00'
+            updateTime: '2020-11-27T14:30:11.844000+00:00'
           }
         }
       }
@@ -643,7 +643,7 @@ await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
 
 ```js
 {
-  total: 1080,
+  total: 1093,
   limit: 0,
   categories: 'all',
   media: 'all',

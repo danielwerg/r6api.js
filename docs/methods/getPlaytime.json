@@ -2,14 +2,14 @@
   {
     "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
     "pvp": {
-      "general": 5809265,
-      "ranked": 5173666,
-      "casual": 590088,
+      "general": 5963350,
+      "ranked": 5298273,
+      "casual": 614423,
       "custom": 974,
-      "other": 44537
+      "other": 49680
     },
     "pve": {
-      "general": 281436
+      "general": 286986
     }
   }
 ]

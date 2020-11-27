@@ -11,38 +11,38 @@
           "emea": {
             "id": "emea",
             "name": "Europe, Middle East and Africa",
-            "skillMean": 33.084937863,
-            "skillStdev": 4.6365855331,
+            "skillMean": 34.5700128704,
+            "skillStdev": 4.3497753917,
             "current": {
               "id": 19,
               "name": "Platinum 3",
-              "mmr": 3308,
+              "mmr": 3457,
               "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png"
             },
             "max": {
               "id": 19,
               "name": "Platinum 3",
-              "mmr": 3470,
+              "mmr": 3491,
               "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png"
             },
             "lastMatch": {
               "result": "win",
-              "mmrChange": 40,
-              "skillMeanChange": 0.4044478743,
-              "skillStdevChange": -0.0169066275
+              "mmrChange": 38,
+              "skillMeanChange": 0.3837009152,
+              "skillStdevChange": -0.014769404
             },
             "previousMmr": 3200,
             "nextMmr": 3600,
             "topRankPosition": 0,
-            "kills": 382,
-            "deaths": 368,
-            "kd": 1.04,
-            "wins": 44,
-            "losses": 40,
-            "winRate": "52.38%",
-            "matches": 84,
+            "kills": 479,
+            "deaths": 458,
+            "kd": 1.05,
+            "wins": 56,
+            "losses": 47,
+            "winRate": "54.37%",
+            "matches": 103,
             "abandons": 1,
-            "updateTime": "2020-11-17T21:17:58.545000+00:00"
+            "updateTime": "2020-11-27T14:30:11.844000+00:00"
           }
         }
       }
