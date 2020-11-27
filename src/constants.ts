@@ -215,7 +215,7 @@ export const OPERATORS = {
     }
   },
   'sledge': {
-    name: 'Slege',
+    name: 'Sledge',
     id: '4:1',
     role: 'attacker',
     unit: 'SAS',
