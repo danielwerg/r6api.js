@@ -2,47 +2,47 @@
   {
     "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
     "seasons": {
-      "19": {
-        "id": 19,
-        "name": "Shadow Legacy",
-        "color": "#6ca511",
-        "image": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5H87SAzADrzRmroVnJzuUE/2e73c489074b538055df0f793b4e1639/r6s-seasons-y5s3.jpg",
+      "20": {
+        "id": 20,
+        "name": "Neon Dawn",
+        "color": "#D14007",
+        "image": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4.jpg",
         "regions": {
           "emea": {
             "id": "emea",
             "name": "Europe, Middle East and Africa",
-            "skillMean": 34.5700128704,
-            "skillStdev": 4.3497753917,
+            "skillMean": 30.8867056323,
+            "skillStdev": 7.6002159074,
             "current": {
-              "id": 19,
-              "name": "Platinum 3",
-              "mmr": 3457,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png"
+              "id": 0,
+              "name": "Unranked",
+              "mmr": 3089,
+              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png"
             },
             "max": {
-              "id": 19,
-              "name": "Platinum 3",
-              "mmr": 3491,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png"
+              "id": 0,
+              "name": "Unranked",
+              "mmr": 0,
+              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png"
             },
             "lastMatch": {
-              "result": "win",
-              "mmrChange": 38,
-              "skillMeanChange": 0.3837009152,
-              "skillStdevChange": -0.014769404
+              "result": "unknown",
+              "mmrChange": 0,
+              "skillMeanChange": 0,
+              "skillStdevChange": 0
             },
-            "previousMmr": 3200,
-            "nextMmr": 3600,
+            "previousMmr": 0,
+            "nextMmr": 0,
             "topRankPosition": 0,
-            "kills": 479,
-            "deaths": 458,
-            "kd": 1.05,
-            "wins": 56,
-            "losses": 47,
-            "winRate": "54.37%",
-            "matches": 103,
-            "abandons": 1,
-            "updateTime": "2020-11-27T14:30:11.844000+00:00"
+            "kills": 0,
+            "deaths": 0,
+            "kd": 0,
+            "wins": 0,
+            "losses": 0,
+            "winRate": "0.00%",
+            "matches": 0,
+            "abandons": 0,
+            "updateTime": "1970-01-01T00:00:00+00:00"
           }
         }
       }

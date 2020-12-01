@@ -102,7 +102,7 @@ exports.default = async () => {
 
 <!-- START:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 5149 matches.
+Daniel.Nt has played 5162 matches.
 ```
 <!-- END:EXAMPLE_OUTPUT -->
 
@@ -337,47 +337,47 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '19': {
-        id: 19,
-        name: 'Shadow Legacy',
-        color: '#6ca511',
-        image: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5H87SAzADrzRmroVnJzuUE/2e73c489074b538055df0f793b4e1639/r6s-seasons-y5s3.jpg',
+      '20': {
+        id: 20,
+        name: 'Neon Dawn',
+        color: '#D14007',
+        image: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4.jpg',
         regions: {
           emea: {
             id: 'emea',
             name: 'Europe, Middle East and Africa',
-            skillMean: 34.5700128704,
-            skillStdev: 4.3497753917,
+            skillMean: 30.8867056323,
+            skillStdev: 7.6002159074,
             current: {
-              id: 19,
-              name: 'Platinum 3',
-              mmr: 3457,
-              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png'
+              id: 0,
+              name: 'Unranked',
+              mmr: 3089,
+              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png'
             },
             max: {
-              id: 19,
-              name: 'Platinum 3',
-              mmr: 3491,
-              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/19.png'
+              id: 0,
+              name: 'Unranked',
+              mmr: 0,
+              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png'
             },
             lastMatch: {
-              result: 'win',
-              mmrChange: 38,
-              skillMeanChange: 0.3837009152,
-              skillStdevChange: -0.014769404
+              result: 'unknown',
+              mmrChange: 0,
+              skillMeanChange: 0,
+              skillStdevChange: 0
             },
-            previousMmr: 3200,
-            nextMmr: 3600,
+            previousMmr: 0,
+            nextMmr: 0,
             topRankPosition: 0,
-            kills: 479,
-            deaths: 458,
-            kd: 1.05,
-            wins: 56,
-            losses: 47,
-            winRate: '54.37%',
-            matches: 103,
-            abandons: 1,
-            updateTime: '2020-11-27T14:30:11.844000+00:00'
+            kills: 0,
+            deaths: 0,
+            kd: 0,
+            wins: 0,
+            losses: 0,
+            winRate: '0.00%',
+            matches: 0,
+            abandons: 0,
+            updateTime: '1970-01-01T00:00:00+00:00'
           }
         }
       }
@@ -577,7 +577,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1093,
+  total: 1094,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -587,29 +587,24 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: '3487NcAXKzJKRZPnFxzUxT',
-      title: 'New Rainbow Six Siege Streamer Charms for Y5S4',
-      abstract: 'Announcing the new charms with Y5S4 Neon Dawn!',
+      id: '7FBsynoyWlM',
+      title: 'Rainbow Six Siege: Operation Neon Dawn Battle Pass & DLC Trailer | Ubisoft',
+      abstract: null,
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3m9uzAxXRxrndc6313Zw4A/17ab6819c9d93d93829f689a6eb76b60/Y5S4StreamerCharmsNEWSEASON.png',
-        description: 'Y5S4NewCharms'
+        url: 'https://i.ytimg.com/vi/7FBsynoyWlM/maxresdefault.jpg',
+        description: 'Rainbow Six Siege: Operation Neon Dawn Battle Pass & DLC Trailer | Ubisoft'
       },
-      content: '## Announcing the next Y5S4 Streamer Charms!\n\nEach season will bring the release of new charms, as well as a return of the streamer’s charms from previous seasons!\n\nOn the 15th of December, we will also be adding a commemorative IceyCat25 charm which will be available for all players to redeem through the in-game store for 1 renown, also available through the in-game news tile.\n\nThis charm will be available throughout Season 4, until the end of Neon Dawn.\n\n# New\n\n![Y5S4NeonDawnNewCharms](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7cZAvvkjQZwNSNfI2FoEqo/b11a9909a1b8a5980cf6d6b3fd4e52ff/Y5S4StreamerCharmsNEWSEASON.png)\n\n[JerichoFive](https://www.twitch.tv/jerichofive)\n\n[REMGURI / 렘쨩](https://www.twitch.tv/remguri)\n\n[IceyCat25](https://www.youtube.com/c/iceycat25)\n\n[THE_M3RY](https://www.twitch.tv/THE_M3RY)\n\n## Returning\n\n![Y5S4NeonDawnReturning1](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/QjkVfk0whE4DplOQREzwb/04aabed9e483febf1fe4acdb45f5ab49/StreamerCharmsTemplate.png)\n![Y5S4NeonDawnReturning2](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/71vh6rAWyjjXCNjdp7tbXd/858012e21167eca7b35a2173bf22c112/StreamerCharmsTemplate2.png)\n![Y5S4NeonDawnReturning3](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1nsgH3YPn3qX7MQoq6JNe5/1546543a89d8cf553d6c85471e16fe76/StreamerCharms3.png)\n\n[Ad9m](https://www.twitch.tv/ad9m)\n[Alfredoplays](https://www.twitch.tv/alfredoplays)\n[AnneMunition](https://www.twitch.tv/annemunition)\n[Beaulo](https://www.twitch.tv/beaulo)\n[Bighead](https://www.twitch.tv/bighead033)\n[BikiniBodhi](https://www.twitch.tv/bikinibodhi)\n[Bnans](https://www.twitch.tv/bnans)\n[Drid](https://www.twitch.tv/dridgg)\n[Gabbo](https://www.twitch.tv/JustGabbo)\n[Interro](https://www.twitch.tv/interro)\n[Jinu6734](https://www.twitch.tv/jinu6734)\n[Just9n](https://www.twitch.tv/just9n)\n[Kalera](https://www.twitch.tv/Kalera)\n[KingGeorge](https://www.twitch.tv/KingGeorge)\n[KittyR6](https://www.twitch.tv/kitty_r6)\n[Kixstar](https://www.twitch.tv/kixstar)\n[LagonisR6](https://www.twitch.tv/lagonis)\n[Lil_Lexi](https://www.twitch.tv/lil_lexi)\n[MacieJay](https://www.twitch.tv/MacieJay)\n[Matimi0](https://www.twitch.tv/matimi0)\n[Narcoleptic Nugget](https://www.twitch.tv/narcolepticnugget)\n[PaladinAmber](https://www.twitch.tv/paladinamber)\n[Pengu](https://www.twitch.tv/pengu)\n[Punjistick](https://www.twitch.tv/punjistick)\n[Rubsarb](https://www.twitch.tv/Rubsarb/)\n[Salty Academy](https://www.twitch.tv/sixquatre)\n[SexyCake](https://www.twitch.tv/smexycake)\n[Shorty](https://www.twitch.tv/shortyyguy)\n[SilphTV](https://www.twitch.tv/silphtv)\n[TangyD](https://www.twitch.tv/tangyd)\n[Tatted](https://www.twitch.tv/tatted)\n[Tranth](https://www.twitch.tv/tranth)\n[Varsity](https://www.twitch.tv/varsitygaming)\n[WhiteShark67](https://www.twitch.tv/whiteshark67)\n[z1ronic](https://www.twitch.tv/zironicdk)\n[Zander](https://www.twitch.tv/zander)\n[Zigueira](https://www.twitch.tv/zigueira)\n\n## How to acquire charms\n\nThese charms are only available by subscribing to the respective streamer’s Twitch channel with a linked Uplay account. For more information on how to link your Uplay and Twitch account, as well as opt in for Twitch Drops, please refer to [this FAQ](https://support.ubi.com/Faqs/000035432/Get-your-Twitch-Streamer-s-charm).\n\n## How to get involved\n\nGiven the length of our production cycle for in-game content, the participants for Y5S1 S2, S3 & S4 have already been determined. We are always on the lookout for additional content creators to add to the program and will be exploring new candidates in 2020 & 2021. If your goal is to see your charm in game, we use the following criteria to begin the selection process for potential candidates:\n\n__Requirements to be considered__\n-	Approximately 350+ concurrent viewers – preferable.\n-	Average of 10 Rainbow Six streams per month.\n-	Average of 20 hours of Rainbow Six streamed per month.\n-	Positive standing with Ubisoft/Rainbow Six Siege.\n-	High quality level of content.\n-	Rainbow Six Siege reserves the right for final decision.\n\n__Consideration for Removal__\n-	Less than 10 Rainbow Six Siege main streams over 3 months.\n-	Level of quality dropping below an acceptable level.\n- Standing with Rainbow Six Siege/Ubisoft compromised.\n-	Any actions that may negatively affect the R6S/Ubisoft brand.\n-	Rainbow Six Siege reserves the right for removal of any charms.',
-      description: null,
+      content: '[video](https://www.youtube.com/embed/7FBsynoyWlM)',
+      description: 'Get the Operation Neon Dawn Battle Pass today! Get rewarded for your playtime with 100 tiers of unlockable rewards until February 22. Learn more at rainbow6.com/battlepass\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a creator of worlds, committed to enriching players\' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division.  We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n \n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries.\n\nRainbow Six Siege: Operation Neon Dawn Battle Pass & DLC Trailer | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
       categories: [
-        'news',
-        'game-updates',
-        'rainbow-six',
-        'rainbow-six-siege'
+        'videos'
       ],
-      tag: 'BR-rainbow-six GA-siege',
-      placement: [
-        'featured-news-article'
-      ],
-      type: 'news',
-      readTime: '2',
-      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/3487NcAXKzJKRZPnFxzUxT/new-rainbow-six-siege-streamer-charms-for-y5s4',
-      date: '2020-11-27T11:00:00.000Z'
+      tag: null,
+      placement: null,
+      type: 'videos',
+      readTime: null,
+      url: 'https://www.youtube.com/watch?v=7FBsynoyWlM',
+      date: '2020-12-01T17:06:11.000Z'
     }
   ]
 }
