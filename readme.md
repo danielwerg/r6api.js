@@ -300,18 +300,19 @@ Get seasonal stats for a player.
 
 | Param   | Type                          | Required | Default                    | Description                      |
 | ------- | ----------------------------- | -------- | -------------------------- | -------------------------------- |
-| seasons | `number \| number[] \| 'all'` | false    | `-1`                       | Numbers from `6` to `19` or `-1` |
+| seasons | `number \| number[] \| 'all'` | false    | `-1`                       | Numbers from `6` to `20` or `-1` |
 | regions | `string \| string[]`          | false    | `['emea', 'ncsa', 'apac']` |                                  |
 
 #### Seasons reference
 
-| ID   | Name           | ● | ID   | Name          | ● | ID   | Name           |
-| ---- | -------------- | - | ---- | ------------- | - | ---- | -------------- |
-| `-1` | Current Season |   | `10` | Para Bellum   |   | `15` | Ember Rise     |
-| `6`  | Health         |   | `11` | Grim Sky      |   | `16` | Shifting Tides |
-| `7`  | Blood Orchid   |   | `12` | Wind Bastion  |   | `17` | Void Edge      |
-| `8`  | White Noise    |   | `13` | Burnt Horizon |   | `18` | Steel Wave     |
-| `9`  | Chimera        |   | `14` | Phantom Sight |   | `19` | Shadow Legacy  |
+| ID   | Name           | ● | ID   | Name           | ● | ID   | Name          |
+| ---- | -------------- | - | ---- | -------------- | - | ---- | ------------- |
+| `-1` | Current Season |   | `11` | Grim Sky       |   | `17` | Void Edge     |
+| `6`  | Health         |   | `12` | Wind Bastion   |   | `18` | Steel Wave    |
+| `7`  | Blood Orchid   |   | `13` | Burnt Horizon  |   | `19` | Shadow Legacy |
+| `8`  | White Noise    |   | `14` | Phantom Sight  |   | `20` | Neon Dawn     |
+| `9`  | Chimera        |   | `15` | Ember Rise     |   |      |               |
+| `10` | Para Bellum    |   | `16` | Shifting Tides |   |      |               |
 
 > **Note:** Ubisoft doesn't provide data for seasons before Operation Health.
 

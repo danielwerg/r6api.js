@@ -126,6 +126,11 @@ export const SEASONS = <const>{
     name: 'Shadow Legacy',
     color: '#6ca511',
     image: '5H87SAzADrzRmroVnJzuUE/2e73c489074b538055df0f793b4e1639/r6s-seasons-y5s3'
+  },
+  20: {
+    name: 'Neon Dawn',
+    color: '#D14007',
+    image: '3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4'
   }
 };
 
@@ -941,6 +946,19 @@ export const OPERATORS = {
       icon: '6h4hyVSzG8IwAmEl1Objrd/6e51e64eeffcc68746b8ff59445fb103/r6s-operator-ability-zero',
       stats: [
         { name: 'Gadgets Destroyed by ARGUS Camera', id: 'zero_gadgetsdestroyed' }
+      ]
+    }
+  },
+  'aruni': {
+    name: 'Aruni',
+    id: '5:17',
+    role: 'defender',
+    unit: 'NIGHTHAVEN',
+    uniqueAbility: {
+      name: 'Surya Gate',
+      icon: '4hLJAAVKrf50wosG0471od/cde1867daf863c03754969f159ac00de/r6s-operator-ability-aruni',
+      stats: [
+        { name: 'Surya Gates Deployed', id: '' }
       ]
     }
   }
