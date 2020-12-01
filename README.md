@@ -159,7 +159,7 @@ Gets seasonal stats for a player.
 
 options:
 -  regions: `('ncsa' | 'emea' | 'apac')[]` (by default gets all the regions)
--  seasons: `number[] | 'all'`, with numbers from `6` to `19` (by default it's `-1` - most recent season)
+-  seasons: `number[] | 'all'`, with numbers from `6` to `20` (by default it's `-1` - most recent season)
 
 
 Seasons reference:
@@ -168,7 +168,7 @@ Seasons reference:
 9: 'Chimera', 10: 'Para Bellum', 11: 'Grim Sky',
 12: 'Wind Bastion', 13: 'Burnt Horizon', 14: 'Phantom Sight',
 15: 'Ember Rise', 16: 'Shifting Tides',  17: 'Void Edge',
-18: 'Steel Wave', 19: 'Shadow Legacy'
+18: 'Steel Wave', 19: 'Shadow Legacy', 20: 'Neon Dawn'
 ```
 
 ```js
