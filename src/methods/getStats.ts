@@ -190,6 +190,11 @@ export interface IOptions {
   categories?: StatsCategoryName[];
 }
 
+export const optionsDocs = [
+  ['raw', '`boolean`', 'false', '`false` ', 'Include raw API response'],
+  ['categories', '`string[]`', 'false', 'Requests all', 'Categories to request']
+];
+
 const getOperatorIconURL = (name: string) =>
   `${GITHUB_ASSETS_URL}/operators/${name.includes('recruit') ? 'recruit' : name}.png`;
 

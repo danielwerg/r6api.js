@@ -65,7 +65,7 @@ How to create account?
 
 ## Example
 
-<!-- START:EXAMPLE -->
+<!-- START_SECTION:EXAMPLE -->
 ```js
 require('dotenv').config();
 const R6API = require('r6api.js').default;
@@ -75,10 +75,8 @@ const R6API = require('r6api.js').default;
 // dotenv.config();
 // import R6API from 'r6api.js';
 
-const r6api = new R6API({
-  email: process.env.UBI_EMAIL,
-  password: process.env.UBI_PASSWORD
-});
+const { UBI_EMAIL: email = '', UBI_PASSWORD: password = '' } = process.env;
+const r6api = new R6API({ email, password });
 
 // export default async () => { // ES6
 exports.default = async () => {
@@ -93,18 +91,18 @@ exports.default = async () => {
   if (!stats) return 'Stats not found';
   const { pvp: { general } } = stats;
 
-  return `${username} has played ${general.matches} matches.`;
+  return `${player.username} has played ${general.matches} matches.`;
 
 };
 
 ```
-<!-- END:EXAMPLE -->
+<!-- END_SECTION:EXAMPLE -->
 
-<!-- START:EXAMPLE_OUTPUT -->
+<!-- START_SECTION:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 5162 matches.
+Daniel.Nt has played 5169 matches.
 ```
-<!-- END:EXAMPLE_OUTPUT -->
+<!-- END_SECTION:EXAMPLE_OUTPUT -->
 
 ## API
 
@@ -143,7 +141,8 @@ Daniel.Nt has played 5162 matches.
 | password | `string` | Ubisoft account password |
 
 ```js
-const r6api = new R6API(process.env.email, process.env.password);
+const { UBI_EMAIL: email = '', UBI_PASSWORD: password = '' } = process.env;
+const r6api = new R6API({ email, password });
 ```
 
 ---
@@ -158,7 +157,7 @@ Find player by their username.
 await r6api.findByUsername('uplay', 'Daniel.Nt');
 ```
 
-<!-- START:FINDBYUSERNAME_OUTPUT -->
+<!-- START_SECTION:FINDBYUSERNAME_OUTPUT -->
 <details>
 <summary>Output</summary>
 
@@ -180,7 +179,7 @@ await r6api.findByUsername('uplay', 'Daniel.Nt');
 ```
 
 </details>
-<!-- END:FINDBYUSERNAME_OUTPUT -->
+<!-- END_SECTION:FINDBYUSERNAME_OUTPUT -->
 
 ---
 
@@ -188,13 +187,13 @@ await r6api.findByUsername('uplay', 'Daniel.Nt');
 
 Find player by their id.
 
-(platform | 'all', id/s, options) => `Promise<Array>`
+(platform | 'all', id/s) => `Promise<Array>`
 
 ```js
 await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
-<!-- START:FINDBYID_OUTPUT -->
+<!-- START_SECTION:FINDBYID_OUTPUT -->
 <details>
 <summary>Output</summary>
 
@@ -216,7 +215,7 @@ await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
 </details>
-<!-- END:FINDBYID_OUTPUT -->
+<!-- END_SECTION:FINDBYID_OUTPUT -->
 
 ---
 
@@ -230,7 +229,7 @@ Get level, xp and alpha pack drop chance for a player.
 await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
-<!-- START:GETPROGRESSION_OUTPUT -->
+<!-- START_SECTION:GETPROGRESSION_OUTPUT -->
 <details>
 <summary>Output</summary>
 
@@ -238,18 +237,18 @@ await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 [
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    level: 296,
-    xp: 137546,
+    level: 297,
+    xp: 73534,
     lootboxProbability: {
-      raw: 640,
-      percent: '6.40%'
+      raw: 820,
+      percent: '8.20%'
     }
   }
 ]
 ```
 
 </details>
-<!-- END:GETPROGRESSION_OUTPUT -->
+<!-- END_SECTION:GETPROGRESSION_OUTPUT -->
 
 ---
 
@@ -263,7 +262,7 @@ Get playtime for a player.
 await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 ```
 
-<!-- START:GETPLAYTIME_OUTPUT -->
+<!-- START_SECTION:GETPLAYTIME_OUTPUT -->
 <details>
 <summary>Output</summary>
 
@@ -272,21 +271,21 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     pvp: {
-      general: 5963350,
-      ranked: 5298273,
+      general: 5984372,
+      ranked: 5312097,
       casual: 614423,
       custom: 974,
-      other: 49680
+      other: 56878
     },
     pve: {
-      general: 286986
+      general: 292574
     }
   }
 ]
 ```
 
 </details>
-<!-- END:GETPLAYTIME_OUTPUT -->
+<!-- END_SECTION:GETPLAYTIME_OUTPUT -->
 
 ---
 
@@ -294,41 +293,48 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 Get seasonal stats for a player.
 
-(platform, id/s, options) => `Promise<Array>`
+(platform, id/s, options?) => `Promise<Array>`
 
 #### Options
 
+<!-- START_SECTION:GETRANKS_OPTIONS -->
 | Param   | Type                          | Required | Default                    | Description                      |
 | ------- | ----------------------------- | -------- | -------------------------- | -------------------------------- |
 | seasons | `number \| number[] \| 'all'` | false    | `-1`                       | Numbers from `6` to `20` or `-1` |
 | regions | `string \| string[]`          | false    | `['emea', 'ncsa', 'apac']` |                                  |
+<!-- END_SECTION:GETRANKS_OPTIONS -->
 
 #### Seasons reference
 
-| ID   | Name           | ● | ID   | Name           | ● | ID   | Name          |
-| ---- | -------------- | - | ---- | -------------- | - | ---- | ------------- |
-| `-1` | Current Season |   | `11` | Grim Sky       |   | `17` | Void Edge     |
-| `6`  | Health         |   | `12` | Wind Bastion   |   | `18` | Steel Wave    |
-| `7`  | Blood Orchid   |   | `13` | Burnt Horizon  |   | `19` | Shadow Legacy |
-| `8`  | White Noise    |   | `14` | Phantom Sight  |   | `20` | Neon Dawn     |
-| `9`  | Chimera        |   | `15` | Ember Rise     |   |      |               |
-| `10` | Para Bellum    |   | `16` | Shifting Tides |   |      |               |
+<!-- START_SECTION:SEASONS_TABLE -->
+| ID   | Name         | ● | ID   | Name          | ● | ID   | Name           |
+| ---- | ------------ | - | ---- | ------------- | - | ---- | -------------- |
+| `6`  | Health       |   | `11` | Grim Sky      |   | `16` | Shifting Tides |
+| `7`  | Blood Orchid |   | `12` | Wind Bastion  |   | `17` | Void Edge      |
+| `8`  | White Noise  |   | `13` | Burnt Horizon |   | `18` | Steel Wave     |
+| `9`  | Chimera      |   | `14` | Phantom Sight |   | `19` | Shadow Legacy  |
+| `10` | Para Bellum  |   | `15` | Ember Rise    |   | `20` | Neon Dawn      |
+<!-- END_SECTION:SEASONS_TABLE -->
 
-> **Note:** Ubisoft doesn't provide data for seasons before Operation Health.
+> **Note:** `-1` will always return current season
+
+> **Note:** Ubisoft doesn't provide data for seasons before Operation Health
 
 #### Regions reference
 
+<!-- START_SECTION:REGIONS_TABLE -->
 | Shorthand | Meaning                          |
 | --------- | -------------------------------- |
 | `emea`    | Europe, Middle East and Africa   |
 | `ncsa`    | North, Central and South America |
 | `apac`    | Asia Pacific                     |
+<!-- END_SECTION:REGIONS_TABLE -->
 
 ```js
 await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions: 'emea' });
 ```
 
-<!-- START:GETRANKS_OUTPUT -->
+<!-- START_SECTION:GETRANKS_OUTPUT -->
 <details>
 <summary>Output</summary>
 
@@ -387,7 +393,7 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
 ```
 
 </details>
-<!-- END:GETRANKS_OUTPUT -->
+<!-- END_SECTION:GETRANKS_OUTPUT -->
 
 > **Note:** `kills`, `deaths`, `kd`, `topRankPosition` and everything under `lastMatch` only available  for seasons including and after Phantom Sight (14) for older seasons it will return `0` or `false` in case of `lastMatch.won`
 
@@ -401,14 +407,16 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
 
 Get summary stats for a player.
 
-(platform, id/s, options) => `Promise<Array>`
+(platform, id/s, options?) => `Promise<Array>`
 
 #### Options
 
+<!-- START_SECTION:GETSTATS_OPTIONS -->
 | Param      | Type       | Required | Default      | Description              |
 | ---------- | ---------- | -------- | ------------ | ------------------------ |
 | raw        | `boolean`  | false    | `false`      | Include raw API response |
 | categories | `string[]` | false    | Requests all | Categories to request    |
+<!-- END_SECTION:GETSTATS_OPTIONS -->
 
 #### Categories reference
 
@@ -479,7 +487,7 @@ Get Rainbow Six: Siege servers status.
 await r6api.getStatus();
 ```
 
-<!-- START:GETSTATUS_OUTPUT -->
+<!-- START_SECTION:GETSTATUS_OUTPUT -->
 <details>
 <summary>Output</summary>
 
@@ -508,9 +516,9 @@ await r6api.getStatus();
     impactedFeatures: []
   },
   {
-    appId: '',
+    appId: '6e3c99c9-6c3f-43f4-b4f6-f1a3143f2764',
     name: 'Rainbow Six Siege - PS5 - LIVE',
-    spaceId: '',
+    spaceId: '96c1d424-057e-4ff7-860b-6b9c9222bdbf',
     mdm: '25365',
     category: 'Instance',
     platform: 'PS5',
@@ -519,9 +527,9 @@ await r6api.getStatus();
     impactedFeatures: []
   },
   {
-    appId: '',
+    appId: '76f580d5-7f50-47cc-bbc1-152d000bfe59',
     name: 'Rainbow Six Siege - XBOX SERIES X - LIVE',
-    spaceId: '',
+    spaceId: '631d8095-c443-4e21-b301-4af1a0929c27',
     mdm: '25366',
     category: 'Instance',
     platform: 'XBOX SERIES X',
@@ -544,7 +552,7 @@ await r6api.getStatus();
 ```
 
 </details>
-<!-- END:GETSTATUS_OUTPUT -->
+<!-- END_SECTION:GETSTATUS_OUTPUT -->
 
 ---
 
@@ -552,10 +560,11 @@ await r6api.getStatus();
 
 Get Rainbow Six: Siege News.
 
-(options) => `Promise<Object>`
+(options?) => `Promise<Object>`
 
 #### Options
 
+<!-- START_SECTION:GETNEWS_OPTIONS -->
 | Param          | Type      | Required | Default   | Description                                               |
 | -------------- | --------- | -------- | --------- | --------------------------------------------------------- |
 | raw            | `boolean` | false    | `false`   | Include raw API response                                  |
@@ -566,12 +575,13 @@ Get Rainbow Six: Siege News.
 | startIndex     | `number`  | false    | `0`       |                                                           |
 | locale         | `string`  | false    | `'en-us'` |                                                           |
 | fallbackLocale | `string`  | false    | `'en-us'` |                                                           |
+<!-- END_SECTION:GETNEWS_OPTIONS -->
 
 ```js
 await r6api.getNews({ limit: 1 });
 ```
 
-<!-- START:GETNEWS_OUTPUT -->
+<!-- START_SECTION:GETNEWS_OUTPUT -->
 <details>
 <summary>Output</summary>
 
@@ -589,7 +599,7 @@ await r6api.getNews({ limit: 1 });
     {
       id: '7FBsynoyWlM',
       title: 'Rainbow Six Siege: Operation Neon Dawn Battle Pass & DLC Trailer | Ubisoft',
-      abstract: null,
+      abstract: undefined,
       thumbnail: {
         url: 'https://i.ytimg.com/vi/7FBsynoyWlM/maxresdefault.jpg',
         description: 'Rainbow Six Siege: Operation Neon Dawn Battle Pass & DLC Trailer | Ubisoft'
@@ -599,10 +609,10 @@ await r6api.getNews({ limit: 1 });
       categories: [
         'videos'
       ],
-      tag: null,
-      placement: null,
+      tag: undefined,
+      placement: undefined,
       type: 'videos',
-      readTime: null,
+      readTime: undefined,
       url: 'https://www.youtube.com/watch?v=7FBsynoyWlM',
       date: '2020-12-01T17:06:11.000Z'
     }
@@ -611,7 +621,7 @@ await r6api.getNews({ limit: 1 });
 ```
 
 </details>
-<!-- END:GETNEWS_OUTPUT -->
+<!-- END_SECTION:GETNEWS_OUTPUT -->
 
 ---
 
@@ -619,27 +629,29 @@ await r6api.getNews({ limit: 1 });
 
 Get Rainbow Six: Siege News by ID.
 
-(id: `string`, options) => `Promise<Object>`
+(id: `string`, options?) => `Promise<Object>`
 
 #### Options
 
+<!-- START_SECTION:GETNEWSBYID_OPTIONS -->
 | Param          | Type      | Required | Default   | Description              |
 | -------------- | --------- | -------- | --------- | ------------------------ |
 | raw            | `boolean` | false    | `false`   | Include raw API response |
 | locale         | `string`  | false    | `'en-us'` |                          |
 | fallbackLocale | `string`  | false    | `'en-us'` |                          |
+<!-- END_SECTION:GETNEWSBYID_OPTIONS -->
 
 ```js
 await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
 ```
 
-<!-- START:GETNEWSBYID_OUTPUT -->
+<!-- START_SECTION:GETNEWSBYID_OUTPUT -->
 <details>
 <summary>Output</summary>
 
 ```js
 {
-  total: 1093,
+  total: 1094,
   limit: 0,
   categories: 'all',
   media: 'all',
@@ -656,7 +668,7 @@ await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
       description: null
     },
     content: 'The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. Please see our [Designer\'s Notes](https://rainbow6.com/dn_y5s12) for more insight on the balancing changes coming with the update.\n\n# UPDATE\nUpdate - the quick match map pool will remain the same throughout Y5S1 and will rotate again in Y5S2.\n\n# BALANCING\n### BUCK \n*With you til the end of the line.*\n\n- Frag Grenades replaced with Claymores.\n- Increased Skeleton Key Magazine Capacity: \n  - Skeleton Key magazine capacity increased to 5 + 1\n  - Skeleton Key max ammo count is now 25+1\n\n### GOYO\n*Less is more.*\n\n- Reduced number of Volcán shields to 2 (down from 3).\n\n### JÄGER\n*Less of a pain-in-the-schnitzel.*\n\n- Now a 2-speed/2-armor operator.\n\n### MOZZIE\n*Still a shortie.*\n\n- Removed Super Shorty secondary.\n\n### YING\n*Lights, Camera, Action!*\n\n- Increased number of Candelas to 4 (up from 3).\n- Replaced Claymores with Smoke Grenades.\n- Increased T-95 LSW damage to 46 (up from 43).\n\n### M12 (Caveira)\n- Added a Razor Holographic Sight option to her M12.\n\n### TCSG12 (Kaid, Goyo)\n- Added an additional magazine to the TCSG12.\n- Reduced TCSG12 damage to 57 (down from 84).\n\n# BUG FIXES\n- FIXED – Barricade replication issues where the barricade is not destroyed for all players in game except the shooter.\n- FIXED – The Dynamic Play button does not update properly when last match was on an Event/Discovery playlist.\n- FIXED – Players can clip inside the excavator in EXT Construction Site of Oregon.\n- FIXED – Game boots with DX11 when players manually select the Vulkan executable in the steam installation folder.\n- FIXED – Minor menu/shop visual and cosmetic fixes.\n- FIXED – Lighting issue on Consulate map for consoles (hotfixed on PC on [March 30](https://twitter.com/rainbow6game/status/1244581743254024192?lang=en)).',
-    description: null,
+    description: undefined,
     categories: [
       'news',
       'rainbow-six',
@@ -676,7 +688,7 @@ await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
 ```
 
 </details>
-<!-- END:GETNEWSBYID_OUTPUT -->
+<!-- END_SECTION:GETNEWSBYID_OUTPUT -->
 
 ---
 
@@ -695,7 +707,7 @@ await r6api.custom(
 );
 ```
 
-<!-- START:CUSTOM_OUTPUT -->
+<!-- START_SECTION:CUSTOM_OUTPUT -->
 <details>
 <summary>Output</summary>
 
@@ -710,7 +722,7 @@ await r6api.custom(
 ```
 
 </details>
-<!-- END:CUSTOM_OUTPUT -->
+<!-- END_SECTION:CUSTOM_OUTPUT -->
 
 ---
 
@@ -724,8 +736,8 @@ If you're coding in TypeScript you can also import the typings and use the type-
 ```ts
 import R6API, { utils, typings, constants } from 'r6api.js'
 
-var yourVar; // any
-...
+const yourVar = 'r4-c'; // any
+
 if (utils.isWeaponName(yourVar)) {
   // Now your var has the WeaponName type
 }

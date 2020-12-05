@@ -4,8 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/update.yml'
-      - 'scripts/example.ts'
-      - 'scripts/methods.ts'
+      - 'scripts/*.ts'
       - 'examples/example.js'
       - 'src/methods/**'
       - 'src/constants.ts'
@@ -44,9 +43,12 @@ jobs:
           UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
           UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
 
+      - name: Update tables
+        run: yarn tables
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          message: '[auto] chore: update example or/and method responses'
+          message: '[auto] chore: update example, method responses and tables'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

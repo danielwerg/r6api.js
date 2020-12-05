@@ -95,6 +95,16 @@ export interface IOptions {
   regions?: RegionId | RegionId[] | 'all';
 }
 
+export const optionsDocs = [
+  [
+    'seasons', '`number \\| number[] \\| \'all\'`', 'false', '`-1`',
+    `Numbers from \`6\` to \`${Object.keys(SEASONS).slice(-1)[0]}\` or \`-1\``
+  ],
+  [
+    'regions', '`string \\| string[]`', 'false', '`[\'emea\', \'ncsa\', \'apac\']`', ''
+  ]
+];
+
 const getRankIconURL = (seasonId: SeasonId, rankId: RankId) =>
   `${GITHUB_ASSETS_URL}/ranks/${
     seasonId < 15 ? seasonId < 14 ? 'older_ranks' : 'old_ranks' : 'ranks'

@@ -1,42 +1,51 @@
-import { promises as fs} from 'fs';
-import { join } from 'path';
+import { promises as fsp } from 'fs';
 
 interface IOptions {
+  prefix?: string;
+  suffix?: string;
+  newLine?: boolean;
   style?: 'none' | 'codeBlock' | 'hiddenCodeBlock';
-  lang?: string;
+  codeBlockLang?: string;
+  hiddenCodeBlockSummary?: string;
 }
 
-export default async (name: string, content: string, options: IOptions = {}) => {
+export default async (
+  path: string, name: string, content: string, options: IOptions = {}
+) => {
 
-  const { style = 'hiddenCodeBlock', lang = 'js'} = options;
+  const {
+    prefix = '', suffix = '', style = 'none', codeBlockLang = '', hiddenCodeBlockSummary = ''
+  } = options;
+  const newLine = options.newLine ? '\n' : '';
 
-  const readmeFilePath = join(__dirname, '../readme.md');
-  const readmeFile = await fs.readFile(readmeFilePath, 'utf8')
-    .catch(err => console.log(err));
-  if (!readmeFile) return console.log('readme file not found');
+  const fileContent = await fsp.readFile(path, 'utf8')
+    .catch(err => { throw new Error(err); });
 
-  const startComment = `<!-- START:${name} -->`;
-  const endComment = `<!-- END:${name} -->`;
-
-  const startIndex = readmeFile.indexOf(startComment);
-  const endIndex = readmeFile.indexOf(endComment);
+  const startComment = `<!-- START_SECTION:${name} -->`;
+  const endComment = `<!-- END_SECTION:${name} -->`;
+  const startIndex = fileContent.indexOf(startComment);
+  const endIndex = fileContent.indexOf(endComment);
 
   if (startIndex < 0 || endIndex < 0)
-    return console.log(`Comment with name \`${name}\` not found`);
+    throw new Error(`Comment with name "${name}" not found`);
 
-  const firstPart = readmeFile.slice(0, startIndex + startComment.length);
-  const secondPart = readmeFile.slice(endIndex, readmeFile.length);
+  const firstHalf = fileContent.slice(0, startIndex + startComment.length);
+  const secondHalf = fileContent.slice(endIndex);
 
-  const STYLES = {
-    none: `\n${content}\n`,
-    codeBlock: `\n\`\`\`${lang}\n${content}\n\`\`\`\n`,
+  const getStyledContent = () => ({
+    none: content,
+    codeBlock: `\`\`\`${codeBlockLang}\n${content}\n\`\`\``,
     hiddenCodeBlock:
-      '\n<details>\n<summary>Output</summary>\n' +
-      `\n\`\`\`${lang}\n${content}\n\`\`\`\n` +
-      '\n</details>\n'
-  };
+      '<details>\n' +
+      `<summary>${hiddenCodeBlockSummary}</summary>\n\n` +
+      `\`\`\`${codeBlockLang}\n${content}\n\`\`\`\n\n` +
+      '</details>'
+  }[style]);
 
-  await fs.writeFile(readmeFilePath, firstPart + STYLES[style] + secondPart)
-    .catch(err => console.log(err));
+  await fsp.writeFile(
+    path,
+    `${firstHalf}${newLine}${prefix}${getStyledContent()}${suffix}${newLine}${secondHalf}`
+  )
+    .catch(err => { throw new Error(err); });
 
 };

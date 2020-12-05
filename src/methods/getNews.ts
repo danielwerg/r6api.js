@@ -54,6 +54,20 @@ export interface IOptions {
   fallbackLocale?: string;
 }
 
+export const optionsDocs = [
+  ['raw', '`boolean`', 'false', '`false`', 'Include raw API response'],
+  [
+    'category', '`string`', 'false', '`\'all\'`',
+    'all, game-updates, patch-notes, community, store, esports'
+  ],
+  ['media', '`string`', 'false', '`\'all\'`', 'all, news, videos'],
+  ['limit', '`number`', 'false', '`6`', ''],
+  ['skip', '`number`', 'false', '`0`', ''],
+  ['startIndex', '`number`', 'false', '`0`', ''],
+  ['locale', '`string`', 'false', '`\'en-us\'`', ''],
+  ['fallbackLocale', '`string`', 'false', '`\'en-us\'`', '']
+];
+
 export default async (options?: IOptions) => {
 
   const raw = options && options.raw || false;

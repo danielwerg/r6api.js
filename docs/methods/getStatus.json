@@ -22,9 +22,9 @@
     "impactedFeatures": []
   },
   {
-    "appId": "",
+    "appId": "6e3c99c9-6c3f-43f4-b4f6-f1a3143f2764",
     "name": "Rainbow Six Siege - PS5 - LIVE",
-    "spaceId": "",
+    "spaceId": "96c1d424-057e-4ff7-860b-6b9c9222bdbf",
     "mdm": "25365",
     "category": "Instance",
     "platform": "PS5",
@@ -33,9 +33,9 @@
     "impactedFeatures": []
   },
   {
-    "appId": "",
+    "appId": "76f580d5-7f50-47cc-bbc1-152d000bfe59",
     "name": "Rainbow Six Siege - XBOX SERIES X - LIVE",
-    "spaceId": "",
+    "spaceId": "631d8095-c443-4e21-b301-4af1a0929c27",
     "mdm": "25366",
     "category": "Instance",
     "platform": "XBOX SERIES X",
