@@ -6,10 +6,8 @@ const R6API = require('r6api.js').default;
 // dotenv.config();
 // import R6API from 'r6api.js';
 
-const r6api = new R6API({
-  email: process.env.UBI_EMAIL,
-  password: process.env.UBI_PASSWORD
-});
+const { UBI_EMAIL: email = '', UBI_PASSWORD: password = '' } = process.env;
+const r6api = new R6API({ email, password });
 
 // export default async () => { // ES6
 exports.default = async () => {
@@ -24,6 +22,6 @@ exports.default = async () => {
   if (!stats) return 'Stats not found';
   const { pvp: { general } } = stats;
 
-  return `${username} has played ${general.matches} matches.`;
+  return `${player.username} has played ${general.matches} matches.`;
 
 };
