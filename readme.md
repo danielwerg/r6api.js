@@ -355,6 +355,7 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
         name: 'Neon Dawn',
         color: '#D14007',
         image: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4.jpg',
+        releaseDate: '2020-12-01T00:00:00.000Z',
         regions: {
           emea: {
             id: 'emea',
