@@ -1,8 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
-  Platform, UUID, SeasonId, SeasonIdExtended,
-  RankId, OldRankId, RegionId
+  Platform, UUID, SeasonId, SeasonIdExtended, RankId, OldRankId, RegionId, BoardId
 } from '../typings';
 import { REGIONS, SEASONS, RANKS, OLD_RANKS, GITHUB_ASSETS_URL } from '../constants';
 import { URLS, getCDNURL, getKD, getWinRate } from '../utils';
@@ -94,6 +93,7 @@ export interface IGetRanks {
 export interface IOptions {
   seasons?: SeasonIdExtended | SeasonIdExtended[] | 'all';
   regions?: RegionId | RegionId[] | 'all';
+  boardId?: BoardId;
 }
 
 export const optionsDocs = [
@@ -103,6 +103,9 @@ export const optionsDocs = [
   ],
   [
     'regions', '`string \\| string[]`', 'false', '`[\'emea\', \'ncsa\', \'apac\']`', ''
+  ],
+  [
+    'board', '`\'pvp_ranked\' \\| \'pvp_casual\'`', 'false', '`\'pvp_ranked\'`', ''
   ]
 ];
 
@@ -117,6 +120,9 @@ const getRankName = (seasonId: SeasonId, rankId: RankId): string =>
 const getMatchResult = (id: IRank['last_match_result']) =>
   ({ 0: 'unknown', 1: 'win', 2: 'loss', 3: 'abandon' }[id]);
 
+const getBoardName = (boardId: BoardId) =>
+  ({ 'pvp_ranked': 'Ranked', 'pvp_casual': 'Casual' })[boardId];
+
 export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
   const seasons: SeasonIdExtended[] = options && options.seasons === 'all'
@@ -128,10 +134,12 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
     : (options && options.regions && [].concat(options.regions as any))
       || (Object.keys(REGIONS) as RegionId[]);
 
+  const board = options && options.boardId || 'pvp_ranked';
+
   return Promise.all(seasons.map(season =>
     Promise.all(regions.map(region =>
       getToken()
-        .then(fetch<IApiResponse>(URLS.RANKS(platform, ids, season, region)))
+        .then(fetch<IApiResponse>(URLS.RANKS(platform, ids, season, region, board)))
     ))
   ))
     .then(res =>
@@ -141,7 +149,12 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
           .reduce((acc, { players }) => {
             Object.entries(players)
               .map(([id, { season: seasonId, region: regionId, ...val }]) => {
-                acc[id] = acc[id] || { id: id as UUID, seasons: {} };
+                acc[id] = acc[id] || {
+                  id: id as UUID,
+                  boardId: board,
+                  boardName: getBoardName(board),
+                  seasons: {}
+                };
                 acc[id].seasons[seasonId] = acc[id].seasons[seasonId] || {
                   id: seasonId,
                   name: SEASONS[seasonId].name,

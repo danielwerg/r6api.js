@@ -2,7 +2,7 @@ import {
   UUID, Platform, PlatformAll, PlatformAllExtended, RegionId,
   SeasonId, SeasonIdExtended, OldSeasonId, RankId, OldRankId,
   OperatorName, WeaponTypeIndex, WeaponTypeId, WeaponName,
-  StatsCategoryName
+  BoardId, StatsCategoryName
 } from './typings';
 import {
   BASE_API_URL, ALT_API_URL, STATUS_API_URL,
@@ -59,8 +59,10 @@ export const URLS = {
     getStatsBase(platform) + `/playerstats2/statistics?populations=${ids.join(',')}` +
     '&statistics=generalpvp_timeplayed,rankedpvp_timeplayed,casualpvp_timeplayed,' +
     'custompvp_timeplayed,generalpve_timeplayed',
-  RANKS: (platform: Platform, ids: UUID[], season: number, region: string) =>
-    getStatsBase(platform) + '/r6karma/players?board_id=pvp_ranked' +
+  RANKS: (
+    platform: Platform, ids: UUID[], season: SeasonIdExtended, region: RegionId, board: BoardId
+  ) =>
+    getStatsBase(platform) + `/r6karma/players?board_id=${board}` +
     `&profile_ids=${ids}&region_id=${region}&season_id=${season}`,
   STATS: (platform: Platform, ids: UUID[], stats: string) =>
     getStatsBase(platform) + '/playerstats2/statistics' +

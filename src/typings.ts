@@ -24,5 +24,6 @@ export type WeaponTypeId = typeof constants.WEAPONTYPES[
 export type WeaponName = keyof typeof constants.WEAPONS;
 
 export type MPType = 'pvp' | 'pve';
+export type BoardId = 'pvp_ranked' | 'pvp_casual';
 
 export type StatsCategoryName = keyof typeof constants.STATS_CATEGORIES;

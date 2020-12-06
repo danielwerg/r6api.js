@@ -305,10 +305,11 @@ Ids limit: `200`
 #### Options
 
 <!-- START_SECTION:GETRANKS_OPTIONS -->
-| Param   | Type                          | Required | Default                    | Description                      |
-| ------- | ----------------------------- | -------- | -------------------------- | -------------------------------- |
-| seasons | `number \| number[] \| 'all'` | false    | `-1`                       | Numbers from `6` to `20` or `-1` |
-| regions | `string \| string[]`          | false    | `['emea', 'ncsa', 'apac']` |                                  |
+| Param   | Type                           | Required | Default                    | Description                      |
+| ------- | ------------------------------ | -------- | -------------------------- | -------------------------------- |
+| seasons | `number \| number[] \| 'all'`  | false    | `-1`                       | Numbers from `6` to `20` or `-1` |
+| regions | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']` |                                  |
+| board   | `'pvp_ranked' \| 'pvp_casual'` | false    | `'pvp_ranked'`             |                                  |
 <!-- END_SECTION:GETRANKS_OPTIONS -->
 
 #### Seasons reference
@@ -408,6 +409,8 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
 > **Note:** If player is unranked their max mmr (`max.mmr`) will always be `0`
 
 > **Note:** Since Steal Wave all regions will return same data
+
+> **Note:** Values for `previousMmr`, `nextMmr`, `topRankPosition`, `(current|max).id` and `max.mmr` will always be `0`, `(current|max).name` will always be `Unranked` if `boardId` is `pvp_casual`
 
 ---
 
