@@ -350,6 +350,8 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
 [
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    boardId: 'pvp_ranked',
+    boardName: 'Ranked',
     seasons: {
       '20': {
         id: 20,
