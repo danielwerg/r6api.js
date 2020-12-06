@@ -30,7 +30,7 @@
 
 * [Links](#Links)
 * [Installation](#Installation)
-* [Init](#Init)
+* [Initialization](#Initialization)
 * [Example](#Example)
 * [API](#API)
 * [Typescript Integrations](#TypeScript-integrations)
@@ -51,17 +51,11 @@ $ yarn add r6api.js
 $ npm install r6api.js
 ```
 
-## Init
+## Initialization
 
-To setup this module, you need to provide Ubisoft accounts credentials (email and password).
-You don't have to use you real account.
+To setup this package, you need to provide Ubisoft account credentials (email and password). Credentials should be handled as you would handle any other secure value, it is recommended to use [dotenv](https://github.com/motdotla/dotenv) package to load environment variables from a `.env`.
 
-How to create account?
-
-* Go to [temp-mail.org](https://temp-mail.org)
-* Copy your temporal email
-* Go to [account.ubisoft.com/en-us/login](https://account.ubisoft.com/en-us/login)
-* Provide all details there and remember your email and password
+**Do not** use your real Ubisoft account. It is highly recommended to create a new account for using this package. Visit [account.ubisoft.com/login](https://account.ubisoft.com/login) to create new account.
 
 ## Example
 
