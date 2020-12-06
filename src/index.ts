@@ -19,7 +19,7 @@ export * as typings from './typings';
 export * as constants from './constants';
 export * as utils from './utils';
 
-const checkArgs = <T extends (...args: any) => any>({
+const checkQueryLimit = <T extends (...args: any) => any>({
   method, platform, query, options, limit
 }: {
   method: T;
@@ -28,7 +28,7 @@ const checkArgs = <T extends (...args: any) => any>({
   options?: any;
   limit: number;
 }): ReturnType<T> => {
-  const queryArray = [].concat(query as any);
+  const queryArray = Array.isArray(query) ? query : [query];
   if (queryArray.length > limit)
     return Promise.reject(
       new TypeError(`You can't pass more than ${limit} ids/usernames`)
@@ -46,22 +46,22 @@ export default class R6API {
   }
 
   findByUsername = (platform: PlatformAll, query: QueryString) =>
-    checkArgs({ method: _findByUsername, platform, query, limit: 50 });
+    checkQueryLimit({ method: _findByUsername, platform, query, limit: 50 });
 
   findById = (platform: PlatformAllExtended, query: QueryUUID | QueryString) =>
-    checkArgs({ method: _findById, platform, query, limit: 50 })
+    checkQueryLimit({ method: _findById, platform, query, limit: 50 })
 
   getPlaytime = (platform: Platform, query: QueryUUID) =>
-    checkArgs({ method: _getPlaytime, platform, query, limit: 200 })
+    checkQueryLimit({ method: _getPlaytime, platform, query, limit: 200 })
 
   getProgression = (platform: Platform, query: QueryUUID) =>
-    checkArgs({ method: _getProgression, platform, query, limit: 200 })
+    checkQueryLimit({ method: _getProgression, platform, query, limit: 200 })
 
   getRanks = (platform: Platform, query: QueryUUID, options?: IGetRanksOptions) =>
-    checkArgs({ method: _getRanks, platform, query, options, limit: 200 })
+    checkQueryLimit({ method: _getRanks, platform, query, options, limit: 200 })
 
   getStats = (platform: Platform, query: QueryUUID, options?: IGetStatsOptions) =>
-    checkArgs({ method: _getStats, platform, query, options, limit: 200 })
+    checkQueryLimit({ method: _getStats, platform, query, options, limit: 200 })
 
   getStatus = _getStatus
   custom = _custom
