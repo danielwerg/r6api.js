@@ -82,6 +82,7 @@ interface ISeasons {
     name: string;
     color: string;
     image: string;
+    releaseDate: string;
     regions: IRegions;
   };
 }
@@ -146,6 +147,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                   name: SEASONS[seasonId].name,
                   color: SEASONS[seasonId].color,
                   image: getCDNURL(SEASONS[seasonId].image, 'jpg'),
+                  releaseDate: SEASONS[seasonId].releaseDate,
                   regions: {}
                 };
                 acc[id].seasons[seasonId].regions[regionId] = {
