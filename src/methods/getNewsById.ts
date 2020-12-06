@@ -7,7 +7,7 @@ export interface INewsItem {
   categories: string[];
   placement?: string[] | null;
   type: string;
-  date: Date;
+  date: string;
   title: string;
   abstract?: string;
   content: string;
