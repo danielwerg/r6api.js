@@ -1,20 +1,20 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
-import { Platform, UUID } from '../typings';
+import { PlatformAllExtended, UUID } from '../typings';
 import { URLS, getAvatars } from '../utils';
 
 interface IProfile {
   profileId: UUID;
   userId: UUID;
   idOnPlatform: UUID | string;
-  platformType: Platform;
+  platformType: PlatformAllExtended;
   nameOnPlatform: string;
 }
 interface IApiResponse {
   profiles: IProfile[];
 }
 
-export default (platform: Platform | 'all', ids: UUID[]) =>
+export default (platform: PlatformAllExtended, ids: UUID[] | string[]) =>
   getToken()
     .then(
       platform === 'all'

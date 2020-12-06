@@ -13,7 +13,7 @@ import _getStatus from './methods/getStatus';
 import _custom from './methods/custom';
 import _getNews from './methods/getNews';
 import _getNewsById from './methods/getNewsById';
-import { Platform } from './typings';
+import { UUID, Platform, PlatformAll, PlatformAllExtended } from './typings';
 
 export * as typings from './typings';
 export * as constants from './constants';
@@ -23,8 +23,8 @@ const checkArgs = <T extends (...args: any) => any>({
   method, platform, query, options, limit
 }: {
   method: T;
-  platform: Platform | 'all';
-  query: string | string[];
+  platform: PlatformAllExtended;
+  query: QueryUUID | QueryString;
   options?: any;
   limit: number;
 }): ReturnType<T> => {
@@ -36,28 +36,31 @@ const checkArgs = <T extends (...args: any) => any>({
   return method(platform, queryArray, options);
 };
 
+type QueryUUID = UUID | UUID[];
+type QueryString = string | string[];
+
 export default class R6API {
 
   constructor(options: { email: string; password: string }) {
     _setCredentials(options.email, options.password);
   }
 
-  findByUsername = (platform: Platform, query: string | string[]) =>
+  findByUsername = (platform: PlatformAll, query: QueryString) =>
     checkArgs({ method: _findByUsername, platform, query, limit: 50 });
 
-  findById = (platform: Platform | 'all', query: string | string[]) =>
+  findById = (platform: PlatformAllExtended, query: QueryUUID | QueryString) =>
     checkArgs({ method: _findById, platform, query, limit: 50 })
 
-  getPlaytime = (platform: Platform, query: string | string[]) =>
+  getPlaytime = (platform: Platform, query: QueryUUID) =>
     checkArgs({ method: _getPlaytime, platform, query, limit: 200 })
 
-  getProgression = (platform: Platform, query: string | string[]) =>
+  getProgression = (platform: Platform, query: QueryUUID) =>
     checkArgs({ method: _getProgression, platform, query, limit: 200 })
 
-  getRanks = (platform: Platform, query: string | string[], options?: IGetRanksOptions) =>
+  getRanks = (platform: Platform, query: QueryUUID, options?: IGetRanksOptions) =>
     checkArgs({ method: _getRanks, platform, query, options, limit: 200 })
 
-  getStats = (platform: Platform, query: string | string[], options?: IGetStatsOptions) =>
+  getStats = (platform: Platform, query: QueryUUID, options?: IGetStatsOptions) =>
     checkArgs({ method: _getStats, platform, query, options, limit: 200 })
 
   getStatus = _getStatus

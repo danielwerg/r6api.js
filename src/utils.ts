@@ -1,6 +1,6 @@
 import {
-  UUID, Platform, RegionId,
-  SeasonId, OldSeasonId, RankId, OldRankId,
+  UUID, Platform, PlatformAll, PlatformAllExtended, RegionId,
+  SeasonId, SeasonIdExtended, OldSeasonId, RankId, OldRankId,
   OperatorName, WeaponTypeIndex, WeaponTypeId, WeaponName,
   StatsCategoryName
 } from './typings';
@@ -8,7 +8,7 @@ import {
   BASE_API_URL, ALT_API_URL, STATUS_API_URL,
   API_VERSIONS, SPACE_IDS, SANDBOXES,
   AVATAR_BASE_URL, CDN_BASE_URL,
-  PLATFORMS, REGIONS,
+  PLATFORMS, PLATFORMSALL, REGIONS,
   SEASONS, OLD_SEASONS, RANKS, OLD_RANKS,
   OPERATORS, WEAPONTYPES, WEAPONS,
   STATS_CATEGORIES
@@ -45,11 +45,11 @@ const getStatsBase = (platform: Platform) =>
 
 export const URLS = {
   LOGIN: () => `${getBaseVersion(3)}/profiles/sessions`,
-  BYUSERNAME: (platform: Platform, usernames: string[]) =>
+  BYUSERNAME: (platform: PlatformAll, usernames: string[]) =>
     getBaseVersion(2) +
     `/profiles?nameOnPlatform=${usernames.join(',')}&platformType=${platform}`,
-  BYID: (platform: Platform, ids: UUID[]) =>
-    `${getBaseVersion(2)}/profiles?platformType=${platform}&idOnPlatform=${ids.join(',')}`,
+  BYID: (platform: PlatformAll, ids: UUID[] | string[]) =>
+    `${getBaseVersion(2)}/profiles?idOnPlatform=${ids.join(',')}&platformType=${platform}`,
   BYUSERID: (ids: UUID[]) =>
     `${getBaseVersion(2)}/profiles?userId=${ids.join(',')}`,
   PROGRESS: (platform: Platform, ids: UUID[]) =>
@@ -88,20 +88,29 @@ export const URLS = {
 export const isPlatform = (value: string): value is Platform =>
   PLATFORMS.map(platform => platform.toString()).includes(value);
 
+export const isPlatformAll = (value: string): value is PlatformAll =>
+  PLATFORMSALL.map(platform => platform.toString()).includes(value);
+
+export const isPlatformAllExtended = (value: string): value is PlatformAllExtended =>
+  [...PLATFORMSALL.map(platform => platform.toString()), 'all'].includes(value);
+
 export const isRegionId = (value: string): value is RegionId =>
   Object.keys(REGIONS).includes(value);
 
 export const isSeasonId = (value: number): value is SeasonId =>
-  Object.keys(SEASONS).map(season => parseInt(season)).includes(value);
+  Object.keys(SEASONS).map(season => Number(season)).includes(value);
+
+export const isSeasonIdExtended = (value: number): value is SeasonIdExtended =>
+  Object.keys(SEASONS).map(season => Number(season)).includes(value);
 
 export const isOldSeasonId = (value: number): value is OldSeasonId =>
-  Object.keys(OLD_SEASONS).map(season => parseInt(season)).includes(value);
+  Object.keys(OLD_SEASONS).map(season => Number(season)).includes(value);
 
 export const isRankId = (value: number): value is RankId =>
-  Object.keys(RANKS).map(rank => parseInt(rank)).includes(value);
+  Object.keys(RANKS).map(rank => Number(rank)).includes(value);
 
 export const isOldRankId = (value: number): value is OldRankId =>
-  Object.keys(OLD_RANKS).map(rank => parseInt(rank)).includes(value);
+  Object.keys(OLD_RANKS).map(rank => Number(rank)).includes(value);
 
 export const isOperatorName = (value: string): value is OperatorName =>
   Object.values(OPERATORS).map(op => op.name).includes(value);

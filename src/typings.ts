@@ -3,6 +3,8 @@ import * as constants from './constants';
 export type UUID = string;
 
 export type Platform = typeof constants.PLATFORMS[number];
+export type PlatformAll = typeof constants.PLATFORMSALL[number];
+export type PlatformAllExtended = PlatformAll | 'all';
 
 export type RegionId = keyof typeof constants.REGIONS;
 

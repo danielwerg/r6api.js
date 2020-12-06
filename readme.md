@@ -117,11 +117,12 @@ Daniel.Nt has played 5169 matches.
 
 ### Definitions
 
-| Param      | Type                 | Description                                                           |
-| ---------- | -------------------- | --------------------------------------------------------------------- |
-| platform   | `string`             | Either `uplay` (pc), `xbl` (Xbox Live) or `psn` (PlayStation Network) |
-| username/s | `string \| string[]` |                                                                       |
-| id/s       | `string \| string[]` |                                                                       |
+| Param       | Type                 | Description                                                           |
+| ----------- | -------------------- | --------------------------------------------------------------------- |
+| platform    | `string`             | Either `uplay` (pc), `xbl` (Xbox Live) or `psn` (PlayStation Network) |
+| platformAll | `string`             | `platform` or `steam`                                                 |
+| username/s  | `string \| string[]` |                                                                       |
+| id/s        | `string \| string[]` |                                                                       |
 
 ---
 
@@ -145,7 +146,9 @@ const r6api = new R6API({ email, password });
 
 Find player by their username.
 
-(platform, username/s) => `Promise<Array>`
+Usernames limit: `50`
+
+(platformAll, username/s) => `Promise<Array>`
 
 ```js
 await r6api.findByUsername('uplay', 'Daniel.Nt');
@@ -181,7 +184,11 @@ await r6api.findByUsername('uplay', 'Daniel.Nt');
 
 Find player by their id.
 
-(platform | 'all', id/s) => `Promise<Array>`
+Ids limit: `50`
+
+(platformAll | 'all', id/s) => `Promise<Array>`
+
+> **Note:** To search by `userId` set `platform` to `'all'`
 
 ```js
 await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
@@ -213,42 +220,11 @@ await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 ---
 
-### getProgression
-
-Get level, xp and alpha pack drop chance for a player.
-
-(platform, id/s) => `Promise<Array>`
-
-```js
-await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
-```
-
-<!-- START_SECTION:GETPROGRESSION_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-[
-  {
-    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    level: 297,
-    xp: 73534,
-    lootboxProbability: {
-      raw: 820,
-      percent: '8.20%'
-    }
-  }
-]
-```
-
-</details>
-<!-- END_SECTION:GETPROGRESSION_OUTPUT -->
-
----
-
 ### getPlaytime
 
 Get playtime for a player.
+
+Ids limit: `200`
 
 (platform, id/s) => `Promise<Array>`
 
@@ -283,9 +259,46 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 ---
 
+### getProgression
+
+Get level, xp and alpha pack drop chance for a player.
+
+Ids limit: `200`
+
+(platform, id/s) => `Promise<Array>`
+
+```js
+await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+```
+
+<!-- START_SECTION:GETPROGRESSION_OUTPUT -->
+<details>
+<summary>Output</summary>
+
+```js
+[
+  {
+    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    level: 297,
+    xp: 73534,
+    lootboxProbability: {
+      raw: 820,
+      percent: '8.20%'
+    }
+  }
+]
+```
+
+</details>
+<!-- END_SECTION:GETPROGRESSION_OUTPUT -->
+
+---
+
 ### getRanks
 
 Get seasonal stats for a player.
+
+Ids limit: `200`
 
 (platform, id/s, options?) => `Promise<Array>`
 
@@ -400,6 +413,8 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
 ### getStats
 
 Get summary stats for a player.
+
+Ids limit: `200`
 
 (platform, id/s, options?) => `Promise<Array>`
 
