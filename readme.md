@@ -305,16 +305,19 @@ Ids limit: `200`
 #### Options
 
 <!-- START_SECTION:GETRANKS_OPTIONS -->
+
 | Param   | Type                           | Required | Default                    | Description                      |
 | ------- | ------------------------------ | -------- | -------------------------- | -------------------------------- |
 | seasons | `number \| number[] \| 'all'`  | false    | `-1`                       | Numbers from `6` to `20` or `-1` |
 | regions | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']` |                                  |
 | board   | `'pvp_ranked' \| 'pvp_casual'` | false    | `'pvp_ranked'`             |                                  |
+
 <!-- END_SECTION:GETRANKS_OPTIONS -->
 
 #### Seasons reference
 
 <!-- START_SECTION:SEASONS_TABLE -->
+
 | ID   | Name         | ● | ID   | Name          | ● | ID   | Name           |
 | ---- | ------------ | - | ---- | ------------- | - | ---- | -------------- |
 | `6`  | Health       |   | `11` | Grim Sky      |   | `16` | Shifting Tides |
@@ -322,6 +325,7 @@ Ids limit: `200`
 | `8`  | White Noise  |   | `13` | Burnt Horizon |   | `18` | Steel Wave     |
 | `9`  | Chimera      |   | `14` | Phantom Sight |   | `19` | Shadow Legacy  |
 | `10` | Para Bellum  |   | `15` | Ember Rise    |   | `20` | Neon Dawn      |
+
 <!-- END_SECTION:SEASONS_TABLE -->
 
 > **Note:** `-1` will always return current season
@@ -331,11 +335,13 @@ Ids limit: `200`
 #### Regions reference
 
 <!-- START_SECTION:REGIONS_TABLE -->
+
 | Shorthand | Meaning                          |
 | --------- | -------------------------------- |
 | `emea`    | Europe, Middle East and Africa   |
 | `ncsa`    | North, Central and South America |
 | `apac`    | Asia Pacific                     |
+
 <!-- END_SECTION:REGIONS_TABLE -->
 
 ```js
@@ -427,10 +433,12 @@ Ids limit: `200`
 #### Options
 
 <!-- START_SECTION:GETSTATS_OPTIONS -->
+
 | Param      | Type       | Required | Default      | Description              |
 | ---------- | ---------- | -------- | ------------ | ------------------------ |
 | raw        | `boolean`  | false    | `false`      | Include raw API response |
 | categories | `string[]` | false    | Requests all | Categories to request    |
+
 <!-- END_SECTION:GETSTATS_OPTIONS -->
 
 #### Categories reference
@@ -580,6 +588,7 @@ Get Rainbow Six: Siege News.
 #### Options
 
 <!-- START_SECTION:GETNEWS_OPTIONS -->
+
 | Param          | Type      | Required | Default   | Description                                               |
 | -------------- | --------- | -------- | --------- | --------------------------------------------------------- |
 | raw            | `boolean` | false    | `false`   | Include raw API response                                  |
@@ -590,6 +599,7 @@ Get Rainbow Six: Siege News.
 | startIndex     | `number`  | false    | `0`       |                                                           |
 | locale         | `string`  | false    | `'en-us'` |                                                           |
 | fallbackLocale | `string`  | false    | `'en-us'` |                                                           |
+
 <!-- END_SECTION:GETNEWS_OPTIONS -->
 
 ```js
@@ -649,11 +659,13 @@ Get Rainbow Six: Siege News by ID.
 #### Options
 
 <!-- START_SECTION:GETNEWSBYID_OPTIONS -->
+
 | Param          | Type      | Required | Default   | Description              |
 | -------------- | --------- | -------- | --------- | ------------------------ |
 | raw            | `boolean` | false    | `false`   | Include raw API response |
 | locale         | `string`  | false    | `'en-us'` |                          |
 | fallbackLocale | `string`  | false    | `'en-us'` |                          |
+
 <!-- END_SECTION:GETNEWSBYID_OPTIONS -->
 
 ```js
