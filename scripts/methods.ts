@@ -88,9 +88,7 @@ import insertContent from './insertContent';
     return await fsp.readFile(getMethodsDocsPath(name), 'utf8');
   };
 
-  for (const i in filteredMethods) {
-
-    const [name, output] = filteredMethods[i];
+  for (const [name, output] of filteredMethods) {
 
     const prevOutput = await getMethodsDocsFile(name);
 

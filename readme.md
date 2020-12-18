@@ -364,7 +364,7 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
         name: 'Neon Dawn',
         color: '#D14007',
         image: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4.jpg',
-        releaseDate: '2020-12-01T00:00:00.000Z',
+        releaseDate: new Date('2020-12-01T00:00:00.000Z'),
         regions: {
           emea: {
             id: 'emea',
@@ -375,13 +375,13 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
               id: 0,
               name: 'Unranked',
               mmr: 3089,
-              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png'
+              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
             },
             max: {
               id: 0,
               name: 'Unranked',
               mmr: 0,
-              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png'
+              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
             },
             lastMatch: {
               result: 'unknown',
@@ -612,7 +612,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1094,
+  total: 1099,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -622,24 +622,27 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: '7FBsynoyWlM',
-      title: 'Rainbow Six Siege: Operation Neon Dawn Battle Pass & DLC Trailer | Ubisoft',
-      abstract: undefined,
+      id: '21R6wWgCuUNonUFRRnCMKv',
+      title: 'UP TO 67% OFF RAINBOW SIX SIEGE FOR WINTER SALE!',
+      abstract: 'Check out our coolest deals for the season',
       thumbnail: {
-        url: 'https://i.ytimg.com/vi/7FBsynoyWlM/maxresdefault.jpg',
-        description: 'Rainbow Six Siege: Operation Neon Dawn Battle Pass & DLC Trailer | Ubisoft'
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/79q5K4MY2GNxCevcayygWe/77ba20117908136fcf326a608f7897cf/R6-news-winter-sale2020-brandspec-r6s-latam_960x540_en.jpg',
+        description: 'Ubisoft Store Rainbow Six Siege Winter Sale Thumbnail Image'
       },
-      content: '[video](https://www.youtube.com/embed/7FBsynoyWlM)',
-      description: 'Get the Operation Neon Dawn Battle Pass today! Get rewarded for your playtime with 100 tiers of unlockable rewards until February 22. Learn more at rainbow6.com/battlepass\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a creator of worlds, committed to enriching players\' lives with original and memorable gaming experiences. Our rich portfolio of world-renowned brands includes: Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division.  We are dedicated to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. To learn more, please visit www.ubisoft.com.\n \n© 2020 Ubisoft Entertainment. All Rights Reserved. Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the US and/or other countries.\n\nRainbow Six Siege: Operation Neon Dawn Battle Pass & DLC Trailer | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
+      content: 'Prepare to be snowed in by a blizzard of cool deals during our Winter Sale and save up to 67% off Rainbow Six Siege!\n\nTeam up with your friends and engage in intense 5v5 combat with Rainbow Six Siege at up to 67% off. You can also save on the Ultimate Edition and unlock the latest operators.\n\nThe Ultimate Edition includes:\n- Year 1-4 Passes\n- Year 5 Pass which includes VIP member perks, 6 new Operators and customization content!\n\nCheck out our Winter Sale today to shop amazing discounts on Rainbow Six Siege!\n\n[SHOP NOW](https://store.ubi.com/us/tom-clancys-rainbow-six-siege/56c494ad88a7e300458b4d5a.html?lang=en_US)\n\n*Valid on select titles. Certain conditions apply. Offer ends January 7, 2021.*',
+      description: undefined,
       categories: [
-        'videos'
+        'rainbow-six',
+        'rainbow-six-siege',
+        'community',
+        'news'
       ],
-      tag: undefined,
-      placement: undefined,
-      type: 'videos',
-      readTime: undefined,
-      url: 'https://www.youtube.com/watch?v=7FBsynoyWlM',
-      date: '2020-12-01T17:06:11.000Z'
+      tag: 'BR-rainbow-six GA-siege',
+      placement: null,
+      type: 'news',
+      readTime: '1',
+      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/21R6wWgCuUNonUFRRnCMKv/up-to-67-off-rainbow-six-siege-for-winter-sale',
+      date: '2020-12-17T18:00:00.000Z'
     }
   ]
 }

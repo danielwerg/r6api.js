@@ -34,31 +34,31 @@ export const OLD_SEASONS = <const>{
     name: 'Black Ice',
     color: '#2e93b3',
     image: '67sZXc4UuXK2YPq8uj0mgE/6d0a5e1c6a342f5219cba2fc89e0ba14/r6s-seasons-y1s1',
-    releaseDate: new Date('February 2, 2016').toISOString()
+    releaseDate: new Date('2016-02-02')
   },
   2: {
     name: 'Dust Line',
     color: '#d0a344',
     image: '5u2ecpIe98X528KgYQiEt/5833e27e347176f5e041cc533d48ac95/r6s-seasons-y1s2',
-    releaseDate: new Date('May 10, 2016').toISOString()
+    releaseDate: new Date('2016-05-10')
   },
   3: {
     name: 'Skull Rain',
     color: '#47893b',
     image: '2X0s4QopJikcMNN4qg9KPS/5ef0ae117679ee7b1342c776a77c9dd4/r6s-seasons-y1s3',
-    releaseDate: new Date('August 2, 2016').toISOString()
+    releaseDate: new Date('2016-08-02')
   },
   4: {
     name: 'Red Crow',
     color: '#bd1e2c',
     image: '66IKfs4aSnSkxaToTmmVBt/1532ccea8dd02b3ea44f254e4fdac27f/r6s-seasons-y1s4',
-    releaseDate: new Date('November 17, 2016').toISOString()
+    releaseDate: new Date('2016-11-17')
   },
   5: {
     name: 'Velvet Shell',
     color: '#723093',
     image: '5OKGWvBbiscdZNmjr0PP9q/f5cff0dae8546193f9601fcf703f7f0e/r6s-seasons-y2s1',
-    releaseDate: new Date('February 7, 2017').toISOString()
+    releaseDate: new Date('2017-02-07')
   }
 };
 
@@ -67,91 +67,91 @@ export const SEASONS = <const>{
     name: 'Health',
     color: '#0050b3',
     image: '2w0kuPWW4vZS2MvHxpjgKL/527a78f482f03250f48ee05fabb843a9/r6s-seasons-y2s2',
-    releaseDate: new Date('June 7, 2017').toISOString()
+    releaseDate: new Date('2017-06-07')
   },
   7: {
     name: 'Blood Orchid',
     color: '#ca361c',
     image: '5Is8lRiLLAaU0Uaj46Bu5Z/d46a8652cdf16426b7c9a0d634442be5/r6s-seasons-y2s3',
-    releaseDate: new Date('September 5, 2017').toISOString()
+    releaseDate: new Date('2017-09-05')
   },
   8: {
     name: 'White Noise',
     color: '#006543',
     image: '6FvQKw65QzOqhVKxbjBg1Z/70ea9eb8865182504f74cfea10f88c0a/r6s-seasons-y2s4',
-    releaseDate: new Date('December 5, 2017').toISOString()
+    releaseDate: new Date('2017-12-05')
   },
   9: {
     name: 'Chimera',
     color: '#ffc113',
     image: '35ZyIYUW7odr1tiGyGNd8R/8a578688e5c46ed779a382c940bf270b/rainbow6siege-chimera-thumb_318068',
-    releaseDate: new Date('March 6, 2018').toISOString()
+    releaseDate: new Date('2018-03-06')
   },
   10: {
     name: 'Para Bellum',
     color: '#949f39',
     image: '522ZBrBzlJMoTi63hrwuna/3f9007ceaa80b8110fa282937309ac1e/rainbow6siege_parabellum_thumb_323480',
-    releaseDate: new Date('June 7, 2018').toISOString()
+    releaseDate: new Date('2018-06-07')
   },
   11: {
     name: 'Grim Sky',
     color: '#81a0c1',
     image: '4y07zikRXB4BcyRQy5Anoe/2e6de56c3ea34cadb300326102963340/rainbow6siege_grimsky_thumb_333789',
-    releaseDate: new Date('September 4, 2018').toISOString()
+    releaseDate: new Date('2018-09-04')
   },
   12: {
     name: 'Wind Bastion',
     color: '#aa854f',
     image: '1VeuGBLdSsadK5MdLfCL9k/b9e213c4aeb8dfe6e1f137968770912a/rainbow6siege_windbastion_thumb_340468',
-    releaseDate: new Date('December 4, 2018').toISOString()
+    releaseDate: new Date('2018-12-04')
   },
   13: {
     name: 'Burnt Horizon',
     color: '#d2005a',
     image: '4J2E0yJ2cZsKgx5OrFGkvR/0f966f31b3d8ad2ef13926b075769334/r6s-seasons-y4s1',
-    releaseDate: new Date('March 6, 2019').toISOString()
+    releaseDate: new Date('2019-03-06')
   },
   14: {
     name: 'Phantom Sight',
     color: '#304395',
     image: '29ze1Zxf173boRuyaFHuQV/c240df821c3ec407b09118c68a1300c0/r6s-seasons-y4s2',
-    releaseDate: new Date('June 11, 2019').toISOString()
+    releaseDate: new Date('2019-06-11')
   },
   15: {
     name: 'Ember Rise',
     color: '#156309',
     image: '1JeHAGdUglVNSUUvSkxSia/1c8b76a4256091ca40434e89addaacf2/r6s-seasons-y4s3',
-    releaseDate: new Date('September 11, 2019').toISOString()
+    releaseDate: new Date('2019-09-11')
   },
   16: {
     name: 'Shifting Tides',
     color: '#089eb3',
     image: '6uZSbKGZiwF7Zv5egr4zks/5597030f075ad99c0a18a1dcea34ef87/r6s-seasons-y4s4',
-    releaseDate: new Date('December 3, 2019').toISOString()
+    releaseDate: new Date('2019-12-03')
   },
   17: {
     name: 'Void Edge',
     color: '#946a97',
     image: '2584xuwMoCH1FJc9n34jLo/9dfec73fd217a889a7bfe66e1f412cd6/r6s-seasons-y5s1',
-    releaseDate: new Date('March 10, 2020').toISOString()
+    releaseDate: new Date('2020-03-10')
   },
   18: {
     name: 'Steel Wave',
     color: '#2b7f9b',
     image: '4soZ80QzL9WoLqvq8Hz647/d8d70312ec2849c276b459c3ef0482cd/r6s-seasons-y5s2',
-    releaseDate: new Date('June 16, 2020').toISOString()
+    releaseDate: new Date('2020-06-16')
   },
   19: {
     name: 'Shadow Legacy',
     color: '#6ca511',
     image: '5H87SAzADrzRmroVnJzuUE/2e73c489074b538055df0f793b4e1639/r6s-seasons-y5s3',
-    releaseDate: new Date('September 10, 2020').toISOString()
+    releaseDate: new Date('2020-09-10')
   },
   20: {
     name: 'Neon Dawn',
     color: '#D14007',
     image: '3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4',
-    releaseDate: new Date('December 1, 2020').toISOString()
+    releaseDate: new Date('2020-12-01')
   }
 };
 

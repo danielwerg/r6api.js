@@ -20,13 +20,13 @@
               "id": 0,
               "name": "Unranked",
               "mmr": 3089,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png"
+              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png"
             },
             "max": {
               "id": 0,
               "name": "Unranked",
               "mmr": 0,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/ranks/0.png"
+              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png"
             },
             "lastMatch": {
               "result": "unknown",

@@ -78,10 +78,10 @@ interface IRegions {
 interface ISeasons {
   [id: string]: {
     id: number;
-    name: string;
-    color: string;
-    image: string;
-    releaseDate: string;
+    name?: string;
+    color?: string;
+    image?: string;
+    releaseDate?: Date;
     regions: IRegions;
   };
 }
@@ -109,13 +109,16 @@ export const optionsDocs = [
   ]
 ];
 
-const getRankIconURL = (seasonId: SeasonId, rankId: RankId) =>
-  `${GITHUB_ASSETS_URL}/ranks/${
-    seasonId < 15 ? seasonId < 14 ? 'older_ranks' : 'old_ranks' : 'ranks'
-  }/${rankId}.png`;
+const getRankName = (seasonId: SeasonId, rankId: RankId) =>
+  seasonId < 15 ? OLD_RANKS[rankId as OldRankId] : RANKS[rankId];
 
-const getRankName = (seasonId: SeasonId, rankId: RankId): string =>
-  seasonId < 15 ? OLD_RANKS[rankId] : RANKS[rankId];
+const getRankIconURL = (seasonId: SeasonId, rankId: RankId) =>
+  `${GITHUB_ASSETS_URL}/ranks/v${
+    seasonId < 14 ? '3' : seasonId < 15
+      ? [17, 18, 19, 20].includes(rankId) ? '3.1' : '3'
+      : [1, 6, 11, 23].includes(rankId)
+        ? '3.2' : [19, 20, 21, 22].includes(rankId) ? '3.1' : '3'
+  }/${encodeURIComponent(getRankName(seasonId, rankId))}.png`;
 
 const getMatchResult = (id: IRank['last_match_result']) =>
   ({ 0: 'unknown', 1: 'win', 2: 'loss', 3: 'abandon' }[id]);
@@ -157,10 +160,12 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                 };
                 acc[id].seasons[seasonId] = acc[id].seasons[seasonId] || {
                   id: seasonId,
-                  name: SEASONS[seasonId].name,
-                  color: SEASONS[seasonId].color,
-                  image: getCDNURL(SEASONS[seasonId].image, 'jpg'),
-                  releaseDate: SEASONS[seasonId].releaseDate,
+                  ...SEASONS[seasonId] && {
+                    name: SEASONS[seasonId].name,
+                    color: SEASONS[seasonId].color,
+                    image: getCDNURL(SEASONS[seasonId].image, 'jpg'),
+                    releaseDate: SEASONS[seasonId].releaseDate
+                  },
                   regions: {}
                 };
                 acc[id].seasons[seasonId].regions[regionId] = {
