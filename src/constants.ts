@@ -21,7 +21,7 @@ export const SANDBOXES = <const>{
 };
 
 export const PLATFORMS = <const>['uplay', 'psn', 'xbl'];
-export const PLATFORMSALL = <const>[...PLATFORMS, 'steam'];
+export const PLATFORMSALL = <const>[...PLATFORMS, 'steam', 'epic', 'amazon'];
 
 export const REGIONS = <const>{
   'emea': 'Europe, Middle East and Africa',
