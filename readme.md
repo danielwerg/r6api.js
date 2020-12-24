@@ -94,7 +94,7 @@ exports.default = async () => {
 
 <!-- START_SECTION:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 5170 matches.
+Daniel.Nt has played 5186 matches.
 ```
 <!-- END_SECTION:EXAMPLE_OUTPUT -->
 
@@ -369,38 +369,38 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
           emea: {
             id: 'emea',
             name: 'Europe, Middle East and Africa',
-            skillMean: 30.8867056323,
-            skillStdev: 7.6002159074,
+            skillMean: 33.7757662129,
+            skillStdev: 6.8142208759,
             current: {
-              id: 0,
-              name: 'Unranked',
-              mmr: 3089,
-              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
+              id: 19,
+              name: 'Platinum 3',
+              mmr: 3378,
+              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%203.png'
             },
             max: {
-              id: 0,
-              name: 'Unranked',
-              mmr: 0,
-              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
+              id: 19,
+              name: 'Platinum 3',
+              mmr: 3378,
+              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%203.png'
             },
             lastMatch: {
-              result: 'unknown',
-              mmrChange: 0,
-              skillMeanChange: 0,
-              skillStdevChange: 0
+              result: 'win',
+              mmrChange: 90,
+              skillMeanChange: 0.8926701325,
+              skillStdevChange: -0.0563808663
             },
-            previousMmr: 0,
-            nextMmr: 0,
+            previousMmr: 3200,
+            nextMmr: 3600,
             topRankPosition: 0,
-            kills: 0,
-            deaths: 0,
-            kd: 0,
-            wins: 0,
-            losses: 0,
-            winRate: '0.00%',
-            matches: 0,
+            kills: 73,
+            deaths: 58,
+            kd: 1.26,
+            wins: 8,
+            losses: 5,
+            winRate: '61.54%',
+            matches: 13,
             abandons: 0,
-            updateTime: '1970-01-01T00:00:00+00:00'
+            updateTime: '2020-12-24T07:36:01.795000+00:00'
           }
         }
       }
@@ -612,7 +612,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1099,
+  total: 1100,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -622,27 +622,27 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: '21R6wWgCuUNonUFRRnCMKv',
-      title: 'UP TO 67% OFF RAINBOW SIX SIEGE FOR WINTER SALE!',
-      abstract: 'Check out our coolest deals for the season',
+      id: '4LQomL9VEjm3R3Wx5i7U99',
+      title: 'R6mas Holiday Poster Challenge',
+      abstract: 'Join us in celebrating the holidays!',
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/79q5K4MY2GNxCevcayygWe/77ba20117908136fcf326a608f7897cf/R6-news-winter-sale2020-brandspec-r6s-latam_960x540_en.jpg',
-        description: 'Ubisoft Store Rainbow Six Siege Winter Sale Thumbnail Image'
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5pd8ppNasVzHezVnRx6nAn/57a94483b061a937fdf19d0a968c4469/6mas_poster_challenge.jpg',
+        description: null
       },
-      content: 'Prepare to be snowed in by a blizzard of cool deals during our Winter Sale and save up to 67% off Rainbow Six Siege!\n\nTeam up with your friends and engage in intense 5v5 combat with Rainbow Six Siege at up to 67% off. You can also save on the Ultimate Edition and unlock the latest operators.\n\nThe Ultimate Edition includes:\n- Year 1-4 Passes\n- Year 5 Pass which includes VIP member perks, 6 new Operators and customization content!\n\nCheck out our Winter Sale today to shop amazing discounts on Rainbow Six Siege!\n\n[SHOP NOW](https://store.ubi.com/us/tom-clancys-rainbow-six-siege/56c494ad88a7e300458b4d5a.html?lang=en_US)\n\n*Valid on select titles. Certain conditions apply. Offer ends January 7, 2021.*',
+      content: '# R6Mas Holiday Poster Challenge!\nThe Holidays are here and everyone is celebrating, even our Siege operators! They want everyone to know and need your help. Your mission, should you so choose, is to create a Holiday themed Siege poster for a chance to win one of 10 Seasonal Weapon Skin Bundles. \n\nUse whatever medium you’d like whether it be hand-drawn or a digital rendition and share it with us on our Twitter or Instagram using #R6mas and #R6masPosterChallenge and we will pick 10 of our favorites to win. \nAs an inspiration, we’ve given an example below. \n\n![[R6SE]R6masPosterExample](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3iuK4rEE9Y1EdQ0qkY5Oe4/16b977945303752cbbcc0a4e074cde1b/6Mas_Poster_V3.png)\n\n# Giveaway Rules: \n- Contest runs from December 18 – January 1. Winners will be announced on January 8. \n- Create a holiday themed Siege poster and share it using the hashtags #R6mas and #R6masPosterChallenge on either Twitter or Instagram.\n- Please add your Twitter/Instagram handle or watermark your work so we can ensure everyone’s submission is unique\n- Poster must be new and may not be a direct copy of any other movie poster already existing. \n- Make sure your DMs are open as we will be contacting winners directly through DMs. \n\n# Prizing\n- 10 Total Winners\n- Each winner will receive 1 Seasonal Weapon Skins Bundle\n\n# Happy #R6mas\nFor more details, please see our [official contest rules](http://static2.ubi.com/pxm/RainbowSix/R6%20Poster%20Contest%20Rules%20EN%20FINAL.docx). \n',
       description: undefined,
       categories: [
-        'rainbow-six',
-        'rainbow-six-siege',
         'community',
-        'news'
+        'news',
+        'rainbow-six',
+        'rainbow-six-siege'
       ],
       tag: 'BR-rainbow-six GA-siege',
       placement: null,
       type: 'news',
-      readTime: '1',
-      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/21R6wWgCuUNonUFRRnCMKv/up-to-67-off-rainbow-six-siege-for-winter-sale',
-      date: '2020-12-17T18:00:00.000Z'
+      readTime: '2',
+      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/4LQomL9VEjm3R3Wx5i7U99/r6mas-holiday-poster-challenge',
+      date: '2020-12-18T17:00:00.000Z'
     }
   ]
 }
