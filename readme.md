@@ -94,7 +94,7 @@ exports.default = async () => {
 
 <!-- START_SECTION:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 5186 matches.
+Daniel.Nt has played 5203 matches.
 ```
 <!-- END_SECTION:EXAMPLE_OUTPUT -->
 
@@ -370,13 +370,13 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
           emea: {
             id: 'emea',
             name: 'Europe, Middle East and Africa',
-            skillMean: 33.1778256642,
-            skillStdev: 6.4766761939,
+            skillMean: 31.0012849098,
+            skillStdev: 6.2625554853,
             current: {
-              id: 19,
-              name: 'Platinum 3',
-              mmr: 3318,
-              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%203.png'
+              id: 18,
+              name: 'Gold 1',
+              mmr: 3100,
+              icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Gold%201.png'
             },
             max: {
               id: 19,
@@ -386,22 +386,22 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
             },
             lastMatch: {
               result: 'loss',
-              mmrChange: -78,
-              skillMeanChange: -0.7849626654,
-              skillStdevChange: -0.0461762698
+              mmrChange: -65,
+              skillMeanChange: -0.6529273971,
+              skillStdevChange: -0.0395949962
             },
-            previousMmr: 3200,
-            nextMmr: 3600,
+            previousMmr: 3000,
+            nextMmr: 3200,
             topRankPosition: 0,
-            kills: 100,
-            deaths: 91,
-            kd: 1.1,
-            wins: 11,
-            losses: 9,
-            winRate: '55.00%',
-            matches: 20,
+            kills: 123,
+            deaths: 114,
+            kd: 1.08,
+            wins: 12,
+            losses: 13,
+            winRate: '48.00%',
+            matches: 25,
             abandons: 0,
-            updateTime: '2020-12-25T13:44:37.168000+00:00'
+            updateTime: '2020-12-27T20:14:21.952000+00:00'
           }
         }
       }
