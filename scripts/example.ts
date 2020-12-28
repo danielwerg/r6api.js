@@ -4,7 +4,7 @@ dotenv.config();
 import { promises as fsp } from 'fs';
 import { join } from 'path';
 
-import insertContent from './insertContent';
+import { insertContent } from './utils';
 import exampleFile from '../examples/example';
 
 (async () => {

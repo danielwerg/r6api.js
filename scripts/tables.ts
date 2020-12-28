@@ -2,7 +2,7 @@ import * as mdtable from 'markdown-table';
 
 import { join } from 'path';
 
-import insertContent from './insertContent';
+import { insertContent } from './utils';
 import { SEASONS, OLD_SEASONS, REGIONS } from '../src/constants';
 import { optionsDocs as getRanksOptionsDocs } from '../src/methods/getRanks';
 import { optionsDocs as getStatsOptionsDocs } from '../src/methods/getStats';

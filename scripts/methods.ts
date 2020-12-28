@@ -7,7 +7,7 @@ import { join } from 'path';
 import { promises as fsp } from 'fs';
 
 import R6API, { utils } from '../src';
-import insertContent from './insertContent';
+import { insertContent, isFileExists } from './utils';
 
 (async () => {
 
@@ -84,7 +84,6 @@ import insertContent from './insertContent';
   const readmePath = join(__dirname, '../readme.md');
   const getMethodsDocsPath = (name: string) =>
     join(__dirname, `../docs/methods/${name}.json`);
-  const isFileExists = async (path: string) => !!(await fsp.stat(path).catch(() => false));
   const getMethodsDocsFile = async (name: string) => {
     if (!await isFileExists(getMethodsDocsPath(name)))
       await fsp.writeFile(getMethodsDocsPath(name), '[]');
