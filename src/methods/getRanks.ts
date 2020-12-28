@@ -81,7 +81,7 @@ interface ISeasons {
     name?: string;
     color?: string;
     image?: string;
-    releaseDate?: Date;
+    releaseDate?: string;
     regions: IRegions;
   };
 }

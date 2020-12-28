@@ -39,7 +39,7 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
     .slice(0, (arr.length + size - 1) / size | 0)
     .map((_, i) => arr.slice(size * i, size * i + size));
 
-  const getSeasonsTable = <T extends { [id: string]: { name: string; releaseDate: Date } }>(
+  const getSeasonsTable = <T extends { [id: string]: { name: string; releaseDate: string } }>(
     seasons: T,
     options: { headers?: [string, 'id' | 'name' | 'releaseDate' | 'duration'][] } = {}
   ) => {
@@ -48,16 +48,17 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
 
     const seasonsFormatted = Object.entries(seasons)
       .map(([id, obj], i, array) => {
-        const nextReleaseDate = array[i + 1] ? array[i + 1][1].releaseDate : new Date();
+        const nextReleaseDate = array[i + 1] ?
+          new Date(array[i + 1][1].releaseDate) : new Date();
         return {
           id: `\`${id}\``, name: obj.name,
-          releaseDate: obj.releaseDate.toLocaleString(
+          releaseDate: new Date(obj.releaseDate).toLocaleString(
             'en-us', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' }
           ),
           duration: array.slice(-1)[0][1] === obj
-            ? ''
+            ? '' // Most recent season
             : Math.floor(
-              (+nextReleaseDate - +obj.releaseDate) / (24 * 60 * 60 * 1000)
+              (+nextReleaseDate - +new Date(obj.releaseDate)) / (24 * 60 * 60 * 1000)
             ) + ' Days'
         };
       })
