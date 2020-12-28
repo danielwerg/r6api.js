@@ -94,7 +94,7 @@ exports.default = async () => {
 
 <!-- START_SECTION:EXAMPLE_OUTPUT -->
 ```
-Daniel.Nt has played 5203 matches.
+Daniel.Nt has played 5204 matches.
 ```
 <!-- END_SECTION:EXAMPLE_OUTPUT -->
 
