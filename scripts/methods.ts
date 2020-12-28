@@ -51,6 +51,8 @@ import insertContent from './insertContent';
     .catch(err => console.error(err));
   const getStatus = await r6api.getStatus()
     .catch(err => console.error(err));
+  const validateUsername = await r6api.validateUsername('gamerflick360')
+    .catch(err => console.error(err));
   const getNews = await r6api.getNews({ limit: 1 })
     .catch(err => console.error(err));
   const getNewsById = await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z')
@@ -67,6 +69,7 @@ import insertContent from './insertContent';
     ['getRanks', getRanks],
     ['getStats', getStats],
     ['getStatus', getStatus],
+    ['validateUsername', validateUsername],
     ['getNews', getNews],
     ['getNewsById', getNewsById],
     ['custom', custom]

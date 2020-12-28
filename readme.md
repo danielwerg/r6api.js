@@ -111,6 +111,7 @@ Daniel.Nt has played 5186 matches.
 * [getRanks](#getRanks)
 * [getStats](#getStats)
 * [getStatus](#getStatus)
+* [validateUsername](#validateUsername)
 * [getNews](#getNews)
 * [getNewsById](#getNewsById)
 * [custom](#custom)
@@ -369,38 +370,38 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
           emea: {
             id: 'emea',
             name: 'Europe, Middle East and Africa',
-            skillMean: 33.7757662129,
-            skillStdev: 6.8142208759,
+            skillMean: 33.1778256642,
+            skillStdev: 6.4766761939,
             current: {
               id: 19,
               name: 'Platinum 3',
-              mmr: 3378,
+              mmr: 3318,
               icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%203.png'
             },
             max: {
               id: 19,
               name: 'Platinum 3',
-              mmr: 3378,
+              mmr: 3396,
               icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%203.png'
             },
             lastMatch: {
-              result: 'win',
-              mmrChange: 90,
-              skillMeanChange: 0.8926701325,
-              skillStdevChange: -0.0563808663
+              result: 'loss',
+              mmrChange: -78,
+              skillMeanChange: -0.7849626654,
+              skillStdevChange: -0.0461762698
             },
             previousMmr: 3200,
             nextMmr: 3600,
             topRankPosition: 0,
-            kills: 73,
-            deaths: 58,
-            kd: 1.26,
-            wins: 8,
-            losses: 5,
-            winRate: '61.54%',
-            matches: 13,
+            kills: 100,
+            deaths: 91,
+            kd: 1.1,
+            wins: 11,
+            losses: 9,
+            winRate: '55.00%',
+            matches: 20,
             abandons: 0,
-            updateTime: '2020-12-24T07:36:01.795000+00:00'
+            updateTime: '2020-12-25T13:44:37.168000+00:00'
           }
         }
       }
@@ -576,6 +577,44 @@ await r6api.getStatus();
 
 </details>
 <!-- END_SECTION:GETSTATUS_OUTPUT -->
+
+---
+
+### validateUsername
+
+Validate username.
+
+(username) => `Promise<Object>`
+
+```js
+await r6api.validateUsername('gamerflick360');
+```
+
+<!-- START_SECTION:VALIDATEUSERNAME_OUTPUT -->
+<details>
+<summary>Output</summary>
+
+```js
+{
+  valid: false,
+  validationReports: [
+    {
+      message: '\'flick\' matches \'flick\'',
+      categories: [
+        'global-username',
+        'vulgarity'
+      ],
+      severity: 'high',
+      locale: 'en-US',
+      errorCode: 1013,
+      suggestions: null
+    }
+  ]
+}
+```
+
+</details>
+<!-- END_SECTION:VALIDATEUSERNAME_OUTPUT -->
 
 ---
 

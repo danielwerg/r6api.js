@@ -4,11 +4,25 @@ import { promises as fs } from 'fs';
 
 import fetch from './fetch';
 import { UnknownAuthorizationError } from './errors';
+import { Platform, UUID } from './typings';
 import { URLS } from './utils';
 
 export interface IUbiAuth {
+  platformType: Platform;
   ticket: string;
+  twoFactorAuthenticationTicket: string | null;
+  profileId: UUID;
+  userId: UUID;
+  nameOnPlatform: string;
+  environment: string;
   expiration: string;
+  spaceId: UUID;
+  clientIp: string;
+  clientIpCountry: string;
+  serverTime: string;
+  sessionId: UUID;
+  sessionKey: string;
+  rememberMeTicket: string;
 }
 
 let LOGIN_TIMEOUT: any;
@@ -55,6 +69,8 @@ export const login = async () => {
 const setNextLogin = async (auth: IUbiAuth) => {
   LOGIN_TIMEOUT = setTimeout(() => login(), getExpiration(auth));
 };
+
+export const getAuth = () => login();
 
 export const getToken = () => login().then(auth => `Ubi_v1 t=${auth.ticket}`);
 

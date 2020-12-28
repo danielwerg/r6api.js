@@ -67,8 +67,8 @@ export const URLS = {
   STATS: (platform: Platform, ids: UUID[], stats: string) =>
     getStatsBase(platform) + '/playerstats2/statistics' +
     `?populations=${ids.join(',')}&statistics=${stats}`,
-  STATUS: () =>
-    `${STATUS_API_URL}/${API_VERSIONS.V1}/instances`,
+  STATUS: () => `${STATUS_API_URL}/${API_VERSIONS.V1}/instances`,
+  VALIDATEUSERNAME: (userId: UUID) => `${getBaseVersion(3)}/profiles/${userId}/validateUpdate`,
   NEWS: (
     category: string, filter: string,
     locale: string, fallbackLocale: string,
