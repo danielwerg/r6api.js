@@ -46,12 +46,14 @@ const getStatsBase = (platform: Platform) =>
 export const URLS = {
   LOGIN: () => `${getBaseVersion(3)}/profiles/sessions`,
   BYUSERNAME: (platform: PlatformAll, usernames: string[]) =>
-    getBaseVersion(2) +
-    `/profiles?nameOnPlatform=${usernames.join(',')}&platformType=${platform}`,
+    getBaseVersion(3) +
+    `/profiles?namesOnPlatform=${usernames.join(',')}&platformType=${platform}`,
   BYID: (platform: PlatformAll, ids: UUID[] | string[]) =>
-    `${getBaseVersion(2)}/profiles?idOnPlatform=${ids.join(',')}&platformType=${platform}`,
+    `${getBaseVersion(3)}/profiles?idsOnPlatform=${ids.join(',')}&platformType=${platform}`,
   BYUSERID: (ids: UUID[]) =>
-    `${getBaseVersion(2)}/profiles?userId=${ids.join(',')}`,
+    `${getBaseVersion(3)}/profiles?userIds=${ids.join(',')}`,
+  BYPROFILEID: (ids: UUID[]) =>
+    `${getBaseVersion(3)}/profiles?profileIds=${ids.join(',')}`,
   PROGRESS: (platform: Platform, ids: UUID[]) =>
     getStatsBase(platform) + '/r6playerprofile/playerprofile/progressions' +
     `?profile_ids=${ids.join(',')}`,

@@ -5,7 +5,7 @@ import {
   getToken as _getToken
 } from './auth';
 import _findByUsername from './methods/findByUsername';
-import _findById from './methods/findById';
+import _findById, { IOptions as IFindByIdOptions} from './methods/findById';
 import _getProgression from './methods/getProgression';
 import _getPlaytime from './methods/getPlaytime';
 import _getRanks, { IOptions as IGetRanksOptions } from './methods/getRanks';
@@ -50,8 +50,10 @@ export default class R6API {
   findByUsername = (platform: PlatformAll, query: QueryString) =>
     checkQueryLimit({ method: _findByUsername, platform, query, limit: 50 });
 
-  findById = (platform: PlatformAllExtended, query: QueryUUID | QueryString) =>
-    checkQueryLimit({ method: _findById, platform, query, limit: 50 })
+  findById = (
+    platform: PlatformAllExtended, query: QueryUUID | QueryString, options?: IFindByIdOptions
+  ) =>
+    checkQueryLimit({ method: _findById, platform, query, options, limit: 50 })
 
   getPlaytime = (platform: Platform, query: QueryUUID) =>
     checkQueryLimit({ method: _getPlaytime, platform, query, limit: 200 })

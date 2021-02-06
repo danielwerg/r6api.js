@@ -189,7 +189,15 @@ Ids limit: `50`
 
 (platformAll | 'all', id/s) => `Promise<Array>`
 
-> **Note:** To search by `userId` set `platform` to `'all'`
+
+```js
+// search by profileId (id)
+await r6api.findById('all', '91477729-b5ac-463c-9618-03ca154764f5');
+// search by userId
+await r6api.findById('all', '1baf5bf8-90cd-4ead-8b90-9a11cb2b8adf', { isUserId: true });
+// search by idOnPlatform
+await r6api.findById('xbl', '2535406338711362');
+```
 
 ```js
 await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
