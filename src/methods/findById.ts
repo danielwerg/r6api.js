@@ -18,6 +18,12 @@ export interface IOptions {
   isUserId?: boolean;
 }
 
+export const optionsDocs = [
+  [
+    'isUserId', '`boolean`', 'false', '`false`', 'Whether `id` is `userId` or not'
+  ]
+];
+
 export default (platform: PlatformAllExtended, ids: UUID[] | string[], options?: IOptions) => {
 
   const isUserId = options && options.isUserId;

@@ -121,7 +121,7 @@ Daniel.Nt has played 5205 matches.
 | Param       | Type                 | Description                                                           |
 | ----------- | -------------------- | --------------------------------------------------------------------- |
 | platform    | `string`             | Either `uplay` (pc), `xbl` (Xbox Live) or `psn` (PlayStation Network) |
-| platformAll | `string`             | `platform` or `steam`                                                 |
+| platformAll | `string`             | `platform`, `steam`, `epic` or `amazon`                               |
 | username/s  | `string \| string[]` |                                                                       |
 | id/s        | `string \| string[]` |                                                                       |
 
@@ -187,8 +187,17 @@ Find player by their id.
 
 Ids limit: `50`
 
-(platformAll | 'all', id/s) => `Promise<Array>`
+(platformAll | 'all', id/s, options?) => `Promise<Array>`
 
+#### Options
+
+<!-- START_SECTION:FINDBYID_OPTIONS -->
+
+| Param    | Type      | Required | Default | Description                     |
+| -------- | --------- | -------- | ------- | ------------------------------- |
+| isUserId | `boolean` | false    | `false` | Whether `id` is `userId` or not |
+
+<!-- END_SECTION:FINDBYID_OPTIONS -->
 
 ```js
 // search by profileId (id)

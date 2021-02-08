@@ -4,6 +4,7 @@ import { join } from 'path';
 
 import { insertContent } from './utils';
 import { SEASONS, OLD_SEASONS, REGIONS } from '../src/constants';
+import { optionsDocs as findByIdOptionsDocs } from '../src/methods/findById';
 import { optionsDocs as getRanksOptionsDocs } from '../src/methods/getRanks';
 import { optionsDocs as getStatsOptionsDocs } from '../src/methods/getStats';
 import { optionsDocs as getNewsOptionsDocs } from '../src/methods/getNews';
@@ -18,6 +19,7 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
 
   // readme > (getRanks & getStats & getNews & getNewsById) > options
   const optionsDocs = <const>[
+    ['FINDBYID', findByIdOptionsDocs],
     ['GETRANKS', getRanksOptionsDocs],
     ['GETSTATS', getStatsOptionsDocs],
     ['GETNEWS', getNewsOptionsDocs],
