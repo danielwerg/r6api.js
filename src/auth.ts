@@ -3,7 +3,6 @@ import { join } from 'path';
 import { promises as fs } from 'fs';
 
 import fetch from './fetch';
-import { UnknownAuthorizationError } from './errors';
 import { Platform, UUID } from './typings';
 import { URLS } from './utils';
 
@@ -58,7 +57,7 @@ export const login = async () => {
         await fs.writeFile(tokenFile, JSON.stringify(res));
         return res;
       } else
-        throw new UnknownAuthorizationError('No response from login: ' + JSON.stringify(res));
+        throw new Error(`No response from login: ${JSON.stringify(res)}`);
     })
     .catch(err => {
       clearTimeout(LOGIN_TIMEOUT);
