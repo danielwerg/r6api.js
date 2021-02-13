@@ -348,7 +348,7 @@ Ids limit: `200`
 
 > **Note:** `-1` will always return current season
 
-> **Note:** Ubisoft doesn't provide data for seasons before Operation Health
+> **Note:** Ubisoft doesn't provide data for seasons before Operation Health (6) if board is `pvp_ranked` or Ember Rise (15) if board is `pvp_casual`
 
 #### Regions reference
 
@@ -430,13 +430,13 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regions:
 </details>
 <!-- END_SECTION:GETRANKS_OUTPUT -->
 
-> **Note:** `kills`, `deaths`, `kd`, `topRankPosition` and everything under `lastMatch` only available  for seasons including and after Phantom Sight (14) for older seasons it will return `0` or `false` in case of `lastMatch.won`
+> **Note:** `kills`, `deaths`, `kd`, `topRankPosition` and everything under `lastMatch` only available  for seasons including and after Phantom Sight (14) for older seasons it will return `0` or `'unknown'` in case of `lastMatch.result`
 
-> **Note:** If player is unranked their max mmr (`max.mmr`) will always be `0`
+> **Note:** If player is unranked their max mmr (`max.mmr`) will always be `0` (it's always `0` for casual)
 
-> **Note:** Since Steal Wave all regions will return same data
+> **Note:** Since Steal Wave (18) all regions will return same data
 
-> **Note:** Values for `previousMmr`, `nextMmr`, `topRankPosition`, `(current|max).id` and `max.mmr` will always be `0`, `(current|max).name` will always be `Unranked` if `boardId` is `pvp_casual`
+> **Note:** Values for `previousMmr`, `nextMmr`, `topRankPosition`, `max.id` and `max.mmr` will always be `0`, `max.name` will always be `Unranked` if `boardId` is `pvp_casual`
 
 ---
 

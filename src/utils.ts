@@ -11,7 +11,7 @@ import {
   PLATFORMS, PLATFORMSALL, REGIONS,
   SEASONS, OLD_SEASONS, RANKS, OLD_RANKS,
   OPERATORS, WEAPONTYPES, WEAPONS,
-  STATS_CATEGORIES
+  STATS_CATEGORIES, GITHUB_ASSETS_URL
 } from './constants';
 
 export const getAvatarURL = (id: UUID, size = 256) =>
@@ -35,6 +35,42 @@ export const getKD = (obj: { kills?: number; deaths?: number }) =>
 export const getWinRate = (obj: { wins?: number; losses?: number }) =>
   ((obj.wins || 0) / ((obj.wins || 0) + (obj.losses || 0) || 1) * 100)
     .toFixed(2) + '%';
+
+export const getRankNameFromRankId = (rankId: RankId, seasonId: SeasonId) =>
+  seasonId < 15 ? OLD_RANKS[rankId as OldRankId] : RANKS[rankId];
+
+export const getRankIconFromRankId = (rankId: RankId, seasonId: SeasonId) =>
+  `${GITHUB_ASSETS_URL}/ranks/v${
+    seasonId < 14 ? '3' : seasonId < 15
+      ? [17, 18, 19, 20].includes(rankId) ? '3.1' : '3'
+      : [1, 6, 11, 23].includes(rankId)
+        ? '3.2' : [19, 20, 21, 22].includes(rankId) ? '3.1' : '3'
+  }/${encodeURIComponent(getRankNameFromRankId(rankId, seasonId))}.png`;
+
+export const getRankIdFromMmr = (mmr: number, matches: number) => {
+
+  const ranksRange = [
+    1100, 1200, 1300, 1400, 1500,
+    1600, 1700, 1800, 1900, 2000,
+    2100, 2200, 2300, 2400, 2500,
+    2600, 2800, 3000,
+    3200, 3600, 4000,
+    4400, 5000
+  ];
+
+  const pointInRange = ranksRange.find((prevMmr, i, arr) => {
+    const nextMmr = arr[i + 1] || Infinity;
+    return (mmr - prevMmr) * (mmr - nextMmr) < 0
+      || mmr === prevMmr
+      || mmr < arr[0] && prevMmr === arr[0];
+  });
+
+  const rankId = ranksRange.findIndex(point => point === pointInRange) + 1;
+
+  // Requirements: ≥10 matches to get a rank, ≥100 matches to get a Champions rank
+  return (matches < 10 ? 0 : rankId === 23 && matches < 100 ? 22 : rankId) as RankId;
+
+};
 
 const getBaseVersion = (version: number, base?: string) =>
   `${base ? base : BASE_API_URL}/${API_VERSIONS[`V${version}`]}`;

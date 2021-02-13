@@ -3,8 +3,11 @@ import fetch from '../fetch';
 import {
   Platform, UUID, SeasonId, SeasonIdExtended, RankId, OldRankId, RegionId, BoardId
 } from '../typings';
-import { REGIONS, SEASONS, RANKS, OLD_RANKS, GITHUB_ASSETS_URL } from '../constants';
-import { URLS, getCDNURL, getKD, getWinRate } from '../utils';
+import { REGIONS, SEASONS, RANKS } from '../constants';
+import {
+  URLS, getCDNURL, getKD, getWinRate,
+  getRankNameFromRankId, getRankIconFromRankId, getRankIdFromMmr
+} from '../utils';
 
 interface IRank {
   max_mmr: number;
@@ -109,17 +112,6 @@ export const optionsDocs = [
   ]
 ];
 
-const getRankName = (seasonId: SeasonId, rankId: RankId) =>
-  seasonId < 15 ? OLD_RANKS[rankId as OldRankId] : RANKS[rankId];
-
-const getRankIconURL = (seasonId: SeasonId, rankId: RankId) =>
-  `${GITHUB_ASSETS_URL}/ranks/v${
-    seasonId < 14 ? '3' : seasonId < 15
-      ? [17, 18, 19, 20].includes(rankId) ? '3.1' : '3'
-      : [1, 6, 11, 23].includes(rankId)
-        ? '3.2' : [19, 20, 21, 22].includes(rankId) ? '3.1' : '3'
-  }/${encodeURIComponent(getRankName(seasonId, rankId))}.png`;
-
 const getMatchResult = (id: IRank['last_match_result']) =>
   ({ 0: 'unknown', 1: 'win', 2: 'loss', 3: 'abandon' }[id]);
 
@@ -152,6 +144,11 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
           .reduce((acc, { players }) => {
             Object.entries(players)
               .map(([id, { season: seasonId, region: regionId, ...val }]) => {
+
+                const matches = val.wins + val.losses;
+                const currentRankId =
+                  board === 'pvp_casual' ? getRankIdFromMmr(val.mmr, matches) : val.rank;
+
                 acc[id] = acc[id] || {
                   id: id as UUID,
                   boardId: board,
@@ -174,16 +171,18 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                   skillMean: val.skill_mean,
                   skillStdev: val.skill_stdev,
                   current: {
-                    id: val.rank,
-                    name: getRankName(seasonId, val.rank),
+                    id: currentRankId,
+                    name: board === 'pvp_casual'
+                      ? RANKS[getRankIdFromMmr(val.mmr, matches)]
+                      : getRankNameFromRankId(val.max_rank, seasonId),
                     mmr: val.mmr,
-                    icon: getRankIconURL(seasonId, val.rank)
+                    icon: getRankIconFromRankId(currentRankId, seasonId)
                   },
                   max: {
                     id: val.max_rank,
-                    name: getRankName(seasonId, val.max_rank),
+                    name: getRankNameFromRankId(val.max_rank, seasonId),
                     mmr: val.max_mmr,
-                    icon: getRankIconURL(seasonId, val.max_rank)
+                    icon: getRankIconFromRankId(val.max_rank, seasonId)
                   },
                   lastMatch: {
                     result: getMatchResult(val.last_match_result),
@@ -200,10 +199,11 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                   wins: val.wins,
                   losses: val.losses,
                   winRate: getWinRate(val),
-                  matches: val.wins + val.losses,
+                  matches,
                   abandons: val.abandons,
                   updateTime: val.update_time
                 };
+
               });
             return acc;
           }, {})
