@@ -1,5 +1,5 @@
 import fetch from '../fetch';
-import { URLS, getNewsURL } from '../utils';
+import { getURL, getNewsURL } from '../utils';
 
 export interface INewsItem {
   id: string;
@@ -76,7 +76,7 @@ export default async (id: string, options?: IOptions) => {
   const locale = options && options.locale || 'en-us';
   const fallbackLocale = options && options.fallbackLocale || 'en-us';
 
-  const res = await fetch<IApiResponse>(URLS.NEWSBYID(id, locale, fallbackLocale))();
+  const res = await fetch<IApiResponse>(getURL.NEWSBYID(id, locale, fallbackLocale))();
   return ({
     ...raw && { raw: res },
     total: res.total,

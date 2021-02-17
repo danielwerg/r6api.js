@@ -5,7 +5,7 @@ import {
 } from '../typings';
 import { REGIONS, SEASONS, RANKS } from '../constants';
 import {
-  URLS, getCDNURL, getKD, getWinRate,
+  getURL, getCDNURL, getKD, getWinRate,
   getRankNameFromRankId, getRankIconFromRankId, getRankIdFromMmr
 } from '../utils';
 
@@ -134,7 +134,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
   return Promise.all(seasons.map(season =>
     Promise.all(regions.map(region =>
       getToken()
-        .then(fetch<IApiResponse>(URLS.RANKS(platform, ids, season, region, board)))
+        .then(fetch<IApiResponse>(getURL.RANKS(platform, ids, season, region, board)))
     ))
   ))
     .then(res =>
@@ -160,7 +160,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                   ...SEASONS[seasonId] && {
                     name: SEASONS[seasonId].name,
                     color: SEASONS[seasonId].color,
-                    image: getCDNURL(SEASONS[seasonId].image, 'jpg'),
+                    image: getCDNURL(SEASONS[seasonId].imageId, 'jpg'),
                     releaseDate: SEASONS[seasonId].releaseDate
                   },
                   regions: {}

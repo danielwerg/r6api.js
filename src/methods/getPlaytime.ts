@@ -1,7 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import { Platform, UUID, MPType } from '../typings';
-import { URLS } from '../utils';
+import { getURL } from '../utils';
 
 interface IApiResponse {
   results: {
@@ -16,7 +16,7 @@ const statGetter = (obj: IApiResponse, id: UUID, stat: string, type: MPType) =>
 
 export default (platform: Platform, ids: UUID[]) =>
   getToken()
-    .then(fetch<IApiResponse>(URLS.PLAYTIME(platform, ids)))
+    .then(fetch<IApiResponse>(getURL.PLAYTIME(platform, ids)))
     .then(res =>
       Object.keys(res.results).map(id => ({
         id,

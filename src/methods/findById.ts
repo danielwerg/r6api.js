@@ -1,7 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import { PlatformAllExtended, UUID } from '../typings';
-import { URLS, getAvatars } from '../utils';
+import { getURL, getAvatars } from '../utils';
 
 interface IProfile {
   profileId: UUID;
@@ -32,9 +32,9 @@ export default (platform: PlatformAllExtended, ids: UUID[] | string[], options?:
     .then(
       platform === 'all'
         ? isUserId
-          ? fetch<IApiResponse>(URLS.BYUSERID(ids))
-          : fetch<IApiResponse>(URLS.BYPROFILEID(ids))
-        : fetch<IApiResponse>(URLS.BYID(platform, ids))
+          ? fetch<IApiResponse>(getURL.BYUSERID(ids))
+          : fetch<IApiResponse>(getURL.BYPROFILEID(ids))
+        : fetch<IApiResponse>(getURL.BYIDONPLATFORM(platform, ids))
     )
     .then(res =>
       res.profiles

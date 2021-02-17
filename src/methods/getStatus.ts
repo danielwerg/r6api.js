@@ -1,6 +1,6 @@
 import fetch from '../fetch';
 import { UUID } from '../typings';
-import { URLS } from '../utils';
+import { getURL } from '../utils';
 
 const platforms = <const>['PC', 'PS4', 'XBOXONE', 'PS5', 'XBOX SERIES X'];
 
@@ -17,7 +17,7 @@ interface IApiResponse {
 }
 
 export default () =>
-  fetch<IApiResponse[]>(URLS.STATUS())()
+  fetch<IApiResponse[]>(getURL.STATUS())()
     .then(res =>
       res
         .filter(app =>

@@ -5,9 +5,8 @@ import {
   BoardId, StatsCategoryName
 } from './typings';
 import {
-  BASE_API_URL, ALT_API_URL, STATUS_API_URL,
-  API_VERSIONS, SPACE_IDS, SANDBOXES,
-  AVATAR_BASE_URL, CDN_BASE_URL,
+  UBISERVICES_URL, STATUS_URL, UBI_URL, SPACE_IDS, SANDBOXES,
+  AVATARS_URL, CDN_URL,
   PLATFORMS, PLATFORMSALL, REGIONS,
   SEASONS, OLD_SEASONS, RANKS, OLD_RANKS,
   OPERATORS, WEAPONTYPES, WEAPONS,
@@ -15,26 +14,25 @@ import {
 } from './constants';
 
 export const getAvatarURL = (id: UUID, size = 256) =>
-  `${AVATAR_BASE_URL}/${id}/default_${size === 500 ? 'tall' : `${size}_${size}`}.png`;
-
-export const getCDNURL = (id: UUID, format = 'png') =>
-  `${CDN_BASE_URL}/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/${id}.${format}`;
+  `${AVATARS_URL}/${id}/default_${size === 500 ? 'tall' : `${size}_${size}`}.png`;
 
 export const getAvatars = (id: UUID) => ({
   146: getAvatarURL(id, 146), 256: getAvatarURL(id, 256), 500: getAvatarURL(id, 500)
 });
+
+export const getCDNURL = (id: UUID, format = 'png') =>
+  `${CDN_URL}/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/${id}.${format}`;
 
 export const getNewsURL = (language: string, type: string, id: string) =>
   type === 'news'
     ? `https://www.ubisoft.com/${language}/game/rainbow-six/siege${id}`
     : `https://www.youtube.com/watch?v=${id}`;
 
-export const getKD = (obj: { kills?: number; deaths?: number }) =>
-  Number(((obj.kills || 0) / (obj.deaths || 1)).toFixed(2));
+export const getKD = ({ kills, deaths }: { kills?: number; deaths?: number }) =>
+  Number(((kills || 0) / (deaths || 1)).toFixed(2));
 
-export const getWinRate = (obj: { wins?: number; losses?: number }) =>
-  ((obj.wins || 0) / ((obj.wins || 0) + (obj.losses || 0) || 1) * 100)
-    .toFixed(2) + '%';
+export const getWinRate = ({ wins, losses }: { wins?: number; losses?: number }) =>
+  ((wins || 0) / ((wins || 0) + (losses || 0) || 1) * 100).toFixed(2) + '%';
 
 export const getRankNameFromRankId = (rankId: RankId, seasonId: SeasonId) =>
   seasonId < 15 ? OLD_RANKS[rankId as OldRankId] : RANKS[rankId];
@@ -72,47 +70,51 @@ export const getRankIdFromMmr = (mmr: number, matches: number) => {
 
 };
 
-const getBaseVersion = (version: number, base?: string) =>
-  `${base ? base : BASE_API_URL}/${API_VERSIONS[`V${version}`]}`;
-const getSpacesAndSandboxes = (platform: Platform) =>
-  `spaces/${SPACE_IDS[platform]}/sandboxes/${SANDBOXES[platform]}`;
-const getStatsBase = (platform: Platform) =>
-  `${getBaseVersion(1)}/${getSpacesAndSandboxes(platform)}`;
+const getUbiServicesURL = (version: 1 | 2 | 3, pathname: string, search?: string) =>
+  `${UBISERVICES_URL}/v${version}/${pathname}${search ? `?${search}` : ''}`;
+const getUbiServicesPlatformURL = (platform: Platform, pathname: string, search: string) =>
+  `${UBISERVICES_URL}/v1/spaces/${SPACE_IDS[platform]}/sandboxes/${SANDBOXES[platform]}` +
+  `/${pathname}${search ? `?${search}` : ''}`;
 
-export const URLS = {
-  LOGIN: () => `${getBaseVersion(3)}/profiles/sessions`,
+export const getURL = {
+  LOGIN: () => getUbiServicesURL(3, 'profiles/sessions'),
   BYUSERNAME: (platform: PlatformAll, usernames: string[]) =>
-    getBaseVersion(3) +
-    `/profiles?namesOnPlatform=${usernames.join(',')}&platformType=${platform}`,
-  BYID: (platform: PlatformAll, ids: UUID[] | string[]) =>
-    `${getBaseVersion(3)}/profiles?idsOnPlatform=${ids.join(',')}&platformType=${platform}`,
+    getUbiServicesURL(3, 'profiles', `platformType=${platform}&namesOnPlatform=${usernames}`),
   BYUSERID: (ids: UUID[]) =>
-    `${getBaseVersion(3)}/profiles?userIds=${ids.join(',')}`,
+    getUbiServicesURL(3, 'profiles', `userIds=${ids.join(',')}`),
   BYPROFILEID: (ids: UUID[]) =>
-    `${getBaseVersion(3)}/profiles?profileIds=${ids.join(',')}`,
-  PROGRESS: (platform: Platform, ids: UUID[]) =>
-    getStatsBase(platform) + '/r6playerprofile/playerprofile/progressions' +
-    `?profile_ids=${ids.join(',')}`,
-  PLAYTIME: (platform: Platform, ids: UUID[]) =>
-    getStatsBase(platform) + `/playerstats2/statistics?populations=${ids.join(',')}` +
-    '&statistics=generalpvp_timeplayed,rankedpvp_timeplayed,casualpvp_timeplayed,' +
-    'custompvp_timeplayed,generalpve_timeplayed',
+    getUbiServicesURL(3, 'profiles', `profileIds=${ids.join(',')}`),
+  BYIDONPLATFORM: (platform: PlatformAll, ids: UUID[]) => getUbiServicesURL(
+    3, 'profiles', `platformType=${platform}&idsOnPlatform=${ids.join(',')}`
+  ),
+  PLAYTIME: (platform: Platform, ids: UUID[]) => getUbiServicesPlatformURL(
+    platform,
+    'playerstats2/statistics',
+    `populations=${ids.join(',')}&statistics=generalpvp_timeplayed,generalpve_timeplayed` +
+    ',rankedpvp_timeplayed,casualpvp_timeplayed,custompvp_timeplayed'
+  ),
+  PROGRESS: (platform: Platform, ids: UUID[]) => getUbiServicesPlatformURL(
+    platform, 'r6playerprofile/playerprofile/progressions', `profile_ids=${ids.join(',')}`
+  ),
   RANKS: (
     platform: Platform, ids: UUID[], season: SeasonIdExtended, region: RegionId, board: BoardId
-  ) =>
-    getStatsBase(platform) + `/r6karma/players?board_id=${board}` +
-    `&profile_ids=${ids}&region_id=${region}&season_id=${season}`,
-  STATS: (platform: Platform, ids: UUID[], stats: string) =>
-    getStatsBase(platform) + '/playerstats2/statistics' +
-    `?populations=${ids.join(',')}&statistics=${stats}`,
-  STATUS: () => `${STATUS_API_URL}/${API_VERSIONS.V1}/instances`,
-  VALIDATEUSERNAME: (userId: UUID) => `${getBaseVersion(3)}/profiles/${userId}/validateUpdate`,
+  ) => getUbiServicesPlatformURL(
+    platform,
+    'r6karma/players',
+    `board_id=${board}&profile_ids=${ids}&region_id=${region}&season_id=${season}`
+  ),
+  STATS: (platform: Platform, ids: UUID[], stats: string) => getUbiServicesPlatformURL(
+    platform, 'playerstats2/statistics', `populations=${ids.join(',')}&statistics=${stats}`
+  ),
+  STATUS: () => `${STATUS_URL}/v1/instances`,
+  VALIDATEUSERNAME: (userId: UUID) =>
+    getUbiServicesURL(3, `profiles/${userId}/validateUpdate`),
   NEWS: (
     category: string, filter: string,
     locale: string, fallbackLocale: string,
     limit: number, skip: number, startIndex: number | null
   ) =>
-    `${ALT_API_URL}/api/updates/items` +
+    `${UBI_URL}/api/updates/items` +
     `?categoriesFilter=${category}&mediaFilter=${filter}` +
     `&locale=${locale}&fallbackLocale=${fallbackLocale}` +
     `&limit=${limit}&skip=${skip}&startIndex=${startIndex}` +
@@ -120,7 +122,7 @@ export const URLS = {
   NEWSBYID: (
     id: string, locale: string, fallbackLocale: string
   ) =>
-    `${ALT_API_URL}/api/updates/items` +
+    `${UBI_URL}/api/updates/items` +
     `?entryId=${id}&locale=${locale}&fallbackLocale=${fallbackLocale}` +
     '&tags=BR-rainbow-six%20GA-siege'
 };

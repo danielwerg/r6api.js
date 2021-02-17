@@ -1,7 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import { Platform, UUID } from '../typings';
-import { URLS } from '../utils';
+import { getURL } from '../utils';
 
 interface IProgression {
   profile_id: UUID;
@@ -15,7 +15,7 @@ interface IApiResponse {
 
 export default (platform: Platform, ids: UUID[]) =>
   getToken()
-    .then(fetch<IApiResponse>(URLS.PROGRESS(platform, ids)))
+    .then(fetch<IApiResponse>(getURL.PROGRESS(platform, ids)))
     .then(res =>
       res.player_profiles.map(profile => ({
         id: profile.profile_id,

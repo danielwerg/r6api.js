@@ -1,6 +1,6 @@
 import { getToken, getAuth } from '../auth';
 import fetch from '../fetch';
-import { URLS } from '../utils';
+import { getURL } from '../utils';
 
 export default async (username: string) => {
 
@@ -23,7 +23,7 @@ export default async (username: string) => {
 
   return getToken()
     .then(fetch<IApiResponse>(
-      URLS.VALIDATEUSERNAME(userId),
+      getURL.VALIDATEUSERNAME(userId),
       {
         method: 'POST',
         body: JSON.stringify({ nameOnPlatform: username })

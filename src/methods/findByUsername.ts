@@ -1,7 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import { PlatformAll, UUID } from '../typings';
-import { URLS, getAvatars } from '../utils';
+import { getURL, getAvatars } from '../utils';
 
 interface IProfile {
   profileId: UUID;
@@ -16,7 +16,7 @@ interface IApiResponse {
 
 export default (platform: PlatformAll, username: string[]) =>
   getToken()
-    .then(fetch<IApiResponse>(URLS.BYUSERNAME(platform, username)))
+    .then(fetch<IApiResponse>(getURL.BYUSERNAME(platform, username)))
     .then(res =>
       res.profiles
         .map(profile => ({

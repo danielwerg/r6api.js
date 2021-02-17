@@ -6,7 +6,7 @@ import {
 import {
   STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS, GITHUB_ASSETS_URL
 } from '../constants';
-import { URLS, getCDNURL, getKD, getWinRate } from '../utils';
+import { getURL, getCDNURL, getKD, getWinRate } from '../utils';
 
 interface IGeneral {
   bulletsFired: number;
@@ -264,7 +264,7 @@ const operatorsGetter = (obj: any, type: MPType) =>
       uniqueAbility: cur.uniqueAbility
         ? {
           name: cur.uniqueAbility.name,
-          icon: getCDNURL(cur.uniqueAbility.icon),
+          icon: getCDNURL(cur.uniqueAbility.iconId),
           stats: cur.uniqueAbility.stats.map(gadget => ({
             name: gadget.name,
             value: statGetter(obj, 'operator', `${gadget.id}:${cur.id}`, type)
@@ -296,7 +296,7 @@ const weaponsGetter = (obj: any, type: MPType) =>
       .reduce((acc2, [id, weapon]) => {
         acc2[id] = {
           name: weapon.name,
-          icon: getCDNURL(weapon.icon),
+          icon: getCDNURL(weapon.iconId),
           kills: statGetter(obj, 'weapon', `kills:${weapon.id}`, type),
           deaths: statGetter(obj, 'weapon', `death:${weapon.id}`, type),
           kd: getKD({
@@ -334,7 +334,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
   return Promise.all(stats.map(chunk =>
     getToken()
-      .then(fetch<any>(URLS.STATS(platform, ids, chunk)))
+      .then(fetch<any>(getURL.STATS(platform, ids, chunk)))
   ))
     .then(res =>
       Object.entries(

@@ -4,7 +4,7 @@ import { promises as fs } from 'fs';
 
 import fetch from './fetch';
 import { Platform, UUID } from './typings';
-import { URLS } from './utils';
+import { getURL } from './utils';
 
 export interface IUbiAuth {
   platformType: Platform;
@@ -48,7 +48,7 @@ export const login = async () => {
     .from(`${credentials.email}:${credentials.password}`, 'utf8')
     .toString('base64');
 
-  return fetch<IUbiAuth>(URLS.LOGIN(), {
+  return fetch<IUbiAuth>(getURL.LOGIN(), {
     method: 'POST',
     body: JSON.stringify({ rememberMe: true })
   })(token)
