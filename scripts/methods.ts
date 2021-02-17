@@ -58,7 +58,7 @@ import { insertContent, isFileExists } from './utils';
   const getNewsById = await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z')
     .catch(err => console.error(err));
   const custom = await r6api.custom(
-    utils.URLS.STATS(platform, [id], 'operatorpvp_clash_sloweddown')
+    utils.getURL.STATS(platform, [id], 'operatorpvp_clash_sloweddown')
   ).catch(err => console.error(err));
 
   const methods = <const>[
