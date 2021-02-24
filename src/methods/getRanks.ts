@@ -3,7 +3,7 @@ import fetch from '../fetch';
 import {
   Platform, UUID, SeasonId, SeasonIdExtended, RankId, OldRankId, RegionId, BoardId
 } from '../typings';
-import { REGIONS, SEASONS, RANKS } from '../constants';
+import { REGIONS, SEASONS } from '../constants';
 import {
   getURL, getCDNURL, getKD, getWinRate,
   getRankNameFromRankId, getRankIconFromRankId, getRankIdFromMmr
@@ -172,9 +172,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                   skillStdev: val.skill_stdev,
                   current: {
                     id: currentRankId,
-                    name: board === 'pvp_casual'
-                      ? RANKS[getRankIdFromMmr(val.mmr, matches)]
-                      : getRankNameFromRankId(val.max_rank, seasonId),
+                    name: getRankNameFromRankId(currentRankId, seasonId),
                     mmr: val.mmr,
                     icon: getRankIconFromRankId(currentRankId, seasonId)
                   },
