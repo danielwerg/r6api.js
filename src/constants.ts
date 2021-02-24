@@ -149,7 +149,13 @@ export const SEASONS = <const>{
     color: '#D14007',
     imageId: '3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4',
     releaseDate: new Date('2020-12-01').toISOString()
-  }
+  }// ,
+  // 21: {
+  //   name: 'Crimson Heist',
+  //   color: '#AC0000',
+  //   imageId: '7iKoGngda7z0LyYpTT25zM/116efeb1c65cb9a356a3e9a42abe2ae3/R6_live_Y6S1_CrimsonHeist',
+  //   releaseDate: new Date('2021-03-16').toISOString()
+  // }
 };
 
 // Ember Rise (15) and above
@@ -979,7 +985,20 @@ export const OPERATORS = {
         { name: 'Surya Gates Deployed', id: '' }
       ]
     }
-  }
+  }// ,
+  // 'flores': {
+  //   name: 'Flores',
+  //   id: '3:18',
+  //   role: 'attacker',
+  //   unit: 'Unaffiliated',
+  //   uniqueAbility: {
+  //     name: 'RCE-Ratero Charge',
+  //     iconId: '1z7eSI5D8IRIOHi0PJu4yq/3c4a273098a840957a248583f73fa8ff/r6s-operator-ability-flores',
+  //     stats: [
+  //       { name: 'Gadgets Destroyed with RCE', id: '' }
+  //     ]
+  //   }
+  // }
 };
 
 export const WEAPONTYPES = <const>{
