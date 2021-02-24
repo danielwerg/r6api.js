@@ -982,7 +982,7 @@ export const OPERATORS = {
       name: 'Surya Gate',
       iconId: '4hLJAAVKrf50wosG0471od/cde1867daf863c03754969f159ac00de/r6s-operator-ability-aruni',
       stats: [
-        { name: 'Surya Gates Deployed', id: '' }
+        { name: 'Surya Gates Deployed', id: 'aruni_gatesdeployed' }
       ]
     }
   }// ,
