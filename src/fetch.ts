@@ -25,13 +25,14 @@ export default <T>(url: string, params: Partial<RequestInit> = {}) =>
     const handleResponse = async (res: Response) => {
       if (res.ok) return res.json();
       else {
+        const body = await res.text();
+        let json;
         try {
-          const body = await res.text();
-          const json = JSON.parse(body);
-          throw new Error(json.message + json.moreInfo ? `\n\n${json.moreInfo}` : '');
+          json = JSON.parse(body);
         } catch (error) {
           throw new Error(res.statusText);
         }
+        throw new Error(`${json.message}${json.moreInfo ? `\n\n${json.moreInfo}` : ''}`);
       }
     };
 
