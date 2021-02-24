@@ -995,7 +995,7 @@ export const OPERATORS = {
   //     name: 'RCE-Ratero Charge',
   //     iconId: '1z7eSI5D8IRIOHi0PJu4yq/3c4a273098a840957a248583f73fa8ff/r6s-operator-ability-flores',
   //     stats: [
-  //       { name: 'Gadgets Destroyed with RCE', id: '' }
+  //       { name: 'Gadgets Destroyed with RCE', id: 'flores_gadgetdestroywithrceratero' }
   //     ]
   //   }
   // }
