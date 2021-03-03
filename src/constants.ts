@@ -1,3 +1,5 @@
+export const ubiAppId = '3587dcbb-7f81-457c-9781-0e3f29f6f56a';
+
 export const UBISERVICES_URL = 'https://public-ubiservices.ubi.com';
 export const STATUS_URL = 'https://game-status-api.ubisoft.com';
 export const UBI_URL = 'https://www.ubisoft.com';
@@ -19,6 +21,13 @@ export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/typ
 
 export const PLATFORMS = <const>['uplay', 'psn', 'xbl'];
 export const PLATFORMSALL = <const>[...PLATFORMS, 'steam', 'epic', 'amazon'];
+
+export const BOARDS = <const>{
+  'pvp_ranked': { name: 'Ranked', seasonId: 6 },
+  'pvp_newcomer': { name: 'Newcomer', seasonId: 12 },
+  'pvp_casual': { name: 'Casual', seasonId: 15 },
+  'pvp_event': { name: 'Event', seasonId: 16 }
+};
 
 export const REGIONS = <const>{
   'emea': 'Europe, Middle East and Africa',
@@ -495,7 +504,7 @@ export const OPERATORS = {
   'frost': {
     name: 'Frost',
     id: '3:6',
-    role: 'defender attacker',
+    role: 'defender',
     unit: 'JTF2',
     uniqueAbility: {
       name: 'Welcome Mate',

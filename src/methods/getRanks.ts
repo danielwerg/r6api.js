@@ -1,9 +1,10 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
-  Platform, UUID, SeasonId, SeasonIdExtended, RankId, OldRankId, RegionId, BoardId
+  Platform, UUID, SeasonId, SeasonIdExtended, RankId, OldRankId, RegionId, BoardId,
+  IOptionsDocs
 } from '../typings';
-import { REGIONS, SEASONS } from '../constants';
+import { REGIONS, SEASONS, BOARDS } from '../constants';
 import {
   getURL, getCDNURL, getKD, getWinRate,
   getRankNameFromRankId, getRankIconFromRankId, getRankIdFromMmr
@@ -17,7 +18,7 @@ interface IRank {
   next_rank_mmr: number;
   rank: RankId | OldRankId;
   max_rank: RankId | OldRankId;
-  board_id: string;
+  board_id: BoardId;
   skill_stdev: number;
   kills: number;
   last_match_skill_stdev_change: number;
@@ -40,10 +41,10 @@ export interface IApiResponse {
   };
 }
 
-interface IRegions {
+interface IBoards {
   [id: string]: {
-    id: string;
-    name: string;
+    boardId: BoardId;
+    boardName: string;
     skillMean: number;
     skillStdev: number;
     current: {
@@ -76,15 +77,22 @@ interface IRegions {
     matches: number;
     abandons: number;
     updateTime: string;
+  }
+}
+interface IRegions {
+  [id: string]: {
+    regionId: RegionId;
+    regionName: string;
+    boards: IBoards;
   };
 }
 interface ISeasons {
   [id: string]: {
-    id: number;
-    name?: string;
-    color?: string;
-    image?: string;
-    releaseDate?: string;
+    seasonId: SeasonId;
+    seasonName?: string;
+    seasonColor?: string;
+    seasonImage?: string;
+    seasonReleaseDate?: string;
     regions: IRegions;
   };
 }
@@ -94,80 +102,89 @@ export interface IGetRanks {
 }
 
 export interface IOptions {
-  seasons?: SeasonIdExtended | SeasonIdExtended[] | 'all';
-  regions?: RegionId | RegionId[] | 'all';
-  boardId?: BoardId;
+  seasonIds?: SeasonIdExtended | SeasonIdExtended[] | 'all';
+  regionIds?: RegionId | RegionId[] | 'all';
+  boardIds?: BoardId | BoardId[] | 'all';
 }
 
-export const optionsDocs = [
+export const optionsDocs: IOptionsDocs = [
   [
-    'seasons', '`number \\| number[] \\| \'all\'`', 'false', '`-1`',
-    `Numbers from \`6\` to \`${Object.keys(SEASONS).slice(-1)[0]}\` or \`-1\``
+    'seasonIds', '`number \\| number[] \\| string`', false, '`-1`',
+    `Numbers from \`6\` to \`${Object.keys(SEASONS).slice(-1)[0]}\` or \`-1\` or \`'all'\``
   ],
   [
-    'regions', '`string \\| string[]`', 'false', '`[\'emea\', \'ncsa\', \'apac\']`', ''
+    'regionIds', '`string \\| string[]`', false, '`[\'emea\', \'ncsa\', \'apac\']`',
+    '`\'emea\'`, `\'ncsa\'`, `\'apac\'` or `\'all\'`'
   ],
   [
-    'board', '`\'pvp_ranked\' \\| \'pvp_casual\'`', 'false', '`\'pvp_ranked\'`', ''
+    'boardIds', '`string` \\| string[]', false, '`\'pvp_ranked\'`',
+    '`\'pvp_ranked\'`, `\'pvp_casual\'`, `\'pvp_newcomer\'` or `\'pvp_event\'`'
   ]
 ];
 
 const getMatchResult = (id: IRank['last_match_result']) =>
   ({ 0: 'unknown', 1: 'win', 2: 'loss', 3: 'abandon' }[id]);
 
-const getBoardName = (boardId: BoardId) =>
-  ({ 'pvp_ranked': 'Ranked', 'pvp_casual': 'Casual' })[boardId];
-
 export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
-  const seasons: SeasonIdExtended[] = options && options.seasons === 'all'
-    ? Object.keys(SEASONS).map(season => Number(season) as SeasonId)
-    : options && options.seasons && [].concat(options.seasons as any) || [-1];
+  const boardIds = options && options.boardIds && options.boardIds !== 'all'
+    ? [options.boardIds].flat() : Object.keys(BOARDS) as BoardId[];
 
-  const regions = options && options.regions === 'all'
-    ? (Object.keys(REGIONS) as RegionId[])
-    : (options && options.regions && [].concat(options.regions as any))
-      || (Object.keys(REGIONS) as RegionId[]);
+  const minSeasonId = Object.entries(BOARDS)
+    .reverse().filter(([boardId]) => boardIds.includes(boardId as BoardId))[0][1].seasonId;
 
-  const board = options && options.boardId || 'pvp_ranked';
+  const seasonIds = options && (options.seasonIds === 'all'
+    ? Object.keys(SEASONS)
+      .slice(minSeasonId - Number(Object.keys(SEASONS)[0]))
+      .map(season => Number(season) as SeasonId)
+    : options.seasonIds && [options.seasonIds].flat()
+  ) || [-1];
 
-  return Promise.all(seasons.map(season =>
-    Promise.all(regions.map(region =>
-      getToken()
-        .then(fetch<IApiResponse>(getURL.RANKS(platform, ids, season, region, board)))
+  const regionIds = options && options.regionIds && options.regionIds !== 'all'
+    ? [options.regionIds].flat() : Object.keys(REGIONS) as RegionId[];
+
+  return Promise.all(seasonIds.map(seasonId =>
+    Promise.all(regionIds.map(regionId =>
+      Promise.all(boardIds.map(boardId =>
+        getToken()
+          .then(fetch<IApiResponse>(getURL.RANKS(platform, ids, seasonId, regionId, boardId)))
+      ))
     ))
   ))
     .then(res =>
       Object.values(
         res
-          .flat()
+          .flat(2)
           .reduce((acc, { players }) => {
             Object.entries(players)
-              .map(([id, { season: seasonId, region: regionId, ...val }]) => {
+              .map((
+                [id, { season: seasonId, region: regionId, board_id: boardId, ...val }]
+              ) => {
 
                 const matches = val.wins + val.losses;
                 const currentRankId =
-                  board === 'pvp_casual' ? getRankIdFromMmr(val.mmr, matches) : val.rank;
+                  boardId !== 'pvp_ranked' ? getRankIdFromMmr(val.mmr, matches) : val.rank;
 
-                acc[id] = acc[id] || {
-                  id: id as UUID,
-                  boardId: board,
-                  boardName: getBoardName(board),
-                  seasons: {}
-                };
+                acc[id] = acc[id] || { id: id as UUID, seasons: {} };
                 acc[id].seasons[seasonId] = acc[id].seasons[seasonId] || {
-                  id: seasonId,
+                  seasonId,
                   ...SEASONS[seasonId] && {
-                    name: SEASONS[seasonId].name,
-                    color: SEASONS[seasonId].color,
-                    image: getCDNURL(SEASONS[seasonId].imageId, 'jpg'),
-                    releaseDate: SEASONS[seasonId].releaseDate
+                    seasonName: SEASONS[seasonId].name,
+                    seasonColor: SEASONS[seasonId].color,
+                    seasonImage: getCDNURL(SEASONS[seasonId].imageId, 'jpg'),
+                    seasonReleaseDate: SEASONS[seasonId].releaseDate
                   },
                   regions: {}
                 };
-                acc[id].seasons[seasonId].regions[regionId] = {
-                  id: regionId,
-                  name: REGIONS[regionId],
+                acc[id].seasons[seasonId].regions[regionId] =
+                  acc[id].seasons[seasonId].regions[regionId] || {
+                    regionId,
+                    regionName: REGIONS[regionId],
+                    boards: {}
+                  };
+                acc[id].seasons[seasonId].regions[regionId].boards[boardId] = {
+                  boardId,
+                  boardName: BOARDS[boardId].name,
                   skillMean: val.skill_mean,
                   skillStdev: val.skill_stdev,
                   current: {

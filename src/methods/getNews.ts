@@ -1,5 +1,6 @@
 import fetch from '../fetch';
 import { getURL, getNewsURL } from '../utils';
+import { IOptionsDocs } from '../typings';
 
 export interface INewsItems {
   id: string;
@@ -54,18 +55,18 @@ export interface IOptions {
   fallbackLocale?: string;
 }
 
-export const optionsDocs = [
-  ['raw', '`boolean`', 'false', '`false`', 'Include raw API response'],
+export const optionsDocs: IOptionsDocs = [
+  ['raw', '`boolean`', false, '`false`', 'Include raw API response'],
   [
-    'category', '`string`', 'false', '`\'all\'`',
-    'all, game-updates, patch-notes, community, store, esports'
+    'category', '`string`', false, '`\'all\'`',
+    '`\'all\'`, `\'game-updates\'`, `\'patch-notes\'`, `\'community\'`, `\'store\'`, `\'esports\'`'
   ],
-  ['media', '`string`', 'false', '`\'all\'`', 'all, news, videos'],
-  ['limit', '`number`', 'false', '`6`', ''],
-  ['skip', '`number`', 'false', '`0`', ''],
-  ['startIndex', '`number`', 'false', '`0`', ''],
-  ['locale', '`string`', 'false', '`\'en-us\'`', ''],
-  ['fallbackLocale', '`string`', 'false', '`\'en-us\'`', '']
+  ['media', '`string`', false, '`\'all\'`', '`\'all\'`, `\'news\'`, `\'videos\'`'],
+  ['limit', '`number`', false, '`6`', ''],
+  ['skip', '`number`', false, '`0`', ''],
+  ['startIndex', '`number`', false, '`0`', ''],
+  ['locale', '`string`', false, '`\'en-us\'`', ''],
+  ['fallbackLocale', '`string`', false, '`\'en-us\'`', '']
 ];
 
 export default async (options?: IOptions) => {

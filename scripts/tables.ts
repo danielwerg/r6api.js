@@ -3,7 +3,7 @@ import * as mdtable from 'markdown-table';
 import { join } from 'path';
 
 import { insertContent } from './utils';
-import { SEASONS, OLD_SEASONS, REGIONS } from '../src/constants';
+import { SEASONS, OLD_SEASONS, REGIONS, BOARDS } from '../src/constants';
 import { optionsDocs as findByIdOptionsDocs } from '../src/methods/findById';
 import { optionsDocs as getRanksOptionsDocs } from '../src/methods/getRanks';
 import { optionsDocs as getStatsOptionsDocs } from '../src/methods/getStats';
@@ -27,7 +27,7 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
   ];
 
   for (const [name, options] of optionsDocs) {
-    const table = mdtable([optionsHeader, ...options]);
+    const table = mdtable([optionsHeader, ...options as string[][]]);
     // console.log(`${name} table:\n${table}`);
     await insertContent(
       readmePath, `${name}_OPTIONS`, table, { newLine: true, ...extraNewLine }
@@ -112,6 +112,16 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
   // console.log(`regionsTable:\n${regionsTable}`);
   await insertContent(
     readmePath, 'REGIONS_TABLE', regionsTable, { newLine: true, ...extraNewLine }
+  ).catch(err => console.error(err));
+
+  // readme > getRanks > Boards reference
+  const boardsTable = mdtable([
+    ['Season ID', 'Board ID'],
+    ...Object.entries(BOARDS).map(([boardId, { seasonId }]) => [seasonId.toString(), boardId])
+  ]);
+  // console.log(`boardsTable:\n${boardsTable}`);
+  await insertContent(
+    readmePath, 'BOARDS_TABLE', boardsTable, { newLine: true, ...extraNewLine }
   ).catch(err => console.error(err));
 
 })();

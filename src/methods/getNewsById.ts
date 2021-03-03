@@ -1,5 +1,6 @@
 import fetch from '../fetch';
 import { getURL, getNewsURL } from '../utils';
+import { IOptionsDocs } from '../typings';
 
 export interface INewsItem {
   id: string;
@@ -64,10 +65,10 @@ export interface IOptions {
   fallbackLocale?: string;
 }
 
-export const optionsDocs = [
-  ['raw', '`boolean`', 'false', '`false`', 'Include raw API response'],
-  ['locale', '`string`', 'false', '`\'en-us\'`', ''],
-  ['fallbackLocale', '`string`', 'false', '`\'en-us\'`', '']
+export const optionsDocs: IOptionsDocs = [
+  ['raw', '`boolean`', false, '`false`', 'Include raw API response'],
+  ['locale', '`string`', false, '`\'en-us\'`', ''],
+  ['fallbackLocale', '`string`', false, '`\'en-us\'`', '']
 ];
 
 export default async (id: string, options?: IOptions) => {

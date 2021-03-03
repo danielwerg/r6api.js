@@ -1,6 +1,6 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
-import { PlatformAllExtended, UUID } from '../typings';
+import { PlatformAllExtended, UUID, IOptionsDocs } from '../typings';
 import { getURL, getAvatars } from '../utils';
 
 interface IProfile {
@@ -18,9 +18,9 @@ export interface IOptions {
   isUserId?: boolean;
 }
 
-export const optionsDocs = [
+export const optionsDocs: IOptionsDocs = [
   [
-    'isUserId', '`boolean`', 'false', '`false`', 'Whether `id` is `userId` or not'
+    'isUserId', '`boolean`', false, '`false`', 'Whether `id` is `userId` or not'
   ]
 ];
 

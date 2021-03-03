@@ -1,7 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
-  Platform, UUID, MPType, WeaponTypeId, OperatorName, StatsCategoryName
+  Platform, UUID, MPType, WeaponTypeId, OperatorName, StatsCategoryName, IOptionsDocs
 } from '../typings';
 import {
   STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS, GITHUB_ASSETS_URL
@@ -190,9 +190,9 @@ export interface IOptions {
   categories?: StatsCategoryName[];
 }
 
-export const optionsDocs = [
-  ['raw', '`boolean`', 'false', '`false` ', 'Include raw API response'],
-  ['categories', '`string[]`', 'false', 'Requests all', 'Categories to request']
+export const optionsDocs: IOptionsDocs = [
+  ['raw', '`boolean`', false, '`false` ', 'Include raw API response'],
+  ['categories', '`string[]`', false, 'Requests all', 'Categories to request']
 ];
 
 const getOperatorIconURL = (name: string) =>

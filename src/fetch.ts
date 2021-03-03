@@ -1,5 +1,7 @@
 import nodeFetch, { RequestInit, Response } from 'node-fetch';
 
+import { ubiAppId } from './constants';
+
 const promiseTimeout = <T>(promise: Promise<T>, ms: number, reject = true) =>
   Promise.race([promise, new Promise((res, rej) => setTimeout(() => reject ? rej : res, ms))]);
 
@@ -13,8 +15,8 @@ export default <T>(url: string, params: Partial<RequestInit> = {}) =>
         {
           method: 'GET',
           headers: {
-            'Ubi-AppId': '39baebad-39e5-4552-8c25-2c9b919064e2',
             'Content-Type': 'application/json; charset=UTF-8',
+            'Ubi-AppId': ubiAppId,
             'Authorization': token
           }
         },

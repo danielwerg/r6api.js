@@ -1,51 +1,55 @@
 [
   {
     "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "boardId": "pvp_ranked",
-    "boardName": "Ranked",
     "seasons": {
       "20": {
-        "id": 20,
-        "name": "Neon Dawn",
-        "color": "#D14007",
-        "image": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4.jpg",
-        "releaseDate": "2020-12-01T00:00:00.000Z",
+        "seasonId": 20,
+        "seasonName": "Neon Dawn",
+        "seasonColor": "#D14007",
+        "seasonImage": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4.jpg",
+        "seasonReleaseDate": "2020-12-01T00:00:00.000Z",
         "regions": {
           "emea": {
-            "id": "emea",
-            "name": "Europe, Middle East and Africa",
-            "skillMean": 31.0012849098,
-            "skillStdev": 6.2625554853,
-            "current": {
-              "id": 18,
-              "name": "Gold 1",
-              "mmr": 3100,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Gold%201.png"
-            },
-            "max": {
-              "id": 19,
-              "name": "Platinum 3",
-              "mmr": 3396,
-              "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%203.png"
-            },
-            "lastMatch": {
-              "result": "loss",
-              "mmrChange": -65,
-              "skillMeanChange": -0.6529273971,
-              "skillStdevChange": -0.0395949962
-            },
-            "previousMmr": 3000,
-            "nextMmr": 3200,
-            "topRankPosition": 0,
-            "kills": 123,
-            "deaths": 114,
-            "kd": 1.08,
-            "wins": 12,
-            "losses": 13,
-            "winRate": "48.00%",
-            "matches": 25,
-            "abandons": 0,
-            "updateTime": "2020-12-28T16:30:07.288000+00:00"
+            "regionId": "emea",
+            "regionName": "Europe, Middle East and Africa",
+            "boards": {
+              "pvp_ranked": {
+                "boardId": "pvp_ranked",
+                "boardName": "Ranked",
+                "skillMean": 38.3491372306,
+                "skillStdev": 3.9413086329,
+                "current": {
+                  "id": 20,
+                  "name": "Platinum 2",
+                  "mmr": 3835,
+                  "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%202.png"
+                },
+                "max": {
+                  "id": 20,
+                  "name": "Platinum 2",
+                  "mmr": 3835,
+                  "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%202.png"
+                },
+                "lastMatch": {
+                  "result": "win",
+                  "mmrChange": 34,
+                  "skillMeanChange": 0.3435030667,
+                  "skillStdevChange": -0.0110458855
+                },
+                "previousMmr": 3600,
+                "nextMmr": 4000,
+                "topRankPosition": 0,
+                "kills": 627,
+                "deaths": 637,
+                "kd": 0.98,
+                "wins": 77,
+                "losses": 60,
+                "winRate": "56.20%",
+                "matches": 137,
+                "abandons": 1,
+                "updateTime": "2021-03-03T11:26:02.326000+00:00"
+              }
+            }
           }
         }
       }

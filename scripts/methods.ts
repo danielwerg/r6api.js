@@ -45,7 +45,7 @@ import { insertContent, isFileExists } from './utils';
     .catch(err => console.error(err));
   const getPlaytime = await r6api.getPlaytime(platform, id)
     .catch(err => console.error(err));
-  const getRanks = await r6api.getRanks(platform, id, { regions: 'emea' })
+  const getRanks = await r6api.getRanks(platform, id, { regionIds: 'emea', boardIds: 'pvp_ranked' })
     .catch(err => console.error(err));
   const getStats = await r6api.getStats(platform, id)
     .catch(err => console.error(err));

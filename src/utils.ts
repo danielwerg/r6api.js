@@ -7,7 +7,7 @@ import {
 import {
   UBISERVICES_URL, STATUS_URL, UBI_URL, SPACE_IDS, SANDBOXES,
   AVATARS_URL, CDN_URL,
-  PLATFORMS, PLATFORMSALL, REGIONS,
+  PLATFORMS, PLATFORMSALL, REGIONS, BOARDS,
   SEASONS, OLD_SEASONS, RANKS, OLD_RANKS,
   OPERATORS, WEAPONTYPES, WEAPONS,
   STATS_CATEGORIES, GITHUB_ASSETS_URL
@@ -141,6 +141,9 @@ export const isRegionId = (value: string): value is RegionId =>
 
 export const isSeasonId = (value: number): value is SeasonId =>
   Object.keys(SEASONS).map(season => Number(season)).includes(value);
+
+export const isBoardId = (value: string): value is BoardId =>
+  Object.keys(BOARDS).includes(value);
 
 export const isSeasonIdExtended = (value: number): value is SeasonIdExtended =>
   Object.keys(SEASONS).map(season => Number(season)).includes(value);

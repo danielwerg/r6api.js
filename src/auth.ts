@@ -27,16 +27,16 @@ export interface IUbiAuth {
 let LOGIN_TIMEOUT: any;
 const credentials = { email: '', password: '' };
 
-const tokenFileName = 'r6api-token.json';
+const authFileName = 'r6api.js-auth.json';
 const TEN_MIN_IN_MS = 10 * 60 * 1000;
-let tokenFile = join(tmpdir(), tokenFileName);
+let authFile = join(tmpdir(), authFileName);
 
 const getExpiration = (auth: IUbiAuth) =>
   +new Date(auth.expiration) - +new Date() - TEN_MIN_IN_MS;
 
 export const login = async () => {
 
-  const lastAuth: IUbiAuth = await fs.readFile(tokenFile, 'utf8')
+  const lastAuth: IUbiAuth = await fs.readFile(authFile, 'utf8')
     .then((auth) => JSON.parse(auth))
     .catch(() => '');
   if (lastAuth && getExpiration(lastAuth) > 0) {
@@ -54,7 +54,7 @@ export const login = async () => {
   })(token)
     .then(async res => {
       if (res && res.ticket && res.expiration) {
-        await fs.writeFile(tokenFile, JSON.stringify(res));
+        await fs.writeFile(authFile, JSON.stringify(res));
         return res;
       } else
         throw new Error(`No response from login: ${JSON.stringify(res)}`);
@@ -70,7 +70,7 @@ const setNextLogin = async (auth: IUbiAuth) => {
 };
 
 export const getAuth = () => login();
-
+export const getTicket = () => login().then(auth => auth.ticket);
 export const getToken = () => login().then(auth => `Ubi_v1 t=${auth.ticket}`);
 
 export const setCredentials = (email: string, password: string) => {
@@ -78,6 +78,6 @@ export const setCredentials = (email: string, password: string) => {
   credentials.password = password;
 };
 
-export const setTokenFileLocation = (dir: string) => {
-  tokenFile = join(dir, tokenFileName);
+export const setAuthFileLocation = (dir: string) => {
+  authFile = join(dir, authFileName);
 };

@@ -1,7 +1,8 @@
 import {
-  setTokenFileLocation as _setTokenFileLocation,
+  setAuthFileLocation as _setAuthFileLocation,
   setCredentials as _setCredentials,
   getAuth as _getAuth,
+  getTicket as _getTicket,
   getToken as _getToken
 } from './auth';
 import _findByUsername from './methods/findByUsername';
@@ -17,6 +18,7 @@ import _getNews from './methods/getNews';
 import _getNewsById from './methods/getNewsById';
 import { UUID, Platform, PlatformAll, PlatformAllExtended } from './typings';
 
+export { default as fetch } from './fetch';
 export * as typings from './typings';
 export * as constants from './constants';
 export * as utils from './utils';
@@ -74,8 +76,9 @@ export default class R6API {
   getNewsById = _getNewsById
 
   getAuth = _getAuth
+  getTicket = _getTicket
   getToken = _getToken
   setCredentials = _setCredentials
-  setTokenFileLocation = _setTokenFileLocation
+  setAuthFileLocation = _setAuthFileLocation
 
 }
