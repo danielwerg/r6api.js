@@ -117,7 +117,7 @@ export const optionsDocs: IOptionsDocs = [
     '`\'emea\'`, `\'ncsa\'`, `\'apac\'` or `\'all\'`'
   ],
   [
-    'boardIds', '`string` \\| string[]', false, '`\'pvp_ranked\'`',
+    'boardIds', '`string` \\| string[]`', false, '`\'pvp_ranked\'`',
     '`\'pvp_ranked\'`, `\'pvp_casual\'`, `\'pvp_newcomer\'` or `\'pvp_event\'`'
   ]
 ];
