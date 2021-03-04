@@ -366,12 +366,12 @@ Ids limit: `200`
 
 <!-- START_SECTION:BOARDS_TABLE -->
 
-| Season ID | Board ID     |
-| --------- | ------------ |
-| 6         | pvp_ranked   |
-| 12        | pvp_newcomer |
-| 15        | pvp_casual   |
-| 16        | pvp_event    |
+| Minimum Season ID | Board ID       |
+| ----------------- | -------------- |
+| `6`               | `pvp_ranked`   |
+| `12`              | `pvp_newcomer` |
+| `15`              | `pvp_casual`   |
+| `16`              | `pvp_event`    |
 
 <!-- END_SECTION:BOARDS_TABLE -->
 

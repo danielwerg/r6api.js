@@ -116,8 +116,9 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
 
   // readme > getRanks > Boards reference
   const boardsTable = mdtable([
-    ['Season ID', 'Board ID'],
-    ...Object.entries(BOARDS).map(([boardId, { seasonId }]) => [seasonId.toString(), boardId])
+    ['Minimum Season ID', 'Board ID'],
+    ...Object.entries(BOARDS)
+      .map(([boardId, { seasonId }]) => [`\`${seasonId.toString()}\``, `\`${boardId}\``])
   ]);
   // console.log(`boardsTable:\n${boardsTable}`);
   await insertContent(
