@@ -337,16 +337,8 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
       .then(fetch<any>(getURL.STATS(platform, ids, chunk)))
   ))
     .then(res =>
-      Object.entries(
-        res
-          .map(obj => obj.results)
-          .reduce((acc, cur) => {
-            Object.keys(cur).map(key =>
-              acc[key] = Object.assign(acc[key] || [], cur[key])
-            );
-            return acc;
-          }, {})
-      )
+      res
+        .flatMap(obj => Object.entries(obj.results))
         .map(([id, vals]) => ({
           id: id as UUID,
           ...raw && { raw: vals },

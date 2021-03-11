@@ -38,7 +38,7 @@ export default async (username: string) => {
             const reportFormatted = match
               ? match
                 .split(', ')
-                .map(x => x.split(':').map(y => y.trim().split(',')).flat())
+                .map(x => x.split(':').flatMap(y => y.trim().split(',')))
                 .reduce((acc, cur) => {
                   acc[cur[0]] = cur[0] === 'Category' ? cur.slice(1) : cur[1];
                   return acc;

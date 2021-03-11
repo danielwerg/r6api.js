@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "es2019"
-    ],
+    "target": "ES6",
+    "lib": ["ESNEXT"],
     "module": "commonjs",
     "declaration": true,
     "declarationMap": true,
@@ -14,13 +12,10 @@
 
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "suppressImplicitAnyIndexErrors": true,
     "downlevelIteration": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
