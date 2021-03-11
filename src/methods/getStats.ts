@@ -347,8 +347,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
     .then(res =>
       Object.entries(
         res
-          .map(obj => obj.results)
-          .reduce((acc, cur) => {
+          .reduce((acc, { results: cur }) => {
             Object.keys(cur).map(key =>
               acc[key] = Object.assign(acc[key] || {}, cur[key])
             );
