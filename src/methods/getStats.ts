@@ -8,6 +8,14 @@ import {
 } from '../constants';
 import { getURL, getCDNURL, getKD, getWinRate } from '../utils';
 
+export interface IApiResponse {
+  results: {
+    [id: string]: {
+      [id: string]: number
+    }
+  }
+}
+
 interface IGeneral {
   bulletsFired: number;
   bulletsConnected: number;
@@ -334,11 +342,19 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
   return Promise.all(stats.map(chunk =>
     getToken()
-      .then(fetch<any>(getURL.STATS(platform, ids, chunk)))
+      .then(fetch<IApiResponse>(getURL.STATS(platform, ids, chunk)))
   ))
     .then(res =>
-      res
-        .flatMap(obj => Object.entries(obj.results))
+      Object.entries(
+        res
+          .map(obj => obj.results)
+          .reduce((acc, cur) => {
+            Object.keys(cur).map(key =>
+              acc[key] = Object.assign(acc[key] || {}, cur[key])
+            );
+            return acc;
+          }, {})
+      )
         .map(([id, vals]) => ({
           id: id as UUID,
           ...raw && { raw: vals },
