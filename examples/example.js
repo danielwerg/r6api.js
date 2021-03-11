@@ -1,10 +1,10 @@
 require('dotenv').config();
-const R6API = require('../lib').default;
+const R6API = require('../dist').default;
 
 // // Or ES6 way
 // import * as dotenv from 'dotenv';
 // dotenv.config();
-// import R6API from '../lib';
+// import R6API from '../dist';
 
 const { UBI_EMAIL: email = '', UBI_PASSWORD: password = '' } = process.env;
 const r6api = new R6API({ email, password });

@@ -16,7 +16,7 @@ import exampleFile from '../examples/example';
   const readmePath = join(__dirname, '../readme.md');
 
   const example = await fsp.readFile(examplePath, 'utf8')
-    .then(exampleText => exampleText.replace(/\.\.\/lib/g, 'r6api.js'))
+    .then(exampleText => exampleText.replace(/\.\.\/dist/g, 'r6api.js'))
     .catch(err => { throw new Error(err); });
 
 
