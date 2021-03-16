@@ -2,12 +2,12 @@
   {
     "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
     "seasons": {
-      "20": {
-        "seasonId": 20,
-        "seasonName": "Neon Dawn",
-        "seasonColor": "#D14007",
-        "seasonImage": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4.jpg",
-        "seasonReleaseDate": "2020-12-01T00:00:00.000Z",
+      "21": {
+        "seasonId": 21,
+        "seasonName": "Crimson Heist",
+        "seasonColor": "#AC0000",
+        "seasonImage": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iKoGngda7z0LyYpTT25zM/116efeb1c65cb9a356a3e9a42abe2ae3/R6_live_Y6S1_CrimsonHeist.jpg",
+        "seasonReleaseDate": "2021-03-16T00:00:00.000Z",
         "regions": {
           "emea": {
             "regionId": "emea",
@@ -16,38 +16,38 @@
               "pvp_ranked": {
                 "boardId": "pvp_ranked",
                 "boardName": "Ranked",
-                "skillMean": 38.3491372306,
-                "skillStdev": 3.9413086329,
+                "skillMean": 31.7371445874,
+                "skillStdev": 7.4753858127,
                 "current": {
-                  "id": 20,
-                  "name": "Platinum 2",
-                  "mmr": 3835,
-                  "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%202.png"
+                  "id": 0,
+                  "name": "Unranked",
+                  "mmr": 3174,
+                  "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png"
                 },
                 "max": {
-                  "id": 20,
-                  "name": "Platinum 2",
-                  "mmr": 3835,
-                  "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%202.png"
+                  "id": 0,
+                  "name": "Unranked",
+                  "mmr": 0,
+                  "icon": "https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png"
                 },
                 "lastMatch": {
-                  "result": "win",
-                  "mmrChange": 34,
-                  "skillMeanChange": 0.3435030667,
-                  "skillStdevChange": -0.0110458855
+                  "result": "unknown",
+                  "mmrChange": 0,
+                  "skillMeanChange": 0,
+                  "skillStdevChange": 0
                 },
-                "previousMmr": 3600,
-                "nextMmr": 4000,
+                "previousMmr": 0,
+                "nextMmr": 0,
                 "topRankPosition": 0,
-                "kills": 627,
-                "deaths": 637,
-                "kd": 0.98,
-                "wins": 77,
-                "losses": 60,
-                "winRate": "56.20%",
-                "matches": 137,
-                "abandons": 1,
-                "updateTime": "2021-03-03T11:26:02.326000+00:00"
+                "kills": 0,
+                "deaths": 0,
+                "kd": 0,
+                "wins": 0,
+                "losses": 0,
+                "winRate": "0.00%",
+                "matches": 0,
+                "abandons": 0,
+                "updateTime": "1970-01-01T00:00:00+00:00"
               }
             }
           }

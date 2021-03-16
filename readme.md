@@ -326,7 +326,7 @@ Ids limit: `200`
 
 | Param     | Type                           | Required | Default                    | Description                                                       |
 | --------- | ------------------------------ | -------- | -------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                       | Numbers from `6` to `20` or `-1` or `'all'`                       |
+| seasonIds | `number \| number[] \| string` | false    | `-1`                       | Numbers from `6` to `21` or `-1` or `'all'`                       |
 | regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']` | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
 | boardIds  | `string \| string[]`           | false    | `'pvp_ranked'`             | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
 
@@ -336,13 +336,16 @@ Ids limit: `200`
 
 <!-- START_SECTION:SEASONS_TABLE -->
 
-| ID   | Name         | ● | ID   | Name          | ● | ID   | Name           |
-| ---- | ------------ | - | ---- | ------------- | - | ---- | -------------- |
-| `6`  | Health       |   | `11` | Grim Sky      |   | `16` | Shifting Tides |
-| `7`  | Blood Orchid |   | `12` | Wind Bastion  |   | `17` | Void Edge      |
-| `8`  | White Noise  |   | `13` | Burnt Horizon |   | `18` | Steel Wave     |
-| `9`  | Chimera      |   | `14` | Phantom Sight |   | `19` | Shadow Legacy  |
-| `10` | Para Bellum  |   | `15` | Ember Rise    |   | `20` | Neon Dawn      |
+| ID   | Name          | ● | ID   | Name           |
+| ---- | ------------- | - | ---- | -------------- |
+| `6`  | Health        |   | `14` | Phantom Sight  |
+| `7`  | Blood Orchid  |   | `15` | Ember Rise     |
+| `8`  | White Noise   |   | `16` | Shifting Tides |
+| `9`  | Chimera       |   | `17` | Void Edge      |
+| `10` | Para Bellum   |   | `18` | Steel Wave     |
+| `11` | Grim Sky      |   | `19` | Shadow Legacy  |
+| `12` | Wind Bastion  |   | `20` | Neon Dawn      |
+| `13` | Burnt Horizon |   | `21` | Crimson Heist  |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 
@@ -393,12 +396,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '20': {
-        seasonId: 20,
-        seasonName: 'Neon Dawn',
-        seasonColor: '#D14007',
-        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4.jpg',
-        seasonReleaseDate: '2020-12-01T00:00:00.000Z',
+      '21': {
+        seasonId: 21,
+        seasonName: 'Crimson Heist',
+        seasonColor: '#AC0000',
+        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iKoGngda7z0LyYpTT25zM/116efeb1c65cb9a356a3e9a42abe2ae3/R6_live_Y6S1_CrimsonHeist.jpg',
+        seasonReleaseDate: '2021-03-16T00:00:00.000Z',
         regions: {
           emea: {
             regionId: 'emea',
@@ -407,38 +410,38 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
               pvp_ranked: {
                 boardId: 'pvp_ranked',
                 boardName: 'Ranked',
-                skillMean: 38.3491372306,
-                skillStdev: 3.9413086329,
+                skillMean: 31.7371445874,
+                skillStdev: 7.4753858127,
                 current: {
-                  id: 20,
-                  name: 'Platinum 2',
-                  mmr: 3835,
-                  icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%202.png'
+                  id: 0,
+                  name: 'Unranked',
+                  mmr: 3174,
+                  icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
                 },
                 max: {
-                  id: 20,
-                  name: 'Platinum 2',
-                  mmr: 3835,
-                  icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3.1/Platinum%202.png'
+                  id: 0,
+                  name: 'Unranked',
+                  mmr: 0,
+                  icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
                 },
                 lastMatch: {
-                  result: 'win',
-                  mmrChange: 34,
-                  skillMeanChange: 0.3435030667,
-                  skillStdevChange: -0.0110458855
+                  result: 'unknown',
+                  mmrChange: 0,
+                  skillMeanChange: 0,
+                  skillStdevChange: 0
                 },
-                previousMmr: 3600,
-                nextMmr: 4000,
+                previousMmr: 0,
+                nextMmr: 0,
                 topRankPosition: 0,
-                kills: 627,
-                deaths: 637,
-                kd: 0.98,
-                wins: 77,
-                losses: 60,
-                winRate: '56.20%',
-                matches: 137,
-                abandons: 1,
-                updateTime: '2021-03-03T11:26:02.326000+00:00'
+                kills: 0,
+                deaths: 0,
+                kd: 0,
+                wins: 0,
+                losses: 0,
+                winRate: '0.00%',
+                matches: 0,
+                abandons: 0,
+                updateTime: '1970-01-01T00:00:00+00:00'
               }
             }
           }
@@ -709,27 +712,24 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: '4zp5i0v1Khs1xdVrTFIEJT',
-      title: 'Look and Feel Like a Champion with Official Six Invitational Gear',
-      abstract: 'Celebrate the upcoming tournament with official gear ranging from jerseys and hoodies to hats.',
+      id: 'IvD2Nj-QsVI',
+      title: 'Rainbow Six Siege: Crimson Heist Battle Pass Trailer | Ubisoft',
+      abstract: undefined,
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/UiLCBNJjlAa2q2zVRrXKp/27bbe9a89b541b2642768dd3055dc1f6/UPCNewsArticleThumb_SI2021-editorial-jan2021_960x540EN.jpg',
-        description: null
+        url: 'https://i.ytimg.com/vi/IvD2Nj-QsVI/maxresdefault.jpg',
+        description: 'Rainbow Six Siege: Crimson Heist Battle Pass Trailer | Ubisoft'
       },
-      content: '\n[The Six Invitational](https://www.ubisoft.com/en-us/esports/rainbow-six/siege/news-updates/4HSnIBwPcb7V9UFNfhxGic/null) may look a little different this year, but competition will be no less fierce. Neither will your clothing game, because the Ubisoft Store has official Six Invitational gear just for you... and well, everyone. But when we say “just for you,” we mean that too, because this year, you’ll be able to secure your very own customized gear! Got your attention? Great! Check below for more details on that and a selection of other great Six Invitational gear. \n\n### [SHOP NOW](https://merch.ubisoft.com/six-siege/)\n\n---\n\n__Official Six Invitational Jersey__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Six-Invitational-Official-Jersey](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7FEmkQ3QL5KxNrFkzch42P/d2e2a7ca4d7643ae48cf7c177351cf33/Six-Invitational-Official-Jersey.png)\n\nNo competition is complete without jerseys, but let’s take it one step further: This official Six Invitational jersey not only looks good, but you can add a little extra personality with a brand-new customization feature that lets you personalize the name on the back with custom text. Use a gamertag, your favorite player’s name, your favorite Siege Operator, or even your favorite pet’s name. The only limitation is your imagination... and a set number of characters. [Get it here](https://merch.ubisoft.com/six-invitational-official-jersey/).\n\n---\n\n__Official Six Invitational Bomber Jacket__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Six-Invitational-Official-Bomber-Jacket](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/lDWfBbopN7mcbprjuolrK/40a0ff6a39c2a4dd4fd1320b510c4361/Six-Invitational-Official-Bomber-Jacket.png)\n\nThis sleek bomber features the Six Invitational logo on the front and a subtle geometric design on the back, but let me tell you what you don’t see: the multifaceted nature of bomber jackets. You can wear them when it’s pretty cold, but they also come in handy when it’s a little warm but still cold enough where you really could go either way. That’s just extra value on a great-looking jacket. [Get it here](https://merch.ubisoft.com/invitational-official-bomber-jacket/).\n\n---\n\n__Official Six Invitational Face Mask__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Six-Invitational-Official-Face-Mask](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/lvoEz1MwfJ3ARO1WfqWwV/b952a68c63bb924469a6e5805534496b/Six-Invitational-Official-Face-Mask.png)\n\nThe Ubisoft Store is offering a pair of different Six Invitational face masks. One features the logo and a festive full-color design that says you’re in full hype mode and you don’t care who knows it. The other is more understated, featuring a logo and a light geometric design with light coloring to let everyone know that you are no less hyped, but just perhaps a bit more reserved about it. [Get it here](https://merch.ubisoft.com/invitational-official-face-mask/).\n\n---\n\n__Official Six Invitational Hoodie__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Six-Invitational-Official-Hoodie](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/23pY009wZrFINuSiDVh1tn/88e112e4d0b37283397c14e68189aabb/Six-Invitational-Official-Hoodie.png)\n\nThe hexagon is one of the most powerful symbols known to humanity, and the Official Six Invitational Hoodie knows that with great power comes great responsibility. The colorful, understated hexagonal stylings of the comfy front pocket say, “I know how to wield my powers for good,” while the Six Invitational logo on the chest shows that you could go full hexagon at any time, but have chosen discipline and restraint. People who think that they only used the hexagon design because the shape has six sides and “Six” is literally in the name of this hoodie will never understand. [Get it here](https://merch.ubisoft.com/invitational-official-hoodie/). \n\n---\n\n__Official Six Invitational Embroidered Red T-shirt__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Six-Invitational-Official-Embroidered-Red-T-shirt](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/ezpKRxiVH6OcmnvSS1Wve/4a458411b42983566501f31e4464a7d0/Six-Invitational-Official-Embroidered-Red-T-shirt.png)\n\nWhat’s better than sporting the official Six Invitational logo on a classic white t-shirt? Sporting a classy embroidered logo, of course! This understated design tells the world that you’re ready for competition, but that you’re subtle enough to take a measured approach, giving your opponent the space they need to slip up so you can claim victory with your superior strategy. Are we reading too much into the design, or does it speak to your leadership skills? Guess that’s up to you, boss. [Get it here](https://merch.ubisoft.com/invitational-embroidered-red-t-shirt/).\n\n---\n\n__Official Six Invitational Blue T-Shirt__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Six-Invitational-Official-Blue-T-shirt](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/58XEblGYF6WCNWeXshEdWq/564b2a926c4ec14911816476d65af94e/Six-Invitational-Official-Blue-T-shirt.png)\n\nUnderstated is great, but a less-subtle fashion approach has its merits, too. While others hide and wait for the action to come to them, emblazoning this logo proudly across your chest says that you’re ready to meet any challenge head-on. In addition to putting your enthusiasm front and center, this t-shirt\'s classic white design pairs well with just about anything, making it an ideal centerpiece for any outfit. [Get it here](https://merch.ubisoft.com/the-invitational-blue-t-shirt/).\n\n---\n\n__Official Six Invitational Beanie__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Six-Invitational-Official-Beanie](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1W1ON1s8uMm7wsUUq9FDNI/20ac368289870fbe865a43bd62adb287/Six-Invitational-Official-Beanie.png)\n\nYou know who’s cool, both literally and figuratively? Buck. Luckily, his beanie helps him combat the literal cool while contributing to his figurative cool. All this is meant to say that beanies will keep you warm AND make you look cool, like Buck. The Six Invitational Official Beanie comes in two fashionable colors, and it’s your first step towards cosplaying as Buck. [Get it here](https://merch.ubisoft.com/invitational-official-beanie/). \n\n---\n\n__Official Six Invitational Sweatshirt__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Six-Invitational-Official-Sweatshirt](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/zE29ewCWKhQiw4XQTk3Wt/c646dcb5ed70d0db0bc6d138176762d3/Six-Invitational-Official-Sweatshirt.png)\n\nPeople don’t tend to think of the calming power of a soft, comfortable sweatshirt with subtle, colorful flair when they think of high-level esports competition with millions of dollars at stake. But when your favorite team is taken to a third map that they historically underperform on, and the Operators they excel with are banned, you’ll be grateful for the serenity that this garment provides. [Get it here](https://merch.ubisoft.com/invitational-official-sweatshirt/). \n\n---\n\n__Official Six Invitational Cap__\n\n![[UN] [News] Look and Feel Like a Champion with Official Six Invitational Gear - Hat](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5mRtUOAr1344UBYpq4RQc9/076f166b225e36201622c31e496887ca/snapback-white-front-601475f5d321a.png)\n\nMaybe beanies aren’t your style. Maybe you’re trying to cool off, rather than warm up. In that case, the Official Six Invitational Cap is right up your alley. Not only will it keep the sun out of your eyes, but the white color goes with any outfit. Plus, you can turn it backwards and it offers a completely different look. That’s like two hats in one! [Get it here](https://merch.ubisoft.com/invitational-official-cap/). \n\n---\n\n*[Rainbow Six Siege](https://store.ubi.com/us/tom-clancys-rainbow-six-siege/56c494ad88a7e300458b4d5a.html?lang=en_US) is available now for PC at the Ubisoft Store. It is also included with a Ubisoft+ subscription.*\n\nFollow the Ubisoft Store on [Facebook](https://www.facebook.com/UbisoftStore/), [Twitter](https://twitter.com/ubisoftstore) and [Instagram](https://www.instagram.com/ubisoftstore/) to stay updated on current promos, new deals, merch and more about your favorite Ubisoft franchises!',
-      description: undefined,
+      content: '[video](https://www.youtube.com/embed/IvD2Nj-QsVI)',
+      description: 'Get the Crimson Heist Battle Pass and unlock 100 tiers of rewards including a new Operator, weapon skins, charms and more until May 24. Learn more at rainbow6.com/battlepass.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a leading creator, publisher and distributor of interactive entertainment and services, with a rich portfolio of world-renowned brands, including Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division. The teams throughout Ubisoft’s worldwide network of studios and business offices are committed to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. For the 2019-20 fiscal year, Ubisoft generated net bookings of €1,534 million. To learn more, please visit: www.ubisoftgroup.com.  \n\n© 2021 Ubisoft Entertainment. All Rights Reserved. Ubisoft and the Ubisoft logo are registered trademarks in the US and/or other countries.\n\nRainbow Six Siege: Crimson Heist Battle Pass Trailer | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
       categories: [
-        'store',
-        'rainbow-six',
-        'rainbow-six-siege',
-        'esports'
+        'videos'
       ],
-      tag: 'BR-rainbow-six GA-siege',
-      placement: null,
-      type: 'news',
-      readTime: '6',
-      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/4zp5i0v1Khs1xdVrTFIEJT/look-and-feel-like-a-champion-with-official-six-invitational-gear',
-      date: '2021-03-01T17:00:00.000Z'
+      tag: undefined,
+      placement: undefined,
+      type: 'videos',
+      readTime: undefined,
+      url: 'https://www.youtube.com/watch?v=IvD2Nj-QsVI',
+      date: '2021-03-16T16:05:06.000Z'
     }
   ]
 }
