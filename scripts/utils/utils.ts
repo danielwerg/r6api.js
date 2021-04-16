@@ -1,4 +1,4 @@
-import { promises as fsp } from 'fs';
+import { promises as fsp, PathLike } from 'fs';
 
-export const isFileExists = async (path: string) =>
+export const isFileExists = async (path: PathLike) =>
   !!(await fsp.stat(path).catch(() => false));
