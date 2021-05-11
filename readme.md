@@ -131,10 +131,11 @@ Daniel.Nt has played 5205 matches.
 
 #### Options
 
-| Param    | Type     | Description              |
-| -------- | -------- | ------------------------ |
-| email    | `string` | Ubisoft account email    |
-| password | `string` | Ubisoft account password |
+| Param    | Type     | Required | Default | Description              |
+| -------- | -------- | -------- | ------- | ------------------------ |
+| email    | `string` | true     |         | Ubisoft account email    |
+| password | `string` | true     |         | Ubisoft account password |
+| ubiAppId | `string` | false    |         | `Ubi-AppId` header value |
 
 ```js
 const { UBI_EMAIL: email = '', UBI_PASSWORD: password = '' } = process.env;
