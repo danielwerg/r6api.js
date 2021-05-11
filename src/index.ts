@@ -1,6 +1,7 @@
 import {
   setAuthFileLocation as _setAuthFileLocation,
   setCredentials as _setCredentials,
+  setUbiAppId as _setUbiAppId,
   getAuth as _getAuth,
   getTicket as _getTicket,
   getToken as _getToken
@@ -45,8 +46,9 @@ type QueryString = string | string[];
 
 export default class R6API {
 
-  constructor(options: { email: string; password: string }) {
+  constructor(options: { email: string; password: string, ubiAppId?: string }) {
     _setCredentials(options.email, options.password);
+    if (options.ubiAppId) _setUbiAppId(options.ubiAppId);
   }
 
   findByUsername = (platform: PlatformAll, query: QueryString) =>
@@ -79,6 +81,7 @@ export default class R6API {
   getTicket = _getTicket
   getToken = _getToken
   setCredentials = _setCredentials
+  setUbiAppId = _setUbiAppId
   setAuthFileLocation = _setAuthFileLocation
 
 }

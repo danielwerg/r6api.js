@@ -1,6 +1,6 @@
 import nodeFetch, { RequestInit, Response } from 'node-fetch';
 
-import { ubiAppId } from './constants';
+import { ubiAppId } from './auth';
 
 const promiseTimeout = <T>(promise: Promise<T>, ms: number, reject = true) =>
   Promise.race([promise, new Promise((res, rej) => setTimeout(() => reject ? rej : res, ms))]);

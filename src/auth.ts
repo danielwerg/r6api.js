@@ -5,6 +5,7 @@ import { promises as fs } from 'fs';
 import fetch from './fetch';
 import { Platform, UUID } from './typings';
 import { getURL } from './utils';
+import { ubiAppId as defaultUbiAppId } from './constants';
 
 export interface IUbiAuth {
   platformType: Platform;
@@ -26,6 +27,7 @@ export interface IUbiAuth {
 
 let LOGIN_TIMEOUT: any;
 const credentials = { email: '', password: '' };
+export let ubiAppId = defaultUbiAppId;
 
 const authFileName = 'r6api.js-auth.json';
 const TEN_MIN_IN_MS = 10 * 60 * 1000;
@@ -76,6 +78,9 @@ export const getToken = () => login().then(auth => `Ubi_v1 t=${auth.ticket}`);
 export const setCredentials = (email: string, password: string) => {
   credentials.email = email;
   credentials.password = password;
+};
+export const setUbiAppId = (_ubiAppId: string) => {
+  ubiAppId = _ubiAppId;
 };
 
 export const setAuthFileLocation = (dir: string) => {
