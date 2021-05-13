@@ -68,6 +68,7 @@ export const login = async () => {
 };
 
 const setNextLogin = async (auth: IUbiAuth) => {
+  clearTimeout(LOGIN_TIMEOUT);
   LOGIN_TIMEOUT = setTimeout(() => login(), getExpiration(auth));
 };
 
