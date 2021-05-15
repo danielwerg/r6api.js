@@ -25,20 +25,20 @@ export interface IUbiAuth {
   rememberMeTicket: string;
 }
 
-let LOGIN_TIMEOUT: any;
-const credentials = { email: '', password: '' };
-export let ubiAppId = defaultUbiAppId;
-
-const authFileName = 'r6api.js-auth.json';
 const TEN_MIN_IN_MS = 10 * 60 * 1000;
-let authFile = join(tmpdir(), authFileName);
+const credentials = { email: '', password: '' };
+let LOGIN_TIMEOUT: any;
+export let ubiAppId = defaultUbiAppId;
+let authFileDirPath = tmpdir();
+let authFileName = 'r6api.js-auth.json';
+let authFilePath: null | string = null;
 
 const getExpiration = (auth: IUbiAuth) =>
   +new Date(auth.expiration) - +new Date() - TEN_MIN_IN_MS;
 
 export const login = async () => {
 
-  const lastAuth: IUbiAuth = await fs.readFile(authFile, 'utf8')
+  const lastAuth: IUbiAuth = await fs.readFile(getAuthFilePath(), 'utf8')
     .then((auth) => JSON.parse(auth))
     .catch(() => '');
   if (lastAuth && getExpiration(lastAuth) > 0) {
@@ -56,7 +56,7 @@ export const login = async () => {
   })(token)
     .then(async res => {
       if (res && res.ticket && res.expiration) {
-        await fs.writeFile(authFile, JSON.stringify(res));
+        await fs.writeFile(getAuthFilePath(), JSON.stringify(res));
         return res;
       } else
         throw new Error(`No response from login: ${JSON.stringify(res)}`);
@@ -80,10 +80,9 @@ export const setCredentials = (email: string, password: string) => {
   credentials.email = email;
   credentials.password = password;
 };
-export const setUbiAppId = (_ubiAppId: string) => {
-  ubiAppId = _ubiAppId;
-};
+export const setUbiAppId = (_ubiAppId: string) => { ubiAppId = _ubiAppId; };
 
-export const setAuthFileLocation = (dir: string) => {
-  authFile = join(dir, authFileName);
-};
+export const setAuthFileDirPath = (path: string) => { authFileDirPath = path; };
+export const setAuthFileName = (name: string) => { authFileName = `${name}.json`; };
+export const setAuthFilePath = (path: string) => { authFilePath = path; };
+export const getAuthFilePath = () => authFilePath || join(authFileDirPath, authFileName);

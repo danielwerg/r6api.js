@@ -1,10 +1,13 @@
 import {
-  setAuthFileLocation as _setAuthFileLocation,
-  setCredentials as _setCredentials,
-  setUbiAppId as _setUbiAppId,
   getAuth as _getAuth,
   getTicket as _getTicket,
-  getToken as _getToken
+  getToken as _getToken,
+  setCredentials as _setCredentials,
+  setUbiAppId as _setUbiAppId,
+  setAuthFileDirPath as _setAuthFileDirPath,
+  setAuthFileName as _setAuthFileName,
+  setAuthFilePath as _setAuthFilePath,
+  getAuthFilePath as _getAuthFilePath
 } from './auth';
 import _findByUsername from './methods/findByUsername';
 import _findById, { IOptions as IFindByIdOptions} from './methods/findById';
@@ -82,6 +85,9 @@ export default class R6API {
   getToken = _getToken
   setCredentials = _setCredentials
   setUbiAppId = _setUbiAppId
-  setAuthFileLocation = _setAuthFileLocation
+  setAuthFileDirPath = _setAuthFileDirPath
+  setAuthFileName = _setAuthFileName
+  setAuthFilePath = _setAuthFilePath
+  getAuthFilePath = _getAuthFilePath
 
 }
