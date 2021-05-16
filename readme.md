@@ -131,11 +131,14 @@ Daniel.Nt has played 5205 matches.
 
 #### Options
 
-| Param    | Type     | Required | Default | Description              |
-| -------- | -------- | -------- | ------- | ------------------------ |
-| email    | `string` | true     |         | Ubisoft account email    |
-| password | `string` | true     |         | Ubisoft account password |
-| ubiAppId | `string` | false    |         | `Ubi-AppId` header value |
+| Param           | Type     | Required | Default | Description                                                           |
+| --------------- | -------- | -------- | ------- | --------------------------------------------------------------------- |
+| email           | `string` | false    |         | Ubisoft account email                                                 |
+| password        | `string` | false    |         | Ubisoft account password                                              |
+| ubiAppId        | `string` | false    |         | `Ubi-AppId` header value                                              |
+| authFileDirPath | `string` | false    |         | Path for directory where authentication file is stored                |
+| authFileName    | `string` | false    |         | Name for authentication file                                          |
+| authFilePath    | `string` | false    |         | If set `authFileDirPath` and `authFileName` options are being ignored |
 
 ```js
 const { UBI_EMAIL: email = '', UBI_PASSWORD: password = '' } = process.env;

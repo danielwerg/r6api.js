@@ -49,9 +49,19 @@ type QueryString = string | string[];
 
 export default class R6API {
 
-  constructor(options: { email: string; password: string, ubiAppId?: string }) {
-    _setCredentials(options.email, options.password);
+  constructor(options: {
+    email?: string;
+    password?: string;
+    ubiAppId?: string;
+    authFileDirPath?: string;
+    authFileName?: string;
+    authFilePath?: string;
+  }) {
+    if (options.email && options.password) _setCredentials(options.email, options.password);
     if (options.ubiAppId) _setUbiAppId(options.ubiAppId);
+    if (options.authFileDirPath) _setAuthFileDirPath(options.authFileDirPath);
+    if (options.authFileName) _setAuthFileName(options.authFileName);
+    if (options.authFilePath) _setAuthFilePath(options.authFilePath);
   }
 
   findByUsername = (platform: PlatformAll, query: QueryString) =>
