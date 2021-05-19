@@ -109,15 +109,18 @@ export interface IOptions {
 
 export const optionsDocs: IOptionsDocs = [
   [
-    'seasonIds', '`number \\| number[] \\| string`', false, '`-1`',
+    'seasonIds', '`number \\| number[] \\| string`', false,
+    '`-1`',
     `Numbers from \`6\` to \`${Object.keys(SEASONS).slice(-1)[0]}\` or \`-1\` or \`'all'\``
   ],
   [
-    'regionIds', '`string \\| string[]`', false, '`[\'emea\', \'ncsa\', \'apac\']`',
+    'regionIds', '`string \\| string[]`', false,
+    '`[\'emea\', \'ncsa\', \'apac\']`',
     '`\'emea\'`, `\'ncsa\'`, `\'apac\'` or `\'all\'`'
   ],
   [
-    'boardIds', '`string \\| string[]`', false, '`\'pvp_ranked\'`',
+    'boardIds', '`string \\| string[]`', false,
+    '`[\'pvp_ranked\'`, `\'pvp_casual\'`, `\'pvp_newcomer\'`, `\'pvp_event\']`',
     '`\'pvp_ranked\'`, `\'pvp_casual\'`, `\'pvp_newcomer\'` or `\'pvp_event\'`'
   ]
 ];

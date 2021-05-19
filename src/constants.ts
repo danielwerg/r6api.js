@@ -22,6 +22,7 @@ export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/typ
 export const PLATFORMS = <const>['uplay', 'psn', 'xbl'];
 export const PLATFORMSALL = <const>[...PLATFORMS, 'steam', 'epic', 'amazon'];
 
+// restructure this if pvp_newcomer will still return 500 in season 22
 export const BOARDS = <const>{
   'pvp_ranked': { name: 'Ranked', seasonId: 6 },
   'pvp_newcomer': { name: 'Newcomer', seasonId: 12 },
