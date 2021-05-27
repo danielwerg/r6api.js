@@ -60,7 +60,6 @@ module.exports = {
     'arrow-parens': ['off', 'always'],
     'comma-dangle': 'warn',
     'complexity': 'off',
-    'dot-notation': 'error',
     'eqeqeq': ['error', 'smart'],
     'import/order': [
       'warn',

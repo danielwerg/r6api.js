@@ -60,7 +60,7 @@ export const getRankIdFromMmr = (mmr: number, matches: number) => {
     const nextMmr = arr[i + 1] || Infinity;
     return (mmr - prevMmr) * (mmr - nextMmr) < 0
       || mmr === prevMmr
-      || mmr < arr[0] && prevMmr === arr[0];
+      || mmr < (arr[0] as number) && prevMmr === arr[0];
   });
 
   const rankId = ranksRange.findIndex(point => point === pointInRange) + 1;

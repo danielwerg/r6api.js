@@ -1,7 +1,7 @@
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 dotenv.config();
-import * as minimist from 'minimist';
-import * as stringifyObject from 'stringify-object';
+import minimist from 'minimist';
+import stringifyObject from 'stringify-object';
 
 import { join } from 'path';
 import { promises as fsp } from 'fs';
@@ -38,7 +38,8 @@ import { insertContent, isFileExists } from './utils';
 
   const findByUsername = await r6api.findByUsername(platform, username)
     .catch(err => console.error(err));
-  const id = findByUsername[0].id;
+  if (!findByUsername || !findByUsername[0]) return;
+  const id = findByUsername[0]?.id;
   const findById = await r6api.findById(platform, id)
     .catch(err => console.error(err));
   const getProgression = await r6api.getProgression(platform, id)
@@ -94,10 +95,10 @@ import { insertContent, isFileExists } from './utils';
 
     const prevOutput = await getMethodsDocsFile(name);
 
-    if (structureChange(JSON.parse(prevOutput), output) || argv.force) {
+    if (structureChange(JSON.parse(prevOutput), output) || argv['force']) {
 
       console.log(
-        `${argv.force ? 'Running with force' : 'Structual change detected'}: ${name}`
+        `${argv['force'] ? 'Running with force' : 'Structual change detected'}: ${name}`
       );
 
       await fsp.writeFile(

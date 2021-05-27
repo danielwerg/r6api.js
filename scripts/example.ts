@@ -1,6 +1,5 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
-import * as minimist from 'minimist';
 
 import { promises as fsp } from 'fs';
 import { join } from 'path';
@@ -35,10 +34,9 @@ import exampleFile from '../examples/example';
   const prevExampleOutput = await fsp.readFile(exampleOutputPath, 'utf-8');
 
   // Don't write if only number (value) changed
-  const argv = minimist(process.argv.slice(2));
   if (
     exampleOutput.replace(/[0-9]+/, '') !== prevExampleOutput.replace(/[0-9]+/, '').trim()
-    || argv.force
+    || process.argv.slice(2).find(arg => arg === '--force')
   ) {
     fsp.writeFile(exampleOutputPath, exampleOutput).catch(err => { throw new Error(err); });
     await insertContent(

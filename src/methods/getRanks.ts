@@ -134,11 +134,13 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
     ? [options.boardIds].flat() : Object.keys(BOARDS) as BoardId[];
 
   const minSeasonId = Object.entries(BOARDS)
-    .reverse().filter(([boardId]) => boardIds.includes(boardId as BoardId))[0][1].seasonId;
+    .reverse().filter(([boardId]) => boardIds.includes(boardId as BoardId))[0]?.[1].seasonId;
 
   const seasonIds = options && (options.seasonIds === 'all'
     ? Object.keys(SEASONS)
-      .slice(minSeasonId - Number(Object.keys(SEASONS)[0]))
+      .slice(
+        (minSeasonId as NonNullable<typeof minSeasonId>) - Number(Object.keys(SEASONS)[0])
+      )
       .map(season => Number(season) as SeasonId)
     : options.seasonIds && [options.seasonIds].flat()
   ) || [-1];
@@ -224,7 +226,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
               });
             return acc;
-          }, {})
+          }, {} as Record<string, any>)
       ) as IGetRanks[]
     );
 

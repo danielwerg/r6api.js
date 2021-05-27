@@ -7,8 +7,8 @@
   "main": "dist/index.js",
   "types": "dist",
   "scripts": {
-    "build": "tsc -p .",
-    "example": "yarn build && ts-node scripts/example",
+    "build": "tsc",
+    "example": "yarn build && ts-node --project scripts/tsconfig.json scripts/example",
     "methods": "ts-node scripts/methods",
     "tables": "ts-node scripts/tables",
     "lint": "eslint .",
@@ -18,6 +18,7 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
+    "@danielwerg/tsconfig": "^0.0.0",
     "@types/markdown-table": "^2.0.0",
     "@types/minimist": "^1.2.1",
     "@types/node": "^15.3.0",
@@ -29,7 +30,7 @@
     "eslint": "^7.26.0",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-prefer-arrow": "^1.2.3",
-    "markdown-table": "^3.0.0",
+    "markdown-table": "2.0.0",
     "minimist": "^1.2.5",
     "stringify-object": "^3.3.0",
     "ts-node": "^9.1.1",

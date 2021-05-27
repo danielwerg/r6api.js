@@ -12,7 +12,8 @@ interface IApiResponse {
 }
 
 const statGetter = (obj: IApiResponse, id: UUID, stat: string, type: MPType) =>
-  obj.results[id][`${stat}${type}_timeplayed:infinite`] || 0;
+  (obj.results[id] as IApiResponse['results'][string])[`${stat}${type}_timeplayed:infinite`]
+  || 0;
 
 export default (platform: Platform, ids: UUID[]) =>
   getToken()

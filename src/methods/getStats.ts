@@ -317,9 +317,9 @@ const weaponsGetter = (obj: any, type: MPType) =>
           timesChosen: statGetter(obj, 'weapon', `chosen:${weapon.id}`, type)
         };
         return acc2;
-      }, {});
+      }, {} as Record<string, any>);
     return acc;
-  }, {});
+  }, {} as Record<string, any>);
 
 export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
@@ -352,7 +352,7 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
               acc[key] = Object.assign(acc[key] || {}, cur[key])
             );
             return acc;
-          }, {})
+          }, {} as Record<string, any>)
       )
         .map(([id, vals]) => ({
           id: id as UUID,

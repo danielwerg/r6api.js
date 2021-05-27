@@ -40,9 +40,9 @@ export default async (username: string) => {
                 .split(', ')
                 .map(x => x.split(':').flatMap(y => y.trim().split(',')))
                 .reduce((acc, cur) => {
-                  acc[cur[0]] = cur[0] === 'Category' ? cur.slice(1) : cur[1];
+                  acc[cur[0] as string] = cur[0] === 'Category' ? cur.slice(1) : cur[1];
                   return acc;
-                }, {}) as IReport
+                }, {} as Record<string, any>) as IReport
               : null;
             return {
               message: report.Message.replace(/\[.*\]/g, '').trim(),

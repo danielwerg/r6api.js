@@ -1,4 +1,4 @@
-import * as mdtable from 'markdown-table';
+import mdtable from 'markdown-table';
 
 import { join } from 'path';
 
@@ -50,14 +50,16 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
 
     const seasonsFormatted = Object.entries(seasons)
       .map(([id, obj], i, array) => {
-        const nextReleaseDate = array[i + 1] ?
-          new Date(array[i + 1][1].releaseDate) : new Date();
+        const nextSeason = array[i + 1];
+        const nextReleaseDate = nextSeason ?
+          new Date(nextSeason[1].releaseDate) : new Date();
+        const mostRecentSeason = array.slice(-1)[0]?.[1];
         return {
           id: `\`${id}\``, name: obj.name,
           releaseDate: new Date(obj.releaseDate).toLocaleString(
             'en-us', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' }
           ),
-          duration: array.slice(-1)[0][1] === obj
+          duration: mostRecentSeason === obj
             ? '' // Most recent season
             : Math.floor(
               (+nextReleaseDate - +new Date(obj.releaseDate)) / (24 * 60 * 60 * 1000)
@@ -79,7 +81,7 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
         .fill(tableHeaders.map(([name]) => name).join('~'))
         .join('~●~').split(/~/g),
       ...seasonsFormattedChunks.reduce((acc, cur) =>
-        acc.map((v, i) => cur[i] ? [...v, '', ...cur[i]] : v)
+        acc.map((v, i) => cur[i] ? [...v, '', ...(cur[i] as string[])] : v)
       )
     ]);
 
