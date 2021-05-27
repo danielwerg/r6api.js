@@ -45,16 +45,16 @@ export const getRankIconFromRankId = (rankId: RankId, seasonId: SeasonId) =>
         ? '3.2' : [19, 20, 21, 22].includes(rankId) ? '3.1' : '3'
   }/${encodeURIComponent(getRankNameFromRankId(rankId, seasonId))}.png`;
 
-export const getRankIdFromMmr = (mmr: number, matches: number) => {
+export const ranksRange = [
+  1100, 1200, 1300, 1400, 1500,
+  1600, 1700, 1800, 1900, 2000,
+  2100, 2200, 2300, 2400, 2500,
+  2600, 2800, 3000,
+  3200, 3600, 4000,
+  4400, 5000
+];
 
-  const ranksRange = [
-    1100, 1200, 1300, 1400, 1500,
-    1600, 1700, 1800, 1900, 2000,
-    2100, 2200, 2300, 2400, 2500,
-    2600, 2800, 3000,
-    3200, 3600, 4000,
-    4400, 5000
-  ];
+export const getRankIdFromMmr = (mmr: number, matches: number) => {
 
   const pointInRange = ranksRange.find((prevMmr, i, arr) => {
     const nextMmr = arr[i + 1] || Infinity;
@@ -69,6 +69,9 @@ export const getRankIdFromMmr = (mmr: number, matches: number) => {
   return (matches < 10 ? 0 : rankId === 23 && matches < 100 ? 22 : rankId) as RankId;
 
 };
+
+export const getBaseMmrFromRankId = (rankId: RankId) =>
+  rankId === 0 ? 0 : ranksRange[rankId - 1] as number;
 
 const getUbiServicesURL = (version: 1 | 2 | 3, pathname: string, search?: string) =>
   `${UBISERVICES_URL}/v${version}/${pathname}${search ? `?${search}` : ''}`;
