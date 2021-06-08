@@ -9,15 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 * `getNews` method
 * `getNewsById` method
+* `validateUsername` method
 * `example`, `insertContent` and `methods` scripts
 * ESLint
 * EditorConfig
-* `xp` general xp stats
-* Full names of each region in `getRanks` response
 
 ### Changed
 * `getId` -> `findByUsername`
 * `getUsername` -> `findById`
+* `findById` now accepts `all` for `platform` parameter and has `isUserId` option
 * `getLevel` -> `getProgression`
 * `getRank` -> `getRanks`
 * `doc/getStats-response.json` -> `docs/methods/getStats.json` along with all other methods
@@ -26,10 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `WEAPONS` in `constants.ts` is now object of objects with `id` and `name`
 * Weapons list in `getStats` response is now object of objects
 * Now using GitHub instead of Imgur to host operator and rank icons
+* `getRanks` response changed by a lot, check docs to see expected response
+* `getRanks` now support multiple boards and not only `pvp_ranked`
+* Option to set custom `Ubi-AppId` header, `authFileDirPath `, `authFileName` and `authFilePath`
 
 ### Removed
 * `response.js` script
 * `.npmignore`
-* Id from `getRanks` `seasons` response
 
 [Unreleased]: https://github.com/danielwerg/r6api.js/compare/v1.5.0...typescript
