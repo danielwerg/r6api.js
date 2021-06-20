@@ -1,4 +1,4 @@
-import mdtable from 'markdown-table';
+import * as mdtable from 'markdown-table';
 
 import { join } from 'path';
 

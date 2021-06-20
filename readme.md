@@ -330,7 +330,7 @@ Ids limit: `200`
 
 | Param     | Type                           | Required | Default                                                           | Description                                                       |
 | --------- | ------------------------------ | -------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                                                              | Numbers from `6` to `21` or `-1` or `'all'`                       |
+| seasonIds | `number \| number[] \| string` | false    | `-1`                                                              | Numbers from `6` to `22` or `-1` or `'all'`                       |
 | regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                        | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
 | boardIds  | `string \| string[]`           | false    | `['pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'`, `'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
 
@@ -342,14 +342,15 @@ Ids limit: `200`
 
 | ID   | Name          | ● | ID   | Name           |
 | ---- | ------------- | - | ---- | -------------- |
-| `6`  | Health        |   | `14` | Phantom Sight  |
-| `7`  | Blood Orchid  |   | `15` | Ember Rise     |
-| `8`  | White Noise   |   | `16` | Shifting Tides |
-| `9`  | Chimera       |   | `17` | Void Edge      |
-| `10` | Para Bellum   |   | `18` | Steel Wave     |
-| `11` | Grim Sky      |   | `19` | Shadow Legacy  |
-| `12` | Wind Bastion  |   | `20` | Neon Dawn      |
-| `13` | Burnt Horizon |   | `21` | Crimson Heist  |
+| `6`  | Health        |   | `15` | Ember Rise     |
+| `7`  | Blood Orchid  |   | `16` | Shifting Tides |
+| `8`  | White Noise   |   | `17` | Void Edge      |
+| `9`  | Chimera       |   | `18` | Steel Wave     |
+| `10` | Para Bellum   |   | `19` | Shadow Legacy  |
+| `11` | Grim Sky      |   | `20` | Neon Dawn      |
+| `12` | Wind Bastion  |   | `21` | Crimson Heist  |
+| `13` | Burnt Horizon |   | `22` | North Star     |
+| `14` | Phantom Sight |   |      |                |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 

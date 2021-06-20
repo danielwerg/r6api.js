@@ -23,8 +23,8 @@
 | `7`  | Blood Orchid | September 5, 2017 | 91 Days  |   | `18` | Steel Wave     | June 16, 2020      | 86 Days  |
 | `8`  | White Noise  | December 5, 2017  | 91 Days  |   | `19` | Shadow Legacy  | September 10, 2020 | 82 Days  |
 | `9`  | Chimera      | March 6, 2018     | 93 Days  |   | `20` | Neon Dawn      | December 1, 2020   | 105 Days |
-| `10` | Para Bellum  | June 7, 2018      | 89 Days  |   | `21` | Crimson Heist  | March 16, 2021     |          |
-| `11` | Grim Sky     | September 4, 2018 | 91 Days  |   |      |                |                    |          |
+| `10` | Para Bellum  | June 7, 2018      | 89 Days  |   | `21` | Crimson Heist  | March 16, 2021     | 90 Days  |
+| `11` | Grim Sky     | September 4, 2018 | 91 Days  |   | `22` | North Star     | June 14, 2021      |          |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 
