@@ -142,7 +142,7 @@ interface IOperatorStats {
     stats: {
       name: string;
       value: number;
-    }[]
+    }[] | null
   } | null;
 }
 interface IOperatorStatspvp extends IOperatorStats {
@@ -273,10 +273,12 @@ const operatorsGetter = (obj: any, type: MPType) =>
         ? {
           name: cur.uniqueAbility.name,
           icon: getCDNURL(cur.uniqueAbility.iconId),
-          stats: cur.uniqueAbility.stats.map(gadget => ({
-            name: gadget.name,
-            value: statGetter(obj, 'operator', `${gadget.id}:${cur.id}`, type)
-          }))
+          stats: cur.uniqueAbility.stats
+            ? cur.uniqueAbility.stats.map(gadget => ({
+              name: gadget.name,
+              value: statGetter(obj, 'operator', `${gadget.id}:${cur.id}`, type)
+            }))
+            : null
         }
         : null
     };
