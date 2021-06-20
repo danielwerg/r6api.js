@@ -1,42 +1,60 @@
 {
   "name": "r6api.js",
-  "version": "1.7.0",
+  "version": "1.4.1",
   "description": "Node.js wrapper around Rainbow Six: Siege API.",
   "author": "Daniel Sandberg",
   "license": "MIT",
-  "main": "index.js",
-  "types": "typings/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist",
   "scripts": {
-    "response": "node scripts/response",
-    "types": "node scripts/types"
-  },
-  "engines": {
-    "node": ">=10.0.0"
+    "build": "tsc",
+    "example": "yarn build && ts-node --project scripts/tsconfig.json scripts/example",
+    "methods": "ts-node scripts/methods",
+    "tables": "ts-node scripts/tables",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "bluebird": "^3.5.5",
     "node-fetch": "^2.6.0"
   },
-  "directories": {
-    "lib": "lib"
-  },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "@danielwerg/tsconfig": "^0.0.0",
+    "@types/markdown-table": "^2.0.0",
+    "@types/minimist": "^1.2.1",
+    "@types/node": "^15.12.4",
+    "@types/node-fetch": "^2.5.10",
+    "@types/stringify-object": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.29.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "markdown-table": "2.0.0",
+    "minimist": "^1.2.5",
+    "stringify-object": "^3.3.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danielwerg/r6api.js.git"
+  "files": [
+    "dist",
+    "docs",
+    "examples"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
   },
   "keywords": [
     "api",
     "wrapper",
     "ubisoft",
+    "rainbow6",
     "siege",
-    "rainbow6"
+    "r6s"
   ],
   "bugs": {
     "url": "https://github.com/danielwerg/r6api.js/issues"
   },
   "homepage": "https://github.com/danielwerg/r6api.js#readme",
-  "runkitExampleFilename": "examples/runkit.js"
+  "runkitExampleFilename": "./examples/runkit.js"
 }

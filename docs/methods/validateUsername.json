@@ -1,0 +1,16 @@
+{
+  "valid": false,
+  "validationReports": [
+    {
+      "message": "'flick' matches 'flick'",
+      "categories": [
+        "global-username",
+        "vulgarity"
+      ],
+      "severity": "high",
+      "locale": "en-US",
+      "errorCode": 1013,
+      "suggestions": null
+    }
+  ]
+}
