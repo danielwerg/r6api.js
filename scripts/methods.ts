@@ -1,7 +1,7 @@
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 dotenv.config();
-import minimist from 'minimist';
-import stringifyObject from 'stringify-object';
+import * as minimist from 'minimist';
+import * as stringifyObject from 'stringify-object';
 
 import { join } from 'path';
 import { promises as fsp } from 'fs';

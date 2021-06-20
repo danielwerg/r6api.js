@@ -403,12 +403,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '21': {
-        seasonId: 21,
-        seasonName: 'Crimson Heist',
-        seasonColor: '#AC0000',
-        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iKoGngda7z0LyYpTT25zM/116efeb1c65cb9a356a3e9a42abe2ae3/R6_live_Y6S1_CrimsonHeist.jpg',
-        seasonReleaseDate: '2021-03-16T00:00:00.000Z',
+      '22': {
+        seasonId: 22,
+        seasonName: 'North Star',
+        seasonColor: '#009cbe',
+        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/38Lml8ltnO932wLqhC5xEA/493665084f757da8c91c01a0b99d2be3/r6s-seasons-y6s2.jpg',
+        seasonReleaseDate: '2021-06-14T00:00:00.000Z',
         regions: {
           emea: {
             regionId: 'emea',
@@ -417,12 +417,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
               pvp_ranked: {
                 boardId: 'pvp_ranked',
                 boardName: 'Ranked',
-                skillMean: 31.7371445874,
-                skillStdev: 7.4753858127,
+                skillMean: 32.8265071543,
+                skillStdev: 7.2555471866,
                 current: {
                   id: 0,
                   name: 'Unranked',
-                  mmr: 3174,
+                  mmr: 3283,
                   icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
                 },
                 max: {
