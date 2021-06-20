@@ -10,8 +10,7 @@
       src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=last%20release"
       alt="Last release"
     /></a>
-    <!-- change "LICENCE" after merging typescript branch to master -->
-    <a href="https://github.com/danielwerg/r6api.js/blob/master/LICENCE"><img
+    <a href="https://github.com/danielwerg/r6api.js/blob/master/license"><img
       src="https://img.shields.io/github/license/danielwerg/r6api.js"
       alt="License"
     /></a>
@@ -423,13 +422,13 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
                   id: 0,
                   name: 'Unranked',
                   mmr: 3283,
-                  icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
+                  icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png'
                 },
                 max: {
                   id: 0,
                   name: 'Unranked',
                   mmr: 0,
-                  icon: 'https://github.com/danielwerg/r6api.js/raw/typescript/assets/ranks/v3/Unranked.png'
+                  icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png'
                 },
                 lastMatch: {
                   result: 'unknown',

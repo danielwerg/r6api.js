@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-06-20
+
 ### Added
 * `getNews` method
 * `getNewsById` method
@@ -34,4 +36,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v1.5.0...typescript
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v2.0.0...master
+[2.0.0]: https://github.com/danielwerg/r6api.js/compare/v1.7.0...v2.0.0

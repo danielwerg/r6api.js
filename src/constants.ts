@@ -17,7 +17,7 @@ export const SANDBOXES = <const>{
 
 export const AVATARS_URL = 'https://ubisoft-avatars.akamaized.net';
 export const CDN_URL = 'https://staticctf.akamaized.net';
-export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/typescript/assets';
+export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/master/assets';
 
 export const PLATFORMS = <const>['uplay', 'psn', 'xbl'];
 export const PLATFORMSALL = <const>[...PLATFORMS, 'steam', 'epic', 'amazon'];
