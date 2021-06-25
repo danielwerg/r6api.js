@@ -1,7 +1,8 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
-  Platform, UUID, MPType, WeaponTypeId, OperatorName, StatsCategoryName, IOptionsDocs, WeaponName
+  Platform, UUID, MPType, WeaponTypeId, WeaponName, OperatorName, StatsCategoryName,
+  IOptionsDocs
 } from '../typings';
 import {
   STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS, GITHUB_ASSETS_URL
