@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2021-06-25
+
+### Fixed
+
+* Fix typings for `getStats` weapons list [#60](https://github.com/danielwerg/r6api.js/pull/60)
+
 ## [2.0.0] - 2021-06-20
 
 ### Added
@@ -36,5 +42,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v2.0.0...master
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v2.0.1...master
+[2.0.1]: https://github.com/danielwerg/r6api.js/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/danielwerg/r6api.js/compare/v1.7.0...v2.0.0
