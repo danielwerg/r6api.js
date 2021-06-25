@@ -18,9 +18,7 @@ export type OldRankId = keyof typeof constants.OLD_RANKS;
 export type OperatorName = keyof typeof constants.OPERATORS;
 
 export type WeaponTypeIndex = keyof typeof constants.WEAPONTYPES;
-export type WeaponTypeId = typeof constants.WEAPONTYPES[
-  keyof typeof constants.WEAPONTYPES
-]['id'];
+export type WeaponTypeId = typeof constants.WEAPONTYPES[WeaponTypeIndex]['id'];
 export type WeaponName = keyof typeof constants.WEAPONS;
 
 export type MPType = 'pvp' | 'pve';

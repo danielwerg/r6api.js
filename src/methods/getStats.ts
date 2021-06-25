@@ -1,7 +1,8 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
-  Platform, UUID, MPType, WeaponTypeId, OperatorName, StatsCategoryName, IOptionsDocs
+  Platform, UUID, MPType, WeaponTypeId, WeaponName, OperatorName, StatsCategoryName,
+  IOptionsDocs
 } from '../typings';
 import {
   STATS_CATEGORIES, OPERATORS, WEAPONTYPES, WEAPONS, GITHUB_ASSETS_URL
@@ -150,7 +151,7 @@ interface IOperatorStatspvp extends IOperatorStats {
 }
 
 interface IWeaponStats {
-  name: WeaponTypeId;
+  name: string;
   icon: string;
   kills: number;
   deaths: number;
@@ -171,7 +172,7 @@ interface IWeaponCategory {
     bulletsConnected: number;
     timesChosen: number;
   };
-  list: IWeaponStats[];
+  list: Record<WeaponName, IWeaponStats>;
 }
 
 export interface IGetStats {
