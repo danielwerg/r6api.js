@@ -4,3 +4,4 @@ dist
 .env
 *.log
 test*
+package-lock.json
