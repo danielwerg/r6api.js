@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.2] - 2021-06-25
+
+Forgot to build for v2.0.1
+
 ## [2.0.1] - 2021-06-25
 
 ### Fixed
@@ -42,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v2.0.1...master
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v2.0.2...master
+[2.0.2]: https://github.com/danielwerg/r6api.js/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/danielwerg/r6api.js/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/danielwerg/r6api.js/compare/v1.7.0...v2.0.0
