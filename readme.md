@@ -327,11 +327,11 @@ Ids limit: `200`
 
 <!-- START_SECTION:GETRANKS_OPTIONS -->
 
-| Param     | Type                           | Required | Default                                                           | Description                                                       |
-| --------- | ------------------------------ | -------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                                                              | Numbers from `6` to `22` or `-1` or `'all'`                       |
-| regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                        | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
-| boardIds  | `string \| string[]`           | false    | `['pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'`, `'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
+| Param     | Type                           | Required | Default                                                     | Description                                                       |
+| --------- | ------------------------------ | -------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
+| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `22` or `-1` or `'all'`                       |
+| regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                  | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
+| boardIds  | `string \| string[]`           | false    | `['pvp_ranked', 'pvp_casual', 'pvp_newcomer', 'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
 
 <!-- END_SECTION:GETRANKS_OPTIONS -->
 
