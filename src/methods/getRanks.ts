@@ -120,7 +120,7 @@ export const optionsDocs: IOptionsDocs = [
   ],
   [
     'boardIds', '`string \\| string[]`', false,
-    '`[\'pvp_ranked\'`, `\'pvp_casual\'`, `\'pvp_newcomer\'`, `\'pvp_event\']`',
+    '`[\'pvp_ranked\', \'pvp_casual\', \'pvp_newcomer\', \'pvp_event\']`',
     '`\'pvp_ranked\'`, `\'pvp_casual\'`, `\'pvp_newcomer\'` or `\'pvp_event\'`'
   ]
 ];
