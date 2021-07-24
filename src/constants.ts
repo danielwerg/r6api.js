@@ -517,7 +517,8 @@ export const OPERATORS = {
       name: 'Welcome Mate',
       iconId: 'xsIzH7XCAqvn7F3tEfAPe/c41e59a9d7f2ed7ee38b16ed0a882351/Welcome-Mate',
       stats: [
-        { name: 'Enemies Caught in Welcome Mats', id: 'frost_dbno' }
+        { name: 'Enemies Caught in Welcome Mats', id: 'frost_dbno' },
+        { name: 'Kills with Welcome Mats', id: 'frost_beartrap_kill' } // pve only
       ]
     }
   },
