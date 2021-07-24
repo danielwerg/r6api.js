@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+* Unique ability stats for Thunderbird
+* Unique ability stat for Frost
+* Unique ability stat for Caveira
+
+### Changed
+* Unique ability for Tachanka
+* Unique ability stat namining for several operators
+
+### Fixed
+* Unique ability stats for Thatcher
+* Unique ability name for Frost
+
 ## [2.0.2] - 2021-06-25
 
 Forgot to build for v2.0.1
@@ -13,7 +26,6 @@ Forgot to build for v2.0.1
 ## [2.0.1] - 2021-06-25
 
 ### Fixed
-
 * Fix typings for `getStats` weapons list [#60](https://github.com/danielwerg/r6api.js/pull/60)
 
 ## [2.0.0] - 2021-06-20
