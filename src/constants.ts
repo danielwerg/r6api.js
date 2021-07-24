@@ -241,7 +241,7 @@ export const OPERATORS = {
       name: 'Remote Gas Grenade',
       iconId: '3ZbADU6FxBqdvcA8vCpYhn/6c69d61202364fa420e2a319d817c6f3/Remote-Gas-Grenade',
       stats: [
-        { name: 'Poison Gas Kills', id: 'smoke_poisongaskill' }
+        { name: 'Kills with Poison Gas', id: 'smoke_poisongaskill' }
       ]
     }
   },
@@ -254,8 +254,8 @@ export const OPERATORS = {
       name: 'Signal Disruptor',
       iconId: '1M5fsUELbaAzImzMte2ESa/9de588693ec317c87ef1a2021bd43b86/Signal-Disruptor',
       stats: [
-        { name: 'Gadgets Jammed', id: 'mute_gadgetjammed' },
-        { name: 'Jammers Deployed', id: 'mute_jammerdeployed' }
+        { name: 'Jammers deployed', id: 'mute_jammerdeployed' },
+        { name: 'Gadgets jammed', id: 'mute_gadgetjammed' }
       ]
     }
   },
@@ -268,8 +268,8 @@ export const OPERATORS = {
       name: 'Tactical Breaching Hammer',
       iconId: '2Vyo9CrQ1J7IZe43XpT4pV/4bc02e829d1b1745b9a527ff34f8fafb/Tactical-Breaching-Hammer',
       stats: [
-        { name: 'Kills with Breaching Hammer', id: 'sledge_hammerkill' },
-        { name: 'Destruction by Breaching Hammer', id: 'sledge_hammerhole' }
+        { name: 'Destruction by Breaching Hammer', id: 'sledge_hammerhole' },
+        { name: 'Kills with Breaching Hammer', id: 'sledge_hammerkill' }
       ]
     }
   },
@@ -295,7 +295,7 @@ export const OPERATORS = {
       name: 'Armor Panel',
       iconId: '29N9nMqB8ZZxGCPz128ccD/439cb1fcb2f6d5385378cf073a5fbc30/Armor-Panel',
       stats: [
-        { name: 'Armor Panels Deployed', id: 'castle_kevlarbarricadedeployed' }
+        { name: 'Armor Panels deployed', id: 'castle_kevlarbarricadedeployed' }
       ]
     }
   },
@@ -308,8 +308,8 @@ export const OPERATORS = {
       name: 'Heartbeat Sensor',
       iconId: '7dPXIadD3D2a3uEqrCPvj2/103ad9d0d3b71adee3b92a5db96fe24d/Heartbeat-Sensor',
       stats: [
-        { name: 'Heartbeat Scanner Assists', id: 'pulse_heartbeatassist' },
-        { name: 'Heartbeats Spotted', id: 'pulse_heartbeatspot' }
+        { name: 'Enemies spotted by Heartbeat Sensor', id: 'pulse_heartbeatspot' },
+        { name: 'Heartbeat Sensor assists', id: 'pulse_heartbeatassist' }
       ]
     }
   },
@@ -336,9 +336,9 @@ export const OPERATORS = {
       name: 'Exothermic Charge',
       iconId: 'R5giHT90R2XOMMuUENZeK/840a5a391ed57a0c62208e72258407a7/Exothermic-Charge',
       stats: [
-        { name: 'Kills with Thermal Charge', id: 'thermite_chargekill' },
-        { name: 'Reinforcements Breached by Thermal Charge', id: 'thermite_reinforcementbreached' },
-        { name: 'Thermal Charges Deployed', id: 'thermite_chargedeployed' }
+        { name: 'Exothermic Charge deployed', id: 'thermite_chargedeployed' },
+        { name: 'Reinforcements Breached by Exothermic Charge', id: 'thermite_reinforcementbreached' },
+        { name: 'Kills with Exothermic Charge', id: 'thermite_chargekill' }
       ]
     }
   },
@@ -351,9 +351,9 @@ export const OPERATORS = {
       name: 'Stim Pistol',
       iconId: '7njaeUjJj27iYH27HnH6jn/c5533d2d7191b879c313013f278f5f59/Stim-Pistol',
       stats: [
-        { name: 'Teammates Revived', id: 'doc_teammaterevive' },
-        { name: 'Self Revives', id: 'doc_selfrevive' },
-        { name: 'Hostages Revived', id: 'doc_hostagerevive' }
+        { name: 'Teammates revived', id: 'doc_teammaterevive' },
+        { name: 'Self revives', id: 'doc_selfrevive' },
+        { name: 'Hostages revived', id: 'doc_hostagerevive' }
       ]
     }
   },
@@ -366,9 +366,9 @@ export const OPERATORS = {
       name: 'Armor Pack',
       iconId: 'MeoKw7iPY6EFYvjS07CRg/b2d7eba623f3c63d6b7097a8f2253954/Armor-Pack',
       stats: [
-        { name: 'Armor Plate Taken by Teammates', id: 'rook_armortakenteammate' },
-        { name: 'Armors Taken for Self', id: 'rook_armortakenourself' },
-        { name: 'Armor Crates Deployed', id: 'rook_armorboxdeployed' }
+        { name: 'Armor Packs deployed', id: 'rook_armorboxdeployed' },
+        { name: 'Armor Plate taken by teammates', id: 'rook_armortakenteammate' },
+        { name: 'Armor Plate taken for self', id: 'rook_armortakenourself' }
       ]
     }
   },
@@ -381,8 +381,8 @@ export const OPERATORS = {
       name: 'Shock Drones',
       iconId: '5dZ9kaUfUSF3piuFIUKf2t/7ebfc51caee42a776492b56251d45d92/Shock-Drones',
       stats: [
-        { name: 'Kills with Shock Drone', id: 'twitch_shockdronekill' },
-        { name: 'Gadgets Destroyed by Shock Drone', id: 'twitch_gadgetdestroybyshockdrone' }
+        { name: 'Gadgets destroyed by Shock Drone', id: 'twitch_gadgetdestroybyshockdrone' },
+        { name: 'Kills with Shock Drone', id: 'twitch_shockdronekill' }
       ]
     }
   },
@@ -395,7 +395,7 @@ export const OPERATORS = {
       name: 'Extendable Shield',
       iconId: '254sLdgp9a9DMExPZFK0ai/95e8b1c2865f0923fd80e15d8830eb46/Extendable-Shield',
       stats: [
-        { name: 'Bullets Blocked by Extended Shield', id: 'montagne_shieldblockdamage' }
+        { name: 'Damage blocked by Extendable Shield', id: 'montagne_shieldblockdamage' }
       ]
     }
   },
@@ -408,8 +408,8 @@ export const OPERATORS = {
       name: 'Entry Denial Device',
       iconId: 'FLgwGbMiZTrWcK62KxPq8/d4e584420f85fa61c09e5e57e12d9dd9/Entry-Denial-Device',
       stats: [
-        { name: 'EDD Kills', id: 'kapkan_boobytrapkill' },
-        { name: 'EDD Deployed', id: 'kapkan_boobytrapdeployed' }
+        { name: 'EDD deployed', id: 'kapkan_boobytrapdeployed' },
+        { name: 'Kills with EDD', id: 'kapkan_boobytrapkill' }
       ]
     }
   },
@@ -422,8 +422,8 @@ export const OPERATORS = {
       name: 'Shumikha Launcher',
       iconId: '37wX75QnY7XA6KbjM4aF5n/0ab116d398cf71463e11d43913818ec1/Shumikha-Launcher',
       stats: [
-        { name: 'Mounted LMG Kills', id: 'tachanka_turretkill' },
-        { name: 'Mounted LMG Deployed', id: 'tachanka_turretdeployed' }
+        { name: 'Mounted LMG deployed', id: 'tachanka_turretdeployed' },
+        { name: 'Kills with Mounted LMG', id: 'tachanka_turretkill' }
       ]
     }
   },
@@ -436,8 +436,8 @@ export const OPERATORS = {
       name: 'Flip Sight',
       iconId: '73bNPGhlIuhlWvi497sYqE/b68414436088f62f9da44cd42f702df7/Flip-Sight',
       stats: [
-        { name: 'Sniper Kills', id: 'glaz_sniperkill' },
-        { name: 'Penetration Sniper Kills', id: 'glaz_sniperpenetrationkill' }
+        { name: 'Kills with Sniper Rifle', id: 'glaz_sniperkill' },
+        { name: 'Penetration kills with Sniper Rifle', id: 'glaz_sniperpenetrationkill' }
       ]
     }
   },
@@ -450,7 +450,7 @@ export const OPERATORS = {
       name: 'Cluster Charge',
       iconId: '3YaoPPUbFYeVSCemdj57EL/a4a4a8c0a935640f7d9a1d1ea82bc48c/Cluster-Charge',
       stats: [
-        { name: 'Cluster Charge Kills', id: 'fuze_clusterchargekill' }
+        { name: 'Kills with Cluster Charge', id: 'fuze_clusterchargekill' }
       ]
     }
   },
@@ -463,7 +463,7 @@ export const OPERATORS = {
       name: 'Active Defense System',
       iconId: '1YCujceutAcJ7F10yhHC41/c5f870e7789b6396c9997ed45ccd3beb/Active-Defense-System',
       stats: [
-        { name: 'Gadget Destroyed by ADS', id: 'jager_gadgetdestroybycatcher' }
+        { name: 'Gadget destroyed by ADS', id: 'jager_gadgetdestroybycatcher' }
       ]
     }
   },
@@ -476,7 +476,7 @@ export const OPERATORS = {
       name: 'Shock Wire',
       iconId: '129HTNU2A5kIcMj0KZ5UjU/858b60dd0e9b8692e2dc693eded50e14/Shock-Wire',
       stats: [
-        { name: 'Shock Wire Kills', id: 'bandit_batterykill' }
+        { name: 'Kills with Shock Wire', id: 'bandit_batterykill' }
       ]
     }
   },
@@ -489,9 +489,9 @@ export const OPERATORS = {
       name: 'Flash Shield',
       iconId: '7EXDIOjPFMhPKZWY5OcEQC/f2df48ebe5673dca7773d81efd940b66/Flash-Shield',
       stats: [
-        { name: 'Enemies Blinded by Flash Shield', id: 'blitz_flashedenemy' },
-        { name: 'Post-flash Follow Up Kills', id: 'blitz_flashfollowupkills' },
-        { name: 'Post-flash Assisted Kills', id: 'blitz_flashshieldassist' }
+        { name: 'Enemies blinded by Flash Shield', id: 'blitz_flashedenemy' },
+        { name: 'Post-flash follow up kills', id: 'blitz_flashfollowupkills' },
+        { name: 'Post-flash assisted kills', id: 'blitz_flashshieldassist' }
       ]
     }
   },
@@ -504,7 +504,7 @@ export const OPERATORS = {
       name: 'Electronics Detector',
       iconId: '23Nk2ie06rb3DcZnStryIY/e06226196dd582c905c33fad87dfdd63/Electronics-Detector',
       stats: [
-        { name: 'Gadgets Spotted by Electronics Detector', id: 'iq_gadgetspotbyef' }
+        { name: 'Gadgets spotted by Electronics Detector', id: 'iq_gadgetspotbyef' }
       ]
     }
   },
@@ -517,7 +517,7 @@ export const OPERATORS = {
       name: 'Welcome Mat',
       iconId: 'xsIzH7XCAqvn7F3tEfAPe/c41e59a9d7f2ed7ee38b16ed0a882351/Welcome-Mate',
       stats: [
-        { name: 'Enemies Caught in Welcome Mats', id: 'frost_dbno' },
+        { name: 'Enemies caught in Welcome Mats', id: 'frost_dbno' },
         { name: 'Kills with Welcome Mats', id: 'frost_beartrap_kill' } // pve only
       ]
     }
@@ -531,7 +531,7 @@ export const OPERATORS = {
       name: 'Skeleton Key',
       iconId: '2w8EQtN4FFtEMa9lBYyWGg/36bbc6d819761c11418c868d2e483991/Skeleton-Key',
       stats: [
-        { name: 'Kills with the Skeleton Key', id: 'buck_kill' }
+        { name: 'Kills with Skeleton Key', id: 'buck_kill' }
       ]
     }
   },
@@ -544,7 +544,7 @@ export const OPERATORS = {
       name: 'Black Eye',
       iconId: '1EPfd4xeuMpt5nItOYm2Eb/b59223248a508d205264ece3c3553d36/Black-Eye',
       stats: [
-        { name: 'Black Eye Cameras Deployed', id: 'valkyrie_camdeployed' }
+        { name: 'Black Eye cameras deployed', id: 'valkyrie_camdeployed' }
       ]
     }
   },
@@ -557,7 +557,7 @@ export const OPERATORS = {
       name: 'Rifle Shield',
       iconId: '2dZeBTlDDdFQKb4PYb8F5v/162d60178a75cde9f65be362eacc880a/Rifle-Shield',
       stats: [
-        { name: 'Bullets Stopped by Shield', id: 'blackbeard_gunshieldblockdamage' }
+        { name: 'Damage blocked by Rifle Shield', id: 'blackbeard_gunshieldblockdamage' }
       ]
     }
   },
@@ -570,7 +570,7 @@ export const OPERATORS = {
       name: 'Silent Step',
       iconId: '6PTsBBBGTT5oixxzvYv1Y4/18e31c74ba1ca73ed2694134acd9c078/Silent-Step',
       stats: [
-        { name: 'Successful Interrogations Performed', id: 'caveira_interrogations' },
+        { name: 'Successful interrogations performed', id: 'caveira_interrogations' },
         { name: 'AI killed in stealth', id: 'caveira_aikilledinstealth' } // pve only
       ]
     }
@@ -597,7 +597,7 @@ export const OPERATORS = {
       name: 'Yokai',
       iconId: 'TdDZyrKpjt9EQo8tHpIJk/d987db4da22046a0663be8be82dcda88/Yokai',
       stats: [
-        { name: 'Enemies Disoriented by Yokai', id: 'echo_enemy_sonicburst_affected' }
+        { name: 'Enemies disoriented by Yokai drone', id: 'echo_enemy_sonicburst_affected' }
       ]
     }
   },
@@ -610,7 +610,7 @@ export const OPERATORS = {
       name: 'X-Kairos',
       iconId: '1QSzVxpGhswXix3vn8XGKj/c4f64fa0895bdaf164448e3ae49950a0/X-Kairos',
       stats: [
-        { name: 'X-KAIROS Pellets Detonated', id: 'hibana_detonate_projectile' }
+        { name: 'X-Kairos pellets detonated', id: 'hibana_detonate_projectile' }
       ]
     }
   },
@@ -620,10 +620,10 @@ export const OPERATORS = {
     role: 'defender',
     unit: 'GEO',
     uniqueAbility: {
-      name: 'Black mirror',
+      name: 'Black Mirror',
       iconId: '1a1w8epOhWE8VtzvvCJG9d/b20cbb221f7d45e5838f839ce042f409/Black-mirror',
       stats: [
-        { name: 'Black Mirror Deployed', id: 'black_mirror_gadget_deployed' }
+        { name: 'Black Mirrors deployed', id: 'black_mirror_gadget_deployed' }
       ]
     }
   },
@@ -636,7 +636,7 @@ export const OPERATORS = {
       name: 'Eyenox Model III',
       iconId: '2gexf5zLDsa74J7urCoDxk/50da09626395cbe1bf2a58e00a57a514/Eyenox-Model-III',
       stats: [
-        { name: 'Eyenox Tracking Assist', id: 'cazador_assist_kill' }
+        { name: 'Eyenox tracking assist', id: 'cazador_assist_kill' }
       ]
     }
   },
@@ -646,10 +646,10 @@ export const OPERATORS = {
     role: 'defender',
     unit: 'SDU',
     uniqueAbility: {
-      name: 'Gu mines',
+      name: 'Gu Mines',
       iconId: '6PJv86R8CtQCWA7a24sJE2/24f3751b2ed941ce80a4c1ef394ab7d5/Gu-mines',
       stats: [
-        { name: 'Enemies Poisoned by Gu Mines', id: 'caltrop_enemy_affected' }
+        { name: 'Enemies poisoned by Gu Mines', id: 'caltrop_enemy_affected' }
       ]
     }
   },
@@ -662,7 +662,7 @@ export const OPERATORS = {
       name: 'Candela',
       iconId: '4vpN9vu5wD9dyb2knMosTy/430796de3c0c2a5c2eb2ac6f4217eba0/Candela',
       stats: [
-        { name: 'Candela Devices Detonated', id: 'dazzler_gadget_detonate' }
+        { name: 'Candela devices detonated', id: 'dazzler_gadget_detonate' }
       ]
     }
   },
@@ -675,7 +675,7 @@ export const OPERATORS = {
       name: 'Grzmot Mine',
       iconId: '10Md7ccaUO0pE0nCWimeoZ/35dddc67a4141e844d7904051a0314dc/Grzmot-Mine',
       stats: [
-        { name: 'Grzmot Mines Detonated', id: 'concussionmine_detonate' }
+        { name: 'Grzmot Mines detonated', id: 'concussionmine_detonate' }
       ]
     }
   },
@@ -688,7 +688,7 @@ export const OPERATORS = {
       name: 'KS79 Lifeline',
       iconId: '1elqIEWJ6XsXKAbMNd0Cai/0b4c0591bad284d957e652cdae0b706b/KS79-Lifeline',
       stats: [
-        { name: 'Concussion Grenades Detonated', id: 'concussiongrenade_detonate' }
+        { name: 'Concussion Grenades detonated', id: 'concussiongrenade_detonate' }
       ]
     }
   },
@@ -701,7 +701,7 @@ export const OPERATORS = {
       name: 'ERC-7',
       iconId: '6WbhiNk0evsKWChPneCES6/af08476e2f917878e0326727d2d5fb8a/ERC-7',
       stats: [
-        { name: 'Drones Deceived', id: 'attackerdrone_diminishedrealitymode' }
+        { name: 'Drones deceived', id: 'attackerdrone_diminishedrealitymode' }
       ]
     }
   },
@@ -714,7 +714,7 @@ export const OPERATORS = {
       name: 'Logic Bomb',
       iconId: '5ej2g1iCMHdfjn8h8qgfmU/bf07fef4b063a46389ca650ed02b292a/Logic-Bomb',
       stats: [
-        { name: 'Phones Hacked', id: 'phoneshacked' }
+        { name: 'Phones hacked', id: 'phoneshacked' }
       ]
     }
   },
@@ -727,7 +727,7 @@ export const OPERATORS = {
       name: 'EE-ONE-D',
       iconId: '7fRknnWl2K2qjKle1t79j/0506d25798aeb0691c8a576665050f7d/EE-ONE-D',
       stats: [
-        { name: 'Enemies Detected by EE-ONE-D', id: 'tagger_tagdevice_spot' }
+        { name: 'Enemies marked by EE-ONE-D drone', id: 'tagger_tagdevice_spot' }
       ]
     }
   },
@@ -740,7 +740,7 @@ export const OPERATORS = {
       name: 'Adrenal Surge',
       iconId: '9xGRNPNznBKssvgQAtQNQ/9352fc88f2911ab40789412856b3e20e/Adrenal-Surge',
       stats: [
-        { name: 'Adrenal Surge Bonus', id: 'rush_adrenalinerush' }
+        { name: 'Adrenal Surge bonus', id: 'rush_adrenalinerush' }
       ]
     }
   },
@@ -753,7 +753,7 @@ export const OPERATORS = {
       name: 'Evil Eye',
       iconId: 'n2rfPidCv630jQEfnEWwb/42d454d0771218eb8f27f6d17d8a073e/Evil-Eye',
       stats: [
-        { name: 'Enemies Killed by Evil Eye', id: 'barrage_killswithturret' }
+        { name: 'Enemies killed by Evil Eye', id: 'barrage_killswithturret' }
       ]
     }
   },
@@ -766,7 +766,7 @@ export const OPERATORS = {
       name: 'Prisma',
       iconId: '7sJYir66zAPq2omSvYeT2u/8fbe3370d32fb5433fb6d3a86d46a1b9/Prisma',
       stats: [
-        { name: 'Enemies Tricked by Prisma', id: 'deceiver_revealedattackers' }
+        { name: 'Enemies tricked by Prisma', id: 'deceiver_revealedattackers' }
       ]
     }
   },
@@ -779,7 +779,7 @@ export const OPERATORS = {
       name: 'CCE Shield',
       iconId: '1jck6fnzAMbMQrUMVsnA0M/d04a60eab0132e6bcc202a4f99186cdd/CCE-Shield',
       stats: [
-        { name: 'Enemies Killed While Slowed Down', id: 'clash_sloweddown' }
+        { name: 'Enemies killed while slowed down by CCE Shield', id: 'clash_sloweddown' }
       ]
     }
   },
@@ -792,7 +792,7 @@ export const OPERATORS = {
       name: 'Breaching Torch',
       iconId: '4rPBvxDKsKiQCMjt7GxJMw/09e45c68bbc41c1721acbbe0257e2465/Breaching-Torch',
       stats: [
-        { name: 'Walls Breached with Torch', id: 'maverick_wallbreached' }
+        { name: 'Walls breached with Breaching Torch', id: 'maverick_wallbreached' }
       ]
     }
   },
@@ -805,7 +805,7 @@ export const OPERATORS = {
       name: '"Rtila" Electroclaw',
       iconId: '7rUOk2LhYIUjvYLot7GT8Y/94b72bfbbfdf50c2c807cdbf9f5b276e/Rtila-Electroclaw',
       stats: [
-        { name: 'Electroclaws Successfully Deployed', id: 'kaid_electroclawelectrify' }
+        { name: '"Rtila" Electroclaws successfully deployed', id: 'kaid_electroclawelectrify' }
       ]
     }
   },
@@ -818,7 +818,7 @@ export const OPERATORS = {
       name: 'Airjab Launcher',
       iconId: '6d0LN1QWzviEkcYu3mTn6v/e49511a479756f71224f14225ad9cbd8/Airjab-Launcher',
       stats: [
-        { name: 'Airjabs Detonated', id: 'nomad_airjabdetonate' }
+        { name: 'Airjabs detonated', id: 'nomad_airjabdetonate' }
       ]
     }
   },
@@ -831,7 +831,7 @@ export const OPERATORS = {
       name: 'Pest Launcher',
       iconId: '5L0fFKVOwozKMcmJoenfef/56e4efdf77363556b35a76fd4e0e60f6/Pest-Launcher',
       stats: [
-        { name: 'Drones Hacked', id: 'mozzie_droneshacked' }
+        { name: 'Drones hacked', id: 'mozzie_droneshacked' }
       ]
     }
   },
@@ -844,7 +844,7 @@ export const OPERATORS = {
       name: 'Trax Stingers',
       iconId: 'QGVvmZeZ91FC2X4mvMzgn/601fa45e635872aea31f15ffebb9c366/Trax-Stingers',
       stats: [
-        { name: 'Trax Deployed', id: 'gridlock_traxdeployed' }
+        { name: 'Trax Stingers deployed', id: 'gridlock_traxdeployed' }
       ]
     }
   },
@@ -857,7 +857,7 @@ export const OPERATORS = {
       name: 'Glance Smart Glasses',
       iconId: '40RkJUEmmBCf7bmfTL8ao1/1d973adfe4d002c94655d9818776fb41/Glance-Smart-Glasses',
       stats: [
-        { name: 'Kills While Using Glance', id: 'warden_killswithglasses' }
+        { name: 'Kills while using Glance Smart Glasses', id: 'warden_killswithglasses' }
       ]
     }
   },
@@ -870,7 +870,7 @@ export const OPERATORS = {
       name: 'HEL Presence Reduction',
       iconId: '57miqbOn8xWBh7ne7za3CV/35364108d49380a0ed33998f970e104f/HEL-Presence-Reduction',
       stats: [
-        { name: 'Observation Tools Deceived', id: 'nokk_observationtooldeceived' }
+        { name: 'Observation tools deceived', id: 'nokk_observationtooldeceived' }
       ]
     }
   },
@@ -883,7 +883,7 @@ export const OPERATORS = {
       name: 'Volcan Shield',
       iconId: '1JqlRdbaVA73jDq8y46vX4/82e89f39c479526ace294ba246d0b085/Volcan-Shield',
       stats: [
-        { name: 'Volcán Detonated by Your Team', id: 'goyo_volcandetonate' }
+        { name: 'Volcan Shield detonated by your team', id: 'goyo_volcandetonate' }
       ]
     }
   },
@@ -896,7 +896,7 @@ export const OPERATORS = {
       name: 'Garra Hook',
       iconId: '3WejtMAtiITfpjDMuq6j4t/b52e58da6b2625839aa23f940c8e6639/Garra-Hook',
       stats: [
-        { name: 'Total Distance Reeled', id: 'amaru_distancereeled' }
+        { name: 'Distance reeled with Garra Hook', id: 'amaru_distancereeled' }
       ]
     }
   },
@@ -909,7 +909,7 @@ export const OPERATORS = {
       name: 'Mag-net System',
       iconId: '1IKNZzLv63AJd9vlbXj3Bo/883371432ffb22e5bf35bc82dd706384/Mag-net_System',
       stats: [
-        { name: 'Projectiles Captured', id: 'wamai_gadgetdestroybymagnet' }
+        { name: 'Projectiles captured by Mag-net System', id: 'wamai_gadgetdestroybymagnet' }
       ]
     }
   },
@@ -922,7 +922,7 @@ export const OPERATORS = {
       name: 'LV Explosive Lance',
       iconId: '75eebt48ELO4eGGdIMVMpY/9533c7dc8f36651f5b5ad50c8ccb6c5a/LV_Explosive_Lance',
       stats: [
-        { name: 'Gadgets Destroyed with the LV', id: 'kali_gadgetdestroywithexplosivelance' }
+        { name: 'Gadgets destroyed with LV Explosive Lance', id: 'kali_gadgetdestroywithexplosivelance' }
       ]
     }
   },
@@ -935,7 +935,7 @@ export const OPERATORS = {
       name: 'Remah Dash',
       iconId: '3dM2B3qCdU0woydIbiy2xn/55aa99443002ad794d3f78dada26d035/r6s-operator-ability-oryx',
       stats: [
-        { name: 'Kills after Remah Dashes', id: 'oryx_killsafterdash' }
+        { name: 'Kills after Remah Dash', id: 'oryx_killsafterdash' }
       ]
     }
   },
@@ -948,7 +948,7 @@ export const OPERATORS = {
       name: 'Gemini Replicator',
       iconId: 'K8E4EHWbD8wTjVqro6wVl/62339b2fbe1d3a2319dcd320f7a0b070/r6s-operator-ability-iana',
       stats: [
-        { name: 'Kills after using Replicators', id: 'iana_killsafterreplicator' }
+        { name: 'Kills after using Gemini Replicator', id: 'iana_killsafterreplicator' }
       ]
     }
   },
@@ -961,7 +961,7 @@ export const OPERATORS = {
       name: 'Banshee Sonic Defense',
       iconId: '49ixqWhGgjvHu0Ay8JzeSH/c6a3fe584847850186e15c7fb4244385/r6s-operator-ability-melusi',
       stats: [
-        { name: 'Attackers slowed by Banshee', id: 'melusi_sloweddown' }
+        { name: 'Enemies slowed by Banshee Sonic Defense', id: 'melusi_sloweddown' }
       ]
     }
   },
@@ -974,7 +974,7 @@ export const OPERATORS = {
       name: 'S.E.L.M.A. Aqua Breacher',
       iconId: '2sjKOnwHeOX2xn3iIpja2A/e265f675c905ac25c23ed11fc85589bb/r6s-operator-ability-ace',
       stats: [
-        { name: 'S.E.L.M.A. Detonations', id: 'ace_selmadetonate' }
+        { name: 'S.E.L.M.A. Aqua Breacher detonations', id: 'ace_selmadetonate' }
       ]
     }
   },
@@ -987,7 +987,7 @@ export const OPERATORS = {
       name: 'ARGUS Launcher',
       iconId: '6h4hyVSzG8IwAmEl1Objrd/6e51e64eeffcc68746b8ff59445fb103/r6s-operator-ability-zero',
       stats: [
-        { name: 'Gadgets Destroyed by ARGUS Camera', id: 'zero_gadgetsdestroyed' }
+        { name: 'Gadgets destroyed by ARGUS Camera', id: 'zero_gadgetsdestroyed' }
       ]
     }
   },
@@ -1000,7 +1000,7 @@ export const OPERATORS = {
       name: 'Surya Gate',
       iconId: '4hLJAAVKrf50wosG0471od/cde1867daf863c03754969f159ac00de/r6s-operator-ability-aruni',
       stats: [
-        { name: 'Surya Gates Deployed', id: 'aruni_gatesdeployed' }
+        { name: 'Surya Gates deployed', id: 'aruni_gatesdeployed' }
       ]
     }
   },
@@ -1013,7 +1013,7 @@ export const OPERATORS = {
       name: 'RCE-Ratero Charge',
       iconId: '1z7eSI5D8IRIOHi0PJu4yq/3c4a273098a840957a248583f73fa8ff/r6s-operator-ability-flores',
       stats: [
-        { name: 'Gadgets Destroyed with RCE', id: 'flores_gadgetdestroywithrceratero' }
+        { name: 'Gadgets destroyed with RCE-Ratero Charge', id: 'flores_gadgetdestroywithrceratero' }
       ]
     }
   },
