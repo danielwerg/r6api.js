@@ -1023,7 +1023,9 @@ export const OPERATORS = {
     uniqueAbility: {
       name: 'KÓNA Station',
       iconId: '67J9QnmuA4TMI3rBxoA3Jz/4ec42d8c1bb61dadc5f36893f93142e8/r6s-operator-ability-thunderbird',
-      stats: null
+      stats: [
+        { name: 'KÓNA Station heals', id: 'thunderbird_heals' }
+      ]
     }
   }
 };
