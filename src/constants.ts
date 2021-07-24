@@ -282,7 +282,7 @@ export const OPERATORS = {
       name: 'EMP Grenade',
       iconId: '4p4srpOH4sq55OHryHhn5t/d31728d1432ed28c429ea566caf0e083/EMP-Grenade',
       stats: [
-        { name: 'Gadgets Destroyed by EMP', id: 'thatcher_gadgetdestroywithemp' }
+        { name: 'Gadgets disabled by EMP', id: 'thatcher_gadgetdisablewithemp' }
       ]
     }
   },
