@@ -570,7 +570,8 @@ export const OPERATORS = {
       name: 'Silent Step',
       iconId: '6PTsBBBGTT5oixxzvYv1Y4/18e31c74ba1ca73ed2694134acd9c078/Silent-Step',
       stats: [
-        { name: 'Successful Interrogations Performed', id: 'caveira_interrogations' }
+        { name: 'Successful Interrogations Performed', id: 'caveira_interrogations' },
+        { name: 'AI killed in stealth', id: 'caveira_aikilledinstealth' } // pve only
       ]
     }
   },
