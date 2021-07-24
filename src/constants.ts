@@ -514,7 +514,7 @@ export const OPERATORS = {
     role: 'defender',
     unit: 'JTF2',
     uniqueAbility: {
-      name: 'Welcome Mate',
+      name: 'Welcome Mat',
       iconId: 'xsIzH7XCAqvn7F3tEfAPe/c41e59a9d7f2ed7ee38b16ed0a882351/Welcome-Mate',
       stats: [
         { name: 'Enemies Caught in Welcome Mats', id: 'frost_dbno' },
