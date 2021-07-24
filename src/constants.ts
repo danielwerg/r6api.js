@@ -419,8 +419,8 @@ export const OPERATORS = {
     role: 'defender',
     unit: 'Spetsnaz',
     uniqueAbility: {
-      name: 'Mounted LMG',
-      iconId: '1hwp9cde1ESVlSTRo2LW4h/35b894c9831570d5103e36b1fe50c8eb/Mounted-LMG',
+      name: 'Shumikha Launcher',
+      iconId: '37wX75QnY7XA6KbjM4aF5n/0ab116d398cf71463e11d43913818ec1/Shumikha-Launcher',
       stats: [
         { name: 'Mounted LMG Kills', id: 'tachanka_turretkill' },
         { name: 'Mounted LMG Deployed', id: 'tachanka_turretdeployed' }
