@@ -1255,6 +1255,10 @@ export const WEAPONS = <const>{
     name: 'M249 SAW', id: '2902BB7B8C', category: 'lmg',
     iconId: '7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249'
   },
+  'dp27': {
+    name: 'DP27', id: '296F8FC698', category: 'lmg',
+    iconId: '7LoT7yAe0LK7bDOeq6MZZM/33995bc704667674af1b73fe962d4c7c/Primary_gun_DP27'
+  },
 
   // marksman
   '417': {
