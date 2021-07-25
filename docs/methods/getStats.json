@@ -4,30 +4,30 @@
     "pvp": {
       "general": {
         "bulletsFired": 417170,
-        "bulletsConnected": 206980,
-        "kills": 26718,
-        "deaths": 26655,
+        "bulletsConnected": 206993,
+        "kills": 26720,
+        "deaths": 26658,
         "kd": 1,
-        "assists": 7707,
-        "headshots": 10964,
+        "assists": 7710,
+        "headshots": 10966,
         "meleeKills": 757,
         "penetrationKills": 1519,
         "blindKills": 22,
         "dbno": 9997,
-        "dbnoAssists": 1183,
+        "dbnoAssists": 1184,
         "revives": 816,
-        "wins": 3049,
+        "wins": 3050,
         "losses": 2749,
-        "winRate": "52.59%",
-        "matches": 5831,
-        "playtime": 6704986,
-        "gadgetsDestroyed": 29709,
+        "winRate": "52.60%",
+        "matches": 5832,
+        "playtime": 6705497,
+        "gadgetsDestroyed": 29710,
         "rappelBreaches": 65,
         "barricadesDeployed": 2836,
         "reinforcementsDeployed": 18400,
         "suicides": 169,
-        "distanceTravelled": 1554450968,
-        "xp": 74102379
+        "distanceTravelled": 1554451583,
+        "xp": 74110729
       },
       "operators": {
         "recruit_sas": {
@@ -542,18 +542,18 @@
           "role": "defender",
           "unit": "Spetsnaz",
           "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/operators/tachanka.png",
-          "kills": 91,
-          "deaths": 100,
+          "kills": 93,
+          "deaths": 102,
           "kd": 0.91,
-          "wins": 83,
+          "wins": 85,
           "losses": 48,
-          "winRate": "63.36%",
-          "matches": 131,
-          "headshots": 37,
+          "winRate": "63.91%",
+          "matches": 133,
+          "headshots": 39,
           "meleeKills": 2,
           "dbno": 35,
-          "xp": 228191,
-          "playtime": 26740,
+          "xp": 233491,
+          "playtime": 27136,
           "uniqueAbility": {
             "name": "Shumikha Launcher",
             "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/37wX75QnY7XA6KbjM4aF5n/0ab116d398cf71463e11d43913818ec1/Shumikha-Launcher.png",
@@ -787,17 +787,17 @@
           "unit": "JTF2",
           "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/operators/buck.png",
           "kills": 494,
-          "deaths": 520,
+          "deaths": 521,
           "kd": 0.95,
-          "wins": 303,
+          "wins": 304,
           "losses": 327,
-          "winRate": "48.10%",
-          "matches": 630,
+          "winRate": "48.18%",
+          "matches": 631,
           "headshots": 197,
           "meleeKills": 11,
           "dbno": 203,
-          "xp": 1318420,
-          "playtime": 118755,
+          "xp": 1321470,
+          "playtime": 118870,
           "uniqueAbility": {
             "name": "Skeleton Key",
             "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2w8EQtN4FFtEMa9lBYyWGg/36bbc6d819761c11418c868d2e483991/Skeleton-Key.png",
@@ -1883,11 +1883,11 @@
           "general": {
             "name": "Assault Rifle",
             "kills": 10635,
-            "deaths": 11845,
+            "deaths": 11846,
             "kd": 0.9,
             "headshots": 4970,
             "bulletsFired": 178102,
-            "bulletsConnected": 84441,
+            "bulletsConnected": 84445,
             "timesChosen": 12246
           },
           "list": {
@@ -1895,7 +1895,7 @@
               "name": "L85A2",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5vYQpoyk36foDzDq49jBd0/1479a2d7189e545555ceccecf6bd7cc3/L85A2.png",
               "kills": 1854,
-              "deaths": 1237,
+              "deaths": 1238,
               "kd": 1.5,
               "headshots": 867,
               "bulletsFired": 34178,
@@ -2009,7 +2009,7 @@
               "kd": 0.65,
               "headshots": 136,
               "bulletsFired": 2013,
-              "bulletsConnected": 2190,
+              "bulletsConnected": 2194,
               "timesChosen": 333
             },
             "mk17_cqb": {
@@ -2394,12 +2394,12 @@
         "lmg": {
           "general": {
             "name": "Light Machine Gun",
-            "kills": 971,
+            "kills": 973,
             "deaths": 640,
             "kd": 1.52,
-            "headshots": 482,
+            "headshots": 484,
             "bulletsFired": 6409,
-            "bulletsConnected": 7883,
+            "bulletsConnected": 7892,
             "timesChosen": 1138
           },
           "list": {
@@ -2479,6 +2479,17 @@
               "bulletsFired": 0,
               "bulletsConnected": 141,
               "timesChosen": 26
+            },
+            "dp27": {
+              "name": "DP27",
+              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7LoT7yAe0LK7bDOeq6MZZM/33995bc704667674af1b73fe962d4c7c/Primary_gun_DP27.png",
+              "kills": 6,
+              "deaths": 18,
+              "kd": 0.33,
+              "headshots": 6,
+              "bulletsFired": 0,
+              "bulletsConnected": 25,
+              "timesChosen": 0
             }
           }
         },
@@ -2486,7 +2497,7 @@
           "general": {
             "name": "Marksman Rifle",
             "kills": 540,
-            "deaths": 614,
+            "deaths": 615,
             "kd": 0.88,
             "headshots": 192,
             "bulletsFired": 5602,
@@ -2542,8 +2553,8 @@
               "name": "Mk 14 EBR",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6KIMqp5dA95z1RI3PrG9jv/eb939638169811a3fa858a44e6e5d97e/Mk_14_EBR.png",
               "kills": 76,
-              "deaths": 80,
-              "kd": 0.95,
+              "deaths": 81,
+              "kd": 0.94,
               "headshots": 23,
               "bulletsFired": 0,
               "bulletsConnected": 481,
@@ -3142,14 +3153,14 @@
         },
         "casual": {
           "name": "Casual",
-          "kills": 3650,
-          "deaths": 3203,
+          "kills": 3652,
+          "deaths": 3206,
           "kd": 1.14,
-          "wins": 494,
+          "wins": 495,
           "losses": 328,
-          "winRate": "60.10%",
-          "matches": 822,
-          "playtime": 735820
+          "winRate": "60.15%",
+          "matches": 823,
+          "playtime": 736331
         },
         "custom": {
           "name": "Custom",
@@ -3159,12 +3170,12 @@
       "modes": {
         "bomb": {
           "name": "Bomb",
-          "wins": 2486,
+          "wins": 2487,
           "losses": 2272,
-          "winRate": "52.25%",
-          "matches": 4791,
+          "winRate": "52.26%",
+          "matches": 4792,
           "bestScore": 8970,
-          "playtime": 5561354
+          "playtime": 5561865
         },
         "secureArea": {
           "name": "Secure Area",
@@ -3193,29 +3204,29 @@
     },
     "pve": {
       "general": {
-        "bulletsFired": 356553,
-        "bulletsConnected": 134574,
-        "kills": 44437,
-        "deaths": 967,
-        "kd": 45.95,
+        "bulletsFired": 356710,
+        "bulletsConnected": 134604,
+        "kills": 44462,
+        "deaths": 974,
+        "kd": 45.65,
         "assists": 426,
-        "headshots": 34282,
+        "headshots": 34303,
         "meleeKills": 536,
         "penetrationKills": 2232,
         "blindKills": 58,
         "revives": 232,
         "wins": 1271,
-        "losses": 963,
-        "winRate": "56.89%",
-        "matches": 2234,
-        "playtime": 421588,
+        "losses": 971,
+        "winRate": "56.69%",
+        "matches": 2242,
+        "playtime": 422336,
         "gadgetsDestroyed": 3616,
         "rappelBreaches": 0,
         "barricadesDeployed": 286,
         "reinforcementsDeployed": 226,
-        "suicides": 815,
-        "distanceTravelled": 657968,
-        "xp": 3935490
+        "suicides": 822,
+        "distanceTravelled": 658964,
+        "xp": 3936435
       },
       "operators": {
         "recruit_sas": {
@@ -3712,17 +3723,17 @@
           "role": "defender",
           "unit": "Spetsnaz",
           "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/operators/tachanka.png",
-          "kills": 418,
-          "deaths": 21,
-          "kd": 19.9,
+          "kills": 443,
+          "deaths": 28,
+          "kd": 15.82,
           "wins": 9,
-          "losses": 29,
-          "winRate": "23.68%",
-          "matches": 38,
-          "headshots": 190,
+          "losses": 37,
+          "winRate": "19.57%",
+          "matches": 46,
+          "headshots": 211,
           "meleeKills": 0,
-          "xp": 110800,
-          "playtime": 14804,
+          "xp": 111745,
+          "playtime": 15552,
           "uniqueAbility": {
             "name": "Shumikha Launcher",
             "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/37wX75QnY7XA6KbjM4aF5n/0ab116d398cf71463e11d43913818ec1/Shumikha-Launcher.png",
@@ -5006,8 +5017,8 @@
           "general": {
             "name": "Assault Rifle",
             "kills": 32347,
-            "deaths": 599,
-            "kd": 54,
+            "deaths": 605,
+            "kd": 53.47,
             "headshots": 25649,
             "bulletsFired": 261411,
             "bulletsConnected": 98689,
@@ -5517,12 +5528,12 @@
         "lmg": {
           "general": {
             "name": "Light Machine Gun",
-            "kills": 2098,
+            "kills": 2110,
             "deaths": 3,
-            "kd": 699.33,
-            "headshots": 1585,
-            "bulletsFired": 21959,
-            "bulletsConnected": 7434,
+            "kd": 703.33,
+            "headshots": 1597,
+            "bulletsFired": 22058,
+            "bulletsConnected": 7453,
             "timesChosen": 51
           },
           "list": {
@@ -5601,6 +5612,17 @@
               "headshots": 25,
               "bulletsFired": 130,
               "bulletsConnected": 50,
+              "timesChosen": 0
+            },
+            "dp27": {
+              "name": "DP27",
+              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7LoT7yAe0LK7bDOeq6MZZM/33995bc704667674af1b73fe962d4c7c/Primary_gun_DP27.png",
+              "kills": 76,
+              "deaths": 0,
+              "kd": 76,
+              "headshots": 63,
+              "bulletsFired": 762,
+              "bulletsConnected": 177,
               "timesChosen": 0
             }
           }
@@ -5688,12 +5710,12 @@
         "pistol": {
           "general": {
             "name": "Handgun",
-            "kills": 2323,
+            "kills": 2332,
             "deaths": 41,
-            "kd": 56.66,
-            "headshots": 1901,
-            "bulletsFired": 11645,
-            "bulletsConnected": 5051,
+            "kd": 56.88,
+            "headshots": 1910,
+            "bulletsFired": 11703,
+            "bulletsConnected": 5062,
             "timesChosen": 1070
           },
           "list": {
@@ -5755,23 +5777,23 @@
             "gsh-18": {
               "name": "GSH-18",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5s5Q33j3MNcXf9lwfxfd7m/4eb3a6af1d431481b6ddcec44fbc7602/GSh-18.png",
-              "kills": 38,
+              "kills": 44,
               "deaths": 2,
-              "kd": 19,
-              "headshots": 28,
-              "bulletsFired": 237,
-              "bulletsConnected": 106,
+              "kd": 22,
+              "headshots": 34,
+              "bulletsFired": 279,
+              "bulletsConnected": 114,
               "timesChosen": 26
             },
             "pmm": {
               "name": "PMM",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3y4LIwwm8YNQHAv8oOkWCK/a2375901cee34e68fa39c976d85de8aa/PMM.png",
-              "kills": 85,
+              "kills": 88,
               "deaths": 0,
-              "kd": 85,
-              "headshots": 60,
-              "bulletsFired": 474,
-              "bulletsConnected": 222,
+              "kd": 88,
+              "headshots": 63,
+              "bulletsFired": 490,
+              "bulletsConnected": 225,
               "timesChosen": 64
             },
             "p12": {
@@ -6301,9 +6323,9 @@
         "protectHostage": {
           "name": "Protect Hostage",
           "wins": 46,
-          "losses": 155,
-          "winRate": "22.89%",
-          "matches": 201,
+          "losses": 163,
+          "winRate": "22.01%",
+          "matches": 209,
           "bestScore": 4830
         },
         "extractHostage": {
