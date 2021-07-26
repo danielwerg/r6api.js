@@ -64,30 +64,41 @@ export default class R6API {
     if (options.authFilePath) _setAuthFilePath(options.authFilePath);
   }
 
+  /** Find player by their username. */
   findByUsername = (platform: PlatformAll, query: QueryString) =>
     checkQueryLimit({ method: _findByUsername, platform, query, limit: 50 });
 
+  /** Find player by their id. */
   findById = (
     platform: PlatformAllExtended, query: QueryUUID | QueryString, options?: IFindByIdOptions
   ) =>
     checkQueryLimit({ method: _findById, platform, query, options, limit: 50 })
 
+  /** Get playtime of a player. */
   getPlaytime = (platform: Platform, query: QueryUUID) =>
     checkQueryLimit({ method: _getPlaytime, platform, query, limit: 200 })
 
+  /** Get level, xp and alpha pack drop chance of a player. */
   getProgression = (platform: Platform, query: QueryUUID) =>
     checkQueryLimit({ method: _getProgression, platform, query, limit: 200 })
 
+  /** Get seasonal stats of a player. */
   getRanks = (platform: Platform, query: QueryUUID, options?: IGetRanksOptions) =>
     checkQueryLimit({ method: _getRanks, platform, query, options, limit: 200 })
 
+  /** Get summary stats of a player. */
   getStats = (platform: Platform, query: QueryUUID, options?: IGetStatsOptions) =>
     checkQueryLimit({ method: _getStats, platform, query, options, limit: 200 })
 
+  /** Get Rainbow Six: Siege servers status. */
   getStatus = _getStatus
+  /** Validate username. */
   validateUsername = _validateUsername
+  /** Useful if you're familiar with Rainbow Six Siege's API; this method will make a request to a custom URL you would provide with the token in the header. */
   custom = _custom
+  /** Get Rainbow Six: Siege News. */
   getNews = _getNews
+  /** Get Rainbow Six: Siege News by ID. */
   getNewsById = _getNewsById
 
   getAuth = _getAuth

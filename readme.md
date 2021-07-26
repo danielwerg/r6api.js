@@ -243,7 +243,7 @@ await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 ### getPlaytime
 
-Get playtime for a player.
+Get playtime of a player.
 
 Ids limit: `200`
 
@@ -282,7 +282,7 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 ### getProgression
 
-Get level, xp and alpha pack drop chance for a player.
+Get level, xp and alpha pack drop chance of a player.
 
 Ids limit: `200`
 
@@ -317,7 +317,7 @@ await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 ### getRanks
 
-Get seasonal stats for a player.
+Get seasonal stats of a player.
 
 Ids limit: `200`
 
@@ -471,7 +471,7 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
 
 ### getStats
 
-Get summary stats for a player.
+Get summary stats of a player.
 
 Ids limit: `200`
 
