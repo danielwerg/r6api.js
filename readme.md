@@ -382,7 +382,7 @@ Ids limit: `200`
 
 <!-- END_SECTION:BOARDS_TABLE -->
 
-> **Note:** Returns `Error: 500 Uncaught exception` if `boardId` is `pvp_newcomer` and `seasonId` is `21`
+> **Note:** Returns empty array if `boardId` is `pvp_newcomer` and `seasonId` is `21` or above
 
 > **Note:** `topRankPosition` will always return `0` if board is *not* `'pvp_ranked'`
 
