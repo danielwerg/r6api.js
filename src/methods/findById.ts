@@ -24,14 +24,12 @@ export const optionsDocs: IOptionsDocs = [
   ]
 ];
 
-export default (platform: PlatformAllExtended, ids: UUID[] | string[], options?: IOptions) => {
+export default (platform: PlatformAllExtended, ids: UUID[] | string[], options?: IOptions) =>
 
-  const isUserId = options && options.isUserId;
-
-  return getToken()
+  getToken()
     .then(
       platform === 'all'
-        ? isUserId
+        ? options && options.isUserId
           ? fetch<IApiResponse>(getURL.BYUSERID(ids))
           : fetch<IApiResponse>(getURL.BYPROFILEID(ids))
         : fetch<IApiResponse>(getURL.BYIDONPLATFORM(platform, ids))
@@ -47,5 +45,3 @@ export default (platform: PlatformAllExtended, ids: UUID[] | string[], options?:
           avatar: getAvatars(profile.userId)
         }))
     );
-
-};
