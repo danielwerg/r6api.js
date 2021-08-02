@@ -436,6 +436,13 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
                   skillMeanChange: 0,
                   skillStdevChange: 0
                 },
+                pastSeasons: {
+                  wins: 1881,
+                  losses: 1741,
+                  winRate: '51.93%',
+                  matches: 3622,
+                  abandons: 17
+                },
                 previousMmr: 0,
                 nextMmr: 0,
                 topRankPosition: 0,
@@ -563,6 +570,17 @@ await r6api.getStatus();
 
 ```js
 [
+  {
+    appId: '8956241d-236d-4dbd-9e1e-bf6ed133773a',
+    name: 'Rainbow Six Siege - China - PC - LIVE',
+    spaceId: '',
+    mdm: '23702',
+    category: 'Instance',
+    platform: 'PC',
+    status: 'Online',
+    maintenance: null,
+    impactedFeatures: []
+  },
   {
     appId: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
     name: 'Rainbow Six Siege - PC - LIVE',
@@ -697,7 +715,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1129,
+  total: 1130,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -707,27 +725,26 @@ await r6api.getNews({ limit: 1 });
   tags: 'BR-rainbow-six GA-siege',
   items: [
     {
-      id: '6iYPZKFMXnfwU5u15F13Gq',
-      title: 'Up to 67% off Rainbow Six Siege for our Travel Sale!',
-      abstract: 'Play in new worlds & take in the sights',
+      id: '5ZMF9L4RORllBhrRV618tr',
+      title: 'Y6S2.2 Patch Notes',
+      abstract: 'See the upcoming changes to Rainbow Six Siege with the release of Y6S2.2.',
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2UK77XsQEj6O6BreLy51Gc/3a66b708d7f41fb096bf127396d6ecdc/BrandNewsArticle_travel-sale-1game-r6s-july21_960x540_En.jpg',
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6MRTRMkEUAK1edT0v7eqxY/428150de770b89e98e9882eb3d0609b2/R6S_Y6S2.2_PatchNotes.jpg',
         description: null
       },
-      content: '[All aboard the Travel Sale express! Save up to 80% off our games and prepare for a fun-filled getaway.](https://store.ubi.com/us/special-offers/?lang=en_US)\n\nTeam up with your friends and engage in intense 5v5 combat with [Rainbow Six Siege](https://store.ubi.com/us/game/?&pid=56c494ad88a7e300458b4d5a&dwvar_56c494ad88a7e300458b4d5a_Platform=pcdl&edition=The%20Game&source=detail) at up to 67% off. You can also save on the Ultimate Edition and unlock the latest operators.\n\nThe Ultimate Edition includes:\n- Year 1-4 Passes\n- Year 5 Pass which includes VIP member perks, 6 new Operators and customization content!\n\nSave on this game and more during our Travel Sale today!\n\n[SHOP NOW](https://store.ubi.com/us/game/?&pid=56c494ad88a7e300458b4d5a&dwvar_56c494ad88a7e300458b4d5a_Platform=pcdl&edition=The%20Game&source=detail)\n\nValid on select titles. Offer ends August 4, 2021.',
+      content: 'Y6S2.2 will release the week of July 26 on all platforms. For additional information and further details on the balancing changes listed below, please see the [Y6S2.2 Designer\'s Notes](https://rainbow6.com/DN_Y6S22).\n\n## Y6S2.2 PATCH SIZES\n\n- Ubisoft Connect: 1.48 GB\n- Steam: 850 MB\n- Xbox One: 1.28 GB\n- Xbox Series X: 1.61 GB\n- PS4: 1.77 GB\n- PS5: 1.43 GB\n\n## OPERATOR BALANCING\n\n### ALIBI\n\n-   Added 2.0x scope to ACS12 (removed 1.5x scope).\n-   Added 1.5x scope to MX4 Storm.\n\n### FROST\n\n-   Removed 1.5x scope from C1.\n\n### TACHANKA\n\n- Added Deployable Shield (removed Proximity Alarm).\n- Increased Shumikha Launcher grenades to 14 (from 10).\n- Improved DP-27 destruction:\n  - 0 to 4.99m: 0.3 radius hole per shot.\n  - 5 to 7.99m: 0.2 radius hole per shot.\n  - Beyond 8m: 0.2 radius hole after three shots.\n\n### ZOFIA\n\n- Modified M762 recoil so it\'s harder to control:\n  - Increased vertical recoil.\n  - Horizontal spread is stronger to the the left.\n  - Long burst recoil starts on the 8th bullet (was 12th).\n\n## WEAPON BALANCING\n\n### ACS12\n\n-   Increased damage to 69 (from 59).\n\n### TCSG-12\n\n-   Increased damage to 63 (from 57).\n\n## TWEAKS AND IMPROVEMENTS\n\n## PLAYLISTS\n\n__Included Favela map in Ranked and Unranked__\n\n-   Added the reworked Favela map to Ranked and Unranked playlists so players have more opportunities to play and test it.\n\n__Added feature to report players who left the game __\n\n-   In the Post-Action Report, Ranked and Unranked players can now block or report players who disconnected before the last EOR replay. \n\n## BUG FIXES     \n\n### GAMEPLAY\n\n- FIXED - Players can vault through barricades after a single melee hit.       \n\n- FIXED - Operator Selection remains stuck on screen during gameplay.     \n\n- UPDATED - Players can destroy a barricade with certain weapons, causing it to desync and become exploitable. There is an ongoing investigation into this issue to ensure it works as expected for players.  \n\n- FIXED - Players can deploy a reinforcement or barricade while falling through a hatch.     \n\n- FIXED - Players can select the same Operator as another player during a match.  \n\n- UPDATED - Sometimes the Windows cursor remains stuck on screen, blocking camera movement. There is an ongoing investigation into this issue to ensure it works as expected for players.  \n\n- FIXED - Some players above 4400 MMR are unable to Squad queue with other players, despite being within the accepted MMR range.           \n\n- FIXED - Players lose camera control if they play a match while under an Abandon Penalty.             \n\n### LEVEL DESIGN           \n\n- FIXED - Operators can fall out of bounds or clip through the wall to get inside the building after exiting rappel in the gap between vents at EXT Forklift Alley on Kanal map.       \n\n- FIXED - Attackers have unfair LOS into 1F Main Hallway and 2F Landing after vaulting over a bush on Villa map.               \n\n- FIXED - The destructible floor doesn\'t fully break when Sledge uses the Breaching Hammer on the metal support beams on Favela map.  \n\n- FIXED - Two soft walls cannot be reinforced while Defenders are standing on a reinforced hatch in 1F Public Bathroom on Consulate map.    \n\n- FIXED - Gap on top of barricaded doorway allows LOS into EXT Pedestrian Customs on Border Map.          \n\n- FIXED - Several LOD issues on Villa map.\n\n- FIXED - Defuser can be dropped behind indestructible plant pots at EXT Terrace on Villa Map.      \n\n- FIXED - Player movement dips while passing over the triangular gap between PC boxes in 2F Coin Farm on Favela Map.       \n\n- FIXED - Deployable devices float when placed on wooden beams on Kafe Dostoyevsky map.         \n\n### OPERATORS\n\n- FIXED - Fuze starts a round with a default weapon loadout if the player doesn\'t swap between weapons during Operator Selection.        \n\n- FIXED - Jackal stops rappelling for a moment if gadget is enabled or disabled.      \n\n- FIXED - Lights on Ace\'s S.E.L.M.A. Aqua Breacher appear in an incorrect location.\n\n- FIXED - When Kali cancels a reload by switching weapons, the player is unable to ADS.    \n\n- FIXED - When Buck cancels a Skeleton Key reload, the player is unable to ADS.    \n\n- FIXED - Jackal\'s Eyenox Model III continues to ping Defenders after Jackal is eliminated.  \n\n- FIXED - IQ\'s Electronics Detector automatically reequips after IQ places a Breach Charge.\n\n### USER EXPERIENCE   \n\n- FIXED - Multiple localization issues throughout the game.             \n\n- FIXED - Deployment SFX is silent when a player deploys a Frag Grenade or C4, then crouches or goes prone at the same time. \n\n- FIXED - New HUD can be activated through a game console command.   \n\n- FIXED - Popup for redeeming the Sunstark bundle crashes the game.       \n\n- FIXED - Prompts may linger on screen over several rounds.          \n\n- FIXED - The iron sight attachment for the ITA12S and SMG-12 floats in multiple menus.  \n\n- FIXED - Players can create a hole in Castle\'s Armor Panel if they melee a spot near the frame on both sides.               \n\n- FIXED - Rappel SFX is sometimes inaudible.         \n\n- FIXED - Keyboard players who browse the Charms category in the shop experience navigation issues.      \n\n- FIXED - UMP45 has the wrong weapon skin thumbnail for Six Major NA 2021.       \n\n- FIXED - Booster icon is missing from the Booster activation confirmation side-panel.        \n\n- FIXED - Battle Pass tab in Post-Action Report does not immediately update for players who complete the last tier of the Battle Pass.   \n\n### LOCALIZATION          \n\n- FIXED - Incorrect Traditional Chinese character present in Thunderbird\'s Bio.',
       description: undefined,
       categories: [
-        'rainbow-six',
+        'news',
         'rainbow-six-siege',
-        'store',
-        'shop'
+        'patch-notes'
       ],
       tag: 'BR-rainbow-six GA-siege',
       placement: null,
       type: 'news',
-      readTime: '1',
-      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/6iYPZKFMXnfwU5u15F13Gq/up-to-67-off-rainbow-six-siege-for-our-travel-sale',
-      date: '2021-07-22T16:00:00.000Z'
+      readTime: '7',
+      url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/5ZMF9L4RORllBhrRV618tr/y6s22-patch-notes',
+      date: '2021-07-27T11:00:00.000Z'
     }
   ]
 }

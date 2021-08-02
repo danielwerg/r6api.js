@@ -36,6 +36,13 @@
                   "skillMeanChange": 0,
                   "skillStdevChange": 0
                 },
+                "pastSeasons": {
+                  "wins": 1881,
+                  "losses": 1741,
+                  "winRate": "51.93%",
+                  "matches": 3622,
+                  "abandons": 17
+                },
                 "previousMmr": 0,
                 "nextMmr": 0,
                 "topRankPosition": 0,
