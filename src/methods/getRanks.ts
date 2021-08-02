@@ -22,15 +22,18 @@ interface IRank {
   skill_stdev: number;
   kills: number;
   last_match_skill_stdev_change: number;
+  past_seasons_wins: number;
   update_time: string;
   last_match_mmr_change: number;
   abandons: number;
   season: SeasonId;
+  past_seasons_losses: number;
   top_rank_position: number;
   last_match_skill_mean_change: number;
   mmr: number;
   previous_rank_mmr: number;
   last_match_result: 0 | 1 | 2 | 3;
+  past_seasons_abandons: number;
   wins: number;
   region: RegionId;
   losses: number;
@@ -64,6 +67,13 @@ interface IBoards {
       mmrChange: number;
       skillMeanChange: number;
       skillStdevChange: number;
+    };
+    pastSeasons: {
+      wins: number;
+      losses: number;
+      winRate: string;
+      matches: number;
+      abandons: number;
     };
     previousMmr: number;
     nextMmr: number;
@@ -209,6 +219,15 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
                     mmrChange: val.last_match_mmr_change,
                     skillMeanChange: val.last_match_skill_mean_change,
                     skillStdevChange: val.last_match_skill_stdev_change
+                  },
+                  pastSeasons: {
+                    wins: val.past_seasons_wins,
+                    losses: val.past_seasons_losses,
+                    winRate: getWinRate({
+                      wins: val.past_seasons_wins, losses: val.past_seasons_losses
+                    }),
+                    matches: val.past_seasons_wins + val.past_seasons_losses,
+                    abandons: val.past_seasons_abandons
                   },
                   previousMmr: val.previous_rank_mmr,
                   nextMmr: val.next_rank_mmr,
