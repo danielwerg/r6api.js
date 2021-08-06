@@ -1890,3 +1890,41 @@ export const STATS_CATEGORIES = {
     STATS.pve.modes.extractHostage
   ]
 };
+
+export const APPLICATIONS = [
+  {
+    id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
+    name: 'Tom Clancy\'s Rainbow Six Siege',
+    platform: 'PC'
+  },
+  {
+    id: 'fb4cc4c9-2063-461d-a1e8-84a7d36525fc',
+    name: 'Tom Clancy\'s Rainbow Six Siege',
+    platform: 'ORBIS'
+  },
+  {
+    id: '6e3c99c9-6c3f-43f4-b4f6-f1a3143f2764',
+    name: 'Tom Clancy\'s Rainbow Six Siege',
+    platform: 'PS5'
+  },
+  {
+    id: '4008612d-3baf-49e4-957a-33066726a7bc',
+    name: 'Tom Clancy\'s Rainbow Six Siege',
+    platform: 'DURANGO'
+  },
+  {
+    id: '76f580d5-7f50-47cc-bbc1-152d000bfe59',
+    name: 'Tom Clancy\'s Rainbow Six Siege',
+    platform: 'XboxScarlett'
+  },
+  {
+    id: '8956241d-236d-4dbd-9e1e-bf6ed133773a',
+    name: 'Tom Clancy\'s Rainbow Six Siege China',
+    platform: 'PCChina'
+  },
+  {
+    id: 'a427a342-56bb-437b-b835-fa695c75893b',
+    name: 'Tom Clancy\'s Rainbow Six Siege - Test Server',
+    platform: 'PC'
+  }
+];

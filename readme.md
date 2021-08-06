@@ -110,6 +110,9 @@ Daniel.Nt has played 5648 matches.
 * [getRanks](#getRanks)
 * [getStats](#getStats)
 * [getStatus](#getStatus)
+* [getUserStatus](#getUserStatus)
+* [getProfileApplications](#getProfileApplications)
+* [getApplications](#getApplications)
 * [validateUsername](#validateUsername)
 * [getNews](#getNews)
 * [getNewsById](#getNewsById)
@@ -641,6 +644,193 @@ await r6api.getStatus();
 
 </details>
 <!-- END_SECTION:GETSTATUS_OUTPUT -->
+
+---
+
+### getUserStatus
+
+Get status of a player.
+
+Ids limit: `50`
+
+(id/s, options?) => `Promise<Array>`
+
+#### Options
+
+<!-- START_SECTION:GETUSERSTATUS_OPTIONS -->
+
+| Param             | Type      | Required | Default | Description                                                               |
+| ----------------- | --------- | -------- | ------- | ------------------------------------------------------------------------- |
+| fetchApplications | `boolean` | false    | `false` | Make another API request to get additional information about applications |
+
+<!-- END_SECTION:GETUSERSTATUS_OPTIONS -->
+
+> Note: Takes `userId` instead of `profileId` (`id`) like most methods
+
+```js
+await r6api.getUserStatus('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+```
+
+<!-- START_SECTION:GETUSERSTATUS_OUTPUT -->
+<details>
+<summary>Output</summary>
+
+```js
+[
+  {
+    userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    status: 'online',
+    applications: [
+      {
+        id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
+        name: null,
+        platform: null,
+        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+        createdAt: '2021-08-02T18:09:19.9298514Z',
+        lastModifiedAt: '2021-08-02T18:09:19.9298514Z'
+      },
+      {
+        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
+        name: 'Tom Clancy\'s Rainbow Six Siege',
+        platform: 'PC',
+        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+        createdAt: '2021-08-02T18:10:25.104558Z',
+        lastModifiedAt: '2021-08-02T18:10:25.104558Z'
+      },
+      {
+        id: '83564d31-7cd7-4bc0-a763-6524e78d1a7f',
+        name: null,
+        platform: null,
+        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+        createdAt: '2021-08-02T18:10:49.8008613Z',
+        lastModifiedAt: '2021-08-02T18:10:49.8008613Z'
+      }
+    ],
+    manuallySet: null
+  }
+]
+```
+
+</details>
+<!-- END_SECTION:GETUSERSTATUS_OUTPUT -->
+
+---
+
+### getProfileApplications
+
+Get information about applications of a player.
+
+Ids limit: `100`
+
+(id/s, options?) => `Promise<Array>`
+
+#### Options
+
+<!-- START_SECTION:GETPROFILEAPPLICATIONS_OPTIONS -->
+
+| Param             | Type      | Required | Default | Description                                                               |
+| ----------------- | --------- | -------- | ------- | ------------------------------------------------------------------------- |
+| fetchApplications | `boolean` | false    | `false` | Make another API request to get additional information about applications |
+
+<!-- END_SECTION:GETPROFILEAPPLICATIONS_OPTIONS -->
+
+```js
+await r6api.getProfileApplications('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+```
+
+<!-- START_SECTION:GETPROFILEAPPLICATIONS_OUTPUT -->
+<details>
+<summary>Output</summary>
+
+```js
+[
+  {
+    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    applications: [
+      {
+        id: '46f0b36b-b947-4d9c-b9dc-9a34b52ab59a',
+        name: null,
+        platform: null,
+        sessionsPlayed: 10,
+        daysPlayed: 7,
+        lastPlayedAt: '2020-10-27T17:11:38.771Z',
+        firstPlayedAt: '2019-04-19T22:05:01.850Z'
+      },
+      {
+        id: '87843b9b-516d-4a58-824b-f658d1361ad1',
+        name: null,
+        platform: null,
+        sessionsPlayed: 2,
+        daysPlayed: 2,
+        lastPlayedAt: '2016-03-21T18:28:25.434Z',
+        firstPlayedAt: '2016-03-18T16:18:43.603Z'
+      },
+      {
+        id: 'a427a342-56bb-437b-b835-fa695c75893b',
+        name: 'Tom Clancy\'s Rainbow Six Siege - Test Server',
+        platform: 'PC',
+        sessionsPlayed: 137,
+        daysPlayed: 72,
+        lastPlayedAt: '2020-11-16T05:35:45.229Z',
+        firstPlayedAt: '2017-06-01T20:10:13.424Z'
+      },
+      {
+        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
+        name: 'Tom Clancy\'s Rainbow Six Siege',
+        platform: 'PC',
+        sessionsPlayed: 2344,
+        daysPlayed: 1221,
+        lastPlayedAt: '2021-02-04T12:35:13.173Z',
+        firstPlayedAt: '2015-12-01T19:33:41.284Z'
+      },
+      {
+        id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
+        name: null,
+        platform: null,
+        sessionsPlayed: 1919,
+        daysPlayed: 1551,
+        lastPlayedAt: '2021-08-01T08:45:05.344Z',
+        firstPlayedAt: '2015-12-01T19:31:18.107Z'
+      }
+    ]
+  }
+]
+```
+
+</details>
+<!-- END_SECTION:GETPROFILEAPPLICATIONS_OUTPUT -->
+
+---
+
+### getApplications
+
+Get information about applications.
+
+Ids limit: `50`
+
+(id/s) => `Promise<Array>`
+
+```js
+await r6api.getApplications('e3d5ea9e-50bd-43b7-88bf-39794f4e3d40');
+```
+
+<!-- START_SECTION:GETAPPLICATIONS_OUTPUT -->
+<details>
+<summary>Output</summary>
+
+```js
+[
+  {
+    id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
+    name: 'Tom Clancy\'s Rainbow Six Siege',
+    platform: 'PC',
+    spaceId: '5172a557-50b5-4665-b7db-e3f2e8c5041d'
+  }
+]
+```
+
+</details>
+<!-- END_SECTION:GETAPPLICATIONS_OUTPUT -->
 
 ---
 

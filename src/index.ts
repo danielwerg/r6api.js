@@ -16,6 +16,10 @@ import _getPlaytime from './methods/getPlaytime';
 import _getRanks, { IOptions as IGetRanksOptions } from './methods/getRanks';
 import _getStats, { IOptions as IGetStatsOptions } from './methods/getStats';
 import _getStatus from './methods/getStatus';
+import _getUserStatus, { IOptions as IGetUserStatusOptions } from './methods/getUserStatus';
+import _getProfileApplications, { IOptions as IGetProfileApplicationsOptions }
+  from './methods/getProfileApplications';
+import _getApplications from './methods/getApplications';
 import _validateUsername from './methods/validateUsername';
 import _custom from './methods/custom';
 import _getNews from './methods/getNews';
@@ -31,7 +35,7 @@ const checkQueryLimit = <T extends (...args: any) => any>({
   method, platform, query, options, limit
 }: {
   method: T;
-  platform: PlatformAllExtended;
+  platform?: PlatformAllExtended;
   query: QueryUUID | QueryString;
   options?: any;
   limit: number;
@@ -41,7 +45,7 @@ const checkQueryLimit = <T extends (...args: any) => any>({
     return Promise.reject(
       new TypeError(`You can't pass more than ${limit} ids/usernames`)
     ) as ReturnType<T>;
-  return method(platform, queryArray, options);
+  return platform ? method(platform, queryArray, options) : method(queryArray, options);
 };
 
 type QueryUUID = UUID | UUID[];
@@ -92,6 +96,15 @@ export default class R6API {
 
   /** Get Rainbow Six: Siege servers status. */
   getStatus = _getStatus
+  /** Get status of a player. */
+  getUserStatus = (query: QueryUUID, options?: IGetUserStatusOptions) =>
+    checkQueryLimit({ method: _getUserStatus, query, options, limit: 50 })
+  /** Get information about applications of a player. */
+  getProfileApplications = (query: QueryUUID, options?: IGetProfileApplicationsOptions) =>
+    checkQueryLimit({ method: _getProfileApplications, query, options, limit: 100 })
+  /** Get information about applications. */
+  getApplications = (query: QueryUUID) =>
+    checkQueryLimit({ method: _getApplications, query, limit: 50 })
   /** Validate username. */
   validateUsername = _validateUsername
   /** Useful if you're familiar with Rainbow Six Siege's API; this method will make a request to a custom URL you would provide with the token in the header. */

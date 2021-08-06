@@ -1,0 +1,52 @@
+[
+  {
+    "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "applications": [
+      {
+        "id": "46f0b36b-b947-4d9c-b9dc-9a34b52ab59a",
+        "name": null,
+        "platform": null,
+        "sessionsPlayed": 10,
+        "daysPlayed": 7,
+        "lastPlayedAt": "2020-10-27T17:11:38.771Z",
+        "firstPlayedAt": "2019-04-19T22:05:01.850Z"
+      },
+      {
+        "id": "87843b9b-516d-4a58-824b-f658d1361ad1",
+        "name": null,
+        "platform": null,
+        "sessionsPlayed": 2,
+        "daysPlayed": 2,
+        "lastPlayedAt": "2016-03-21T18:28:25.434Z",
+        "firstPlayedAt": "2016-03-18T16:18:43.603Z"
+      },
+      {
+        "id": "a427a342-56bb-437b-b835-fa695c75893b",
+        "name": "Tom Clancy's Rainbow Six Siege - Test Server",
+        "platform": "PC",
+        "sessionsPlayed": 137,
+        "daysPlayed": 72,
+        "lastPlayedAt": "2020-11-16T05:35:45.229Z",
+        "firstPlayedAt": "2017-06-01T20:10:13.424Z"
+      },
+      {
+        "id": "e3d5ea9e-50bd-43b7-88bf-39794f4e3d40",
+        "name": "Tom Clancy's Rainbow Six Siege",
+        "platform": "PC",
+        "sessionsPlayed": 2344,
+        "daysPlayed": 1221,
+        "lastPlayedAt": "2021-02-04T12:35:13.173Z",
+        "firstPlayedAt": "2015-12-01T19:33:41.284Z"
+      },
+      {
+        "id": "f68a4bb5-608a-4ff2-8123-be8ef797e0a6",
+        "name": null,
+        "platform": null,
+        "sessionsPlayed": 1919,
+        "daysPlayed": 1551,
+        "lastPlayedAt": "2021-08-01T08:45:05.344Z",
+        "firstPlayedAt": "2015-12-01T19:31:18.107Z"
+      }
+    ]
+  }
+]

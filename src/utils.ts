@@ -73,6 +73,17 @@ export const getRankIdFromMmr = (mmr: number, matches: number) => {
 export const getBaseMmrFromRankId = (rankId: RankId) =>
   rankId === 0 ? 0 : ranksRange[rankId - 1] as number;
 
+export const groupBy = <T, K extends keyof T, B extends boolean>(
+  array: T[], key: K, removeKey: B
+): B extends true ? Record<string, Omit<T, K>[]> : Record<string, T[]> =>
+  Object.fromEntries(
+    array.reduce((acc, cur) => {
+      const groupKey = cur[key];
+      const { [key]: _, ...restCur } = cur;
+      return acc.set(groupKey, [...(acc.get(groupKey) || []), removeKey ? restCur : cur]);
+    }, new Map())
+  );
+
 const getUbiServicesURL = (version: 1 | 2 | 3, pathname: string, search?: string) =>
   `${UBISERVICES_URL}/v${version}/${pathname}${search ? `?${search}` : ''}`;
 const getUbiServicesPlatformURL = (platform: Platform, pathname: string, search: string) =>
@@ -110,6 +121,12 @@ export const getURL = {
     platform, 'playerstats2/statistics', `populations=${ids.join(',')}&statistics=${stats}`
   ),
   STATUS: () => `${STATUS_URL}/v1/instances`,
+  ONLINESTATUS: (ids: UUID[]) =>
+    getUbiServicesURL(1, 'users/onlineStatuses', `UserIds=${ids.join(',')}`),
+  APPLICATIONS: (applicationIds: UUID[]) =>
+    getUbiServicesURL(1, 'applications', `applicationIds=${applicationIds.join(',')}`),
+  PROFILEAPPLICATIONS: (ids: UUID[]) =>
+    getUbiServicesURL(1, 'profiles/applications', `profileIds=${ids.join(',')}&limit=10000`),
   VALIDATEUSERNAME: (userId: UUID) =>
     getUbiServicesURL(3, `profiles/${userId}/validateUpdate`),
   NEWS: (

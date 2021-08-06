@@ -7,6 +7,9 @@ import { SEASONS, OLD_SEASONS, REGIONS, BOARDS } from '../src/constants';
 import { optionsDocs as findByIdOptionsDocs } from '../src/methods/findById';
 import { optionsDocs as getRanksOptionsDocs } from '../src/methods/getRanks';
 import { optionsDocs as getStatsOptionsDocs } from '../src/methods/getStats';
+import { optionsDocs as getUserStatusOptionsDocs } from '../src/methods/getUserStatus';
+import { optionsDocs as getProfileApplicationsOptionsDocs }
+  from '../src/methods/getProfileApplications';
 import { optionsDocs as getNewsOptionsDocs } from '../src/methods/getNews';
 import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsById';
 
@@ -22,6 +25,8 @@ import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsByI
     ['FINDBYID', findByIdOptionsDocs],
     ['GETRANKS', getRanksOptionsDocs],
     ['GETSTATS', getStatsOptionsDocs],
+    ['GETUSERSTATUS', getUserStatusOptionsDocs],
+    ['GETPROFILEAPPLICATIONS', getProfileApplicationsOptionsDocs],
     ['GETNEWS', getNewsOptionsDocs],
     ['GETNEWSBYID', getNewsByIdOptionsDocs]
   ];

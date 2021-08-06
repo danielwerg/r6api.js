@@ -29,10 +29,12 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn', { varsIgnorePattern: '_' }
+    ],
     'indent': 'off',
     '@typescript-eslint/indent': [
-      'warn', 2, { 'VariableDeclarator': 'first', 'SwitchCase': 1 }
+      'warn', 2, { VariableDeclarator: 'first', 'SwitchCase': 1 }
     ],
     'brace-style': 'off',
     '@typescript-eslint/brace-style': [

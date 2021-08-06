@@ -52,6 +52,12 @@ import { insertContent, isFileExists } from './utils';
     .catch(err => console.error(err));
   const getStatus = await r6api.getStatus()
     .catch(err => console.error(err));
+  const getUserStatus = await r6api.getUserStatus(id)
+    .catch(err => console.error(err));
+  const getProfileApplications = await r6api.getProfileApplications(id)
+    .catch(err => console.error(err));
+  const getApplications = await r6api.getApplications('e3d5ea9e-50bd-43b7-88bf-39794f4e3d40')
+    .catch(err => console.error(err));
   const validateUsername = await r6api.validateUsername('gamerflick360')
     .catch(err => console.error(err));
   const getNews = await r6api.getNews({ limit: 1 })
@@ -70,6 +76,9 @@ import { insertContent, isFileExists } from './utils';
     ['getRanks', getRanks],
     ['getStats', getStats],
     ['getStatus', getStatus],
+    ['getUserStatus', getUserStatus],
+    ['getProfileApplications', getProfileApplications],
+    ['getApplications', getApplications],
     ['validateUsername', validateUsername],
     ['getNews', getNews],
     ['getNewsById', getNewsById],

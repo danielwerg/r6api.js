@@ -7,11 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+* `getUserStatus` method
+* `getProfileApplications` method
+* `getApplications` method
+* Past seasons stats for `getRanks`
 * Unique ability stats for Thunderbird
 * Unique ability stat for Frost
 * Unique ability stat for Caveira
 * DP27 weapon
-* Past seasons stats for `getRanks`
 
 ### Changed
 * Unique ability for Tachanka
