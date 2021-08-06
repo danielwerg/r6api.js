@@ -10,7 +10,7 @@ import {
   getRankNameFromRankId, getRankIconFromRankId, getRankIdFromMmr
 } from '../utils';
 
-interface IRank {
+export interface IRank {
   max_mmr: number;
   skill_mean: number;
   deaths: number;
@@ -44,7 +44,7 @@ export interface IApiResponse {
   };
 }
 
-interface IBoards {
+export interface IBoards {
   [id: string]: {
     boardId: BoardId;
     boardName: string;
@@ -89,14 +89,14 @@ interface IBoards {
     updateTime: string;
   }
 }
-interface IRegions {
+export interface IRegions {
   [id: string]: {
     regionId: RegionId;
     regionName: string;
     boards: IBoards;
   };
 }
-interface ISeasons {
+export interface ISeasons {
   [id: string]: {
     seasonId: SeasonId;
     seasonName?: string;

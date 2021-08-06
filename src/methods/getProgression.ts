@@ -3,13 +3,13 @@ import fetch from '../fetch';
 import { Platform, UUID } from '../typings';
 import { getURL } from '../utils';
 
-interface IProgression {
+export interface IProgression {
   profile_id: UUID;
   level: number;
   xp: number;
   lootbox_probability: number;
 }
-interface IApiResponse {
+export interface IApiResponse {
   player_profiles: IProgression[];
 }
 

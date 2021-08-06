@@ -3,7 +3,7 @@ import fetch from '../fetch';
 import { Platform, UUID, MPType } from '../typings';
 import { getURL } from '../utils';
 
-interface IApiResponse {
+export interface IApiResponse {
   results: {
     [id: string]: {
       [id: string]: number;

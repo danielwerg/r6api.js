@@ -17,7 +17,7 @@ export interface IApiResponse {
   }
 }
 
-interface IGeneral {
+export interface IGeneral {
   bulletsFired: number;
   bulletsConnected: number;
   kills: number;
@@ -42,12 +42,12 @@ interface IGeneral {
   distanceTravelled: number;
   xp: number;
 }
-interface IGeneralpvp extends IGeneral {
+export interface IGeneralpvp extends IGeneral {
   dbno: number;
   dbnoAssists: number;
 }
 
-interface IQueuepvpbase {
+export interface IQueuepvpbase {
   name: string;
   kills: number;
   deaths: number;
@@ -58,7 +58,7 @@ interface IQueuepvpbase {
   matches: number;
   playtime: number;
 }
-interface IQueuespvp {
+export interface IQueuespvp {
   ranked: IQueuepvpbase;
   casual: IQueuepvpbase;
   custom: {
@@ -66,11 +66,11 @@ interface IQueuespvp {
     playtime: number;
   };
 }
-interface IQueuepvebase {
+export interface IQueuepvebase {
   name: string;
   bestScore: number;
 }
-interface IQueuespve {
+export interface IQueuespve {
   local: {
     normal: IQueuepvebase;
     hard: IQueuepvebase;
@@ -83,7 +83,7 @@ interface IQueuespve {
   };
 }
 
-interface IModepvpbase {
+export interface IModepvpbase {
   name: string;
   wins: number;
   losses: number;
@@ -92,21 +92,21 @@ interface IModepvpbase {
   bestScore: number;
   playtime: number;
 }
-interface IModepvpsecurearea extends IModepvpbase {
+export interface IModepvpsecurearea extends IModepvpbase {
   secured: number;
   defended: number;
   contested: number;
 }
-interface IModepvphostage extends IModepvpbase {
+export interface IModepvphostage extends IModepvpbase {
   hostageRescued: number;
   hostageDefended: number;
 }
-interface IModespvp {
+export interface IModespvp {
   bomb: IModepvpbase;
   secureArea: IModepvpsecurearea;
   hostage: IModepvphostage;
 }
-interface IModespvebase {
+export interface IModespvebase {
   name: string;
   wins: number;
   losses: number;
@@ -114,14 +114,14 @@ interface IModespvebase {
   matches: number;
   bestScore: number;
 }
-interface IModespve {
+export interface IModespve {
   disarmBomb: IModespvebase;
   elimination: IModespvebase;
   protectHostage: IModespvebase;
   extractHostage: IModespvebase;
 }
 
-interface IOperatorStats {
+export interface IOperatorStats {
   name: string;
   role: string;
   unit: string;
@@ -146,11 +146,11 @@ interface IOperatorStats {
     }[] | null
   } | null;
 }
-interface IOperatorStatspvp extends IOperatorStats {
+export interface IOperatorStatspvp extends IOperatorStats {
   dbno: number;
 }
 
-interface IWeaponStats {
+export interface IWeaponStats {
   name: string;
   icon: string;
   kills: number;
@@ -161,7 +161,7 @@ interface IWeaponStats {
   bulletsConnected: number;
   timesChosen: number;
 }
-interface IWeaponCategory {
+export interface IWeaponCategory {
   general: {
     name: string;
     kills: number;

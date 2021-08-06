@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 * Unique ability for Tachanka
 * Unique ability stat namining for several operators
+* Now exporting all interfaces from me methods
 
 ### Fixed
 * Unique ability stats for Thatcher

@@ -3,14 +3,14 @@ import fetch from '../fetch';
 import { PlatformAll, UUID } from '../typings';
 import { getURL, getAvatars } from '../utils';
 
-interface IProfile {
+export interface IProfile {
   profileId: UUID;
   userId: UUID;
   idOnPlatform: UUID | string;
   platformType: PlatformAll;
   nameOnPlatform: string;
 }
-interface IApiResponse {
+export interface IApiResponse {
   profiles: IProfile[];
 }
 

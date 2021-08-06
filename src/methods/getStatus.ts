@@ -4,7 +4,7 @@ import { getURL } from '../utils';
 
 const platforms = <const>['PC', 'PS4', 'XBOXONE', 'PS5', 'XBOX SERIES X'];
 
-interface IApiResponse {
+export interface IApiResponse {
   'AppID ': UUID;
   MDM: string;
   SpaceID: UUID;
