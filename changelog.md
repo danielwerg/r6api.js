@@ -66,7 +66,8 @@ Forgot to build for v2.0.1
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v2.0.2...master
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v2.1.0...master
+[2.1.0]: https://github.com/danielwerg/r6api.js/compare/v2.0.2...v2.1.0
 [2.0.2]: https://github.com/danielwerg/r6api.js/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/danielwerg/r6api.js/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/danielwerg/r6api.js/compare/v1.7.0...v2.0.0
