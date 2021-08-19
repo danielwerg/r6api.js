@@ -34,7 +34,7 @@ export default <T>(url: string, options: Partial<RequestInit> = {}) =>
         try {
           json = JSON.parse(body);
         } catch (error) {
-          throw new Error(res.statusText);
+          throw new Error(`${res.status} ${res.statusText}`);
         }
         throw new Error(`${json.httpCode} ${json.message}${json.moreInfo ? `\n\n${json.moreInfo}` : ''}`);
       }
