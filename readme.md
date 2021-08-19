@@ -6,13 +6,13 @@
       src="https://img.shields.io/github/license/danielwerg/r6api.js"
       alt="License"
     /></a>
-    <a href="https://github.com/danielwerg/r6api.js/releases"><img
+    <a href="https://github.com/danielwerg/r6api.js/releases/latest"><img
       src="https://img.shields.io/github/v/release/danielwerg/r6api.js?label=version"
       alt="Version"
     /></a>
-    <a href="https://github.com/danielwerg/r6api.js/releases"><img
-      src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=last%20release"
-      alt="Last release"
+    <a href="https://github.com/danielwerg/r6api.js/releases/latest"><img
+      src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=latest%20release"
+      alt="Latest release"
     /></a>
     <a href="https://www.npmjs.com/package/r6api.js"><img
       src="https://img.shields.io/npm/dw/r6api.js"
@@ -37,10 +37,11 @@
 
 ## Links
 
-* [Changelog](https://github.com/danielwerg/r6api.js/releases)
 * [GitHub](https://github.com/danielwerg/r6api.js)
-* [YARN](https://yarnpkg.com/package/r6api.js)
 * [NPM](https://www.npmjs.com/package/r6api.js)
+* [YARN](https://yarnpkg.com/package/r6api.js)
+* [Releases](https://github.com/danielwerg/r6api.js/releases)
+* [Changelog](https://github.com/danielwerg/r6api.js/blob/master/changelog.md)
 
 ## Installation
 
@@ -553,7 +554,7 @@ await r6api.getStats('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 
 > **Note:** `distanceTravelled` value might be overflowed due to Ubisoft storing it in 32-bit int
 
-[**Full response**](./docs/methods/getStats.json)
+[**Full response**](https://github.com/danielwerg/r6api.js/blob/master/docs/methods/getStats.json)
 
 ---
 
