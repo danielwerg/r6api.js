@@ -2,6 +2,10 @@
   <h1>R6API.js</h1>
   <h3>🍫 Node.js wrapper around Rainbow Six: Siege API</h3>
   <p>
+    <a href="https://github.com/danielwerg/r6api.js/blob/master/license"><img
+      src="https://img.shields.io/github/license/danielwerg/r6api.js"
+      alt="License"
+    /></a>
     <a href="https://github.com/danielwerg/r6api.js/releases"><img
       src="https://img.shields.io/github/v/release/danielwerg/r6api.js?label=version"
       alt="Version"
@@ -10,16 +14,12 @@
       src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=last%20release"
       alt="Last release"
     /></a>
-    <a href="https://github.com/danielwerg/r6api.js/blob/master/license"><img
-      src="https://img.shields.io/github/license/danielwerg/r6api.js"
-      alt="License"
-    /></a>
     <a href="https://www.npmjs.com/package/r6api.js"><img
       src="https://img.shields.io/npm/dw/r6api.js"
       alt="NPM weakly downloads"
     /></a>
     <a href="https://discord.gg/hshRpWk"><img
-      src="https://img.shields.io/discord/612212753498767360?logo=discord&label=R6HUB&color=7289DA"
+      src="https://img.shields.io/discord/612212753498767360?label=discord&color=5865F2"
       alt="R6HUB discord guild"
     /></a>
   </p>
