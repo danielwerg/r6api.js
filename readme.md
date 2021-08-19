@@ -20,7 +20,7 @@
     /></a>
     <a href="https://discord.gg/hshRpWk"><img
       src="https://img.shields.io/discord/612212753498767360?label=discord&color=5865F2"
-      alt="R6HUB discord guild"
+      alt="Discord guild"
     /></a>
   </p>
 </div>
