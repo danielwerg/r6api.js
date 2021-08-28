@@ -4,8 +4,13 @@
   "description": "Node.js wrapper around Rainbow Six: Siege API.",
   "author": "Daniel Sandberg",
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist",
+  "main": "./dist/index.js",
+  "types": "./dist",
+  "module": "./index.mjs",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "example": "yarn build && ts-node --project scripts/tsconfig.json scripts/example",
