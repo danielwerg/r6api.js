@@ -43,6 +43,7 @@
   },
   "files": [
     "dist",
+    "index.mjs",
     "docs",
     "examples"
   ],
