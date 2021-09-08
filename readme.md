@@ -406,12 +406,8 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '22': {
-        seasonId: 22,
-        seasonName: 'North Star',
-        seasonColor: '#009cbe',
-        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/38Lml8ltnO932wLqhC5xEA/493665084f757da8c91c01a0b99d2be3/r6s-seasons-y6s2.jpg',
-        seasonReleaseDate: '2021-06-14T00:00:00.000Z',
+      '23': {
+        seasonId: 23,
         regions: {
           emea: {
             regionId: 'emea',
@@ -420,12 +416,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
               pvp_ranked: {
                 boardId: 'pvp_ranked',
                 boardName: 'Ranked',
-                skillMean: 32.8265071543,
-                skillStdev: 7.2555471866,
+                skillMean: 31.3409980964,
+                skillStdev: 7.5086948144,
                 current: {
                   id: 0,
                   name: 'Unranked',
-                  mmr: 3283,
+                  mmr: 3134,
                   icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png'
                 },
                 max: {
@@ -441,10 +437,10 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
                   skillStdevChange: 0
                 },
                 pastSeasons: {
-                  wins: 1881,
-                  losses: 1741,
-                  winRate: '51.93%',
-                  matches: 3622,
+                  wins: 1937,
+                  losses: 1795,
+                  winRate: '51.90%',
+                  matches: 3732,
                   abandons: 17
                 },
                 previousMmr: 0,
@@ -680,33 +676,8 @@ await r6api.getUserStatus('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 [
   {
     userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    status: 'online',
-    applications: [
-      {
-        id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
-        name: null,
-        platform: null,
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2021-08-02T18:09:19.9298514Z',
-        lastModifiedAt: '2021-08-02T18:09:19.9298514Z'
-      },
-      {
-        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
-        name: 'Tom Clancy\'s Rainbow Six Siege',
-        platform: 'PC',
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2021-08-02T18:10:25.104558Z',
-        lastModifiedAt: '2021-08-02T18:10:25.104558Z'
-      },
-      {
-        id: '83564d31-7cd7-4bc0-a763-6524e78d1a7f',
-        name: null,
-        platform: null,
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2021-08-02T18:10:49.8008613Z',
-        lastModifiedAt: '2021-08-02T18:10:49.8008613Z'
-      }
-    ],
+    status: 'offline',
+    applications: [],
     manuallySet: null
   }
 ]
