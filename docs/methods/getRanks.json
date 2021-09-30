@@ -4,6 +4,10 @@
     "seasons": {
       "23": {
         "seasonId": 23,
+        "seasonName": "Crystal Guard",
+        "seasonColor": "#cc8200",
+        "seasonImage": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5Rm9sfgVTz9KdTI1Jh4N6w/c2d66a871b6311fe26198553695e0cd1/r6s-seasons-y6s3.jpg",
+        "seasonReleaseDate": "2021-09-07T00:00:00.000Z",
         "regions": {
           "emea": {
             "regionId": "emea",
