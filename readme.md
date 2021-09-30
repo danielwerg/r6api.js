@@ -333,7 +333,7 @@ Ids limit: `200`
 
 | Param     | Type                           | Required | Default                                                     | Description                                                       |
 | --------- | ------------------------------ | -------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `22` or `-1` or `'all'`                       |
+| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `23` or `-1` or `'all'`                       |
 | regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                  | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
 | boardIds  | `string \| string[]`           | false    | `['pvp_ranked', 'pvp_casual', 'pvp_newcomer', 'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
 
@@ -343,17 +343,14 @@ Ids limit: `200`
 
 <!-- START_SECTION:SEASONS_TABLE -->
 
-| ID   | Name          | ● | ID   | Name           |
-| ---- | ------------- | - | ---- | -------------- |
-| `6`  | Health        |   | `15` | Ember Rise     |
-| `7`  | Blood Orchid  |   | `16` | Shifting Tides |
-| `8`  | White Noise   |   | `17` | Void Edge      |
-| `9`  | Chimera       |   | `18` | Steel Wave     |
-| `10` | Para Bellum   |   | `19` | Shadow Legacy  |
-| `11` | Grim Sky      |   | `20` | Neon Dawn      |
-| `12` | Wind Bastion  |   | `21` | Crimson Heist  |
-| `13` | Burnt Horizon |   | `22` | North Star     |
-| `14` | Phantom Sight |   |      |                |
+| ID   | Name         | ● | ID   | Name           | ● | ID   | Name          |
+| ---- | ------------ | - | ---- | -------------- | - | ---- | ------------- |
+| `6`  | Health       |   | `12` | Wind Bastion   |   | `18` | Steel Wave    |
+| `7`  | Blood Orchid |   | `13` | Burnt Horizon  |   | `19` | Shadow Legacy |
+| `8`  | White Noise  |   | `14` | Phantom Sight  |   | `20` | Neon Dawn     |
+| `9`  | Chimera      |   | `15` | Ember Rise     |   | `21` | Crimson Heist |
+| `10` | Para Bellum  |   | `16` | Shifting Tides |   | `22` | North Star    |
+| `11` | Grim Sky     |   | `17` | Void Edge      |   | `23` | Crystal Guard |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 

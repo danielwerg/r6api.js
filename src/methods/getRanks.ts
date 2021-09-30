@@ -1,7 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import {
-  Platform, UUID, SeasonId, SeasonIdExtended, RankId, OldRankId, RegionId, BoardId,
+  Platform, UUID, SeasonId, SeasonIdExtended, RankIdV3, RankIdV4, RankIdV5, RegionId, BoardId,
   IOptionsDocs
 } from '../typings';
 import { REGIONS, SEASONS, BOARDS } from '../constants';
@@ -16,8 +16,8 @@ export interface IRank {
   deaths: number;
   profile_id: string;
   next_rank_mmr: number;
-  rank: RankId | OldRankId;
-  max_rank: RankId | OldRankId;
+  rank: RankIdV3 | RankIdV4 | RankIdV5;
+  max_rank: RankIdV3 | RankIdV4 | RankIdV5;
   board_id: BoardId;
   skill_stdev: number;
   kills: number;
@@ -178,7 +178,8 @@ export default (platform: Platform, ids: UUID[], options?: IOptions) => {
 
                 const matches = val.wins + val.losses;
                 const currentRankId =
-                  boardId !== 'pvp_ranked' ? getRankIdFromMmr(val.mmr, matches) : val.rank;
+                  boardId !== 'pvp_ranked'
+                    ? getRankIdFromMmr(seasonId, val.mmr, matches) : val.rank;
 
                 acc[id] = acc[id] || { id: id as UUID, seasons: {} };
                 acc[id].seasons[seasonId] = acc[id].seasons[seasonId] || {

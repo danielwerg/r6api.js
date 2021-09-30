@@ -171,30 +171,147 @@ export const SEASONS = <const>{
     color: '#007d98',
     imageId: '38Lml8ltnO932wLqhC5xEA/493665084f757da8c91c01a0b99d2be3/r6s-seasons-y6s2',
     releaseDate: new Date('2021-06-14').toISOString()
+  },
+  23: {
+    name: 'Crystal Guard',
+    color: '#cc8200',
+    imageId: '5Rm9sfgVTz9KdTI1Jh4N6w/c2d66a871b6311fe26198553695e0cd1/r6s-seasons-y6s3',
+    releaseDate: new Date('2021-09-07').toISOString()
   }
 };
 
-// Ember Rise (15) and above
-export const RANKS = <const>{
-  23: 'Champions', 22: 'Diamond',
-  21: 'Platinum 1', 20: 'Platinum 2', 19: 'Platinum 3',
-  18: 'Gold 1', 17: 'Gold 2', 16: 'Gold 3',
-  15: 'Silver 1', 14: 'Silver 2', 13: 'Silver 3', 12: 'Silver 4', 11: 'Silver 5',
-  10: 'Bronze 1', 9: 'Bronze 2', 8: 'Bronze 3', 7: 'Bronze 4', 6: 'Bronze 5',
-  5: 'Copper 1', 4: 'Copper 2', 3: 'Copper 3', 2: 'Copper 4', 1: 'Copper 5',
-  0: 'Unranked'
-};
+/** ? Dust Line (2) - Skull Rain (3) */
+export const RANKSV1 = <const>[
+  { name: 'Unranked', id: 0, range: [null, null] },
+  { name: 'Copper 1', id: 1, range: [-Infinity, 2199] },
+  { name: 'Copper 2', id: 2, range: [2200, 2399] },
+  { name: 'Copper 3', id: 3, range: [2400, 2549] },
+  { name: 'Copper 4', id: 4, range: [2550, 2699] },
+  { name: 'Bronze 1', id: 5, range: [2700, 2799] },
+  { name: 'Bronze 2', id: 6, range: [2800, 2899] },
+  { name: 'Bronze 3', id: 7, range: [2900, 3049] },
+  { name: 'Bronze 4', id: 8, range: [3050, 3199] },
+  { name: 'Silver 1', id: 9, range: [3200, 3349] },
+  { name: 'Silver 2', id: 10, range: [3350, 3519] },
+  { name: 'Silver 3', id: 11, range: [3520, 3699] },
+  { name: 'Silver 4', id: 12, range: [3700, 3929] },
+  { name: 'Gold 1', id: 13, range: [3930, 4159] },
+  { name: 'Gold 2', id: 14, range: [4160, 4399] },
+  { name: 'Gold 3', id: 15, range: [4400, 4639] },
+  { name: 'Gold 4', id: 16, range: [4640, 4899] },
+  { name: 'Platinum 1', id: 17, range: [4900, 5159] },
+  { name: 'Platinum 2', id: 18, range: [5160, 5449] },
+  { name: 'Platinum 3', id: 19, range: [5450, 5999] },
+  { name: 'Diamond', id: 20, range: [6000, Infinity] }
+];
 
-// Phantom Sight (14) and below
-export const OLD_RANKS = <const>{
-  20: 'Diamond',
-  19: 'Platinum 1', 18: 'Platinum 2', 17: 'Platinum 3',
-  16: 'Gold 1', 15: 'Gold 2', 14: 'Gold 3', 13: 'Gold 4',
-  12: 'Silver 1', 11: 'Silver 2', 10: 'Silver 3', 9: 'Silver 4',
-  8: 'Bronze 1', 7: 'Bronze 2', 6: 'Bronze 3', 5: 'Bronze 4',
-  4: 'Copper 1', 3: 'Copper 2', 2: 'Copper 3', 1: 'Copper 4',
-  0: 'Unranked'
-};
+/** Red Crow (4) */
+export const RANKSV2 = <const>[
+  { name: 'Unranked', id: 0, range: [null, null] },
+  { name: 'Copper 1', id: 1, range: [-Infinity, 1399] },
+  { name: 'Copper 2', id: 2, range: [1400, 1499] },
+  { name: 'Copper 3', id: 3, range: [1500, 1599] },
+  { name: 'Copper 4', id: 4, range: [1600, 1699] },
+  { name: 'Bronze 1', id: 5, range: [1700, 1799] },
+  { name: 'Bronze 2', id: 6, range: [1800, 1899] },
+  { name: 'Bronze 3', id: 7, range: [1900, 1999] },
+  { name: 'Bronze 4', id: 8, range: [2000, 2099] },
+  { name: 'Silver 1', id: 9, range: [2100, 2199] },
+  { name: 'Silver 2', id: 10, range: [2200, 2299] },
+  { name: 'Silver 3', id: 11, range: [2300, 2399] },
+  { name: 'Silver 4', id: 12, range: [2400, 2499] },
+  { name: 'Gold 1', id: 13, range: [2500, 2599] },
+  { name: 'Gold 2', id: 14, range: [2600, 2699] },
+  { name: 'Gold 3', id: 15, range: [2700, 2700] },
+  { name: 'Gold 4', id: 16, range: [2800, 2999] },
+  { name: 'Platinum 1', id: 17, range: [3000, 3199] },
+  { name: 'Platinum 2', id: 18, range: [3200, 3399] },
+  { name: 'Platinum 3', id: 19, range: [3400, 3699] },
+  { name: 'Diamond', id: 20, range: [3700, Infinity] }
+];
+
+/** Velvet Shell (5) - Phantom Sight (14) */
+export const RANKSV3 = <const>[
+  { name: 'Unranked', id: 0, range: [null, null] },
+  { name: 'Copper 4', id: 1, range: [-Infinity, 1399] },
+  { name: 'Copper 3', id: 2, range: [1400, 1499] },
+  { name: 'Copper 2', id: 3, range: [1500, 1599] },
+  { name: 'Copper 1', id: 4, range: [1600, 1699] },
+  { name: 'Bronze 4', id: 5, range: [1700, 1799] },
+  { name: 'Bronze 3', id: 6, range: [1800, 1899] },
+  { name: 'Bronze 2', id: 7, range: [1900, 1999] },
+  { name: 'Bronze 1', id: 8, range: [2000, 2099] },
+  { name: 'Silver 4', id: 9, range: [2100, 2199] },
+  { name: 'Silver 3', id: 10, range: [2200, 2299] },
+  { name: 'Silver 2', id: 11, range: [2300, 2399] },
+  { name: 'Silver 1', id: 12, range: [2400, 2499] },
+  { name: 'Gold 4', id: 13, range: [2500, 2699] },
+  { name: 'Gold 3', id: 14, range: [2700, 2899] },
+  { name: 'Gold 2', id: 15, range: [2900, 3099] },
+  { name: 'Gold 1', id: 16, range: [3100, 3299] },
+  { name: 'Platinum 3', id: 17, range: [3300, 3699] },
+  { name: 'Platinum 2', id: 18, range: [3700, 4099] },
+  { name: 'Platinum 1', id: 19, range: [4100, 4499] },
+  { name: 'Diamond', id: 20, range: [4500, Infinity] }
+];
+
+/** Ember Rise (15) - North Star (22) */
+export const RANKSV4 = <const>[
+  { name: 'Unranked', id: 0, range: [null, null] },
+  { name: 'Copper 5', id: 1, range: [-Infinity, 1199] },
+  { name: 'Copper 4', id: 2, range: [1200, 1299] },
+  { name: 'Copper 3', id: 3, range: [1300, 1399] },
+  { name: 'Copper 2', id: 4, range: [1400, 1499] },
+  { name: 'Copper 1', id: 5, range: [1500, 1599] },
+  { name: 'Bronze 5', id: 6, range: [1600, 1699] },
+  { name: 'Bronze 4', id: 7, range: [1700, 1799] },
+  { name: 'Bronze 3', id: 8, range: [1800, 1899] },
+  { name: 'Bronze 2', id: 9, range: [1900, 1999] },
+  { name: 'Bronze 1', id: 10, range: [2000, 2099] },
+  { name: 'Silver 5', id: 11, range: [2100, 2199] },
+  { name: 'Silver 4', id: 12, range: [2200, 2299] },
+  { name: 'Silver 3', id: 13, range: [2300, 2399] },
+  { name: 'Silver 2', id: 14, range: [2400, 2499] },
+  { name: 'Silver 1', id: 15, range: [2500, 2599] },
+  { name: 'Gold 3', id: 16, range: [2600, 2799] },
+  { name: 'Gold 2', id: 17, range: [2800, 2999] },
+  { name: 'Gold 1', id: 18, range: [3000, 3199] },
+  { name: 'Platinum 3', id: 19, range: [3200, 3599] },
+  { name: 'Platinum 2', id: 20, range: [3600, 3999] },
+  { name: 'Platinum 1', id: 21, range: [4000, 4399] },
+  { name: 'Diamond', id: 22, range: [4400, 4999] },
+  { name: 'Champions', id: 23, range: [5000, Infinity] }
+];
+
+/** Crystal Guard (23) - latest */
+export const RANKSV5 = <const>[
+  { name: 'Unranked', id: 0, range: [null, null] },
+  { name: 'Copper 5', id: 1, range: [-Infinity, 1199] },
+  { name: 'Copper 4', id: 2, range: [1200, 1299] },
+  { name: 'Copper 3', id: 3, range: [1300, 1399] },
+  { name: 'Copper 2', id: 4, range: [1400, 1499] },
+  { name: 'Copper 1', id: 5, range: [1500, 1599] },
+  { name: 'Bronze 5', id: 6, range: [1600, 1699] },
+  { name: 'Bronze 4', id: 7, range: [1700, 1799] },
+  { name: 'Bronze 3', id: 8, range: [1800, 1899] },
+  { name: 'Bronze 2', id: 9, range: [1900, 1999] },
+  { name: 'Bronze 1', id: 10, range: [2000, 2099] },
+  { name: 'Silver 5', id: 11, range: [2100, 2199] },
+  { name: 'Silver 4', id: 12, range: [2200, 2299] },
+  { name: 'Silver 3', id: 13, range: [2300, 2399] },
+  { name: 'Silver 2', id: 14, range: [2400, 2499] },
+  { name: 'Silver 1', id: 15, range: [2500, 2599] },
+  { name: 'Gold 3', id: 16, range: [2600, 2799] },
+  { name: 'Gold 2', id: 17, range: [2800, 2999] },
+  { name: 'Gold 1', id: 18, range: [3000, 3199] },
+  { name: 'Platinum 3', id: 19, range: [3200, 3499] },
+  { name: 'Platinum 2', id: 20, range: [3500, 3799] },
+  { name: 'Platinum 1', id: 21, range: [3800, 4099] },
+  { name: 'Diamond 3', id: 22, range: [4100, 4399] },
+  { name: 'Diamond 2', id: 23, range: [4400, 4699] },
+  { name: 'Diamond 1', id: 24, range: [4700, 4999] },
+  { name: 'Champions', id: 25, range: [5000, Infinity] }
+];
 
 export const OPERATORS = {
   'recruit_sas': {
@@ -1028,6 +1145,17 @@ export const OPERATORS = {
       stats: [
         { name: 'KÓNA Station heals', id: 'thunderbird_heals' }
       ]
+    }
+  },
+  'osa': {
+    name: 'Osa',
+    id: '6:17',
+    role: 'attacker',
+    unit: 'NIGHTHAVEN',
+    uniqueAbility: {
+      name: 'TALON-8 Clear Shield',
+      iconId: '71VBmyDtBAx788WnNJfEgo/1e6d78a81f8dc381bf4244b87970038f/r6s-operator-ability-osa',
+      stats: null
     }
   }
 };

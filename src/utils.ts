@@ -1,6 +1,6 @@
 import {
   UUID, Platform, PlatformAll, PlatformAllExtended, RegionId,
-  SeasonId, SeasonIdExtended, OldSeasonId, RankId, OldRankId,
+  SeasonId, SeasonIdExtended, OldSeasonId, RankIdV1, RankIdV2, RankIdV3, RankIdV4, RankIdV5,
   OperatorName, WeaponTypeIndex, WeaponTypeId, WeaponName,
   BoardId, StatsCategoryName
 } from './typings';
@@ -8,7 +8,7 @@ import {
   UBISERVICES_URL, STATUS_URL, UBI_URL, SPACE_IDS, SANDBOXES,
   AVATARS_URL, CDN_URL,
   PLATFORMS, PLATFORMSALL, REGIONS, BOARDS,
-  SEASONS, OLD_SEASONS, RANKS, OLD_RANKS,
+  SEASONS, OLD_SEASONS, RANKSV1, RANKSV2, RANKSV3, RANKSV4, RANKSV5,
   OPERATORS, WEAPONTYPES, WEAPONS,
   STATS_CATEGORIES, GITHUB_ASSETS_URL
 } from './constants';
@@ -34,44 +34,73 @@ export const getKD = ({ kills, deaths }: { kills?: number; deaths?: number }) =>
 export const getWinRate = ({ wins, losses }: { wins?: number; losses?: number }) =>
   ((wins || 0) / ((wins || 0) + (losses || 0) || 1) * 100).toFixed(2) + '%';
 
-export const getRankNameFromRankId = (rankId: RankId, seasonId: SeasonId) =>
-  seasonId < 15 ? OLD_RANKS[rankId as OldRankId] : RANKS[rankId];
+export const getRankNameFromRankId = (
+  rankId: RankIdV3 | RankIdV4 | RankIdV5, seasonId: SeasonId
+) =>
+  (seasonId >= 23
+    ? RANKSV5[rankId as RankIdV5]
+    : seasonId >= 15
+      ? RANKSV4[rankId as RankIdV4]
+      : RANKSV3[rankId as RankIdV3])
+    .name;
 
-export const getRankIconFromRankId = (rankId: RankId, seasonId: SeasonId) =>
+export const getRankIconFromRankId = (
+  rankId: RankIdV3 | RankIdV4 | RankIdV5, seasonId: SeasonId
+) =>
   `${GITHUB_ASSETS_URL}/ranks/v${
-    seasonId < 14 ? '3' : seasonId < 15
-      ? [17, 18, 19, 20].includes(rankId) ? '3.1' : '3'
-      : [1, 6, 11, 23].includes(rankId)
-        ? '3.2' : [19, 20, 21, 22].includes(rankId) ? '3.1' : '3'
+    seasonId <= 13
+      ? '3'
+      : seasonId === 14
+        ? [17, 18, 19, 20].includes(rankId)
+          ? '3.1'
+          : '3'
+        : seasonId >= 15 && seasonId <= 22
+          ? [1, 6, 11, 23].includes(rankId)
+            ? '4'
+            : [19, 20, 21, 22].includes(rankId)
+              ? '3.1'
+              : '3'
+          : [22, 23, 24].includes(rankId)
+            ? '5'
+            : [1, 6, 11, 25].includes(rankId)
+              ? '4'
+              : [19, 20, 21].includes(rankId)
+                ? '3.1'
+                : '3'
   }/${encodeURIComponent(getRankNameFromRankId(rankId, seasonId))}.png`;
 
-export const ranksRange = [
-  1100, 1200, 1300, 1400, 1500,
-  1600, 1700, 1800, 1900, 2000,
-  2100, 2200, 2300, 2400, 2500,
-  2600, 2800, 3000,
-  3200, 3600, 4000,
-  4400, 5000
-];
+export const getRanksFromSeasonId = (seasonId: SeasonId) =>
+  seasonId >= 5 && seasonId <= 14
+    ? RANKSV3
+    : seasonId >= 15 && seasonId <= 22
+      ? RANKSV4
+      : RANKSV5;
 
-export const getRankIdFromMmr = (mmr: number, matches: number) => {
+export const getRankIdFromMmr = (seasonId: SeasonId, mmr: number, matches: number) => {
 
-  const pointInRange = ranksRange.find((prevMmr, i, arr) => {
-    const nextMmr = arr[i + 1] || Infinity;
-    return (mmr - prevMmr) * (mmr - nextMmr) < 0
-      || mmr === prevMmr
-      || mmr < (arr[0] as number) && prevMmr === arr[0];
-  });
+  const ranks = getRanksFromSeasonId(seasonId);
 
-  const rankId = ranksRange.findIndex(point => point === pointInRange) + 1;
+  const rankId = [...ranks].find(rank => {
+    const [min, max] = rank.range;
+    if (!min || !max) return 0;
+    return min <= mmr && mmr <= max;
+  })?.id;
 
   // Requirements: ≥10 matches to get a rank, ≥100 matches to get a Champions rank
-  return (matches < 10 ? 0 : rankId === 23 && matches < 100 ? 22 : rankId) as RankId;
+  return (matches > 10
+    ? seasonId >= 15 && seasonId <= 22
+      ? rankId === 23 && matches < 100 ? ranks.slice(-2)[0]?.id : rankId
+      : rankId === 25 && matches < 100 ? ranks.slice(-2)[0]?.id : rankId
+    : ranks.slice(0)[0]?.id) as RankIdV3 | RankIdV4 | RankIdV5;
 
 };
 
-export const getBaseMmrFromRankId = (rankId: RankId) =>
-  rankId === 0 ? 0 : ranksRange[rankId - 1] as number;
+export const getBaseMmrFromRankId = (
+  seasonId: SeasonId, rankId: RankIdV3 | RankIdV4 | RankIdV5
+) => {
+  const ranks = getRanksFromSeasonId(seasonId);
+  return rankId === 0 ? 0 : [...ranks].find(rank => rank.id === rankId)?.range[0] as number;
+};
 
 export const groupBy = <T, K extends keyof T, B extends boolean>(
   array: T[], key: K, removeKey: B
@@ -171,11 +200,20 @@ export const isSeasonIdExtended = (value: number): value is SeasonIdExtended =>
 export const isOldSeasonId = (value: number): value is OldSeasonId =>
   Object.keys(OLD_SEASONS).map(season => Number(season)).includes(value);
 
-export const isRankId = (value: number): value is RankId =>
-  Object.keys(RANKS).map(rank => Number(rank)).includes(value);
+export const isRankIdV1 = (value: number): value is RankIdV1 =>
+  Object.keys(RANKSV1).map(rank => Number(rank)).includes(value);
 
-export const isOldRankId = (value: number): value is OldRankId =>
-  Object.keys(OLD_RANKS).map(rank => Number(rank)).includes(value);
+export const isRankIdV2 = (value: number): value is RankIdV2 =>
+  Object.keys(RANKSV2).map(rank => Number(rank)).includes(value);
+
+export const isRankIdV3 = (value: number): value is RankIdV3 =>
+  Object.keys(RANKSV3).map(rank => Number(rank)).includes(value);
+
+export const isRankIdV4 = (value: number): value is RankIdV4 =>
+  Object.keys(RANKSV4).map(rank => Number(rank)).includes(value);
+
+export const isRankIdV5 = (value: number): value is RankIdV5 =>
+  Object.keys(RANKSV5).map(rank => Number(rank)).includes(value);
 
 export const isOperatorName = (value: string): value is OperatorName =>
   Object.values(OPERATORS).map(op => op.name).includes(value);
