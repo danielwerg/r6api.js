@@ -1155,7 +1155,9 @@ export const OPERATORS = {
     uniqueAbility: {
       name: 'TALON-8 Clear Shield',
       iconId: '71VBmyDtBAx788WnNJfEgo/1e6d78a81f8dc381bf4244b87970038f/r6s-operator-ability-osa',
-      stats: null
+      stats: [
+        { name: 'TALON-8 Clear Shields deployed', id: 'osa_shieldsdeployed' }
+      ]
     }
   }
 };
