@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+* Crystal Guard Season
+* Osa operator
+
+### Changed
+* Colors for all seasons ([source](https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/seasons))
+* Status code in fetch error
+* `RANKS` and `OLD_RANKS` replaced with `RANKS_V1`, `RANKS_V2`, `RANKS_V3`, `RANKS_V4`, `RANKS_V5` and now has `range` value for mmr range
+
+### Fixed
+* Double export of default for es modules
+
 ## [2.1.0] - 2021-08-06
 
 ### Added
