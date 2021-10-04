@@ -8,7 +8,7 @@ import {
   UBISERVICES_URL, STATUS_URL, UBI_URL, SPACE_IDS, SANDBOXES,
   AVATARS_URL, CDN_URL,
   PLATFORMS, PLATFORMSALL, REGIONS, BOARDS,
-  SEASONS, OLD_SEASONS, RANKSV1, RANKSV2, RANKSV3, RANKSV4, RANKSV5,
+  SEASONS, OLD_SEASONS, RANKS_V1, RANKS_V2, RANKS_V3, RANKS_V4, RANKS_V5,
   OPERATORS, WEAPONTYPES, WEAPONS,
   STATS_CATEGORIES, GITHUB_ASSETS_URL
 } from './constants';
@@ -38,10 +38,10 @@ export const getRankNameFromRankId = (
   rankId: RankIdV3 | RankIdV4 | RankIdV5, seasonId: SeasonId
 ) =>
   (seasonId >= 23
-    ? RANKSV5[rankId as RankIdV5]
+    ? RANKS_V5[rankId as RankIdV5]
     : seasonId >= 15
-      ? RANKSV4[rankId as RankIdV4]
-      : RANKSV3[rankId as RankIdV3])
+      ? RANKS_V4[rankId as RankIdV4]
+      : RANKS_V3[rankId as RankIdV3])
     .name;
 
 export const getRankIconFromRankId = (
@@ -71,10 +71,10 @@ export const getRankIconFromRankId = (
 
 export const getRanksFromSeasonId = (seasonId: SeasonId) =>
   seasonId >= 5 && seasonId <= 14
-    ? RANKSV3
+    ? RANKS_V3
     : seasonId >= 15 && seasonId <= 22
-      ? RANKSV4
-      : RANKSV5;
+      ? RANKS_V4
+      : RANKS_V5;
 
 export const getRankIdFromMmr = (seasonId: SeasonId, mmr: number, matches: number) => {
 
@@ -201,19 +201,19 @@ export const isOldSeasonId = (value: number): value is OldSeasonId =>
   Object.keys(OLD_SEASONS).map(season => Number(season)).includes(value);
 
 export const isRankIdV1 = (value: number): value is RankIdV1 =>
-  Object.keys(RANKSV1).map(rank => Number(rank)).includes(value);
+  Object.keys(RANKS_V1).map(rank => Number(rank)).includes(value);
 
 export const isRankIdV2 = (value: number): value is RankIdV2 =>
-  Object.keys(RANKSV2).map(rank => Number(rank)).includes(value);
+  Object.keys(RANKS_V2).map(rank => Number(rank)).includes(value);
 
 export const isRankIdV3 = (value: number): value is RankIdV3 =>
-  Object.keys(RANKSV3).map(rank => Number(rank)).includes(value);
+  Object.keys(RANKS_V3).map(rank => Number(rank)).includes(value);
 
 export const isRankIdV4 = (value: number): value is RankIdV4 =>
-  Object.keys(RANKSV4).map(rank => Number(rank)).includes(value);
+  Object.keys(RANKS_V4).map(rank => Number(rank)).includes(value);
 
 export const isRankIdV5 = (value: number): value is RankIdV5 =>
-  Object.keys(RANKSV5).map(rank => Number(rank)).includes(value);
+  Object.keys(RANKS_V5).map(rank => Number(rank)).includes(value);
 
 export const isOperatorName = (value: string): value is OperatorName =>
   Object.values(OPERATORS).map(op => op.name).includes(value);

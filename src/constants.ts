@@ -181,7 +181,7 @@ export const SEASONS = <const>{
 };
 
 /** ? Dust Line (2) - Skull Rain (3) */
-export const RANKSV1 = <const>[
+export const RANKS_V1 = <const>[
   { name: 'Unranked', id: 0, range: [null, null] },
   { name: 'Copper 1', id: 1, range: [-Infinity, 2199] },
   { name: 'Copper 2', id: 2, range: [2200, 2399] },
@@ -206,7 +206,7 @@ export const RANKSV1 = <const>[
 ];
 
 /** Red Crow (4) */
-export const RANKSV2 = <const>[
+export const RANKS_V2 = <const>[
   { name: 'Unranked', id: 0, range: [null, null] },
   { name: 'Copper 1', id: 1, range: [-Infinity, 1399] },
   { name: 'Copper 2', id: 2, range: [1400, 1499] },
@@ -231,7 +231,7 @@ export const RANKSV2 = <const>[
 ];
 
 /** Velvet Shell (5) - Phantom Sight (14) */
-export const RANKSV3 = <const>[
+export const RANKS_V3 = <const>[
   { name: 'Unranked', id: 0, range: [null, null] },
   { name: 'Copper 4', id: 1, range: [-Infinity, 1399] },
   { name: 'Copper 3', id: 2, range: [1400, 1499] },
@@ -256,7 +256,7 @@ export const RANKSV3 = <const>[
 ];
 
 /** Ember Rise (15) - North Star (22) */
-export const RANKSV4 = <const>[
+export const RANKS_V4 = <const>[
   { name: 'Unranked', id: 0, range: [null, null] },
   { name: 'Copper 5', id: 1, range: [-Infinity, 1199] },
   { name: 'Copper 4', id: 2, range: [1200, 1299] },
@@ -284,7 +284,7 @@ export const RANKSV4 = <const>[
 ];
 
 /** Crystal Guard (23) - latest */
-export const RANKSV5 = <const>[
+export const RANKS_V5 = <const>[
   { name: 'Unranked', id: 0, range: [null, null] },
   { name: 'Copper 5', id: 1, range: [-Infinity, 1199] },
   { name: 'Copper 4', id: 2, range: [1200, 1299] },
