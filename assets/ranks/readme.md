@@ -7,7 +7,7 @@
 | 2       | 4       | Changed mmr                                                                             |
 | 3       | 5-13    | Reverse ranks, redesign of all rank icons, changed mmr                                  |
 | 3.1     | 14      | Redesign for Platinum and Diamond rank icons                                            |
-| 4       | 15-22   | Added Champions, Silver 5, Bronze 5 and Copper 5 ranks, removed Gold 4 rank,changed mmr |
+| 4       | 15-22   | Added Champions, Silver 5, Bronze 5 and Copper 5 ranks, removed Gold 4 rank, changed mmr |
 | 5       | 23      | Removed Diamond rank, added Diamond 3, Diamond 2, Diamond 1 ranks, changed mmr          |
 
 ### Seasons Reference
