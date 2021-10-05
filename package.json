@@ -1,6 +1,6 @@
 {
   "name": "r6api.js",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Node.js wrapper around Rainbow Six: Siege API.",
   "author": "Daniel Sandberg",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "require": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "example": "yarn build && ts-node --project scripts/tsconfig.json scripts/example",
     "methods": "ts-node scripts/methods",
     "tables": "ts-node scripts/tables",
@@ -37,6 +37,7 @@
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "markdown-table": "2.0.0",
     "minimist": "^1.2.5",
+    "rimraf": "^3.0.2",
     "stringify-object": "^3.3.0",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
