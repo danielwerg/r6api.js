@@ -25,7 +25,7 @@ export const getCDNURL = (id: UUID, format = 'png') =>
 
 export const getNewsURL = (language: string, type: string, id: string) =>
   type === 'news'
-    ? `https://www.ubisoft.com/${language}/game/rainbow-six/siege${id}`
+    ? `https://www.ubisoft.com/${language}/game/rainbow-six/siege/news-updates${id}`
     : `https://www.youtube.com/watch?v=${id}`;
 
 export const getKD = ({ kills, deaths }: { kills?: number; deaths?: number }) =>
@@ -159,19 +159,19 @@ export const getURL = {
   VALIDATEUSERNAME: (userId: UUID) =>
     getUbiServicesURL(3, `profiles/${userId}/validateUpdate`),
   NEWS: (
-    category: string, filter: string,
+    category: string, media: string, placement: string,
     locale: string, fallbackLocale: string,
     limit: number, skip: number, startIndex: number | null
   ) =>
-    `${UBI_URL}/api/updates/items` +
-    `?categoriesFilter=${category}&mediaFilter=${filter}` +
+    `${UBI_URL}/api/v1/items` +
+    `?categoriesFilter=${category}&mediaFilter=${media}&placementFilter=${placement}` +
     `&locale=${locale}&fallbackLocale=${fallbackLocale}` +
     `&limit=${limit}&skip=${skip}&startIndex=${startIndex}` +
     '&tags=BR-rainbow-six%20GA-siege',
   NEWSBYID: (
     id: string, locale: string, fallbackLocale: string
   ) =>
-    `${UBI_URL}/api/updates/items` +
+    `${UBI_URL}/api/v1/items/${id}` +
     `?entryId=${id}&locale=${locale}&fallbackLocale=${fallbackLocale}` +
     '&tags=BR-rainbow-six%20GA-siege'
 };

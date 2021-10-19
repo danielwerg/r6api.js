@@ -2,7 +2,7 @@ export const ubiAppId = '3587dcbb-7f81-457c-9781-0e3f29f6f56a';
 
 export const UBISERVICES_URL = 'https://public-ubiservices.ubi.com';
 export const STATUS_URL = 'https://game-status-api.ubisoft.com';
-export const UBI_URL = 'https://www.ubisoft.com';
+export const UBI_URL = 'https://nimbus.ubisoft.com';
 
 export const SPACE_IDS = <const>{
   uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d',
