@@ -49,14 +49,9 @@ export interface INewsItem {
 }
 export interface IApiResponse {
   total: number;
-  limit: number;
-  tags: string;
-  mediaFilter: string;
-  categoriesFilter: string;
-  placementFilter: string;
-  skip: number;
-  startIndex: number | string;
-  items?: INewsItem;
+  tags: string[];
+  items?: INewsItem[];
+  message?: string;
 }
 
 export interface IOptions {
@@ -67,46 +62,44 @@ export interface IOptions {
 
 export const optionsDocs: IOptionsDocs = [
   ['raw', '`boolean`', false, '`false`', 'Include raw API response'],
-  ['locale', '`string`', false, '`\'en-us\'`', ''],
+  ['locale', '`string`', false, '`\'en-gb\'`', ''],
   ['fallbackLocale', '`string`', false, '`\'en-us\'`', '']
 ];
 
 export default async (id: string, options?: IOptions) => {
 
   const raw = options && options.raw || false;
-  const locale = options && options.locale || 'en-us';
+  const locale = options && options.locale || 'en-gb';
   const fallbackLocale = options && options.fallbackLocale || 'en-us';
 
-  const res = await fetch<IApiResponse>(getURL.NEWSBYID(id, locale, fallbackLocale))();
+  const res = await fetch<IApiResponse>(
+    getURL.NEWSBYID(id, locale, fallbackLocale),
+    { headers: { 'Authorization': '3u0FfSBUaTSew-2NVfAOSYWevVQHWtY9q3VM8Xx9Lto' } }
+  )();
   return ({
     ...raw && { raw: res },
     total: res.total,
-    limit: res.limit,
-    categories: res.categoriesFilter,
-    media: res.mediaFilter,
-    skip: res.skip,
-    startIndex: res.startIndex,
-    placement: res.placementFilter,
     tags: res.tags,
     ...res.items && {
-      item: {
-        id: res.items.id,
-        title: res.items.title,
-        abstract: res.items.abstract,
+      item: res.items.map(item => ({
+        id: item.id,
+        title: item.title,
+        abstract: item.abstract,
         thumbnail: {
-          url: res.items.thumbnail.url, description: res.items.thumbnail.description
+          url: item.thumbnail.url, description: item.thumbnail.description
         },
-        content: res.items.content,
-        description: res.items.description,
-        categories: res.items.categories,
-        tag: res.items.tag,
-        placement: res.items.placement,
-        type: res.items.type,
-        readTime: res.items.readTime,
-        url: getNewsURL(locale, res.items.type, res.items.button.buttonUrl),
-        date: res.items.date
-      }
-    }
+        content: item.content,
+        description: item.description,
+        categories: item.categories,
+        tag: item.tag,
+        placement: item.placement,
+        type: item.type,
+        readTime: item.readTime,
+        url: getNewsURL(locale, item.type, item.button.buttonUrl),
+        date: item.date
+      }))
+    },
+    ...res.message && { message: res.message }
   });
 
 };

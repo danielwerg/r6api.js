@@ -860,10 +860,11 @@ Get Rainbow Six: Siege News.
 | raw            | `boolean` | false    | `false`   | Include raw API response                                                          |
 | category       | `string`  | false    | `'all'`   | `'all'`, `'game-updates'`, `'patch-notes'`, `'community'`, `'store'`, `'esports'` |
 | media          | `string`  | false    | `'all'`   | `'all'`, `'news'`, `'videos'`                                                     |
+| placement      | `string`  | false    | `''`      | Ex: `'featured-news-article'`                                                     |
 | limit          | `number`  | false    | `6`       |                                                                                   |
 | skip           | `number`  | false    | `0`       |                                                                                   |
 | startIndex     | `number`  | false    | `0`       |                                                                                   |
-| locale         | `string`  | false    | `'en-us'` |                                                                                   |
+| locale         | `string`  | false    | `'en-gb'` |                                                                                   |
 | fallbackLocale | `string`  | false    | `'en-us'` |                                                                                   |
 
 <!-- END_SECTION:GETNEWS_OPTIONS -->
@@ -929,7 +930,7 @@ Get Rainbow Six: Siege News by ID.
 | Param          | Type      | Required | Default   | Description              |
 | -------------- | --------- | -------- | --------- | ------------------------ |
 | raw            | `boolean` | false    | `false`   | Include raw API response |
-| locale         | `string`  | false    | `'en-us'` |                          |
+| locale         | `string`  | false    | `'en-gb'` |                          |
 | fallbackLocale | `string`  | false    | `'en-us'` |                          |
 
 <!-- END_SECTION:GETNEWSBYID_OPTIONS -->

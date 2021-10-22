@@ -34,13 +34,13 @@ export interface INewsItems {
 }
 export interface IApiResponse {
   total: number;
-  limit: number;
-  tags: string;
+  tags: string[];
   mediaFilter: string;
   categoriesFilter: string;
-  placementFilter: string;
-  skip: number;
+  placementFilter: string[] | [];
+  limit: number;
   startIndex: number | string;
+  skip: number;
   items: INewsItems[];
 }
 
@@ -48,6 +48,7 @@ export interface IOptions {
   raw?: boolean;
   category?: 'all' | 'game-updates' | 'patch-notes' | 'community' | 'store' | 'esports';
   media?: 'all' | 'news' | 'videos';
+  placement?: string;
   limit?: number;
   skip?: number;
   startIndex?: number;
@@ -62,10 +63,11 @@ export const optionsDocs: IOptionsDocs = [
     '`\'all\'`, `\'game-updates\'`, `\'patch-notes\'`, `\'community\'`, `\'store\'`, `\'esports\'`'
   ],
   ['media', '`string`', false, '`\'all\'`', '`\'all\'`, `\'news\'`, `\'videos\'`'],
+  ['placement', '`string`', false, '`\'\'`', 'Ex: `\'featured-news-article\'`'],
   ['limit', '`number`', false, '`6`', ''],
   ['skip', '`number`', false, '`0`', ''],
   ['startIndex', '`number`', false, '`0`', ''],
-  ['locale', '`string`', false, '`\'en-us\'`', ''],
+  ['locale', '`string`', false, '`\'en-gb\'`', ''],
   ['fallbackLocale', '`string`', false, '`\'en-us\'`', '']
 ];
 
@@ -74,14 +76,16 @@ export default async (options?: IOptions) => {
   const raw = options && options.raw || false;
   const category = options && options.category || 'all';
   const media = options && options.media || 'all';
+  const placement = options && options.placement || '';
   const limit = options && options.limit || 6;
   const skip = options && options.skip || 0;
   const startIndex = options && options.startIndex || 0;
-  const locale = options && options.locale || 'en-us';
+  const locale = options && options.locale || 'en-gb';
   const fallbackLocale = options && options.fallbackLocale || 'en-us';
 
   const res = await fetch<IApiResponse>(
-    getURL.NEWS(category, media, locale, fallbackLocale, limit, skip, startIndex)
+    getURL.NEWS(category, media, placement, locale, fallbackLocale, limit, skip, startIndex),
+    { headers: { 'Authorization': '3u0FfSBUaTSew-2NVfAOSYWevVQHWtY9q3VM8Xx9Lto' } }
   )();
   return ({
     ...raw && { raw: res },

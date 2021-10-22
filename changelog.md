@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.0] - 2021-10-22
+
+### Added
+* `placement` options for `getNews`
+
+### Changed
+* Change default `locale` for `getNews` and `getNewsById` from `en-us` to `en-gb`
+
+### Fixed
+* Ubisoft news url and endpoint
+* Types for `getNews` and `getNewsById`
+* Error message for `fetch.ts` returning `undefined` if `json.httpCode` and/or `json.message` is not present
+
 ## [3.0.0] - 2021-10-05
 
 ### Added
@@ -80,7 +93,8 @@ Forgot to build for v2.0.1
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v3.0.0...master
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v3.1.0...master
+[3.1.0]: https://github.com/danielwerg/r6api.js/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/danielwerg/r6api.js/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/danielwerg/r6api.js/compare/v2.0.2...v2.1.0
 [2.0.2]: https://github.com/danielwerg/r6api.js/compare/v2.0.1...v2.0.2
