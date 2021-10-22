@@ -1,32 +1,32 @@
 {
-  "total": 1130,
+  "total": 707,
   "limit": 1,
   "categories": "all",
   "media": "all",
   "skip": 0,
   "startIndex": 0,
-  "placement": "",
-  "tags": "BR-rainbow-six GA-siege",
+  "placement": [],
+  "tags": [
+    "BR-rainbow-six GA-siege"
+  ],
   "items": [
     {
-      "id": "OEhzh2YY8C8",
-      "title": "Rainbow Six Siege: Containment Event | Trailer | Ubisoft",
-      "abstract": null,
+      "id": "6a45eQdFTRwigPbdBGXkRH",
+      "title": "Y6S3.3 Patch Notes",
+      "abstract": "See the upcoming changes to Rainbow Six Siege with the release of Y6S3.3.",
       "thumbnail": {
-        "url": "https://i.ytimg.com/vi/OEhzh2YY8C8/hqdefault.jpg",
-        "description": "Rainbow Six Siege: Containment Event | Trailer | Ubisoft"
+        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3WosH7g4ENXG7Ohimdbmip/6bfc29293009f23b360bb042287bc070/R6S_Y6S3.3_PatchNotes_Header_960x540.png",
+        "description": ""
       },
-      "content": "[video](https://www.youtube-nocookie.com/embed/OEhzh2YY8C8)",
-      "description": "It's a battle of survival against a new threat! Play the limited time in-game event, Containment, inspired by Rainbow Six Extraction. Experience a new game mode, Nest Destruction, to either destroy or preserve a Nest against the opposing team. Recruit your squad and don’t miss your chance to unlock free content! Play for a limited time between August 3 - August 24.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a leading creator, publisher and distributor of interactive entertainment and services, with a rich portfolio of world-renowned brands, including Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division. The teams throughout Ubisoft’s worldwide network of studios and business offices are committed to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. For the 2019-20 fiscal year, Ubisoft generated net bookings of €1,534 million. To learn more, please visit: www.ubisoftgroup.com.  \n\n© 2021 Ubisoft Entertainment. All Rights Reserved. Ubisoft and the Ubisoft logo are registered trademarks in the US and/or other countries.\n\nRainbow Six Siege: Containment Event | Trailer | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA",
-      "categories": [
-        "videos"
-      ],
-      "tag": null,
+      "content": "For additional information and further details on the changes listed below, please see our [Y6S3.3 Designer's Notes](https://rainbow6.com/DN_Y6S33).\n\n## Y6S3.3 PATCH SIZE\nBelow you will find the download sizes for each platform. \n-\tUbisoft Connect: 2.21 GB\n-\tSteam: 1.7 GB\n-\tXbox One: 1.2 GB\n-\tXbox Series X: 3.7 GB\n-\tPS4: 1.4 GB\n-\tPS5: 1.13 GB\n\n## OPERATOR BALANCING\n\n### ALIBI\n-\tIncreased Mx4 Storm vertical recoil.\n\n### ARUNI AND MOZZIE\n-\tReduced P10 Roni Magazine from 19+1 to 15+1.\n-\tIncreased vertical recoil and first kick recoil.\n-\tTotal ammo is now 181 in PVP, 121 in Hardcore and 196 in PVE.\n\n### CASTLE\n-\tIncreased number of Armor Panels to 4 (was 3).\n-\tReduced number of punches required to destroy an Armor Panel to 9 (was 12).\n\n### CLASH\n-\tReplaced P-10C with Super Shorty.\n\n### HARD BREACH CHARGE\n-\tIncreased number to 2 (was 1).\n-\tAffected Operators include: Montagne, Buck, Fuze, Capitão, Amaru, Nøkk, Ying, and Zero.\n\n### KAPKAN\n-\tNo longer limited to placing 1 trap per door/window frame.\n\n### MELUSI\n-\tAdded Bulletproof Camera (removed Nitro Cell).\n\n### ORYX\n-\tReduced Dash refresh time to 8 seconds (was 12 seconds).\n\n### WAMAI\n-\tIncreased number of Mag-NETs to 6 (was 4).\n-\tReduced catching area of effect to 3.5 meters (was 5 meters).\n\n## TWEAKS AND IMPROVEMENTS\n\n### PLAYER COMFORT\n__Performance Metrics__       \n-\tPC users can now display real-time performance metrics in the HUD such as FPS, latency, and NVIDIA-related metrics. This feature can be turned On in the General section of the Options menu.\n\n<br>\n\n## BUG FIXES\n\n### GAMEPLAY\nFIXED – Attacker is removed from the match if they injure a hostage that is later revived and eliminated by a Defender.      \nFIXED – Ammo counter flashes red after switching weapons.      \nFIXED – The G36Cs rail reduces visibility when the Red Dot is equipped.      \nFIXED – If a player is reconnecting, round doesn't end when the last opponent is eliminated.      \nFIXED – \"Join Party\" option is not functional in the Ubisoft Connect overlay and client.      \nFIXED – Rim lighting is applied to Operators on the victory screen.      \nFIXED – Muffled sound is heard on some weapons.      \nFIXED – Defenders can vault on top of an unreachable location and secure a win for their team in the Doktor's Curse Event.      \nFIXED – The attacker's hammer animation freezes and loops without collision when holding down the trigger button in the Doktor's Curse Event.\n\n### LEVEL DESIGN\nFIXED – Bar shadow at 1F Bar disappears when viewed from trapdoor in 2F Library Entrance on Chalet map.      \nFIXED – Asset and collision issues on Bank map and Kafe Dostoyevsky map.      \nFIXED – The light of the wall cladding located at 3F Lounge disappears when LOD lowers when viewing it from 3F Casino on Yacht map.      \nFIXED – Player is unable drop the defuser on the roof above 2F Billiards Room on Coastline map.\n\n### OPERATORS\nFIXED – Kapkan is not receiving 20p for each activated trap.\n\n### USER EXPERIENCE\nFIXED – Various UI issues.      \nFIXED – Various localization issues.\n",
+      "description": null,
+      "categories": null,
+      "tag": "BR-rainbow-six GA-siege",
       "placement": null,
-      "type": "videos",
-      "readTime": null,
-      "url": "https://www.youtube.com/watch?v=OEhzh2YY8C8",
-      "date": "2021-08-02T16:15:23.000Z"
+      "type": "news",
+      "readTime": 4,
+      "url": "https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/6a45eQdFTRwigPbdBGXkRH/y6s33-patch-notes",
+      "date": "Mon Oct 18 2021 12:00:00 GMT+0000 (Coordinated Universal Time)"
     }
   ]
 }

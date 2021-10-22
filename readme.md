@@ -879,34 +879,34 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 1130,
+  total: 707,
   limit: 1,
   categories: 'all',
   media: 'all',
   skip: 0,
   startIndex: 0,
-  placement: '',
-  tags: 'BR-rainbow-six GA-siege',
+  placement: [],
+  tags: [
+    'BR-rainbow-six GA-siege'
+  ],
   items: [
     {
-      id: 'OEhzh2YY8C8',
-      title: 'Rainbow Six Siege: Containment Event | Trailer | Ubisoft',
-      abstract: undefined,
+      id: '6a45eQdFTRwigPbdBGXkRH',
+      title: 'Y6S3.3 Patch Notes',
+      abstract: 'See the upcoming changes to Rainbow Six Siege with the release of Y6S3.3.',
       thumbnail: {
-        url: 'https://i.ytimg.com/vi/OEhzh2YY8C8/hqdefault.jpg',
-        description: 'Rainbow Six Siege: Containment Event | Trailer | Ubisoft'
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3WosH7g4ENXG7Ohimdbmip/6bfc29293009f23b360bb042287bc070/R6S_Y6S3.3_PatchNotes_Header_960x540.png',
+        description: ''
       },
-      content: '[video](https://www.youtube-nocookie.com/embed/OEhzh2YY8C8)',
-      description: 'It\'s a battle of survival against a new threat! Play the limited time in-game event, Containment, inspired by Rainbow Six Extraction. Experience a new game mode, Nest Destruction, to either destroy or preserve a Nest against the opposing team. Recruit your squad and don’t miss your chance to unlock free content! Play for a limited time between August 3 - August 24.\n\n#R6S\n\nPlease SUBSCRIBE: http://bit.ly/UbisoftYouTubeChannel\n \nVisit our official channels to stay up to date with Rainbow Six Siege:\nhttps://rainbow6.ubisoft.com/\nhttps://www.facebook.com/rainbow6usa/\nhttps://www.instagram.com/rainbow6gam...\nhttps://twitter.com/Rainbow6Game\nhttps://www.youtube.com/UbisoftNA\n \nDiscover all our Rainbow Six products and exclusive items on the Ubisoft Store: https://ubi.li/DZNaP\n \nABOUT RAINBOW SIX SIEGE:\nRainbow Six Siege is an exciting, new approach to the first-person shooter experience that puts tactical combat and masterful destruction at the center of the action. Lead your team of unique, counter-terrorist Rainbow operators through tense and thrilling combat scenarios, and achieve victory through smart preparation and strategic improvisation. Rainbow Six Siege is available now on Xbox One, PlayStation® 4 and PC.\n  \n KEY FEATURES:\n  \n -THE RULES OF SIEGE: Five versus Five. Attack versus Defend. Infiltrate versus Fortify. Team-based strategy meets intense, tactical combat.\n -WORLD\'S ELITE COUNTER-TERRORIST OPERATORS: Choose your Operator and wield their unique ability to breach or defend the objective as a part of an elite team.\n -DESTRUCTION AS A TOOL: Walls can be shattered; floors and ceilings can be breached. Mastering the tactical use of destruction is the key to victory.\n -CLOSE-QUARTERS COMBAT: With tight spaces shaping all combat arenas, tense encounters and up-close-and-personal firefights abound within every Siege.\n\nABOUT UBISOFT:\nUbisoft is a leading creator, publisher and distributor of interactive entertainment and services, with a rich portfolio of world-renowned brands, including Assassin’s Creed, Far Cry, For Honor, Just Dance, Watch Dogs, Tom Clancy’s video game series including Ghost Recon, Rainbow Six and The Division. The teams throughout Ubisoft’s worldwide network of studios and business offices are committed to delivering original and memorable gaming experiences across all popular platforms, including consoles, mobile phones, tablets and PCs. For the 2019-20 fiscal year, Ubisoft generated net bookings of €1,534 million. To learn more, please visit: www.ubisoftgroup.com.  \n\n© 2021 Ubisoft Entertainment. All Rights Reserved. Ubisoft and the Ubisoft logo are registered trademarks in the US and/or other countries.\n\nRainbow Six Siege: Containment Event | Trailer | Ubisoft [NA]\nhttp://www.youtube.com/UbisoftNA',
-      categories: [
-        'videos'
-      ],
-      tag: undefined,
-      placement: undefined,
-      type: 'videos',
-      readTime: undefined,
-      url: 'https://www.youtube.com/watch?v=OEhzh2YY8C8',
-      date: '2021-08-02T16:15:23.000Z'
+      content: 'For additional information and further details on the changes listed below, please see our [Y6S3.3 Designer\'s Notes](https://rainbow6.com/DN_Y6S33).\n\n## Y6S3.3 PATCH SIZE\nBelow you will find the download sizes for each platform. \n-	Ubisoft Connect: 2.21 GB\n-	Steam: 1.7 GB\n-	Xbox One: 1.2 GB\n-	Xbox Series X: 3.7 GB\n-	PS4: 1.4 GB\n-	PS5: 1.13 GB\n\n## OPERATOR BALANCING\n\n### ALIBI\n-	Increased Mx4 Storm vertical recoil.\n\n### ARUNI AND MOZZIE\n-	Reduced P10 Roni Magazine from 19+1 to 15+1.\n-	Increased vertical recoil and first kick recoil.\n-	Total ammo is now 181 in PVP, 121 in Hardcore and 196 in PVE.\n\n### CASTLE\n-	Increased number of Armor Panels to 4 (was 3).\n-	Reduced number of punches required to destroy an Armor Panel to 9 (was 12).\n\n### CLASH\n-	Replaced P-10C with Super Shorty.\n\n### HARD BREACH CHARGE\n-	Increased number to 2 (was 1).\n-	Affected Operators include: Montagne, Buck, Fuze, Capitão, Amaru, Nøkk, Ying, and Zero.\n\n### KAPKAN\n-	No longer limited to placing 1 trap per door/window frame.\n\n### MELUSI\n-	Added Bulletproof Camera (removed Nitro Cell).\n\n### ORYX\n-	Reduced Dash refresh time to 8 seconds (was 12 seconds).\n\n### WAMAI\n-	Increased number of Mag-NETs to 6 (was 4).\n-	Reduced catching area of effect to 3.5 meters (was 5 meters).\n\n## TWEAKS AND IMPROVEMENTS\n\n### PLAYER COMFORT\n__Performance Metrics__       \n-	PC users can now display real-time performance metrics in the HUD such as FPS, latency, and NVIDIA-related metrics. This feature can be turned On in the General section of the Options menu.\n\n<br>\n\n## BUG FIXES\n\n### GAMEPLAY\nFIXED – Attacker is removed from the match if they injure a hostage that is later revived and eliminated by a Defender.      \nFIXED – Ammo counter flashes red after switching weapons.      \nFIXED – The G36Cs rail reduces visibility when the Red Dot is equipped.      \nFIXED – If a player is reconnecting, round doesn\'t end when the last opponent is eliminated.      \nFIXED – "Join Party" option is not functional in the Ubisoft Connect overlay and client.      \nFIXED – Rim lighting is applied to Operators on the victory screen.      \nFIXED – Muffled sound is heard on some weapons.      \nFIXED – Defenders can vault on top of an unreachable location and secure a win for their team in the Doktor\'s Curse Event.      \nFIXED – The attacker\'s hammer animation freezes and loops without collision when holding down the trigger button in the Doktor\'s Curse Event.\n\n### LEVEL DESIGN\nFIXED – Bar shadow at 1F Bar disappears when viewed from trapdoor in 2F Library Entrance on Chalet map.      \nFIXED – Asset and collision issues on Bank map and Kafe Dostoyevsky map.      \nFIXED – The light of the wall cladding located at 3F Lounge disappears when LOD lowers when viewing it from 3F Casino on Yacht map.      \nFIXED – Player is unable drop the defuser on the roof above 2F Billiards Room on Coastline map.\n\n### OPERATORS\nFIXED – Kapkan is not receiving 20p for each activated trap.\n\n### USER EXPERIENCE\nFIXED – Various UI issues.      \nFIXED – Various localization issues.\n',
+      description: undefined,
+      categories: null,
+      tag: 'BR-rainbow-six GA-siege',
+      placement: null,
+      type: 'news',
+      readTime: 4,
+      url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/6a45eQdFTRwigPbdBGXkRH/y6s33-patch-notes',
+      date: 'Mon Oct 18 2021 12:00:00 GMT+0000 (Coordinated Universal Time)'
     }
   ]
 }
@@ -945,39 +945,37 @@ await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
 
 ```js
 {
-  total: 1094,
-  limit: 0,
-  categories: 'all',
-  media: 'all',
-  skip: 0,
-  startIndex: 0,
-  placement: '',
-  tags: 'BR-rainbow-six GA-siege',
-  item: {
-    id: '4QAhnXnPk7Ffse8scw3k0Z',
-    title: 'Y5S1.2 Patch Notes',
-    abstract: 'The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. ',
-    thumbnail: {
-      url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Gqlz4Wt00TfhvaSH4d8LZ/0e7f0e99e9f2845dc323a60ce3825aa1/y5s1_2_pn-min.png',
-      description: null
-    },
-    content: 'The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. Please see our [Designer\'s Notes](https://rainbow6.com/dn_y5s12) for more insight on the balancing changes coming with the update.\n\n# UPDATE\nUpdate - the quick match map pool will remain the same throughout Y5S1 and will rotate again in Y5S2.\n\n# BALANCING\n### BUCK \n*With you til the end of the line.*\n\n- Frag Grenades replaced with Claymores.\n- Increased Skeleton Key Magazine Capacity: \n  - Skeleton Key magazine capacity increased to 5 + 1\n  - Skeleton Key max ammo count is now 25+1\n\n### GOYO\n*Less is more.*\n\n- Reduced number of Volcán shields to 2 (down from 3).\n\n### JÄGER\n*Less of a pain-in-the-schnitzel.*\n\n- Now a 2-speed/2-armor operator.\n\n### MOZZIE\n*Still a shortie.*\n\n- Removed Super Shorty secondary.\n\n### YING\n*Lights, Camera, Action!*\n\n- Increased number of Candelas to 4 (up from 3).\n- Replaced Claymores with Smoke Grenades.\n- Increased T-95 LSW damage to 46 (up from 43).\n\n### M12 (Caveira)\n- Added a Razor Holographic Sight option to her M12.\n\n### TCSG12 (Kaid, Goyo)\n- Added an additional magazine to the TCSG12.\n- Reduced TCSG12 damage to 57 (down from 84).\n\n# BUG FIXES\n- FIXED – Barricade replication issues where the barricade is not destroyed for all players in game except the shooter.\n- FIXED – The Dynamic Play button does not update properly when last match was on an Event/Discovery playlist.\n- FIXED – Players can clip inside the excavator in EXT Construction Site of Oregon.\n- FIXED – Game boots with DX11 when players manually select the Vulkan executable in the steam installation folder.\n- FIXED – Minor menu/shop visual and cosmetic fixes.\n- FIXED – Lighting issue on Consulate map for consoles (hotfixed on PC on [March 30](https://twitter.com/rainbow6game/status/1244581743254024192?lang=en)).',
-    description: undefined,
-    categories: [
-      'news',
-      'rainbow-six',
-      'rainbow-six-siege',
-      'patch-notes'
-    ],
-    tag: 'BR-rainbow-six GA-siege',
-    placement: [
-      'featured-news-article'
-    ],
-    type: 'news',
-    readTime: '2',
-    url: 'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/4QAhnXnPk7Ffse8scw3k0Z/y5s12-patch-notes',
-    date: '2020-04-20T21:00:00.000Z'
-  }
+  total: 3,
+  tags: [
+    'BR-rainbow-six GA-siege'
+  ],
+  item: [
+    {
+      id: '4QAhnXnPk7Ffse8scw3k0Z',
+      title: 'Y5S1.2 Patch Notes',
+      abstract: 'The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. ',
+      thumbnail: {
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Gqlz4Wt00TfhvaSH4d8LZ/bdb41b4552ebfda9acf293ece6f50084/y5s1_2_pn-min.png',
+        description: ''
+      },
+      content: 'The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. Please see our [Designer\'s Notes](https://rainbow6.com/dn_y5s12) for more insight on the balancing changes coming with the update.\n\n# UPDATE\nUpdate - the quick match map pool will remain the same throughout Y5S1 and will rotate again in Y5S2.\n\n# BALANCING\n### BUCK \n*With you til the end of the line.*\n\n- Frag Grenades replaced with Claymores.\n- Increased Skeleton Key Magazine Capacity: \n  - Skeleton Key magazine capacity increased to 5 + 1\n  - Skeleton Key max ammo count is now 25+1\n\n### GOYO\n*Less is more.*\n\n- Reduced number of Volcán shields to 2 (down from 3).\n\n### JÄGER\n*Less of a pain-in-the-schnitzel.*\n\n- Now a 2-speed/2-armor operator.\n\n### MOZZIE\n*Still a shortie.*\n\n- Removed Super Shorty secondary.\n\n### YING\n*Lights, Camera, Action!*\n\n- Increased number of Candelas to 4 (up from 3).\n- Replaced Claymores with Smoke Grenades.\n- Increased T-95 LSW damage to 46 (up from 43).\n\n### M12 (Caveira)\n- Added a Razor Holographic Sight option to her M12.\n\n### TCSG12 (Kaid, Goyo)\n- Added an additional magazine to the TCSG12.\n- Reduced TCSG12 damage to 57 (down from 84).\n\n# BUG FIXES\n- FIXED – Barricade replication issues where the barricade is not destroyed for all players in game except the shooter.\n- FIXED – The Dynamic Play button does not update properly when last match was on an Event/Discovery playlist.\n- FIXED – Players can clip inside the excavator in EXT Construction Site of Oregon.\n- FIXED – Game boots with DX11 when players manually select the Vulkan executable in the steam installation folder.\n- FIXED – Minor menu/shop visual and cosmetic fixes.\n- FIXED – Lighting issue on Consulate map (hotfixed on PC on [March 30](https://twitter.com/rainbow6game/status/1244581743254024192?lang=en)).',
+      description: undefined,
+      categories: [
+        'news',
+        'rainbow-six',
+        'rainbow-six-siege',
+        'patch-notes'
+      ],
+      tag: 'BR-rainbow-six GA-siege',
+      placement: [
+        'featured-news-article'
+      ],
+      type: 'news',
+      readTime: 2,
+      url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/4QAhnXnPk7Ffse8scw3k0Z/y5s12-patch-notes',
+      date: 'Mon Apr 20 2020 21:00:00 GMT+0000 (Coordinated Universal Time)'
+    }
+  ]
 }
 ```
 

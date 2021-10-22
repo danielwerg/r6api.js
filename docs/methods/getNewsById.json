@@ -1,35 +1,33 @@
 {
-  "total": 1094,
-  "limit": 0,
-  "categories": "all",
-  "media": "all",
-  "skip": 0,
-  "startIndex": 0,
-  "placement": "",
-  "tags": "BR-rainbow-six GA-siege",
-  "item": {
-    "id": "4QAhnXnPk7Ffse8scw3k0Z",
-    "title": "Y5S1.2 Patch Notes",
-    "abstract": "The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. ",
-    "thumbnail": {
-      "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Gqlz4Wt00TfhvaSH4d8LZ/0e7f0e99e9f2845dc323a60ce3825aa1/y5s1_2_pn-min.png",
-      "description": null
-    },
-    "content": "The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. Please see our [Designer's Notes](https://rainbow6.com/dn_y5s12) for more insight on the balancing changes coming with the update.\n\n# UPDATE\nUpdate - the quick match map pool will remain the same throughout Y5S1 and will rotate again in Y5S2.\n\n# BALANCING\n### BUCK \n*With you til the end of the line.*\n\n- Frag Grenades replaced with Claymores.\n- Increased Skeleton Key Magazine Capacity: \n  - Skeleton Key magazine capacity increased to 5 + 1\n  - Skeleton Key max ammo count is now 25+1\n\n### GOYO\n*Less is more.*\n\n- Reduced number of Volcán shields to 2 (down from 3).\n\n### JÄGER\n*Less of a pain-in-the-schnitzel.*\n\n- Now a 2-speed/2-armor operator.\n\n### MOZZIE\n*Still a shortie.*\n\n- Removed Super Shorty secondary.\n\n### YING\n*Lights, Camera, Action!*\n\n- Increased number of Candelas to 4 (up from 3).\n- Replaced Claymores with Smoke Grenades.\n- Increased T-95 LSW damage to 46 (up from 43).\n\n### M12 (Caveira)\n- Added a Razor Holographic Sight option to her M12.\n\n### TCSG12 (Kaid, Goyo)\n- Added an additional magazine to the TCSG12.\n- Reduced TCSG12 damage to 57 (down from 84).\n\n# BUG FIXES\n- FIXED – Barricade replication issues where the barricade is not destroyed for all players in game except the shooter.\n- FIXED – The Dynamic Play button does not update properly when last match was on an Event/Discovery playlist.\n- FIXED – Players can clip inside the excavator in EXT Construction Site of Oregon.\n- FIXED – Game boots with DX11 when players manually select the Vulkan executable in the steam installation folder.\n- FIXED – Minor menu/shop visual and cosmetic fixes.\n- FIXED – Lighting issue on Consulate map for consoles (hotfixed on PC on [March 30](https://twitter.com/rainbow6game/status/1244581743254024192?lang=en)).",
-    "description": null,
-    "categories": [
-      "news",
-      "rainbow-six",
-      "rainbow-six-siege",
-      "patch-notes"
-    ],
-    "tag": "BR-rainbow-six GA-siege",
-    "placement": [
-      "featured-news-article"
-    ],
-    "type": "news",
-    "readTime": "2",
-    "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/4QAhnXnPk7Ffse8scw3k0Z/y5s12-patch-notes",
-    "date": "2020-04-20T21:00:00.000Z"
-  }
+  "total": 3,
+  "tags": [
+    "BR-rainbow-six GA-siege"
+  ],
+  "item": [
+    {
+      "id": "4QAhnXnPk7Ffse8scw3k0Z",
+      "title": "Y5S1.2 Patch Notes",
+      "abstract": "The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. ",
+      "thumbnail": {
+        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Gqlz4Wt00TfhvaSH4d8LZ/bdb41b4552ebfda9acf293ece6f50084/y5s1_2_pn-min.png",
+        "description": ""
+      },
+      "content": "The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. Please see our [Designer's Notes](https://rainbow6.com/dn_y5s12) for more insight on the balancing changes coming with the update.\n\n# UPDATE\nUpdate - the quick match map pool will remain the same throughout Y5S1 and will rotate again in Y5S2.\n\n# BALANCING\n### BUCK \n*With you til the end of the line.*\n\n- Frag Grenades replaced with Claymores.\n- Increased Skeleton Key Magazine Capacity: \n  - Skeleton Key magazine capacity increased to 5 + 1\n  - Skeleton Key max ammo count is now 25+1\n\n### GOYO\n*Less is more.*\n\n- Reduced number of Volcán shields to 2 (down from 3).\n\n### JÄGER\n*Less of a pain-in-the-schnitzel.*\n\n- Now a 2-speed/2-armor operator.\n\n### MOZZIE\n*Still a shortie.*\n\n- Removed Super Shorty secondary.\n\n### YING\n*Lights, Camera, Action!*\n\n- Increased number of Candelas to 4 (up from 3).\n- Replaced Claymores with Smoke Grenades.\n- Increased T-95 LSW damage to 46 (up from 43).\n\n### M12 (Caveira)\n- Added a Razor Holographic Sight option to her M12.\n\n### TCSG12 (Kaid, Goyo)\n- Added an additional magazine to the TCSG12.\n- Reduced TCSG12 damage to 57 (down from 84).\n\n# BUG FIXES\n- FIXED – Barricade replication issues where the barricade is not destroyed for all players in game except the shooter.\n- FIXED – The Dynamic Play button does not update properly when last match was on an Event/Discovery playlist.\n- FIXED – Players can clip inside the excavator in EXT Construction Site of Oregon.\n- FIXED – Game boots with DX11 when players manually select the Vulkan executable in the steam installation folder.\n- FIXED – Minor menu/shop visual and cosmetic fixes.\n- FIXED – Lighting issue on Consulate map (hotfixed on PC on [March 30](https://twitter.com/rainbow6game/status/1244581743254024192?lang=en)).",
+      "description": null,
+      "categories": [
+        "news",
+        "rainbow-six",
+        "rainbow-six-siege",
+        "patch-notes"
+      ],
+      "tag": "BR-rainbow-six GA-siege",
+      "placement": [
+        "featured-news-article"
+      ],
+      "type": "news",
+      "readTime": 2,
+      "url": "https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/4QAhnXnPk7Ffse8scw3k0Z/y5s12-patch-notes",
+      "date": "Mon Apr 20 2020 21:00:00 GMT+0000 (Coordinated Universal Time)"
+    }
+  ]
 }
