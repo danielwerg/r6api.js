@@ -12,7 +12,7 @@ export interface IConnections {
   lastModifiedAt: string;
   stagingSpaceId: string;
 }
-export type OnlineStatus = 'online' | 'offline';
+export type OnlineStatus = 'online' | 'away' | 'dnd' | 'offline';
 export interface IOnlineStatuses {
   connections: IConnections[];
   manuallySet?: boolean;
