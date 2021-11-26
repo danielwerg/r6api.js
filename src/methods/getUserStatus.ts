@@ -37,7 +37,9 @@ export const optionsDocs: IOptionsDocs = [
 export default (ids: UUID[] | string[], options: IOptions) => {
 
   return getToken()
-    .then(fetch<IApiResponse>(getURL.ONLINESTATUS(ids), { headers: { 'Ubi-LocaleCode': 'x'} }))
+    .then(
+      fetch<IApiResponse>(getURL.ONLINESTATUS(ids), { headers: { 'Ubi-LocaleCode': 'x' } })
+    )
     .then(res => res.onlineStatuses)
     .then(async res => {
 
