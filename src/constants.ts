@@ -177,6 +177,12 @@ export const SEASONS = <const>{
     color: '#cc8200',
     imageId: '5Rm9sfgVTz9KdTI1Jh4N6w/c2d66a871b6311fe26198553695e0cd1/r6s-seasons-y6s3',
     releaseDate: new Date('2021-09-07').toISOString()
+  },
+  24: {
+    name: 'High Calibre',
+    color: '#465e1d',
+    imageId: '4ysWCYtrfV6yEC10unxDeM/cdeb45fc738b78da77bb611b14ae7973/r6s-seasons-y6s4',
+    releaseDate: new Date('2021-11-30').toISOString()
   }
 };
 
@@ -1158,6 +1164,17 @@ export const OPERATORS = {
       stats: [
         { name: 'TALON-8 Clear Shields deployed', id: 'osa_shieldsdeployed' }
       ]
+    }
+  },
+  'thorn': {
+    name: 'Thorn',
+    id: '',
+    role: 'defender',
+    unit: 'Garda ERU',
+    uniqueAbility: {
+      name: 'Razorbloom Shell',
+      iconId: '38hUQdWTb1vgs0Yg8eQHFC/0d7f05420068a41392342a1b38c57c2e/r6s-operator-ability-thorn',
+      stats: null
     }
   }
 };
