@@ -26,8 +26,8 @@
 | `8`  | White Noise  | December 5, 2017  | 91 Days  |   | `20` | Neon Dawn      | December 1, 2020   | 105 Days |
 | `9`  | Chimera      | March 6, 2018     | 93 Days  |   | `21` | Crimson Heist  | March 16, 2021     | 90 Days  |
 | `10` | Para Bellum  | June 7, 2018      | 89 Days  |   | `22` | North Star     | June 14, 2021      | 85 Days  |
-| `11` | Grim Sky     | September 4, 2018 | 91 Days  |   | `23` | Crystal Guard  | September 7, 2021  |          |
-| `12` | Wind Bastion | December 4, 2018  | 92 Days  |   |      |                |                    |          |
+| `11` | Grim Sky     | September 4, 2018 | 91 Days  |   | `23` | Crystal Guard  | September 7, 2021  | 84 Days  |
+| `12` | Wind Bastion | December 4, 2018  | 92 Days  |   | `24` | High Calibre   | November 30, 2021  |          |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 

@@ -333,7 +333,7 @@ Ids limit: `200`
 
 | Param     | Type                           | Required | Default                                                     | Description                                                       |
 | --------- | ------------------------------ | -------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `23` or `-1` or `'all'`                       |
+| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `24` or `-1` or `'all'`                       |
 | regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                  | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
 | boardIds  | `string \| string[]`           | false    | `['pvp_ranked', 'pvp_casual', 'pvp_newcomer', 'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
 
@@ -343,14 +343,18 @@ Ids limit: `200`
 
 <!-- START_SECTION:SEASONS_TABLE -->
 
-| ID   | Name         | ● | ID   | Name           | ● | ID   | Name          |
-| ---- | ------------ | - | ---- | -------------- | - | ---- | ------------- |
-| `6`  | Health       |   | `12` | Wind Bastion   |   | `18` | Steel Wave    |
-| `7`  | Blood Orchid |   | `13` | Burnt Horizon  |   | `19` | Shadow Legacy |
-| `8`  | White Noise  |   | `14` | Phantom Sight  |   | `20` | Neon Dawn     |
-| `9`  | Chimera      |   | `15` | Ember Rise     |   | `21` | Crimson Heist |
-| `10` | Para Bellum  |   | `16` | Shifting Tides |   | `22` | North Star    |
-| `11` | Grim Sky     |   | `17` | Void Edge      |   | `23` | Crystal Guard |
+| ID   | Name          | ● | ID   | Name           |
+| ---- | ------------- | - | ---- | -------------- |
+| `6`  | Health        |   | `16` | Shifting Tides |
+| `7`  | Blood Orchid  |   | `17` | Void Edge      |
+| `8`  | White Noise   |   | `18` | Steel Wave     |
+| `9`  | Chimera       |   | `19` | Shadow Legacy  |
+| `10` | Para Bellum   |   | `20` | Neon Dawn      |
+| `11` | Grim Sky      |   | `21` | Crimson Heist  |
+| `12` | Wind Bastion  |   | `22` | North Star     |
+| `13` | Burnt Horizon |   | `23` | Crystal Guard  |
+| `14` | Phantom Sight |   | `24` | High Calibre   |
+| `15` | Ember Rise    |   |      |                |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 
@@ -403,12 +407,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '23': {
-        seasonId: 23,
-        seasonName: 'Crystal Guard',
-        seasonColor: '#cc8200',
-        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5Rm9sfgVTz9KdTI1Jh4N6w/c2d66a871b6311fe26198553695e0cd1/r6s-seasons-y6s3.jpg',
-        seasonReleaseDate: '2021-09-07T00:00:00.000Z',
+      '24': {
+        seasonId: 24,
+        seasonName: 'High Calibre',
+        seasonColor: '#465e1d',
+        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4ysWCYtrfV6yEC10unxDeM/cdeb45fc738b78da77bb611b14ae7973/r6s-seasons-y6s4.jpg',
+        seasonReleaseDate: '2021-11-30T00:00:00.000Z',
         regions: {
           emea: {
             regionId: 'emea',
@@ -417,12 +421,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
               pvp_ranked: {
                 boardId: 'pvp_ranked',
                 boardName: 'Ranked',
-                skillMean: 31.3409980964,
-                skillStdev: 7.5086948144,
+                skillMean: 31.1540671021,
+                skillStdev: 7.5230663695,
                 current: {
                   id: 0,
                   name: 'Unranked',
-                  mmr: 3134,
+                  mmr: 3115,
                   icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png'
                 },
                 max: {
@@ -438,10 +442,10 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
                   skillStdevChange: 0
                 },
                 pastSeasons: {
-                  wins: 1937,
-                  losses: 1795,
-                  winRate: '51.90%',
-                  matches: 3732,
+                  wins: 2063,
+                  losses: 1921,
+                  winRate: '51.78%',
+                  matches: 3984,
                   abandons: 17
                 },
                 previousMmr: 0,
@@ -571,17 +575,6 @@ await r6api.getStatus();
 
 ```js
 [
-  {
-    appId: '8956241d-236d-4dbd-9e1e-bf6ed133773a',
-    name: 'Rainbow Six Siege - China - PC - LIVE',
-    spaceId: '',
-    mdm: '23702',
-    category: 'Instance',
-    platform: 'PC',
-    status: 'Online',
-    maintenance: null,
-    impactedFeatures: []
-  },
   {
     appId: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
     name: 'Rainbow Six Siege - PC - LIVE',
