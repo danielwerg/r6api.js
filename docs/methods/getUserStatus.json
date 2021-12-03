@@ -1,33 +1,8 @@
 [
   {
     "userId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "status": "online",
-    "applications": [
-      {
-        "id": "f68a4bb5-608a-4ff2-8123-be8ef797e0a6",
-        "name": null,
-        "platform": null,
-        "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-        "createdAt": "2021-11-05T14:40:32.7693857Z",
-        "lastModifiedAt": "2021-11-05T14:40:32.7693857Z"
-      },
-      {
-        "id": "e3d5ea9e-50bd-43b7-88bf-39794f4e3d40",
-        "name": "Tom Clancy's Rainbow Six Siege",
-        "platform": "PC",
-        "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-        "createdAt": "2021-11-05T14:41:42.6416964Z",
-        "lastModifiedAt": "2021-11-05T14:41:42.6416964Z"
-      },
-      {
-        "id": "83564d31-7cd7-4bc0-a763-6524e78d1a7f",
-        "name": null,
-        "platform": null,
-        "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-        "createdAt": "2021-11-05T14:41:47.6830053Z",
-        "lastModifiedAt": "2021-11-05T14:41:47.6830053Z"
-      }
-    ],
+    "status": "offline",
+    "applications": [],
     "manuallySet": null
   }
 ]
