@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+> Note: `Thorn` is missing `id` (see: [#78](https://github.com/danielwerg/r6api.js/issues/78))
+
+### Added
+* High Calibre season and Thorn ([0d771a](https://github.com/danielwerg/r6api.js/commit/0d771a8a0b321db157ab4d1ac20ce651775b232d))
+* Thorn icon ([0fcd822](https://github.com/danielwerg/r6api.js/commit/0fcd822a7c7fcce3c66d5d127994555de30b87a0))
+
+### Changed
+* All operator icons to new style (translucent border and more simplistic), thange resolution from 1500x1500 to 1000x1000 ([0fcd822](https://github.com/danielwerg/r6api.js/commit/0fcd822a7c7fcce3c66d5d127994555de30b87a0))
+
+### Fixed
+* Types for `[getUserStatus].status` ([f309108](https://github.com/danielwerg/r6api.js/commit/f309108cb48e0493898670754a9dde450c64d735))
+
 ## [3.1.0] - 2021-10-22
 
 ### Added
