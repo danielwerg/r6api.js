@@ -39,73 +39,65 @@ export interface IRank {
   losses: number;
 }
 export interface IApiResponse {
-  players: {
-    [id: string]: IRank;
-  };
+  players: Record<string, IRank>
 }
 
-export interface IBoards {
-  [id: string]: {
-    boardId: BoardId;
-    boardName: string;
-    skillMean: number;
-    skillStdev: number;
-    current: {
-      id: number;
-      name: string;
-      mmr: number;
-      icon: string;
-    };
-    max: {
-      id: number;
-      name: string;
-      mmr: number;
-      icon: string;
-    };
-    lastMatch: {
-      result: string;
-      mmrChange: number;
-      skillMeanChange: number;
-      skillStdevChange: number;
-    };
-    pastSeasons: {
-      wins: number;
-      losses: number;
-      winRate: string;
-      matches: number;
-      abandons: number;
-    };
-    previousMmr: number;
-    nextMmr: number;
-    topRankPosition: number;
-    kills: number;
-    deaths: number;
-    kd: number;
+export type IBoards = Record<BoardId, {
+  boardId: BoardId;
+  boardName: string;
+  skillMean: number;
+  skillStdev: number;
+  current: {
+    id: number;
+    name: string;
+    mmr: number;
+    icon: string;
+  };
+  max: {
+    id: number;
+    name: string;
+    mmr: number;
+    icon: string;
+  };
+  lastMatch: {
+    result: string;
+    mmrChange: number;
+    skillMeanChange: number;
+    skillStdevChange: number;
+  };
+  pastSeasons: {
     wins: number;
     losses: number;
     winRate: string;
     matches: number;
     abandons: number;
-    updateTime: string;
-  }
-}
-export interface IRegions {
-  [id: string]: {
-    regionId: RegionId;
-    regionName: string;
-    boards: IBoards;
   };
-}
-export interface ISeasons {
-  [id: string]: {
-    seasonId: SeasonId;
-    seasonName?: string;
-    seasonColor?: string;
-    seasonImage?: string;
-    seasonReleaseDate?: string;
-    regions: IRegions;
-  };
-}
+  previousMmr: number;
+  nextMmr: number;
+  topRankPosition: number;
+  kills: number;
+  deaths: number;
+  kd: number;
+  wins: number;
+  losses: number;
+  winRate: string;
+  matches: number;
+  abandons: number;
+  updateTime: string;
+}>
+export type IRegions = Record<RegionId, {
+  regionId: RegionId;
+  regionName: string;
+  boards: IBoards;
+}>
+export type ISeasons = Record<SeasonId, {
+  seasonId: SeasonId;
+  seasonName?: string;
+  seasonColor?: string;
+  seasonImage?: string;
+  seasonReleaseDate?: string;
+  regions: IRegions;
+}>
 export interface IGetRanks {
   id: UUID;
   seasons: ISeasons;
