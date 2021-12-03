@@ -93,7 +93,7 @@ export type IRegions = Record<RegionId, {
 export type ISeasons = Record<SeasonId, {
   seasonId: SeasonId;
   seasonName?: string;
-  seasonColor?: string;
+  seasonColor?: `#${string}`;
   seasonImage?: string;
   seasonReleaseDate?: string;
   regions: IRegions;
