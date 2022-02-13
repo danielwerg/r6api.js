@@ -576,6 +576,17 @@ await r6api.getStatus();
 ```js
 [
   {
+    appId: '8956241d-236d-4dbd-9e1e-bf6ed133773a',
+    name: 'Rainbow Six Siege - China - PC - LIVE',
+    spaceId: '',
+    mdm: '23702',
+    category: 'Instance',
+    platform: 'PC',
+    status: 'Online',
+    maintenance: null,
+    impactedFeatures: []
+  },
+  {
     appId: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
     name: 'Rainbow Six Siege - PC - LIVE',
     spaceId: '',
