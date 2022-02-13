@@ -225,7 +225,7 @@ export const isWeaponTypeId = (value: string): value is WeaponTypeId =>
   (Object.values(WEAPONTYPES).map(weapontype => weapontype.id) as string[]).includes(value);
 
 export const isWeaponName = (value: string): value is WeaponName =>
-  (Object.values(WEAPONS).map(wp => wp.name) as string[]).includes(value);
+  Object.keys(WEAPONS).includes(value);
 
 export const isStatsCategoryName = (value: string): value is StatsCategoryName =>
   Object.keys(STATS_CATEGORIES).includes(value);
