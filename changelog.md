@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.1] - 2022-02-14
+
+### Fixed
+
+* `isWeaponName` function now correctly checks for the weapon `id`
+
 ## [4.0.0] - 2021-12-04
 
 > Note: `Thorn` is missing `id` (see: [#78](https://github.com/danielwerg/r6api.js/issues/78))
@@ -109,7 +115,8 @@ Forgot to build for v2.0.1
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.0.0...master
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.0.1...master
+[4.0.1]: https://github.com/danielwerg/r6api.js/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/danielwerg/r6api.js/compare/v3.1.0...v4.0.0
 [3.1.0]: https://github.com/danielwerg/r6api.js/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/danielwerg/r6api.js/compare/v2.1.0...v3.0.0
