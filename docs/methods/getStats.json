@@ -1927,6 +1927,29 @@
             "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/38hUQdWTb1vgs0Yg8eQHFC/0d7f05420068a41392342a1b38c57c2e/r6s-operator-ability-thorn.png",
             "stats": null
           }
+        },
+        "azami": {
+          "name": "Azami",
+          "role": "defender",
+          "unit": "Unaffiliated",
+          "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/operators/azami.png",
+          "kills": 0,
+          "deaths": 0,
+          "kd": 0,
+          "wins": 0,
+          "losses": 0,
+          "winRate": "0.00%",
+          "matches": 0,
+          "headshots": 0,
+          "meleeKills": 0,
+          "dbno": 0,
+          "xp": 0,
+          "playtime": 0,
+          "uniqueAbility": {
+            "name": "Kiba Barrier",
+            "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1UDhKrAXnm0thdHhsTTAyo/03f6b0b4879208d963e6d551b86ad3a6/r6s-operator-ability-azami.png",
+            "stats": null
+          }
         }
       },
       "weapons": {
@@ -5108,6 +5131,28 @@
           "uniqueAbility": {
             "name": "Razorbloom Shell",
             "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/38hUQdWTb1vgs0Yg8eQHFC/0d7f05420068a41392342a1b38c57c2e/r6s-operator-ability-thorn.png",
+            "stats": null
+          }
+        },
+        "azami": {
+          "name": "Azami",
+          "role": "defender",
+          "unit": "Unaffiliated",
+          "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/operators/azami.png",
+          "kills": 0,
+          "deaths": 0,
+          "kd": 0,
+          "wins": 0,
+          "losses": 0,
+          "winRate": "0.00%",
+          "matches": 0,
+          "headshots": 0,
+          "meleeKills": 0,
+          "xp": 0,
+          "playtime": 0,
+          "uniqueAbility": {
+            "name": "Kiba Barrier",
+            "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1UDhKrAXnm0thdHhsTTAyo/03f6b0b4879208d963e6d551b86ad3a6/r6s-operator-ability-azami.png",
             "stats": null
           }
         }
