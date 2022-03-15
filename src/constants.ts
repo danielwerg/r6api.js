@@ -183,6 +183,12 @@ export const SEASONS = <const>{
     color: '#465e1d',
     imageId: '4ysWCYtrfV6yEC10unxDeM/cdeb45fc738b78da77bb611b14ae7973/r6s-seasons-y6s4',
     releaseDate: new Date('2021-11-30').toISOString()
+  },
+  25: {
+    name: 'Demon Veil',
+    color: '#b27400',
+    imageId: '6diil0gexoNXNCKtwpPPQZ/ace6f9e6e1e1578a2255ac0e5cb67b7c/r6s-seasons-y7s1',
+    releaseDate: new Date('2022-03-15').toISOString()
   }
 };
 
@@ -1174,6 +1180,17 @@ export const OPERATORS = {
     uniqueAbility: {
       name: 'Razorbloom Shell',
       iconId: '38hUQdWTb1vgs0Yg8eQHFC/0d7f05420068a41392342a1b38c57c2e/r6s-operator-ability-thorn',
+      stats: null
+    }
+  },
+  'azami': {
+    name: 'Azami',
+    id: '',
+    role: 'defender',
+    unit: 'Unaffiliated',
+    uniqueAbility: {
+      name: 'Kiba Barrier',
+      iconId: '1UDhKrAXnm0thdHhsTTAyo/03f6b0b4879208d963e6d551b86ad3a6/r6s-operator-ability-azami',
       stats: null
     }
   }
