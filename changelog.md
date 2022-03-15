@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+* Demon Veil season and Azami
+
 ## [4.0.1] - 2022-02-14
 
 ### Fixed
