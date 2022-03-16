@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.0]
+
 ### Added
 * Demon Veil season and Azami
 * Azami icon
@@ -119,7 +121,8 @@ Forgot to build for v2.0.1
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.0.1...master
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.1.0...master
+[4.1.0]: https://github.com/danielwerg/r6api.js/compare/v4.0.1...v4.1.0
 [4.0.1]: https://github.com/danielwerg/r6api.js/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/danielwerg/r6api.js/compare/v3.1.0...v4.0.0
 [3.1.0]: https://github.com/danielwerg/r6api.js/compare/v3.0.0...v3.1.0
