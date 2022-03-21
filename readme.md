@@ -483,6 +483,8 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
 
 ### getStats
 
+> ⚠️ API endpoint for `getStats` haven't been getting updates since High Calibre (see: [#78](https://github.com/danielwerg/r6api.js/issues/78)).
+
 Get summary stats of a player.
 
 Ids limit: `200`
