@@ -189,6 +189,12 @@ export const SEASONS = <const>{
     color: '#b27400',
     imageId: '6diil0gexoNXNCKtwpPPQZ/ace6f9e6e1e1578a2255ac0e5cb67b7c/r6s-seasons-y7s1',
     releaseDate: new Date('2022-03-15').toISOString()
+  },
+  26: {
+    name: 'Vector Glare',
+    color: '#60cdb0',
+    imageId: '6aBRsquEEKV2Ix2W7HK8P2/7a808507bcb933364d2dbcd6f80714fd/r6s-vectorglare-thumb',
+    releaseDate: new Date('2022-06-14').toISOString()
   }
 };
 
