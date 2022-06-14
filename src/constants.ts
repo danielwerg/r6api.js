@@ -39,31 +39,31 @@ export const REGIONS = <const>{
 export const OLD_SEASONS = <const>{
   1: {
     name: 'Black Ice',
-    color: '#25768f',
+    color: '#2e93b3',
     imageId: '67sZXc4UuXK2YPq8uj0mgE/6d0a5e1c6a342f5219cba2fc89e0ba14/r6s-seasons-y1s1',
     releaseDate: new Date('2016-02-02').toISOString()
   },
   2: {
     name: 'Dust Line',
-    color: '#997427',
+    color: '#d0a344',
     imageId: '5u2ecpIe98X528KgYQiEt/5833e27e347176f5e041cc533d48ac95/r6s-seasons-y1s2',
     releaseDate: new Date('2016-05-10').toISOString()
   },
   3: {
     name: 'Skull Rain',
-    color: '#396e2f',
+    color: '#47893b',
     imageId: '2X0s4QopJikcMNN4qg9KPS/5ef0ae117679ee7b1342c776a77c9dd4/r6s-seasons-y1s3',
     releaseDate: new Date('2016-08-02').toISOString()
   },
   4: {
     name: 'Red Crow',
-    color: '#971823',
+    color: '#bd1e2c',
     imageId: '66IKfs4aSnSkxaToTmmVBt/1532ccea8dd02b3ea44f254e4fdac27f/r6s-seasons-y1s4',
     releaseDate: new Date('2016-11-17').toISOString()
   },
   5: {
     name: 'Velvet Shell',
-    color: '#5b2676',
+    color: '#723093',
     imageId: '5OKGWvBbiscdZNmjr0PP9q/f5cff0dae8546193f9601fcf703f7f0e/r6s-seasons-y2s1',
     releaseDate: new Date('2017-02-07').toISOString()
   }
@@ -72,121 +72,121 @@ export const OLD_SEASONS = <const>{
 export const SEASONS = <const>{
   6: {
     name: 'Health',
-    color: '#00408f',
+    color: '#0050b3',
     imageId: '2w0kuPWW4vZS2MvHxpjgKL/527a78f482f03250f48ee05fabb843a9/r6s-seasons-y2s2',
     releaseDate: new Date('2017-06-07').toISOString()
   },
   7: {
     name: 'Blood Orchid',
-    color: '#a22b16',
+    color: '#ca361c',
     imageId: '5Is8lRiLLAaU0Uaj46Bu5Z/d46a8652cdf16426b7c9a0d634442be5/r6s-seasons-y2s3',
     releaseDate: new Date('2017-09-05').toISOString()
   },
   8: {
     name: 'White Noise',
-    color: '#005136',
+    color: '#006543',
     imageId: '6FvQKw65QzOqhVKxbjBg1Z/70ea9eb8865182504f74cfea10f88c0a/r6s-seasons-y2s4',
     releaseDate: new Date('2017-12-05').toISOString()
   },
   9: {
     name: 'Chimera',
-    color: '#c18e00',
+    color: '#ffc113',
     imageId: '35ZyIYUW7odr1tiGyGNd8R/8a578688e5c46ed779a382c940bf270b/rainbow6siege-chimera-thumb_318068',
     releaseDate: new Date('2018-03-06').toISOString()
   },
   10: {
     name: 'Para Bellum',
-    color: '#767f2e',
+    color: '#949f39',
     imageId: '522ZBrBzlJMoTi63hrwuna/3f9007ceaa80b8110fa282937309ac1e/rainbow6siege_parabellum_thumb_323480',
     releaseDate: new Date('2018-06-07').toISOString()
   },
   11: {
     name: 'Grim Sky',
-    color: '#36526e',
+    color: '#81a0c1',
     imageId: '4y07zikRXB4BcyRQy5Anoe/2e6de56c3ea34cadb300326102963340/rainbow6siege_grimsky_thumb_333789',
     releaseDate: new Date('2018-09-04').toISOString()
   },
   12: {
     name: 'Wind Bastion',
-    color: '#886a3f',
+    color: '#aa854f',
     imageId: '1VeuGBLdSsadK5MdLfCL9k/b9e213c4aeb8dfe6e1f137968770912a/rainbow6siege_windbastion_thumb_340468',
     releaseDate: new Date('2018-12-04').toISOString()
   },
   13: {
     name: 'Burnt Horizon',
-    color: '#a80048',
+    color: '#d2005a',
     imageId: '4J2E0yJ2cZsKgx5OrFGkvR/0f966f31b3d8ad2ef13926b075769334/r6s-seasons-y4s1',
     releaseDate: new Date('2019-03-06').toISOString()
   },
   14: {
     name: 'Phantom Sight',
-    color: '#263677',
+    color: '#304395',
     imageId: '29ze1Zxf173boRuyaFHuQV/c240df821c3ec407b09118c68a1300c0/r6s-seasons-y4s2',
     releaseDate: new Date('2019-06-11').toISOString()
   },
   15: {
     name: 'Ember Rise',
-    color: '#114f07',
+    color: '#156309',
     imageId: '1JeHAGdUglVNSUUvSkxSia/1c8b76a4256091ca40434e89addaacf2/r6s-seasons-y4s3',
     releaseDate: new Date('2019-09-11').toISOString()
   },
   16: {
     name: 'Shifting Tides',
-    color: '#067e8f',
+    color: '#089eb3',
     imageId: '6uZSbKGZiwF7Zv5egr4zks/5597030f075ad99c0a18a1dcea34ef87/r6s-seasons-y4s4',
     releaseDate: new Date('2019-12-03').toISOString()
   },
   17: {
     name: 'Void Edge',
-    color: '#755377',
+    color: '#946a97',
     imageId: '2584xuwMoCH1FJc9n34jLo/9dfec73fd217a889a7bfe66e1f412cd6/r6s-seasons-y5s1',
     releaseDate: new Date('2020-03-10').toISOString()
   },
   18: {
     name: 'Steel Wave',
-    color: '#22667c',
+    color: '#2b7f9b',
     imageId: '4soZ80QzL9WoLqvq8Hz647/d8d70312ec2849c276b459c3ef0482cd/r6s-seasons-y5s2',
     releaseDate: new Date('2020-06-16').toISOString()
   },
   19: {
     name: 'Shadow Legacy',
-    color: '#56840e',
+    color: '#6ca511',
     imageId: '5H87SAzADrzRmroVnJzuUE/2e73c489074b538055df0f793b4e1639/r6s-seasons-y5s3',
     releaseDate: new Date('2020-09-10').toISOString()
   },
   20: {
     name: 'Neon Dawn',
-    color: '#a73306',
+    color: '#d14007',
     imageId: '3vRTyOgSmwcUVxiOk60p3w/e2f41521df1f67704dae051d147a32cc/r6s-seasons-y5s4',
     releaseDate: new Date('2020-12-01').toISOString()
   },
   21: {
     name: 'Crimson Heist',
-    color: '#8a0000',
+    color: '#ac0000',
     imageId: '7iKoGngda7z0LyYpTT25zM/116efeb1c65cb9a356a3e9a42abe2ae3/R6_live_Y6S1_CrimsonHeist',
     releaseDate: new Date('2021-03-16').toISOString()
   },
   22: {
     name: 'North Star',
-    color: '#007d98',
+    color: '#009cbe',
     imageId: '38Lml8ltnO932wLqhC5xEA/493665084f757da8c91c01a0b99d2be3/r6s-seasons-y6s2',
     releaseDate: new Date('2021-06-14').toISOString()
   },
   23: {
     name: 'Crystal Guard',
-    color: '#cc8200',
+    color: '#ffa200',
     imageId: '5Rm9sfgVTz9KdTI1Jh4N6w/c2d66a871b6311fe26198553695e0cd1/r6s-seasons-y6s3',
     releaseDate: new Date('2021-09-07').toISOString()
   },
   24: {
     name: 'High Calibre',
-    color: '#465e1d',
+    color: '#587624',
     imageId: '4ysWCYtrfV6yEC10unxDeM/cdeb45fc738b78da77bb611b14ae7973/r6s-seasons-y6s4',
     releaseDate: new Date('2021-11-30').toISOString()
   },
   25: {
     name: 'Demon Veil',
-    color: '#b27400',
+    color: '#ffb52c',
     imageId: '6diil0gexoNXNCKtwpPPQZ/ace6f9e6e1e1578a2255ac0e5cb67b7c/r6s-seasons-y7s1',
     releaseDate: new Date('2022-03-15').toISOString()
   },
