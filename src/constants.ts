@@ -1199,6 +1199,17 @@ export const OPERATORS = {
       iconId: '1UDhKrAXnm0thdHhsTTAyo/03f6b0b4879208d963e6d551b86ad3a6/r6s-operator-ability-azami',
       stats: null
     }
+  },
+  'sens': {
+    name: 'Sens',
+    id: '',
+    role: 'attacker',
+    unit: 'SFG',
+    uniqueAbility: {
+      name: 'R.O.U. Projector System',
+      iconId: '4iEpghBKHF6bcQxAxRKsYU/0291dc89b6f7730720d1ea5650392a81/r6s-operator-ability-sens',
+      stats: null
+    }
   }
 };
 
