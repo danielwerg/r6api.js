@@ -6,16 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+* Vector Glare season
+* Sens operator
+
+### Changed
+* Updated seasons colors
+
 ## [4.1.0] - 2022-03-16
 
 ### Added
-* Demon Veil season and Azami
+* Demon Veil season
+* Azami operator
 * Azami icon
 
 ## [4.0.1] - 2022-02-14
 
 ### Fixed
-
 * `isWeaponName` function now correctly checks for the weapon `id`
 
 ## [4.0.0] - 2021-12-04
