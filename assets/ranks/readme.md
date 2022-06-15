@@ -27,8 +27,8 @@
 | `9`  | Chimera       | March 6, 2018     | 93 Days  |   | `22` | North Star     | June 14, 2021      | 85 Days  |
 | `10` | Para Bellum   | June 7, 2018      | 89 Days  |   | `23` | Crystal Guard  | September 7, 2021  | 84 Days  |
 | `11` | Grim Sky      | September 4, 2018 | 91 Days  |   | `24` | High Calibre   | November 30, 2021  | 105 Days |
-| `12` | Wind Bastion  | December 4, 2018  | 92 Days  |   | `25` | Demon Veil     | March 15, 2022     |          |
-| `13` | Burnt Horizon | March 6, 2019     | 97 Days  |   |      |                |                    |          |
+| `12` | Wind Bastion  | December 4, 2018  | 92 Days  |   | `25` | Demon Veil     | March 15, 2022     | 91 Days  |
+| `13` | Burnt Horizon | March 6, 2019     | 97 Days  |   | `26` | Vector Glare   | June 14, 2022      |          |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 

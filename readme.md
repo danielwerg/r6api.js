@@ -333,7 +333,7 @@ Ids limit: `200`
 
 | Param     | Type                           | Required | Default                                                     | Description                                                       |
 | --------- | ------------------------------ | -------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `25` or `-1` or `'all'`                       |
+| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `26` or `-1` or `'all'`                       |
 | regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                  | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
 | boardIds  | `string \| string[]`           | false    | `['pvp_ranked', 'pvp_casual', 'pvp_newcomer', 'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
 
@@ -343,18 +343,15 @@ Ids limit: `200`
 
 <!-- START_SECTION:SEASONS_TABLE -->
 
-| ID   | Name          | ● | ID   | Name           |
-| ---- | ------------- | - | ---- | -------------- |
-| `6`  | Health        |   | `16` | Shifting Tides |
-| `7`  | Blood Orchid  |   | `17` | Void Edge      |
-| `8`  | White Noise   |   | `18` | Steel Wave     |
-| `9`  | Chimera       |   | `19` | Shadow Legacy  |
-| `10` | Para Bellum   |   | `20` | Neon Dawn      |
-| `11` | Grim Sky      |   | `21` | Crimson Heist  |
-| `12` | Wind Bastion  |   | `22` | North Star     |
-| `13` | Burnt Horizon |   | `23` | Crystal Guard  |
-| `14` | Phantom Sight |   | `24` | High Calibre   |
-| `15` | Ember Rise    |   | `25` | Demon Veil     |
+| ID   | Name         | ● | ID   | Name           | ● | ID   | Name          |
+| ---- | ------------ | - | ---- | -------------- | - | ---- | ------------- |
+| `6`  | Health       |   | `13` | Burnt Horizon  |   | `20` | Neon Dawn     |
+| `7`  | Blood Orchid |   | `14` | Phantom Sight  |   | `21` | Crimson Heist |
+| `8`  | White Noise  |   | `15` | Ember Rise     |   | `22` | North Star    |
+| `9`  | Chimera      |   | `16` | Shifting Tides |   | `23` | Crystal Guard |
+| `10` | Para Bellum  |   | `17` | Void Edge      |   | `24` | High Calibre  |
+| `11` | Grim Sky     |   | `18` | Steel Wave     |   | `25` | Demon Veil    |
+| `12` | Wind Bastion |   | `19` | Shadow Legacy  |   | `26` | Vector Glare  |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 
@@ -407,12 +404,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '25': {
-        seasonId: 25,
-        seasonName: 'Demon Veil',
-        seasonColor: '#b27400',
-        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6diil0gexoNXNCKtwpPPQZ/ace6f9e6e1e1578a2255ac0e5cb67b7c/r6s-seasons-y7s1.jpg',
-        seasonReleaseDate: '2022-03-15T00:00:00.000Z',
+      '26': {
+        seasonId: 26,
+        seasonName: 'Vector Glare',
+        seasonColor: '#60cdb0',
+        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6aBRsquEEKV2Ix2W7HK8P2/7a808507bcb933364d2dbcd6f80714fd/r6s-vectorglare-thumb.jpg',
+        seasonReleaseDate: '2022-06-14T00:00:00.000Z',
         regions: {
           emea: {
             regionId: 'emea',
@@ -421,12 +418,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
               pvp_ranked: {
                 boardId: 'pvp_ranked',
                 boardName: 'Ranked',
-                skillMean: 30.4486517674,
-                skillStdev: 7.6092138478,
+                skillMean: 28.6854005388,
+                skillStdev: 7.7598549438,
                 current: {
                   id: 0,
                   name: 'Unranked',
-                  mmr: 3045,
+                  mmr: 2869,
                   icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png'
                 },
                 max: {
@@ -442,10 +439,10 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
                   skillStdevChange: 0
                 },
                 pastSeasons: {
-                  wins: 2142,
-                  losses: 2003,
-                  winRate: '51.68%',
-                  matches: 4145,
+                  wins: 2216,
+                  losses: 2076,
+                  winRate: '51.63%',
+                  matches: 4292,
                   abandons: 18
                 },
                 previousMmr: 0,
@@ -606,8 +603,8 @@ await r6api.getStatus();
     mdm: '14922',
     category: 'Instance',
     platform: 'PS4',
-    status: 'Interrupted',
-    maintenance: true,
+    status: 'Online',
+    maintenance: null,
     impactedFeatures: []
   },
   {
@@ -617,8 +614,8 @@ await r6api.getStatus();
     mdm: '25365',
     category: 'Instance',
     platform: 'PS5',
-    status: 'Interrupted',
-    maintenance: true,
+    status: 'Online',
+    maintenance: null,
     impactedFeatures: []
   },
   {

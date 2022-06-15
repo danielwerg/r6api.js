@@ -2,12 +2,12 @@
   {
     "id": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
     "seasons": {
-      "25": {
-        "seasonId": 25,
-        "seasonName": "Demon Veil",
-        "seasonColor": "#b27400",
-        "seasonImage": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6diil0gexoNXNCKtwpPPQZ/ace6f9e6e1e1578a2255ac0e5cb67b7c/r6s-seasons-y7s1.jpg",
-        "seasonReleaseDate": "2022-03-15T00:00:00.000Z",
+      "26": {
+        "seasonId": 26,
+        "seasonName": "Vector Glare",
+        "seasonColor": "#60cdb0",
+        "seasonImage": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6aBRsquEEKV2Ix2W7HK8P2/7a808507bcb933364d2dbcd6f80714fd/r6s-vectorglare-thumb.jpg",
+        "seasonReleaseDate": "2022-06-14T00:00:00.000Z",
         "regions": {
           "emea": {
             "regionId": "emea",
@@ -16,12 +16,12 @@
               "pvp_ranked": {
                 "boardId": "pvp_ranked",
                 "boardName": "Ranked",
-                "skillMean": 30.4486517674,
-                "skillStdev": 7.6092138478,
+                "skillMean": 28.6854005388,
+                "skillStdev": 7.7598549438,
                 "current": {
                   "id": 0,
                   "name": "Unranked",
-                  "mmr": 3045,
+                  "mmr": 2869,
                   "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png"
                 },
                 "max": {
@@ -37,10 +37,10 @@
                   "skillStdevChange": 0
                 },
                 "pastSeasons": {
-                  "wins": 2142,
-                  "losses": 2003,
-                  "winRate": "51.68%",
-                  "matches": 4145,
+                  "wins": 2216,
+                  "losses": 2076,
+                  "winRate": "51.63%",
+                  "matches": 4292,
                   "abandons": 18
                 },
                 "previousMmr": 0,
