@@ -1,6 +1,6 @@
 {
   "name": "r6api.js",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "Node.js wrapper around Rainbow Six: Siege API.",
   "author": "Daniel Sandberg",
   "license": "MIT",
