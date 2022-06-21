@@ -14,9 +14,7 @@ import {
 } from './constants';
 
 export const getAvatarURL = (id: UUID | null, size = 256) =>
-  id
-    ? `${AVATARS_URL}/${id}/default_${size === 500 ? 'tall' : `${size}_${size}`}.png`
-    : `${AVATARS_URL}/default_${size === 500 ? 'tall' : `${size}_${size}`}.png`;
+  `${AVATARS_URL}/${id}/default_${size === 500 ? 'tall' : `${size}_${size}`}.png`;
 
 export const getAvatars = (id: UUID | null) => ({
   146: getAvatarURL(id, 146), 256: getAvatarURL(id, 256), 500: getAvatarURL(id, 500)
