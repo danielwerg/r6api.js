@@ -216,7 +216,7 @@ export const isRankIdV5 = (value: number): value is RankIdV5 =>
   Object.keys(RANKS_V5).map(rank => Number(rank)).includes(value);
 
 export const isOperatorName = (value: string): value is OperatorName =>
-  Object.values(OPERATORS).map(op => op.name).includes(value);
+  Object.keys(OPERATORS).includes(value);
 
 export const isWeaponTypeIndex = (value: string): value is WeaponTypeIndex =>
   Object.keys(WEAPONTYPES).includes(value);
