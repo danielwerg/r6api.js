@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.2.1] - 2022-06-27
+
+### Fixed
+
+* Inconsistency with the `isOperatorName` utility function ([71ea801](https://github.com/danielwerg/r6api.js/commit/71ea80181505d5adaac524e793c255f33f933cb3))
+
 ## [4.2.0] - 2022-06-16
 
 ### Added
@@ -131,7 +137,8 @@ Forgot to build for v2.0.1
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.2.0...master
+[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.2.1...master
+[4.2.1]: https://github.com/danielwerg/r6api.js/compare/v4.2.0...v4.2.1
 [4.2.0]: https://github.com/danielwerg/r6api.js/compare/v4.1.0...v4.2.0
 [4.1.0]: https://github.com/danielwerg/r6api.js/compare/v4.0.1...v4.1.0
 [4.0.1]: https://github.com/danielwerg/r6api.js/compare/v4.0.0...v4.0.1
