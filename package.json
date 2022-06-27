@@ -13,11 +13,13 @@
   },
   "scripts": {
     "build": "rimraf dist && tsc",
+    "build:prepare": "[ -d \"dist/\" ] || npm run build",
     "example": "yarn build && ts-node --project scripts/tsconfig.json scripts/example",
     "methods": "ts-node scripts/methods",
     "tables": "ts-node scripts/tables",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "npm run build:prepare"
   },
   "dependencies": {
     "node-fetch": "^2.6.7"
