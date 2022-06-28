@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.3.0] - 2022-06-28
+
+### Added
+
+* [`prepare`](https://docs.npmjs.com/cli/v8/using-npm/scripts#prepare-and-prepublish) script that will check if `dist` dir exists and if not runs `build` script on `npm install` or `yarn install`, only relevant when installing from GitHub
+
 ## [4.2.1] - 2022-06-27
 
 ### Fixed
@@ -137,7 +143,8 @@ Forgot to build for v2.0.1
 * `response.js` script
 * `.npmignore`
 
-[Unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.2.1...master
+[unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.3.0...master
+[4.3.0]: https://github.com/danielwerg/r6api.js/compare/v4.2.1...v4.3.0
 [4.2.1]: https://github.com/danielwerg/r6api.js/compare/v4.2.0...v4.2.1
 [4.2.0]: https://github.com/danielwerg/r6api.js/compare/v4.1.0...v4.2.0
 [4.1.0]: https://github.com/danielwerg/r6api.js/compare/v4.0.1...v4.1.0
