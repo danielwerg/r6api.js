@@ -166,7 +166,7 @@
   resolved "https://registry.yarnpkg.com/@types/stringify-object/-/stringify-object-3.3.1.tgz#9ee394931e63468de0412a8e19c9f021a7d1d24d"
   integrity sha512-bpCBW0O+QrMLNFBY/+rkZtGzcYRmc2aTD8qYHOMNUmednqETfEZtFcGEA11l9xqbIeiT1PgXG0eq3zqayVzZSQ==
 
-"@typescript-eslint/eslint-plugin@^5.29.0":
+"@typescript-eslint/eslint-plugin@^5.30.0":
   version "5.30.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.30.0.tgz#524a11e15c09701733033c96943ecf33f55d9ca1"
   integrity sha512-lvhRJ2pGe2V9MEU46ELTdiHgiAFZPKtLhiU5wlnaYpMc2+c1R8fh8i80ZAa665drvjHKUJyRRGg3gEm1If54ow==
@@ -181,7 +181,7 @@
     semver "^7.3.7"
     tsutils "^3.21.0"
 
-"@typescript-eslint/parser@^5.29.0":
+"@typescript-eslint/parser@^5.30.0":
   version "5.30.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.30.0.tgz#a2184fb5f8ef2bf1db0ae61a43907e2e32aa1b8f"
   integrity sha512-2oYYUws5o2liX6SrFQ5RB88+PuRymaM2EU02/9Ppoyu70vllPnHVO7ioxDdq/ypXHA277R04SVjxvwI8HmZpzA==
