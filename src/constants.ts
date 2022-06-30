@@ -1434,7 +1434,7 @@ export const WEAPONS = <const>{
   },
   'm249_saw': {
     name: 'M249 SAW', id: '2902BB7B8C', category: 'lmg',
-    iconId: '7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249'
+    iconId: '3p0oG7GsLIoHaRullf7xsF/e2a9e135af63e8897355023cd34538c4/M249_SAW'
   },
   'dp27': {
     name: 'DP27', id: '296F8FC698', category: 'lmg',
