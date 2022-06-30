@@ -1,5 +1,5 @@
 {
-  "total": 737,
+  "total": 739,
   "limit": 1,
   "categories": "all",
   "media": "all",
@@ -11,25 +11,24 @@
   ],
   "items": [
     {
-      "id": "WMZAPCb9G1eRoz8QLBg4j",
-      "title": "Get your squad back together to earn big rewards!",
-      "abstract": "It is time to rally your former teammates and get your Squad back together to earn free Operators and an exotic weapon skin with the Squad Up Reactivation program.",
+      "id": "1uZdddmRtdurvyiLb1PLjY",
+      "title": "Arcade Game Mode: Golden Gun Team Deathmatch",
+      "abstract": "From June 28th to July 5th, the action will take you around Coastline, Close Quarter and Neighborhood in a Team Deathmatch with a very special weapon: the Golden Gun.",
       "thumbnail": {
-        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/k3GNIuBRJPvZOXiiYHyjm/a203ae8692f9a8a6b99531f7b457029c/TWT_16_9_960x540_UK.jpg",
+        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2sn08AlMZdoMISRpgUX2Yf/84ff72c16df4296a8b82ae83a7b18cb3/r6s_golden_gun.jpg",
         "description": ""
       },
-      "content": "It is time to rally your former teammates and get your Squad back together to earn free Operators and an exotic weapon skin with the Squad Up Reactivation program. \n\nUntil September 5th, players who have played Siege in Year 7 (after March 15th, 2022) will be able to invite up to four former teammates who have not played during Year 7 (before March 15th, 2022) to participate in the program. \n\nAfter playing five matches together, in any PVP game mode, both players will earn big rewards. Players inviting their former teammates will earn rewards for each of their four friends completing the program: from new Year 6 Operators,a new exotic weapon skin or other fallback rewards including Battle Pass points if they already own those Operators. \n\nEach returning invited player will unlock a Year 4 or Year 5 Operator or other fallback rewards. Then, they can bring back four more players themselves, play the five matches, and boom. Even more rewards!\n\n[Invite your friends now and learn more about the Squad Up Reactivation program.](https://rainbow6.com/friendreferral)",
+      "content": "Golden Gun is back with a twist! Arcade game modes are playlists that offer small scale gameplay modifiers for a limited time, and each might come back in the future if the community likes it. In this one, you will find yourself playing on three maps with a dangerous weapon that requires you to make every shot count.\n\n__From June 28th to July 5th, master the Golden Gun!__\n\n### ARCADE RULES\n\nIn this Arcade game mode, the action will take you around Coastline, Close Quarter and Neighborhood in a Team Deathmatch with a very special weapon: the Golden Gun. There are two things that make it very special. First, every bullet that finds its mark will instantly kill that Operator. Second, the gun only holds one bullet at a time, which means you must reload after every shot. Make every bullet count because you have no other weapons or gadgets at your disposal!  \n\nThe list of Operators has been curated for the event due to changes in main weapon, secondary weapon and gadgets. Those participating will see their speed increased to the maximum rating, keeping things fast paced and action-packed!   \n\nDuring the Golden Gun Team Deathmatch, your goal is to be the first team to reach 75 kills! The same basic rules of Deathmatch still apply, such as number of rounds and respawn parameters, so get ready to feel your adrenalin pumping.\n\n### D-50 WEAPON SKIN\n\nThis golden weapon skin, called Extravagance, will be available to unlock for the D-50 with either 12500 Renown or 300 R6 Credits. However, you will need to snag it quickly because the D-50 skin will only be available for the duration of the Arcade game mode!\n",
       "description": null,
       "categories": [
-        "rainbow-six-siege",
-        "game-updates"
+        "rainbow-six-siege"
       ],
       "tag": "BR-rainbow-six GA-siege",
       "placement": null,
       "type": "news",
-      "readTime": 1,
-      "url": "https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/WMZAPCb9G1eRoz8QLBg4j/get-your-squad-back-together-to-earn-big-rewards",
-      "date": "Tue Jun 21 2022 23:00:00 GMT+0000 (Coordinated Universal Time)"
+      "readTime": 2,
+      "url": "https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/1uZdddmRtdurvyiLb1PLjY/arcade-game-mode-golden-gun-team-deathmatch",
+      "date": "Tue Jun 28 2022 14:00:00 GMT+0000 (Coordinated Universal Time)"
     }
   ]
 }
