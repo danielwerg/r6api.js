@@ -1216,6 +1216,17 @@ export const OPERATORS = {
       iconId: '4iEpghBKHF6bcQxAxRKsYU/0291dc89b6f7730720d1ea5650392a81/r6s-operator-ability-sens',
       stats: null
     }
+  },
+  'grim': {
+    name: 'Grim',
+    id: '',
+    role: 'attacker',
+    unit: 'NIGHTHAVEN',
+    uniqueAbility: {
+      name: 'Kawan Hive Launcher',
+      iconId: '2Ws6ae13XPN5rcsw0WVt3d/d338fc7e22de9c2f620137d85ac4e29b/r6s-operator-ability-grim',
+      stats: null
+    }
   }
 };
 
