@@ -195,6 +195,12 @@ export const SEASONS = <const>{
     color: '#60cdb0',
     imageId: '6aBRsquEEKV2Ix2W7HK8P2/7a808507bcb933364d2dbcd6f80714fd/r6s-vectorglare-thumb',
     releaseDate: new Date('2022-06-14').toISOString()
+  },
+  27: {
+    name: 'Brutal Swarm',
+    color: '#dac925',
+    imageId: '35vqSFGr4xn1JnNVetTsyh/e9c46f34157897dc96988432991a1e52/r6s-seasons-y7s3__2_',
+    releaseDate: new Date('2022-09-06').toISOString()
   }
 };
 
