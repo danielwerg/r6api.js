@@ -1973,6 +1973,29 @@
             "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4iEpghBKHF6bcQxAxRKsYU/0291dc89b6f7730720d1ea5650392a81/r6s-operator-ability-sens.png",
             "stats": null
           }
+        },
+        "grim": {
+          "name": "Grim",
+          "role": "attacker",
+          "unit": "NIGHTHAVEN",
+          "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/operators/grim.png",
+          "kills": 0,
+          "deaths": 0,
+          "kd": 0,
+          "wins": 0,
+          "losses": 0,
+          "winRate": "0.00%",
+          "matches": 0,
+          "headshots": 0,
+          "meleeKills": 0,
+          "dbno": 0,
+          "xp": 0,
+          "playtime": 0,
+          "uniqueAbility": {
+            "name": "Kawan Hive Launcher",
+            "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2Ws6ae13XPN5rcsw0WVt3d/d338fc7e22de9c2f620137d85ac4e29b/r6s-operator-ability-grim.png",
+            "stats": null
+          }
         }
       },
       "weapons": {
@@ -2568,7 +2591,7 @@
             },
             "m249_saw": {
               "name": "M249 SAW",
-              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249.png",
+              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3p0oG7GsLIoHaRullf7xsF/e2a9e135af63e8897355023cd34538c4/M249_SAW.png",
               "kills": 30,
               "deaths": 19,
               "kd": 1.58,
@@ -5200,6 +5223,28 @@
             "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4iEpghBKHF6bcQxAxRKsYU/0291dc89b6f7730720d1ea5650392a81/r6s-operator-ability-sens.png",
             "stats": null
           }
+        },
+        "grim": {
+          "name": "Grim",
+          "role": "attacker",
+          "unit": "NIGHTHAVEN",
+          "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/operators/grim.png",
+          "kills": 0,
+          "deaths": 0,
+          "kd": 0,
+          "wins": 0,
+          "losses": 0,
+          "winRate": "0.00%",
+          "matches": 0,
+          "headshots": 0,
+          "meleeKills": 0,
+          "xp": 0,
+          "playtime": 0,
+          "uniqueAbility": {
+            "name": "Kawan Hive Launcher",
+            "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2Ws6ae13XPN5rcsw0WVt3d/d338fc7e22de9c2f620137d85ac4e29b/r6s-operator-ability-grim.png",
+            "stats": null
+          }
         }
       },
       "weapons": {
@@ -5795,7 +5840,7 @@
             },
             "m249_saw": {
               "name": "M249 SAW",
-              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249.png",
+              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3p0oG7GsLIoHaRullf7xsF/e2a9e135af63e8897355023cd34538c4/M249_SAW.png",
               "kills": 27,
               "deaths": 0,
               "kd": 27,

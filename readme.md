@@ -333,7 +333,7 @@ Ids limit: `200`
 
 | Param     | Type                           | Required | Default                                                     | Description                                                       |
 | --------- | ------------------------------ | -------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `26` or `-1` or `'all'`                       |
+| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `27` or `-1` or `'all'`                       |
 | regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                  | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
 | boardIds  | `string \| string[]`           | false    | `['pvp_ranked', 'pvp_casual', 'pvp_newcomer', 'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
 
@@ -343,15 +343,19 @@ Ids limit: `200`
 
 <!-- START_SECTION:SEASONS_TABLE -->
 
-| ID   | Name         | ● | ID   | Name           | ● | ID   | Name          |
-| ---- | ------------ | - | ---- | -------------- | - | ---- | ------------- |
-| `6`  | Health       |   | `13` | Burnt Horizon  |   | `20` | Neon Dawn     |
-| `7`  | Blood Orchid |   | `14` | Phantom Sight  |   | `21` | Crimson Heist |
-| `8`  | White Noise  |   | `15` | Ember Rise     |   | `22` | North Star    |
-| `9`  | Chimera      |   | `16` | Shifting Tides |   | `23` | Crystal Guard |
-| `10` | Para Bellum  |   | `17` | Void Edge      |   | `24` | High Calibre  |
-| `11` | Grim Sky     |   | `18` | Steel Wave     |   | `25` | Demon Veil    |
-| `12` | Wind Bastion |   | `19` | Shadow Legacy  |   | `26` | Vector Glare  |
+| ID   | Name           | ● | ID   | Name          |
+| ---- | -------------- | - | ---- | ------------- |
+| `6`  | Health         |   | `17` | Void Edge     |
+| `7`  | Blood Orchid   |   | `18` | Steel Wave    |
+| `8`  | White Noise    |   | `19` | Shadow Legacy |
+| `9`  | Chimera        |   | `20` | Neon Dawn     |
+| `10` | Para Bellum    |   | `21` | Crimson Heist |
+| `11` | Grim Sky       |   | `22` | North Star    |
+| `12` | Wind Bastion   |   | `23` | Crystal Guard |
+| `13` | Burnt Horizon  |   | `24` | High Calibre  |
+| `14` | Phantom Sight  |   | `25` | Demon Veil    |
+| `15` | Ember Rise     |   | `26` | Vector Glare  |
+| `16` | Shifting Tides |   | `27` | Brutal Swarm  |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 
@@ -404,12 +408,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '26': {
-        seasonId: 26,
-        seasonName: 'Vector Glare',
-        seasonColor: '#60cdb0',
-        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6aBRsquEEKV2Ix2W7HK8P2/7a808507bcb933364d2dbcd6f80714fd/r6s-vectorglare-thumb.jpg',
-        seasonReleaseDate: '2022-06-14T00:00:00.000Z',
+      '27': {
+        seasonId: 27,
+        seasonName: 'Brutal Swarm',
+        seasonColor: '#dac925',
+        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/35vqSFGr4xn1JnNVetTsyh/e9c46f34157897dc96988432991a1e52/r6s-seasons-y7s3__2_.jpg',
+        seasonReleaseDate: '2022-09-06T00:00:00.000Z',
         regions: {
           emea: {
             regionId: 'emea',
@@ -418,12 +422,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
               pvp_ranked: {
                 boardId: 'pvp_ranked',
                 boardName: 'Ranked',
-                skillMean: 28.6854005388,
-                skillStdev: 7.7598549438,
+                skillMean: 29.9476130075,
+                skillStdev: 7.6548063879,
                 current: {
                   id: 0,
                   name: 'Unranked',
-                  mmr: 2869,
+                  mmr: 2995,
                   icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png'
                 },
                 max: {
@@ -439,10 +443,10 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
                   skillStdevChange: 0
                 },
                 pastSeasons: {
-                  wins: 2216,
-                  losses: 2076,
-                  winRate: '51.63%',
-                  matches: 4292,
+                  wins: 2249,
+                  losses: 2104,
+                  winRate: '51.67%',
+                  matches: 4353,
                   abandons: 18
                 },
                 previousMmr: 0,
@@ -680,17 +684,8 @@ await r6api.getUserStatus('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 [
   {
     userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    status: 'online',
-    applications: [
-      {
-        id: '685a3038-2b04-47ee-9c5a-6403381a46aa',
-        name: null,
-        platform: null,
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2022-06-30T05:52:08.0285494Z',
-        lastModifiedAt: '2022-06-30T05:52:08.0285494Z'
-      }
-    ],
+    status: 'offline',
+    applications: [],
     manuallySet: null
   }
 ]
@@ -891,7 +886,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 739,
+  total: 746,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -903,24 +898,29 @@ await r6api.getNews({ limit: 1 });
   ],
   items: [
     {
-      id: '1uZdddmRtdurvyiLb1PLjY',
-      title: 'Arcade Game Mode: Golden Gun Team Deathmatch',
-      abstract: 'From June 28th to July 5th, the action will take you around Coastline, Close Quarter and Neighborhood in a Team Deathmatch with a very special weapon: the Golden Gun.',
+      id: '3487NcAXKzJKRZPnFxzUxT',
+      title: 'New Rainbow Six Siege Streamer Charms for Y7S3!',
+      abstract: 'Announcing the next Y7S3 Streamer Charms!',
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2sn08AlMZdoMISRpgUX2Yf/84ff72c16df4296a8b82ae83a7b18cb3/r6s_golden_gun.jpg',
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/33y0EfDYEFXvwpYwHxCstg/ccc5877c39f67d8ae6d952a6f05c2fea/Y7S3.StreamerCharms1.Header.png',
         description: ''
       },
-      content: 'Golden Gun is back with a twist! Arcade game modes are playlists that offer small scale gameplay modifiers for a limited time, and each might come back in the future if the community likes it. In this one, you will find yourself playing on three maps with a dangerous weapon that requires you to make every shot count.\n\n__From June 28th to July 5th, master the Golden Gun!__\n\n### ARCADE RULES\n\nIn this Arcade game mode, the action will take you around Coastline, Close Quarter and Neighborhood in a Team Deathmatch with a very special weapon: the Golden Gun. There are two things that make it very special. First, every bullet that finds its mark will instantly kill that Operator. Second, the gun only holds one bullet at a time, which means you must reload after every shot. Make every bullet count because you have no other weapons or gadgets at your disposal!  \n\nThe list of Operators has been curated for the event due to changes in main weapon, secondary weapon and gadgets. Those participating will see their speed increased to the maximum rating, keeping things fast paced and action-packed!   \n\nDuring the Golden Gun Team Deathmatch, your goal is to be the first team to reach 75 kills! The same basic rules of Deathmatch still apply, such as number of rounds and respawn parameters, so get ready to feel your adrenalin pumping.\n\n### D-50 WEAPON SKIN\n\nThis golden weapon skin, called Extravagance, will be available to unlock for the D-50 with either 12500 Renown or 300 R6 Credits. However, you will need to snag it quickly because the D-50 skin will only be available for the duration of the Arcade game mode!\n',
+      content: '## Announcing the next Streamer Charms!\n\nEach season will bring the release of new charms, as well as a return of the streamer’s charms from previous seasons!\n\n# New\n\n![[R6S] News Article - Y7S2 Streamer Charms 06062022](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/33y0EfDYEFXvwpYwHxCstg/774713452fd967ac228e66f8adac7c9f/Y7S3.StreamerCharms1.Header.png)\n\n[FoxA](https://www.twitch.tv/foxa_r6)\n\n[Nerdengenheiro](https://www.twitch.tv/nerdengenheiro)\n\n[Rainbow6itacom](https://www.twitch.tv/rainbow6itacom)\n\n[Minimichegga](https://www.twitch.tv/minimichegga)\n\n## Returning\n\n![[R6S][News] New Rainbow Six Siege Streamer Charms For Y7S2 2 - August 2022](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7ulCfEF4hIixzp6M6gGVD0/c8b65a32aab94a569d7fc02ec49f96be/Y7S3.StreamerCharms2.png)     \n![[R6S][News] New Rainbow Six Siege Streamer Charms For Y7S2 - Streamer Charms 3 updated](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7qhtatztRolj1nvlXeOFoQ/133149e6bf44b3ad79e62c9c9b31214e/Y7S3.StreamerCharms3_Updated.png)      \n![[R6S][News] New Rainbow Six Siege Streamer Charms For Y7S2 4 - August 2022](//staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2ZvGGaoBDvhtVhMExoobdC/d326148508e58577eb24097fb137616e/Y7S3.StreamerCharms4.png)\n\n[Ad9m](https://www.twitch.tv/ad9m)\n[Alfredoplays](https://www.twitch.tv/alfredoplays)\n[AnneMunition](https://www.twitch.tv/annemunition)\n[Beaulo](https://www.twitch.tv/beaulo)\n[Bighead](https://www.twitch.tv/bighead033)\n[BikiniBodhi](https://www.twitch.tv/bikinibodhi)\n[Bnans](https://www.twitch.tv/bnans)\n[Braction](https://www.twitch.tv/bractionfps)\n[CCSesports](https://www.twitch.tv/ccsesports)\n[Drid](https://www.twitch.tv/dridgg) \n[FastAnne](https://www.twitch.tv/fastanne)\n[Gabbo](https://www.twitch.tv/JustGabbo)\n[Galadriex](https://www.twitch.tv/galadriex)\n[Get_Flanked](https://www.twitch.tv/GetFlanked)\n[Heideltraut](https://www.twitch.tv/heideltraut)\n[Interro](https://www.twitch.tv/interro)\n[JerichoFive](https://www.twitch.tv/jerichofive)\n[JessGOAT](https://www.twitch.tv/jessgoat)\n[Jynxzi](https://www.twitch.tv/jynxzi)\n[Just9n](https://www.twitch.tv/just9n)\n[Kalera](https://www.twitch.tv/Kalera)\n[KingGeorge](https://www.twitch.tv/KingGeorge)\n[KittyR6](https://www.twitch.tv/kitty_r6)\n[LagonisR6](https://www.twitch.tv/lagonis)\n[Lil_Lexi](https://www.twitch.tv/lil_lexi)\n[Lt Custard](https://www.twitch.tv/lt_custard)\n[Lusorkoeffizient](https://www.twitch.tv/lusorkoeffizient)\n[MacieJay](https://www.twitch.tv/MacieJay)\n[Mag6](https://www.twitch.tv/mag6)\n[M3RYLAND](https://www.twitch.tv/M3RYLAND)\n[Matimi0](https://www.twitch.tv/matimi0)\n[MrBboy45](https://www.twitch.tv/mrbboy45)\n[Narcoleptic Nugget](https://www.twitch.tv/narcolepticnugget)\n[Nesk](https://www.twitch.tv/neskwga)\n[PaladinAmber](https://www.twitch.tv/paladinamber)\n[Patife](https://www.twitch.tv/patife)\n[Pengu](https://www.twitch.tv/pengu)\n[Punjistick](https://www.twitch.tv/punjistick)\n[RazaH](https://www.twitch.tv/razah)\n[REMGURI / 렘쨩](https://www.twitch.tv/remguri)\n[Rubsarb](https://www.twitch.tv/Rubsarb/)\n[SexyCake](https://www.twitch.tv/smexycake)\n[Sha77e](https://www.twitch.tv/sha77etv)\n[Shorty](https://www.twitch.tv/shortyyguy)\n[shroud](https://www.twitch.tv/shroud)\n[SilphTV](https://www.twitch.tv/silphtv)\n[Sixquatre](https://www.twitch.tv/sixquatre)\n[TangyD](https://www.twitch.tv/tangyd)\n[Tatted](https://www.twitch.tv/tatted)\n[Thaqil](https://www.twitch.tv/thaqil)\n[Tranth](https://www.twitch.tv/tranth)\n[Varsity](https://www.twitch.tv/varsitygaming)\n[WhiteShark67](https://www.twitch.tv/whiteshark67)\n[yo_boy_roy](https://www.twitch.tv/yo_boy_roy)\n[z1ronic](https://www.twitch.tv/zironicdk)\n[Zander](https://www.twitch.tv/zander)\n[ziGueira](https://www.twitch.tv/zigueira)\n[GarfieldIsDoc](https://www.twitch.tv/garfield)\n[Supr](https://www.twitch.tv/supr)\n[RyyFyy](https://www.twitch.tv/ryyfyy)\n[GCGamerOficial](https://www.twitch.tv/gcgameroficial)\n\n## How to acquire charms\n\nThese charms are only available by subscribing to the respective streamer’s Twitch channel with a linked Ubisoft account. For more information on how to link your Ubisoft and Twitch account, as well as opt in for Twitch Drops, please refer to [this FAQ](https://support.ubi.com/Faqs/000035432/Get-your-Twitch-Streamer-s-charm).\n\n## How to get involved\n\nWe are always on the lookout for additional content creators to add to the program. If your goal is to see your charm in game, we use the following criteria to begin the selection process for potential candidates:\n\nThis is an evolving program so to reflect this, the following requirements have been adjusted.\n\n__Requirements to be considered__\n-	Approximately 150+ concurrent viewers.\n-	Average of 10 Rainbow Six streams per month.\n-	Average of 20 hours of Rainbow Six streamed per month.\n-	Positive standing with Ubisoft/Rainbow Six Siege.\n-	High quality level of content.\n-	Twitch Partnered.\n-	Rainbow Six Siege reserves the right for final decision.\n\n__Consideration for Removal__\n-	Less than 10 Rainbow Six Siege main streams over 3 months.\n-	Level of quality dropping below an acceptable level.\n- 	Standing with Rainbow Six Siege/Ubisoft compromised.\n-	Any actions that may negatively affect the R6S/Ubisoft brand.\n-	Loss of Twitch Partnership.\n-	Rainbow Six Siege reserves the right for removal of any charms.',
       description: undefined,
       categories: [
+        'news',
+        'game-updates',
+        'rainbow-six',
         'rainbow-six-siege'
       ],
       tag: 'BR-rainbow-six GA-siege',
-      placement: null,
+      placement: [
+        'featured-news-article'
+      ],
       type: 'news',
       readTime: 2,
-      url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/1uZdddmRtdurvyiLb1PLjY/arcade-game-mode-golden-gun-team-deathmatch',
-      date: 'Tue Jun 28 2022 14:00:00 GMT+0000 (Coordinated Universal Time)'
+      url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/3487NcAXKzJKRZPnFxzUxT/new-rainbow-six-siege-streamer-charms-for-y7s3',
+      date: 'Fri Sep 02 2022 16:45:00 GMT+0000 (Coordinated Universal Time)'
     }
   ]
 }
