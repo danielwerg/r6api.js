@@ -6,11 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.4.0] - 2022-09-06
+
 ### Added
 
 * Brutal Swarm season
 * Grim operator
 * Grim icon
+
+### Fixed
+
+* Icon for M249 SAW
 
 ## [4.3.0] - 2022-06-28
 
@@ -149,7 +155,8 @@ Forgot to build for v2.0.1
 * `response.js` script
 * `.npmignore`
 
-[unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.3.0...master
+[unreleased]: https://github.com/danielwerg/r6api.js/compare/v4.4.0...master
+[4.4.0]: https://github.com/danielwerg/r6api.js/compare/v4.3.0...v4.4.0
 [4.3.0]: https://github.com/danielwerg/r6api.js/compare/v4.2.1...v4.3.0
 [4.2.1]: https://github.com/danielwerg/r6api.js/compare/v4.2.0...v4.2.1
 [4.2.0]: https://github.com/danielwerg/r6api.js/compare/v4.1.0...v4.2.0
