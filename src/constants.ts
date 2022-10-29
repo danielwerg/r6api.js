@@ -1317,10 +1317,6 @@ export const WEAPONS = <const>{
     name: 'SPEAR .308', id: 'BE99AD3BD', category: 'assault',
     iconId: '29LjYuJ4s6yA8k9Uv2u28C/89ec812559e7d74b7c269279f4c46d92/Spear_.308'
   },
-  'ar-15.50': {
-    name: 'AR-15.50', id: '1EFE80F033', category: 'assault',
-    iconId: '4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50'
-  },
   'm4': {
     name: 'M4', id: '1EFE81B5D5', category: 'assault',
     iconId: '3jhi90ycmuc8mAiuSXFoCi/bcf354459e7becd6ede52ee97917c832/M4'
@@ -1478,6 +1474,10 @@ export const WEAPONS = <const>{
   'mk_14_ebr': {
     name: 'Mk 14 EBR', id: '128C5259FA', category: 'marksman',
     iconId: '6KIMqp5dA95z1RI3PrG9jv/eb939638169811a3fa858a44e6e5d97e/Mk_14_EBR'
+  },
+  'ar-15.50': {
+    name: 'AR-15.50', id: '1EFE80F033', category: 'marksman',
+    iconId: '4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50'
   },
   'csrx_300': {
     name: 'CSRX 300', id: '33E28FCCA0', category: 'marksman',
