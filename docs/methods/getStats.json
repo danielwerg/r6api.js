@@ -2209,17 +2209,6 @@
               "bulletsConnected": 2062,
               "timesChosen": 39
             },
-            "ar-15.50": {
-              "name": "AR-15.50",
-              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50.png",
-              "kills": 2,
-              "deaths": 6,
-              "kd": 0.33,
-              "headshots": 1,
-              "bulletsFired": 0,
-              "bulletsConnected": 33,
-              "timesChosen": 2
-            },
             "m4": {
               "name": "M4",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3jhi90ycmuc8mAiuSXFoCi/bcf354459e7becd6ede52ee97917c832/M4.png",
@@ -2679,6 +2668,17 @@
               "bulletsFired": 0,
               "bulletsConnected": 491,
               "timesChosen": 54
+            },
+            "ar-15.50": {
+              "name": "AR-15.50",
+              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50.png",
+              "kills": 2,
+              "deaths": 6,
+              "kd": 0.33,
+              "headshots": 1,
+              "bulletsFired": 0,
+              "bulletsConnected": 33,
+              "timesChosen": 2
             },
             "csrx_300": {
               "name": "CSRX 300",
@@ -5458,17 +5458,6 @@
               "bulletsConnected": 1664,
               "timesChosen": 3
             },
-            "ar-15.50": {
-              "name": "AR-15.50",
-              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50.png",
-              "kills": 43,
-              "deaths": 0,
-              "kd": 43,
-              "headshots": 21,
-              "bulletsFired": 231,
-              "bulletsConnected": 118,
-              "timesChosen": 1
-            },
             "m4": {
               "name": "M4",
               "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3jhi90ycmuc8mAiuSXFoCi/bcf354459e7becd6ede52ee97917c832/M4.png",
@@ -5928,6 +5917,17 @@
               "bulletsFired": 1879,
               "bulletsConnected": 795,
               "timesChosen": 4
+            },
+            "ar-15.50": {
+              "name": "AR-15.50",
+              "icon": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50.png",
+              "kills": 43,
+              "deaths": 0,
+              "kd": 43,
+              "headshots": 21,
+              "bulletsFired": 231,
+              "bulletsConnected": 118,
+              "timesChosen": 1
             },
             "csrx_300": {
               "name": "CSRX 300",
