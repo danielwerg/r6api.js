@@ -201,6 +201,12 @@ export const SEASONS = <const>{
     color: '#dac925',
     imageId: '35vqSFGr4xn1JnNVetTsyh/e9c46f34157897dc96988432991a1e52/r6s-seasons-y7s3__2_',
     releaseDate: new Date('2022-09-06').toISOString()
+  },
+  28: {
+    name: 'Solar Raid',
+    color: '#d03314',
+    imageId: '1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart',
+    releaseDate: new Date('2022-12-06').toISOString()
   }
 };
 
