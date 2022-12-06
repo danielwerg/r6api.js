@@ -4,20 +4,44 @@
     "status": "online",
     "applications": [
       {
-        "id": "e3d5ea9e-50bd-43b7-88bf-39794f4e3d40",
-        "name": "Tom Clancy's Rainbow Six Siege",
-        "platform": "PC",
-        "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-        "createdAt": "2022-10-29T02:55:31.4005354Z",
-        "lastModifiedAt": "2022-10-29T02:55:31.4005354Z"
-      },
-      {
         "id": "685a3038-2b04-47ee-9c5a-6403381a46aa",
         "name": null,
         "platform": null,
         "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-        "createdAt": "2022-10-29T05:12:41.8001025Z",
-        "lastModifiedAt": "2022-10-29T05:12:41.8001025Z"
+        "createdAt": "2022-12-06T20:22:13.3088098Z",
+        "lastModifiedAt": "2022-12-06T20:22:13.3088098Z"
+      },
+      {
+        "id": "f68a4bb5-608a-4ff2-8123-be8ef797e0a6",
+        "name": null,
+        "platform": null,
+        "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+        "createdAt": "2022-12-06T21:32:42.7377977Z",
+        "lastModifiedAt": "2022-12-06T21:32:42.7377977Z"
+      },
+      {
+        "id": "83564d31-7cd7-4bc0-a763-6524e78d1a7f",
+        "name": null,
+        "platform": null,
+        "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+        "createdAt": "2022-12-06T21:33:45.584517Z",
+        "lastModifiedAt": "2022-12-06T21:33:45.584517Z"
+      },
+      {
+        "id": "e3d5ea9e-50bd-43b7-88bf-39794f4e3d40",
+        "name": "Tom Clancy's Rainbow Six Siege",
+        "platform": "PC",
+        "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+        "createdAt": "2022-12-06T21:33:46.7096156Z",
+        "lastModifiedAt": "2022-12-06T21:33:46.7096156Z"
+      },
+      {
+        "id": "3587dcbb-7f81-457c-9781-0e3f29f6f56a",
+        "name": null,
+        "platform": null,
+        "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+        "createdAt": "2022-12-06T22:21:29.4981695Z",
+        "lastModifiedAt": "2022-12-06T22:21:29.4981695Z"
       }
     ],
     "manuallySet": null

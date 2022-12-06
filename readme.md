@@ -333,7 +333,7 @@ Ids limit: `200`
 
 | Param     | Type                           | Required | Default                                                     | Description                                                       |
 | --------- | ------------------------------ | -------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `27` or `-1` or `'all'`                       |
+| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `28` or `-1` or `'all'`                       |
 | regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                  | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
 | boardIds  | `string \| string[]`           | false    | `['pvp_ranked', 'pvp_casual', 'pvp_newcomer', 'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
 
@@ -345,17 +345,18 @@ Ids limit: `200`
 
 | ID   | Name           | ● | ID   | Name          |
 | ---- | -------------- | - | ---- | ------------- |
-| `6`  | Health         |   | `17` | Void Edge     |
-| `7`  | Blood Orchid   |   | `18` | Steel Wave    |
-| `8`  | White Noise    |   | `19` | Shadow Legacy |
-| `9`  | Chimera        |   | `20` | Neon Dawn     |
-| `10` | Para Bellum    |   | `21` | Crimson Heist |
-| `11` | Grim Sky       |   | `22` | North Star    |
-| `12` | Wind Bastion   |   | `23` | Crystal Guard |
-| `13` | Burnt Horizon  |   | `24` | High Calibre  |
-| `14` | Phantom Sight  |   | `25` | Demon Veil    |
-| `15` | Ember Rise     |   | `26` | Vector Glare  |
-| `16` | Shifting Tides |   | `27` | Brutal Swarm  |
+| `6`  | Health         |   | `18` | Steel Wave    |
+| `7`  | Blood Orchid   |   | `19` | Shadow Legacy |
+| `8`  | White Noise    |   | `20` | Neon Dawn     |
+| `9`  | Chimera        |   | `21` | Crimson Heist |
+| `10` | Para Bellum    |   | `22` | North Star    |
+| `11` | Grim Sky       |   | `23` | Crystal Guard |
+| `12` | Wind Bastion   |   | `24` | High Calibre  |
+| `13` | Burnt Horizon  |   | `25` | Demon Veil    |
+| `14` | Phantom Sight  |   | `26` | Vector Glare  |
+| `15` | Ember Rise     |   | `27` | Brutal Swarm  |
+| `16` | Shifting Tides |   | `28` | Solar Raid    |
+| `17` | Void Edge      |   |      |               |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 
@@ -687,20 +688,44 @@ await r6api.getUserStatus('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
     status: 'online',
     applications: [
       {
-        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
-        name: 'Tom Clancy\'s Rainbow Six Siege',
-        platform: 'PC',
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2022-10-29T02:55:31.4005354Z',
-        lastModifiedAt: '2022-10-29T02:55:31.4005354Z'
-      },
-      {
         id: '685a3038-2b04-47ee-9c5a-6403381a46aa',
         name: null,
         platform: null,
         profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2022-10-29T05:12:41.8001025Z',
-        lastModifiedAt: '2022-10-29T05:12:41.8001025Z'
+        createdAt: '2022-12-06T20:22:13.3088098Z',
+        lastModifiedAt: '2022-12-06T20:22:13.3088098Z'
+      },
+      {
+        id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
+        name: null,
+        platform: null,
+        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+        createdAt: '2022-12-06T21:32:42.7377977Z',
+        lastModifiedAt: '2022-12-06T21:32:42.7377977Z'
+      },
+      {
+        id: '83564d31-7cd7-4bc0-a763-6524e78d1a7f',
+        name: null,
+        platform: null,
+        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+        createdAt: '2022-12-06T21:33:45.584517Z',
+        lastModifiedAt: '2022-12-06T21:33:45.584517Z'
+      },
+      {
+        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
+        name: 'Tom Clancy\'s Rainbow Six Siege',
+        platform: 'PC',
+        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+        createdAt: '2022-12-06T21:33:46.7096156Z',
+        lastModifiedAt: '2022-12-06T21:33:46.7096156Z'
+      },
+      {
+        id: '3587dcbb-7f81-457c-9781-0e3f29f6f56a',
+        name: null,
+        platform: null,
+        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+        createdAt: '2022-12-06T22:21:29.4981695Z',
+        lastModifiedAt: '2022-12-06T22:21:29.4981695Z'
       }
     ],
     manuallySet: null
