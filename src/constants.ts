@@ -1233,6 +1233,17 @@ export const OPERATORS = {
       iconId: '2Ws6ae13XPN5rcsw0WVt3d/d338fc7e22de9c2f620137d85ac4e29b/r6s-operator-ability-grim',
       stats: null
     }
+  },
+  'solis': {
+    name: 'Solis',
+    id: '',
+    role: 'defender',
+    unit: 'AFEAU',
+    uniqueAbility: {
+      name: 'SPEC-IO Electro-Sensor',
+      iconId: '6yJdnB2YJGY5lMh9mmKIQT/62bb946eb6bd2583b1c78255cab72ac9/r6s-operator-ability-solis',
+      stats: null
+    }
   }
 };
 
