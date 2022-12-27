@@ -60,7 +60,6 @@ To setup this package, you need to provide Ubisoft account credentials (email an
 ## Example
 
 <!-- START_SECTION:EXAMPLE -->
-
 ```js
 require('dotenv').config();
 const R6API = require('r6api.js').default;
@@ -75,6 +74,7 @@ const r6api = new R6API({ email, password });
 
 // export default async () => { // ES6
 exports.default = async () => {
+
   const username = 'Daniel.Nt';
   const platform = 'uplay';
 
@@ -83,14 +83,13 @@ exports.default = async () => {
 
   const { 0: stats } = await r6api.getStats(platform, player.id);
   if (!stats) return 'Stats not found';
-  const {
-    pvp: { general }
-  } = stats;
+  const { pvp: { general } } = stats;
 
   return `${player.username} has played ${general.matches} matches.`;
-};
-```
 
+};
+
+```
 <!-- END_SECTION:EXAMPLE -->
 
 <!-- START_SECTION:EXAMPLE_OUTPUT -->
@@ -349,20 +348,20 @@ Ids limit: `200`
 
 <!-- START_SECTION:SEASONS_TABLE -->
 
-| ID   | Name           | ●   | ID   | Name          |
-| ---- | -------------- | --- | ---- | ------------- |
-| `6`  | Health         |     | `18` | Steel Wave    |
-| `7`  | Blood Orchid   |     | `19` | Shadow Legacy |
-| `8`  | White Noise    |     | `20` | Neon Dawn     |
-| `9`  | Chimera        |     | `21` | Crimson Heist |
-| `10` | Para Bellum    |     | `22` | North Star    |
-| `11` | Grim Sky       |     | `23` | Crystal Guard |
-| `12` | Wind Bastion   |     | `24` | High Calibre  |
-| `13` | Burnt Horizon  |     | `25` | Demon Veil    |
-| `14` | Phantom Sight  |     | `26` | Vector Glare  |
-| `15` | Ember Rise     |     | `27` | Brutal Swarm  |
-| `16` | Shifting Tides |     | `28` | Solar Raid    |
-| `17` | Void Edge      |     |      |               |
+| ID   | Name           | ● | ID   | Name          |
+| ---- | -------------- | - | ---- | ------------- |
+| `6`  | Health         |   | `18` | Steel Wave    |
+| `7`  | Blood Orchid   |   | `19` | Shadow Legacy |
+| `8`  | White Noise    |   | `20` | Neon Dawn     |
+| `9`  | Chimera        |   | `21` | Crimson Heist |
+| `10` | Para Bellum    |   | `22` | North Star    |
+| `11` | Grim Sky       |   | `23` | Crystal Guard |
+| `12` | Wind Bastion   |   | `24` | High Calibre  |
+| `13` | Burnt Horizon  |   | `25` | Demon Veil    |
+| `14` | Phantom Sight  |   | `26` | Vector Glare  |
+| `15` | Ember Rise     |   | `27` | Brutal Swarm  |
+| `16` | Shifting Tides |   | `28` | Solar Raid    |
+| `17` | Void Edge      |   |      |               |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 
@@ -1169,7 +1168,7 @@ await r6api.getNews({ limit: 1 });
       abstract: 'Happy Holidays from the Rainbow Six Siege team!  ',
       thumbnail: {
         url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6GBH9GZennq2REUcKWSrEU/01653a2f124e74b2c12fbcc25cbe8f71/R6S_Blogpost_2022-12_Holiday_Pack.jpg',
-        description: null
+        description: ''
       },
       content: 'It\'s that time of the year again - Happy Holidays from the Rainbow Six Siege team!  \n\nTo celebrate the festive season, we have a special surprise for you: \n\nEvery player connecting to the game __between December 22nd, 2022, and January 3rd, 2023,__ will be awarded a free Holiday Pack! \n\nThe Holiday Pack will be accessible in the Pack section on the home screen. Once activated, players will receive one free Operator from Year 1-7. This Operator will be randomly selected and will not include any Operators that the player has already unlocked.  \n\nThose who already own all Operators will receive a brand-new free headgear and uniform for the Operator Ying, as well as a brand-new signature weapon skin - holiday-themed of course! \n\nWe hope you enjoy this little gift from the team, and we wish you a great start to the new year.',
       description: undefined,
@@ -1181,7 +1180,7 @@ await r6api.getNews({ limit: 1 });
       type: 'news',
       readTime: 1,
       url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/3XYWbFClpxnuEiNBmrF3zl/rainbow-six-siege-holiday-pack-2022',
-      date: '2022-12-22T17:00:00.000Z'
+      date: 'Thu Dec 22 2022 17:00:00 GMT+0000 (Coordinated Universal Time)'
     }
   ]
 }
