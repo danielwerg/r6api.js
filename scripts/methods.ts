@@ -48,6 +48,8 @@ import { insertContent, isFileExists } from './utils';
     .catch(err => console.error(err));
   const getRanks = await r6api.getRanks(platform, id, { regionIds: 'emea', boardIds: 'pvp_ranked' })
     .catch(err => console.error(err));
+  const getUserSeasonalv2 = await r6api.getUserSeasonalv2(id)
+    .catch(err => console.error(err));
   const getStats = await r6api.getStats(platform, id)
     .catch(err => console.error(err));
   const getStatus = await r6api.getStatus()
@@ -74,6 +76,7 @@ import { insertContent, isFileExists } from './utils';
     ['getProgression', getProgression],
     ['getPlaytime', getPlaytime],
     ['getRanks', getRanks],
+    ['getUserSeasonalv2', getUserSeasonalv2],
     ['getStats', getStats],
     ['getStatus', getStatus],
     ['getUserStatus', getUserStatus],

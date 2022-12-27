@@ -1,4 +1,5 @@
-export const ubiAppId = '3587dcbb-7f81-457c-9781-0e3f29f6f56a';
+// 3587dcbb-7f81-457c-9781-0e3f29f6f56a
+export const ubiAppId = 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40';
 
 export const UBISERVICES_URL = 'https://public-ubiservices.ubi.com';
 export const STATUS_URL = 'https://game-status-api.ubisoft.com';
@@ -313,7 +314,7 @@ export const RANKS_V4 = <const>[
   { name: 'Champions', id: 23, range: [5000, Infinity] }
 ];
 
-/** Crystal Guard (23) - latest */
+/** Crystal Guard (23) - Brutal Swarm (27) */
 export const RANKS_V5 = <const>[
   { name: 'Unranked', id: 0, range: [null, null] },
   { name: 'Copper 5', id: 1, range: [-Infinity, 1199] },
@@ -341,6 +342,47 @@ export const RANKS_V5 = <const>[
   { name: 'Diamond 2', id: 23, range: [4400, 4699] },
   { name: 'Diamond 1', id: 24, range: [4700, 4999] },
   { name: 'Champions', id: 25, range: [5000, Infinity] }
+];
+
+/** Solar Raid (28) - latest */
+export const RANKS_V6 = <const>[
+  { name: 'Unranked', id: 0, range: [ 0, 999 ] },
+  { name: 'Copper 5', id: 1, range: [ 1000, 1099 ] },
+  { name: 'Copper 4', id: 2, range: [ 1100, 1199 ] },
+  { name: 'Copper 3', id: 3, range: [ 1200, 1299 ] },
+  { name: 'Copper 2', id: 4, range: [ 1300, 1399 ] },
+  { name: 'Copper 1', id: 5, range: [ 1400, 1499 ] },
+  { name: 'Bronze 5', id: 6, range: [ 1500, 1599 ] },
+  { name: 'Bronze 4', id: 7, range: [ 1600, 1699 ] },
+  { name: 'Bronze 3', id: 8, range: [ 1700, 1799 ] },
+  { name: 'Bronze 2', id: 9, range: [ 1800, 1899 ] },
+  { name: 'Bronze 1', id: 10, range: [ 1900, 1999 ] },
+  { name: 'Silver 5', id: 11, range: [ 2000, 2099 ] },
+  { name: 'Silver 4', id: 12, range: [ 2100, 2199 ] },
+  { name: 'Silver 3', id: 13, range: [ 2200, 2299 ] },
+  { name: 'Silver 2', id: 14, range: [ 2300, 2399 ] },
+  { name: 'Silver 1', id: 15, range: [ 2400, 2499 ] },
+  { name: 'Gold 5', id: 16, range: [ 2500, 2599 ] },
+  { name: 'Gold 4', id: 17, range: [ 2600, 2699 ] },
+  { name: 'Gold 3', id: 18, range: [ 2700, 2799 ] },
+  { name: 'Gold 2', id: 19, range: [ 2800, 2899 ] },
+  { name: 'Gold 1', id: 20, range: [ 2900, 2999 ] },
+  { name: 'Platinum 5', id: 21, range: [ 3000, 3099 ] },
+  { name: 'Platinum 4', id: 22, range: [ 3100, 3199 ] },
+  { name: 'Platinum 3', id: 23, range: [ 3200, 3299 ] },
+  { name: 'Platinum 2', id: 24, range: [ 3300, 3399 ] },
+  { name: 'Platinum 1', id: 25, range: [ 3400, 3499 ] },
+  { name: 'Emerald 5', id: 26, range: [ 3500, 3599 ] },
+  { name: 'Emerald 4', id: 27, range: [ 3600, 3699 ] },
+  { name: 'Emerald 3', id: 28, range: [ 3700, 3799 ] },
+  { name: 'Emerald 2', id: 29, range: [ 3800, 3899 ] },
+  { name: 'Emerald 1', id: 30, range: [ 3900, 3999 ] },
+  { name: 'Diamond 5', id: 31, range: [ 4000, 4099 ] },
+  { name: 'Diamond 4', id: 32, range: [ 4100, 4199 ] },
+  { name: 'Diamond 3', id: 33, range: [ 4200, 4299 ] },
+  { name: 'Diamond 2', id: 34, range: [ 4300, 4399 ] },
+  { name: 'Diamond 1', id: 35, range: [ 4400, 4499 ] },
+  { name: 'Champions', id: 36, range: [ 4500, Infinity ] }
 ];
 
 export const OPERATORS = {

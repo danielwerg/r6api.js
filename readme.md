@@ -27,21 +27,21 @@
 
 ## Table of Contents
 
-* [Links](#Links)
-* [Installation](#Installation)
-* [Initialization](#Initialization)
-* [Example](#Example)
-* [API](#API)
-* [Typescript Integrations](#TypeScript-integrations)
-* [Credit](#Credit)
+- [Links](#Links)
+- [Installation](#Installation)
+- [Initialization](#Initialization)
+- [Example](#Example)
+- [API](#API)
+- [Typescript Integrations](#TypeScript-integrations)
+- [Credit](#Credit)
 
 ## Links
 
-* [GitHub](https://github.com/danielwerg/r6api.js)
-* [NPM](https://www.npmjs.com/package/r6api.js)
-* [YARN](https://yarnpkg.com/package/r6api.js)
-* [Releases](https://github.com/danielwerg/r6api.js/releases)
-* [Changelog](https://github.com/danielwerg/r6api.js/blob/master/changelog.md)
+- [GitHub](https://github.com/danielwerg/r6api.js)
+- [NPM](https://www.npmjs.com/package/r6api.js)
+- [YARN](https://yarnpkg.com/package/r6api.js)
+- [Releases](https://github.com/danielwerg/r6api.js/releases)
+- [Changelog](https://github.com/danielwerg/r6api.js/blob/master/changelog.md)
 
 ## Installation
 
@@ -60,6 +60,7 @@ To setup this package, you need to provide Ubisoft account credentials (email an
 ## Example
 
 <!-- START_SECTION:EXAMPLE -->
+
 ```js
 require('dotenv').config();
 const R6API = require('r6api.js').default;
@@ -74,7 +75,6 @@ const r6api = new R6API({ email, password });
 
 // export default async () => { // ES6
 exports.default = async () => {
-
   const username = 'Daniel.Nt';
   const platform = 'uplay';
 
@@ -83,41 +83,45 @@ exports.default = async () => {
 
   const { 0: stats } = await r6api.getStats(platform, player.id);
   if (!stats) return 'Stats not found';
-  const { pvp: { general } } = stats;
+  const {
+    pvp: { general }
+  } = stats;
 
   return `${player.username} has played ${general.matches} matches.`;
-
 };
-
 ```
+
 <!-- END_SECTION:EXAMPLE -->
 
 <!-- START_SECTION:EXAMPLE_OUTPUT -->
+
 ```
 Daniel.Nt has played 5648 matches.
 ```
+
 <!-- END_SECTION:EXAMPLE_OUTPUT -->
 
 ## API
 
 ### Table of Contents
 
-* [Definitions](#Definitions)
-* [constructor](#constructor)
-* [findByUsername](#findByUsername)
-* [findById](#findById)
-* [getProgression](#getProgression)
-* [getPlaytime](#getPlaytime)
-* [getRanks](#getRanks)
-* [getStats](#getStats)
-* [getStatus](#getStatus)
-* [getUserStatus](#getUserStatus)
-* [getProfileApplications](#getProfileApplications)
-* [getApplications](#getApplications)
-* [validateUsername](#validateUsername)
-* [getNews](#getNews)
-* [getNewsById](#getNewsById)
-* [custom](#custom)
+- [Definitions](#Definitions)
+- [constructor](#constructor)
+- [findByUsername](#findByUsername)
+- [findById](#findById)
+- [getProgression](#getProgression)
+- [getPlaytime](#getPlaytime)
+- [getRanks](#getRanks)
+- [getUserSeasonalv2](#getUserSeasonalv2)
+- [getStats](#getStats)
+- [getStatus](#getStatus)
+- [getUserStatus](#getUserStatus)
+- [getProfileApplications](#getProfileApplications)
+- [getApplications](#getApplications)
+- [validateUsername](#validateUsername)
+- [getNews](#getNews)
+- [getNewsById](#getNewsById)
+- [custom](#custom)
 
 ### Definitions
 
@@ -175,12 +179,12 @@ await r6api.findByUsername('uplay', 'Daniel.Nt');
     platform: 'uplay',
     username: 'Daniel.Nt',
     avatar: {
-      '146': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
-      '256': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
-      '500': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
+      146: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
+      256: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
+      500: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
     }
   }
-]
+];
 ```
 
 </details>
@@ -210,7 +214,9 @@ Ids limit: `50`
 // search by profileId (id)
 await r6api.findById('all', '91477729-b5ac-463c-9618-03ca154764f5');
 // search by userId
-await r6api.findById('all', '1baf5bf8-90cd-4ead-8b90-9a11cb2b8adf', { isUserId: true });
+await r6api.findById('all', '1baf5bf8-90cd-4ead-8b90-9a11cb2b8adf', {
+  isUserId: true
+});
 // search by idOnPlatform
 await r6api.findById('xbl', '2535406338711362');
 ```
@@ -232,12 +238,12 @@ await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
     platform: 'uplay',
     username: 'Daniel.Nt',
     avatar: {
-      '146': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
-      '256': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
-      '500': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
+      146: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
+      256: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
+      500: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
     }
   }
-]
+];
 ```
 
 </details>
@@ -276,7 +282,7 @@ await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
       general: 292574
     }
   }
-]
+];
 ```
 
 </details>
@@ -311,7 +317,7 @@ await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
       percent: '8.20%'
     }
   }
-]
+];
 ```
 
 </details>
@@ -343,22 +349,24 @@ Ids limit: `200`
 
 <!-- START_SECTION:SEASONS_TABLE -->
 
-| ID   | Name           | ● | ID   | Name          |
-| ---- | -------------- | - | ---- | ------------- |
-| `6`  | Health         |   | `18` | Steel Wave    |
-| `7`  | Blood Orchid   |   | `19` | Shadow Legacy |
-| `8`  | White Noise    |   | `20` | Neon Dawn     |
-| `9`  | Chimera        |   | `21` | Crimson Heist |
-| `10` | Para Bellum    |   | `22` | North Star    |
-| `11` | Grim Sky       |   | `23` | Crystal Guard |
-| `12` | Wind Bastion   |   | `24` | High Calibre  |
-| `13` | Burnt Horizon  |   | `25` | Demon Veil    |
-| `14` | Phantom Sight  |   | `26` | Vector Glare  |
-| `15` | Ember Rise     |   | `27` | Brutal Swarm  |
-| `16` | Shifting Tides |   | `28` | Solar Raid    |
-| `17` | Void Edge      |   |      |               |
+| ID   | Name           | ●   | ID   | Name          |
+| ---- | -------------- | --- | ---- | ------------- |
+| `6`  | Health         |     | `18` | Steel Wave    |
+| `7`  | Blood Orchid   |     | `19` | Shadow Legacy |
+| `8`  | White Noise    |     | `20` | Neon Dawn     |
+| `9`  | Chimera        |     | `21` | Crimson Heist |
+| `10` | Para Bellum    |     | `22` | North Star    |
+| `11` | Grim Sky       |     | `23` | Crystal Guard |
+| `12` | Wind Bastion   |     | `24` | High Calibre  |
+| `13` | Burnt Horizon  |     | `25` | Demon Veil    |
+| `14` | Phantom Sight  |     | `26` | Vector Glare  |
+| `15` | Ember Rise     |     | `27` | Brutal Swarm  |
+| `16` | Shifting Tides |     | `28` | Solar Raid    |
+| `17` | Void Edge      |     |      |               |
 
 <!-- END_SECTION:SEASONS_TABLE -->
+
+> **Note:** Use `getUserSeasonalv2 for Solar Raid and beyond.
 
 > **Note:** `-1` will always return current season
 
@@ -391,13 +399,15 @@ Ids limit: `200`
 
 > **Note:** Returns empty array if `boardId` is `pvp_newcomer` and `seasonId` is `21` or above
 
-> **Note:** `topRankPosition` will always return `0` if board is *not* `'pvp_ranked'`
+> **Note:** `topRankPosition` will always return `0` if board is _not_ `'pvp_ranked'`
 
 > **Note:** Ubisoft doesn't provide data for seasons before Operation Health (6) if board is `pvp_ranked`, Ember Rise (15) if board is `pvp_casual`, Wind Bastion (12) if board is `pvp_event` or Shifting Tides (16) if board is `pvp_event`
 
-
 ```js
-await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionIds: 'emea', boardIds: 'pvp_ranked' })
+await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', {
+  regionIds: 'emea',
+  boardIds: 'pvp_ranked'
+});
 ```
 
 <!-- START_SECTION:GETRANKS_OUTPUT -->
@@ -409,11 +419,12 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
   {
     id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     seasons: {
-      '27': {
+      27: {
         seasonId: 27,
         seasonName: 'Brutal Swarm',
         seasonColor: '#dac925',
-        seasonImage: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/35vqSFGr4xn1JnNVetTsyh/e9c46f34157897dc96988432991a1e52/r6s-seasons-y7s3__2_.jpg',
+        seasonImage:
+          'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/35vqSFGr4xn1JnNVetTsyh/e9c46f34157897dc96988432991a1e52/r6s-seasons-y7s3__2_.jpg',
         seasonReleaseDate: '2022-09-06T00:00:00.000Z',
         regions: {
           emea: {
@@ -469,17 +480,271 @@ await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', { regionId
       }
     }
   }
-]
+];
 ```
 
 </details>
 <!-- END_SECTION:GETRANKS_OUTPUT -->
 
-> **Note:** `kills`, `deaths`, `kd`, `topRankPosition` and everything under `lastMatch` only available  for seasons including and after Phantom Sight (14) for older seasons it will return `0` or `'unknown'` in case of `lastMatch.result`
+> **Note:** `kills`, `deaths`, `kd`, `topRankPosition` and everything under `lastMatch` only available for seasons including and after Phantom Sight (14) for older seasons it will return `0` or `'unknown'` in case of `lastMatch.result`
 
 > **Note:** If player is unranked their max mmr (`max.mmr`) will always be `0` (it's always `0` for casual)
 
 > **Note:** Values for `previousMmr`, `nextMmr`, `topRankPosition`, `max.id` and `max.mmr` will always be `0`, `max.name` will always be `Unranked` if `boardId` is `pvp_casual`
+
+---
+
+### getUserSeasonalv2
+
+Get user seasonal v2
+
+```ts
+await r6api.getUserSeasonalv2('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+```
+
+<!-- START_SECTION:GETUSERSEASONALV2_OUTPUT -->
+<details>
+<summary>Output</summary>
+
+```js
+[
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platformCrossplay: 'pc',
+    seasonId: 28,
+    boardSlug: 'casual',
+    rank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    maxRank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    topRankPosition: 0,
+    kills: 20,
+    deaths: 8,
+    kd: 2.5,
+    wins: 2,
+    losses: 0,
+    winRate: '100.00%',
+    abandons: 8,
+    matches: 10
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platformCrossplay: 'pc',
+    seasonId: 28,
+    boardSlug: 'event',
+    rank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    maxRank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    winRate: '0.00%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platformCrossplay: 'pc',
+    seasonId: 28,
+    boardSlug: 'warmup',
+    rank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    maxRank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    winRate: '0.00%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platformCrossplay: 'pc',
+    seasonId: 28,
+    boardSlug: 'ranked',
+    rank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 1000,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 1000
+    },
+    maxRank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 1000,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 1000
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    winRate: '0.00%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platformCrossplay: 'console',
+    seasonId: 28,
+    boardSlug: 'casual',
+    rank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    maxRank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    winRate: '0.00%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platformCrossplay: 'console',
+    seasonId: 28,
+    boardSlug: 'event',
+    rank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    maxRank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    winRate: '0.00%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platformCrossplay: 'console',
+    seasonId: 28,
+    boardSlug: 'warmup',
+    rank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    maxRank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 0,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 0
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    winRate: '0.00%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platformCrossplay: 'console',
+    seasonId: 28,
+    boardSlug: 'ranked',
+    rank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 1000,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 1000
+    },
+    maxRank: {
+      id: 0,
+      name: 'Unranked',
+      mmr: 1000,
+      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
+      rp: 1000
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    winRate: '0.00%',
+    abandons: 0,
+    matches: 0
+  }
+];
+```
+
+</details>
+<!-- END_SECTION:GETUSERSEASONALV2_OUTPUT -->
 
 ---
 
@@ -550,7 +815,7 @@ await r6api.getStats('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
       modes: [Object]
     }
   }
-]
+];
 ```
 
 </details>
@@ -645,7 +910,7 @@ await r6api.getStatus();
     maintenance: null,
     impactedFeatures: []
   }
-]
+];
 ```
 
 </details>
@@ -685,52 +950,11 @@ await r6api.getUserStatus('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
 [
   {
     userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    status: 'online',
-    applications: [
-      {
-        id: '685a3038-2b04-47ee-9c5a-6403381a46aa',
-        name: null,
-        platform: null,
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2022-12-06T20:22:13.3088098Z',
-        lastModifiedAt: '2022-12-06T20:22:13.3088098Z'
-      },
-      {
-        id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
-        name: null,
-        platform: null,
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2022-12-06T21:32:42.7377977Z',
-        lastModifiedAt: '2022-12-06T21:32:42.7377977Z'
-      },
-      {
-        id: '83564d31-7cd7-4bc0-a763-6524e78d1a7f',
-        name: null,
-        platform: null,
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2022-12-06T21:33:45.584517Z',
-        lastModifiedAt: '2022-12-06T21:33:45.584517Z'
-      },
-      {
-        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
-        name: 'Tom Clancy\'s Rainbow Six Siege',
-        platform: 'PC',
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2022-12-06T21:33:46.7096156Z',
-        lastModifiedAt: '2022-12-06T21:33:46.7096156Z'
-      },
-      {
-        id: '3587dcbb-7f81-457c-9781-0e3f29f6f56a',
-        name: null,
-        platform: null,
-        profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-        createdAt: '2022-12-06T22:21:29.4981695Z',
-        lastModifiedAt: '2022-12-06T22:21:29.4981695Z'
-      }
-    ],
+    status: 'offline',
+    applications: [],
     manuallySet: null
   }
-]
+];
 ```
 
 </details>
@@ -789,7 +1013,7 @@ await r6api.getProfileApplications('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
       },
       {
         id: 'a427a342-56bb-437b-b835-fa695c75893b',
-        name: 'Tom Clancy\'s Rainbow Six Siege - Test Server',
+        name: "Tom Clancy's Rainbow Six Siege - Test Server",
         platform: 'PC',
         sessionsPlayed: 137,
         daysPlayed: 72,
@@ -798,7 +1022,7 @@ await r6api.getProfileApplications('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
       },
       {
         id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
-        name: 'Tom Clancy\'s Rainbow Six Siege',
+        name: "Tom Clancy's Rainbow Six Siege",
         platform: 'PC',
         sessionsPlayed: 2344,
         daysPlayed: 1221,
@@ -816,7 +1040,7 @@ await r6api.getProfileApplications('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
       }
     ]
   }
-]
+];
 ```
 
 </details>
@@ -844,11 +1068,11 @@ await r6api.getApplications('e3d5ea9e-50bd-43b7-88bf-39794f4e3d40');
 [
   {
     id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
-    name: 'Tom Clancy\'s Rainbow Six Siege',
+    name: "Tom Clancy's Rainbow Six Siege",
     platform: 'PC',
     spaceId: '5172a557-50b5-4665-b7db-e3f2e8c5041d'
   }
-]
+];
 ```
 
 </details>
@@ -928,7 +1152,7 @@ await r6api.getNews({ limit: 1 });
 
 ```js
 {
-  total: 755,
+  total: 771,
   limit: 1,
   categories: 'all',
   media: 'all',
@@ -940,25 +1164,24 @@ await r6api.getNews({ limit: 1 });
   ],
   items: [
     {
-      id: '4m6ZlSwqfny2omxtwCkwG0',
-      title: 'Game Health Toxicity: Reputation Update',
-      abstract: 'An update on Reputation Penalties and the Reputation Center.',
+      id: '3XYWbFClpxnuEiNBmrF3zl',
+      title: 'RAINBOW SIX SIEGE HOLIDAY PACK 2022',
+      abstract: 'Happy Holidays from the Rainbow Six Siege team!  ',
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/28xcaBvBxiZg06EUmW3jRP/280d85a653772d5c423183f6a345d1d2/GameHealth.Toxicity_header_960x540.png',
-        description: ''
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6GBH9GZennq2REUcKWSrEU/01653a2f124e74b2c12fbcc25cbe8f71/R6S_Blogpost_2022-12_Holiday_Pack.jpg',
+        description: null
       },
-      content: '## REPUTATION PENALTIES UPDATE\n\n__What Is It?__      \nThe written chat penalty aims to reduce unwanted communication and the impact that top offenders have on others in our game by triggering counter measures when repeated abuse is detected.\n\n__Expected Penalty Behavior__      \nPlayers who engage with a high amount of text chat abuse will firstly receive warnings. If the offense continues after two warnings, the written chat penalty will be triggered, leading to the player\'s outgoing text chat being muted to others by default for the next 30 matches.\n\n__Current State__      \nCurrently the system is in a grace period and during this period players will only receive warnings. Once over, players who did not adjust or amend their ways of communicating, will be sanctioned. We\'ll continue to monitor and improve this feature.\n\n## REPUTATION CENTER\n\n__What Is It?__      \nThe Reputation Center in its current release displays information about a player\'s active penalties and their remaining duration. As the Reputation system evolves, this section will update to display more information about a player\'s Reputation as well as active penalties.\n\n__Where To Find It__      \nWith two penalties being live, a Reputation tile has been added to the Home section, below the Alpha Packs tile. This tile will display the number of active penalties and provide access to the Reputation Center.',
+      content: 'It\'s that time of the year again - Happy Holidays from the Rainbow Six Siege team!  \n\nTo celebrate the festive season, we have a special surprise for you: \n\nEvery player connecting to the game __between December 22nd, 2022, and January 3rd, 2023,__ will be awarded a free Holiday Pack! \n\nThe Holiday Pack will be accessible in the Pack section on the home screen. Once activated, players will receive one free Operator from Year 1-7. This Operator will be randomly selected and will not include any Operators that the player has already unlocked.  \n\nThose who already own all Operators will receive a brand-new free headgear and uniform for the Operator Ying, as well as a brand-new signature weapon skin - holiday-themed of course! \n\nWe hope you enjoy this little gift from the team, and we wish you a great start to the new year.',
       description: undefined,
       categories: [
-        'rainbow-six-siege',
-        'anti-cheat'
+        'rainbow-six-siege'
       ],
       tag: 'BR-rainbow-six GA-siege',
       placement: null,
       type: 'news',
-      readTime: 2,
-      url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/4m6ZlSwqfny2omxtwCkwG0/game-health-toxicity-reputation-update',
-      date: 'Thu Oct 27 2022 23:00:00 GMT+0000 (Coordinated Universal Time)'
+      readTime: 1,
+      url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/3XYWbFClpxnuEiNBmrF3zl/rainbow-six-siege-holiday-pack-2022',
+      date: '2022-12-22T17:00:00.000Z'
     }
   ]
 }
@@ -1045,7 +1268,8 @@ Useful if you're familiar with Rainbow Six Siege's API; this method will make a 
 ```js
 await r6api.custom(
   utils.URLS.STATS(
-    'uplay', ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'],
+    'uplay',
+    ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'],
     'operatorpvp_clash_sloweddown'
   )
 );
@@ -1078,7 +1302,7 @@ For a full list of supporting IDEs, please see [here](https://github.com/Microso
 If you're coding in TypeScript you can also import the typings and use the type-checking functions provided in the utils.
 
 ```ts
-import R6API, { utils, typings, constants } from 'r6api.js'
+import R6API, { utils, typings, constants } from 'r6api.js';
 
 const yourVar = 'r4-c'; // any
 

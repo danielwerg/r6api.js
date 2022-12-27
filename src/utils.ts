@@ -2,7 +2,7 @@ import {
   UUID, Platform, PlatformAll, PlatformAllExtended, RegionId,
   SeasonId, SeasonIdExtended, OldSeasonId, RankIdV1, RankIdV2, RankIdV3, RankIdV4, RankIdV5,
   OperatorName, WeaponTypeIndex, WeaponTypeId, WeaponName,
-  BoardId, StatsCategoryName
+  BoardId, StatsCategoryName, RankIdV6
 } from './typings';
 import {
   UBISERVICES_URL, STATUS_URL, UBI_URL, SPACE_IDS, SANDBOXES,
@@ -10,7 +10,7 @@ import {
   PLATFORMS, PLATFORMSALL, REGIONS, BOARDS,
   SEASONS, OLD_SEASONS, RANKS_V1, RANKS_V2, RANKS_V3, RANKS_V4, RANKS_V5,
   OPERATORS, WEAPONTYPES, WEAPONS,
-  STATS_CATEGORIES, GITHUB_ASSETS_URL
+  STATS_CATEGORIES, GITHUB_ASSETS_URL, RANKS_V6
 } from './constants';
 
 export const getAvatarURL = (id: UUID, size = 256) =>
@@ -35,17 +35,19 @@ export const getWinRate = ({ wins, losses }: { wins?: number; losses?: number })
   ((wins || 0) / ((wins || 0) + (losses || 0) || 1) * 100).toFixed(2) + '%';
 
 export const getRankNameFromRankId = (
-  rankId: RankIdV3 | RankIdV4 | RankIdV5, seasonId: SeasonId
+  rankId: RankIdV3 | RankIdV4 | RankIdV5 | RankIdV6, seasonId: SeasonId
 ) =>
-  (seasonId >= 23
-    ? RANKS_V5[rankId as RankIdV5]
-    : seasonId >= 15
-      ? RANKS_V4[rankId as RankIdV4]
-      : RANKS_V3[rankId as RankIdV3])
+  (seasonId >=28
+    ? RANKS_V6[rankId as RankIdV6]
+    : seasonId >= 23
+      ? RANKS_V5[rankId as RankIdV5]
+      : seasonId >= 15
+        ? RANKS_V4[rankId as RankIdV4]
+        : RANKS_V3[rankId as RankIdV3])
     .name;
 
 export const getRankIconFromRankId = (
-  rankId: RankIdV3 | RankIdV4 | RankIdV5, seasonId: SeasonId
+  rankId: RankIdV3 | RankIdV4 | RankIdV5 | RankIdV6, seasonId: SeasonId
 ) =>
   `${GITHUB_ASSETS_URL}/ranks/v${
     seasonId <= 13
@@ -146,6 +148,8 @@ export const getURL = {
     'r6karma/players',
     `board_id=${board}&profile_ids=${ids}&region_id=${region}&season_id=${season}`
   ),
+  GETUSERSEASONALV2: (ids: UUID[]) =>
+    `https://public-ubiservices.ubi.com/v2/spaces/0d2ae42d-4c27-4cb7-af6c-2099062302bb/title/r6s/skill/full_profiles?profile_ids=${ids.join(',')}&platform_families=pc,console`,
   STATS: (platform: Platform, ids: UUID[], stats: string) => getUbiServicesPlatformURL(
     platform, 'playerstats2/statistics', `populations=${ids.join(',')}&statistics=${stats}`
   ),

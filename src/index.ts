@@ -14,6 +14,7 @@ import _findById, { IOptions as IFindByIdOptions} from './methods/findById';
 import _getProgression from './methods/getProgression';
 import _getPlaytime from './methods/getPlaytime';
 import _getRanks, { IOptions as IGetRanksOptions } from './methods/getRanks';
+import _getUserSeasonalv2 from './methods/getUserSeasonalv2';
 import _getStats, { IOptions as IGetStatsOptions } from './methods/getStats';
 import _getStatus from './methods/getStatus';
 import _getUserStatus, { IOptions as IGetUserStatusOptions } from './methods/getUserStatus';
@@ -89,6 +90,9 @@ export default class R6API {
   /** Get seasonal stats of a player. */
   getRanks = (platform: Platform, query: QueryUUID, options?: IGetRanksOptions) =>
     checkQueryLimit({ method: _getRanks, platform, query, options, limit: 200 })
+
+  getUserSeasonalv2 = (query: QueryUUID) =>
+    checkQueryLimit({ method: _getUserSeasonalv2, query, limit: 200 })
 
   /** Get summary stats of a player. */
   getStats = (platform: Platform, query: QueryUUID, options?: IGetStatsOptions) =>

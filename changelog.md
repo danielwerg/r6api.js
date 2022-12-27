@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Solar Raid season
 - Solis operator
+- `getUserSeasonalv2` methods for Ranked 2.0 stats
+- `RANKS_V6` in `constants.ts`
+
+### Changed
+
+- `ubiAppId` in `constants.ts` to `e3d5ea9e-50bd-43b7-88bf-39794f4e3d40`
 
 ## [4.4.1] - 2022-09-06
 

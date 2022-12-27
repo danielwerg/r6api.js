@@ -20,8 +20,10 @@ export type RankIdV2 = typeof constants.RANKS_V2[number]['id'];
 export type RankIdV3 = typeof constants.RANKS_V3[number]['id'];
 /** Ember Rise (15) - North Star (22) */
 export type RankIdV4 = typeof constants.RANKS_V4[number]['id'];
-/** Crystal Guard (23) - latest */
+/** Crystal Guard (23) - Brutal Swarm (27) */
 export type RankIdV5 = typeof constants.RANKS_V5[number]['id'];
+/** Solar Raid (28) - latest */
+export type RankIdV6 = typeof constants.RANKS_V6[number]['id'];
 
 export type OperatorName = keyof typeof constants.OPERATORS;
 
@@ -33,6 +35,8 @@ export type MPType = 'pvp' | 'pve';
 export type BoardId = keyof typeof constants.BOARDS;
 
 export type StatsCategoryName = keyof typeof constants.STATS_CATEGORIES;
+
+export type PlatformCrossplay = 'pc' | 'console';
 
 export type IOptionsDocs =
   [Param: string, Type: string, Required: boolean, Default: string, Description: string][]

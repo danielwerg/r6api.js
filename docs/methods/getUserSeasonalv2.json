@@ -1,0 +1,234 @@
+[
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platformCrossplay": "pc",
+    "seasonId": 28,
+    "boardSlug": "casual",
+    "rank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "maxRank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "topRankPosition": 0,
+    "kills": 20,
+    "deaths": 8,
+    "kd": 2.5,
+    "wins": 2,
+    "losses": 0,
+    "winRate": "100.00%",
+    "abandons": 8,
+    "matches": 10
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platformCrossplay": "pc",
+    "seasonId": 28,
+    "boardSlug": "event",
+    "rank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "maxRank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": "0.00%",
+    "abandons": 0,
+    "matches": 0
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platformCrossplay": "pc",
+    "seasonId": 28,
+    "boardSlug": "warmup",
+    "rank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "maxRank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": "0.00%",
+    "abandons": 0,
+    "matches": 0
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platformCrossplay": "pc",
+    "seasonId": 28,
+    "boardSlug": "ranked",
+    "rank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 1000,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 1000
+    },
+    "maxRank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 1000,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 1000
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": "0.00%",
+    "abandons": 0,
+    "matches": 0
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platformCrossplay": "console",
+    "seasonId": 28,
+    "boardSlug": "casual",
+    "rank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "maxRank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": "0.00%",
+    "abandons": 0,
+    "matches": 0
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platformCrossplay": "console",
+    "seasonId": 28,
+    "boardSlug": "event",
+    "rank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "maxRank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": "0.00%",
+    "abandons": 0,
+    "matches": 0
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platformCrossplay": "console",
+    "seasonId": 28,
+    "boardSlug": "warmup",
+    "rank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "maxRank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 0,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 0
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": "0.00%",
+    "abandons": 0,
+    "matches": 0
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platformCrossplay": "console",
+    "seasonId": 28,
+    "boardSlug": "ranked",
+    "rank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 1000,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 1000
+    },
+    "maxRank": {
+      "id": 0,
+      "name": "Unranked",
+      "mmr": 1000,
+      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
+      "rp": 1000
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": "0.00%",
+    "abandons": 0,
+    "matches": 0
+  }
+]
