@@ -1,847 +1,1408 @@
 <div align="center">
-  <h1>R6API.js</h1>
-  <h3>🍫 Node.js wrapper around Rainbow Six: Siege API</h3>
+  <img src="https://i.imgur.com/Tet0qAn.png" alt="R6API.js logo" />
   <p>
     <a href="https://github.com/danielwerg/r6api.js/blob/master/license"><img
-      src="https://img.shields.io/github/license/danielwerg/r6api.js"
+      src="https://img.shields.io/github/license/danielwerg/r6api.js?style=for-the-badge"
       alt="License"
     /></a>
     <a href="https://github.com/danielwerg/r6api.js/releases/latest"><img
-      src="https://img.shields.io/github/v/release/danielwerg/r6api.js?label=version"
+      src="https://img.shields.io/github/v/release/danielwerg/r6api.js?style=for-the-badge&label=version"
       alt="Version"
     /></a>
     <a href="https://github.com/danielwerg/r6api.js/releases/latest"><img
-      src="https://img.shields.io/github/release-date/danielwerg/r6api.js?label=latest%20release"
+      src="https://img.shields.io/github/release-date/danielwerg/r6api.js?style=for-the-badge&label=latest%20release"
       alt="Latest release"
     /></a>
     <a href="https://www.npmjs.com/package/r6api.js"><img
-      src="https://img.shields.io/npm/dw/r6api.js"
+      src="https://img.shields.io/npm/dw/r6api.js?style=for-the-badge"
       alt="NPM weakly downloads"
     /></a>
     <a href="https://discord.gg/hshRpWk"><img
-      src="https://img.shields.io/discord/612212753498767360?label=discord&color=5865F2"
+      src="https://img.shields.io/discord/612212753498767360?style=for-the-badge&label=discord&color=5865F2"
       alt="Discord guild"
+    /></a>
+  </p>
+  <p>
+    <a href="https://github.com/danielwerg/r6api.js"><img
+      src="https://img.shields.io/static/v1?style=flat-square&logo=github&label=GitHub&message=%20&color=gray"
+      alt="GitHub"
+    /></a>
+    <a href="https://www.npmjs.com/package/r6api.js"><img
+      src="https://img.shields.io/static/v1?style=flat-square&logo=npm&label=NPM&message=%20&color=gray"
+      alt="NPM"
+    /></a>
+    <a href="https://yarnpkg.com/package/r6api.js"><img
+      src="https://img.shields.io/static/v1?style=flat-square&logo=yarn&label=Yarn&message=%20&color=gray"
+      alt="Yarn"
+    /></a>
+    <a href="https://github.com/danielwerg/r6api.js/releases"><img
+      src="https://img.shields.io/static/v1?style=flat-square&logo=github&label=Releases&message=%20&color=gray"
+      alt="Releases"
+    /></a>
+    <a href="https://github.com/danielwerg/r6api.js/blob/master/changelog.md"><img
+      src="https://img.shields.io/static/v1?style=flat-square&logo=github&label=Changelog&message=%20&color=gray"
+      alt="Changelog"
     /></a>
   </p>
 </div>
 
-## Table of Contents
+## 📖 Table of Contents
 
-- [Links](#Links)
-- [Installation](#Installation)
-- [Initialization](#Initialization)
-- [Example](#Example)
-- [API](#API)
-- [Typescript Integrations](#TypeScript-integrations)
-- [Credit](#Credit)
+- [💾 Installation](#-installation)
+- [🍴 Initialization](#-initialization)
+- [👀 Example](#-example)
+- [🧩 API](#-api)
+- [🔌 Custom methods](#-custom-methods)
+- [💌 Acknowledgments](#-acknowledgments)
 
-## Links
-
-- [GitHub](https://github.com/danielwerg/r6api.js)
-- [NPM](https://www.npmjs.com/package/r6api.js)
-- [YARN](https://yarnpkg.com/package/r6api.js)
-- [Releases](https://github.com/danielwerg/r6api.js/releases)
-- [Changelog](https://github.com/danielwerg/r6api.js/blob/master/changelog.md)
-
-## Installation
+## 💾 Installation
 
 ```sh
-$ yarn add r6api.js
-# OR
-$ npm install r6api.js
+yarn add r6api.js
 ```
 
-## Initialization
+or
+
+```sh
+npm install r6api.js
+```
+
+## 🍴 Initialization
 
 To setup this package, you need to provide Ubisoft account credentials (email and password). Credentials should be handled as you would handle any other secure value, it is recommended to use [dotenv](https://github.com/motdotla/dotenv) package to load environment variables from a `.env`.
 
 **Do not** use your real Ubisoft account. It is highly recommended to create a new account for using this package. Visit [account.ubisoft.com/login](https://account.ubisoft.com/login) to create new account.
 
-## Example
+## 👀 Example
 
-<!-- START_SECTION:EXAMPLE -->
-```js
-require('dotenv').config();
-const R6API = require('r6api.js').default;
+```ts
+import R6API from 'r6api.js';
 
-// // Or ES6 way
-// import * as dotenv from 'dotenv';
-// dotenv.config();
-// import R6API from 'r6api.js';
-
-const { UBI_EMAIL: email = '', UBI_PASSWORD: password = '' } = process.env;
+const { email = '', password = '' } = process.env;
 const r6api = new R6API({ email, password });
 
-// export default async () => { // ES6
-exports.default = async () => {
+const user = await r6api
+  .findUserByUsername({ platform: 'uplay', usernames: ['Daniel.Nt'] })
+  .catch(console.error);
 
-  const username = 'Daniel.Nt';
-  const platform = 'uplay';
-
-  const { 0: player } = await r6api.findByUsername(platform, username);
-  if (!player) return 'Player not found';
-
-  const { 0: stats } = await r6api.getStats(platform, player.id);
-  if (!stats) return 'Stats not found';
-  const { pvp: { general } } = stats;
-
-  return `${player.username} has played ${general.matches} matches.`;
-
-};
-
-```
-<!-- END_SECTION:EXAMPLE -->
-
-<!-- START_SECTION:EXAMPLE_OUTPUT -->
-
-```
-Daniel.Nt has played 5648 matches.
+if (!user) console.log('User not found');
+else console.log(user);
 ```
 
-<!-- END_SECTION:EXAMPLE_OUTPUT -->
-
-## API
+## 🧩 API
 
 ### Table of Contents
 
-- [Definitions](#Definitions)
+- [References](#References)
 - [constructor](#constructor)
-- [findByUsername](#findByUsername)
-- [findById](#findById)
-- [getProgression](#getProgression)
-- [getPlaytime](#getPlaytime)
-- [getRanks](#getRanks)
+- [findUserByUsername](#findUserByUsername)
+- [findUserById](#findUserById)
+- [getUserProgression](#getUserProgression)
+- [getUserSeasonal](#getUserSeasonal)
 - [getUserSeasonalv2](#getUserSeasonalv2)
-- [getStats](#getStats)
-- [getStatus](#getStatus)
+- [getUserStats](#getUserStats)
 - [getUserStatus](#getUserStatus)
-- [getProfileApplications](#getProfileApplications)
+- [getUserApplications](#getUserApplications)
+- [getUserGamesPlayed](#getUserGamesPlayed)
 - [getApplications](#getApplications)
-- [validateUsername](#validateUsername)
+- [getServiceStatus](#getServiceStatus)
 - [getNews](#getNews)
 - [getNewsById](#getNewsById)
-- [custom](#custom)
 
-### Definitions
+### References
 
-| Param       | Type                 | Description                                                           |
-| ----------- | -------------------- | --------------------------------------------------------------------- |
-| platform    | `string`             | Either `uplay` (pc), `xbl` (Xbox Live) or `psn` (PlayStation Network) |
-| platformAll | `string`             | `platform`, `steam`, `epic` or `amazon`                               |
-| username/s  | `string \| string[]` |                                                                       |
-| id/s        | `string \| string[]` |                                                                       |
+#### Services
 
----
+<!-- prettier-ignore-start -->
+<!-- SERVICES:START -->
+
+`uplay`, `xbl`, `psn`
+
+<!-- SERVICES:END -->
+<!-- prettier-ignore-end-->
+
+#### Services Extended
+
+<!-- prettier-ignore-start -->
+<!-- SERVICES_EXTENDED:START -->
+
+`uplay`, `xbl`, `psn`, `steam`, `epic`, `amazon`, `amazonstream`, `googlestream`, `switch`, `ubimobile`, `wiiu`, `apple`
+
+<!-- SERVICES_EXTENDED:END -->
+<!-- prettier-ignore-end-->
+
+#### Services and Crossplay
+
+<!-- prettier-ignore-start -->
+<!-- SERVICES_AND_CROSSPLAY:START -->
+
+`uplay`, `xbl`, `psn`, `crossplay`
+
+<!-- SERVICES_AND_CROSSPLAY:END -->
+<!-- prettier-ignore-end-->
+
+#### Platforms
+
+<!-- prettier-ignore-start -->
+<!-- PLATFORMS:START -->
+
+`pc`, `xone`, `ps4`
+
+<!-- PLATFORMS:END -->
+<!-- prettier-ignore-end-->
+
+#### Platform Families
+
+<!-- prettier-ignore-start -->
+<!-- PLATFORM_FAMILIES:START -->
+
+`pc`, `console`
+
+<!-- PLATFORM_FAMILIES:END -->
+<!-- prettier-ignore-end-->
 
 ### constructor
 
 #### Options
 
-| Param           | Type     | Required | Default | Description                                                           |
-| --------------- | -------- | -------- | ------- | --------------------------------------------------------------------- |
-| email           | `string` | false    |         | Ubisoft account email                                                 |
-| password        | `string` | false    |         | Ubisoft account password                                              |
-| ubiAppId        | `string` | false    |         | `Ubi-AppId` header value                                              |
-| authFileDirPath | `string` | false    |         | Path for directory where authentication file is stored                |
-| authFileName    | `string` | false    |         | Name for authentication file                                          |
-| authFilePath    | `string` | false    |         | If set `authFileDirPath` and `authFileName` options are being ignored |
+<!-- prettier-ignore-start -->
+<!-- R6API_OPTIONS:START -->
 
-```js
-const { UBI_EMAIL: email = '', UBI_PASSWORD: password = '' } = process.env;
-const r6api = new R6API({ email, password });
-```
+| Parameter    | Type     | Required | Default                                  | Description                                                                                                      |
+| ------------ | -------- | -------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| email        | `string` | ✖        | `undefined`                              | Ubisoft account's email                                                                                          |
+| password     | `string` | ✖        | `undefined`                              | Ubisoft account's password                                                                                       |
+| ubiAppId     | `string` | ✖        | `'3587dcbb-7f81-457c-9781-0e3f29f6f56a'` | `Ubi-AppId` header for every request                                                                             |
+| profileId    | `string` | ✖        | `undefined`                              | Will be used in auth file name                                                                                   |
+| authDirPath  | `string` | ✖        | `node:os.tmpdir()`                       | Directory where auth is stored                                                                                   |
+| authFileName | `string` | ✖        | `'r6api.js-auth'`                        | Name for auth file without extension, if `profileId` paremeter provided appends `-${profileId}`                  |
+| authFilePath | `string` | ✖        | `undefined`                              | Overrides `authDirPath` and `authFileName` parameters, if `profileId` paremeter provided appends `-${profileId}` |
 
----
-
-### findByUsername
-
-Find player by their username.
-
-Usernames limit: `50`
-
-(platformAll, username/s) => `Promise<Array>`
-
-```js
-await r6api.findByUsername('uplay', 'Daniel.Nt');
-```
-
-<!-- START_SECTION:FINDBYUSERNAME_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-[
-  {
-    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    idOnPlatform: '0B95544B-0228-49A7-B338-6D15CFBC3D6A',
-    platform: 'uplay',
-    username: 'Daniel.Nt',
-    avatar: {
-      146: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
-      256: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
-      500: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
-    }
-  }
-];
-```
-
-</details>
-<!-- END_SECTION:FINDBYUSERNAME_OUTPUT -->
+<!-- R6API_OPTIONS:END -->
+<!-- prettier-ignore-end-->
 
 ---
 
-### findById
+### findUserByUsername
 
-Find player by their id.
-
-Ids limit: `50`
-
-(platformAll | 'all', id/s, options?) => `Promise<Array>`
+Find user by their username.
 
 #### Options
 
-<!-- START_SECTION:FINDBYID_OPTIONS -->
+<!-- prettier-ignore-start -->
+<!-- FINDUSERBYUSERNAME_OPTIONS:START -->
 
-| Param    | Type      | Required | Default | Description                     |
-| -------- | --------- | -------- | ------- | ------------------------------- |
-| isUserId | `boolean` | false    | `false` | Whether `id` is `userId` or not |
+| Parameter | Type              | Required | Default | Description                    |
+| --------- | ----------------- | -------- | ------- | ------------------------------ |
+| platform  | `ServiceExtended` | ✔        |         | [Reference](#Platforms-Search) |
+| usernames | `string[]`        | ✔        |         | Usernames (50 max)             |
 
-<!-- END_SECTION:FINDBYID_OPTIONS -->
+<!-- FINDUSERBYUSERNAME_OPTIONS:END -->
+<!-- prettier-ignore-end-->
 
-```js
-// search by profileId (id)
-await r6api.findById('all', '91477729-b5ac-463c-9618-03ca154764f5');
-// search by userId
-await r6api.findById('all', '1baf5bf8-90cd-4ead-8b90-9a11cb2b8adf', {
-  isUserId: true
-});
-// search by idOnPlatform
-await r6api.findById('xbl', '2535406338711362');
+```ts
+await r6api.findUserByUsername({ platform: 'uplay', usernames: ['Daniel.Nt'] });
 ```
 
-```js
-await r6api.findById('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
-```
+<!-- prettier-ignore-start -->
+<!-- FINDUSERBYUSERNAME_OUTPUT:START -->
 
-<!-- START_SECTION:FINDBYID_OUTPUT -->
 <details>
 <summary>Output</summary>
 
-```js
+```ts
 [
   {
-    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
     idOnPlatform: '0B95544B-0228-49A7-B338-6D15CFBC3D6A',
-    platform: 'uplay',
     username: 'Daniel.Nt',
-    avatar: {
-      146: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
-      256: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
-      500: 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
+    platform: 'uplay',
+    avatars: {
+      '146': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
+      '256': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
+      '500': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
     }
   }
-];
+]
 ```
 
 </details>
-<!-- END_SECTION:FINDBYID_OUTPUT -->
+
+<!-- FINDUSERBYUSERNAME_OUTPUT:END -->
+<!-- prettier-ignore-end-->
 
 ---
 
-### getPlaytime
+### findUserById
 
-Get playtime of a player.
+Find user by their `profileId` or `userId` or `idOnPlatform`.
 
-Ids limit: `200`
+#### Options
 
-(platform, id/s) => `Promise<Array>`
+<!-- prettier-ignore-start -->
+<!-- FINDUSERBYID_OPTIONS:START -->
 
-```js
-await r6api.getPlaytime('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+| Parameter | Type                       | Required | Default | Description                                                                          |
+| --------- | -------------------------- | -------- | ------- | ------------------------------------------------------------------------------------ |
+| platform  | `ServiceExtended \| 'all'` | ✔        |         | [Reference](#Platforms-Search)                                                       |
+| ids       | `string[]`                 | ✔        |         | `profileIds` or `idOnPlatforms` or `userId` if `isUserId` parameter is true (50 max) |
+| isUserIds | `boolean`                  | ✖        | `false` | Whether `ids` are userIds                                                            |
+
+<!-- FINDUSERBYID_OPTIONS:END -->
+<!-- prettier-ignore-end-->
+
+```ts
+await r6api.findUserById({
+  platform: 'uplay',
+  ids: ['0b95544b-0228-49a7-b338-6d15cfbc3d6a']
+});
 ```
 
-<!-- START_SECTION:GETPLAYTIME_OUTPUT -->
+<!-- prettier-ignore-start -->
+<!-- FINDUSERBYID_OUTPUT:START -->
+
 <details>
 <summary>Output</summary>
 
-```js
+```ts
 [
   {
-    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    pvp: {
-      general: 5984372,
-      ranked: 5312097,
-      casual: 614423,
-      custom: 974,
-      other: 56878
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    idOnPlatform: '0B95544B-0228-49A7-B338-6D15CFBC3D6A',
+    username: 'Daniel.Nt',
+    platform: 'uplay',
+    avatars: {
+      '146': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_146_146.png',
+      '256': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_256_256.png',
+      '500': 'https://ubisoft-avatars.akamaized.net/0b95544b-0228-49a7-b338-6d15cfbc3d6a/default_tall.png'
+    }
+  }
+]
+```
+
+</details>
+
+<!-- FINDUSERBYID_OUTPUT:END -->
+<!-- prettier-ignore-end-->
+
+---
+
+### getUserProgression
+
+Get user progression (level, xp and alpha pack drop chance).
+
+#### Options
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERPROGRESSION_OPTIONS:START -->
+
+| Parameter    | Type                                  | Required | Default                                                                                                                                                                                          | Description                           |
+| ------------ | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
+| platform     | `ServiceAndCrossplay`                 | ✔        |                                                                                                                                                                                                  | [Reference](#Platforms-And-CrossPlay) |
+| profileIds   | `string[]`                            | ✔        |                                                                                                                                                                                                  | `profileIds` (200 max)                |
+| spacesIds    | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d', psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66', xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90', crossplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb' }` |                                       |
+| sandboxesIds | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: 'OSBOR_PC_LNCH_A', psn: 'OSBOR_PS4_LNCH_A', xbl: 'OSBOR_XBOXONE_LNCH_A', crossplay: 'OSBOR_XPLAY_LNCH_A' }`                                                                            |                                       |
+
+<!-- GETUSERPROGRESSION_OPTIONS:END -->
+<!-- prettier-ignore-end-->
+
+```ts
+await r6api.getUserProgression({
+  platform: 'uplay',
+  profileIds: ['0b95544b-0228-49a7-b338-6d15cfbc3d6a']
+});
+```
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERPROGRESSION_OUTPUT:START -->
+
+<details>
+<summary>Output</summary>
+
+```ts
+[
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    level: 347,
+    xp: 62368,
+    lootboxProbability: { raw: 3000, percent: '30.00%' }
+  }
+]
+```
+
+</details>
+
+<!-- GETUSERPROGRESSION_OUTPUT:END -->
+<!-- prettier-ignore-end-->
+
+---
+
+### getUserSeasonal
+
+Get user seasonal stats.
+
+#### Options
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERSEASONAL_OPTIONS:START -->
+
+| Parameter      | Type                                  | Required | Default                                                                                                                                                                                          | Description                                                                                  |
+| -------------- | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| platform       | `ServiceAndCrossplay`                 | ✔        |                                                                                                                                                                                                  | [Reference](#Platforms-And-CrossPlay)                                                        |
+| profileIds     | `string[]`                            | ✔        |                                                                                                                                                                                                  | `profileIds` (200 max)                                                                       |
+| seasonIds      | `number[]`                            | ✖        | `[-1]`                                                                                                                                                                                           | Numbers from `1`\*¹ to `27` it's crossplay, then from `28` to `28`, `-1` or `'all'`          |
+| regionSlugs    | `string \| string[]`                  | ✖        | `'global'\*²`                                                                                                                                                                                    | `('emea' \| 'ncsa' \| 'apac')[] \| 'global' \| 'all'`                                        |
+| boardLongSlugs | `string[]`                            | ✖        | `['pvp_ranked']`                                                                                                                                                                                 | `('pvp_ranked' \| 'pvp_casual' \| 'pvp_event' \| 'pvp_newcomer' \| 'pvp_warmup')[] \| 'all'` |
+| spacesIds      | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d', psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66', xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90', crossplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb' }` |                                                                                              |
+| sandboxesIds   | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: 'OSBOR_PC_LNCH_A', psn: 'OSBOR_PS4_LNCH_A', xbl: 'OSBOR_XBOXONE_LNCH_A', crossplay: 'OSBOR_XPLAY_LNCH_A' }`                                                                            |                                                                                              |
+
+<!-- GETUSERSEASONAL_OPTIONS:END -->
+<!-- prettier-ignore-end-->
+
+> \*¹ Seasons with id `1..5` will _not_ return any meangfull data
+
+> \*² `'global'` will be replaced with `['emea', 'ncsa', 'apac']` when season id <= `17` (Void Edge)
+
+##### Seasons reference
+
+<!-- prettier-ignore-start -->
+<!-- SEASONS_SHORT:START -->
+
+| ID   | Name          | ·   | ID   | Name           |
+| ---- | ------------- | --- | ---- | -------------- |
+| `1`  | Black Ice     |     | `15` | Ember Rise     |
+| `2`  | Dust Line     |     | `16` | Shifting Tides |
+| `3`  | Skull Rain    |     | `17` | Void Edge      |
+| `4`  | Red Crow      |     | `18` | Steel Wave     |
+| `5`  | Velvet Shell  |     | `19` | Shadow Legacy  |
+| `6`  | Health        |     | `20` | Neon Dawn      |
+| `7`  | Blood Orchid  |     | `21` | Crimson Heist  |
+| `8`  | White Noise   |     | `22` | North Star     |
+| `9`  | Chimera       |     | `23` | Crystal Guard  |
+| `10` | Para Bellum   |     | `24` | High Calibre   |
+| `11` | Grim Sky      |     | `25` | Demon Veil     |
+| `12` | Wind Bastion  |     | `26` | Vector Glare   |
+| `13` | Burnt Horizon |     | `27` | Brutal Swarm   |
+| `14` | Phantom Sight |     | `28` | Solar Raid     |
+
+<!-- SEASONS_SHORT:END -->
+<!-- prettier-ignore-end-->
+
+##### Regions reference
+
+<!-- prettier-ignore-start -->
+<!-- REGIONS:START -->
+
+| ID       | Name                             |
+| -------- | -------------------------------- |
+| `global` | Global                           |
+| `emea`   | Europe, Middle East and Africa   |
+| `ncsa`   | North, Central and South America |
+| `apac`   | Asia Pacific                     |
+
+<!-- REGIONS:END -->
+<!-- prettier-ignore-end-->
+
+##### Boards reference
+
+<!-- prettier-ignore-start -->
+<!-- BOARDS:START -->
+
+| Board                 | Minimum Season        |
+| --------------------- | --------------------- |
+| Ranked (`ranked`)     | Health (`6`)          |
+| Casual (`casual`)     | Ember Rise (`15`)     |
+| Deathmatch (`warmup`) | Demon Veil (`25`)     |
+| Event (`event`)       | Shifting Tides (`16`) |
+| Newcomer (`newcomer`) | Wind Bastion (`12`)   |
+
+<!-- BOARDS:END -->
+<!-- prettier-ignore-end-->
+
+> NOTE: Unranked uses casual's board
+
+```ts
+await r6api.getUserSeasonal({
+  platform: 'crossplay',
+  profileIds: ['0b95544b-0228-49a7-b338-6d15cfbc3d6a']
+});
+```
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERSEASONAL_OUTPUT:START -->
+
+<details>
+<summary>Output</summary>
+
+```ts
+[
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
     },
-    pve: {
-      general: 292574
-    }
+    region: { slug: 'global', name: 'Global' },
+    board: { slug: 'pvp_ranked', name: 'Ranked' },
+    rank: {
+      id: 14,
+      name: 'Silver II',
+      mmr: 2491,
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/silver_2.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/0PLZUFs3fqKBTLh1gYyY8/7cabc5ba4522f725583faac165ff5130/R6S_RANK_500x500_Silver_02.png'
+    },
+    maxRank: {
+      id: 16,
+      name: 'Gold V',
+      mmr: 2716,
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/gold_5.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/QWDG4I2KaxDN8s2nbaAIY/f1df73e40fe9172a209982dc85862a5b/RANK_L_Gold_05.png'
+    },
+    lastMatch: {
+      resultCode: 1,
+      resultText: 'won',
+      mmrChange: 103,
+      skillMeanChange: 1.0389761567,
+      skillStdevChange: -0.0666760118
+    },
+    pastSeasons: {
+      wins: 0,
+      losses: 0,
+      wl: 0,
+      winRate: '0%',
+      matches: 0,
+      abandons: 0
+    },
+    previousMmr: 2400,
+    nextMmr: 2500,
+    topRankPosition: 0,
+    kills: 99,
+    deaths: 127,
+    kd: 0.78,
+    wins: 10,
+    losses: 16,
+    wl: 0.63,
+    winRate: '38%',
+    matches: 26,
+    abandons: 0,
+    skillMean: 24.9143546546,
+    skillStdev: 5.9461222759,
+    updateTime: '2023-02-01T03:32:58.428000+00:00'
   }
-];
+]
 ```
 
 </details>
-<!-- END_SECTION:GETPLAYTIME_OUTPUT -->
 
----
-
-### getProgression
-
-Get level, xp and alpha pack drop chance of a player.
-
-Ids limit: `200`
-
-(platform, id/s) => `Promise<Array>`
-
-```js
-await r6api.getProgression('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
-```
-
-<!-- START_SECTION:GETPROGRESSION_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-[
-  {
-    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    level: 297,
-    xp: 73534,
-    lootboxProbability: {
-      raw: 820,
-      percent: '8.20%'
-    }
-  }
-];
-```
-
-</details>
-<!-- END_SECTION:GETPROGRESSION_OUTPUT -->
-
----
-
-### getRanks
-
-Get seasonal stats of a player.
-
-Ids limit: `200`
-
-(platform, id/s, options?) => `Promise<Array>`
-
-#### Options
-
-<!-- START_SECTION:GETRANKS_OPTIONS -->
-
-| Param     | Type                           | Required | Default                                                     | Description                                                       |
-| --------- | ------------------------------ | -------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
-| seasonIds | `number \| number[] \| string` | false    | `-1`                                                        | Numbers from `6` to `28` or `-1` or `'all'`                       |
-| regionIds | `string \| string[]`           | false    | `['emea', 'ncsa', 'apac']`                                  | `'emea'`, `'ncsa'`, `'apac'` or `'all'`                           |
-| boardIds  | `string \| string[]`           | false    | `['pvp_ranked', 'pvp_casual', 'pvp_newcomer', 'pvp_event']` | `'pvp_ranked'`, `'pvp_casual'`, `'pvp_newcomer'` or `'pvp_event'` |
-
-<!-- END_SECTION:GETRANKS_OPTIONS -->
-
-#### Seasons reference
-
-<!-- START_SECTION:SEASONS_TABLE -->
-
-| ID   | Name           | ● | ID   | Name          |
-| ---- | -------------- | - | ---- | ------------- |
-| `6`  | Health         |   | `18` | Steel Wave    |
-| `7`  | Blood Orchid   |   | `19` | Shadow Legacy |
-| `8`  | White Noise    |   | `20` | Neon Dawn     |
-| `9`  | Chimera        |   | `21` | Crimson Heist |
-| `10` | Para Bellum    |   | `22` | North Star    |
-| `11` | Grim Sky       |   | `23` | Crystal Guard |
-| `12` | Wind Bastion   |   | `24` | High Calibre  |
-| `13` | Burnt Horizon  |   | `25` | Demon Veil    |
-| `14` | Phantom Sight  |   | `26` | Vector Glare  |
-| `15` | Ember Rise     |   | `27` | Brutal Swarm  |
-| `16` | Shifting Tides |   | `28` | Solar Raid    |
-| `17` | Void Edge      |   |      |               |
-
-<!-- END_SECTION:SEASONS_TABLE -->
-
-> **Note:** Use `getUserSeasonalv2 for Solar Raid and beyond.
-
-> **Note:** `-1` will always return current season
-
-#### Regions reference
-
-<!-- START_SECTION:REGIONS_TABLE -->
-
-| Shorthand | Meaning                          |
-| --------- | -------------------------------- |
-| `emea`    | Europe, Middle East and Africa   |
-| `ncsa`    | North, Central and South America |
-| `apac`    | Asia Pacific                     |
-
-<!-- END_SECTION:REGIONS_TABLE -->
-
-> **Note:** Since Steal Wave (18) all regions will return same data
-
-#### Boards reference
-
-<!-- START_SECTION:BOARDS_TABLE -->
-
-| Minimum Season ID | Board ID       |
-| ----------------- | -------------- |
-| `6`               | `pvp_ranked`   |
-| `12`              | `pvp_newcomer` |
-| `15`              | `pvp_casual`   |
-| `16`              | `pvp_event`    |
-
-<!-- END_SECTION:BOARDS_TABLE -->
-
-> **Note:** Returns empty array if `boardId` is `pvp_newcomer` and `seasonId` is `21` or above
-
-> **Note:** `topRankPosition` will always return `0` if board is _not_ `'pvp_ranked'`
-
-> **Note:** Ubisoft doesn't provide data for seasons before Operation Health (6) if board is `pvp_ranked`, Ember Rise (15) if board is `pvp_casual`, Wind Bastion (12) if board is `pvp_event` or Shifting Tides (16) if board is `pvp_event`
-
-```js
-await r6api.getRanks('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a', {
-  regionIds: 'emea',
-  boardIds: 'pvp_ranked'
-});
-```
-
-<!-- START_SECTION:GETRANKS_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-[
-  {
-    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    seasons: {
-      27: {
-        seasonId: 27,
-        seasonName: 'Brutal Swarm',
-        seasonColor: '#dac925',
-        seasonImage:
-          'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/35vqSFGr4xn1JnNVetTsyh/e9c46f34157897dc96988432991a1e52/r6s-seasons-y7s3__2_.jpg',
-        seasonReleaseDate: '2022-09-06T00:00:00.000Z',
-        regions: {
-          emea: {
-            regionId: 'emea',
-            regionName: 'Europe, Middle East and Africa',
-            boards: {
-              pvp_ranked: {
-                boardId: 'pvp_ranked',
-                boardName: 'Ranked',
-                skillMean: 29.9476130075,
-                skillStdev: 7.6548063879,
-                current: {
-                  id: 0,
-                  name: 'Unranked',
-                  mmr: 2995,
-                  icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png'
-                },
-                max: {
-                  id: 0,
-                  name: 'Unranked',
-                  mmr: 0,
-                  icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png'
-                },
-                lastMatch: {
-                  result: 'unknown',
-                  mmrChange: 0,
-                  skillMeanChange: 0,
-                  skillStdevChange: 0
-                },
-                pastSeasons: {
-                  wins: 2249,
-                  losses: 2104,
-                  winRate: '51.67%',
-                  matches: 4353,
-                  abandons: 18
-                },
-                previousMmr: 0,
-                nextMmr: 0,
-                topRankPosition: 0,
-                kills: 0,
-                deaths: 0,
-                kd: 0,
-                wins: 0,
-                losses: 0,
-                winRate: '0.00%',
-                matches: 0,
-                abandons: 0,
-                updateTime: '1970-01-01T00:00:00+00:00'
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-];
-```
-
-</details>
-<!-- END_SECTION:GETRANKS_OUTPUT -->
-
-> **Note:** `kills`, `deaths`, `kd`, `topRankPosition` and everything under `lastMatch` only available for seasons including and after Phantom Sight (14) for older seasons it will return `0` or `'unknown'` in case of `lastMatch.result`
-
-> **Note:** If player is unranked their max mmr (`max.mmr`) will always be `0` (it's always `0` for casual)
-
-> **Note:** Values for `previousMmr`, `nextMmr`, `topRankPosition`, `max.id` and `max.mmr` will always be `0`, `max.name` will always be `Unranked` if `boardId` is `pvp_casual`
+<!-- GETUSERSEASONAL_OUTPUT:END -->
+<!-- prettier-ignore-end-->
 
 ---
 
 ### getUserSeasonalv2
 
-Get user seasonal v2
+Get user seasonal v2 (Rank Points)
 
-```ts
-await r6api.getUserSeasonalv2('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
-```
-
-<!-- START_SECTION:GETUSERSEASONALV2_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-[
-  {
-    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    platformCrossplay: 'pc',
-    seasonId: 28,
-    boardSlug: 'casual',
-    rank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    maxRank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    topRankPosition: 0,
-    kills: 20,
-    deaths: 8,
-    kd: 2.5,
-    wins: 2,
-    losses: 0,
-    winRate: '100.00%',
-    abandons: 8,
-    matches: 10
-  },
-  {
-    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    platformCrossplay: 'pc',
-    seasonId: 28,
-    boardSlug: 'event',
-    rank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    maxRank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    topRankPosition: 0,
-    kills: 0,
-    deaths: 0,
-    kd: 0,
-    wins: 0,
-    losses: 0,
-    winRate: '0.00%',
-    abandons: 0,
-    matches: 0
-  },
-  {
-    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    platformCrossplay: 'pc',
-    seasonId: 28,
-    boardSlug: 'warmup',
-    rank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    maxRank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    topRankPosition: 0,
-    kills: 0,
-    deaths: 0,
-    kd: 0,
-    wins: 0,
-    losses: 0,
-    winRate: '0.00%',
-    abandons: 0,
-    matches: 0
-  },
-  {
-    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    platformCrossplay: 'pc',
-    seasonId: 28,
-    boardSlug: 'ranked',
-    rank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 1000,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 1000
-    },
-    maxRank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 1000,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 1000
-    },
-    topRankPosition: 0,
-    kills: 0,
-    deaths: 0,
-    kd: 0,
-    wins: 0,
-    losses: 0,
-    winRate: '0.00%',
-    abandons: 0,
-    matches: 0
-  },
-  {
-    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    platformCrossplay: 'console',
-    seasonId: 28,
-    boardSlug: 'casual',
-    rank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    maxRank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    topRankPosition: 0,
-    kills: 0,
-    deaths: 0,
-    kd: 0,
-    wins: 0,
-    losses: 0,
-    winRate: '0.00%',
-    abandons: 0,
-    matches: 0
-  },
-  {
-    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    platformCrossplay: 'console',
-    seasonId: 28,
-    boardSlug: 'event',
-    rank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    maxRank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    topRankPosition: 0,
-    kills: 0,
-    deaths: 0,
-    kd: 0,
-    wins: 0,
-    losses: 0,
-    winRate: '0.00%',
-    abandons: 0,
-    matches: 0
-  },
-  {
-    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    platformCrossplay: 'console',
-    seasonId: 28,
-    boardSlug: 'warmup',
-    rank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    maxRank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 0,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 0
-    },
-    topRankPosition: 0,
-    kills: 0,
-    deaths: 0,
-    kd: 0,
-    wins: 0,
-    losses: 0,
-    winRate: '0.00%',
-    abandons: 0,
-    matches: 0
-  },
-  {
-    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    platformCrossplay: 'console',
-    seasonId: 28,
-    boardSlug: 'ranked',
-    rank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 1000,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 1000
-    },
-    maxRank: {
-      id: 0,
-      name: 'Unranked',
-      mmr: 1000,
-      icon: 'https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png',
-      rp: 1000
-    },
-    topRankPosition: 0,
-    kills: 0,
-    deaths: 0,
-    kd: 0,
-    wins: 0,
-    losses: 0,
-    winRate: '0.00%',
-    abandons: 0,
-    matches: 0
-  }
-];
-```
-
-</details>
-<!-- END_SECTION:GETUSERSEASONALV2_OUTPUT -->
-
----
-
-### getStats
-
-> ⚠️ API endpoint for `getStats` haven't been getting updates since High Calibre (see: [#78](https://github.com/danielwerg/r6api.js/issues/78)).
-
-Get summary stats of a player.
-
-Ids limit: `200`
-
-(platform, id/s, options?) => `Promise<Array>`
+Required `r6api` client with `ubiAppId: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40'` option.
 
 #### Options
 
-<!-- START_SECTION:GETSTATS_OPTIONS -->
+<!-- prettier-ignore-start -->
+<!-- GETUSERSEASONALV2_OPTIONS:START -->
 
-| Param      | Type       | Required | Default      | Description              |
-| ---------- | ---------- | -------- | ------------ | ------------------------ |
-| raw        | `boolean`  | false    | `false`      | Include raw API response |
-| categories | `string[]` | false    | Requests all | Categories to request    |
+| Parameter         | Type                                  | Required | Default                                                                                                                                                                                          | Description                               |
+| ----------------- | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
+| profileIds        | `string[]`                            | ✔        |                                                                                                                                                                                                  | `profileIds`                              |
+| platformsFamilies | `PlatformFamily[]`                    | ✖        | `['pc', 'console']`                                                                                                                                                                              | [Platforms Families](#Platforms-Families) |
+| spacesIds         | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d', psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66', xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90', crossplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb' }` |                                           |
 
-<!-- END_SECTION:GETSTATS_OPTIONS -->
+<!-- GETUSERSEASONALV2_OPTIONS:END -->
+<!-- prettier-ignore-end-->
 
-#### Categories reference
-
-`pvp` `pve`
-
-`general` `generalpvp` `generalpve`
-
-`operators` `operatorspvp` `operatorspve`
-
-`weapons` `weaponspvp` `weaponspve`
-
-`queues` `queuespvp` `queuespve` `modes` `modespvp` `modespve`
-
-`ranked` `casual` `custom`
-
-`local` `coop` `normal` `hard` `realistic` `normallocal` `hardlocal` `realisticlocal` `normalcoop` `hardcoop` `realisticcoop`
-
-`bomb` `secureArea` `hostage` `elimination`
-
-`disarmBomb` `protectHostage` `extractHostage`
-
-```js
-await r6api.getStats('uplay', '0b95544b-0228-49a7-b338-6d15cfbc3d6a');
+```ts
+await r6api.getUserSeasonalv2({
+  platform: 'pc',
+  profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a'
+});
 ```
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERSEASONALV2_OUTPUT:START -->
 
 <details>
 <summary>Output</summary>
 
-```js
+```ts
 [
   {
-    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    pvp: {
-      general: [Object],
-      operators: [Object],
-      weapons: [Object],
-      queues: [Object],
-      modes: [Object]
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'pc',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
     },
-    pve: {
-      general: [Object],
-      operators: [Object],
-      weapons: [Object],
-      queues: [Object],
-      modes: [Object]
-    }
+    board: { slug: 'casual', name: 'Casual' },
+    rank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    maxRank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    topRankPosition: 0,
+    kills: 113,
+    deaths: 60,
+    kd: 1.88,
+    wins: 6,
+    losses: 1,
+    wl: 6,
+    winRate: '86%',
+    abandons: 43,
+    matches: 50
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'pc',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
+    },
+    board: { slug: 'event', name: 'Event' },
+    rank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    maxRank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    wl: 0,
+    winRate: '0%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'pc',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
+    },
+    board: { slug: 'warmup', name: 'Deathmatch' },
+    rank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    maxRank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    topRankPosition: 0,
+    kills: 35,
+    deaths: 35,
+    kd: 1,
+    wins: 2,
+    losses: 0,
+    wl: 2,
+    winRate: '100%',
+    abandons: 3,
+    matches: 5
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'pc',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
+    },
+    board: { slug: 'ranked', name: 'Ranked' },
+    rank: {
+      rp: 56,
+      mmr: 1656,
+      id: 7,
+      slug: 'bronze_4',
+      name: 'Bronze IV',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/bronze_4.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3fi46SbCqO8EfoR6Jij27d/c5f44a5e33e7b8091684e08da032d1df/R6S_RANK_500x500_Bronze_04.png',
+      range: [ 1600, 1699 ]
+    },
+    maxRank: {
+      rp: 56,
+      mmr: 1656,
+      id: 7,
+      slug: 'bronze_4',
+      name: 'Bronze IV',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/bronze_4.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3fi46SbCqO8EfoR6Jij27d/c5f44a5e33e7b8091684e08da032d1df/R6S_RANK_500x500_Bronze_04.png',
+      range: [ 1600, 1699 ]
+    },
+    topRankPosition: 0,
+    kills: 99,
+    deaths: 127,
+    kd: 0.78,
+    wins: 10,
+    losses: 16,
+    wl: 0.63,
+    winRate: '38%',
+    abandons: 0,
+    matches: 26
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'console',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
+    },
+    board: { slug: 'casual', name: 'Casual' },
+    rank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    maxRank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    wl: 0,
+    winRate: '0%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'console',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
+    },
+    board: { slug: 'event', name: 'Event' },
+    rank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    maxRank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    wl: 0,
+    winRate: '0%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'console',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
+    },
+    board: { slug: 'warmup', name: 'Deathmatch' },
+    rank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    maxRank: {
+      rp: 0,
+      mmr: 0,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    wl: 0,
+    winRate: '0%',
+    abandons: 0,
+    matches: 0
+  },
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'console',
+    season: {
+      id: 28,
+      shorthand: 'Y7S4',
+      slug: 'solar_raid',
+      name: 'Solar Raid',
+      hexColorCode: '#d03314',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg',
+      releaseDate: '2022-12-06T00:00:00.000Z'
+    },
+    board: { slug: 'ranked', name: 'Ranked' },
+    rank: {
+      rp: 1000,
+      mmr: 1000,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    maxRank: {
+      rp: 1000,
+      mmr: 1000,
+      id: 0,
+      slug: 'unranked',
+      name: 'Unranked',
+      icon: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png',
+      iconOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png',
+      range: [ 0, 999 ]
+    },
+    topRankPosition: 0,
+    kills: 0,
+    deaths: 0,
+    kd: 0,
+    wins: 0,
+    losses: 0,
+    wl: 0,
+    winRate: '0%',
+    abandons: 0,
+    matches: 0
   }
-];
+]
 ```
 
 </details>
 
-> **Note:** Ubisoft stopped recording `bulletsFired` for `pvp` long time ago, don't rely on it
-
-> **Note:** `distanceTravelled` value might be overflowed due to Ubisoft storing it in 32-bit int
-
-[**Full response**](https://github.com/danielwerg/r6api.js/blob/master/docs/methods/getStats.json)
+<!-- GETUSERSEASONALV2_OUTPUT:END -->
+<!-- prettier-ignore-end-->
 
 ---
 
-### getStatus
+### getUserStats
 
-Get Rainbow Six: Siege servers status.
+Get user stats
 
-() => `Promise<Array>`
+#### Options
 
-```js
-await r6api.getStatus();
+<!-- prettier-ignore-start -->
+<!-- GETUSERSTATS_OPTIONS:START -->
+
+| Parameter   | Type       | Required | Default     | Description                                                                 |
+| ----------- | ---------- | -------- | ----------- | --------------------------------------------------------------------------- |
+| platform    | `Platform` | ✔        |             |                                                                             |
+| profileId   | `string`   | ✔        |             |                                                                             |
+| view        | `string`   | ✔        |             | `'seasonal'` value only valid when `aggregation` is `'summary'`             |
+| aggregation | `string`   | ✔        |             |                                                                             |
+| gameModes   | `string[]` | ✖        | `undefined` |                                                                             |
+| teamRoles   | `string[]` | ✖        | `undefined` |                                                                             |
+| seasonsId   | `number[]` | ✖        | `undefined` | Numbers from `0` to `28`. Mutually exclusive with `startDate` and `endDate` |
+| startDate   | `string`   | ✖        | `undefined` | Mutually exclusive with `seasonId`                                          |
+| startDate   | `string`   | ✖        | `undefined` | Mutually exclusive with `seasonId`                                          |
+
+<!-- GETUSERSTATS_OPTIONS:END -->
+<!-- prettier-ignore-end-->
+
+> NOTE: `seasonId` is mutually exclusive with `startDate` and `endDate`
+
+```ts
+await r6api.getUserStats({
+  platform: 'uplay',
+  profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+  view: 'seasonal',
+  aggregation: 'summary',
+  gameMode: 'ranked',
+  teamRole: 'all',
+  seasonId: 25
+});
 ```
 
-<!-- START_SECTION:GETSTATUS_OUTPUT -->
+<!-- prettier-ignore-start -->
+<!-- GETUSERSTATS_OUTPUT:START -->
+
 <details>
 <summary>Output</summary>
 
-```js
+```ts
+[
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    platform: 'uplay',
+    region: 'all',
+    gameMode: 'ranked',
+    teamRole: 'all',
+    view: 'seasonal',
+    aggregation: 'summary',
+    season: {
+      id: 25,
+      shorthand: 'Y7S1',
+      slug: 'demon_veil',
+      name: 'Demon Veil',
+      hexColorCode: '#b27400',
+      thumbnail: 'https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s1.jpg',
+      thumbnailOfficial: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6diil0gexoNXNCKtwpPPQZ/ace6f9e6e1e1578a2255ac0e5cb67b7c/r6s-seasons-y7s1.jpg',
+      releaseDate: '2022-03-15T00:00:00.000Z'
+    },
+    wins: 72,
+    losses: 69,
+    matches: 141,
+    wl: 1.0435,
+    winRate: '51%',
+    rounds: {
+      wins: 429,
+      losses: 419,
+      played: 848,
+      wl: 1.02,
+      winRate: '51%',
+      withAKill: 0.487,
+      withMultiKill: 0.2193,
+      withOpeningKill: 0.0896,
+      withOpeningDeath: 0.079,
+      withKOST: 0.5932,
+      withClutch: 0.0071,
+      withAnAce: 0.0024,
+      survived: 0.2724
+    },
+    minutesPlayed: 3044,
+    kills: 662,
+    death: 617,
+    assists: 168,
+    kd: 1.0729,
+    killsPerRound: 0.7807,
+    headshots: 238,
+    headshotAccuracy: 0.3595,
+    meleeKills: 17,
+    teamKills: 5,
+    openingKills: 76,
+    openingDeaths: 67,
+    trades: 69,
+    openingKillTrades: 6,
+    openingDeathTrades: 7,
+    revives: 14,
+    distanceTravelled: 141404,
+    distancePerRound: 166.75,
+    timeAlivePerMatch: 587.6596,
+    timeDeadPerMatch: 196.5958
+  }
+]
+```
+
+</details>
+
+<!-- GETUSERSTATS_OUTPUT:END -->
+<!-- prettier-ignore-end-->
+
+---
+
+### getUserStatus
+
+Get user status.
+
+#### Options
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERSTATUS_OPTIONS:START -->
+
+| Parameter         | Type       | Required | Default | Description                 |
+| ----------------- | ---------- | -------- | ------- | --------------------------- |
+| userIds           | `string[]` | ✔        |         | User ids (50 max)           |
+| fetchApplications | `boolean`  | ✖        | `false` | Fetch name for applications |
+
+<!-- GETUSERSTATUS_OPTIONS:END -->
+<!-- prettier-ignore-end-->
+
+```ts
+await r6api.getUserStatus({
+  userIds: ['0b95544b-0228-49a7-b338-6d15cfbc3d6a']
+});
+```
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERSTATUS_OUTPUT:START -->
+
+<details>
+<summary>Output</summary>
+
+```ts
+[
+  {
+    userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    status: 'offline',
+    applications: [],
+    manuallySet: null
+  }
+]
+```
+
+</details>
+
+<!-- GETUSERSTATUS_OUTPUT:END -->
+<!-- prettier-ignore-end-->
+
+---
+
+### getUserApplications
+
+Get user owned applications.
+
+#### Options
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERAPPLICATIONS_OPTIONS:START -->
+
+| Parameter         | Type       | Required | Default | Description                              |
+| ----------------- | ---------- | -------- | ------- | ---------------------------------------- |
+| profileIds        | `string[]` | ✔        |         | `profileIds` (100 max)                   |
+| fetchApplications | `boolean`  | ✖        | `false` | Fetch name and platform for applications |
+
+<!-- GETUSERAPPLICATIONS_OPTIONS:END -->
+<!-- prettier-ignore-end-->
+
+```ts
+await r6api.getUserApplications({
+  profileId: ['0b95544b-0228-49a7-b338-6d15cfbc3d6a']
+});
+```
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERAPPLICATIONS_OUTPUT:START -->
+
+<details>
+<summary>Output</summary>
+
+```ts
+[
+  {
+    profileId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
+    applications: [
+      {
+        id: '46f0b36b-b947-4d9c-b9dc-9a34b52ab59a',
+        name: null,
+        platform: null,
+        sessionsPlayed: 10,
+        daysPlayed: 7,
+        lastPlayedDate: '2020-10-27T17:11:38.771Z',
+        firstPlayedDate: '2019-04-19T22:05:01.850Z'
+      },
+      {
+        id: '87843b9b-516d-4a58-824b-f658d1361ad1',
+        name: null,
+        platform: null,
+        sessionsPlayed: 2,
+        daysPlayed: 2,
+        lastPlayedDate: '2016-03-21T18:28:25.434Z',
+        firstPlayedDate: '2016-03-18T16:18:43.603Z'
+      },
+      {
+        id: 'a427a342-56bb-437b-b835-fa695c75893b',
+        name: 'Rainbow Six Siege - Test Server',
+        platform: 'PC',
+        sessionsPlayed: 137,
+        daysPlayed: 72,
+        lastPlayedDate: '2020-11-16T05:35:45.229Z',
+        firstPlayedDate: '2017-06-01T20:10:13.424Z'
+      },
+      {
+        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
+        name: 'Rainbow Six Siege',
+        platform: 'PC',
+        sessionsPlayed: 2344,
+        daysPlayed: 1221,
+        lastPlayedDate: '2021-02-04T12:35:13.173Z',
+        firstPlayedDate: '2015-12-01T19:33:41.284Z'
+      },
+      {
+        id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
+        name: 'Ubisoft Connect Client',
+        platform: 'PC',
+        sessionsPlayed: 2285,
+        daysPlayed: 1766,
+        lastPlayedDate: '2023-01-29T21:48:51.696Z',
+        firstPlayedDate: '2015-12-01T19:31:18.107Z'
+      }
+    ]
+  }
+]
+```
+
+</details>
+
+<!-- GETUSERAPPLICATIONS_OUTPUT:END -->
+<!-- prettier-ignore-end-->
+
+---
+
+### getUserGamesPlayed
+
+Get user played games.
+
+#### Options
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERGAMESPLAYED_OPTIONS:START -->
+
+| Parameter         | Type       | Required | Default | Description                 |
+| ----------------- | ---------- | -------- | ------- | --------------------------- |
+| profileIds        | `string[]` | ✔        |         | `profileIds` (20 max)       |
+| fetchApplications | `boolean`  | ✖        | `false` | Fetch name for applications |
+
+<!-- GETUSERGAMESPLAYED_OPTIONS:END -->
+<!-- prettier-ignore-end-->
+
+```ts
+await r6api.getUserGamesPlayed({
+  profileIds: ['0b95544b-0228-49a7-b338-6d15cfbc3d6a']
+});
+```
+
+<!-- prettier-ignore-start -->
+<!-- GETUSERGAMESPLAYED_OUTPUT:START -->
+
+<details>
+<summary>Output</summary>
+
+```ts
+[
+  {
+    spaceId: '0d2ae42d-4c27-4cb7-af6c-2099062302bb',
+    spacePlatform: 'crossplay',
+    firstPlayed: { createdAt: null, countryCode: null },
+    lastPlayed: { updatedAt: null, countryCode: null },
+    sessionsCount: null,
+    applications: [
+      {
+        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
+        name: 'Rainbow Six Siege',
+        platform: 'PC',
+        firstPlayed: { createdAt: null, countryCode: null },
+        lastPlayed: { updatedAt: null, countryCode: null },
+        sessionsCount: null
+      }
+    ]
+  },
+  {
+    spaceId: 'e17be87d-2996-4f3b-97c4-19bb2dae2933',
+    spacePlatform: 'PC',
+    firstPlayed: { createdAt: null, countryCode: null },
+    lastPlayed: { updatedAt: null, countryCode: null },
+    sessionsCount: null,
+    applications: [
+      {
+        id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
+        name: 'Ubisoft Connect Client',
+        platform: 'PC',
+        firstPlayed: { createdAt: null, countryCode: null },
+        lastPlayed: { updatedAt: null, countryCode: null },
+        sessionsCount: null
+      }
+    ]
+  },
+  {
+    spaceId: '5172a557-50b5-4665-b7db-e3f2e8c5041d',
+    spacePlatform: 'PC',
+    firstPlayed: { createdAt: null, countryCode: null },
+    lastPlayed: { updatedAt: null, countryCode: null },
+    sessionsCount: null,
+    applications: [
+      {
+        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
+        name: 'Rainbow Six Siege',
+        platform: 'PC',
+        firstPlayed: { createdAt: null, countryCode: null },
+        lastPlayed: { updatedAt: null, countryCode: null },
+        sessionsCount: null
+      }
+    ]
+  },
+  {
+    spaceId: '5c22ec5f-d475-4ec1-8c60-0c28ce9affed',
+    spacePlatform: 'crossplay',
+    firstPlayed: { createdAt: null, countryCode: null },
+    lastPlayed: { updatedAt: null, countryCode: null },
+    sessionsCount: null,
+    applications: [
+      {
+        id: 'a427a342-56bb-437b-b835-fa695c75893b',
+        name: 'Rainbow Six Siege - Test Server',
+        platform: 'PC',
+        firstPlayed: { createdAt: null, countryCode: null },
+        lastPlayed: { updatedAt: null, countryCode: null },
+        sessionsCount: null
+      }
+    ]
+  },
+  {
+    spaceId: '41aebcf5-56eb-4f1e-b154-9eb46718f465',
+    spacePlatform: 'PC',
+    firstPlayed: { createdAt: null, countryCode: null },
+    lastPlayed: { updatedAt: null, countryCode: null },
+    sessionsCount: null,
+    applications: [
+      {
+        id: 'a427a342-56bb-437b-b835-fa695c75893b',
+        name: 'Rainbow Six Siege - Test Server',
+        platform: 'PC',
+        firstPlayed: { createdAt: null, countryCode: null },
+        lastPlayed: { updatedAt: null, countryCode: null },
+        sessionsCount: null
+      }
+    ]
+  },
+  {
+    spaceId: '029e8254-57fe-4d2a-8a40-bb321f0f660d',
+    spacePlatform: 'ANDROID',
+    firstPlayed: { createdAt: null, countryCode: null },
+    lastPlayed: { updatedAt: null, countryCode: null },
+    sessionsCount: null,
+    applications: [
+      {
+        id: '46f0b36b-b947-4d9c-b9dc-9a34b52ab59a',
+        name: null,
+        platform: 'ANDROID',
+        firstPlayed: { createdAt: null, countryCode: null },
+        lastPlayed: { updatedAt: null, countryCode: null },
+        sessionsCount: null
+      }
+    ]
+  },
+  {
+    spaceId: '4a1562a4-c4d2-4bc5-a85e-f3db588b0072',
+    spacePlatform: 'PC',
+    firstPlayed: { createdAt: null, countryCode: null },
+    lastPlayed: { updatedAt: null, countryCode: null },
+    sessionsCount: null,
+    applications: [
+      {
+        id: 'd71bf270-d6b1-4ae1-9546-338ce292e125',
+        name: null,
+        platform: 'PC',
+        firstPlayed: { createdAt: null, countryCode: null },
+        lastPlayed: { updatedAt: null, countryCode: null },
+        sessionsCount: null
+      }
+    ]
+  },
+  {
+    spaceId: '6edd234a-abff-4e90-9aab-b9b9c6e49ff7',
+    spacePlatform: 'PC',
+    firstPlayed: { createdAt: null, countryCode: null },
+    lastPlayed: { updatedAt: null, countryCode: null },
+    sessionsCount: null,
+    applications: [
+      {
+        id: '87843b9b-516d-4a58-824b-f658d1361ad1',
+        name: null,
+        platform: 'PC',
+        firstPlayed: { createdAt: null, countryCode: null },
+        lastPlayed: { updatedAt: null, countryCode: null },
+        sessionsCount: null
+      }
+    ]
+  }
+]
+```
+
+</details>
+
+<!-- GETUSERGAMESPLAYED_OUTPUT:END -->
+<!-- prettier-ignore-end-->
+
+---
+
+### getApplications
+
+Get applications.
+
+#### Options
+
+<!-- prettier-ignore-start -->
+<!-- GETAPPLICATIONS_OPTIONS:START -->
+
+| Parameter      | Type       | Required | Default | Description               |
+| -------------- | ---------- | -------- | ------- | ------------------------- |
+| applicationIds | `string[]` | ✔        |         | Applications ids (50 max) |
+
+<!-- GETAPPLICATIONS_OPTIONS:END -->
+<!-- prettier-ignore-end-->
+
+```ts
+await r6api.getApplications({
+  applicationIds: ['f68a4bb5-608a-4ff2-8123-be8ef797e0a6']
+});
+```
+
+<!-- prettier-ignore-start -->
+<!-- GETAPPLICATIONS_OUTPUT:START -->
+
+<details>
+<summary>Output</summary>
+
+```ts
+[
+  {
+    id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
+    name: 'Ubisoft Connect Client',
+    platform: 'PC',
+    spaceId: 'e17be87d-2996-4f3b-97c4-19bb2dae2933'
+  }
+]
+```
+
+</details>
+
+<!-- GETAPPLICATIONS_OUTPUT:END -->
+<!-- prettier-ignore-end-->
+
+---
+
+### getServiceStatus
+
+Get game service status.
+
+```ts
+await r6api.getServiceStatus();
+```
+
+<!-- prettier-ignore-start -->
+<!-- GETSERVICESTATUS_OUTPUT:START -->
+
+<details>
+<summary>Output</summary>
+
+```ts
 [
   {
     appId: '8956241d-236d-4dbd-9e1e-bf6ed133773a',
@@ -850,6 +1411,17 @@ await r6api.getStatus();
     mdm: '23702',
     category: 'Instance',
     platform: 'PC',
+    status: 'Online',
+    maintenance: null,
+    impactedFeatures: []
+  },
+  {
+    appId: '',
+    name: 'Rainbow Six Siege - Luna - LIVE',
+    spaceId: '',
+    mdm: '',
+    category: 'Instance',
+    platform: 'Luna',
     status: 'Online',
     maintenance: null,
     impactedFeatures: []
@@ -877,7 +1449,7 @@ await r6api.getStatus();
     impactedFeatures: []
   },
   {
-    appId: '6e3c99c9-6c3f-43f4-b4f6-f1a3143f2764',
+    appId: '',
     name: 'Rainbow Six Siege - PS5 - LIVE',
     spaceId: '96c1d424-057e-4ff7-860b-6b9c9222bdbf',
     mdm: '25365',
@@ -888,7 +1460,7 @@ await r6api.getStatus();
     impactedFeatures: []
   },
   {
-    appId: '76f580d5-7f50-47cc-bbc1-152d000bfe59',
+    appId: '',
     name: 'Rainbow Six Siege - XBOX SERIES X - LIVE',
     spaceId: '631d8095-c443-4e21-b301-4af1a0929c27',
     mdm: '25366',
@@ -909,409 +1481,446 @@ await r6api.getStatus();
     maintenance: null,
     impactedFeatures: []
   }
-];
+]
 ```
 
 </details>
-<!-- END_SECTION:GETSTATUS_OUTPUT -->
 
----
-
-### getUserStatus
-
-Get status of a player.
-
-Ids limit: `50`
-
-(id/s, options?) => `Promise<Array>`
-
-#### Options
-
-<!-- START_SECTION:GETUSERSTATUS_OPTIONS -->
-
-| Param             | Type      | Required | Default | Description                                                               |
-| ----------------- | --------- | -------- | ------- | ------------------------------------------------------------------------- |
-| fetchApplications | `boolean` | false    | `false` | Make another API request to get additional information about applications |
-
-<!-- END_SECTION:GETUSERSTATUS_OPTIONS -->
-
-> Note: Takes `userId` instead of `profileId` (`id`) like most methods
-
-```js
-await r6api.getUserStatus('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
-```
-
-<!-- START_SECTION:GETUSERSTATUS_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-[
-  {
-    userId: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    status: 'offline',
-    applications: [],
-    manuallySet: null
-  }
-];
-```
-
-</details>
-<!-- END_SECTION:GETUSERSTATUS_OUTPUT -->
-
----
-
-### getProfileApplications
-
-Get information about applications of a player.
-
-Ids limit: `100`
-
-(id/s, options?) => `Promise<Array>`
-
-#### Options
-
-<!-- START_SECTION:GETPROFILEAPPLICATIONS_OPTIONS -->
-
-| Param             | Type      | Required | Default | Description                                                               |
-| ----------------- | --------- | -------- | ------- | ------------------------------------------------------------------------- |
-| fetchApplications | `boolean` | false    | `false` | Make another API request to get additional information about applications |
-
-<!-- END_SECTION:GETPROFILEAPPLICATIONS_OPTIONS -->
-
-```js
-await r6api.getProfileApplications('0b95544b-0228-49a7-b338-6d15cfbc3d6a');
-```
-
-<!-- START_SECTION:GETPROFILEAPPLICATIONS_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-[
-  {
-    id: '0b95544b-0228-49a7-b338-6d15cfbc3d6a',
-    applications: [
-      {
-        id: '46f0b36b-b947-4d9c-b9dc-9a34b52ab59a',
-        name: null,
-        platform: null,
-        sessionsPlayed: 10,
-        daysPlayed: 7,
-        lastPlayedAt: '2020-10-27T17:11:38.771Z',
-        firstPlayedAt: '2019-04-19T22:05:01.850Z'
-      },
-      {
-        id: '87843b9b-516d-4a58-824b-f658d1361ad1',
-        name: null,
-        platform: null,
-        sessionsPlayed: 2,
-        daysPlayed: 2,
-        lastPlayedAt: '2016-03-21T18:28:25.434Z',
-        firstPlayedAt: '2016-03-18T16:18:43.603Z'
-      },
-      {
-        id: 'a427a342-56bb-437b-b835-fa695c75893b',
-        name: "Tom Clancy's Rainbow Six Siege - Test Server",
-        platform: 'PC',
-        sessionsPlayed: 137,
-        daysPlayed: 72,
-        lastPlayedAt: '2020-11-16T05:35:45.229Z',
-        firstPlayedAt: '2017-06-01T20:10:13.424Z'
-      },
-      {
-        id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
-        name: "Tom Clancy's Rainbow Six Siege",
-        platform: 'PC',
-        sessionsPlayed: 2344,
-        daysPlayed: 1221,
-        lastPlayedAt: '2021-02-04T12:35:13.173Z',
-        firstPlayedAt: '2015-12-01T19:33:41.284Z'
-      },
-      {
-        id: 'f68a4bb5-608a-4ff2-8123-be8ef797e0a6',
-        name: null,
-        platform: null,
-        sessionsPlayed: 1919,
-        daysPlayed: 1551,
-        lastPlayedAt: '2021-08-01T08:45:05.344Z',
-        firstPlayedAt: '2015-12-01T19:31:18.107Z'
-      }
-    ]
-  }
-];
-```
-
-</details>
-<!-- END_SECTION:GETPROFILEAPPLICATIONS_OUTPUT -->
-
----
-
-### getApplications
-
-Get information about applications.
-
-Ids limit: `50`
-
-(id/s) => `Promise<Array>`
-
-```js
-await r6api.getApplications('e3d5ea9e-50bd-43b7-88bf-39794f4e3d40');
-```
-
-<!-- START_SECTION:GETAPPLICATIONS_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-[
-  {
-    id: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40',
-    name: "Tom Clancy's Rainbow Six Siege",
-    platform: 'PC',
-    spaceId: '5172a557-50b5-4665-b7db-e3f2e8c5041d'
-  }
-];
-```
-
-</details>
-<!-- END_SECTION:GETAPPLICATIONS_OUTPUT -->
-
----
-
-### validateUsername
-
-Validate username.
-
-(username) => `Promise<Object>`
-
-```js
-await r6api.validateUsername('gamerflick360');
-```
-
-<!-- START_SECTION:VALIDATEUSERNAME_OUTPUT -->
-<details>
-<summary>Output</summary>
-
-```js
-{
-  valid: false,
-  validationReports: [
-    {
-      message: '\'flick\' matches \'flick\'',
-      categories: [
-        'global-username',
-        'vulgarity'
-      ],
-      severity: 'high',
-      locale: 'en-US',
-      errorCode: 1013,
-      suggestions: null
-    }
-  ]
-}
-```
-
-</details>
-<!-- END_SECTION:VALIDATEUSERNAME_OUTPUT -->
+<!-- GETSERVICESTATUS_OUTPUT:END -->
+<!-- prettier-ignore-end-->
 
 ---
 
 ### getNews
 
-Get Rainbow Six: Siege News.
+Get game news.
 
-(options?) => `Promise<Object>`
+### Options
 
-#### Options
+<!-- prettier-ignore-start -->
+<!-- GETNEWS_OPTIONS:START -->
 
-<!-- START_SECTION:GETNEWS_OPTIONS -->
+| Parameter      | Type       | Required | Default                       | Description                                                                       |
+| -------------- | ---------- | -------- | ----------------------------- | --------------------------------------------------------------------------------- |
+| locale         | `string`   | ✖        | `'en-gb'`                     |                                                                                   |
+| fallbackLocale | `string`   | ✖        | `'en-us'`                     |                                                                                   |
+| category       | `string`   | ✖        | `'all'`                       | `'all'`, `'game-updates'`, `'patch-notes'`, `'community'`, `'store'`, `'esports'` |
+| media          | `string`   | ✖        | `'all'`                       | `'all'`, `'news'`, `'videos'`                                                     |
+| placement      | `string`   | ✖        | `''`                          | Ex: `'featured-news-article'`                                                     |
+| limit          | `number`   | ✖        | `6`                           |                                                                                   |
+| skip           | `number`   | ✖        | `0`                           |                                                                                   |
+| startIndex     | `number`   | ✖        | `0`                           |                                                                                   |
+| tags           | `string[]` | ✖        | `['BR-rainbow-six GA-siege']` |                                                                                   |
 
-| Param          | Type      | Required | Default   | Description                                                                       |
-| -------------- | --------- | -------- | --------- | --------------------------------------------------------------------------------- |
-| raw            | `boolean` | false    | `false`   | Include raw API response                                                          |
-| category       | `string`  | false    | `'all'`   | `'all'`, `'game-updates'`, `'patch-notes'`, `'community'`, `'store'`, `'esports'` |
-| media          | `string`  | false    | `'all'`   | `'all'`, `'news'`, `'videos'`                                                     |
-| placement      | `string`  | false    | `''`      | Ex: `'featured-news-article'`                                                     |
-| limit          | `number`  | false    | `6`       |                                                                                   |
-| skip           | `number`  | false    | `0`       |                                                                                   |
-| startIndex     | `number`  | false    | `0`       |                                                                                   |
-| locale         | `string`  | false    | `'en-gb'` |                                                                                   |
-| fallbackLocale | `string`  | false    | `'en-us'` |                                                                                   |
+<!-- GETNEWS_OPTIONS:END -->
+<!-- prettier-ignore-end-->
 
-<!-- END_SECTION:GETNEWS_OPTIONS -->
-
-```js
+```ts
 await r6api.getNews({ limit: 1 });
 ```
 
-<!-- START_SECTION:GETNEWS_OUTPUT -->
+<!-- prettier-ignore-start -->
+<!-- GETNEWS_OUTPUT:START -->
+
 <details>
 <summary>Output</summary>
 
-```js
+```ts
 {
-  total: 771,
+  total: 774,
   limit: 1,
   categories: 'all',
   media: 'all',
   skip: 0,
   startIndex: 0,
   placement: [],
-  tags: [
-    'BR-rainbow-six GA-siege'
-  ],
+  tags: [ 'BR-rainbow-six GA-siege' ],
   items: [
     {
-      id: '3XYWbFClpxnuEiNBmrF3zl',
-      title: 'RAINBOW SIX SIEGE HOLIDAY PACK 2022',
-      abstract: 'Happy Holidays from the Rainbow Six Siege team!  ',
+      id: '5W4Tn6l3RvzhbnKDYBMDTl',
+      title: 'Y7S4.2 Patch Notes',
+      abstract: 'See the upcoming changes to Rainbow Six Siege with the release of Y7S4.2',
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6GBH9GZennq2REUcKWSrEU/01653a2f124e74b2c12fbcc25cbe8f71/R6S_Blogpost_2022-12_Holiday_Pack.jpg',
-        description: ''
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6pOZyZoqf6DZ4MPaECBxw4/ea81db29b0498c81941b16aa59cd355c/Y7S4.2_PatchNotes.jpg',
+        description: null
       },
-      content: 'It\'s that time of the year again - Happy Holidays from the Rainbow Six Siege team!  \n\nTo celebrate the festive season, we have a special surprise for you: \n\nEvery player connecting to the game __between December 22nd, 2022, and January 3rd, 2023,__ will be awarded a free Holiday Pack! \n\nThe Holiday Pack will be accessible in the Pack section on the home screen. Once activated, players will receive one free Operator from Year 1-7. This Operator will be randomly selected and will not include any Operators that the player has already unlocked.  \n\nThose who already own all Operators will receive a brand-new free headgear and uniform for the Operator Ying, as well as a brand-new signature weapon skin - holiday-themed of course! \n\nWe hope you enjoy this little gift from the team, and we wish you a great start to the new year.',
+      content: 'See the upcoming changes to Rainbow Six Siege with the release of Y7S4.2\n' +
+        '\n' +
+        '## Y7S4.2 PATCH SIZE\n' +
+        '\n' +
+        'Find the download sizes for each platform below.\n' +
+        '\n' +
+        '- Ubisoft Connect: 1.21 GB\n' +
+        '- Steam: 476.25 MB\n' +
+        '- Xbox One: 1.10 GB\n' +
+        '- Xbox Series X: 1.10 GB\n' +
+        '- PS4: 1.65 GB\n' +
+        '- PS5: 1.09 GB\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '## OPERATOR BALANCING\n' +
+        '\n' +
+        '### TWITCH\n' +
+        '\n' +
+        '-   Increased regular drones to 2 (from 1)\n' +
+        '-   Removed Vertical Grip from F2\n' +
+        '\n' +
+        '### GRIM\n' +
+        '\n' +
+        '-   Added 1.5x and 2.0x sights to Commando 552\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '## WEAPON BALANCING\n' +
+        '\n' +
+        '### EXTENDED BARREL\n' +
+        '\n' +
+        '-   (New) Damage bonus: increases weapon damage by 15%\n' +
+        '\n' +
+        '### PARA-308 (CAPITÃO)\n' +
+        '\n' +
+        '-   Damage: reduced to 47 (from 48)\n' +
+        '\n' +
+        '### SUPERNOVA (ECHO, HIBANA, AMARU)\n' +
+        '\n' +
+        '-   Damage: increased to 55 (from 48)\n' +
+        '\n' +
+        '### 9MM C1 (FROST)\n' +
+        '\n' +
+        '-   Damage: reduced to 36 (from 45)\n' +
+        '\n' +
+        '### AR-15.50 & M4 (MAVERICK)\n' +
+        '\n' +
+        '-   Damage: increased to 67 (from 62)\n' +
+        '-   Added 2.0x sights to M4\n' +
+        '\n' +
+        '### UZK50GI (THORN)\n' +
+        '\n' +
+        '-   Damage: reduced to 36 (from 44)\n' +
+        '\n' +
+        '### AUG A2 (WAMAI, IQ)\n' +
+        '\n' +
+        '-   Vertical recoil: increased upward speed.\n' +
+        '-   Horizontal recoil: Long bursts now have an increased spread and tend to pull left.\n' +
+        '\n' +
+        '### COMMANDO 552 (GRIM, IQ)\n' +
+        '\n' +
+        '-   Damage: reduced to 47 (from 48)\n' +
+        '\n' +
+        '### HIP FIRE PRECISION\n' +
+        '\n' +
+        '*WEAPONS AFFECTED*\n' +
+        '\n' +
+        '-   Spread increased:  AK12, ARX 200, SC3000K, LMG-E, 6P41, T-95, 417, AR-15.50, CAMRS, MK14\n' +
+        '-   Spread reduced: P10-C\n' +
+        '-   Burst growth increased: AUG A2, AUG A3, POF 9, LMG-E, 6P41, T-95, 417, AR-15.50, MK14\n' +
+        '-   Burst growth reduced: CAMRS \n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '## TWEAKS AND IMPROVEMENTS\n' +
+        '\n' +
+        '### PLAYER COMFORT\n' +
+        '\n' +
+        '__Advanced controller options__\n' +
+        '\n' +
+        "-   Players on PC and consoles can customize their controllers' aim controls with Advanced Controller Options.\n" +
+        '-   These options can be found in the Controller section of the Controls option menu.  \n' +
+        "-   We'll be listening to player feedback to further improve this feature and offer new options as needed\n" +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '## Bug Fixes\n' +
+        '\n' +
+        '### GAMEPLAY\n' +
+        '\n' +
+        'FIXED - Most played Operators are not being chosen when inactive on the Random Operator selection screen.\n' +
+        '\n' +
+        "FIXED - POF-9 recoil pattern isn't displayed in Weapon Loadout screen and Shooting Range records.\n" +
+        '\n' +
+        'FIXED - Button to access chat is not functional when Covert Voice to Text option is on during gameplay sessions.\n' +
+        '\n' +
+        "FIXED - Match loadout when round begins sometimes does not match player's loadout during character select stage.\n" +
+        '\n' +
+        '### LEVEL DESIGN\n' +
+        '\n' +
+        'FIXED - Players can peek above the reinforcement at EXT Garage Balcony on Outback Map.\n' +
+        '\n' +
+        `FIXED - Echo's Yokai drone and Valkyrie's Black Eye camera are able to scan the attackers at the "EXT Park" location immediately after they spawn when positioned on the ceiling of the 1F Lobby location on Nighthaven Labs.\n` +
+        '\n' +
+        'FIXED - Multiple LOD issues on various maps.\n' +
+        '\n' +
+        '### OPERATORS\n' +
+        '\n' +
+        "FIXED - Solis can't shoot if SPEC-IO gets deactivated at the same time that Solis activates it.\n" +
+        '\n' +
+        "FIXED - Caveira's hair clips into her face in the Home section.\n" +
+        '\n' +
+        "FIXED - Doc's Stim Pistol is missing the keyword action reminder.\n" +
+        '\n' +
+        "FIXED - While SPEC-IO is active, Solis' arms and phone clip through the AR HUD when entering Observation Tool view.\n" +
+        '\n' +
+        '### USER EXPERIENCE\n' +
+        '\n' +
+        'FIXED - Icon previews for loadouts do not load properly during the operator selection phase.\n' +
+        '\n' +
+        'FIXED - No offers are displayed in the Gift to Friends section in Ubisoft Connect.\n' +
+        '\n' +
+        'FIXED - Players can duplicate their account by unlinking an account and relinking to a new account.\n' +
+        '\n' +
+        'FIXED - Players experience an infinite loading when attempting to convert any pack while also switching to a different one at the same time.\n' +
+        '\n' +
+        'FIXED - Prompt to Apply Changes appears in Options menu despite no changes being made.\n' +
+        '\n' +
+        'FIXED - Various UI issues.\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '---\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        'Follow us and share your feedback on [Twitter](https://twitter.com/Rainbow6Game), [Reddit](https://www.reddit.com/r/Rainbow6/), [Facebook](https://www.facebook.com/Rainbow6/) and on our [forums](https://discussions.ubisoft.com/category/609/rainbow-six-siege?lang=en-US).',
       description: undefined,
-      categories: [
-        'rainbow-six-siege'
-      ],
+      categories: null,
       tag: 'BR-rainbow-six GA-siege',
-      placement: null,
-      type: 'news',
-      readTime: 1,
-      url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/3XYWbFClpxnuEiNBmrF3zl/rainbow-six-siege-holiday-pack-2022',
-      date: 'Thu Dec 22 2022 17:00:00 GMT+0000 (Coordinated Universal Time)'
+      readTime: 4,
+      url: 'https://ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/5W4Tn6l3RvzhbnKDYBMDTl/y7s42-patch-notes',
+      date: '2023-01-24T12:00:00.000Z'
     }
   ]
 }
 ```
 
 </details>
-<!-- END_SECTION:GETNEWS_OUTPUT -->
+
+<!-- GETNEWS_OUTPUT:END -->
+<!-- prettier-ignore-end-->
 
 ---
 
 ### getNewsById
 
-Get Rainbow Six: Siege News by ID.
-
-(id: `string`, options?) => `Promise<Object>`
+Get game news by id.
 
 #### Options
 
-<!-- START_SECTION:GETNEWSBYID_OPTIONS -->
+<!-- prettier-ignore-start -->
+<!-- GETNEWSBYID_OPTIONS:START -->
 
-| Param          | Type      | Required | Default   | Description              |
-| -------------- | --------- | -------- | --------- | ------------------------ |
-| raw            | `boolean` | false    | `false`   | Include raw API response |
-| locale         | `string`  | false    | `'en-gb'` |                          |
-| fallbackLocale | `string`  | false    | `'en-us'` |                          |
+| Parameter      | Type       | Required | Default                       | Description |
+| -------------- | ---------- | -------- | ----------------------------- | ----------- |
+| id             | `string`   | ✔        |                               | News id     |
+| locale         | `string`   | ✖        | `'en-gb'`                     |             |
+| fallbackLocale | `string`   | ✖        | `'en-us'`                     |             |
+| tags           | `string[]` | ✖        | `['BR-rainbow-six GA-siege']` |             |
 
-<!-- END_SECTION:GETNEWSBYID_OPTIONS -->
+<!-- GETNEWSBYID_OPTIONS:END -->
+<!-- prettier-ignore-end-->
 
-```js
-await r6api.getNewsById('4QAhnXnPk7Ffse8scw3k0Z');
+```ts
+await r6api.getNewsById({ id: '26Ar2mQAv7zwB6MN61HVPt' });
 ```
 
-<!-- START_SECTION:GETNEWSBYID_OUTPUT -->
+<!-- prettier-ignore-start -->
+<!-- GETNEWSBYID_OUTPUT:START -->
+
 <details>
 <summary>Output</summary>
 
-```js
+```ts
 {
-  total: 3,
-  tags: [
-    'BR-rainbow-six GA-siege'
-  ],
-  item: [
+  total: 774,
+  tags: [ 'BR-rainbow-six GA-siege' ],
+  items: [
     {
-      id: '4QAhnXnPk7Ffse8scw3k0Z',
-      title: 'Y5S1.2 Patch Notes',
-      abstract: 'The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. ',
+      id: '26Ar2mQAv7zwB6MN61HVPt',
+      title: 'Demon Veil Reddit AMA Wrap-Up',
+      abstract: 'Miss our recent Reddit AMA on Maps & Ops? We’ve collected our answers here for easy reading – and keep an eye out on our channels for future AMAs!',
       thumbnail: {
-        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Gqlz4Wt00TfhvaSH4d8LZ/bdb41b4552ebfda9acf293ece6f50084/y5s1_2_pn-min.png',
+        url: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/HumVNrTEeDEbkA3ibpHiU/c214adb4a29d6aeab90f73dd74467fad/DevTeamAMARecap_ArticleHeader.png',
         description: ''
       },
-      content: 'The Y5S1.2 Patch will deploy to PC and Console in the week of April 20th. Please see our [Designer\'s Notes](https://rainbow6.com/dn_y5s12) for more insight on the balancing changes coming with the update.\n\n# UPDATE\nUpdate - the quick match map pool will remain the same throughout Y5S1 and will rotate again in Y5S2.\n\n# BALANCING\n### BUCK \n*With you til the end of the line.*\n\n- Frag Grenades replaced with Claymores.\n- Increased Skeleton Key Magazine Capacity: \n  - Skeleton Key magazine capacity increased to 5 + 1\n  - Skeleton Key max ammo count is now 25+1\n\n### GOYO\n*Less is more.*\n\n- Reduced number of Volcán shields to 2 (down from 3).\n\n### JÄGER\n*Less of a pain-in-the-schnitzel.*\n\n- Now a 2-speed/2-armor operator.\n\n### MOZZIE\n*Still a shortie.*\n\n- Removed Super Shorty secondary.\n\n### YING\n*Lights, Camera, Action!*\n\n- Increased number of Candelas to 4 (up from 3).\n- Replaced Claymores with Smoke Grenades.\n- Increased T-95 LSW damage to 46 (up from 43).\n\n### M12 (Caveira)\n- Added a Razor Holographic Sight option to her M12.\n\n### TCSG12 (Kaid, Goyo)\n- Added an additional magazine to the TCSG12.\n- Reduced TCSG12 damage to 57 (down from 84).\n\n# BUG FIXES\n- FIXED – Barricade replication issues where the barricade is not destroyed for all players in game except the shooter.\n- FIXED – The Dynamic Play button does not update properly when last match was on an Event/Discovery playlist.\n- FIXED – Players can clip inside the excavator in EXT Construction Site of Oregon.\n- FIXED – Game boots with DX11 when players manually select the Vulkan executable in the steam installation folder.\n- FIXED – Minor menu/shop visual and cosmetic fixes.\n- FIXED – Lighting issue on Consulate map (hotfixed on PC on [March 30](https://twitter.com/rainbow6game/status/1244581743254024192?lang=en)).',
+      content: 'Coming hot off the recent release of Emerald Plains, our dev team were excited to answer your burning questions about Maps and Operators - past, present, and future. Over the course of the AMA, they answered a variety of topics, including night maps, the design process of Emerald Plains, and their approach to keeping Siege fresh each season. [You can review the full AMA here!](https://www.reddit.com/r/Rainbow6/comments/uep42q/ama_we_are_the_rainbow_six_siege_dev_team_ask_us/)\n' +
+        '\n' +
+        "We're planning more focused AMAs like this in the future to cover a range of different topics, so keep an eye out for future Q&As!\n" +
+        '\n' +
+        '---\n' +
+        '\n' +
+        '__MAPS__\n' +
+        '\n' +
+        '__Q:__ *What are your plans to combat players banning future new maps/reworks instead of giving them an honest chance?*\n' +
+        '\n' +
+        '__A:__ Good question! We have plans to change up the existing map ban system later this year and will be sharing more soon but suffice to say, this new system should lead to a wider range of maps seeing more active play in Ranked!  - Alexander\n' +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6owdok/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *Curious about Emerald Plains design and what other maps it incorporates from. With the map design process, do you look at other maps and try to incorporate similar structure? Or is it from the ground up?* \n' +
+        '\n' +
+        "__A:__ The comparisons to Bartlett make sense - Emerald Plains DID begin its life as a Bartlett rework. As we proceeded to change more and more of the map during the reworking phase, we quickly found that it was becoming its own map and didn't fit our definition of a rework, so we decided to shift gears and lean into the newness, theme and all. While there are hints and nods to its old self like the foyer and two front towers, its moment-to-moment gameplay flow is entirely different from its humble beginnings as a Bartlett rework.  - Frédéric and Yann\n" +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6ot1ea/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *Is there a possibility to see night maps return to the game, possibly in Casual mode?*\n' +
+        '\n' +
+        "__A:__ Whenever we choose to make a night map, we need to ensure that it's well-lit to ensure the most balanced and competitive environment possible. It doesn't matter whether a future map is night or day, but the lighting of the map needs to offer fair play. We don't have plans to turn past maps into night maps, but we aren't closing the door to future maps!  - Alexander\n" +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6ou0w1/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *What kind of challenges does bringing in new maps for TDM present to the Level Design team? With the introduction of TDM, is this the start of a more reinforced casual side to Siege?*\n' +
+        '\n' +
+        "__A:__ The main challenge is that this is largely new to us in the scope of Siege. We're used to thinking about attack and defense aspects of our maps, but for TDM, we need to make sure no one area is too defensible - you should be able to easily navigate, and orient yourself, and easily identify opponents at a glance. Let's just say that after making this, we have a lot of ideas we didn't get a chance to use, so we have those stored away.\n" +
+        '\n' +
+        "As for the question about Siege's casual side, when we have a community that's as large and diverse as the Siege community, we absolutely want to reinforce our casual playlists just as much as we reinforce the competitive side, so this is something that's always important to us to consider.  - Yann and Alexander\n" +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6ovxg5/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *How arduous is the process of finding and fixing exploits, unfair angles, and other cheesy things when creating a new map?*\n' +
+        '\n' +
+        '__A:__ We wish we played viciously enough to catch everything on the first pass! Our QC team is incredibly instrumental in helping us find these issues given the amount of time they put into these maps ahead of release.\\\n' +
+        "At the end of the day, though, the community also plays a huge role in this process, as millions of players tend to help catch things that a singular Map team may not always catch. We appreciate your ability to stretch the game's boundaries to their max, which helps to catch these exploits. It makes for an interesting process of searching, resolving, getting feedback, and continuing to iterate.  - Frédéric and Yann\n" +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6p04nx/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *How do you tackle map reworks on maps that are popular?*\n' +
+        '\n' +
+        '__A:__ Oregon is a great example of this. Before every rework, we look at pick rate and win rate of objectives and seek to try and equalize them. This one in particular was becoming stale prior to the rework and certain objectives were played the same way every time, so we tried to analyze which aspects of the map were strongest and most fun. This is where a workshop with pros came in. We often work with them to identify how to make the game flow more versatile and offer up more ways that plays can approach a map instead of falling into a routine they use every time.  - Yann\n' +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6oumb3/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *Emerald Plains only has a single point of entry on the roof of the map. What was the thought process behind this?*\n' +
+        '\n' +
+        '__A:__ Putting entry points on the roof tends to be a tricky balancing act, as there are often very few ways for Defenders to counteract this - specifically when there are hatches on the roof. Regarding the skylight, it was originally far more powerful in an earlier version, but we found with testing that even if you were more vulnerable while rappelling all the way down, it was way too much of an advantage for Attackers and had to be tweaked.  - Yann\n' +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6p9sa0/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__OPERATORS__\n' +
+        '\n' +
+        '__Q:__ *Will we ever have a unique combination of armor and speed in the future? (ie. 3 armor 2 speed)*\n' +
+        '\n' +
+        `__A:__ Good question! This is something we've experimented with, but are still looking at how we can "break" this system with it still being fun and balanced. We've also been toying with a 4-speed Operator, but the world's not ready yet (and maybe we'll never be ready for it). - Dominic\n` +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6p1i8p/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *One of the complaints from more old-school or traditional players is that the game has lost its more realistic tone and design, especially so in the gadgets. Do you plan on continuing this trend of futuristic and sleek looking gadgets? Or do you plan on mixing in more grounded looking gadgets as well as more futuristic looking ones?*\n' +
+        '\n' +
+        "__A:__ Since Siege's inception, it's been important to us to ground the concepts behind our gadgets in existing real-life technology with the caveat that fun and balanced gameplay comes first. Sometimes, it's necessary to stretch the bounds of reality and the real life tech we use as inspiration to fit the gameplay. Just look at Thatcher and Pulse: a grenade-sized EMP capable of disabling most electronic gadgets and a handheld heartbeat sensor of this strength take tech people are familiar with and stretch their reality to make them fun in a game concept.\n" +
+        '\n' +
+        "With your example of Thorn, this is quite close to how we handled Thatcher. The look of gadgets may touch on an Op's lore, but 1:1 translations from real life often don't have the same fun factor, so this is where the ingenuity of our designers comes in.\n" +
+        '\n' +
+        'Looking to the future, we will strive to strike a balance between real life tech inspiration and near-future innovation, all while prioritizing fun-factor. We still apply the same care and thoughtfulness to our gadgetry that we did with our Operators 7 years ago. - Alexander\n' +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6p2xm9/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        "__Q:__ *How did you collaborate with the game balance team when introducing Azami and her gadget to make sure it isn't too OP, especially since her ability can modify the entire flow of a room?*\n" +
+        '\n' +
+        "__A:__ From the prototyping phase, we sit down with Balancing once a week to explain our intentions and get an idea of any concerns they may have. This way, we can look at how best to strike that balance and offer as many possible ways to tweak an Operator in the future. We also take time to consider how they can affect (and be affected) by older legacy maps, which sometimes leads into considering reworks for the future. In that way, making an Operator isn't JUST about talking with Operator designers - it touches so many other teams. - Dominic and Frédéric\n" +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6p25q0/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *How do you decide who gets what scope magnification? Is there a reason some guns have a 1x and a 2x, but not a 1.5x?*\n' +
+        '\n' +
+        '__A:__ This really comes down to balancing the distance that an Op is viable at. Due to the nature of their gadgets and gameplay, this helps to determine where Ops play, so choosing their scope magnifications is an extension of helping to define where and what range they play from. This is also why different Ops might have different scopes available, tying directly into their unique styles of play.    \n' +
+        "Also, we ARE investigating adding 1.5x scopes, so that's something we're looking at for the future.  - Dominic\n" +
+        '\n' +
+        '([Full Post Here](https://www.reddit.com/r/Rainbow6/comments/uep42q/comment/i6okjp4/?utm_source=reddit&utm_medium=web2x&context=3))\n' +
+        '\n' +
+        '<br>\n' +
+        '\n' +
+        '__Q:__ *Why the sh'... 599 more characters,
       description: undefined,
-      categories: [
-        'news',
-        'rainbow-six',
-        'rainbow-six-siege',
-        'patch-notes'
-      ],
+      categories: [ 'rainbow-six-siege' ],
       tag: 'BR-rainbow-six GA-siege',
-      placement: [
-        'featured-news-article'
-      ],
-      type: 'news',
-      readTime: 2,
-      url: 'https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/4QAhnXnPk7Ffse8scw3k0Z/y5s12-patch-notes',
-      date: 'Mon Apr 20 2020 21:00:00 GMT+0000 (Coordinated Universal Time)'
+      readTime: 9,
+      url: 'https://ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/26Ar2mQAv7zwB6MN61HVPt/demon-veil-reddit-ama-wrapup',
+      date: 'Mon May 09 2022 14:00:00 GMT+0000 (Coordinated Universal Time)'
     }
   ]
 }
 ```
 
 </details>
-<!-- END_SECTION:GETNEWSBYID_OUTPUT -->
 
----
+<!-- GETNEWSBYID_OUTPUT:END -->
+<!-- prettier-ignore-end-->
 
-### custom
+## 🔌 Custom methods
 
-Useful if you're familiar with Rainbow Six Siege's API; this method will make a request to a custom URL you would provide with the token in the header.
+`src/fetch.ts` contains `fetch`, `ubiServices` and `dataDev` function which could be used to implement your own custom method.
+For example, simple implementation of `https://public-ubiservices.ubi.com/v1/spaces/{SPACE}/sandboxes/{SANDBOX}/playerstats2/statistics` endpoint using `ubiServices`:
 
-(url: `string`, params: `any`) => `Promise<T>`
+<details><summary>Show</summary>
 
-```js
-await r6api.custom(
-  utils.URLS.STATS(
-    'uplay',
-    ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'],
-    'operatorpvp_clash_sloweddown'
-  )
-);
-```
+```ts
+import 'dotenv/config';
 
-<!-- START_SECTION:CUSTOM_OUTPUT -->
-<details>
-<summary>Output</summary>
+import R6API, { getSpacesAndSandboxes, Platform } from 'r6api.js';
 
-```js
-{
-  results: {
-    '0b95544b-0228-49a7-b338-6d15cfbc3d6a': {
-      'operatorpvp_clash_sloweddown:3:10:infinite': 2
-    }
-  }
+const { email, password } = process.env;
+export const r6api = new R6API({ email, password });
+
+export interface Playerstats2Statistics {
+  results: Playerstats2StatisticsResults;
 }
+
+export type Playerstats2StatisticsResults = Record<
+  string,
+  Record<string, number>
+>;
+
+interface GetLegacyUserStatsOptions {
+  platform: Platform;
+  profileIds: string[];
+  statistics: string[];
+}
+/** Last time it got updates was Crystal Guard */
+const getLegacyUserStats = ({
+  platform,
+  profileIds,
+  statistics
+}: GetLegacyUserStatsOptions) =>
+  r6api.ubiServices<Playerstats2Statistics>({
+    version: 1,
+    path: `/${getSpacesAndSandboxes({ platform })}/playerstats2/statistics`,
+    params: {
+      populations: profileIds,
+      statistics
+    }
+  });
+
+// Using custom method
+(async () => {
+  await getLegacyUserStats({
+    platform: 'uplay',
+    profileIds: ['0b95544b-0228-49a7-b338-6d15cfbc3d6a'],
+    statistics: ['operatorpvp_kills']
+  });
+})();
 ```
 
 </details>
-<!-- END_SECTION:CUSTOM_OUTPUT -->
 
----
+## 💌 Acknowledgments
 
-### TypeScript integrations
-
-This package is developed in TypeScript, and the typings are shipped along with the built package: that means that your editor should automatically detect them and give you the static type info.
-For a full list of supporting IDEs, please see [here](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
-
-If you're coding in TypeScript you can also import the typings and use the type-checking functions provided in the utils.
-
-```ts
-import R6API, { utils, typings, constants } from 'r6api.js';
-
-const yourVar = 'r4-c'; // any
-
-if (utils.isWeaponName(yourVar)) {
-  // Now your var has the WeaponName type
-}
-
-const platform = constants.PLATFORMS as typings.Platform[];
-```
-
-### Credit
-
-Operator Icons from [r6operators.marcopixel.eu](https://r6operators.marcopixel.eu)
+Operator icons from [r6operators.marcopixel.eu](https://r6operators.marcopixel.eu)

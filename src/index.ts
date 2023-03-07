@@ -1,131 +1,114 @@
-import {
-  getAuth as _getAuth,
-  getTicket as _getTicket,
-  getToken as _getToken,
-  setCredentials as _setCredentials,
-  setUbiAppId as _setUbiAppId,
-  setAuthFileDirPath as _setAuthFileDirPath,
-  setAuthFileName as _setAuthFileName,
-  setAuthFilePath as _setAuthFilePath,
-  getAuthFilePath as _getAuthFilePath
-} from './auth';
-import _findByUsername from './methods/findByUsername';
-import _findById, { IOptions as IFindByIdOptions} from './methods/findById';
-import _getProgression from './methods/getProgression';
-import _getPlaytime from './methods/getPlaytime';
-import _getRanks, { IOptions as IGetRanksOptions } from './methods/getRanks';
-import _getUserSeasonalv2 from './methods/getUserSeasonalv2';
-import _getStats, { IOptions as IGetStatsOptions } from './methods/getStats';
-import _getStatus from './methods/getStatus';
-import _getUserStatus, { IOptions as IGetUserStatusOptions } from './methods/getUserStatus';
-import _getProfileApplications, { IOptions as IGetProfileApplicationsOptions }
-  from './methods/getProfileApplications';
-import _getApplications from './methods/getApplications';
-import _validateUsername from './methods/validateUsername';
-import _custom from './methods/custom';
-import _getNews from './methods/getNews';
-import _getNewsById from './methods/getNewsById';
-import { UUID, Platform, PlatformAll, PlatformAllExtended } from './typings';
+import { findUserByUsername } from './methods/findUserByUsername';
+import { findUserById } from './methods/findUserById';
+import { getApplications } from './methods/getApplications';
+import { getNews } from './methods/getNews';
+import { getNewsById } from './methods/getNewsById';
+import { getServiceStatus } from './methods/getServiceStatus';
+import { getUserApplications } from './methods/getUserApplications';
+import { getUserGamesPlayed } from './methods/getUserGamesPlayed';
+import { getUserProgression } from './methods/getUserProgression';
+import { getUserSeasonal } from './methods/getUserSeasonal';
+import { getUserSeasonalv2 } from './methods/getUserSeasonalv2';
+import { getUserStats } from './methods/getUserStats';
+import { getUserStatus } from './methods/getUserStatus';
+import { dataDev, ubiServices } from './fetch';
+import { getAuth, type LoginOptions } from './auth';
+import type { OptionsDocs } from './types';
 
-export { default as fetch } from './fetch';
-export * as typings from './typings';
-export * as constants from './constants';
-export * as utils from './utils';
+export const r6APIOptions: OptionsDocs = [
+  ['email', 'string', false, 'undefined', 'Ubisoft account\'s email'],
+  ['password', 'string', false, 'undefined', 'Ubisoft account\'s password'],
+  [
+    'ubiAppId',
+    'string',
+    false,
+    '\'3587dcbb-7f81-457c-9781-0e3f29f6f56a\'',
+    '`Ubi-AppId` header for every request'
+  ],
+  ['profileId', 'string', false, 'undefined', 'Will be used in auth file name'],
+  [
+    'authDirPath',
+    'string',
+    false,
+    'node:os.tmpdir()',
+    'Directory where auth is stored'
+  ],
+  [
+    'authFileName',
+    'string',
+    false,
+    '\'r6api.js-auth\'',
+    'Name for auth file without extension, if `profileId` paremeter provided appends `-${profileId}`'
+  ],
+  [
+    'authFilePath',
+    'string',
+    false,
+    'undefined',
+    'Overrides `authDirPath` and `authFileName` parameters, if `profileId` paremeter provided appends `-${profileId}`'
+  ]
+];
 
-const checkQueryLimit = <T extends (...args: any) => any>({
-  method, platform, query, options, limit
-}: {
-  method: T;
-  platform?: PlatformAllExtended;
-  query: QueryUUID | QueryString;
-  options?: any;
-  limit: number;
-}): ReturnType<T> => {
-  const queryArray = Array.isArray(query) ? query : [query];
-  if (queryArray.length > limit)
-    return Promise.reject(
-      new TypeError(`You can't pass more than ${limit} ids/usernames`)
-    ) as ReturnType<T>;
-  return platform ? method(platform, queryArray, options) : method(queryArray, options);
-};
-
-type QueryUUID = UUID | UUID[];
-type QueryString = string | string[];
-
+export type R6APIOptions = LoginOptions;
 export default class R6API {
+  options: R6APIOptions;
 
-  constructor(options: {
-    email?: string;
-    password?: string;
-    ubiAppId?: string;
-    authFileDirPath?: string;
-    authFileName?: string;
-    authFilePath?: string;
-  }) {
-    if (options.email && options.password) _setCredentials(options.email, options.password);
-    if (options.ubiAppId) _setUbiAppId(options.ubiAppId);
-    if (options.authFileDirPath) _setAuthFileDirPath(options.authFileDirPath);
-    if (options.authFileName) _setAuthFileName(options.authFileName);
-    if (options.authFilePath) _setAuthFilePath(options.authFilePath);
+  constructor(options: R6APIOptions) {
+    this.options = options;
   }
 
-  /** Find player by their username. */
-  findByUsername = (platform: PlatformAll, query: QueryString) =>
-    checkQueryLimit({ method: _findByUsername, platform, query, limit: 50 });
+  getAuth = async () => getAuth(this.options);
 
-  /** Find player by their id. */
-  findById = (
-    platform: PlatformAllExtended, query: QueryUUID | QueryString, options?: IFindByIdOptions
+  /** https://public-ubiservices.ubi.com/v${version}${path} */
+  ubiServices = async <T>(
+    options: Parameters<ReturnType<typeof ubiServices>>[number]
   ) =>
-    checkQueryLimit({ method: _findById, platform, query, options, limit: 50 })
+    this.getAuth().then(async ({ ticket, ...auth }) =>
+      ubiServices({ token: `Ubi_v1 t=${ticket}`, ...auth, ...this.options })<T>(
+        options
+      )
+    );
 
-  /** Get playtime of a player. */
-  getPlaytime = (platform: Platform, query: QueryUUID) =>
-    checkQueryLimit({ method: _getPlaytime, platform, query, limit: 200 })
+  /** https://prod.datadev.ubisoft.com/v${version}/profiles/${profileId}${path} */
+  dataDev = async <T>(
+    options: Parameters<ReturnType<typeof dataDev>>[number]
+  ) =>
+    this.getAuth().then(async ({ ticket, ...auth }) =>
+      dataDev({ token: `Ubi_v1 t=${ticket}`, ...auth })<T>(options)
+    );
 
-  /** Get level, xp and alpha pack drop chance of a player. */
-  getProgression = (platform: Platform, query: QueryUUID) =>
-    checkQueryLimit({ method: _getProgression, platform, query, limit: 200 })
+  // NOTE: `this` is passing ubiServices or dataDev
 
-  /** Get seasonal stats of a player. */
-  getRanks = (platform: Platform, query: QueryUUID, options?: IGetRanksOptions) =>
-    checkQueryLimit({ method: _getRanks, platform, query, options, limit: 200 })
+  findUserByUsername = findUserByUsername(this);
 
-  getUserSeasonalv2 = (query: QueryUUID) =>
-    checkQueryLimit({ method: _getUserSeasonalv2, query, limit: 200 })
+  findUserById = findUserById(this);
 
-  /** Get summary stats of a player. */
-  getStats = (platform: Platform, query: QueryUUID, options?: IGetStatsOptions) =>
-    checkQueryLimit({ method: _getStats, platform, query, options, limit: 200 })
+  getApplications = getApplications(this);
 
-  /** Get Rainbow Six: Siege servers status. */
-  getStatus = _getStatus
-  /** Get status of a player. */
-  getUserStatus = (query: QueryUUID, options?: IGetUserStatusOptions) =>
-    checkQueryLimit({ method: _getUserStatus, query, options, limit: 50 })
-  /** Get information about applications of a player. */
-  getProfileApplications = (query: QueryUUID, options?: IGetProfileApplicationsOptions) =>
-    checkQueryLimit({ method: _getProfileApplications, query, options, limit: 100 })
-  /** Get information about applications. */
-  getApplications = (query: QueryUUID) =>
-    checkQueryLimit({ method: _getApplications, query, limit: 50 })
-  /** Validate username. */
-  validateUsername = _validateUsername
-  /** Useful if you're familiar with Rainbow Six Siege's API; this method will make a request to a custom URL you would provide with the token in the header. */
-  custom = _custom
-  /** Get Rainbow Six: Siege News. */
-  getNews = _getNews
-  /** Get Rainbow Six: Siege News by ID. */
-  getNewsById = _getNewsById
+  getNews = getNews;
 
-  getAuth = _getAuth
-  getTicket = _getTicket
-  getToken = _getToken
-  setCredentials = _setCredentials
-  setUbiAppId = _setUbiAppId
-  setAuthFileDirPath = _setAuthFileDirPath
-  setAuthFileName = _setAuthFileName
-  setAuthFilePath = _setAuthFilePath
-  getAuthFilePath = _getAuthFilePath
+  getNewsById = getNewsById;
 
+  getServiceStatus = getServiceStatus;
+
+  getUserApplications = getUserApplications(this);
+
+  getUserGamesPlayed = getUserGamesPlayed(this);
+
+  getUserProgression = getUserProgression(this);
+
+  getUserSeasonal = getUserSeasonal(this);
+
+  getUserSeasonalv2 = getUserSeasonalv2(this);
+
+  getUserStats = getUserStats(this);
+
+  getUserStatus = getUserStatus(this);
 }
+
+export * from './auth';
+export * from './constants';
+export * from './fetch';
+export * from './types';
+export * from './utils';
+export * from './validate';

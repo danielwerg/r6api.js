@@ -1,7 +1,6 @@
 node_modules
-private
 dist
+private
 .env
 *.log
-test*
 package-lock.json

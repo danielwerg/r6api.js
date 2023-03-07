@@ -1,51 +1,262 @@
 [
   {
     "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "platformCrossplay": "pc",
-    "seasonId": 28,
-    "boardSlug": "casual",
+    "platform": "pc",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "board": {
+      "slug": "casual",
+      "name": "Casual"
+    },
     "rank": {
-      "id": 0,
-      "name": "Unranked",
+      "rp": 0,
       "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
     },
     "maxRank": {
-      "id": 0,
-      "name": "Unranked",
+      "rp": 0,
       "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
     },
     "topRankPosition": 0,
-    "kills": 20,
-    "deaths": 8,
-    "kd": 2.5,
+    "kills": 113,
+    "deaths": 60,
+    "kd": 1.88,
+    "wins": 6,
+    "losses": 1,
+    "wl": 6,
+    "winRate": "86%",
+    "abandons": 43,
+    "matches": 50
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platform": "pc",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "board": {
+      "slug": "event",
+      "name": "Event"
+    },
+    "rank": {
+      "rp": 0,
+      "mmr": 0,
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
+    },
+    "maxRank": {
+      "rp": 0,
+      "mmr": 0,
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "wl": 0,
+    "winRate": "0%",
+    "abandons": 0,
+    "matches": 0
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platform": "pc",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "board": {
+      "slug": "warmup",
+      "name": "Deathmatch"
+    },
+    "rank": {
+      "rp": 0,
+      "mmr": 0,
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
+    },
+    "maxRank": {
+      "rp": 0,
+      "mmr": 0,
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
+    },
+    "topRankPosition": 0,
+    "kills": 35,
+    "deaths": 35,
+    "kd": 1,
     "wins": 2,
     "losses": 0,
-    "winRate": "100.00%",
-    "abandons": 8,
-    "matches": 10
+    "wl": 2,
+    "winRate": "100%",
+    "abandons": 3,
+    "matches": 5
   },
   {
     "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "platformCrossplay": "pc",
-    "seasonId": 28,
-    "boardSlug": "event",
+    "platform": "pc",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "board": {
+      "slug": "ranked",
+      "name": "Ranked"
+    },
     "rank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
+      "rp": 56,
+      "mmr": 1656,
+      "id": 7,
+      "slug": "bronze_4",
+      "name": "Bronze IV",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/bronze_4.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3fi46SbCqO8EfoR6Jij27d/c5f44a5e33e7b8091684e08da032d1df/R6S_RANK_500x500_Bronze_04.png",
+      "range": [
+        1600,
+        1699
+      ]
     },
     "maxRank": {
-      "id": 0,
-      "name": "Unranked",
+      "rp": 56,
+      "mmr": 1656,
+      "id": 7,
+      "slug": "bronze_4",
+      "name": "Bronze IV",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/bronze_4.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3fi46SbCqO8EfoR6Jij27d/c5f44a5e33e7b8091684e08da032d1df/R6S_RANK_500x500_Bronze_04.png",
+      "range": [
+        1600,
+        1699
+      ]
+    },
+    "topRankPosition": 0,
+    "kills": 99,
+    "deaths": 127,
+    "kd": 0.78,
+    "wins": 10,
+    "losses": 16,
+    "wl": 0.63,
+    "winRate": "38%",
+    "abandons": 0,
+    "matches": 26
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platform": "console",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "board": {
+      "slug": "casual",
+      "name": "Casual"
+    },
+    "rank": {
+      "rp": 0,
       "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
+    },
+    "maxRank": {
+      "rp": 0,
+      "mmr": 0,
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
     },
     "topRankPosition": 0,
     "kills": 0,
@@ -53,28 +264,53 @@
     "kd": 0,
     "wins": 0,
     "losses": 0,
-    "winRate": "0.00%",
+    "wl": 0,
+    "winRate": "0%",
     "abandons": 0,
     "matches": 0
   },
   {
     "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "platformCrossplay": "pc",
-    "seasonId": 28,
-    "boardSlug": "warmup",
+    "platform": "console",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "board": {
+      "slug": "event",
+      "name": "Event"
+    },
     "rank": {
-      "id": 0,
-      "name": "Unranked",
+      "rp": 0,
       "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
     },
     "maxRank": {
-      "id": 0,
-      "name": "Unranked",
+      "rp": 0,
       "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
     },
     "topRankPosition": 0,
     "kills": 0,
@@ -82,28 +318,107 @@
     "kd": 0,
     "wins": 0,
     "losses": 0,
-    "winRate": "0.00%",
+    "wl": 0,
+    "winRate": "0%",
     "abandons": 0,
     "matches": 0
   },
   {
     "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "platformCrossplay": "pc",
-    "seasonId": 28,
-    "boardSlug": "ranked",
+    "platform": "console",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "board": {
+      "slug": "warmup",
+      "name": "Deathmatch"
+    },
     "rank": {
+      "rp": 0,
+      "mmr": 0,
       "id": 0,
+      "slug": "unranked",
       "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
+    },
+    "maxRank": {
+      "rp": 0,
+      "mmr": 0,
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
+    },
+    "topRankPosition": 0,
+    "kills": 0,
+    "deaths": 0,
+    "kd": 0,
+    "wins": 0,
+    "losses": 0,
+    "wl": 0,
+    "winRate": "0%",
+    "abandons": 0,
+    "matches": 0
+  },
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "platform": "console",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "board": {
+      "slug": "ranked",
+      "name": "Ranked"
+    },
+    "rank": {
+      "rp": 1000,
       "mmr": 1000,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 1000
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
     },
     "maxRank": {
-      "id": 0,
-      "name": "Unranked",
+      "rp": 1000,
       "mmr": 1000,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 1000
+      "id": 0,
+      "slug": "unranked",
+      "name": "Unranked",
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/unranked.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HQlEdlInHQ2B2ZbHygp2x/cfa4500a6a30419d862a74736416e5fc/R6S_RANK_None_L.png",
+      "range": [
+        0,
+        999
+      ]
     },
     "topRankPosition": 0,
     "kills": 0,
@@ -111,123 +426,8 @@
     "kd": 0,
     "wins": 0,
     "losses": 0,
-    "winRate": "0.00%",
-    "abandons": 0,
-    "matches": 0
-  },
-  {
-    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "platformCrossplay": "console",
-    "seasonId": 28,
-    "boardSlug": "casual",
-    "rank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
-    },
-    "maxRank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
-    },
-    "topRankPosition": 0,
-    "kills": 0,
-    "deaths": 0,
-    "kd": 0,
-    "wins": 0,
-    "losses": 0,
-    "winRate": "0.00%",
-    "abandons": 0,
-    "matches": 0
-  },
-  {
-    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "platformCrossplay": "console",
-    "seasonId": 28,
-    "boardSlug": "event",
-    "rank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
-    },
-    "maxRank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
-    },
-    "topRankPosition": 0,
-    "kills": 0,
-    "deaths": 0,
-    "kd": 0,
-    "wins": 0,
-    "losses": 0,
-    "winRate": "0.00%",
-    "abandons": 0,
-    "matches": 0
-  },
-  {
-    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "platformCrossplay": "console",
-    "seasonId": 28,
-    "boardSlug": "warmup",
-    "rank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
-    },
-    "maxRank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 0,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 0
-    },
-    "topRankPosition": 0,
-    "kills": 0,
-    "deaths": 0,
-    "kd": 0,
-    "wins": 0,
-    "losses": 0,
-    "winRate": "0.00%",
-    "abandons": 0,
-    "matches": 0
-  },
-  {
-    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
-    "platformCrossplay": "console",
-    "seasonId": 28,
-    "boardSlug": "ranked",
-    "rank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 1000,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 1000
-    },
-    "maxRank": {
-      "id": 0,
-      "name": "Unranked",
-      "mmr": 1000,
-      "icon": "https://github.com/danielwerg/r6api.js/raw/master/assets/ranks/v3/Unranked.png",
-      "rp": 1000
-    },
-    "topRankPosition": 0,
-    "kills": 0,
-    "deaths": 0,
-    "kd": 0,
-    "wins": 0,
-    "losses": 0,
-    "winRate": "0.00%",
+    "wl": 0,
+    "winRate": "0%",
     "abandons": 0,
     "matches": 0
   }

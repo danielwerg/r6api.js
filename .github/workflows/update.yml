@@ -5,7 +5,6 @@ on:
     paths:
       - '.github/workflows/update.yml'
       - 'scripts/*.ts'
-      - 'examples/example.js'
       - 'src/methods/**'
       - 'src/constants.ts'
       - 'src/utils.ts'
@@ -19,36 +18,32 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: master
 
-      - name: Set up Node 12.x
-        uses: actions/setup-node@v1
+      - name: Set up Node 18.x
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 18.x
 
       - name: Install dependencies
         run: yarn install
 
-      - name: Update example
-        run: yarn example
-        env:
-          UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
-          UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
-
-      - name: Update method responses
-        run: yarn methods
-        env:
-          UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
-          UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
-
       - name: Update tables
         run: yarn tables
 
+      - name: Update methods responses
+        run: yarn methods
+        env:
+          email: ${{ secrets.email }}
+          password: ${{ secrets.password }}
+
       - name: Commit changes
-        uses: EndBug/add-and-commit@v4
+        uses: EndBug/add-and-commit@v9
         with:
-          message: '[auto] chore: update example, method responses and tables'
+          message: 'chore: 🤖 Update tables and method responses'
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

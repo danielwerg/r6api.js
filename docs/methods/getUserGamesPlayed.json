@@ -1,0 +1,234 @@
+[
+  {
+    "spaceId": "0d2ae42d-4c27-4cb7-af6c-2099062302bb",
+    "spacePlatform": "crossplay",
+    "firstPlayed": {
+      "createdAt": null,
+      "countryCode": null
+    },
+    "lastPlayed": {
+      "updatedAt": null,
+      "countryCode": null
+    },
+    "sessionsCount": null,
+    "applications": [
+      {
+        "id": "e3d5ea9e-50bd-43b7-88bf-39794f4e3d40",
+        "name": "Rainbow Six Siege",
+        "platform": "PC",
+        "firstPlayed": {
+          "createdAt": null,
+          "countryCode": null
+        },
+        "lastPlayed": {
+          "updatedAt": null,
+          "countryCode": null
+        },
+        "sessionsCount": null
+      }
+    ]
+  },
+  {
+    "spaceId": "e17be87d-2996-4f3b-97c4-19bb2dae2933",
+    "spacePlatform": "PC",
+    "firstPlayed": {
+      "createdAt": null,
+      "countryCode": null
+    },
+    "lastPlayed": {
+      "updatedAt": null,
+      "countryCode": null
+    },
+    "sessionsCount": null,
+    "applications": [
+      {
+        "id": "f68a4bb5-608a-4ff2-8123-be8ef797e0a6",
+        "name": "Ubisoft Connect Client",
+        "platform": "PC",
+        "firstPlayed": {
+          "createdAt": null,
+          "countryCode": null
+        },
+        "lastPlayed": {
+          "updatedAt": null,
+          "countryCode": null
+        },
+        "sessionsCount": null
+      }
+    ]
+  },
+  {
+    "spaceId": "5172a557-50b5-4665-b7db-e3f2e8c5041d",
+    "spacePlatform": "PC",
+    "firstPlayed": {
+      "createdAt": null,
+      "countryCode": null
+    },
+    "lastPlayed": {
+      "updatedAt": null,
+      "countryCode": null
+    },
+    "sessionsCount": null,
+    "applications": [
+      {
+        "id": "e3d5ea9e-50bd-43b7-88bf-39794f4e3d40",
+        "name": "Rainbow Six Siege",
+        "platform": "PC",
+        "firstPlayed": {
+          "createdAt": null,
+          "countryCode": null
+        },
+        "lastPlayed": {
+          "updatedAt": null,
+          "countryCode": null
+        },
+        "sessionsCount": null
+      }
+    ]
+  },
+  {
+    "spaceId": "5c22ec5f-d475-4ec1-8c60-0c28ce9affed",
+    "spacePlatform": "crossplay",
+    "firstPlayed": {
+      "createdAt": null,
+      "countryCode": null
+    },
+    "lastPlayed": {
+      "updatedAt": null,
+      "countryCode": null
+    },
+    "sessionsCount": null,
+    "applications": [
+      {
+        "id": "a427a342-56bb-437b-b835-fa695c75893b",
+        "name": "Rainbow Six Siege - Test Server",
+        "platform": "PC",
+        "firstPlayed": {
+          "createdAt": null,
+          "countryCode": null
+        },
+        "lastPlayed": {
+          "updatedAt": null,
+          "countryCode": null
+        },
+        "sessionsCount": null
+      }
+    ]
+  },
+  {
+    "spaceId": "41aebcf5-56eb-4f1e-b154-9eb46718f465",
+    "spacePlatform": "PC",
+    "firstPlayed": {
+      "createdAt": null,
+      "countryCode": null
+    },
+    "lastPlayed": {
+      "updatedAt": null,
+      "countryCode": null
+    },
+    "sessionsCount": null,
+    "applications": [
+      {
+        "id": "a427a342-56bb-437b-b835-fa695c75893b",
+        "name": "Rainbow Six Siege - Test Server",
+        "platform": "PC",
+        "firstPlayed": {
+          "createdAt": null,
+          "countryCode": null
+        },
+        "lastPlayed": {
+          "updatedAt": null,
+          "countryCode": null
+        },
+        "sessionsCount": null
+      }
+    ]
+  },
+  {
+    "spaceId": "029e8254-57fe-4d2a-8a40-bb321f0f660d",
+    "spacePlatform": "ANDROID",
+    "firstPlayed": {
+      "createdAt": null,
+      "countryCode": null
+    },
+    "lastPlayed": {
+      "updatedAt": null,
+      "countryCode": null
+    },
+    "sessionsCount": null,
+    "applications": [
+      {
+        "id": "46f0b36b-b947-4d9c-b9dc-9a34b52ab59a",
+        "name": null,
+        "platform": "ANDROID",
+        "firstPlayed": {
+          "createdAt": null,
+          "countryCode": null
+        },
+        "lastPlayed": {
+          "updatedAt": null,
+          "countryCode": null
+        },
+        "sessionsCount": null
+      }
+    ]
+  },
+  {
+    "spaceId": "4a1562a4-c4d2-4bc5-a85e-f3db588b0072",
+    "spacePlatform": "PC",
+    "firstPlayed": {
+      "createdAt": null,
+      "countryCode": null
+    },
+    "lastPlayed": {
+      "updatedAt": null,
+      "countryCode": null
+    },
+    "sessionsCount": null,
+    "applications": [
+      {
+        "id": "d71bf270-d6b1-4ae1-9546-338ce292e125",
+        "name": null,
+        "platform": "PC",
+        "firstPlayed": {
+          "createdAt": null,
+          "countryCode": null
+        },
+        "lastPlayed": {
+          "updatedAt": null,
+          "countryCode": null
+        },
+        "sessionsCount": null
+      }
+    ]
+  },
+  {
+    "spaceId": "6edd234a-abff-4e90-9aab-b9b9c6e49ff7",
+    "spacePlatform": "PC",
+    "firstPlayed": {
+      "createdAt": null,
+      "countryCode": null
+    },
+    "lastPlayed": {
+      "updatedAt": null,
+      "countryCode": null
+    },
+    "sessionsCount": null,
+    "applications": [
+      {
+        "id": "87843b9b-516d-4a58-824b-f658d1361ad1",
+        "name": null,
+        "platform": "PC",
+        "firstPlayed": {
+          "createdAt": null,
+          "countryCode": null
+        },
+        "lastPlayed": {
+          "updatedAt": null,
+          "countryCode": null
+        },
+        "sessionsCount": null
+      }
+    ]
+  }
+]

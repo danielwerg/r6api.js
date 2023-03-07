@@ -1,5 +1,5 @@
 {
-  "total": 771,
+  "total": 774,
   "limit": 1,
   "categories": "all",
   "media": "all",
@@ -11,24 +11,20 @@
   ],
   "items": [
     {
-      "id": "3XYWbFClpxnuEiNBmrF3zl",
-      "title": "RAINBOW SIX SIEGE HOLIDAY PACK 2022",
-      "abstract": "Happy Holidays from the Rainbow Six Siege team!  ",
+      "id": "5W4Tn6l3RvzhbnKDYBMDTl",
+      "title": "Y7S4.2 Patch Notes",
+      "abstract": "See the upcoming changes to Rainbow Six Siege with the release of Y7S4.2",
       "thumbnail": {
-        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6GBH9GZennq2REUcKWSrEU/01653a2f124e74b2c12fbcc25cbe8f71/R6S_Blogpost_2022-12_Holiday_Pack.jpg",
-        "description": ""
+        "url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6pOZyZoqf6DZ4MPaECBxw4/ea81db29b0498c81941b16aa59cd355c/Y7S4.2_PatchNotes.jpg",
+        "description": null
       },
-      "content": "It's that time of the year again - Happy Holidays from the Rainbow Six Siege team!  \n\nTo celebrate the festive season, we have a special surprise for you: \n\nEvery player connecting to the game __between December 22nd, 2022, and January 3rd, 2023,__ will be awarded a free Holiday Pack! \n\nThe Holiday Pack will be accessible in the Pack section on the home screen. Once activated, players will receive one free Operator from Year 1-7. This Operator will be randomly selected and will not include any Operators that the player has already unlocked.  \n\nThose who already own all Operators will receive a brand-new free headgear and uniform for the Operator Ying, as well as a brand-new signature weapon skin - holiday-themed of course! \n\nWe hope you enjoy this little gift from the team, and we wish you a great start to the new year.",
+      "content": "See the upcoming changes to Rainbow Six Siege with the release of Y7S4.2\n\n## Y7S4.2 PATCH SIZE\n\nFind the download sizes for each platform below.\n\n- Ubisoft Connect: 1.21 GB\n- Steam: 476.25 MB\n- Xbox One: 1.10 GB\n- Xbox Series X: 1.10 GB\n- PS4: 1.65 GB\n- PS5: 1.09 GB\n\n<br>\n\n## OPERATOR BALANCING\n\n### TWITCH\n\n-   Increased regular drones to 2 (from 1)\n-   Removed Vertical Grip from F2\n\n### GRIM\n\n-   Added 1.5x and 2.0x sights to Commando 552\n\n<br>\n\n## WEAPON BALANCING\n\n### EXTENDED BARREL\n\n-   (New) Damage bonus: increases weapon damage by 15%\n\n### PARA-308 (CAPITÃO)\n\n-   Damage: reduced to 47 (from 48)\n\n### SUPERNOVA (ECHO, HIBANA, AMARU)\n\n-   Damage: increased to 55 (from 48)\n\n### 9MM C1 (FROST)\n\n-   Damage: reduced to 36 (from 45)\n\n### AR-15.50 & M4 (MAVERICK)\n\n-   Damage: increased to 67 (from 62)\n-   Added 2.0x sights to M4\n\n### UZK50GI (THORN)\n\n-   Damage: reduced to 36 (from 44)\n\n### AUG A2 (WAMAI, IQ)\n\n-   Vertical recoil: increased upward speed.\n-   Horizontal recoil: Long bursts now have an increased spread and tend to pull left.\n\n### COMMANDO 552 (GRIM, IQ)\n\n-   Damage: reduced to 47 (from 48)\n\n### HIP FIRE PRECISION\n\n*WEAPONS AFFECTED*\n\n-   Spread increased:  AK12, ARX 200, SC3000K, LMG-E, 6P41, T-95, 417, AR-15.50, CAMRS, MK14\n-   Spread reduced: P10-C\n-   Burst growth increased: AUG A2, AUG A3, POF 9, LMG-E, 6P41, T-95, 417, AR-15.50, MK14\n-   Burst growth reduced: CAMRS \n\n<br>\n\n## TWEAKS AND IMPROVEMENTS\n\n### PLAYER COMFORT\n\n__Advanced controller options__\n\n-   Players on PC and consoles can customize their controllers' aim controls with Advanced Controller Options.\n-   These options can be found in the Controller section of the Controls option menu.  \n-   We'll be listening to player feedback to further improve this feature and offer new options as needed\n\n<br>\n\n## Bug Fixes\n\n### GAMEPLAY\n\nFIXED - Most played Operators are not being chosen when inactive on the Random Operator selection screen.\n\nFIXED - POF-9 recoil pattern isn't displayed in Weapon Loadout screen and Shooting Range records.\n\nFIXED - Button to access chat is not functional when Covert Voice to Text option is on during gameplay sessions.\n\nFIXED - Match loadout when round begins sometimes does not match player's loadout during character select stage.\n\n### LEVEL DESIGN\n\nFIXED - Players can peek above the reinforcement at EXT Garage Balcony on Outback Map.\n\nFIXED - Echo's Yokai drone and Valkyrie's Black Eye camera are able to scan the attackers at the \"EXT Park\" location immediately after they spawn when positioned on the ceiling of the 1F Lobby location on Nighthaven Labs.\n\nFIXED - Multiple LOD issues on various maps.\n\n### OPERATORS\n\nFIXED - Solis can't shoot if SPEC-IO gets deactivated at the same time that Solis activates it.\n\nFIXED - Caveira's hair clips into her face in the Home section.\n\nFIXED - Doc's Stim Pistol is missing the keyword action reminder.\n\nFIXED - While SPEC-IO is active, Solis' arms and phone clip through the AR HUD when entering Observation Tool view.\n\n### USER EXPERIENCE\n\nFIXED - Icon previews for loadouts do not load properly during the operator selection phase.\n\nFIXED - No offers are displayed in the Gift to Friends section in Ubisoft Connect.\n\nFIXED - Players can duplicate their account by unlinking an account and relinking to a new account.\n\nFIXED - Players experience an infinite loading when attempting to convert any pack while also switching to a different one at the same time.\n\nFIXED - Prompt to Apply Changes appears in Options menu despite no changes being made.\n\nFIXED - Various UI issues.\n\n<br>\n\n---\n\n<br>\n\nFollow us and share your feedback on [Twitter](https://twitter.com/Rainbow6Game), [Reddit](https://www.reddit.com/r/Rainbow6/), [Facebook](https://www.facebook.com/Rainbow6/) and on our [forums](https://discussions.ubisoft.com/category/609/rainbow-six-siege?lang=en-US).",
       "description": null,
-      "categories": [
-        "rainbow-six-siege"
-      ],
+      "categories": null,
       "tag": "BR-rainbow-six GA-siege",
-      "placement": null,
-      "type": "news",
-      "readTime": 1,
-      "url": "https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/3XYWbFClpxnuEiNBmrF3zl/rainbow-six-siege-holiday-pack-2022",
-      "date": "Thu Dec 22 2022 17:00:00 GMT+0000 (Coordinated Universal Time)"
+      "readTime": 4,
+      "url": "https://ubisoft.com/en-gb/game/rainbow-six/siege/news-updates/5W4Tn6l3RvzhbnKDYBMDTl/y7s42-patch-notes",
+      "date": "2023-01-24T12:00:00.000Z"
     }
   ]
 }

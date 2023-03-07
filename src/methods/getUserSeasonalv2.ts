@@ -1,116 +1,165 @@
-import { getAuth, getToken } from '../auth';
-import { RANKS_V6 } from '../constants';
-import fetch from '../fetch';
-import { UUID, PlatformCrossplay, RankIdV6, SeasonId } from '../typings';
-import { getKD, getRankIconFromRankId, getRankNameFromRankId, getURL, getWinRate } from '../utils';
+import { getSeasonShorthand, SEASONS } from 'r6data';
 
-export interface IApiResponse {
-  platform_families_full_profiles: ISkillFullProfilesPlatformFamiliesFullProfile[];
+import { inspect } from 'node:util';
+
+import { BOARDS, SPACES_ID } from '../constants';
+import type {
+  BoardSlug,
+  OptionsDocs,
+  ServiceAndCrossplay,
+  PlatformFamily,
+  UbiServices
+} from '../types';
+import { getKD, getRank, getRP, getWinRate, getWL } from '../utils';
+
+export interface SkillFullProfiles {
+  platform_families_full_profiles: SkillFullProfilesPlatformFamiliesFullProfile[];
 }
 
-export interface ISkillFullProfilesPlatformFamiliesFullProfile {
-  board_ids_full_profiles: ISkillFullProfilesBoardIdsFullProfile[];
+export interface SkillFullProfilesPlatformFamiliesFullProfile {
+  board_ids_full_profiles: SkillFullProfilesBoardIdsFullProfile[];
   platform_family: string;
 }
 
-export interface ISkillFullProfilesBoardIdsFullProfile {
+export interface SkillFullProfilesBoardIdsFullProfile {
   board_id: BoardSlug;
-  full_profiles: ISkillFullProfilesFullProfile[];
+  full_profiles: SkillFullProfilesFullProfile[];
 }
 
-export interface ISkillFullProfilesFullProfile {
-  profile: ISkillFullProfilesProfile;
-  season_statistics: ISkillFullProfilesSeasonStatistics;
+export interface SkillFullProfilesFullProfile {
+  profile: SkillFullProfilesProfile;
+  season_statistics: SkillFullProfilesSeasonStatistics;
 }
 
-export interface ISkillFullProfilesSeasonStatistics {
+export interface SkillFullProfilesSeasonStatistics {
   deaths: number;
   kills: number;
-  match_outcomes: ISkillFullProfilesMatchOutcomes;
+  match_outcomes: SkillFullProfilesMatchOutcomes;
 }
 
-export interface ISkillFullProfilesMatchOutcomes {
+export interface SkillFullProfilesMatchOutcomes {
   abandons: number;
   losses: number;
   wins: number;
 }
 
-export interface ISkillFullProfilesProfile {
+export interface SkillFullProfilesProfile {
   board_id: BoardSlug;
   id: string;
-  max_rank: RankIdV6;
+  max_rank: number;
   max_rank_points: number;
-  platform_family: PlatformCrossplay;
-  rank: RankIdV6;
+  platform_family: PlatformFamily;
+  rank: number;
   rank_points: number;
-  season_id: SeasonId;
+  season_id: number;
   top_rank_position: number;
 }
 
-export type BoardSlug = 'ranked' | 'casual' | 'event' | 'warmup' | 'newcomer';
+export const getUserSeasonalv2Option: OptionsDocs = [
+  ['profileIds', 'string[]', true, '', '`profileIds`'],
+  [
+    'platformsFamilies',
+    'PlatformFamily[]',
+    false,
+    '[\'pc\', \'console\']',
+    '[Platforms Families](#Platforms-Families)'
+  ],
+  [
+    'spacesIds',
+    'Record<ServiceAndCrossplay, string>',
+    false,
+    inspect(SPACES_ID, { breakLength: Infinity }),
+    ''
+  ]
+];
 
-export interface IGetRp {
-  rankId: number;
-  mmr: number;
+export interface GetUserSeasonalv2Options {
+  profileIds: string[];
+  platformsFamilies?: PlatformFamily[];
+  spaceId?: Record<ServiceAndCrossplay, string>;
 }
-export const getRp = ({ rankId, mmr }: IGetRp) =>
-  mmr - (RANKS_V6.find(rank => rank.id === rankId)?.range?.[0] ?? 0);
-
-export default (ids: UUID[]) => {
-
-  // RANKS_V6
-
-  return Promise.all([getToken(), getAuth()])
-    .then(([token, auth]) => fetch<IApiResponse>(getURL.GETUSERSEASONALV2(ids))(token, auth))
-    .then(res => res.platform_families_full_profiles
-      .map(profile =>
-        profile.board_ids_full_profiles.map(board => board.full_profiles)
-      )
-      .flat(2)
-      .map(({ profile, season_statistics: seasonStatistics }) => {
-        return {
-          profileId: profile.id,
-          platformCrossplay: profile.platform_family,
-          seasonId: profile.season_id,
-          boardSlug: profile.board_id,
-          rank: {
-            id: profile.rank,
-            name: getRankNameFromRankId(profile.rank, profile.season_id),
+export const getUserSeasonalv2 =
+  ({ ubiServices }: { ubiServices: UbiServices }) =>
+  async ({ profileIds, platformsFamilies, spaceId }: GetUserSeasonalv2Options) =>
+    ubiServices<SkillFullProfiles>({
+      version: 2,
+      path: `/spaces/${
+        (spaceId ?? SPACES_ID).crossplay
+      }/title/r6s/skill/full_profiles`,
+      params: {
+        platform_families: platformsFamilies ?? ['pc', 'console'],
+        profile_ids: profileIds
+      }
+    }).then(res =>
+      res.platform_families_full_profiles
+        .map(profile =>
+          profile.board_ids_full_profiles.map(board => board.full_profiles)
+        )
+        .flat(2)
+        .map(({ profile, season_statistics: seasonStatistics }) => {
+          const rank = getRank({
+            seasonId: profile.season_id,
+            rankId: profile.rank,
             mmr: profile.rank_points,
-            icon: getRankIconFromRankId(profile.rank, profile.season_id),
-            rp: getRp({
-              rankId: profile.rank,
-              mmr: profile.rank_points
-            })
-          },
-          maxRank: {
-            id: profile.max_rank,
-            name: getRankNameFromRankId(profile.max_rank, profile.season_id),
+            boardSlug: profile.board_id
+          });
+          const maxRank = getRank({
+            seasonId: profile.season_id,
+            rankId: profile.max_rank,
             mmr: profile.max_rank_points,
-            icon: getRankIconFromRankId(profile.max_rank, profile.season_id),
-            rp: getRp({
-              rankId: profile.max_rank,
-              mmr: profile.max_rank_points
-            })
-          },
-          topRankPosition: profile.top_rank_position,
-          kills: seasonStatistics.kills,
-          deaths: seasonStatistics.deaths,
-          kd: getKD({
+            boardSlug: profile.board_id
+          });
+
+          return {
+            profileId: profile.id,
+            platform: profile.platform_family,
+            season: {
+              id: profile.season_id,
+              shorthand: getSeasonShorthand(profile.season_id),
+              ...SEASONS.find(({ id }) => id === profile.season_id)
+            },
+            board: {
+              slug: profile.board_id,
+              name: BOARDS.find(board => board.slug === profile.board_id)!.name
+            },
+            rank: {
+              rp: getRP({
+                seasonId: profile.season_id,
+                rankId: profile.rank,
+                mmr: profile.rank_points
+              }),
+              ...rank
+            },
+            maxRank: {
+              rp: getRP({
+                seasonId: profile.season_id,
+                rankId: profile.max_rank,
+                mmr: profile.max_rank_points
+              }),
+              ...maxRank
+            },
+            topRankPosition: profile.top_rank_position,
             kills: seasonStatistics.kills,
-            deaths: seasonStatistics.deaths
-          }),
-          wins: seasonStatistics.match_outcomes.wins,
-          losses: seasonStatistics.match_outcomes.losses,
-          winRate: getWinRate({
+            deaths: seasonStatistics.deaths,
+            kd: getKD({
+              kills: seasonStatistics.kills,
+              deaths: seasonStatistics.deaths
+            }),
             wins: seasonStatistics.match_outcomes.wins,
-            losses: seasonStatistics.match_outcomes.losses
-          }),
-          abandons: seasonStatistics.match_outcomes.abandons,
-          matches:
-            seasonStatistics.match_outcomes.wins +
-            seasonStatistics.match_outcomes.losses +
-            seasonStatistics.match_outcomes.abandons
-        };
-      }));
-};
+            losses: seasonStatistics.match_outcomes.losses,
+            wl: getWL({
+              wins: seasonStatistics.match_outcomes.wins,
+              losses: seasonStatistics.match_outcomes.losses
+            }),
+            winRate: getWinRate({
+              wins: seasonStatistics.match_outcomes.wins,
+              losses: seasonStatistics.match_outcomes.losses
+            }),
+            abandons: seasonStatistics.match_outcomes.abandons,
+            matches:
+              seasonStatistics.match_outcomes.wins +
+              seasonStatistics.match_outcomes.losses +
+              seasonStatistics.match_outcomes.abandons
+          };
+        })
+    );

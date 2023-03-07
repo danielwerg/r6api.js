@@ -1,0 +1,67 @@
+[
+  {
+    "profileId": "0b95544b-0228-49a7-b338-6d15cfbc3d6a",
+    "season": {
+      "id": 28,
+      "shorthand": "Y7S4",
+      "slug": "solar_raid",
+      "name": "Solar Raid",
+      "hexColorCode": "#d03314",
+      "thumbnail": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/seasons/y7s4.jpg",
+      "thumbnailOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ZSXgYK6dLal6jI7JRN85T/7aa312f549948b8a19c9afb5fae12776/R6S_Live_Y7S4_SolarRaid_Keyart.jpg",
+      "releaseDate": "2022-12-06T00:00:00.000Z"
+    },
+    "region": {
+      "slug": "global",
+      "name": "Global"
+    },
+    "board": {
+      "slug": "pvp_ranked",
+      "name": "Ranked"
+    },
+    "rank": {
+      "id": 14,
+      "name": "Silver II",
+      "mmr": 2491,
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/silver_2.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/0PLZUFs3fqKBTLh1gYyY8/7cabc5ba4522f725583faac165ff5130/R6S_RANK_500x500_Silver_02.png"
+    },
+    "maxRank": {
+      "id": 16,
+      "name": "Gold V",
+      "mmr": 2716,
+      "icon": "https://raw.githubusercontent.com/danielwerg/r6data/master/assets/ranks/v3/pngs/gold_5.png",
+      "iconOfficial": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/QWDG4I2KaxDN8s2nbaAIY/f1df73e40fe9172a209982dc85862a5b/RANK_L_Gold_05.png"
+    },
+    "lastMatch": {
+      "resultCode": 1,
+      "resultText": "won",
+      "mmrChange": 103,
+      "skillMeanChange": 1.0389761567,
+      "skillStdevChange": -0.0666760118
+    },
+    "pastSeasons": {
+      "wins": 0,
+      "losses": 0,
+      "wl": 0,
+      "winRate": "0%",
+      "matches": 0,
+      "abandons": 0
+    },
+    "previousMmr": 2400,
+    "nextMmr": 2500,
+    "topRankPosition": 0,
+    "kills": 99,
+    "deaths": 127,
+    "kd": 0.78,
+    "wins": 10,
+    "losses": 16,
+    "wl": 0.63,
+    "winRate": "38%",
+    "matches": 26,
+    "abandons": 0,
+    "skillMean": 24.9143546546,
+    "skillStdev": 5.9461222759,
+    "updateTime": "2023-02-01T03:32:58.428000+00:00"
+  }
+]

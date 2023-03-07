@@ -1,88 +1,100 @@
-import { tmpdir } from 'os';
-import { join } from 'path';
-import { promises as fs } from 'fs';
+import { promises as fs } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
 
-import fetch from './fetch';
-import { Platform, UUID } from './typings';
-import { getURL } from './utils';
-import { ubiAppId as defaultUbiAppId } from './constants';
+import { ubiServices } from './fetch';
+import type { Service } from './types';
+import { DEFAULT_UBI_APP_ID } from './constants';
 
-export interface IUbiAuth {
-  platformType: Platform;
+const TEN_MIN_IN_MS = 10 * 60 * 1000;
+
+interface GetAuthFilePathOptions {
+  ubiAppId?: string;
+  profileId?: string;
+  authDirPath?: string;
+  authFileName?: string;
+  authFilePath?: string;
+}
+const getAuthFilePath = ({
+  ubiAppId,
+  profileId,
+  authDirPath,
+  authFileName,
+  authFilePath
+}: GetAuthFilePathOptions) =>
+  `${
+    (authFilePath ??
+      join(authDirPath ?? tmpdir(), `${authFileName ?? 'r6api.js-auth'}`)) +
+    (ubiAppId ? `-${ubiAppId}` : '') +
+    (profileId ? `-${profileId}` : '')
+  }.json`;
+
+const getMsUntilExpiration = (expiration: string) =>
+  +new Date(expiration) - +new Date() - TEN_MIN_IN_MS;
+const isAuthExpired = (expiration: string) =>
+  getMsUntilExpiration(expiration) <= 0;
+
+export interface ProfilesSessions {
+  platformType: Service;
   ticket: string;
   twoFactorAuthenticationTicket: string | null;
-  profileId: UUID;
-  userId: UUID;
+  profileId: string;
+  userId: string;
   nameOnPlatform: string;
   environment: string;
   expiration: string;
-  spaceId: UUID;
+  spaceId: string;
   clientIp: string;
   clientIpCountry: string;
   serverTime: string;
-  sessionId: UUID;
+  sessionId: string;
   sessionKey: string;
   rememberMeTicket: string;
 }
 
-const TEN_MIN_IN_MS = 10 * 60 * 1000;
-const credentials = { email: '', password: '' };
-let LOGIN_TIMEOUT: any;
-export let ubiAppId = defaultUbiAppId;
-let authFileDirPath = tmpdir();
-let authFileName = 'r6api.js-auth.json';
-let authFilePath: null | string = null;
+export interface LoginOptions {
+  email?: string;
+  password?: string;
+  ubiAppId?: string;
+  profileId?: string;
+  authDirPath?: string;
+  authFileName?: string;
+  /** Overrides `authDirPath` and `authFileName` options */
+  authFilePath?: string;
+}
+export const login = async ({ email, password, ...options }: LoginOptions) => {
+  if (!email || !password) throw new Error('credentials missing');
 
-const getExpiration = (auth: IUbiAuth) =>
-  +new Date(auth.expiration) - +new Date() - TEN_MIN_IN_MS;
+  const token = `Basic ${Buffer.from(`${email}:${password}`).toString(
+    'base64'
+  )}`;
 
-export const login = async () => {
-
-  const lastAuth: IUbiAuth = await fs.readFile(getAuthFilePath(), 'utf8')
-    .then((auth) => JSON.parse(auth))
-    .catch(() => '');
-  if (lastAuth && getExpiration(lastAuth) > 0) {
-    setNextLogin(lastAuth);
-    return lastAuth;
-  }
-
-  const token = 'Basic ' + Buffer
-    .from(`${credentials.email}:${credentials.password}`, 'utf8')
-    .toString('base64');
-
-  return fetch<IUbiAuth>(getURL.LOGIN(), {
+  return await ubiServices({
+    token,
+    ubiAppId: options.ubiAppId ?? DEFAULT_UBI_APP_ID
+  })<ProfilesSessions>({
     method: 'POST',
-    body: JSON.stringify({ rememberMe: true })
-  })(token)
-    .then(async res => {
-      if (res && res.ticket && res.expiration) {
-        await fs.writeFile(getAuthFilePath(), JSON.stringify(res));
-        return res;
-      } else
-        throw new Error(`No response from login: ${JSON.stringify(res)}`);
-    })
-    .catch(err => {
-      clearTimeout(LOGIN_TIMEOUT);
-      throw err;
-    });
+    version: 3,
+    path: '/profiles/sessions',
+    data: { rememberMe: true }
+  }).then(async auth => {
+    if (options.profileId && options.profileId !== auth.profileId)
+      throw new Error(
+        'profileId from constructor doesn\'t match profileId from login'
+      );
+
+    await fs.writeFile(getAuthFilePath(options), JSON.stringify(auth));
+    return auth;
+  });
 };
 
-const setNextLogin = async (auth: IUbiAuth) => {
-  clearTimeout(LOGIN_TIMEOUT);
-  LOGIN_TIMEOUT = setTimeout(() => login(), getExpiration(auth));
+export const getAuth = async (options: LoginOptions) => {
+  const lastLogin = await fs
+    .readFile(getAuthFilePath(options), 'utf8')
+    .then(auth => JSON.parse(auth) as ProfilesSessions)
+    .catch(() => null);
+
+  if (lastLogin && !isAuthExpired(lastLogin.expiration)) return lastLogin;
+
+  return await login(options);
 };
-
-export const getAuth = () => login();
-export const getTicket = () => login().then(auth => auth.ticket);
-export const getToken = () => login().then(auth => `Ubi_v1 t=${auth.ticket}`);
-
-export const setCredentials = (email: string, password: string) => {
-  credentials.email = email;
-  credentials.password = password;
-};
-export const setUbiAppId = (_ubiAppId: string) => { ubiAppId = _ubiAppId; };
-
-export const setAuthFileDirPath = (path: string) => { authFileDirPath = path; };
-export const setAuthFileName = (name: string) => { authFileName = `${name}.json`; };
-export const setAuthFilePath = (path: string) => { authFilePath = path; };
-export const getAuthFilePath = () => authFilePath || join(authFileDirPath, authFileName);

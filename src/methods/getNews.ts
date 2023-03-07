@@ -1,119 +1,80 @@
-import fetch from '../fetch';
-import { getURL, getNewsURL } from '../utils';
-import { IOptionsDocs } from '../typings';
+import { fetch } from '../fetch';
+import type { NimbusItems, OptionsDocs, PlacementFilter } from '../types';
+import { processNews } from '../utils';
 
-export interface INewsItems {
-  id: string;
-  tag?: string;
-  categories: string[];
-  placement?: string[] | null;
-  type: string;
-  date: string;
-  title: string;
-  abstract?: string;
-  content: string;
-  trackingPageValue: string;
-  readTime?: string;
-  authors?: null;
-  featuredThumbnail?: {
-    url: string | null;
-    description: string | null;
-  };
-  thumbnail: {
-    url: string | null;
-    description: string | null;
-  };
-  description?: string;
-  button: {
-    commonTranslationId: string;
-    buttonType: string;
-    buttonUrl: string;
-    trackingCategoryValue: string;
-    trackingValue: string;
-  };
-}
-export interface IApiResponse {
-  total: number;
-  tags: string[];
-  mediaFilter: string;
-  categoriesFilter: string;
-  placementFilter: string[] | [];
-  limit: number;
-  startIndex: number | string;
-  skip: number;
-  items: INewsItems[];
-}
+export type CategoryFilter =
+  | 'all'
+  | 'game-updates'
+  | 'patch-notes'
+  | 'community'
+  | 'store'
+  | 'esports';
 
-export interface IOptions {
-  raw?: boolean;
-  category?: 'all' | 'game-updates' | 'patch-notes' | 'community' | 'store' | 'esports';
-  media?: 'all' | 'news' | 'videos';
-  placement?: string;
-  limit?: number;
-  skip?: number;
-  startIndex?: number;
-  locale?: string;
-  fallbackLocale?: string;
-}
+export type MediaFilter = 'all' | 'news' | 'videos';
 
-export const optionsDocs: IOptionsDocs = [
-  ['raw', '`boolean`', false, '`false`', 'Include raw API response'],
+export const getNewsOptions: OptionsDocs = [
+  ['locale', 'string', false, '\'en-gb\'', ''],
+  ['fallbackLocale', 'string', false, '\'en-us\'', ''],
   [
-    'category', '`string`', false, '`\'all\'`',
+    'category',
+    'string',
+    false,
+    '\'all\'',
     '`\'all\'`, `\'game-updates\'`, `\'patch-notes\'`, `\'community\'`, `\'store\'`, `\'esports\'`'
   ],
-  ['media', '`string`', false, '`\'all\'`', '`\'all\'`, `\'news\'`, `\'videos\'`'],
-  ['placement', '`string`', false, '`\'\'`', 'Ex: `\'featured-news-article\'`'],
-  ['limit', '`number`', false, '`6`', ''],
-  ['skip', '`number`', false, '`0`', ''],
-  ['startIndex', '`number`', false, '`0`', ''],
-  ['locale', '`string`', false, '`\'en-gb\'`', ''],
-  ['fallbackLocale', '`string`', false, '`\'en-us\'`', '']
+  ['media', 'string', false, '\'all\'', '`\'all\'`, `\'news\'`, `\'videos\'`   '],
+  ['placement', 'string', false, '\'\'', 'Ex: `\'featured-news-article\'` '],
+  ['limit', 'number', false, '6', ''],
+  ['skip', 'number', false, '0', ''],
+  ['startIndex', 'number', false, '0', ''],
+  ['tags', 'string[]', false, '[\'BR-rainbow-six GA-siege\']', '']
 ];
 
-export default async (options?: IOptions) => {
-
-  const raw = options && options.raw || false;
-  const category = options && options.category || 'all';
-  const media = options && options.media || 'all';
-  const placement = options && options.placement || '';
-  const limit = options && options.limit || 6;
-  const skip = options && options.skip || 0;
-  const startIndex = options && options.startIndex || 0;
-  const locale = options && options.locale || 'en-gb';
-  const fallbackLocale = options && options.fallbackLocale || 'en-us';
-
-  const res = await fetch<IApiResponse>(
-    getURL.NEWS(category, media, placement, locale, fallbackLocale, limit, skip, startIndex),
-    { headers: { 'Authorization': '3u0FfSBUaTSew-2NVfAOSYWevVQHWtY9q3VM8Xx9Lto' } }
-  )();
-  return ({
-    ...raw && { raw: res },
-    total: res.total,
-    limit: res.limit,
-    categories: res.categoriesFilter,
-    media: res.mediaFilter,
-    skip: res.skip,
-    startIndex: res.startIndex,
-    placement: res.placementFilter,
-    tags: res.tags,
-    items: res.items.map(item => ({
-      id: item.id,
-      title: item.title,
-      abstract: item.abstract,
-      thumbnail: {
-        url: item.thumbnail.url, description: item.thumbnail.description
-      },
-      content: item.content,
-      description: item.description,
-      categories: item.categories,
-      tag: item.tag,
-      placement: item.placement,
-      type: item.type,
-      readTime: item.readTime,
-      url: getNewsURL(locale, item.type, item.button.buttonUrl),
-      date: item.date
-    }))
-  });
-
-};
+export interface GetNewsOptions {
+  /** Defaults to `'en-gb'` */
+  locale?: string;
+  /** Defaults to `'en-us'` */
+  fallbackLocale?: string;
+  /** Defaults to `'all'` */
+  category?: CategoryFilter;
+  /** Defaults to `'all'` */
+  media?: MediaFilter;
+  placement?: PlacementFilter;
+  /** Defaults to `6` */
+  limit?: number;
+  /** Defaults to `0` */
+  skip?: number;
+  /** Defaults to `0` */
+  startIndex?: number;
+  /** Defaults to `['BR-rainbow-six GA-siege']` */
+  tags?: string[];
+}
+export const getNews = async ({
+  locale = 'en-gb',
+  fallbackLocale = 'en-us',
+  category: categoriesFilter = 'all',
+  media: mediaFilter = 'all',
+  placement: placementFilter = '',
+  limit = 6,
+  skip = 0,
+  startIndex = 0,
+  tags = ['BR-rainbow-six GA-siege']
+}: GetNewsOptions = {}) =>
+  fetch<NimbusItems>({
+    baseURL: 'https://nimbus.ubisoft.com/api',
+    path: '/v1/items',
+    params: {
+      locale,
+      fallbackLocale,
+      categoriesFilter,
+      mediaFilter,
+      placementFilter,
+      limit: limit.toString(),
+      skip: skip.toString(),
+      startIndex: startIndex.toString(),
+      tags
+    },
+    headers: {
+      Authorization: '3u0FfSBUaTSew-2NVfAOSYWevVQHWtY9q3VM8Xx9Lto'
+    }
+  }).then(news => processNews({ news, locale }));

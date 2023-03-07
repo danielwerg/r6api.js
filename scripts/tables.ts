@@ -1,135 +1,194 @@
-import * as mdtable from 'markdown-table';
+import { SEASONS, type Season } from 'r6data';
 
-import { join } from 'path';
+import { join } from 'node:path';
 
-import { insertContent } from './utils';
-import { SEASONS, OLD_SEASONS, REGIONS, BOARDS } from '../src/constants';
-import { optionsDocs as findByIdOptionsDocs } from '../src/methods/findById';
-import { optionsDocs as getRanksOptionsDocs } from '../src/methods/getRanks';
-import { optionsDocs as getStatsOptionsDocs } from '../src/methods/getStats';
-import { optionsDocs as getUserStatusOptionsDocs } from '../src/methods/getUserStatus';
-import { optionsDocs as getProfileApplicationsOptionsDocs }
-  from '../src/methods/getProfileApplications';
-import { optionsDocs as getNewsOptionsDocs } from '../src/methods/getNews';
-import { optionsDocs as getNewsByIdOptionsDocs } from '../src/methods/getNewsById';
+import {
+  camelToTitle,
+  insertToFile,
+  type InsertToFileOptions,
+  markdownTable
+} from './utils';
+import {
+  BOARDS,
+  PLATFORMS,
+  PLATFORM_FAMILIES,
+  REGIONS,
+  SERVICES,
+  SERVICES_AND_CROSSPLAY,
+  SERVICES_EXTENDED
+} from '../src/constants';
+import { chunk } from '../src/utils';
+import { r6APIOptions } from '../src';
+import { findUserByUsernameOptions } from '../src/methods/findUserByUsername';
+import { findUserByIdOptions } from '../src/methods/findUserById';
+import { getUserProgressionOptions } from '../src/methods/getUserProgression';
+import { getUserSeasonalOptions } from '../src/methods/getUserSeasonal';
+import { getUserSeasonalv2Option } from '../src/methods/getUserSeasonalv2';
+import { getUserStatsOptions } from '../src/methods/getUserStats';
+import { getUserStatusOptions } from '../src/methods/getUserStatus';
+import { getUserApplicationsOptions } from '../src/methods/getUserApplications';
+import { getUserGamesPlayedOptions } from '../src/methods/getUserGamesPlayed';
+import { getApplicationsOptions } from '../src/methods/getApplications';
+import { getNewsOptions } from '../src/methods/getNews';
+import { getNewsByIdOptions } from '../src/methods/getNewsById';
 
 (async () => {
+  const insertToReadme = async (options: Omit<InsertToFileOptions, 'filePath'>) =>
+    insertToFile({
+      filePath: join(__dirname, '../readme.md'),
+      prefix: '\n\n',
+      suffix: '\n\n',
+      ...options
+    });
 
-  const readmePath = join(__dirname, '../readme.md');
-  const optionsHeader = ['Param', 'Type', 'Required', 'Default', 'Description'];
-  const extraNewLine = { prefix: '\n', suffix: '\n' };
-
-
-  // readme > (getRanks & getStats & getNews & getNewsById) > options
-  const optionsDocs = <const>[
-    ['FINDBYID', findByIdOptionsDocs],
-    ['GETRANKS', getRanksOptionsDocs],
-    ['GETSTATS', getStatsOptionsDocs],
-    ['GETUSERSTATUS', getUserStatusOptionsDocs],
-    ['GETPROFILEAPPLICATIONS', getProfileApplicationsOptionsDocs],
-    ['GETNEWS', getNewsOptionsDocs],
-    ['GETNEWSBYID', getNewsByIdOptionsDocs]
+  const optionsDocs = [
+    { name: 'r6API', options: r6APIOptions },
+    { name: 'findUserByUsername', options: findUserByUsernameOptions },
+    { name: 'findUserById', options: findUserByIdOptions },
+    { name: 'getUserProgression', options: getUserProgressionOptions },
+    { name: 'getUserSeasonal', options: getUserSeasonalOptions },
+    { name: 'getUserSeasonalv2', options: getUserSeasonalv2Option },
+    { name: 'getUserStats', options: getUserStatsOptions },
+    { name: 'getUserStatus', options: getUserStatusOptions },
+    { name: 'getUserApplications', options: getUserApplicationsOptions },
+    { name: 'getUserGamesPlayed', options: getUserGamesPlayedOptions },
+    { name: 'getApplications', options: getApplicationsOptions },
+    { name: 'getNews', options: getNewsOptions },
+    { name: 'getNewsById', options: getNewsByIdOptions }
   ];
 
-  for (const [name, options] of optionsDocs) {
-    const table = mdtable([optionsHeader, ...options as string[][]]);
-    // console.log(`${name} table:\n${table}`);
-    await insertContent(
-      readmePath, `${name}_OPTIONS`, table, { newLine: true, ...extraNewLine }
-    )
-      .catch(err => console.error(err));
-  }
-
-
-  // Seasons Table
-  const chunk = <T>(arr: T[][], size: number) => arr
-    .slice(0, (arr.length + size - 1) / size | 0)
-    .map((_, i) => arr.slice(size * i, size * i + size));
-
-  const getSeasonsTable = <T extends { [id: string]: { name: string; releaseDate: string } }>(
-    seasons: T,
-    options: { headers?: [string, 'id' | 'name' | 'releaseDate' | 'duration'][] } = {}
-  ) => {
-
-    const tableHeaders = options.headers || [['ID', 'id'], ['Name', 'name']];
-
-    const seasonsFormatted = Object.entries(seasons)
-      .map(([id, obj], i, array) => {
-        const nextSeason = array[i + 1];
-        const nextReleaseDate = nextSeason ?
-          new Date(nextSeason[1].releaseDate) : new Date();
-        const mostRecentSeason = array.slice(-1)[0]?.[1];
-        return {
-          id: `\`${id}\``, name: obj.name,
-          releaseDate: new Date(obj.releaseDate).toLocaleString(
-            'en-us', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' }
-          ),
-          duration: mostRecentSeason === obj
-            ? '' // Most recent season
-            : Math.floor(
-              (+nextReleaseDate - +new Date(obj.releaseDate)) / (24 * 60 * 60 * 1000)
-            ) + ' Days'
-        };
-      })
-      .map(obj => tableHeaders.map(([, key]) => obj[key]));
-    // console.log('seasonsFormatted', seasonsFormatted);
-    const itemsLength = seasonsFormatted.length;
-    const seasonsFormattedChunks = chunk(
-      seasonsFormatted,
-      tableHeaders.length > 2
-        ? Math.ceil(itemsLength / 2)
-        : Math.ceil(itemsLength % 3 === 0 ? itemsLength / 3 : itemsLength / 2)
-    );
-
-    return mdtable([
-      Array(seasonsFormattedChunks.length)
-        .fill(tableHeaders.map(([name]) => name).join('~'))
-        .join('~●~').split(/~/g),
-      ...seasonsFormattedChunks.reduce((acc, cur) =>
-        acc.map((v, i) => cur[i] ? [...v, '', ...(cur[i] as string[])] : v)
-      )
+  for (const { name, options } of optionsDocs) {
+    const table = markdownTable([
+      ['Parameter', 'Type', 'Required', 'Default', 'Description'],
+      ...options
+        .map(([parameter, type, required, _default, description]) => [
+          parameter,
+          `\`${type}\``,
+          required ? '✔' : '✖',
+          required ? '' : `\`${_default}\``,
+          description
+        ])
+        .map(cells =>
+          cells.map(cell => cell.replace(/\|/g, '\\|').replace(/\*/g, '\\*'))
+        )
     ]);
 
+    await insertToReadme({
+      sectionName: `${name.toUpperCase()}_OPTIONS`,
+      content: table
+    });
+  }
+
+  interface GetSeasonsTableOptions {
+    seasons: Season[];
+    headersKeys: ('id' | 'name' | 'releaseDate' | 'duration')[];
+  }
+  const getSeasonsTable = ({
+    seasons,
+    headersKeys
+  }: GetSeasonsTableOptions) => {
+    const _tableCeils = seasons
+      .slice(1) // NOTE: Skip "Release"
+      .map(({ id, name, releaseDate }, i, array) => {
+        const formatedReleaseDate = new Date(releaseDate).toLocaleString(
+          'en-US',
+          {
+            timeZone: 'UTC',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          }
+        );
+        const nextSeason = array[i + 1];
+        const durationDays = Math.floor(
+          (+new Date(nextSeason?.releaseDate ?? new Date()) -
+            +new Date(releaseDate)) /
+            (24 * 60 * 60 * 1000)
+        );
+        const duration = `${durationDays} days`;
+
+        return {
+          id: `\`${id}\``,
+          name,
+          releaseDate: formatedReleaseDate,
+          duration
+        };
+      })
+      .map(ceil => headersKeys.map(key => ceil[key]));
+
+    const tableCeilsChunks = chunk(
+      _tableCeils,
+      headersKeys.length > 2
+        ? Math.ceil(_tableCeils.length / 2)
+        : Math.ceil(
+            _tableCeils.length % 3 === 0
+              ? _tableCeils.length / 3
+              : _tableCeils.length / 2
+          )
+    );
+
+    const tableHeaders = Array(tableCeilsChunks.length)
+      .fill(
+        headersKeys
+          .map(key => (key.length <= 2 ? key.toUpperCase() : camelToTitle(key)))
+          .join('~')
+      )
+      .join('~· ~')
+      .split('~');
+
+    const tableCeils = tableCeilsChunks.reduce((acc, cur) =>
+      acc.map((value, i) =>
+        cur[i] ? [...value, '   ', ...(cur[i]!)] : value
+      )
+    );
+
+    return markdownTable([tableHeaders, ...tableCeils]);
   };
 
-  // readme > getRanks > Seasons Reference
-  const seasonsTable = getSeasonsTable(SEASONS);
-  // console.log(`seasonsTable:\n${seasonsTable}`);
-  await insertContent(
-    readmePath, 'SEASONS_TABLE', seasonsTable, { newLine: true, ...extraNewLine }
-  ).catch(err => console.error(err));
+  const commaListArray = (array: readonly string[]) =>
+    array.map(item => `\`${item}\``).join(', ');
 
-  // Assets > Ranks > readme > Season Reference
-  const allSeasonsTable= getSeasonsTable(
-    { ...OLD_SEASONS, ...SEASONS },
-    { headers: [['ID', 'id'], ['Name', 'name'], ['Release Date', 'releaseDate'], ['Duration', 'duration']] }
-  );
-  // console.log(`allSeasonsTable:\n${allSeasonsTable}`);
-  await insertContent(
-    join(__dirname, '../assets/ranks/readme.md'),
-    'SEASONS_TABLE', allSeasonsTable, { newLine: true, ...extraNewLine }
-  ).catch(err => console.error(err));
+  await insertToReadme({
+    sectionName: 'SERVICES',
+    content: commaListArray(SERVICES)
+  });
+  await insertToReadme({
+    sectionName: 'SERVICES_EXTENDED',
+    content: commaListArray(SERVICES_EXTENDED)
+  });
+  await insertToReadme({
+    sectionName: 'SERVICES_AND_CROSSPLAY',
+    content: commaListArray(SERVICES_AND_CROSSPLAY)
+  });
+  await insertToReadme({
+    sectionName: 'PLATFORMS',
+    content: commaListArray(PLATFORMS)
+  });
+  await insertToReadme({
+    sectionName: 'PLATFORM_FAMILIES',
+    content: commaListArray(PLATFORM_FAMILIES)
+  });
 
+  const shortSeasons = getSeasonsTable({
+    seasons: SEASONS,
+    headersKeys: ['id', 'name']
+  });
+  await insertToReadme({ sectionName: 'SEASONS_SHORT', content: shortSeasons });
 
-  // readme > getRanks > Regions reference
-  const regionsTable = mdtable([
-    ['Shorthand', 'Meaning'],
-    ...Object.entries(REGIONS).map(([shorthand, meaning]) => [`\`${shorthand}\``, meaning])
+  const regions = markdownTable([
+    ['ID', 'Name'],
+    ...REGIONS.map(({ slug, name }) => [`\`${slug}\``, name])
   ]);
-  // console.log(`regionsTable:\n${regionsTable}`);
-  await insertContent(
-    readmePath, 'REGIONS_TABLE', regionsTable, { newLine: true, ...extraNewLine }
-  ).catch(err => console.error(err));
+  await insertToReadme({ sectionName: 'REGIONS', content: regions });
 
-  // readme > getRanks > Boards reference
-  const boardsTable = mdtable([
-    ['Minimum Season ID', 'Board ID'],
-    ...Object.entries(BOARDS)
-      .map(([boardId, { seasonId }]) => [`\`${seasonId.toString()}\``, `\`${boardId}\``])
+  const boards = markdownTable([
+    ['Board', 'Minimum Season'],
+    ...BOARDS.map(({ slug, name, seasonsRange: [startSeasonId] }) => [
+      `${name} (\`${slug}\`)`,
+      `${
+        SEASONS.find(season => season.id === startSeasonId)?.name ?? 'FIXME'
+      } (\`${startSeasonId}\`)`
+    ])
   ]);
-  // console.log(`boardsTable:\n${boardsTable}`);
-  await insertContent(
-    readmePath, 'BOARDS_TABLE', boardsTable, { newLine: true, ...extraNewLine }
-  ).catch(err => console.error(err));
-
+  await insertToReadme({ sectionName: 'BOARDS', content: boards });
 })();

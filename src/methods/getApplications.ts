@@ -1,28 +1,37 @@
-import { getToken } from '../auth';
-import fetch from '../fetch';
-import { UUID } from '../typings';
-import { getURL } from '../utils';
-import { APPLICATIONS } from '../constants';
+import { DEFAULT_APPLICATIONS } from '../constants';
+import type { OptionsDocs, UbiServices } from '../types';
 
-export interface IApplications {
-  applicationId: UUID;
-  name: string;
-  platform: string;
-  spaceId: UUID;
-  overrideResponse: null;
-}
-export interface IApiResponse {
-  applications: IApplications[];
+export interface Applications {
+  applications: {
+    applicationId: string;
+    name: string;
+    platform: string;
+    spaceId: string;
+    overrideResponse: null;
+  }[];
 }
 
-export default (applicationIds: UUID[]) =>
-  getToken()
-    .then(fetch<IApiResponse>(getURL.APPLICATIONS(applicationIds)))
-    .then(res => res.applications)
-    .then(res => res.map(application => ({
-      id: application.applicationId,
-      name: APPLICATIONS
-        .find(app => app.id === application.applicationId)?.name || application.name,
-      platform: application.platform,
-      spaceId: application.spaceId
-    })));
+export const getApplicationsOptions: OptionsDocs = [
+  ['applicationIds', 'string[]', true, '', 'Applications ids (50 max)']
+];
+
+export interface GetApplicationsOptions {
+  applicationIds: string[];
+}
+export const getApplications =
+  ({ ubiServices }: { ubiServices: UbiServices }) =>
+  async ({ applicationIds }: GetApplicationsOptions) =>
+    ubiServices<Applications>({
+      version: 1,
+      path: '/applications',
+      params: { applicationIds, limit: '50' }
+    }).then(({ applications }) =>
+      applications.map(application => ({
+        id: application.applicationId,
+        name:
+          DEFAULT_APPLICATIONS.find(app => app.id === application.applicationId)
+            ?.name ?? application.name,
+        platform: application.platform,
+        spaceId: application.spaceId
+      }))
+    );
