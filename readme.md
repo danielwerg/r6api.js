@@ -192,10 +192,10 @@ Find user by their username.
 <!-- prettier-ignore-start -->
 <!-- FINDUSERBYUSERNAME_OPTIONS:START -->
 
-| Parameter | Type              | Required | Default | Description                    |
-| --------- | ----------------- | -------- | ------- | ------------------------------ |
-| platform  | `ServiceExtended` | ✔        |         | [Reference](#Platforms-Search) |
-| usernames | `string[]`        | ✔        |         | Usernames (50 max)             |
+| Parameter | Type              | Required | Default | Description                             |
+| --------- | ----------------- | -------- | ------- | --------------------------------------- |
+| platform  | `ServiceExtended` | ✔        |         | [Services Extended](#Services-Extended) |
+| usernames | `string[]`        | ✔        |         | Usernames (50 max)                      |
 
 <!-- FINDUSERBYUSERNAME_OPTIONS:END -->
 <!-- prettier-ignore-end-->
@@ -245,7 +245,7 @@ Find user by their `profileId` or `userId` or `idOnPlatform`.
 
 | Parameter | Type                       | Required | Default | Description                                                                          |
 | --------- | -------------------------- | -------- | ------- | ------------------------------------------------------------------------------------ |
-| platform  | `ServiceExtended \| 'all'` | ✔        |         | [Reference](#Platforms-Search)                                                       |
+| platform  | `ServiceExtended \| 'all'` | ✔        |         | [Services Extended](#Services-Extended)                                              |
 | ids       | `string[]`                 | ✔        |         | `profileIds` or `idOnPlatforms` or `userId` if `isUserId` parameter is true (50 max) |
 | isUserIds | `boolean`                  | ✖        | `false` | Whether `ids` are userIds                                                            |
 
@@ -298,12 +298,12 @@ Get user progression (level, xp and alpha pack drop chance).
 <!-- prettier-ignore-start -->
 <!-- GETUSERPROGRESSION_OPTIONS:START -->
 
-| Parameter    | Type                                  | Required | Default                                                                                                                                                                                          | Description                           |
-| ------------ | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
-| platform     | `ServiceAndCrossplay`                 | ✔        |                                                                                                                                                                                                  | [Reference](#Platforms-And-CrossPlay) |
-| profileIds   | `string[]`                            | ✔        |                                                                                                                                                                                                  | `profileIds` (200 max)                |
-| spacesIds    | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d', psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66', xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90', crossplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb' }` |                                       |
-| sandboxesIds | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: 'OSBOR_PC_LNCH_A', psn: 'OSBOR_PS4_LNCH_A', xbl: 'OSBOR_XBOXONE_LNCH_A', crossplay: 'OSBOR_XPLAY_LNCH_A' }`                                                                            |                                       |
+| Parameter    | Type                                  | Required | Default                                                                                                                                                                                          | Description                                       |
+| ------------ | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
+| platform     | `ServiceAndCrossplay`                 | ✔        |                                                                                                                                                                                                  | [Services and Crossplay](#Services-and-Crossplay) |
+| profileIds   | `string[]`                            | ✔        |                                                                                                                                                                                                  | `profileIds` (200 max)                            |
+| spacesIds    | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d', psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66', xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90', crossplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb' }` |                                                   |
+| sandboxesIds | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: 'OSBOR_PC_LNCH_A', psn: 'OSBOR_PS4_LNCH_A', xbl: 'OSBOR_XBOXONE_LNCH_A', crossplay: 'OSBOR_XPLAY_LNCH_A' }`                                                                            |                                                   |
 
 <!-- GETUSERPROGRESSION_OPTIONS:END -->
 <!-- prettier-ignore-end-->
@@ -350,9 +350,9 @@ Get user seasonal stats.
 
 | Parameter      | Type                                  | Required | Default                                                                                                                                                                                          | Description                                                                                  |
 | -------------- | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| platform       | `ServiceAndCrossplay`                 | ✔        |                                                                                                                                                                                                  | [Reference](#Platforms-And-CrossPlay)                                                        |
+| platform       | `ServiceAndCrossplay`                 | ✔        |                                                                                                                                                                                                  | [Services and Crossplay](#Services-and-Crossplay)                                            |
 | profileIds     | `string[]`                            | ✔        |                                                                                                                                                                                                  | `profileIds` (200 max)                                                                       |
-| seasonIds      | `number[]`                            | ✖        | `[-1]`                                                                                                                                                                                           | Numbers from `1`\*¹ to `27` it's crossplay, then from `28` to `28`, `-1` or `'all'`          |
+| seasonIds      | `number[]`                            | ✖        | `[-1]`                                                                                                                                                                                           | Numbers from `1`\*¹ to `27` it's crossplay, then from `28` to `29`, `-1` or `'all'`          |
 | regionSlugs    | `string \| string[]`                  | ✖        | `'global'\*²`                                                                                                                                                                                    | `('emea' \| 'ncsa' \| 'apac')[] \| 'global' \| 'all'`                                        |
 | boardLongSlugs | `string[]`                            | ✖        | `['pvp_ranked']`                                                                                                                                                                                 | `('pvp_ranked' \| 'pvp_casual' \| 'pvp_event' \| 'pvp_newcomer' \| 'pvp_warmup')[] \| 'all'` |
 | spacesIds      | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d', psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66', xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90', crossplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb' }` |                                                                                              |
@@ -370,22 +370,23 @@ Get user seasonal stats.
 <!-- prettier-ignore-start -->
 <!-- SEASONS_SHORT:START -->
 
-| ID   | Name          | ·   | ID   | Name           |
-| ---- | ------------- | --- | ---- | -------------- |
-| `1`  | Black Ice     |     | `15` | Ember Rise     |
-| `2`  | Dust Line     |     | `16` | Shifting Tides |
-| `3`  | Skull Rain    |     | `17` | Void Edge      |
-| `4`  | Red Crow      |     | `18` | Steel Wave     |
-| `5`  | Velvet Shell  |     | `19` | Shadow Legacy  |
-| `6`  | Health        |     | `20` | Neon Dawn      |
-| `7`  | Blood Orchid  |     | `21` | Crimson Heist  |
-| `8`  | White Noise   |     | `22` | North Star     |
-| `9`  | Chimera       |     | `23` | Crystal Guard  |
-| `10` | Para Bellum   |     | `24` | High Calibre   |
-| `11` | Grim Sky      |     | `25` | Demon Veil     |
-| `12` | Wind Bastion  |     | `26` | Vector Glare   |
-| `13` | Burnt Horizon |     | `27` | Brutal Swarm   |
-| `14` | Phantom Sight |     | `28` | Solar Raid     |
+| ID   | Name          | ·   | ID   | Name             |
+| ---- | ------------- | --- | ---- | ---------------- |
+| `1`  | Black Ice     |     | `16` | Shifting Tides   |
+| `2`  | Dust Line     |     | `17` | Void Edge        |
+| `3`  | Skull Rain    |     | `18` | Steel Wave       |
+| `4`  | Red Crow      |     | `19` | Shadow Legacy    |
+| `5`  | Velvet Shell  |     | `20` | Neon Dawn        |
+| `6`  | Health        |     | `21` | Crimson Heist    |
+| `7`  | Blood Orchid  |     | `22` | North Star       |
+| `8`  | White Noise   |     | `23` | Crystal Guard    |
+| `9`  | Chimera       |     | `24` | High Calibre     |
+| `10` | Para Bellum   |     | `25` | Demon Veil       |
+| `11` | Grim Sky      |     | `26` | Vector Glare     |
+| `12` | Wind Bastion  |     | `27` | Brutal Swarm     |
+| `13` | Burnt Horizon |     | `28` | Solar Raid       |
+| `14` | Phantom Sight |     | `29` | Commanding Force |
+| `15` | Ember Rise    |     |      |                  |
 
 <!-- SEASONS_SHORT:END -->
 <!-- prettier-ignore-end-->
@@ -518,11 +519,11 @@ Required `r6api` client with `ubiAppId: 'e3d5ea9e-50bd-43b7-88bf-39794f4e3d40'` 
 <!-- prettier-ignore-start -->
 <!-- GETUSERSEASONALV2_OPTIONS:START -->
 
-| Parameter         | Type                                  | Required | Default                                                                                                                                                                                          | Description                               |
-| ----------------- | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
-| profileIds        | `string[]`                            | ✔        |                                                                                                                                                                                                  | `profileIds`                              |
-| platformsFamilies | `PlatformFamily[]`                    | ✖        | `['pc', 'console']`                                                                                                                                                                              | [Platforms Families](#Platforms-Families) |
-| spacesIds         | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d', psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66', xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90', crossplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb' }` |                                           |
+| Parameter         | Type                                  | Required | Default                                                                                                                                                                                          | Description                                       |
+| ----------------- | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
+| profileIds        | `string[]`                            | ✔        |                                                                                                                                                                                                  | `profileIds`                                      |
+| platformsFamilies | `PlatformFamily[]`                    | ✖        | `['pc', 'console']`                                                                                                                                                                              | [Platforms Families](#Platform-Families)          |
+| spacesIds         | `Record<ServiceAndCrossplay, string>` | ✖        | `{ uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d', psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66', xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90', crossplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb' }` | [Services and Crossplay](#Services-and-Crossplay) |
 
 <!-- GETUSERSEASONALV2_OPTIONS:END -->
 <!-- prettier-ignore-end-->
@@ -929,7 +930,7 @@ Get user stats
 | aggregation | `string`   | ✔        |             |                                                                             |
 | gameModes   | `string[]` | ✖        | `undefined` |                                                                             |
 | teamRoles   | `string[]` | ✖        | `undefined` |                                                                             |
-| seasonsId   | `number[]` | ✖        | `undefined` | Numbers from `0` to `28`. Mutually exclusive with `startDate` and `endDate` |
+| seasonsId   | `number[]` | ✖        | `undefined` | Numbers from `0` to `29`. Mutually exclusive with `startDate` and `endDate` |
 | startDate   | `string`   | ✖        | `undefined` | Mutually exclusive with `seasonId`                                          |
 | startDate   | `string`   | ✖        | `undefined` | Mutually exclusive with `seasonId`                                          |
 

@@ -79,7 +79,7 @@ export const getUserSeasonalOptions: OptionsDocs = [
     'ServiceAndCrossplay',
     true,
     '',
-    '[Reference](#Platforms-And-CrossPlay)'
+    '[Services and Crossplay](#Services-and-Crossplay)'
   ],
   ['profileIds', 'string[]', true, '', '`profileIds` (200 max)'],
   [

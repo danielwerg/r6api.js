@@ -1,8 +1,19 @@
-import type { OptionsDocs, ServiceExtended, Profiles, UbiServices } from '../types';
+import type {
+  OptionsDocs,
+  ServiceExtended,
+  Profiles,
+  UbiServices
+} from '../types';
 import { getAvatars } from '../utils';
 
 export const findUserByUsernameOptions: OptionsDocs = [
-  ['platform', 'ServiceExtended', true, '', '[Reference](#Platforms-Search)'],
+  [
+    'platform',
+    'ServiceExtended',
+    true,
+    '',
+    '[Services Extended](#Services-Extended)'
+  ],
   ['usernames', 'string[]', true, '', 'Usernames (50 max)']
 ];
 

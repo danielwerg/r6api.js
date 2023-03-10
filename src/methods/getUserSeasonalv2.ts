@@ -62,14 +62,14 @@ export const getUserSeasonalv2Option: OptionsDocs = [
     'PlatformFamily[]',
     false,
     '[\'pc\', \'console\']',
-    '[Platforms Families](#Platforms-Families)'
+    '[Platforms Families](#Platform-Families)'
   ],
   [
     'spacesIds',
     'Record<ServiceAndCrossplay, string>',
     false,
     inspect(SPACES_ID, { breakLength: Infinity }),
-    ''
+    '[Services and Crossplay](#Services-and-Crossplay)'
   ]
 ];
 
@@ -80,7 +80,11 @@ export interface GetUserSeasonalv2Options {
 }
 export const getUserSeasonalv2 =
   ({ ubiServices }: { ubiServices: UbiServices }) =>
-  async ({ profileIds, platformsFamilies, spaceId }: GetUserSeasonalv2Options) =>
+  async ({
+    profileIds,
+    platformsFamilies,
+    spaceId
+  }: GetUserSeasonalv2Options) =>
     ubiServices<SkillFullProfiles>({
       version: 2,
       path: `/spaces/${

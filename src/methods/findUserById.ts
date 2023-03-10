@@ -1,4 +1,9 @@
-import type { OptionsDocs, ServiceExtended, Profiles, UbiServices } from '../types';
+import type {
+  OptionsDocs,
+  ServiceExtended,
+  Profiles,
+  UbiServices
+} from '../types';
 import { getAvatars } from '../utils';
 
 export const findUserByIdOptions: OptionsDocs = [
@@ -7,7 +12,7 @@ export const findUserByIdOptions: OptionsDocs = [
     'ServiceExtended | \'all\'',
     true,
     '',
-    '[Reference](#Platforms-Search)'
+    '[Services Extended](#Services-Extended)'
   ],
   [
     'ids',
