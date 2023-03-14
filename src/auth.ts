@@ -6,8 +6,6 @@ import { ubiServices } from './fetch';
 import type { Service } from './types';
 import { DEFAULT_UBI_APP_ID } from './constants';
 
-const TEN_MIN_IN_MS = 10 * 60 * 1000;
-
 interface GetAuthFilePathOptions {
   ubiAppId?: string;
   profileId?: string;
@@ -29,10 +27,30 @@ const getAuthFilePath = ({
     (profileId ? `-${profileId}` : '')
   }.json`;
 
+const TEN_MIN_IN_MS = 10 * 60 * 1000;
+
 const getMsUntilExpiration = (expiration: string) =>
   +new Date(expiration) - +new Date() - TEN_MIN_IN_MS;
+
 const isAuthExpired = (expiration: string) =>
   getMsUntilExpiration(expiration) <= 0;
+
+interface WriteAuthOptions {
+  auth: ProfilesSessions;
+  loginOptions: LoginOptions;
+}
+export const writeAuth = async ({ auth, loginOptions }: WriteAuthOptions) =>
+  await fs.writeFile(getAuthFilePath(loginOptions), JSON.stringify(auth));
+
+interface ReadAuthOptions {
+  auth: ProfilesSessions;
+  loginOptions: LoginOptions;
+}
+export const readAuth = async ({ loginOptions }: ReadAuthOptions) =>
+  await fs
+    .readFile(getAuthFilePath(loginOptions), 'utf8')
+    .then(auth => JSON.parse(auth) as ProfilesSessions)
+    .catch(() => null);
 
 export interface ProfilesSessions {
   platformType: Service;
@@ -62,12 +80,13 @@ export interface LoginOptions {
   /** Overrides `authDirPath` and `authFileName` options */
   authFilePath?: string;
 }
-export const login = async ({ email, password, ...options }: LoginOptions) => {
-  if (!email || !password) throw new Error('credentials missing');
+export const login = async (options: LoginOptions) => {
+  if (!options.email || !options.password)
+    throw new Error('credentials missing');
 
-  const token = `Basic ${Buffer.from(`${email}:${password}`).toString(
-    'base64'
-  )}`;
+  const token = `Basic ${Buffer.from(
+    `${options.email}:${options.password}`
+  ).toString('base64')}`;
 
   return await ubiServices({
     token,
@@ -83,18 +102,16 @@ export const login = async ({ email, password, ...options }: LoginOptions) => {
         'profileId from constructor doesn\'t match profileId from login'
       );
 
-    await fs.writeFile(getAuthFilePath(options), JSON.stringify(auth));
+    await writeAuth({ loginOptions: options, auth });
+
     return auth;
   });
 };
 
-export const getAuth = async (options: LoginOptions) => {
-  const lastLogin = await fs
-    .readFile(getAuthFilePath(options), 'utf8')
-    .then(auth => JSON.parse(auth) as ProfilesSessions)
-    .catch(() => null);
+export const getAuth = async (loginOptions: LoginOptions) => {
+  const lastLogin = await readAuth({ loginOptions });
 
   if (lastLogin && !isAuthExpired(lastLogin.expiration)) return lastLogin;
 
-  return await login(options);
+  return await login(loginOptions);
 };
