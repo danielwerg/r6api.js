@@ -43,7 +43,6 @@ export const writeAuth = async ({ auth, loginOptions }: WriteAuthOptions) =>
   await fs.writeFile(getAuthFilePath(loginOptions), JSON.stringify(auth));
 
 interface ReadAuthOptions {
-  auth: ProfilesSessions;
   loginOptions: LoginOptions;
 }
 export const readAuth = async ({ loginOptions }: ReadAuthOptions) =>
