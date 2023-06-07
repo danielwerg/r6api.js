@@ -23,8 +23,10 @@ export const AVATARS_URL = 'https://ubisoft-avatars.akamaized.net';
 export const CDN_URL = 'https://staticctf.akamaized.net';
 export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/master/assets';
 
-export const PLATFORMS = <const>['uplay', 'psn', 'xbl'];
-export const PLATFORMSALL = <const>[...PLATFORMS, 'steam', 'epic', 'amazon'];
+// valid stats platforms with sandboxes
+export const PLATFORMS = <const>['uplay', 'psn', 'xbl', 'xplay'];
+// valid profile platforms
+export const PLATFORMSALL = <const>['uplay', 'psn', 'xbl', 'steam', 'epic', 'amazon'];
 
 // restructure this if pvp_newcomer will still return 500 in season 22
 export const BOARDS = <const>{
