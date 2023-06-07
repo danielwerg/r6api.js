@@ -180,6 +180,40 @@ export const getURL = {
     '&tags=BR-rainbow-six%20GA-siege'
 };
 
+// Sources:
+// https://www.reddit.com/r/Rainbow6/comments/v8bidl/updated_xp_vs_clearance_level_chart_up_to_lvl800/
+// https://docs.google.com/spreadsheets/d/1zP-dZgV3RHGswj1Wtz2wZs6Nr7RZc7syT2_kdM4L8mU/edit?usp=sharing
+const firstLevels = [
+  0, 500, 1500, 3500, 3500, 4000, 4000, 4500, 4500, 4500, 5500, 5500
+] as const;
+
+export const getXpPerLevel = (level: number): number => {
+  if (!Number.isInteger(level)) return NaN;
+  else if (39 <= level) return -9000 + 500 * level;
+  else if (12 <= level && level < 39) return 4000 + 500 * ((level / 3) >> 0);
+  else if (0 <= level && level < 12) return firstLevels[level] ?? NaN;
+  else return NaN;
+};
+
+export const getTotalXp = (level: number, xp = 0): number => {
+  if (!Number.isInteger(level) || level < 0) return NaN;
+  let sum = 0;
+  for (; level > 0; level--) sum += getXpPerLevel(level);
+  return sum + xp;
+};
+
+export const getLevelByXp = (xp: number) => {
+  if (!Number.isInteger(xp) || xp < 0) return NaN;
+  let level = 0,
+      currentXp = 0;
+  for (; xp >= (currentXp = getXpPerLevel(level)); level++) xp -= currentXp;
+  return level - 1;
+};
+
+export const getXpRemainder = (xp: number) => {
+  return xp - getTotalXp(getLevelByXp(xp));
+};
+
 export const isPlatform = (value: string): value is Platform =>
   PLATFORMS.map(platform => platform.toString()).includes(value);
 

@@ -1,7 +1,7 @@
 import { getToken } from '../auth';
 import fetch from '../fetch';
 import { Platform, UUID } from '../typings';
-import { getURL } from '../utils';
+import { getTotalXp, getURL } from '../utils';
 
 export interface IProgression {
   profile_id: UUID;
@@ -21,6 +21,7 @@ export default (platform: Platform, ids: UUID[]) =>
         id: profile.profile_id,
         level: profile.level,
         xp: profile.xp,
+        totalXp: getTotalXp(profile.level, profile.xp),
         lootboxProbability: {
           raw: profile.lootbox_probability,
           percent: profile.lootbox_probability
