@@ -58,8 +58,13 @@
     "api",
     "wrapper",
     "ubisoft",
-    "rainbow6",
+    "rainbow",
+    "six",
     "siege",
-    "r6s"
+    "rainbowsixsiege",
+    "rainbow6",
+    "rainbow6siege",
+    "r6s",
+    "siege"
   ]
 }
