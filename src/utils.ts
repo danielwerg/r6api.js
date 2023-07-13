@@ -130,8 +130,8 @@ export const capitalize = ([first, ...rest]: string) =>
 
 export interface GetNewsURLOptions {
   type: ItemType;
-  locale: string;
   path: string;
+  locale: string;
 }
 export const getNewsURL = ({ type, path, locale }: GetNewsURLOptions) =>
   type === 'videos'
@@ -140,11 +140,11 @@ export const getNewsURL = ({ type, path, locale }: GetNewsURLOptions) =>
 export const isNimbusItems = (
   news: NimbusItems | NimbusItemsId
 ): news is NimbusItems => 'limit' in news;
-export interface FormatNewsOptions {
+export interface ProcessNewsOptions {
   news: NimbusItems | NimbusItemsId;
   locale: string;
 }
-export const processNews = ({ news, locale }: FormatNewsOptions) => ({
+export const processNews = ({ news, locale }: ProcessNewsOptions) => ({
   total: news.total,
   ...(isNimbusItems(news) && {
     limit: news.limit,
