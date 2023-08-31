@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+>
+> # R6API.js won't be maintained in foreseeable future. The reasons are simple — [I](https://github.com/danielwerg)'ve pretty much lost the interest in players statistics which is core of this package and working with Ubisoft APIs is pain in an ass most of the time (as of launch of Heavy Mettle players stats endpoint is broken _again_). For most up to date version see [next branch](https://github.com/danielwerg/r6api.js/tree/next). A lot of things, such as assets and constants from this package was moved to my new package — [R6Data](https://github.com/danielwerg/r6data)
+
 <div align="center">
   <h1>R6API.js</h1>
   <h3>🍫 Node.js wrapper around Rainbow Six: Siege API</h3>
@@ -60,6 +64,7 @@ To setup this package, you need to provide Ubisoft account credentials (email an
 ## Example
 
 <!-- START_SECTION:EXAMPLE -->
+
 ```js
 require('dotenv').config();
 const R6API = require('r6api.js').default;
@@ -74,7 +79,6 @@ const r6api = new R6API({ email, password });
 
 // export default async () => { // ES6
 exports.default = async () => {
-
   const username = 'Daniel.Nt';
   const platform = 'uplay';
 
@@ -83,13 +87,14 @@ exports.default = async () => {
 
   const { 0: stats } = await r6api.getStats(platform, player.id);
   if (!stats) return 'Stats not found';
-  const { pvp: { general } } = stats;
+  const {
+    pvp: { general }
+  } = stats;
 
   return `${player.username} has played ${general.matches} matches.`;
-
 };
-
 ```
+
 <!-- END_SECTION:EXAMPLE -->
 
 <!-- START_SECTION:EXAMPLE_OUTPUT -->
@@ -348,20 +353,20 @@ Ids limit: `200`
 
 <!-- START_SECTION:SEASONS_TABLE -->
 
-| ID   | Name           | ● | ID   | Name          |
-| ---- | -------------- | - | ---- | ------------- |
-| `6`  | Health         |   | `18` | Steel Wave    |
-| `7`  | Blood Orchid   |   | `19` | Shadow Legacy |
-| `8`  | White Noise    |   | `20` | Neon Dawn     |
-| `9`  | Chimera        |   | `21` | Crimson Heist |
-| `10` | Para Bellum    |   | `22` | North Star    |
-| `11` | Grim Sky       |   | `23` | Crystal Guard |
-| `12` | Wind Bastion   |   | `24` | High Calibre  |
-| `13` | Burnt Horizon  |   | `25` | Demon Veil    |
-| `14` | Phantom Sight  |   | `26` | Vector Glare  |
-| `15` | Ember Rise     |   | `27` | Brutal Swarm  |
-| `16` | Shifting Tides |   | `28` | Solar Raid    |
-| `17` | Void Edge      |   |      |               |
+| ID   | Name           | ●   | ID   | Name          |
+| ---- | -------------- | --- | ---- | ------------- |
+| `6`  | Health         |     | `18` | Steel Wave    |
+| `7`  | Blood Orchid   |     | `19` | Shadow Legacy |
+| `8`  | White Noise    |     | `20` | Neon Dawn     |
+| `9`  | Chimera        |     | `21` | Crimson Heist |
+| `10` | Para Bellum    |     | `22` | North Star    |
+| `11` | Grim Sky       |     | `23` | Crystal Guard |
+| `12` | Wind Bastion   |     | `24` | High Calibre  |
+| `13` | Burnt Horizon  |     | `25` | Demon Veil    |
+| `14` | Phantom Sight  |     | `26` | Vector Glare  |
+| `15` | Ember Rise     |     | `27` | Brutal Swarm  |
+| `16` | Shifting Tides |     | `28` | Solar Raid    |
+| `17` | Void Edge      |     |      |               |
 
 <!-- END_SECTION:SEASONS_TABLE -->
 
