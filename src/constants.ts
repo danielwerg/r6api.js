@@ -5,23 +5,28 @@ export const UBISERVICES_URL = 'https://public-ubiservices.ubi.com';
 export const STATUS_URL = 'https://game-status-api.ubisoft.com';
 export const UBI_URL = 'https://nimbus.ubisoft.com';
 
+// xplay ids https://github.com/Seems2Legit/Rainbow-Six-Siege-Player-Stats-API/issues/91#issuecomment-1362054176
 export const SPACE_IDS = <const>{
   uplay: '5172a557-50b5-4665-b7db-e3f2e8c5041d',
   psn: '05bfb3f7-6c21-4c42-be1f-97a33fb5cf66',
-  xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90'
+  xbl: '98a601e5-ca91-4440-b1c5-753f601a2c90',
+  xplay: '0d2ae42d-4c27-4cb7-af6c-2099062302bb'
 };
 export const SANDBOXES = <const>{
   uplay: 'OSBOR_PC_LNCH_A',
   psn: 'OSBOR_PS4_LNCH_A',
-  xbl: 'OSBOR_XBOXONE_LNCH_A'
+  xbl: 'OSBOR_XBOXONE_LNCH_A',
+  xplay: 'OSBOR_XPLAY_LNCH_A'
 };
 
 export const AVATARS_URL = 'https://ubisoft-avatars.akamaized.net';
 export const CDN_URL = 'https://staticctf.akamaized.net';
 export const GITHUB_ASSETS_URL = 'https://github.com/danielwerg/r6api.js/raw/master/assets';
 
-export const PLATFORMS = <const>['uplay', 'psn', 'xbl'];
-export const PLATFORMSALL = <const>[...PLATFORMS, 'steam', 'epic', 'amazon'];
+// valid stats platforms with sandboxes
+export const PLATFORMS = <const>['uplay', 'psn', 'xbl', 'xplay'];
+// valid profile platforms
+export const PLATFORMSALL = <const>['uplay', 'psn', 'xbl', 'steam', 'epic', 'amazon'];
 
 // restructure this if pvp_newcomer will still return 500 in season 22
 export const BOARDS = <const>{
