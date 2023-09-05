@@ -5,7 +5,7 @@ import { getURL, getAvatars } from '../utils';
 
 export interface IProfile {
   profileId: UUID;
-  userId: UUID;
+  userId: UUID | null;
   idOnPlatform: UUID | string;
   platformType: PlatformAll;
   nameOnPlatform: string;

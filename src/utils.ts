@@ -13,10 +13,10 @@ import {
   STATS_CATEGORIES, GITHUB_ASSETS_URL, RANKS_V6
 } from './constants';
 
-export const getAvatarURL = (id: UUID, size = 256) =>
+export const getAvatarURL = (id: UUID | null, size = 256) =>
   `${AVATARS_URL}/${id}/default_${size === 500 ? 'tall' : `${size}_${size}`}.png`;
 
-export const getAvatars = (id: UUID) => ({
+export const getAvatars = (id: UUID | null) => ({
   146: getAvatarURL(id, 146), 256: getAvatarURL(id, 256), 500: getAvatarURL(id, 500)
 });
 
